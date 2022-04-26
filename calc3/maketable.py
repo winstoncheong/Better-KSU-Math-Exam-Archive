@@ -47,7 +47,7 @@ def store(year, season, exam, soln, filename):
 	
 
 
-files = sorted(os.listdir(".")) # for when in the actual directory
+files = sorted(os.listdir("./exams/")) # for when in the actual directory
 
 # for testing:
 #f = open("filenames.txt", "r")
@@ -95,7 +95,7 @@ for year in sorted(data.keys(), reverse=True):
 					
 					if "blank" in data[year][season][exam]:
 						filename = data[year][season][exam]["blank"]
-						row += "[Exam]({}.pdf)".format(filename)
+						row += "[Exam](./exams/{}.pdf)".format(filename)
 						addcomma = True
 						
 					if "solns" in data[year][season][exam]:
@@ -103,7 +103,7 @@ for year in sorted(data.keys(), reverse=True):
 							row += ", "
 							
 						filename = data[year][season][exam]["solns"]
-						row += "[Solutions]({}.pdf)".format(filename)
+						row += "[Solutions](./exams/{}.pdf)".format(filename)
 					
 					
 					# done this exam
