@@ -1,4 +1,5 @@
-An experiment to see if I can create a better math exam archive than the official one (<https://archive.math.ksu.edu/>)
+
+# Better KSU Math Exam Archive
 
 * [Traditional College Algebra Exams](./traditional-college-alg) 
 * [Studio College Algebra Exams](./studio-college-alg) 

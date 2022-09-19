@@ -1,4 +1,9 @@
-# DiffEq Previous Exams
+# Diff Eq Past Exams
+
+Copied from <https://archive.math.ksu.edu/course?course=math240>
+
+Copied all exams from 2017 Fall back to 2011 Spring.
+
 |Semester|Exam 1|Exam 2|Exam 3|Final|
 |:---:|:---:|:---:|:---:|:---:|
 | 2017 Fall |  |  |  | [Exam](./exams/2017-fall-final.pdf) | 

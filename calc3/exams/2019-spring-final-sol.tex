@@ -1,13 +1,21 @@
-\documentclass[answers]{exam}
+\documentclass[12pt,answers]{exam}
 \usepackage{amsmath,amsfonts,amssymb,commath,mathtools,physics}
 \newcommand{\vect}[1]{\left\langle #1 \right\rangle}
 \newcommand{\tcurl}{\operatorname{curl}}
 
+\pagestyle{headandfoot}
+\firstpageheadrule
+\runningheadrule
+\firstpageheader{Math 222}{Final Exam|Solutions, Page \thepage\ of \numpages}{May 15, 2019}
+\runningheader{Math 222}{Final Exam|Solutions, Page \thepage\ of \numpages}{May 15, 2019}
+\runningfooter{}{}{}
+
 \title{2019 Spring Calc 3 Final|Solutions}
 \author{Winston Cheong}
 \date{}
+
 \begin{document}
-\maketitle
+% \maketitle
 
 \begin{questions}
 \question
@@ -19,7 +27,7 @@ Let $\vb{u} = \vect{1, 1, 0}$, $\vb{v} = \vect{1, 0, 1}$ and $\vb{w} = \vect{0, 
     \mqty| 1 & 1 & 0 \\ 1 & 0 & 1 \\ 0 & 1 & 1| = 1 \cdot \mqty|0 & 1 \\ 1 & 1| - 1 \cdot \mqty|1 & 1 \\ 0 & 1| + 0 \cdot \mqty|1 & 0 \\ 0 & 1|
     = -1 -1 + 0 = -2
 \]
-So the volume is \boxed{2}.
+So the volume is \boxed{2}
 \end{solution}
 \part[5] Compute the angle $\theta$ between $\vb v$ and $\vb w$.
 \begin{solution}
@@ -41,6 +49,8 @@ So the volume is \boxed{2}.
     \]
 \end{solution}
 \end{parts}
+
+\newpage
 \question Consider the curve $\mathcal{C}$ given by the parametrization 
 \[
     \vb{r}(t) = \vect{\sin(t), \cos(t), e^t}\quad \text{for } 0\le t \le \pi
@@ -86,6 +96,7 @@ So the volume is \boxed{2}.
 \end{solution}
 \end{parts}
 
+\newpage
 \question
 Calculate the following quantities if they exist. Otherwise, explain why they do not exist. Justify either response.
 \begin{parts}
@@ -93,6 +104,8 @@ Calculate the following quantities if they exist. Otherwise, explain why they do
 \[
     \lim_{(x, y) \to (0, 0)} \frac{x^2y^2}{x^2+y^2}
 \]
+\begin{solution}
+\end{solution}
 \part[5]
 For 
 \[
@@ -102,14 +115,22 @@ compute
 \[
     f_{xy}(x,y,z)
 \]
+\begin{solution}
+\end{solution}
 \part[5]
 For $f(x,y,z) = x + y^2 + z^3$ find the change in $f(x,y,z)$ as one moves in the direction of the unit vector $\vb{u} = \frac{\sqrt 3}{3} \vect{1,1,1}$ starting at $\vect{2,0,-1}$.
+\begin{solution}
+\end{solution}
 \part[5] Find the equation for the tangent plane to the surface 
 \[
     z = xy
 \]
 at the point $(1,2,2)$.
+\begin{solution}
+\end{solution}
 \end{parts}
+
+\newpage
 \question
 Let 
 \[
@@ -118,35 +139,121 @@ Let
 and $\mathcal{D}$ be the square $[-3,3]\times[-3,3]$.
 \begin{parts}
 \part[5] Find the critical points of $f(x, y)$ in the interior of $\mathcal{D}$.
+\begin{solution}
+    Solving $\nabla f = \vect{3x^2 - 12, 2y} = \vect{0, 0}$ gives $x = \pm 2$ and $y = 0$. So the critical points for $f$ are 
+    \boxed{(2, 0), (-2, 0)}
+\end{solution}
 \part[5] Describe the local behavior of $f(x, y)$ at the critical points found in part (a).
+\begin{solution}
+    The discriminant is 
+    \[
+        D = f_{xx} f_{yy} - (f_{xy})^2 = 12x
+    \]
+    Evaluating the discriminant at the previously found critical points:
+    \begin{align*}
+        D_{(2, 0)} &= 24 > 0 \quad \text{and}\quad f_{xx}(2, 0) = 12 > 0 \quad \text{ so } (2, 0) \text{ is a local min} \\ 
+        D_{(-2, 0)} &= -24 < 0 \quad \text{so } (-2, 0) \text{ is a saddle point}
+    \end{align*}
+\end{solution}
+
+\newpage
 \part[5] Find the maximum value of $f$ on $\mathcal D$.
+\begin{solution}
+    Let $\gamma_1, \gamma_2, \gamma_3, \gamma_4$ denote paths along the right, left, top, and bottom sides of the square $\mathcal{D}$.
+
+    Along $\gamma_1$, $f(3, y) = -9 + y^2$, with $y \in [-3, 3]$. 
+    Looking for critical points along $\gamma_1$, we compute
+    $f' = 2y = 0 \implies y = 0$, so $(3, 0)$ is a critical point along $\gamma_1$. We test on the critical points and the end points of this path and obtain
+    \[
+        f(3, 0) = -9 \qquad f(3, -3) = 0 \qquad f(3, 3) = 0
+    \]
+    Along $\gamma_2$, $f(-3, y) = 9 + y^2$, with $y \in [-3, 3]$. 
+    Looking for critical points along $\gamma_2$, we compute $f' = 2y = 0 \implies y = 0$, so $(-3, 0)$ is a critical point along $\gamma_2$. 
+    We test on the critical points and the end points of this path and obtain
+    \[
+        f(-3, 0) = 9 \qquad f(-3, -3) = 18 \qquad f(-3, 3) = 18
+    \]
+    Along $\gamma_3$, $f(x, 3) = x^3 - 12x + 9$, with $x \in [-3, 3]$.
+    Looking for critical points along $\gamma_3$, we compute $f' = 3x^2 - 12 = 0 \implies x^2 = 4 \implies = \pm 2$. So $(\pm2, 3)$ are critical points along this path.
+    We test on the critical points and the end points of this path and obtain
+    \[
+        f(2, 3) = -7 \qquad f(-2, 3) = 25 \qquad f(-3, 3) = 18 \qquad f(3,3) = 0
+    \]
+    Finally, along $\gamma_4$, $f(x, -3) = x^3 - 12x + 9$, with $x \in [-3, 3]$.
+    This yields critical points $(\pm2, -3)$. As $f(x, y)$ will not distinguish the difference between $y=3$ and $y=-3$, the values for $\gamma_4$ are the same as for $\gamma_3$:
+    \[
+        f(2, -3) = -7 \qquad f(-2, -3) = 25 \qquad f(-3, -3) = 18 \qquad f(3,-3) = 0
+    \]
+    Thus the maxiumum value for $f$ on $\mathcal D$ is \boxed{25} (which occurs at $(-2, \pm 3)$).
+\end{solution}
 \end{parts}
 
+\newpage
 \question[10]
 Let $\mathcal W = [0, 1] \times [-1, 0] \times [0, 2]$. 
 Evaluate the triple integral
 \[
     \iiint_{\mathcal W} (2x + z)e^y \dif V
 \]
+\begin{solution}
+    \begin{align*}
+        \int_0^2 \int_{-1}^0 \int_0^1 (2x+z)e^y \dif x \dif y \dif z
+        &=  \int_{-1}^0 e^y \dif y \cdot \int_0^2 \int_0^1 (2x+z) \dif x \dif z \\ 
+        &= \eval{e^y}_{-1}^0 \cdot \int_0^2 \left[x^2 + xz\right]_{x=0}^1 \dif z \\ 
+        &= \left(1-\frac 1e\right) \cdot \int_0^2 (1+z) \dif z \\ 
+        &= \left(1-\frac 1e\right) \cdot \left[z + \frac12 z^2\right]_0^2 \\ 
+        &= \boxed{4\left(1 - \frac1e\right)}
+    \end{align*}
+\end{solution}
+
+\newpage
 \question Evaluate the following integrals.
 \begin{parts}
 \part[10] Let $\mathcal D$ be the region $x^2 + y^2 \le 4$, $0 \le y$, $x \le 0$. Evaluate
 \[
     \iint_{\mathcal D} 3x \dif A.
 \]
+\begin{solution}
+The region is a quarter circle of radius 2 in the second quadrant.
+We convert to polar and integrate:
+\begin{align*}
+    \iint_{\mathcal D} 3x \dif A
+    &= \int_{\pi/2}^\pi \int_0^2 3r\cos \theta \ r \dif r \dif \theta \\ 
+    &= \int_0^2 3r^2 \dif r \cdot \int_{\pi/2}^\pi \cos \theta \dif \theta \\ 
+    &= \eval{r^3}_0^2 \cdot \eval{\sin \theta}_{\pi/2}^\pi \\ 
+    &= (8-0) \cdot (0-1) \\ 
+    &= \boxed{-8}
+\end{align*}
+\end{solution}
 \part[10] Let $\mathcal D$ be the region between the lines $y = -x$, $y = -1$ and $x = -1$.
 Compute the integral 
 \[
     \iint_{\mathcal D} 2y \dif A.
 \]
+\begin{solution}
+    The integral to set up is clear from a sketch of the region $\mathcal D$.
+    \begin{align*}
+    \iint_{\mathcal D} 2y \dif A
+    &= \int_{-1}^1 \int_{-1}^{-x} 2y \dif y \dif x \\ 
+    &= \int_{-1}^1 y^2\Bigr]_{-1}^{-x} \dif x \\ 
+    &= \int_{-1}^1 x^2 - 1 \dif x \\ 
+    &= \eval{\frac{x^3}{3} - x}_{-1}^1 = \boxed{-\frac43}
+    \end{align*}
+\end{solution}
 \end{parts}
 
+\newpage
 \question Let 
 \[
     \vb F = \vect{2x+yz, xz, xy}.
 \]
 \begin{parts}
 \part[5] If $\vb F$ is a conservative vector field, find a potential. Otherwise, explain why it is not conservative.
+\begin{solution}
+    $\vb{F}$ is a conservative vector field, with potential function 
+    $f = x^2 + xyz$.
+    One can check that $\nabla f = \vb{F}$.
+\end{solution}
 \part[5] Let $\mathcal C$ be the oriented curve with parametrization
 \[
     \vb r(t) = \vect{\sin[6](\pi t)+t+1, e^t + e^{-t}, e^{t^2-1} - 1}
@@ -156,16 +263,30 @@ Compute
 \[
     \int_{\mathcal C} \vb F \vdot \dif \vb r.
 \]
+\begin{solution}
+Since $\vb{F}$ is conservative, 
+\begin{align*}
+\int_{\mathcal C} \vb F \vdot \dif \vb{r} 
+&= f(\vb{r}(1)) - f(\vb{r}(-1))  \\ 
+&= f(2, e + e^{-1} , 0) - f(0, e + e^{-1}, 0) \\ 
+&= \boxed{4}
+\end{align*}
+\end{solution}
 \part[5] Is there a vector potential for $\vb{F}$ (a vector field $\vb{A}$ that satisfies $\vb{F} = \operatorname{curl}(\vb{A})$)? 
 Explain your response.
+\begin{solution}
+\end{solution}
 \part[5] Let $\mathcal S$ be the sphere $x^2 + y^2 + z^2 = 9$ oriented outwardly.
 Compute the surface integral
 \[
     \iint_{\mathcal S} \vb{F} \vdot \dif \vb{S}.
 \]
 State any theorems used in the computation.
+\begin{solution}
+\end{solution}
 \end{parts}
 
+\newpage
 \question
 Let $\mathcal D$ be the lower half disc
 \[
@@ -185,15 +306,23 @@ Using polar coordinates, calculate the double integral
 \[
     \iint_{\mathcal D} x^2 + y^2 \dif A
 \]
+\begin{solution}
+\end{solution}
 \part[5] Compute the line integral
 \[
     \int_{\mathcal C_1} \vb{F} \vdot \dif \vb{r}
 \]
+\begin{solution}
+\end{solution}
 \part[5] Using only Green's Theorem and the computations in parts (a) and (b), compute the vector line integral 
 \[
     \int_{\mathcal C_2} \vb{F} \vdot \dif \vb{r}
 \]
+\begin{solution}
+\end{solution}
 \end{parts}
+
+\newpage
 \question
 Let $\mathcal S$ be the cylinder
 \[
@@ -202,10 +331,14 @@ Let $\mathcal S$ be the cylinder
 oriented outward and $\vb{F} = \vect{zy, -zx, 0}$.
 \begin{parts}
 \part[5] Compute $\tcurl(\vb F)$.
+\begin{solution}
+\end{solution}
 \part[5] Calculate
 \[
     \iint_{\mathcal S} \tcurl(\vb{F}) \vdot \dif \vb{S}
 \]
+\begin{solution}
+\end{solution}
 \part[5] The boundary of $\mathcal S$ consists of a unit circle $\mathcal C_1$ on the $xy$-plane oriented counterclockwise and a unit circle $\mathcal C_2$ on the $z=3$ plane oriented clockwise.
 Noting that the vector field is zero on the $xy$-plane, one easily sees that 
 \[
@@ -215,8 +348,8 @@ Using only this fact, Stokes' Theorem and your result from part (b), compute the
 \[
     \int_{\mathcal C_2} \vb{F} \vdot \dif \vb{r}
 \]
+\begin{solution}
+\end{solution}
 \end{parts}
-
 \end{questions}
-
 \end{document}

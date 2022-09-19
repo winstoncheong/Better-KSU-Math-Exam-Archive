@@ -1,4 +1,9 @@
-# Calc 2 Previous Exams
+# Calc 2 Past Exams
+
+Copied from <https://archive.math.ksu.edu/course?course=math221>
+
+Copied all exams from 2019 Summer back to 2013 Spring.
+
 |Semester|Exam 1|Exam 2|Exam 3|Final|
 |:---:|:---:|:---:|:---:|:---:|
 | 2019 Summer | [Exam](./exams/2019-summer-exam1.pdf) | [Exam](./exams/2019-summer-exam2.pdf) |  | [Solutions](./exams/2019-summer-final-part1.pdf) | 
