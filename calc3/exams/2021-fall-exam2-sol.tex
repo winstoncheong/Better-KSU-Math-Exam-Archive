@@ -1,0 +1,249 @@
+\documentclass[12pt,answers]{exam}
+
+\usepackage{amsmath,amsfonts,amssymb,mathtools,physics,commath}
+\newcommand{\vect}[1]{\left\langle #1\right\rangle}
+
+\pagestyle{headandfoot}
+\firstpageheadrule
+\runningheadrule
+\firstpageheader{Math 222}{Exam 2|Solutions, Page \thepage\ of \numpages}{October 14, 2021}
+\runningheader{Math 222}{Exam 2|Solutions, Page \thepage\ of \numpages}{October 14, 2021}
+\runningfooter{}{}{}
+
+\title{2021 Fall Calc 3 Exam 2|Solutions}
+\author{Winston Cheong}
+\date{}
+
+\begin{document}
+% \maketitle
+\begin{questions}
+\question
+Answer the following questions concerning the vector valued function
+\[
+    \vb{r}(t) = \vect{4t^3, \pi \cos(\pi t), \frac{1}{t+1}}
+\]
+\begin{parts}
+\part[5] Evaluate $\vb{r}'(t)$.
+\begin{solution}
+    \[
+    \vb{r} = \vect{12t^2, -\pi^2 \sin(\pi t), -\frac{1}{(t+1)^2}}
+    \]
+\end{solution}
+
+\part[5] Evaluate 
+\[
+    \int_0^2 \vb r(t) \dif t.
+\]
+\begin{solution}
+    \begin{align*}
+    \int_0^2 \vb r(t) \dif t &= \vect{\eval{t^4}_0^2,\, \eval{\sin(\pi t)}_0^2,\, \eval{\ln|t+1|}_0^2} \\ 
+    &= \vect{16, 0, \ln 3}
+    \end{align*}
+\end{solution}
+\end{parts}
+\newpage
+\question
+Consider the vector valued function 
+\[
+    \vb r(t) = \vect{e^t, 1-2e^t, 2e^t + 1}
+\]
+for $0 \le t \le \ln(2)$.
+\begin{parts}
+\part[10] Find the arc-length function $s(t)$ of $\vb{r}(t)$.
+\begin{solution}
+    We compute $s(t) = \int_1^t \| \vb{r}'(u) \| \dif u$.
+    \begin{align*}
+        \vb{r}'(t) &= \vect{e^t, -2e^t, 2e^t} \\ 
+        \|\vb{r}'(t)\| &= \sqrt{e^{2t}+ 4e^{2t}+ 4e^{2t}} = \sqrt{9e^{2t}} = 3e^t 
+    \end{align*}
+    Hence
+    \[
+        s(t) = \int_1^t 3e^u \dif u = \eval{3e^u}_1^t = \boxed{3e^t - 3e}
+    \]
+\end{solution}
+\part[5] Find the arc-length parametrization $\vb{r}(s)$.
+\begin{solution}
+    Since $s = 3e^t - 3e$ we have $t = \ln(\frac{s+3e}{3})$. Substituting gives
+    \[
+        \boxed{\vb{r}(s) = \vect{\frac13 s+3e, 1-\frac23(s+3e), \frac23(s+3e) + 1}}
+    \]
+\end{solution}
+\part[5] Recalling that curvature is $\kappa = \|\vb{r}''(s)\|$, find the curvature of the curve paramerized by $\vb{r}(t)$. Explain your answer by identifying the curve.
+\begin{solution}
+    Taking derivatives with respect to $s$,
+    \begin{align*}
+        \vb{r}'(s) &= \vect{\frac13, -\frac23, \frac23} \\ 
+        \vb{r}''(s) &= \vect{0, 0, 0} \\ 
+        \intertext{so}
+        \kappa &=  \| \vect{0, 0, 0}\| = \boxed{0}
+    \end{align*}
+    The curve is a line.
+\end{solution}
+\end{parts}
+
+\newpage
+\question Find the limit, if it exists. If the limit does not exist, explain why.
+\begin{parts}
+\part[5]
+\[
+\lim_{(x,y) \to (0,0)} \frac{x^2y - xy}{x^4+y^2x^2}
+\]
+\begin{solution}
+    We simplify before converting to polar:
+    \begin{align*}
+\lim_{(x,y) \to (0,0)} \frac{x^2y - xy}{x^4+y^2x^2} 
+&= \lim_{(x,y) \to (0,0)} \frac{xy(x - 1)}{x^2(x^2+y^2)}  \\ 
+&= \lim_{r\to0} \frac{r^2 \cos \theta \sin \theta (r\cos \theta - 1)}{r^4 \cos^2 \theta} \\ 
+&= \lim_{r\to0} \frac{\sin \theta (r\cos \theta - 1)}{r^2 \cos \theta} \\ 
+    \end{align*}
+    This funciton still depends on $\theta$, so the limit \fbox{does not exist}
+\end{solution}
+\part[5]
+\[
+\lim_{(x,y) \to (\pi/4,\pi/4)} \frac{\cos(x) - \sin(y)}{\cos^2(x) - \sin^2(y)}
+\]
+\begin{solution}
+\begin{align*}
+\lim_{(x,y) \to (\pi/4,\pi/4)} \frac{\cos(x) - \sin(y)}{\cos^2(x) - \sin^2(y)}
+&= \lim_{(x,y) \to (\pi/4,\pi/4)} \frac{1}{\cos x + \sin y} \\ 
+&= \frac{1}{\cos \frac\pi4 + \sin \frac\pi4} = \boxed{\frac{1}{\sqrt{2}}}
+\end{align*}
+\end{solution}
+\part[5]
+\[
+\lim_{(x,y) \to (0,0)} \frac{x^2y^2}{x^4 + x^2y^2 + y^4}
+\]
+\begin{solution}
+Approaching along $y = 0$, the limit reduces to $\displaystyle \lim_{x\to0} \frac{0}{x^4} = 0$. \\ 
+Approaching along $x= y$, the limit reduces to $\displaystyle \lim_{x \to 0} \frac{x^4}{3x^4} = \frac13$.
+
+Thus the limit \fbox{does not exist}
+\end{solution}
+\end{parts}
+
+\newpage
+\question
+Evaluate the partial derivatives, if they exist. If they do not exist, explain why
+\begin{parts}
+\part[5] $f_y(3, 6)$ for $f(x, y) = xe^{y-6} + \ln(xy)$.
+\begin{solution}
+    \begin{align*}
+        f_y &= xe^{y-6} + \frac{1}{xy} x \\ 
+            &= xe^{y-6} + \frac{1}{y} \\ 
+        f_y(3,6) &= \boxed{3e^3 + \frac 16}
+    \end{align*}
+\end{solution}
+\part[5]
+$\frac{\partial^3 f}{\partial x\partial y\partial z}(1,2,3)$ for $f(x,y,z) = xy+yz+xz+xyz$.
+\begin{solution}
+    The only term with all three variables is the last. The other terms will become 0 when the appropriate partial derivative is taken. 
+    We only need to concern ourselves with 
+    \[
+        \frac{\partial^3}{\partial x \partial y \partial z} (xyz) = \boxed{1}
+    \]
+\end{solution}
+\part[5]
+$f_z(0,3,0)$ for 
+\[
+f(x,y,z) = y + \sqrt{xyz + x^2 + z^2}
+\]
+\begin{solution}
+    \[
+        f_z = \frac{xy+2z}{2\sqrt{xyz+x^2+z^2}}
+    \]
+    Evaluating at $(0, 3, 0)$ gives $\frac 00$ hence $f_z(0,3,0)$ \fbox{does not exist}
+\end{solution}
+\end{parts}
+
+\newpage
+\question
+Consider the function $f(x, y) = xy - 2x + y^2$.
+\begin{parts}
+\part[5] Give the linearization $L(x, y)$ of $f(x, y)$ at $(-1, 1)$.
+\begin{solution}
+    The linearization centered at $(-1, 1)$ is 
+    \[
+        L(x, y) = f(-1, 1) + f_x(-1, 1)(x+1) + f_y(-1, 1)(y-1)
+    \]
+    Some side calculation gives
+    \begin{align*}
+        f(-1, 1) &= 2 \\ 
+        f_x(x, y) &= y -2 \\ 
+        f_x(-1, 1) &= -1 \\ 
+        f_y(x, y) &= x + 2y \\ 
+        f_y(-1, 1) &= 1
+    \end{align*}
+    so the linearization is 
+    \begin{align*}
+        L(x, y) &= f(-1, 1) + f_x(-1, 1)(x+1) + f_y(-1, 1)(y-1) \\ 
+        &= 2 -(x+1) + (y-1) \\ 
+        \Aboxed{L(x, y) &= -x+y}
+    \end{align*}
+\end{solution}
+\part[5] Use your result from part (a) to write the equation of the tangent plane to the graph of $f(x, y)$ at $(-1, 1)$.
+\begin{solution}
+    \[
+        z = -x + y 
+    \]
+\end{solution}
+\end{parts}
+
+\newpage
+\question
+Let 
+\[
+f(x, y, z) = xy + yz + xz + 1
+\]
+\begin{parts}
+\part[5] Find the gradient of $f$.
+\begin{solution}
+\[
+    \nabla f = \vect{y+z, x+z, y+x}
+\]
+\end{solution}
+\part[5] Let $\vb{u} = \vect{\frac{\sqrt 3}{3}, \frac{\sqrt 3}{3},\frac{\sqrt 3}{3}}$ and find the directional derivative $D_{\vb{u}} f(\sqrt 3, \sqrt 3, \sqrt 3)$.
+\begin{solution}
+\begin{align*}
+    D_{\vb{u}} f(\sqrt 3, \sqrt 3, \sqrt 3) 
+    &= \nabla f(\sqrt 3, \sqrt 3, \sqrt 3) \vdot \vb u \\ 
+    &= \vect{2\sqrt 3, 2 \sqrt 3, 2\sqrt 3} \vdot \vect{\frac{\sqrt 3}{3}, \frac{\sqrt 3}{3},\frac{\sqrt 3}{3}} \\ 
+    &= 2 \sqrt 3 \frac{\sqrt 3}{3} \cdot 3 = \boxed{6}
+\end{align*}
+\end{solution}
+\part[5] Give an example of a vector $\vb{v}$ for which $f$ is increasing in the direction of $\vb{v}$ starting at $(-1, 1, 1)$.
+\begin{solution}
+\[
+    \nabla f(-1, 1, 1) = \boxed{\vect{2, 0, 0} =: \vb v}
+\]
+\end{solution}
+\end{parts}
+
+\newpage
+\question Consider the function
+\[
+    f(x, y, z) = x^2 + y^2 + z
+\]
+\begin{parts}
+    \part[10] Use the chain rule to calculate $\frac{\partial f}{\partial \varphi}$ at the point $(\rho, \theta, \phi) = (1, 0, \pi/2)$ in spherical coordinates.
+    \begin{solution}
+        \begin{align*}
+            \frac{\partial f}{\partial \varphi}
+             & = \pdv{f}{x}\pdv{x}{\varphi} + \pdv{f}{y} \pdv{y}{\varphi} + \pdv{f}{z} \pdv{z}{\varphi}                        \\
+             & = 2x \cdot \rho \cos \theta \cos \varphi + 2 y \cdot \rho \sin \theta \cos \varphi + 1 \cdot -\rho \sin \varphi \\
+             & = 0 + 0 + -1 = \boxed{-1}
+        \end{align*}
+    \end{solution}
+    \part[5] Confirm your result by expressing $f$ in spherical coordinates and taking its partial derivative with respect to $\varphi$.
+    \begin{solution}
+        \begin{align*}
+            f                      & = \rho^2 \cos^2 \theta \sin^2 \varphi + \rho^2 \sin^2 \theta \sin^2 \varphi + \rho \cos \varphi \\
+                                   & = \rho^2 \sin^2 \varphi + \rho \cos \varphi                                                     \\
+            f_\varphi              & = \rho^2 \cdot 2 \sin \varphi \cos \varphi - \rho \sin \varphi                                  \\
+            f_\varphi(1, 0, \pi/2) & = 1 \cdot 2 \sin \pi/2 \cos\pi/2 - 1 \cdot \sin \pi/2                                           \\
+                                   & = 0 - 1 \cdot 1 = \boxed{-1}
+        \end{align*}
+    \end{solution}
+\end{parts}
+\end{questions}
+
+\end{document}
