@@ -4,14 +4,13 @@ Official Exam archive: https://archive.math.ksu.edu/
 
 I've copied everything from 2021 Fall back to 2011 Spring. Exams earlier than that seem to be made on a typewriter.
 
-
-
 |Semester|Exam 1|Exam 2|Exam 3|Final|
 |:---:|:---:|:---:|:---:|:---:|
-| 2021 Fall | [Exam](./exams/2021-fall-exam1.pdf) | [Exam](./exams/2021-fall-exam2.pdf), [Exam solutions](./exams/2021-fall-exam2-sol.pdf) | [Exam](./exams/2021-fall-exam3.pdf) | [Exam](./exams/2021-fall-final.pdf) | 
-| 2019 Fall | [Exam](./exams/2019-fall-exam1.pdf) | [Exam](./exams/2019-fall-exam2.pdf) | [Exam](./exams/2019-fall-exam3.pdf) | [Version_b](./exams/2019-fall-final-version_b.pdf), [Version_a](./exams/2019-fall-final-version_a.pdf) | 
+| 2022 Fall | [Practice](./exams/2022-fall-exam1-practice.pdf), [Practice solutions](./exams/2022-fall-exam1-practice-sol.pdf), [Version_a](./exams/2022-fall-exam1-version_a.pdf), [Version_a solutions](./exams/2022-fall-exam1-version_a-sol.pdf), [Version_b](./exams/2022-fall-exam1-version_b.pdf), [Version_b solutions](./exams/2022-fall-exam1-version_b-sol.pdf) |  |  |  | 
+| 2021 Fall | [Exam](./exams/2021-fall-exam1.pdf) | [Exam](./exams/2021-fall-exam2.pdf), [Exam solutions](./exams/2021-fall-exam2-sol.pdf) | [Exam](./exams/2021-fall-exam3.pdf), [Exam solutions](./exams/2021-fall-exam3-sol.pdf) | [Exam](./exams/2021-fall-final.pdf) | 
+| 2019 Fall | [Exam](./exams/2019-fall-exam1.pdf) | [Exam](./exams/2019-fall-exam2.pdf) | [Exam](./exams/2019-fall-exam3.pdf) | [Version_a](./exams/2019-fall-final-version_a.pdf), [Version_b](./exams/2019-fall-final-version_b.pdf) | 
 | 2019 Spring | [Exam](./exams/2019-spring-exam1.pdf), [Exam solutions](./exams/2019-spring-exam1-sol.pdf), [Practice](./exams/2019-spring-exam1-practice.pdf), [Practice solutions](./exams/2019-spring-exam1-practice-sol.pdf) | [Exam](./exams/2019-spring-exam2.pdf), [Exam solutions](./exams/2019-spring-exam2-sol.pdf), [Practice](./exams/2019-spring-exam2-practice.pdf), [Practice solutions](./exams/2019-spring-exam2-practice-sol.pdf) | [Exam](./exams/2019-spring-exam3.pdf), [Exam solutions](./exams/2019-spring-exam3-sol.pdf), [Practice](./exams/2019-spring-exam3-practice.pdf), [Practice solutions](./exams/2019-spring-exam3-practice-sol.pdf) | [Exam](./exams/2019-spring-final.pdf), [Practice](./exams/2019-spring-final-practice.pdf), [Practice solutions](./exams/2019-spring-final-practice-sol.pdf) | 
-| 2018 Fall |  | [Version_b](./exams/2018-fall-exam2-version_b.pdf), [Makeup](./exams/2018-fall-exam2-makeup.pdf) |  | [Version_b](./exams/2018-fall-final-version_b.pdf), [Version_a](./exams/2018-fall-final-version_a.pdf), [Makeup](./exams/2018-fall-final-makeup.pdf) | 
+| 2018 Fall |  | [Makeup](./exams/2018-fall-exam2-makeup.pdf), [Version_b](./exams/2018-fall-exam2-version_b.pdf) |  | [Makeup](./exams/2018-fall-final-makeup.pdf), [Version_a](./exams/2018-fall-final-version_a.pdf), [Version_b](./exams/2018-fall-final-version_b.pdf) | 
 | 2018 Spring |  |  |  | [Exam](./exams/2018-spring-final.pdf) | 
 | 2017 Summer |  |  |  | [Exam](./exams/2017-summer-final.pdf) | 
 | 2017 Spring | [Exam](./exams/2017-spring-exam1.pdf), [Exam solutions](./exams/2017-spring-exam1-sol.pdf) | [Exam](./exams/2017-spring-exam2.pdf), [Exam solutions](./exams/2017-spring-exam2-sol.pdf) | [Exam](./exams/2017-spring-exam3.pdf), [Exam solutions](./exams/2017-spring-exam3-sol.pdf) | [Exam](./exams/2017-spring-final.pdf), [Exam solutions](./exams/2017-spring-final-sol.pdf) | 

@@ -107,7 +107,7 @@ for year in sorted(data.keys(), reverse=True):
 					addcomma = False # comma to separate the blank from the solutions when printing table
 						
 					# handle version_names
-					for version_name in data[year][season][exam]:
+					for version_name in sorted(data[year][season][exam]):
 
 						if "exam_file" in data[year][season][exam][version_name]:
 							if addcomma:
