@@ -1,6 +1,6 @@
 # Calc 3 Past Exams
 
-Official Exam archive: https://archive.math.ksu.edu/
+Copied from <https://archive.math.ksu.edu/course?course=math222>
 
 I've copied everything from 2021 Fall back to 2011 Spring. Exams earlier than that seem to be made on a typewriter.
 
