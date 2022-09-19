@@ -1,0 +1,191 @@
+\documentclass[12pt,answers]{exam}
+
+\usepackage{amsmath,amsfonts,amssymb,mathtools,physics,commath}
+\newcommand{\vect}[1]{\left\langle #1\right\rangle}
+
+\pagestyle{headandfoot}
+\firstpageheadrule
+\runningheadrule
+\firstpageheader{Math 222}{Exam 3|Solutions, Page \thepage\ of \numpages}{November 11, 2021}
+\runningheader{Math 222}{Exam 3|Solutions, Page \thepage\ of \numpages}{November 11, 2021}
+\runningfooter{}{}{}
+
+% \title{2021 Fall Calc 3 Exam 3|Solutions}
+% \author{Winston Cheong}
+% \date{}
+
+\begin{document}
+% \maketitle
+\begin{questions}
+\question
+Consider the function 
+\[f(x, y) = 6x^3 - 6xy + y^2\]
+\begin{parts}
+\part[10] Find the critical points of $f$.
+\begin{solution}
+    \[
+        \nabla f = \vect{18x^2 - 6y, -6x + 2y} = \vect{0,0}
+    \]
+    Solving the system of equations
+    \[
+        \left\{
+        \begin{aligned}
+        3x^2 - y &= 0 \\ 
+        -3x + y &= 0
+        \end{aligned}
+        \right.
+    \]
+    gives the critical points \fbox{$(0,0), (1,3)$}
+\end{solution}
+\part[10] Describe the local behavior of $f$ near the critical points from (a)
+\begin{solution}
+    The discriminant is
+    \[
+        \begin{aligned}
+            D & = f_{xx} f_{yy} - (f_{xy})^2 \\
+              & = 36x \cdot 2 - (-6)^2       \\
+              & = 36(2x-1)
+        \end{aligned}
+    \]
+    So 
+    \begin{align*}
+        D_{(0,0)} &= -36 < 0 \implies (0,0) \text{ is a saddle point} \\ 
+        D_{(1, 3)} &= 36 > 0 \text{ and } f_{xx}(1,3) = 36 > 0 \implies (1, 3) \text{ is a local min}
+    \end{align*}
+\end{solution}
+\end{parts}
+
+\newpage
+\question[15]
+Use Lagrange multipliers to find the critical points of the function 
+\[f(x, y, z) = 2x - z + y\]
+on the ellipsoid 
+\[x^2 + \frac{y^2}{4} + z^2 = 1.\]
+Identify the global maximum and minimum values of $f$ on the ellipsoid.
+\begin{solution}
+\begin{align*}
+    \nabla f &= \vect{2, 1, -1} \\ 
+    \nabla g &= \vect{2x, \frac12 y, 2z} \\ 
+    \nabla f &= \lambda \nabla g \implies 
+    \left\{ 
+        \begin{aligned}
+            2 &= 2\lambda x \\ 
+            1 &= \frac12 \lambda y \\ 
+            -1 &= 2 \lambda z
+        \end{aligned}
+    \right.
+    \implies 
+    \left\{
+    \begin{aligned}
+        x &= \frac 1 \lambda \\ 
+        y &= \frac 2\lambda \\ 
+        z &= -\frac{1}{2\lambda}
+    \end{aligned}
+    \right.
+\end{align*}
+Substituting into the constraint and solving for $\lambda$:
+\[
+    \frac{1}{\lambda^2} + \frac{\frac{4}{\lambda^2}}{4} + \frac{1}{4\lambda^2} = 1 \implies \lambda = \pm \frac 32
+\]
+At $\lambda = \frac 32$, $(x, y, z) = (\frac23, \frac 43, -\frac13) \implies f = 3$ \\
+At $\lambda = - \frac 32$, $(x, y, z) = (-\frac23, -\frac 43, \frac13) \implies f = -3$ \\
+
+Thus the global minimum value of $f$ subject to the constraint is $-3$, and the global maximum value of $f$ subject to the constraint is 3.
+
+\end{solution}
+
+\newpage
+\question[15]
+Calculate the integral 
+\[\iiint_{\mathcal{B}} x \cos(xy) + 3z^2 \dif V\]
+where $\mathcal{B} = [0,\pi] \times [0,1] \times [-1,1]$.
+\begin{solution}
+\begin{align*}
+    \MoveEqLeft \int_{-1}^1 \int_0^1 \int_0^\pi x \cos(xy) + 3z^2 \dif x \dif y \dif z \\ 
+    &= \int_{-1}^1 \int_0^1 \int_0^\pi x \cos(xy) \dif x \dif y \dif z + \int_{-1}^1 \int_0^1 \int_0^\pi 3z^2 \dif x \dif y \dif z \\ 
+    &= 2 \int_0^\pi \int_0^1 x \cos(xy) \dif y \dif x + 3\pi \int_{-1}^1 z^2 \dif z \\ 
+    &= 2 \int_0^\pi \bigl[\sin(xy)\bigr]_{y=0}^1 \dif x + \pi \bigl[z^3\bigr]_{-1}^1 \\ 
+    &= 2 \int_0^\pi \sin(x) \dif x + 2\pi \\ 
+    &= 2 \bigl[-\cos(x)\bigr]_0^\pi + 2\pi \\ 
+    &= \boxed{4 + 2\pi}
+\end{align*}
+\end{solution}
+
+\newpage
+\question[15]
+Let $\mathcal D$ be the region 
+\[x \le 0, \quad 0 \le y \le 2x + 2\]
+Evaluate 
+\[\iint_{\mathcal D} 6xy \dif A\]
+\begin{solution}
+\begin{align*}
+    \int_{-1}^0 \int_0^{2x+2} 6xy \dif y \dif x
+    &= \int_{-1}^0 \bigl[3xy^2\bigr]_{y=0}^{2x+2} \dif x \\ 
+    &= \int_{-1}^0 12x^3 + 24x^2 + 12x \dif x \\ 
+    &= \bigl[3x^4 + 8x^3 + 6x^2\bigr]_{-1}^0 \\ 
+    &= \boxed{-1}
+\end{align*}
+\end{solution}
+
+\newpage
+\question
+Consider the region $\mathcal{E}$ of points $(x, y, z)$ satisfying 
+\[x^2 + y^2 + z^2 \le 16, \quad y \le 0, \quad z \le 0\]
+\begin{parts}
+\part[10] Express the triple integral,
+\[\iiint_{\mathcal E} y \dif V\]
+as an iterated integral using spherical coordinates
+\begin{solution}
+    \[
+    \int_{\pi}^{2\pi} \int_{\pi/2}^{\pi} \int_0^4 \rho^3 \sin \theta \sin^2 \phi \dif \rho \dif \phi \dif \theta
+    \]
+\end{solution}
+\part[5] Evaluate the integral (use identities on the formula sheet if needed). 
+\begin{solution}
+    \begin{align*}
+    \int_{\pi}^{2\pi} \int_{\pi/2}^{\pi} \int_0^4 \rho^3 \sin \theta \sin^2 \phi \dif \rho \dif \phi \dif \theta
+    &= \int_0^4 \rho^3 \dif \rho \cdot \int_{\pi}^{2\pi} \sin \theta \dif \theta \cdot \int_{\pi/2}^\pi \sin^2\phi \dif \phi \\ 
+    &= 64 \cdot (-2) \cdot \frac{\pi}{4} = \boxed{-32\pi}
+    \end{align*}
+\end{solution}
+\end{parts}
+
+\newpage
+\question
+Let $\mathcal{R}$ be the parallelograph with vertices $(0, 0), (1, 1), (2, 0)$ and $(3, 1)$.
+\begin{parts}
+\part[5] Give a formula for a linear transformation $T(u, v) = (x(u, v), y(u, v))$ which maps the square $\mathcal S = [0,1] \times [0,1]$ onto $\mathcal R$.
+\begin{solution}
+    \[
+        T(u, v) = (2u + v, v)
+    \]
+\end{solution}
+\part[5] Compute the Jacobian of $T$.
+\begin{solution}
+    \[
+        Jac(T) 
+        = \pdv{x}{u} \pdv{y}{v} - \pdv{x}{v} \pdv{y}{u} 
+        = 2 \cdot 1 - 1 \cdot 0 
+        = \boxed{2}
+    \]
+\end{solution}
+\part[10] Use the change of variables formula to compute the double integral
+\[\iint_{\mathcal R} 4ye^{x-y} \dif A\]
+\begin{solution}
+    \[
+        f(2u+v, v) = 4v e^{2u+v-v} = 4ve^{2u}
+    \]
+    so 
+\begin{align*}
+    \iint_{\mathcal R} 4ye^{x-y} \dif A
+    &= \iint_{\mathcal S} 4v e^{2u} \cdot 2 \dif u \dif v \\
+    &= 8 \int_0^1 v e^{2u} \dif u \dif v \\ 
+    &= 8 \int_0^1 e^{2u \dif u} \cdot \int_0^1 v \dif v \\ 
+    &= 8 \cdot \frac12 (e^2-1) \cdot \frac12 \\ 
+    &= \boxed{2(e^2 - 1)}
+\end{align*}
+    
+\end{solution}
+\end{parts}
+\end{questions}
+\end{document}
