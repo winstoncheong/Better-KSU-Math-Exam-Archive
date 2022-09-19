@@ -2,7 +2,9 @@
 
 Official Exam archive: https://archive.math.ksu.edu/
 
-I've copied everything back to 2011 Spring. Exams earlier than that seem to be made on a typewriter.
+I've copied everything from 2021 Fall back to 2011 Spring. Exams earlier than that seem to be made on a typewriter.
+
+
 
 |Semester|Exam 1|Exam 2|Exam 3|Final|
 |:---:|:---:|:---:|:---:|:---:|
@@ -21,3 +23,4 @@ I've copied everything back to 2011 Spring. Exams earlier than that seem to be m
 | 2012 Fall | [Exam solutions](./exams/2012-fall-exam1-sol.pdf) | [Exam solutions](./exams/2012-fall-exam2-sol.pdf) | [Exam solutions](./exams/2012-fall-exam3-sol.pdf) | [Exam solutions](./exams/2012-fall-final-sol.pdf) | 
 | 2011 Summer | [Exam](./exams/2011-summer-exam1.pdf) | [Exam](./exams/2011-summer-exam2.pdf) |  | [Exam](./exams/2011-summer-final.pdf) | 
 | 2011 Spring | [Exam solutions](./exams/2011-spring-exam1-sol.pdf) | [Exam solutions](./exams/2011-spring-exam2-sol.pdf) | [Exam solutions](./exams/2011-spring-exam3-sol.pdf) |  | 
+
