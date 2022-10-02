@@ -1,0 +1,288 @@
+\documentclass[12pt,answers]{exam}
+
+\usepackage{amsmath,amsfonts,amssymb,mathtools,physics,commath}
+\usepackage{cancel}
+\newcommand{\vect}[1]{\left\langle #1\right\rangle}
+
+\pagestyle{headandfoot}
+\firstpageheadrule
+\runningheadrule
+\firstpageheader{Math 222}{Exam 2|Solutions, Page \thepage\ of \numpages}{October 24, 2019}
+\runningheader{Math 222}{Exam 2|Solutions, Page \thepage\ of \numpages}{October 24, 2019}
+\runningfooter{}{}{}
+
+\title{2019 Fall Calc 3 Exam 2|Solutions}
+\author{Winston Cheong}
+\date{}
+
+\begin{document}
+% \maketitle
+\begin{questions}
+	\question
+	Find the limit, if it exists. If the limit does not exist, explain why.
+	\begin{parts}
+		\part[5]
+		\[
+			\lim_{(x,y) \to (0,0)} \frac{x-y}{x^2+y^2}
+		\]
+		\begin{solution}
+			Approaching along the $x$-axis, the limit reduces to
+			\[
+				\lim_{x\to 0} \frac{1}{x}
+			\]
+			which does not exist.
+			Hence the original limit \fbox{does not exist}
+		\end{solution}
+
+		\part[5]
+		\[
+			\lim_{(x,y) \to (0,0)} e^{-\frac{1}{x^2+y^2}}
+		\]
+		\begin{solution}
+			Converting to polar, the limit becomes
+			\[
+				\lim_{r\to 0} e^{-\frac{1}{r^2}} = \boxed{0}
+			\]
+		\end{solution}
+
+		\part[5]
+		\[
+			\lim_{(x,y) \to (0,0)} \frac{xy^3}{x^2+y^2}
+		\]
+		\begin{solution}
+			Converting to polar, the limit becomes
+			\[
+				\lim_{r\to0} \frac{r^4 \cos\theta \sin^3\theta}{r^2} = \lim_{r\to0} r^2 \cos\theta \sin^3\theta = \boxed{0}
+			\]
+			since $|\cos\theta \sin^3\theta| \le 1$.
+		\end{solution}
+	\end{parts}
+
+	\newpage
+	\question
+	Evaluate the partial derivatives, if they exist. If they do not exist, explain why.
+	\begin{parts}
+		\part[5] $f_y(1,-2)$ for $f(x,y) = xy + \sin(\pi xy)$.
+		\begin{solution}
+			\begin{align*}
+				f_y &= x + \cos(\pi xy) \cdot \pi x \\
+				f_y(1, -2) &= 1 + \pi \cos(-2\pi) = \boxed{\pi + 1}
+			\end{align*}
+		\end{solution}
+
+		\part[5] $\frac{\partial^3 f}{\partial y\partial x^2}(0,0)$ for $f(x,y) = x^3 + x^2 + x + 1 + y^3 + y^2 + x^2 y$
+		\begin{solution}
+			The mixed derivative will make all terms go to zero, except for $x^2 y$, which goes to \fbox{2}
+		\end{solution}
+
+		\part[5] $f_z(0,1,0)$ for
+		\[
+			f(x,y,z) = 2y |x| + 3x|z| + 4z|y| + 5z.
+		\]
+		\begin{solution}
+			Since the partial derivative w.r.t.~$z$ treats $x$ and $y$ as constants, we can fix the function at $x=0, y=1$
+			and then take the partial dervative w.r.t.~$z$ and then evaluate at $z=0$:
+			\begin{align*}
+				f(0, 1, z) &= 4z + 5z = 9z \\
+				f_z(0, 1, z) &= 9 \\
+				f_z(0, 1, 0) &= \boxed{9}
+			\end{align*}
+		\end{solution}
+	\end{parts}
+
+	\newpage
+	\question
+	Consider the function $f(x,y) = e^{xy} + 3x$.
+	\begin{parts}
+		\part[5] Give the linearization $L(x,y)$ of $f(x,y)$ at $(2,0)$.
+		\begin{solution}
+			\begin{align*}
+				f(2, 0) &= e^0 + 6 = 7 \\
+				f_x &= e^{xy} y + 3 \\
+				f_x(2, 0) &= 3\\
+				f_y &= e^{xy} x \\
+				f_y(2, 0) &= 2e^0 = 2
+			\end{align*}
+			so
+			\begin{align*}
+				L(x, y) &= f(2, 0) + f_x(2, 0)(x-2) + f_y(2, 0)(y-0) \\
+				\Aboxed{L(x, y) &= 7 + 3(x-2) + 2y}
+			\end{align*}
+		\end{solution}
+
+		\part[5] Use your result from part (a) to write the equation of the tangent plane to the graph of $f(x,y)$ at $(2,0)$.
+		\begin{solution}
+			\[
+				\boxed{z = 7 + 3(x-2) + 2y}
+			\]
+		\end{solution}
+	\end{parts}
+
+	\newpage
+	\question
+	Let
+	\[
+		f(x,y,z) = x^2 + 4y^2 - z^2
+	\]
+	\begin{parts}
+		\part[5] Find the gradient of $f$.
+		\begin{solution}
+			\[
+				\nabla f = \boxed{\vect{2x, 8y, -2z}}
+			\]
+		\end{solution}
+
+		\part[5] Which points on the level surface
+		\[
+			f(x,y,z) = 1
+		\]
+		have tangent planes parallel to the plane $y=0$.
+		\begin{solution}
+			Since a normal vector for the plane $y = 0$ is $\vect{0, 1, 0}$,
+			\[
+				\nabla f = \lambda \vect{0, 1, 0} \implies x, z = 0,
+			\]
+			so the points on the level surface with the correct tangent planes occur when $x, z= 0$.
+			To find all such points on the level surface, we do:
+			\[
+				f(0, y, 0) = 4y^2 = 1 \implies y = \pm \frac12
+			\]
+			hence $\boxed{(0, \pm\frac12, 0)}$
+		\end{solution}
+
+		\part[5] Give an example of a vector $\vb v$ for which $f$ is decreasing in the direction of $\vb v$ starting at $(3,2,1)$.
+		\begin{solution}
+			\[
+				-\nabla f(3,2,1) = - \vect{6, 16, -2} = \boxed{\vect{-6, -16, 2}}
+			\]
+		\end{solution}
+	\end{parts}
+
+	\newpage
+	\question[15]
+	Let
+	\[
+		f(r,\theta,z) = r^2 \sin\theta
+	\]
+	be written in cylindrical coordinates. Use the chain rule to calculate $\pdv{f}{x}$ at the point $P$ which is $(x,y,z) = (-1,0,1)$ in Cartesian coordinates. Confirm your result by expressing $f$ in Cartesian coordinates and taking its partial derivatives with respect to $x$.
+	\begin{solution}
+		The coordinate in cylindrical is $(r, \theta, z) = (1, \pi, 0)$.
+		Using the conversion formulas
+		\[
+			r = \sqrt{x^2+y^2} \qquad \theta = \arctan(\frac yx)
+		\]
+		the partial derivatives $\dpd{r}{x}$ and $\dpd{\theta}{x}$ can be calculated as needed for the chain rule:
+		\begin{align*}
+			\pdv{f}{x} &= \pdv{f}{r} \pdv{r}{x} + \pdv{f}{\theta} \pdv{\theta}{x} + \cancel{\pdv{f}{z} \pdv{z}{x}} \\
+			&= 2r \sin \theta \cdot \frac{x}{\sqrt{x^2+y^2}} + r^2 \cos\theta \cdot \frac{-y}{x^2+y^2} \\
+			&= \cancel{2\sin \pi \cdot \frac{-1}{1}} + \cancel{\cos \pi \cdot \frac{0}{1}} \\
+			&= \boxed{0}
+		\end{align*}
+		Alternatively, converting $f$ to Cartesian coordinates,
+		\[
+			f = r^2 \sin\theta \rightsquigarrow (x^2+y^2) \frac{y}{\sqrt{x^2+y^2}} = y \sqrt{x^2+y^2}
+		\]
+		so
+		\[
+			f_x = \frac{xy}{\sqrt{x^2+y^2}} = \frac{0}{1} = \boxed{0}
+		\]
+	\end{solution}
+
+	\newpage
+	\question
+	Consider the function
+	\[
+		f(x,y) = x^3 - 3x - y^3 + 3y
+	\]
+	on the rectangular domain $\mathcal D$ defined by
+	\[
+		-\frac32 \le x \le \frac32, \qquad -\frac32 \le y \le 0
+	\]
+	\begin{parts}
+		\part[5] Find the critical points of $f$ in the interior of $\mathcal D$.
+		\begin{solution}
+			\[
+				\nabla f = 0 \implies
+				\left\{
+					\begin{aligned}
+						3x^2 - 3 &= 3(x^2-1) = 0 \\
+						-3y^2 + 3 &= -3(y^2-1) = 0
+					\end{aligned}
+				\right.
+				\implies
+				\begin{aligned}
+					x = \pm 1\\
+					y = \pm 1
+				\end{aligned}
+			\]
+			Restricted to $\mathcal D$, the critical points are $\boxed{(\pm 1, -1)}$
+		\end{solution}
+
+		\part[5] Describe the local behavior of $f$ near the critical points.
+		\begin{solution}
+			Computing the discriminant:
+			\[
+				\text{disc.} = f_{xx}f_{yy} - (f_{xy})^2
+				= (6x)(-6y) - 0 = -36xy
+			\]
+			So
+			\begin{itemize}
+				\item For $(1, -1)$, the discriminant is $36 > 0$. Since $f_{xx}(1, -1) = 6 > 0$, \fbox{$(1, -1)$ is a local min}
+				\item For $(-1, -1)$, the discriminant is $-36 < 0$, so \fbox{$(-1, -1)$ is a saddle point}
+			\end{itemize}
+		\end{solution}
+
+		\part[5] The global maximum and minimum values of $f$ on the boundary of the rectangle are 2 and $-\frac{25}{8}$ respectively. Find the global maximum value and the global minimum value for $f$ on $\mathcal D$ if they exist. Explain your response.
+		\begin{solution}
+			Since $f(1, -1) = -4$ is a local min in $\mathcal D$, the global minimum on $\mathcal D$ is $\min(-\frac{25}{8}, -4) = \boxed{-4}$.
+			Since there is no local max in the interior of $\mathcal D$, the global maximum on $\mathcal D$ is found on the boundary, and is \fbox{2}
+		\end{solution}
+	\end{parts}
+
+	\newpage
+	\question[15]
+	Use Lagrange multipliers to find the critical points of the function
+	\[
+		f(x,y,z) = 2x + 2y - z
+	\]
+	on the sphere
+	\[
+		x^2 + y^2 + z^2 = 4.
+	\]
+	Identify the global maximum and minimum values of $f$ on the sphere.
+	\begin{solution}
+		Letting $g(x,y,z) = x^2+y^2+z^2-4$,
+		\begin{align*}
+			\nabla f &= \lambda \nabla g \\
+			\vect{2,2,-1} &= \lambda \vect{2x,2y,2z}
+			\implies
+			\left\{
+				\begin{aligned}
+					2 &= 2\lambda x\\
+					2 &= 2\lambda y\\
+					-1 &= 2\lambda z
+				\end{aligned}
+			\right.\\
+			&\implies
+			\left\{
+			\begin{aligned}
+				x &= 1/\lambda \\
+				y &= 1/\lambda \\
+				z &= -1/(2\lambda)
+			\end{aligned}
+			\right.
+		\end{align*}
+		then substituting into the constraint,
+		\begin{align*}
+			\frac{1}{\lambda^2} + \frac{1}{\lambda^2} + \frac{1}{4\lambda^2} &= 4 \\
+			\frac{1}{\lambda^2}(2 + \frac14) &= 4 \\
+			\frac{1}{\lambda^2} &= \frac{16}{9} \\
+			\lambda &= \pm \frac{3}{4}
+		\end{align*}
+		For $\lambda = 3/4$, $f(4/3, 4/3, -2/3) = 6$.
+		For $\lambda = -3/4$, $f(-4/3, -4/3, 2/3) = -6$.
+		Thus on the sphere, \fbox{the global max is 6, and the global min is $-6$}
+	\end{solution}
+\end{questions}
+
+\end{document}
