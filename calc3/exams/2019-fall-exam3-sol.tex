@@ -1,0 +1,215 @@
+\documentclass[12pt,answers]{exam}
+
+\usepackage{amsmath,amsfonts,amssymb,mathtools,physics,commath}
+\usepackage{cancel}
+\newcommand{\vect}[1]{\left\langle #1\right\rangle}
+
+\pagestyle{headandfoot}
+\firstpageheadrule
+\runningheadrule
+\firstpageheader{Math 222}{Exam 3|Solutions, Page \thepage\ of \numpages}{November 21, 2019}
+\runningheader{Math 222}{Exam 3|Solutions, Page \thepage\ of \numpages}{November 21, 2019}
+\runningfooter{}{}{}
+
+\title{2019 Fall Calc 3 Exam 3|Solutions}
+\author{Winston Cheong}
+\date{}
+
+\begin{document}
+% \maketitle
+\begin{questions}
+	\question[15]
+	Calculate the integral
+	\[
+		\iiint_{\mathcal B} x^2 y \cos(xyz) \dif V
+	\]
+	where $\mathcal B = [0,\pi] \times [0,1] \times [-1,0]$.
+	\begin{solution}
+		\begin{align*}
+			\MoveEqLeft \int_0^\pi \int_0^1 \int_{-1}^0 x^2 y \cos(xyz) \dif z \dif y \dif x \\ 
+			&= 
+			\int_0^\pi \int_0^1 x \bigl[\sin(xyz)\bigr]_{z=-1}^0 \dif y \dif x \\ 
+			&= 
+			\int_0^\pi \int_0^1 x \sin(xy) \dif y \dif x \\ 
+			&= 
+			\int_0^\pi - \bigl[\cos(xy)\bigr]_{y=0}^1 \dif x \\ 
+			&= - \int_0^\pi \cos(x) - 1 \dif x \\
+			&= - \bigl[ \sin(x) - x \bigr]_0^\pi
+			= - (-\pi - 0) = \boxed{\pi}
+		\end{align*}
+	\end{solution}
+
+	\newpage
+	\question[15]
+	Calculate the integral of
+	\[
+		f(x,y) = (1-x)^2
+	\]
+	over the region
+	\[
+		\mathcal D : 0 \le x \le 1-y^2, \quad 0 \le y
+	\]
+	\begin{solution}
+		The region is the upper half of a sideways parabola.
+		\begin{align*}
+			\int_0^1 \int_0^{1-y^2} (1-x)^2 \dif x \dif y
+			&= \int_0^1 \int_0^{1-y^2} 1 - 2x + x^2 \dif x \dif y\\
+			&= \int_0^1 \bigl[x - x^2 + \frac13 x^3\bigr]_0^{1-y^2} \dif y\\
+			&= \int_0^1 1-y^2 - (1-y^2)^2 + \frac13 (1-y^2)^3 \dif y \\ 
+			&= \int_0^1 1-y^2 - (1-2y^2 + y^4) + \frac13 (1- 3y^2 + 3y^4 - y^6) \dif y \\ 
+			&= \int_0^1 \frac13 - \frac13 y^6 \dif y\\
+			&= \frac13 \left[ y - \frac17 y^7 \right]_0^1 
+			= \frac13 \left(1-\frac17\right) = \boxed{\frac27}
+		\end{align*}
+	\end{solution}
+
+	\newpage
+	\question Consider the region
+	\[
+		\mathcal W : x^2 + y^2 + z^2 \le 25, \quad x^2 + y^2 \ge 16
+	\]
+	\begin{parts}
+		\part[10]
+		Express the volume $\mathcal W$ as an iterated integral using cylindrical coordinates.
+		\begin{solution}
+			The bounds can be expressed as 
+			\[
+				16 \le r^2 \le 25 - z^2 \implies 4 \le r \le \sqrt{25-z^2}
+			\]
+			This implies that $z$ ranges from $-3$ to 3.
+			Hence the volume is calculated by the integral
+			\[
+				\boxed{ \int_{-3}^3 \int_4^{\sqrt{25-z^2}} \int_0^{2\pi} 1 \cdot r \dif \theta \dif r \dif z }
+			\]
+		\end{solution}
+
+		\part[5] Evaluate the integral to obtain $\text{Vol}(\mathcal W)$.
+		\begin{solution}
+			\begin{align*}
+				\MoveEqLeft \int_{-3}^3 \int_4^{\sqrt{25-z^2}} \int_0^{2\pi} 1 \cdot r \dif \theta \dif r \dif z \\ 
+				&= 
+				2\pi \int_{-3}^3 \int_4^{\sqrt{25-z^2}} r \dif r \dif z\\ 
+				&=
+				\pi \int_{-3}^3 \left[ r^2 \right]_4^{\sqrt{25-z^2}} \dif z\\ 
+				&= \pi \int_{-3}^3 (9-z^2) \dif r \dif z \\ 
+				&= \pi \left[ 9z - \frac13 z^3 \right]_{-3}^3 \\ 
+				&= \pi (27 - 9 - (-27 + 9)) = \boxed{36 \pi}
+			\end{align*}
+		\end{solution}
+	\end{parts}
+
+	\newpage
+	\question
+	Let $\mathcal D$ be the parallelogram in the plane with vertices $(0, 0), (1, 0), (2, 3), (3, 3)$.
+	\begin{parts}
+		\part[10] Find a linear map $G(u,v)$ which sends the unit square $[0,1] \times [0,1]$ to $\mathcal D$.
+		\begin{solution}
+			The desired mapping is
+			\begin{align*}
+				(0,0) &\mapsto (0,0) \\
+				(1,0) &\mapsto (1,0) \\
+				(0,1) &\mapsto (2,3) \\
+				(1,1) &\mapsto (3,3) \\
+			\end{align*}
+			hence is
+			\[
+				G(u,v) = (u+2v, 3v)
+			\]
+		\end{solution}
+
+		\part[5] Compute the Jacobian of $G$.
+		\begin{solution}
+			\[
+				\text{Jac}(G) = \dpd xu \dpd yv - \dpd xv \dpd yu = 1 \cdot 3 - 2 \cdot 0 = \boxed{3}
+			\]
+		\end{solution}
+
+		\part[5] Use the change of variables formula to compute the integral
+		\[
+			\iint_{\mathcal D} e^{3x-2y} \dif A
+		\]
+		\begin{solution}
+			\begin{align*}
+				\iint_{\mathcal D} e^{3x-2y} \dif A
+				&= \int_0^1 \int_0^1 e^{3(u+2v) - 2(3v)} |3| \dif u \dif v \\
+				&= \int_0^1 \int_0^1 3e^{3u} \dif u \dif v \\ 
+				&= \int_0^1 \dif v \cdot \int_0^1 3e^{3u} \dif u \\ 
+				&= \bigl[e^{3u}\bigr]_0^1 = \boxed{e^3 - 1}
+			\end{align*}
+		\end{solution}
+	\end{parts}
+
+	\newpage
+	\question[15] Calculate
+	\[
+		\int_{\mathcal C} e^{x^2+y^2+z^2} \dif s
+	\]
+	where $\mathcal C$ is the equator of a sphere, centered at the origin, of radius 3.
+	\begin{solution}
+		The path has the parameterization
+		\[
+			\vb{r}(t) = \vect{3\cos t, 3\sin t, 0} \quad t \in [0, 2\pi]
+		\]
+		We compute
+		\begin{align*}
+			\vb{r}'(t) &= \vect{-3\sin t, 3 \cos t, 0} \\
+			\|\vb{r}'\| &= \sqrt{9\sin^2 t + 9 \cos^2 t} = 3
+		\end{align*}
+		so
+		\begin{align*}
+			\int_{\mathcal C} e^{x^2+y^2+z^2} \dif s
+			&= \int_a^b f(\vb{r}(t)) \| \vb{r}'(t)\| \dif t \\
+			&= \int_0^{2\pi} e^9  \cdot 3 \dif t
+			= \boxed{6\pi e^9}
+		\end{align*}
+	\end{solution}
+
+	\newpage
+	\question[10]
+	Evaluate
+	\[
+		\int_{\mathcal C} \vb{F} \vdot \dif \vb{r}
+	\]
+	where $\vb F(x,y,z) = \vect{z, xyz, x}$ and $\mathcal C$ is the curve parameterized by 
+	\[
+		\vb{r}(t) = (e^t, t, e^{-t})
+	\]
+	for $0 \le t \le 2$.
+	\begin{solution}
+		\begin{align*}
+			\int_{\mathcal C} \vb{F} \vdot \dif \vb{r} 
+			&= \int_a^b \vb{F}(\vb{r}(t)) \vdot \vb{r}'(t) \dif t \\
+			&= \int_0^2 \vect{e^{-t}, t, e^t} \vdot \vect{e^t, 1, -e^{-t}} \dif t \\
+			&= \int_0^2 1 + t - 1 \dif t
+			= \left[\frac{t^2}{2}\right]_0^2
+			= \boxed{2}
+		\end{align*}
+	\end{solution}
+
+	\newpage
+	\question
+	Consider the vector field
+	\[
+		\vb{F}(x,y,z) = \vect{y+z, x+z, x+y}
+	\]
+	\begin{parts}
+		\part[5] Does $\vb{F}$ satisfy the cross-partials condition? Verify your response.
+		\begin{solution}
+			Yes.
+			Denoting the component functions $\vb{F} = \vect{P,Q,R}$, we check that
+			\begin{itemize}
+				\item $R_y = Q_z$: $1 = 1$ \checkmark
+				\item $P_z = R_x$: $1 = 1$ \checkmark
+				\item $Q_x = P_y$: $1 = 1$ \checkmark
+			\end{itemize}
+		\end{solution}
+
+		\part[5] Find a potential for $\vb{F}$ if one exists. If not, explain why.
+		\begin{solution}
+			\[
+				xy + xz + yz
+			\]
+		\end{solution}
+	\end{parts}
+\end{questions}
+\end{document}
