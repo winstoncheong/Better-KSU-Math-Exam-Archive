@@ -1,0 +1,390 @@
+\documentclass[12pt,answers]{exam}
+
+\usepackage{amsmath,amsfonts,amssymb,mathtools,physics,commath}
+\usepackage{todonotes}
+\newcommand{\vect}[1]{\left\langle #1\right\rangle}
+
+\pagestyle{headandfoot}
+\firstpageheadrule
+\runningheadrule
+\firstpageheader{Math 222}{Final Exam|Solutions, Page \thepage\ of \numpages}{December 15, 2021}
+\runningheader{Math 222}{Final Exam|Solutions, Page \thepage\ of \numpages}{December 15, 2021}
+\runningfooter{}{}{}
+
+% \title{2021 Fall Calc 3 Final Exam|Solutions}
+% \author{Winston Cheong}
+% \date{}
+
+\begin{document}
+% \maketitle
+\begin{questions}
+	\question
+	Let $\vb{v} = \vect{2,1,1}$ and $\vb{w} = \vect{-1,0,-1}$.
+	\begin{parts}
+		\part[5] Compute the area of the parallelogram spanned by $\vb{v}$ and $\vb{w}$.
+		\begin{solution}
+			\begin{align*}
+				\vect{2,1,1} \cross \vect{-1,0,-1}
+				&= \mqty| \vb i & \vb j & \vb k \\ 2 & 1 & 1 \\ -1 & 0 & -1 |
+				= \vect{-1, 1, 1} \\
+				\text{area} &= \| \vect{-1,1,1}\| = \boxed{\sqrt{3}}
+			\end{align*}
+		\end{solution}
+
+		\part[5] Is the angle $\theta$ between $\vb{v}$ and $\vb{w}$ acute, obtuse, or a right angle? Explain your response.
+		\begin{solution}
+			\[
+				\vb{v} \vdot \vb{w} = -2 + 0 -1 = -3 \implies \text{obtuse}
+			\]
+			The type of angle is classified by the dot product of the two vectors, through considering the equation
+			\[
+				\cos \theta = \frac{\vb{v} \vdot \vb{w}}{\|\vb{v}\|\, \|\vb{w}\|}
+			\]
+		\end{solution}
+
+		\part[5] Give an equation for the line passing through $(2,1,-2)$ with direction vector $\vb{v}$.
+		\begin{solution}
+			\[
+				\ell = \vect{2,1,-2} + t\vect{2,1,1}
+			\]
+		\end{solution}
+	\end{parts}
+
+	\newpage
+	\question
+	Calculate the following quantities if they exist. Otherwise, explain why they do not exist. Justify either response.
+	\begin{parts}
+		\part[5]
+		\[
+			\lim_{(x,y)\to(0,0)} \frac{xy-y^2}{3x^2+2y^2}
+		\]
+		\begin{solution}
+			Approaching along the $x$-axis ($y = 0$):
+			\[
+				\lim_{x\to0} \frac{0}{3x^2} = 0
+			\]
+			Approaching along the $y$-axis ($x=0$):
+			\[
+				\lim_{y\to0} \frac{-y^2}{2y^2} = -\frac12
+			\]
+			The two directions give different values, so the limit does not exist.
+		\end{solution}
+
+		\part[5] For
+		\[
+			f(x,y,z) = xe^{xy} - \cos(yz)
+		\]
+		compute
+		\[
+			f_{yz}(x,y,z)
+		\]
+		\begin{solution}
+			\[
+				f_{yz} = f_{zy} = \dpd{}{y} y\sin(yz) = \sin(yz) + y \cos(yz) z
+			\]
+		\end{solution}
+
+		\part[5] For $f(x,y) = x^2+y^2-xy$ find the unit vector which points in the direction for which $f(x,y)$ increases the most rapidly starting at $(2,1)$.
+		\begin{solution}
+			\begin{align*}
+				\nabla f &= \vect{2x -y, 2y-x} \\
+				\nabla f(2,1) &= \vect{3, 0}
+			\end{align*}
+			The unit vector is $\boxed{\vect{1,0}}$.
+		\end{solution}
+
+		\newpage
+		\part[5] Find the equation for the tangent plane to the surface
+		\[
+			z = x^2 + y^2 - xy
+		\]
+		at the point $(2,1,3)$.
+		\begin{solution}
+			\begin{align*}
+				f &= x^2 + y^2 - xy - z \\
+				\nabla f &= \vect{2x - y, 2y - x, -1} \\
+				\nabla f(2, 1, 3) &= \vect{3, 0, -1} \\
+				\Aboxed{0 &= 3(x-2) -1(z-3)}
+			\end{align*}
+		\end{solution}
+	\end{parts}
+
+	\newpage
+	\question
+	Let
+	\[
+		f(x,y) = x^2 + 2xy - 2y
+	\]
+	and $\mathcal D$ be the triangle in the fourth quadrant with bounds
+	\[
+		x \ge 0, \quad y \le 0, \quad y-x \ge -4
+	\]
+	\begin{parts}
+		\part[5] Find the critical points of $f(x,y)$ in the interior of $\mathcal D$.
+		\begin{solution}
+			\begin{align*}
+				f_x &= 2x + 2y = 0\\
+				f_y &= 2x - 2 = 0
+			\end{align*}
+			The solution to this system is $x=1, y=-1$. This is the only critical point in the interior of $\mathcal D$.
+		\end{solution}
+
+		\part[5] Does $f(x,y)$ have a local max, local min or saddle point at the point(s) found in (a)? Explain your response.
+		\begin{solution}
+			\begin{align*}
+				f_{xx} &= 2\\
+				f_{yy} &= 0 \\
+				f_{xy} &= 2 \\
+				\text{disc} &= 2 \cdot 0 - (2)^2 = -4
+			\end{align*}
+			Since the discriminant is $-4 < 0$, the critical point is a saddle point.
+		\end{solution}
+
+		\newpage
+		\part[5] Find the maximum value of $f(x,y)$ on $\mathcal D$.
+		\begin{solution}
+			Since the critical point previously found is a saddle point, we can ignore it.
+			We must test the boundary of $\mathcal D$.
+			\begin{itemize}
+				\item For the side $x=0$:
+					\[
+					f(0, y) = -2y \qquad y \in [-4, 0]
+					\]
+					Since $f' = -2$, there are no critical points on this side.
+					Plugging in the end points, $f(0,0) = 0$ and $f(0, -4) = 8$.
+				\item For the side $y=0$:
+					\[
+					f(x, 0) = x^2 \qquad x \in [0, 4]
+				\]
+					Since $f' = 2x = 0 \implies x=0$ is a critical point.
+					Plugging in the end points, $f(0,0) = 0$ and $f(4,0) = 16$.
+				\item For the side $ y = x - 4$:
+					\[
+						f(x, x-4) = x^2 + 2x(x-4) - 2(x-4) = 3x^2 - 10x + 8 \qquad y \in [0,4]
+				\]
+					Since $f' = 6x - 10 = 0 \implies x = \frac53$ is a critical point.
+					The end points have already been computed, so we just evaluate at the critical point: $f(\frac{5}{3}, -\frac{7}{3}) = -\frac{1}{3}$.
+			\end{itemize}
+			The maximum value on $\mathcal D$ is thus \boxed{16}.
+		\end{solution}
+	\end{parts}
+
+	\newpage
+	\question[10] Let $\mathcal E = [1,2] \times [-2, 1] \times [0,3]$.
+	Evaluate the triple integral
+	\[
+		\iiint_{\mathcal E} 3z^2 - 4xy \dif V
+	\]
+	\begin{solution}
+		\begin{align*}
+			\MoveEqLeft \int_0^3 \int_{-2}^1 \int_1^2 3z^2 - 4xy \dif x \dif y \dif z \\
+			&= 3\int_0^3 \int_{-2}^1 \int_1^2 z^2 \dif x \dif y \dif z
+			-4 \int_0^3 \int_{-2}^1 \int_1^2 xy \dif x \dif y \dif z \\
+			&= 3 \cdot 1 \cdot 3 \int_0^3 z^2 \dif z
+			-4 \cdot 3  \int_{-2}^1 y \dif y \cdot \int_1^2 x \dif x  \\
+			&= 3 \left[ z^3 \right]_0^3 - 3 \left[ y^2 \right]_{-2}^1 \left[ x^2 \right]_1^2 \\
+			&= 81 - 3(1-4)(4-1) = \boxed{108}
+		\end{align*}
+	\end{solution}
+
+	\newpage
+	\question
+	Evaluate the following integrals.
+	\begin{parts}
+		\part[10] Let $\mathcal D$ be the region $x^2 + y^2 \le 9$ and $y \le 0$. Evaluate
+		\[
+			\iint_{\mathcal D} 2e^{x^2+y^2} \dif A.
+		\]
+		\begin{solution}
+			\[
+				\int_\pi^{2\pi} \int_0^3 2e^{r^2} \cdot r \dif r \dif \theta
+				= \pi \left[ e^{r^2} \right]_0^3
+				= \boxed{\pi(e^9-1)}
+			\]
+		\end{solution}
+
+		\part[10] Let $\mathcal D$ be the region
+		\[
+			0 \le x \le \frac{\pi}{2}, \qquad 0 \le y \le \sin x.
+		\]
+		Compute the integral
+		\[
+			\iint_{\mathcal D} 2y \cos x \dif A.
+		\]
+		\begin{solution}
+			\begin{align*}
+				\MoveEqLeft \int_0^{\pi/2} \int_0^{\sin x} 2y \cos x \dif y \dif x \\
+				&= \int_0^{\pi/2} \left[  y^2 \right]_0^{\sin x} \cos x \dif x \\
+				&= \int_0^{\pi/2} \sin^2 x \cos x \dif x \\
+				&= \left[ \frac{\sin^3x}{3} \right]_0^{\pi/2} = \boxed{\frac{1}{3}}
+			\end{align*}
+		\end{solution}
+	\end{parts}
+
+	\newpage
+	\question
+	Let
+	\[
+		\vb{F} = \vect{-2x, -2y, 4z}.
+	\]
+	\begin{parts}
+		\part[5] If $\vb{F}$ is a conservative vector field, find a potential. Otherwise, explain why it is not conservative.
+		\begin{solution}
+			$\vb{F}$ is a conservative vector field with potential function 
+			\[
+				f(x,y,z) = -x^2 - y^2 + 2z^2.
+			\]
+
+		\end{solution}
+
+		\part[5] Let $\mathcal C$ be the oriented curve with parametrization
+		\[
+			\vb{r}(t) = \vect{\cos(t^2-t), e^{\sin(\pi t)}, t-1}
+		\]
+		for $0 \le t \le 1$. Compute
+		\[
+			\int_{\mathcal C} \vb{F} \vdot \dif \vb{r}.
+		\]
+		\begin{solution}
+			By the Fundamental Theorem for Conservative Vector Fields, 
+			\begin{align*}
+				\int_{\mathcal C} \vb{F} \vdot \dif \vb{r} 
+				&= f(\vb{r}(1)) - f(\vb{r}(0))  \\ 
+				&= f(1,1,0) - f(1,1,-1) = -2-0 
+				= \boxed{-2}
+			\end{align*}
+		\end{solution}
+
+		\part[5] Let $\vb{A} = \vect{-2yz, 2xz, 0}$ and compute $\text{curl}(\vb{A})$.
+		\begin{solution}
+			\[
+				\text{curl}(\vb{A}) = \mqty|\vb{i} & \vb{j} & \vb{k} \\ \partial_x & \partial_y & \partial_z \\ -2yz & 2xz & 0| = \vect{-2x, -2y, 4z}
+			\]
+			Note that this equals $\vb{F}$ given in the beginning of this problem.
+		\end{solution}
+
+		\newpage
+		\part[5] Let $\mathcal S$ be the upper ellipsoid
+		\[
+			\frac{x^2}{4} + y^2 + \frac{z^2}{9} = 1, \qquad z \ge 0
+		\]
+		oriented outwardly. Compute the surface integral
+		\[
+			\iint_{\mathcal S} \vb{F} \vdot \dif \vb{S}.
+		\]
+		State any theorems used in the computation.
+		\begin{solution}
+			Since $\vb{F} = \text{curl}(\vb{A})$, where $\vb{A}$ is as in part (c), we can use Stokes theorem, which says:
+			\[
+				\oint_{\partial \mathcal{S}} \vb{A} \vdot \dif \vb{r} = \iint_{\mathcal S} \text{curl}(\vb{A}) \vdot \dif \vb{S}
+			\]
+			The boundary of $\mathcal{S}$ is the ellipse $\dfrac{x^2}{4} + y^2 = 1$. 
+			Using the parametrization $\vb{r}(t) = (2\cos t, \sin t, 0)$, $0 \le t \le 2\pi$, we can thus compute
+			\begin{align*}
+				\iint_{\mathcal{S}} \vb{F} \vdot \dif \vb{S}
+					&= \oint_{\partial \mathcal{S}} \vb{A} \vdot \dif \vb{r} \\ 
+					&=\int_0^{2\pi} \vb{A}(\vb{r}(t)) \vdot \vb{r}'(t) \dif t \\ 
+					&=\int_0^{2\pi} \vect{0,0,0} \vdot \vb{r}'(t) \dif t 
+					= \boxed{0} 
+			\end{align*}
+		\end{solution}
+	\end{parts}
+
+	\newpage
+	\question
+	Let $\mathcal S$ be the cone
+	\[
+		x^2 + y^2 = z^2, \qquad -2 \le z \le 0
+	\]
+	and $\mathcal D$ the disc
+	\[
+		x^2 + y^2 \le 4, \qquad z = -2
+	\]
+	both oriented outwardly from the interior and $\vb{F} = \vect{x,y,z}$.
+	\begin{parts}
+		\part[5] Compute $\operatorname{div} \vb{F}$.
+		\begin{solution}
+			\[
+				\operatorname{div} \vb{F} = 1 + 1 + 1 = \boxed{3}
+			\]
+		\end{solution}
+
+		\part[5] Compute
+		\[
+			\iint_{\mathcal D} \vb{F} \vdot \dif \vb{S}
+		\]
+		\begin{solution}
+			Note that since $\operatorname{div} \vb{F} \ne 0$, $\vb{F}$ is not a curl vector field, hence Stokes theorem cannot be used for this problem.
+			Instead, we must compute the vector surface integral directly:
+			The surface $\mathcal{D}$ can be parametrized by 
+			\[
+				G(r, \theta) = (r\cos\theta, r\sin\theta, -2) \qquad 0 \le r \le 2,\ 0 \le \theta \le 2\pi
+			\]
+			The normal vector is 
+			\[
+				\vb{N}(r, \theta) 
+				= G_r \cross G_\theta 
+				= \vect{\cos \theta, \sin\theta, 0} \cross \vect{-r\sin\theta, r\cos\theta, 0}
+				= \vect{0,0,r}
+			\]
+			The \emph{outward-pointing} normal vector is $\vect{0,0,-r}$.
+			Hence
+			\begin{align*}
+				\iint_{\mathcal{D}} \vb{F} \vdot \dif \vb{S}
+				&= \int_0^{2\pi} \int_0^2 \vb{F}(G(r, \theta)) \vdot \vb{N}(r, \theta) \dif r \dif \theta \\ 
+				&= \int_0^{2\pi} \int_0^2 \vect{r\cos\theta, r\sin\theta, -2} \vdot \vect{0,0,-r} \dif r \dif \theta \\ 
+				&= \int_0^{2\pi} \int_0^2 2r \dif r \dif \theta
+				= \boxed{8\pi}
+			\end{align*}
+		\end{solution}
+
+		\newpage
+		\part[5] The volume of a cone is $\frac13 Ah$ where $h$ is the height of the cone and $A$ is the area of the base. Using this and the Divergence Theorem, calculate
+		\[
+			\iint_{\mathcal S} \vb{F} \vdot \dif \vb{S}
+		\]
+		\begin{solution}
+			The divergence theorem says that 
+			\[
+				\iiint_{\mathcal{W}} \operatorname{div} \vb{F} \dif V 
+				= \iint_{\partial \mathcal{W}} \vb{F} \vdot \dif \vb{S}
+			\]
+			where $\mathcal{W}$ is the solid cone whose boundary is $\mathcal{S} \cup \mathcal{D}$.
+			From part (a), we see the LHS evaluates to 
+			\[
+				\iiint_{\mathcal{W}} \operatorname{div} \vb{F} \dif V
+				=
+				3 \iiint_{\mathcal{W}} \dif V = 3 \cdot \frac13 \pi 2^2 \cdot 2 = \boxed{8\pi}
+			\]
+			From part (b), the LHS evaluates to
+			\[
+				\iint_{\mathcal{D}} \vb{F} \vdot \dif \vb{S}
+				+ \iint_{\mathcal{S}} \vb{F} \vdot \dif \vb{S}
+				= 8\pi + \iint_{\mathcal{S}} \vb{F} \vdot \dif \vb{S}
+			\]
+			Hence 
+			\[
+				\iint_{\mathcal{S}} \vb{F} \vdot \dif \vb{S} = \boxed{0}
+			\]
+		\end{solution}
+
+		\part[5] Give another explanation of the result in (c) by calculating $\vb{F} \vdot \vb{N}$ where $\vb{N}$ is the orientation vector field on $\mathcal S$.
+		\begin{solution}
+			The surface $\mathcal{S}$ can be parametrized by 
+			\[
+				G(r, \theta) = (r\cos\theta, r\sin\theta, -r), \quad 0\le r \le 2,\ 0 \le \theta \le 2\pi
+			\]
+			Then 
+			\[
+				\vb{N} = G_r \cross G_\theta = \vect{\cos\theta, \sin\theta, -1} \cross \vect{-r\sin\theta, r\cos\theta, 0} = \vect{r \cos\theta, r\sin\theta, r}
+			\]
+			Then $\vb{F} \vdot \vb{N} = \vect{r\cos\theta, r\sin\theta, -r} \vdot \vect{r\cos\theta, r\sin\theta, r} = 0$.
+			Hence
+			\[
+				\iint_{\mathcal S} \vb{F} \vdot \dif \vb{S} = \iint_{\mathcal S} \vb{F} \vdot \vb{N} \dif S = 0
+			\]
+
+		\end{solution}
+	\end{parts}
+\end{questions}
+\end{document}
