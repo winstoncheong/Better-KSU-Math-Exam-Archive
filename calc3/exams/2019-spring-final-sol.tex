@@ -19,445 +19,468 @@
 % \maketitle
 
 \begin{questions}
-\question
-Let $\vb{u} = \vect{1, 1, 0}$, $\vb{v} = \vect{1, 0, 1}$ and $\vb{w} = \vect{0, 1, 1}$.
-\begin{parts}
-\part[5] Compute the volume of the parallelopiped spanned by $\vb u$, $\vb v$ and $\vb{w}$. 
-\begin{solution}
-\[
-    \mqty| 1 & 1 & 0 \\ 1 & 0 & 1 \\ 0 & 1 & 1| = 1 \cdot \mqty|0 & 1 \\ 1 & 1| - 1 \cdot \mqty|1 & 1 \\ 0 & 1| + 0 \cdot \mqty|1 & 0 \\ 0 & 1|
-    = -1 -1 + 0 = -2
-\]
-So the volume is \boxed{2}
-\end{solution}
-\part[5] Compute the angle $\theta$ between $\vb v$ and $\vb w$.
-\begin{solution}
-    \[
-        \cos \theta = \frac{\vb{u} \vdot \vb{w}}{\|\vb{v}\|\, \|\vb{w}\|} = \frac{1}{\sqrt 2\cdot \sqrt 2}
-    \]
-    Thus $\theta = \cos[-1](\frac12) = \boxed{\frac\pi3}$
-\end{solution}
-\part[5] Give the equation for the plane parallel to $\vb u$ and $\vb v$ and passing through the origin.
-\begin{solution}
-    The normal vector for the plane is 
-    \[
-    \vb{n} = \vb{u} \cross \vb{v} = \mqty| \vb{i} & \vb{j} & \vb{k} \\ 1 & 1 & 0 \\ 1 & 0 & 1| = \vect{1, -1, -1}
-    \]
-    Thus the equation for the plane is
-    \[
-        \boxed{\vect{1, -1, -1} \vdot \vect{x, y, z} = 0}
-        \quad \text{or} \quad \boxed{x-y-z = 0}
-    \]
-\end{solution}
-\end{parts}
+	\question
+	Let $\vb{u} = \vect{1, 1, 0}$, $\vb{v} = \vect{1, 0, 1}$ and $\vb{w} = \vect{0, 1, 1}$.
+	\begin{parts}
+		\part[5] Compute the volume of the parallelopiped spanned by $\vb u$, $\vb v$ and $\vb{w}$. 
+		\begin{solution}
+			\[
+				\mqty| 1 & 1 & 0 \\ 1 & 0 & 1 \\ 0 & 1 & 1| = 1 \cdot \mqty|0 & 1 \\ 1 & 1| - 1 \cdot \mqty|1 & 1 \\ 0 & 1| + 0 \cdot \mqty|1 & 0 \\ 0 & 1|
+				= -1 -1 + 0 = -2
+			\]
+			So the volume is \boxed{2}
+		\end{solution}
+		\part[5] Compute the angle $\theta$ between $\vb v$ and $\vb w$.
+		\begin{solution}
+			\[
+				\cos \theta = \frac{\vb{u} \vdot \vb{w}}{\|\vb{v}\|\, \|\vb{w}\|} = \frac{1}{\sqrt 2\cdot \sqrt 2}
+			\]
+			Thus $\theta = \cos[-1](\frac12) = \boxed{\frac\pi3}$
+		\end{solution}
+		\part[5] Give the equation for the plane parallel to $\vb u$ and $\vb v$ and passing through the origin.
+		\begin{solution}
+			The normal vector for the plane is 
+			\[
+				\vb{n} = \vb{u} \cross \vb{v} = \mqty| \vb{i} & \vb{j} & \vb{k} \\ 1 & 1 & 0 \\ 1 & 0 & 1| = \vect{1, -1, -1}
+			\]
+			Thus the equation for the plane is
+			\[
+				\boxed{\vect{1, -1, -1} \vdot \vect{x, y, z} = 0}
+				\quad \text{or} \quad \boxed{x-y-z = 0}
+			\]
+		\end{solution}
+	\end{parts}
 
-\newpage
-\question Consider the curve $\mathcal{C}$ given by the parametrization 
-\[
-    \vb{r}(t) = \vect{\sin(t), \cos(t), e^t}\quad \text{for } 0\le t \le \pi
-\]
-\begin{parts}
-\part[5] Find the speed of $\vb{r}(t)$ as a function of $t$.
-\begin{solution}
-    \[
-    s(t) = \|\vb{r}'(t)\| = \| \vect{\cos t, -\sin t, e^t} \| = \sqrt{\cos^2 t + \sin^2 t + e^{2t}}
-    = \boxed{\sqrt{1 + e^{2t}}}
-    \]
-\end{solution}
-\part[5] Compute the scalar line integral 
-\[
-    \int_{\mathcal C} 3x^2 z^2 + 3y^2 z^2 \dif s.
-\]
-\begin{solution}
-    Formula sheet:
-    \[
-        \int_{\mathcal C} f(x, y, z) \dif s = \int_a^b f(\vb{r}(t)) \|\vb{r}'(t)\| \dif t
-    \]
-    So
-    \begin{align*}
-    \int_{\mathcal C} 3x^2 z^2 + 3y^2 z^2 \dif s 
-    &= \int_0^\pi (3\sin^2 t e^{2t} + 3\cos^2 t e^{2t}) \sqrt{1+e^{2t}} \dif t \\ 
-    &= \int_0^\pi 3e^{2t} \sqrt{1+e^{2t}} \dif t
-    \qquad
-    \text{u sub:}
-    \left(
-    \begin{aligned}
-   u &= 1+e^{2t} \\ 
-   \dif u &= 2e^{2t} \dif t \implies \dif t = \frac{\dif u}{2e^{2t}}
-    \end{aligned} 
-    \right)
-    \\
-    &= \int 3 e^{2t} \cdot u^{1/2} \frac{\dif u}{2e^{2t}} \\ 
-    &= \frac32 \int u^{1/2} \dif u \\ 
-    &= u^{3/2} = \left[(1+e^{2t})^{3/2}\right]_0^\pi
-    = \boxed{(1+e^{2\pi})^{3/2} - 2^{3/2}}
-    \end{align*}
+	\newpage
+	\question Consider the curve $\mathcal{C}$ given by the parametrization 
+	\[
+		\vb{r}(t) = \vect{\sin(t), \cos(t), e^t}\quad \text{for } 0\le t \le \pi
+	\]
+	\begin{parts}
+		\part[5] Find the speed of $\vb{r}(t)$ as a function of $t$.
+		\begin{solution}
+			\[
+				s(t) = \|\vb{r}'(t)\| = \| \vect{\cos t, -\sin t, e^t} \| = \sqrt{\cos^2 t + \sin^2 t + e^{2t}}
+				= \boxed{\sqrt{1 + e^{2t}}}
+			\]
+		\end{solution}
+		\part[5] Compute the scalar line integral 
+		\[
+			\int_{\mathcal C} 3x^2 z^2 + 3y^2 z^2 \dif s.
+		\]
+		\begin{solution}
+			Formula sheet:
+			\[
+				\int_{\mathcal C} f(x, y, z) \dif s = \int_a^b f(\vb{r}(t)) \|\vb{r}'(t)\| \dif t
+			\]
+			So
+			\begin{align*}
+				\int_{\mathcal C} 3x^2 z^2 + 3y^2 z^2 \dif s 
+				&= \int_0^\pi (3\sin^2 t e^{2t} + 3\cos^2 t e^{2t}) \sqrt{1+e^{2t}} \dif t \\ 
+				&= \int_0^\pi 3e^{2t} \sqrt{1+e^{2t}} \dif t
+				\qquad
+				\text{u sub:}
+				\left(
+					\begin{aligned}
+						u &= 1+e^{2t} \\ 
+						\dif u &= 2e^{2t} \dif t \implies \dif t = \frac{\dif u}{2e^{2t}}
+					\end{aligned} 
+				\right)
+				\\
+				&= \int 3 e^{2t} \cdot u^{1/2} \frac{\dif u}{2e^{2t}} \\ 
+				&= \frac32 \int u^{1/2} \dif u \\ 
+				&= u^{3/2} = \left[(1+e^{2t})^{3/2}\right]_0^\pi
+				= \boxed{(1+e^{2\pi})^{3/2} - 2^{3/2}}
+			\end{align*}
 
 
-\end{solution}
-\end{parts}
+		\end{solution}
+	\end{parts}
 
-\newpage
-\question
-Calculate the following quantities if they exist. Otherwise, explain why they do not exist. Justify either response.
-\begin{parts}
-\part[5] 
-\[
-    \lim_{(x, y) \to (0, 0)} \frac{x^2y^2}{x^2+y^2}
-\]
-\begin{solution}
-    Converting to polar gives
-    \begin{align*}
-        \lim_{r\to0} \frac{r^4 \cos^2 \theta \sin^2 \theta}{r^2}
-        &= \lim_{r\to0} r^2 \cos^2 \theta \sin^2 \theta = \boxed{0}
-    \end{align*}
-\end{solution}
-\part[5]
-For 
-\[
-    f(x, y, z) = \cosine(z^2 - y^2) + y \sin(x)
-\]
-compute 
-\[
-    f_{xy}(x,y,z)
-\]
-\begin{solution}
-    \begin{align*}
-        \frac{\partial^2}{\partial x \partial y} \cosine(z^2-y^2) &= 0 \\ 
-        \frac{\partial^2}{\partial x \partial y} y \sin x &= 0 \\ 
-        \shortintertext{thus}
-        f_{xy} &= 0 + \cos x = \boxed{\cos x}
-    \end{align*}
-\end{solution}
-\newpage
-\part[5]
-For $f(x,y,z) = x + y^2 + z^3$ find the change in $f(x,y,z)$ as one moves in the direction of the unit vector $\vb{u} = \frac{\sqrt 3}{3} \vect{1,1,1}$ starting at $\vect{2,0,-1}$.
-\begin{solution}
-    We know $D_{\vb u} f(p) = \nabla f_p \vdot \vb u$, so we compute
-    \begin{align*}
-        \nabla f &= \vect{1, 2y, 3z^2} \\ 
-        \nabla f|_p &= \vect{1, 0, 3} \\ 
-        \nabla f|_p \vdot \vb u &= \vect{1,0,3} \vdot \frac{1}{\sqrt 3} \vect{1,1,1} = \frac{1}{\sqrt 3}(1+0+3) = \boxed{\frac{4}{\sqrt 3}}
-    \end{align*}
+	\newpage
+	\question
+	Calculate the following quantities if they exist. Otherwise, explain why they do not exist. Justify either response.
+	\begin{parts}
+		\part[5] 
+		\[
+			\lim_{(x, y) \to (0, 0)} \frac{x^2y^2}{x^2+y^2}
+		\]
+		\begin{solution}
+			Converting to polar gives
+			\begin{align*}
+				\lim_{r\to0} \frac{r^4 \cos^2 \theta \sin^2 \theta}{r^2}
+				&= \lim_{r\to0} r^2 \cos^2 \theta \sin^2 \theta = \boxed{0}
+			\end{align*}
+		\end{solution}
+		\part[5]
+		For 
+		\[
+			f(x, y, z) = \cosine(z^2 - y^2) + y \sin(x)
+		\]
+		compute 
+		\[
+			f_{xy}(x,y,z)
+		\]
+		\begin{solution}
+			\begin{align*}
+				\frac{\partial^2}{\partial x \partial y} \cosine(z^2-y^2) &= 0 \\ 
+				\frac{\partial^2}{\partial x \partial y} y \sin x &= 0 \\ 
+				\shortintertext{thus}
+				f_{xy} &= 0 + \cos x = \boxed{\cos x}
+			\end{align*}
+		\end{solution}
+		\newpage
+		\part[5]
+		For $f(x,y,z) = x + y^2 + z^3$ find the change in $f(x,y,z)$ as one moves in the direction of the unit vector $\vb{u} = \frac{\sqrt 3}{3} \vect{1,1,1}$ starting at $\vect{2,0,-1}$.
+		\begin{solution}
+			We know $D_{\vb u} f(p) = \nabla f_p \vdot \vb u$, so we compute
+			\begin{align*}
+				\nabla f &= \vect{1, 2y, 3z^2} \\ 
+				\nabla f|_p &= \vect{1, 0, 3} \\ 
+				\nabla f|_p \vdot \vb u &= \vect{1,0,3} \vdot \frac{1}{\sqrt 3} \vect{1,1,1} = \frac{1}{\sqrt 3}(1+0+3) = \boxed{\frac{4}{\sqrt 3}}
+			\end{align*}
 
-\end{solution}
-\part[5] Find the equation for the tangent plane to the surface 
-\[
-    z = xy
-\]
-at the point $(1,2,2)$.
-\begin{solution}
-    The tangent plane at a point $p = (a,b)$ is given by 
-    \[
-        z = f(p) + f_x(p)(x-a) + f_y(p)(y-b)
-    \]
-    so we compute
-    \begin{alignat*}{2}
-        f_x &= y & f_y &= x\\ 
-        f_x(p) &= 2 &\qquad f_y(p) &= 1
-    \end{alignat*}
-    giving
-    \begin{equation*}
-        \boxed{z = 2 + 2(x-1) + 1(y-2)} \text{ or } \boxed{2x+y-z = 2}
-    \end{equation*}
-\end{solution}
-\end{parts}
+		\end{solution}
+		\part[5] Find the equation for the tangent plane to the surface 
+		\[
+			z = xy
+		\]
+		at the point $(1,2,2)$.
+		\begin{solution}
+			The tangent plane at a point $p = (a,b)$ is given by 
+			\[
+				z = f(p) + f_x(p)(x-a) + f_y(p)(y-b)
+			\]
+			so we compute
+			\begin{alignat*}{2}
+				f_x &= y & f_y &= x\\ 
+				f_x(p) &= 2 &\qquad f_y(p) &= 1
+			\end{alignat*}
+			giving
+			\begin{equation*}
+				\boxed{z = 2 + 2(x-1) + 1(y-2)} \text{ or } \boxed{2x+y-z = 2}
+			\end{equation*}
+		\end{solution}
+	\end{parts}
 
-\newpage
-\question
-Let 
-\[
-    f(x,y) = x^3-12x+y^2
-\]
-and $\mathcal{D}$ be the square $[-3,3]\times[-3,3]$.
-\begin{parts}
-\part[5] Find the critical points of $f(x, y)$ in the interior of $\mathcal{D}$.
-\begin{solution}
-    Solving $\nabla f = \vect{3x^2 - 12, 2y} = \vect{0, 0}$ gives $x = \pm 2$ and $y = 0$. So the critical points for $f$ are 
-    \boxed{(2, 0), (-2, 0)}
-\end{solution}
-\part[5] Describe the local behavior of $f(x, y)$ at the critical points found in part (a).
-\begin{solution}
-    The discriminant is 
-    \[
-        D = f_{xx} f_{yy} - (f_{xy})^2 = 12x
-    \]
-    Evaluating the discriminant at the previously found critical points:
-    \begin{align*}
-        D_{(2, 0)} &= 24 > 0 \quad \text{and}\quad f_{xx}(2, 0) = 12 > 0 \quad \text{ so } \boxed{(2, 0) \text{ is a local min}} \\ 
-        D_{(-2, 0)} &= -24 < 0 \quad \text{so } \boxed{(-2, 0) \text{ is a saddle point}}
-    \end{align*}
-\end{solution}
+	\newpage
+	\question
+	Let 
+	\[
+		f(x,y) = x^3-12x+y^2
+	\]
+	and $\mathcal{D}$ be the square $[-3,3]\times[-3,3]$.
+	\begin{parts}
+		\part[5] Find the critical points of $f(x, y)$ in the interior of $\mathcal{D}$.
+		\begin{solution}
+			Solving $\nabla f = \vect{3x^2 - 12, 2y} = \vect{0, 0}$ gives $x = \pm 2$ and $y = 0$. So the critical points for $f$ are 
+			\boxed{(2, 0), (-2, 0)}
+		\end{solution}
+		\part[5] Describe the local behavior of $f(x, y)$ at the critical points found in part (a).
+		\begin{solution}
+			The discriminant is 
+			\[
+				D = f_{xx} f_{yy} - (f_{xy})^2 = 12x
+			\]
+			Evaluating the discriminant at the previously found critical points:
+			\begin{align*}
+				D_{(2, 0)} &= 24 > 0 \quad \text{and}\quad f_{xx}(2, 0) = 12 > 0 \quad \text{ so } \boxed{(2, 0) \text{ is a local min}} \\ 
+				D_{(-2, 0)} &= -24 < 0 \quad \text{so } \boxed{(-2, 0) \text{ is a saddle point}}
+			\end{align*}
+		\end{solution}
 
-\newpage
-\part[5] Find the maximum value of $f$ on $\mathcal D$.
-\begin{solution}
-    Let $\gamma_1, \gamma_2, \gamma_3, \gamma_4$ denote paths along the right, left, top, and bottom sides of the square $\mathcal{D}$, respectively.
+		\newpage
+		\part[5] Find the maximum value of $f$ on $\mathcal D$.
+		\begin{solution}
+			Let $\gamma_1, \gamma_2, \gamma_3, \gamma_4$ denote paths along the right, left, top, and bottom sides of the square $\mathcal{D}$, respectively.
 
-    Along $\gamma_1$, $f(3, y) = -9 + y^2$, with $y \in [-3, 3]$. 
-    Looking for critical points along $\gamma_1$, we compute
-    $f' = 2y = 0 \implies y = 0$, so $(3, 0)$ is a critical point along $\gamma_1$. We test on the critical points and the end points of this path and obtain
-    \[
-        f(3, 0) = -9 \qquad f(3, -3) = 0 \qquad f(3, 3) = 0
-    \]
-    Along $\gamma_2$, $f(-3, y) = 9 + y^2$, with $y \in [-3, 3]$. 
-    Looking for critical points along $\gamma_2$, we compute $f' = 2y = 0 \implies y = 0$, so $(-3, 0)$ is a critical point along $\gamma_2$. 
-    We test on the critical points and the end points of this path and obtain
-    \[
-        f(-3, 0) = 9 \qquad f(-3, -3) = 18 \qquad f(-3, 3) = 18
-    \]
-    Along $\gamma_3$, $f(x, 3) = x^3 - 12x + 9$, with $x \in [-3, 3]$.
-    Looking for critical points along $\gamma_3$, we compute $f' = 3x^2 - 12 = 0 \implies x^2 = 4 \implies = \pm 2$. So $(\pm2, 3)$ are critical points along this path.
-    We test on the critical points and the end points of this path and obtain
-    \[
-        f(2, 3) = -7 \qquad f(-2, 3) = 25 \qquad f(-3, 3) = 18 \qquad f(3,3) = 0
-    \]
-    Finally, along $\gamma_4$, $f(x, -3) = x^3 - 12x + 9$, with $x \in [-3, 3]$.
-    This yields critical points $(\pm2, -3)$. As $f(x, y)$ will not distinguish the difference between $y=3$ and $y=-3$, the values for $\gamma_4$ are the same as for $\gamma_3$:
-    \[
-        f(2, -3) = -7 \qquad f(-2, -3) = 25 \qquad f(-3, -3) = 18 \qquad f(3,-3) = 0
-    \]
-    Thus the maxiumum value for $f$ on $\mathcal D$ is \boxed{25} (which occurs at $(-2, \pm 3)$).
-\end{solution}
-\end{parts}
+			Along $\gamma_1$, $f(3, y) = -9 + y^2$, with $y \in [-3, 3]$. 
+			Looking for critical points along $\gamma_1$, we compute
+			$f' = 2y = 0 \implies y = 0$, so $(3, 0)$ is a critical point along $\gamma_1$. We test on the critical points and the end points of this path and obtain
+			\[
+				f(3, 0) = -9 \qquad f(3, -3) = 0 \qquad f(3, 3) = 0
+			\]
+			Along $\gamma_2$, $f(-3, y) = 9 + y^2$, with $y \in [-3, 3]$. 
+			Looking for critical points along $\gamma_2$, we compute $f' = 2y = 0 \implies y = 0$, so $(-3, 0)$ is a critical point along $\gamma_2$. 
+			We test on the critical points and the end points of this path and obtain
+			\[
+				f(-3, 0) = 9 \qquad f(-3, -3) = 18 \qquad f(-3, 3) = 18
+			\]
+			Along $\gamma_3$, $f(x, 3) = x^3 - 12x + 9$, with $x \in [-3, 3]$.
+			Looking for critical points along $\gamma_3$, we compute $f' = 3x^2 - 12 = 0 \implies x^2 = 4 \implies = \pm 2$. So $(\pm2, 3)$ are critical points along this path.
+			We test on the critical points and the end points of this path and obtain
+			\[
+				f(2, 3) = -7 \qquad f(-2, 3) = 25 \qquad f(-3, 3) = 18 \qquad f(3,3) = 0
+			\]
+			Finally, along $\gamma_4$, $f(x, -3) = x^3 - 12x + 9$, with $x \in [-3, 3]$.
+			This yields critical points $(\pm2, -3)$. As $f(x, y)$ will not distinguish the difference between $y=3$ and $y=-3$, the values for $\gamma_4$ are the same as for $\gamma_3$:
+			\[
+				f(2, -3) = -7 \qquad f(-2, -3) = 25 \qquad f(-3, -3) = 18 \qquad f(3,-3) = 0
+			\]
+			Thus the maxiumum value for $f$ on $\mathcal D$ is \boxed{25} (which occurs at $(-2, \pm 3)$).
+		\end{solution}
+	\end{parts}
 
-\newpage
-\question[10]
-Let $\mathcal W = [0, 1] \times [-1, 0] \times [0, 2]$. 
-Evaluate the triple integral
-\[
-    \iiint_{\mathcal W} (2x + z)e^y \dif V
-\]
-\begin{solution}
-    \begin{align*}
-        \int_0^2 \int_{-1}^0 \int_0^1 (2x+z)e^y \dif x \dif y \dif z
-        &=  \int_{-1}^0 e^y \dif y \cdot \int_0^2 \int_0^1 (2x+z) \dif x \dif z \\ 
-        &= \eval{e^y}_{-1}^0 \cdot \int_0^2 \left[x^2 + xz\right]_{x=0}^1 \dif z \\ 
-        &= \left(1-\frac 1e\right) \cdot \int_0^2 (1+z) \dif z \\ 
-        &= \left(1-\frac 1e\right) \cdot \left[z + \frac12 z^2\right]_0^2 \\ 
-        &= \boxed{4\left(1 - \frac1e\right)}
-    \end{align*}
-\end{solution}
+	\newpage
+	\question[10]
+	Let $\mathcal W = [0, 1] \times [-1, 0] \times [0, 2]$. 
+	Evaluate the triple integral
+	\[
+		\iiint_{\mathcal W} (2x + z)e^y \dif V
+	\]
+	\begin{solution}
+		\begin{align*}
+			\int_0^2 \int_{-1}^0 \int_0^1 (2x+z)e^y \dif x \dif y \dif z
+			&=  \int_{-1}^0 e^y \dif y \cdot \int_0^2 \int_0^1 (2x+z) \dif x \dif z \\ 
+			&= \eval{e^y}_{-1}^0 \cdot \int_0^2 \left[x^2 + xz\right]_{x=0}^1 \dif z \\ 
+			&= \left(1-\frac 1e\right) \cdot \int_0^2 (1+z) \dif z \\ 
+			&= \left(1-\frac 1e\right) \cdot \left[z + \frac12 z^2\right]_0^2 \\ 
+			&= \boxed{4\left(1 - \frac1e\right)}
+		\end{align*}
+	\end{solution}
 
-\newpage
-\question Evaluate the following integrals.
-\begin{parts}
-\part[10] Let $\mathcal D$ be the region $x^2 + y^2 \le 4$, $0 \le y$, $x \le 0$. Evaluate
-\[
-    \iint_{\mathcal D} 3x \dif A.
-\]
-\begin{solution}
-The region is a quarter circle of radius 2 in the second quadrant.
-We convert to polar and integrate:
-\begin{align*}
-    \iint_{\mathcal D} 3x \dif A
-    &= \int_{\pi/2}^\pi \int_0^2 3r\cos \theta \ r \dif r \dif \theta \\ 
-    &= \int_0^2 3r^2 \dif r \cdot \int_{\pi/2}^\pi \cos \theta \dif \theta \\ 
-    &= \eval{r^3}_0^2 \cdot \eval{\sin \theta}_{\pi/2}^\pi \\ 
-    &= (8-0) \cdot (0-1) \\ 
-    &= \boxed{-8}
-\end{align*}
-\end{solution}
-\part[10] Let $\mathcal D$ be the region between the lines $y = -x$, $y = -1$ and $x = -1$.
-Compute the integral 
-\[
-    \iint_{\mathcal D} 2y \dif A.
-\]
-\begin{solution}
-    The integral to set up is clear from a sketch of the region $\mathcal D$.
-    \begin{align*}
-    \iint_{\mathcal D} 2y \dif A
-    &= \int_{-1}^1 \int_{-1}^{-x} 2y \dif y \dif x \\ 
-    &= \int_{-1}^1 y^2\Bigr]_{-1}^{-x} \dif x \\ 
-    &= \int_{-1}^1 x^2 - 1 \dif x \\ 
-    &= \eval{\frac{x^3}{3} - x}_{-1}^1 = \boxed{-\frac43}
-    \end{align*}
-\end{solution}
+	\newpage
+	\question Evaluate the following integrals.
+	\begin{parts}
+		\part[10] Let $\mathcal D$ be the region $x^2 + y^2 \le 4$, $0 \le y$, $x \le 0$. Evaluate
+		\[
+			\iint_{\mathcal D} 3x \dif A.
+		\]
+		\begin{solution}
+			The region is a quarter circle of radius 2 in the second quadrant.
+			We convert to polar and integrate:
+			\begin{align*}
+				\iint_{\mathcal D} 3x \dif A
+				&= \int_{\pi/2}^\pi \int_0^2 3r\cos \theta \ r \dif r \dif \theta \\ 
+				&= \int_0^2 3r^2 \dif r \cdot \int_{\pi/2}^\pi \cos \theta \dif \theta \\ 
+				&= \eval{r^3}_0^2 \cdot \eval{\sin \theta}_{\pi/2}^\pi \\ 
+				&= (8-0) \cdot (0-1) \\ 
+				&= \boxed{-8}
+			\end{align*}
+		\end{solution}
+		\part[10] Let $\mathcal D$ be the region between the lines $y = -x$, $y = -1$ and $x = -1$.
+		Compute the integral 
+		\[
+			\iint_{\mathcal D} 2y \dif A.
+		\]
+		\begin{solution}
+			The integral to set up is clear from a sketch of the region $\mathcal D$.
+			\begin{align*}
+				\iint_{\mathcal D} 2y \dif A
+				&= \int_{-1}^1 \int_{-1}^{-x} 2y \dif y \dif x \\ 
+			&= \int_{-1}^1 y^2\Bigr]_{-1}^{-x} \dif x \\ 
+			&= \int_{-1}^1 x^2 - 1 \dif x \\ 
+			&= \eval{\frac{x^3}{3} - x}_{-1}^1 = \boxed{-\frac43}
+		\end{align*}
+	\end{solution}
 \end{parts}
 
 \newpage
 \question Let 
 \[
-    \vb F = \vect{2x+yz, xz, xy}.
+	\vb F = \vect{2x+yz, xz, xy}.
 \]
 \begin{parts}
-\part[5] If $\vb F$ is a conservative vector field, find a potential. Otherwise, explain why it is not conservative.
-\begin{solution}
-    $\vb{F}$ is a conservative vector field, with potential function 
-    $f = x^2 + xyz$.
-    One can check that $\nabla f = \vb{F}$.
-\end{solution}
-\part[5] Let $\mathcal C$ be the oriented curve with parametrization
-\[
-    \vb r(t) = \vect{\sin[6](\pi t)+t+1, e^t + e^{-t}, e^{t^2-1} - 1}
-\]
-for $-1 \le t \le 1$.
-Compute 
-\[
-    \int_{\mathcal C} \vb F \vdot \dif \vb r.
-\]
-\begin{solution}
-Since $\vb{F}$ is conservative, 
-\begin{align*}
-\int_{\mathcal C} \vb F \vdot \dif \vb{r} 
-&= f(\vb{r}(1)) - f(\vb{r}(-1))  \\ 
-&= f(2, e + e^{-1} , 0) - f(0, e + e^{-1}, 0) \\ 
-&= \boxed{4}
-\end{align*}
-\end{solution}
+	\part[5] If $\vb F$ is a conservative vector field, find a potential. Otherwise, explain why it is not conservative.
+	\begin{solution}
+		$\vb{F}$ is a conservative vector field, with potential function 
+		$f = x^2 + xyz$.
+		One can check that $\nabla f = \vb{F}$.
+	\end{solution}
+	\part[5] Let $\mathcal C$ be the oriented curve with parametrization
+	\[
+		\vb r(t) = \vect{\sin[6](\pi t)+t+1, e^t + e^{-t}, e^{t^2-1} - 1}
+	\]
+	for $-1 \le t \le 1$.
+	Compute 
+	\[
+		\int_{\mathcal C} \vb F \vdot \dif \vb r.
+	\]
+	\begin{solution}
+		Since $\vb{F}$ is conservative, 
+		\begin{align*}
+			\int_{\mathcal C} \vb F \vdot \dif \vb{r} 
+			&= f(\vb{r}(1)) - f(\vb{r}(-1))  \\ 
+			&= f(2, e + e^{-1} , 0) - f(0, e + e^{-1}, 0) \\ 
+			&= \boxed{4}
+		\end{align*}
+	\end{solution}
 
-\newpage
-\part[5] Is there a vector potential for $\vb{F}$ (a vector field $\vb{A}$ that satisfies $\vb{F} = \operatorname{curl}(\vb{A})$)? 
-Explain your response.
-\begin{solution}
-  No. If $\vb{F}$ had a vector potential, then it would necessarily follow that $\operatorname{div} \vb{F} = 0$. However, 
-  \[
-    \operatorname{div} \vb{F} = 2 + 0 + 0 = 2 \ne 0
-  \]
-\end{solution}
+	\newpage
+	\part[5] Is there a vector potential for $\vb{F}$ (a vector field $\vb{A}$ that satisfies $\vb{F} = \operatorname{curl}(\vb{A})$)? 
+	Explain your response.
+	\begin{solution}
+		No. If $\vb{F}$ had a vector potential, then it would necessarily follow that $\operatorname{div} \vb{F} = 0$. However, 
+		\[
+			\operatorname{div} \vb{F} = 2 + 0 + 0 = 2 \ne 0
+		\]
+	\end{solution}
 
-\part[5] Let $\mathcal S$ be the sphere $x^2 + y^2 + z^2 = 9$ oriented outwardly.
-Compute the surface integral
-\[
-    \iint_{\mathcal S} \vb{F} \vdot \dif \vb{S}.
-\]
-State any theorems used in the computation.
-\begin{solution}
-    By the divergence theorem, we know
-    \[
-    \iint_{\mathcal S} \vb{F} \vdot \dif \vb{S} 
-    = \iiint_{\mathcal E} \operatorname{div} \vb F \dif V
-    \]
-    where $\mathcal E$ is the region for which $\partial \mathcal E = \mathcal S$.
-    For this problem, $\mathcal E$ is the ball of radius 3 centered at the origin.
-    Since $\operatorname{div} F = P_x + Q_y + R_z = 2 + 0 + 0 = 2$,
-    we have 
-    \begin{align*}
-    \iint_{\mathcal S} \vb{F} \vdot \dif \vb{S} 
-    &= \iiint_{\mathcal E} \operatorname{div} \vb F \dif V \\ 
-    &= \iiint_{\mathcal E} 2 \dif V \\ 
-    &= 2 \cdot \frac43 \pi \cdot 3^2 = \boxed{24 \pi}
-    \end{align*}
-\end{solution}
+	\part[5] Let $\mathcal S$ be the sphere $x^2 + y^2 + z^2 = 9$ oriented outwardly.
+	Compute the surface integral
+	\[
+		\iint_{\mathcal S} \vb{F} \vdot \dif \vb{S}.
+	\]
+	State any theorems used in the computation.
+	\begin{solution}
+		By the divergence theorem, we know
+		\[
+			\iint_{\mathcal S} \vb{F} \vdot \dif \vb{S} 
+			= \iiint_{\mathcal E} \operatorname{div} \vb F \dif V
+		\]
+		where $\mathcal E$ is the region for which $\partial \mathcal E = \mathcal S$.
+		For this problem, $\mathcal E$ is the ball of radius 3 centered at the origin.
+		Since $\operatorname{div} F = P_x + Q_y + R_z = 2 + 0 + 0 = 2$,
+		we have 
+		\begin{align*}
+			\iint_{\mathcal S} \vb{F} \vdot \dif \vb{S} 
+			&= \iiint_{\mathcal E} \operatorname{div} \vb F \dif V \\ 
+			&= \iiint_{\mathcal E} 2 \dif V \\ 
+			&= 2 \cdot \frac43 \pi \cdot 3^2 = \boxed{24 \pi}
+		\end{align*}
+	\end{solution}
 \end{parts}
 
 \newpage
 \question
 Let $\mathcal D$ be the lower half disc
 \[
-    \mathcal D = \{(x, y) : x^2 + y^2 \le 1,\, y \le 0\}.
+	\mathcal D = \{(x, y) : x^2 + y^2 \le 1,\, y \le 0\}.
 \]
 The boundary of $\mathcal D$ consists of the line segment $\mathcal C_1$ along the $x$-axis oriented from $(1,0)$ to $(-1, 0)$ and the semi-circle 
 \[
-    \mathcal C_2 = \{(x, y) : y = -\sqrt{1-x^2},\, -1 \le x \le 1\}
+	\mathcal C_2 = \{(x, y) : y = -\sqrt{1-x^2},\, -1 \le x \le 1\}
 \]
 oriented counter-clockwise. Let $\vb F$ be the vector field 
 \[
-    \vb{F} = \vect{-yx^2, xy^2}.
+	\vb{F} = \vect{-yx^2, xy^2}.
 \]
 \begin{parts}
-\part[5]
-Using polar coordinates, calculate the double integral
-\[
-    \iint_{\mathcal D} x^2 + y^2 \dif A
-\]
-\begin{solution}
-    \begin{align*}
-        = \int_\pi^{2\pi} \int_0^1 r^2 \cdot r \dif r \dif \theta 
-        &= \int_\pi^{2\pi} 1 \dif \theta \cdot \int_0^1 r^3 \dif r \\ 
-        &= \pi \cdot \left[\frac{r^4}{4}\right]_0^1 = \boxed{\frac\pi4}
-    \end{align*}
-\end{solution}
+	\part[5]
+	Using polar coordinates, calculate the double integral
+	\[
+		\iint_{\mathcal D} x^2 + y^2 \dif A
+	\]
+	\begin{solution}
+		\begin{align*}
+			= \int_\pi^{2\pi} \int_0^1 r^2 \cdot r \dif r \dif \theta 
+			&= \int_\pi^{2\pi} 1 \dif \theta \cdot \int_0^1 r^3 \dif r \\ 
+			&= \pi \cdot \left[\frac{r^4}{4}\right]_0^1 = \boxed{\frac\pi4}
+		\end{align*}
+	\end{solution}
 
-\newpage
-\part[5] Compute the line integral
-\[
-    \int_{\mathcal C_1} \vb{F} \vdot \dif \vb{r}
-\]
-\begin{solution}
-    We konw that
-\[
-    \int_{\mathcal C_1} \vb{F} \vdot \dif \vb{r} = \int_a^b \vb F(\vb r(t)) \vdot \vb r'(t) \dif t
-\]
+	\newpage
+	\part[5] Compute the line integral
+	\[
+		\int_{\mathcal C_1} \vb{F} \vdot \dif \vb{r}
+	\]
+	\begin{solution}
+		We konw that
+		\[
+			\int_{\mathcal C_1} \vb{F} \vdot \dif \vb{r} = \int_a^b \vb F(\vb r(t)) \vdot \vb r'(t) \dif t
+		\]
 
-    The curve $\mathcal C_1$ can be parametrized by $\vb r(t) = \vect{1-2t,0}$ where $t \in [0, 1]$.
-    Computing $\vb F(\vb r(t)) = \vect{0,0}$, we get
-\[
-    \int_{\mathcal C_1} \vb{F} \vdot \dif \vb{r} 
-    = \int_0^1 0 \dif t = \boxed{0}
-\]
-\end{solution}
-\part[5] Using only Green's Theorem and the computations in parts (a) and (b), compute the vector line integral 
-\[
-    \int_{\mathcal C_2} \vb{F} \vdot \dif \vb{r}
-\]
-\begin{solution}
-    Let $\vb F = \vect{P,Q}$.
-    By Green's theorem,
-    \begin{align*}
-        \iint_{\mathcal D} (Q_x - P_y) \dif A
-        &= \int_{\mathcal C} \vb F \vdot \dif \vb r \\ 
-        &= \int_{\mathcal C_1} \vb F \vdot \dif \vb r 
-        + \int_{\mathcal C_2} \vb F \vdot \dif \vb r .
-    \end{align*}
-    For this problem, we have 
-    $Q_x - P_y = y^2 + x^2$, which gives 
-    \[
-        \iint_{\mathcal D} (y^2 + x^2) \dif A
-        = \int_{\mathcal C_1} \vb F \vdot \dif \vb r 
-        + \int_{\mathcal C_2} \vb F \vdot \dif \vb r .
-    \]
-    Substituting in the results from parts (a) and (b), 
-    \[
-        \frac\pi4 = 0 + \int_{\mathcal C_2}\vb F \vdot \dif \vb r .
-    \]
-    Hence
-    \[
-    \int_{\mathcal C_2} \vb{F} \vdot \dif \vb{r} = \boxed{\frac\pi4}
-    \]
-\end{solution}
+		The curve $\mathcal C_1$ can be parametrized by $\vb r(t) = \vect{1-2t,0}$ where $t \in [0, 1]$.
+		Computing $\vb F(\vb r(t)) = \vect{0,0}$, we get
+		\[
+			\int_{\mathcal C_1} \vb{F} \vdot \dif \vb{r} 
+			= \int_0^1 0 \dif t = \boxed{0}
+		\]
+	\end{solution}
+	\part[5] Using only Green's Theorem and the computations in parts (a) and (b), compute the vector line integral 
+	\[
+		\int_{\mathcal C_2} \vb{F} \vdot \dif \vb{r}
+	\]
+	\begin{solution}
+		Let $\vb F = \vect{P,Q}$.
+		By Green's theorem,
+		\begin{align*}
+			\iint_{\mathcal D} (Q_x - P_y) \dif A
+			&= \int_{\mathcal C} \vb F \vdot \dif \vb r \\ 
+			&= \int_{\mathcal C_1} \vb F \vdot \dif \vb r 
+			+ \int_{\mathcal C_2} \vb F \vdot \dif \vb r .
+		\end{align*}
+		For this problem, we have 
+		$Q_x - P_y = y^2 + x^2$, which gives 
+		\[
+			\iint_{\mathcal D} (y^2 + x^2) \dif A
+			= \int_{\mathcal C_1} \vb F \vdot \dif \vb r 
+			+ \int_{\mathcal C_2} \vb F \vdot \dif \vb r .
+		\]
+		Substituting in the results from parts (a) and (b), 
+		\[
+			\frac\pi4 = 0 + \int_{\mathcal C_2}\vb F \vdot \dif \vb r .
+		\]
+		Hence
+		\[
+			\int_{\mathcal C_2} \vb{F} \vdot \dif \vb{r} = \boxed{\frac\pi4}
+		\]
+	\end{solution}
 \end{parts}
 
 \newpage
 \question
 Let $\mathcal S$ be the cylinder
 \[
-    \{(x, y, z) : x^2 + y^2 = 1,\, 0 \le z \le 3\}
+	\{(x, y, z) : x^2 + y^2 = 1,\, 0 \le z \le 3\}
 \]
 oriented outward and $\vb{F} = \vect{zy, -zx, 0}$.
 \begin{parts}
-\part[5] Compute $\tcurl(\vb F)$.
-\begin{solution}
-    \begin{align*}
-        \tcurl(\vb F) = 
-        \mqty| \vb i & \vb j & \vb k \\ 
-        \partial_x & \partial_y & \partial_z \\ 
-        P & Q & R|
-        &= \vect{R_y - Q_z, P_z - R_x, Q_x - P_y} \\ 
-        &= \vect{0 + x , y - 0, -z - z}
-        = \boxed{\vect{x, y, -2z}}
-    \end{align*}
-\end{solution}
-\part[5] Calculate
-\[
-    \iint_{\mathcal S} \tcurl(\vb{F}) \vdot \dif \vb{S}
-\]
-\begin{solution}
-    \todo[inline]{figure out..messed up}
-\end{solution}
-\newpage
-\part[5] The boundary of $\mathcal S$ consists of a unit circle $\mathcal C_1$ on the $xy$-plane oriented counterclockwise and a unit circle $\mathcal C_2$ on the $z=3$ plane oriented clockwise.
-Noting that the vector field is zero on the $xy$-plane, one easily sees that 
-\[
-    \int_{\mathcal C_1} \vb{F} \vdot \dif \vb{r} = 0
-\]
-Using only this fact, Stokes' Theorem and your result from part (b), compute the vector line integral
-\[
-    \int_{\mathcal C_2} \vb{F} \vdot \dif \vb{r}
-\]
-\begin{solution}
-    \todo[inline]{figure out..messed up}
-\end{solution}
+	\part[5] Compute $\tcurl(\vb F)$.
+	\begin{solution}
+		\begin{align*}
+			\tcurl(\vb F) = 
+			\mqty| \vb i & \vb j & \vb k \\ 
+			\partial_x & \partial_y & \partial_z \\ 
+			P & Q & R|
+			&= \vect{R_y - Q_z, P_z - R_x, Q_x - P_y} \\ 
+			&= \vect{0 + x , y - 0, -z - z}
+			= \boxed{\vect{x, y, -2z}}
+		\end{align*}
+	\end{solution}
+	\part[5] Calculate
+	\[
+		\iint_{\mathcal S} \tcurl(\vb{F}) \vdot \dif \vb{S}
+	\]
+	\begin{solution}
+		To make this match part (c), $\mathcal S$ consists only of the lateral surface of the cylinder.
+		This surface can be parametrized by 
+		\[
+			G(\theta, z) = (\cos \theta, \sin\theta, z), \quad 0 \le \theta \le 2\pi, \ 0 \le z \le 3
+		\]
+		with outward pointing normal vector
+		\[
+			\vb{N} = G_\theta \cross G_z = \vect{-\sin\theta, \cos\theta,0} \cross \vect{0, 0, 1} = \vect{\cos\theta, \sin\theta, 0}
+		\]
+		Hence the vector surface integral can be calculated directly as
+		\begin{align*}
+			\iint_{\mathcal S} \tcurl(\vb{F}) \vdot \dif \vb{S}
+			&= \int_0^3 \int_0^{2\pi} \vect{\cos\theta, \sin\theta, -2z} \vdot \vect{\cos\theta, \sin\theta, 0} \dif \theta \dif z \\ 
+			&= \int_0^3 \int_0^{2\pi} 1 \dif \theta \dif z
+			= \boxed{6\pi}
+		\end{align*}
+	\end{solution}
+
+	\newpage
+	\part[5] The boundary of $\mathcal S$ consists of a unit circle $\mathcal C_1$ on the $xy$-plane oriented counterclockwise and a unit circle $\mathcal C_2$ on the $z=3$ plane oriented clockwise.
+	Noting that the vector field is zero on the $xy$-plane, one easily sees that 
+	\[
+		\int_{\mathcal C_1} \vb{F} \vdot \dif \vb{r} = 0
+	\]
+	Using only this fact, Stokes' Theorem and your result from part (b), compute the vector line integral
+	\[
+		\int_{\mathcal C_2} \vb{F} \vdot \dif \vb{r}
+	\]
+	\begin{solution}
+		By Stokes' Theorem, 
+		\[
+			\iint_{\mathcal S} \tcurl(\vb{F}) \vdot \dif \vb{S} = \int_{\partial \mathcal{S}} \vb{F} \vdot \dif \vb{r}.
+		\]
+		Using the result from part (b) and the fact that the contour integral over $\mathcal{C}_1$ is zero, we have
+		\[
+			\int_{\mathcal C_2} \vb{F} \vdot \dif \vb{r} = \boxed{6\pi}
+		\]
+	\end{solution}
 \end{parts}
 \end{questions}
 \end{document}
