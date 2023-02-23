@@ -4,14 +4,13 @@ Copied from <https://archive.math.ksu.edu/course?course=math221>
 
 Copied all exams from 2021 Fall back to 2013 Spring.
 
-
 |Semester|Exam 1|Exam 2|Exam 3|Final|
 |:---:|:---:|:---:|:---:|:---:|
 | 2021 Fall |  |  |  | [Exam](./exams/2021-fall-final.pdf) | 
-| 2020 Spring | [Exam](./exams/2020-spring-exam1.pdf) | [Exam](./exams/2020-spring-exam2.pdf) | [Exam](./exams/2020-spring-exam3.pdf) | [Exam](./exams/2020-spring-final.pdf) | 
+| 2020 Spring | [Exam](./exams/2020-spring-exam1.pdf), [Exam solutions](./exams/2020-spring-exam1-sol.pdf) | [Exam](./exams/2020-spring-exam2.pdf), [Exam solutions](./exams/2020-spring-exam2-sol.pdf) | [Exam](./exams/2020-spring-exam3.pdf) | [Exam](./exams/2020-spring-final.pdf) | 
 | 2019 Fall |  | [Exam](./exams/2019-fall-exam2.pdf) | [Exam](./exams/2019-fall-exam3.pdf) |  | 
 | 2019 Summer | [Exam](./exams/2019-summer-exam1.pdf) | [Exam](./exams/2019-summer-exam2.pdf) |  | [Part1](./exams/2019-summer-final-part1.pdf), [Part2](./exams/2019-summer-final-part2.pdf) | 
-| 2019 Spring | [Exam](./exams/2019-spring-exam1.pdf) | [Exam](./exams/2019-spring-exam2.pdf) | [Exam](./exams/2019-spring-exam3.pdf) | [Exam](./exams/2019-spring-final.pdf) | 
+| 2019 Spring | [Exam](./exams/2019-spring-exam1.pdf), [Exam solutions](./exams/2019-spring-exam1-sol.pdf) | [Exam](./exams/2019-spring-exam2.pdf), [Exam solutions](./exams/2019-spring-exam2-sol.pdf) | [Exam](./exams/2019-spring-exam3.pdf) | [Exam](./exams/2019-spring-final.pdf) | 
 | 2018 Fall |  | [Exam](./exams/2018-fall-exam2.pdf) | [Exam](./exams/2018-fall-exam3.pdf) | [Exam](./exams/2018-fall-final.pdf) | 
 | 2018 Summer |  |  |  | [Exam](./exams/2018-summer-final.pdf) | 
 | 2018 Spring | [Exam](./exams/2018-spring-exam1.pdf), [Exam solutions](./exams/2018-spring-exam1-sol.pdf) | [Exam](./exams/2018-spring-exam2.pdf), [Exam solutions](./exams/2018-spring-exam2-sol.pdf) | [Exam](./exams/2018-spring-exam3.pdf), [Exam solutions](./exams/2018-spring-exam3-sol.pdf) | [Exam](./exams/2018-spring-final.pdf), [Exam solutions](./exams/2018-spring-final-sol.pdf) | 
