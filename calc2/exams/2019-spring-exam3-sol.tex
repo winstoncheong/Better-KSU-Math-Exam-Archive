@@ -1,0 +1,236 @@
+\documentclass[12pt,answers]{exam}
+
+\usepackage{amsmath,amsfonts,amssymb,mathtools,physics,commath}
+\usepackage{todonotes}
+\usepackage{float}
+\usepackage{multicol}
+\usepackage{polynom}
+\usepackage{siunitx}
+\usepackage{cancel}
+
+\newcommand{\inv}{^{-1}}
+
+\pagestyle{headandfoot}
+\firstpageheadrule
+\runningheadrule
+\firstpageheader{Math 221}{Exam 3|Solutions, Page \thepage\ of \numpages}{April 9, 2019}
+\runningheader{Math 221}{Exam 3|Solutions, Page \thepage\ of \numpages}{April 9, 2019}
+\runningfooter{}{}{}
+
+\begin{document}
+% \maketitle
+\begin{questions}
+
+\question
+Evaluate the following.
+\begin{parts}
+    \part[8]
+    $\displaystyle \dod{}{x} e^{2x} \sinh\inv(\sqrt x)$, where $\sinh\inv$ is the inverse sinh function.
+    \begin{solution}
+        \begin{align*}
+            2e^{2x} \sinh\inv(\sqrt x) + e^{2x} \frac{1}{\sqrt{1+x}} \cdot \frac{1}{2\sqrt x}
+        \end{align*}
+    \end{solution}
+    \part[8]
+    $\displaystyle \int \sqrt{1+x^2} \dif x$, using the substitution $x = \sinh(\theta)$.
+    \begin{solution}
+        \begin{align*}
+            \MoveEqLeft \int \sqrt{1+x^2} \dif x \\ 
+             & = \int \sqrt{1+\sinh^2(\theta)} \cosh(\theta) \dif \theta                                                    \\
+             & = \int \sqrt{\cosh^2(\theta)} \cosh(\theta) \dif \theta                                                      \\
+             & = \int \cosh^2(\theta) \dif \theta                          & (\cosh^2 \theta = \frac12(1+\cosh(2\theta)) )  \\
+             & = \int \frac12 (1+\cosh(2\theta)) \dif \theta                                                                \\
+             & = \frac12 \theta + \frac14 \sinh(2\theta)                   & (\sinh(2\theta) = 2\sinh(\theta)\cosh(\theta)) \\
+             & = \frac12 \theta + \frac12 \sinh(\theta) \cosh(\theta)      & (\cosh^2 \theta - \sinh^2 \theta = 1)          \\
+             & = \boxed{\frac12 \sinh\inv(x) + \frac12 x \sqrt{1+x^2} + C}
+        \end{align*}
+    \end{solution}
+\end{parts}
+
+\newpage
+\question
+Consider the differential equation
+\[
+    \dod{y}{x} = \frac{\ln(x)}{xy^2}, \qquad (x > 0).
+\]
+\begin{parts}
+    \part[8]
+    Find the general solution.
+    \begin{solution}
+        \begin{align*}
+            \int y^2 \dif y       & = \int \frac{\ln(x)}{x} \dif x       \\
+            \implies \frac13 y^3  & = \frac 12 (\ln(x))^2 + C_1          \\
+            \implies y^3          & = \frac 32 (\ln(x))^2 + C_2          \\
+            \implies \Aboxed{y(x) & = \sqrt[3]{\frac 32 (\ln(x))^2 + C}}
+        \end{align*}
+    \end{solution}
+    \part[2]
+    Find the solution satisfying the initial condition $y(1) = 4$.
+    \begin{solution}
+        \begin{align*}
+            y(1)         & = \sqrt[3]{\frac32 \cdot 0 + C} = 4
+            \implies C = 4^3 = 64                                \\
+            \Aboxed{y(x) & = \sqrt[3]{\frac 32 (\ln(x))^2 + 64}}
+        \end{align*}
+    \end{solution}
+\end{parts}
+
+\newpage
+\question
+Find the limit of the sequence or state that it diverges.
+\begin{parts}
+    \part[6]
+    $\displaystyle \lim_{n\to\infty} \frac{(\ln n)^2}{n}$
+    \begin{solution}
+        \begin{align*}
+            \lim_{n\to\infty} \frac{(\ln n)^2}{n}
+            \overset{LH}{=}
+            \lim_{n\to\infty} \frac{2\ln n \cdot \frac1n}{1}
+            =
+            \lim_{n\to\infty} \frac{2\ln n}{n}
+            \overset{LH}{=}
+            \lim_{n\to\infty} \frac{2 \cdot \frac1n}{1}
+            = \boxed{0}
+        \end{align*}
+    \end{solution}
+    \part[6]
+    $\displaystyle \lim_{n\to\infty} n \sin(2/n)$
+    \begin{solution}
+        This has type $\infty \cdot 0$.
+        \begin{align*}
+            \lim_{n\to\infty} n \sin(2/n)
+            =
+            \lim_{n\to\infty} \frac{\sin(2/n)}{n\inv}
+             & \overset{LH}{=}
+            \lim_{n\to\infty} \frac{\cos(2/n) \cdot -2n^{-2}}{-n^{-2}} \\
+             & =
+            \lim_{n\to\infty} 2\cos(2/n)
+            = \boxed{2}
+        \end{align*}
+    \end{solution}
+\end{parts}
+
+\question
+Evaluate the series.
+\begin{parts}
+    \part[6]
+    $\displaystyle \sum_{n=2}^\infty (-1)^n \left(\frac23\right)^n$
+    \begin{solution}
+        Geometric series with $r = -\frac23$, and initial term $a = (-1)^2 \left(\frac23\right)^2 = \frac49$.
+        The sum is thus
+        \[
+            \frac{a}{1-r}
+            = \frac{\frac49}{1-(-\frac23)}
+            = \frac49 \cdot \frac 35
+            = \boxed{\frac{4}{15}}
+        \]
+    \end{solution}
+    \part[8]
+    $\displaystyle \sum_{n=3}^\infty \frac{2}{n^2-1}$
+    \begin{solution}
+        \begin{align*}
+            \frac{2}{n^2-1}
+             & = \frac{1}{n-1} - \frac{1}{n+1}                              \\
+            \sum_{n=3}^\infty \frac{2}{n^2-1}
+             & =
+            \sum_{n=3}^\infty \left[ \frac{1}{n-1} - \frac{1}{n+1}  \right] \\
+             & = \left( \frac12 - \cancel{\frac 14} \right)
+            + \left( \frac13 - \cancel{\frac 15} \right)
+            + \left( \cancel{\frac 14} - \cancel{\frac 16} \right)
+            + \cdots                                                        \\
+             & = \frac12 + \frac 13 = \boxed{\frac 56}
+        \end{align*}
+    \end{solution}
+\end{parts}
+
+% \newpage
+\question[7]
+Use the limit comparison test to determine whether the following series converges or diverges. 
+Show all work to justify your answer.
+$\displaystyle \sum_{n=1}^\infty \frac{n^2+8}{4n^4-n^2}$
+\begin{solution}
+    Compare against $\displaystyle \sum_{n=1}^\infty \frac{1}{n^2}$.
+    \[
+        \lim_{n\to\infty} \frac{\dfrac{n^2+8}{4n^4-n^2}}{\dfrac{1}{n^2}}
+        = 
+        \lim_{n\to\infty} \frac{n^4+8n^2}{4n^4-n^2} 
+        = \frac14
+    \]
+    and $\displaystyle \sum_{n=1}^\infty \frac{1}{n^2}$ converges by $p$-series test. 
+    So by Limit Comparison Test, \\
+    $\displaystyle \sum_{n=1}^\infty \frac{n^2+8}{4n^4-n^2}$ \fbox{converges}
+\end{solution}
+
+% \newpage
+\question
+Determine whether the following series converge or diverge. Show all work to justify your answers.
+\begin{parts}
+    \part[7]
+    $\displaystyle \sum_{n=1}^\infty \frac{1}{n^{3/2}}$
+    \begin{solution}
+        \fbox{Converges} by $p$-series test, with $p = 3/2 > 1$.
+    \end{solution}
+    \part[7]
+    $\displaystyle \sum_{n=1}^\infty \cos(1/n)$
+    \begin{solution}
+        \fbox{Diverges} by divergence test since $\displaystyle \lim_{n\to\infty} \cos(1/n) = 1 \ne 0$.
+    \end{solution}
+    \part[7]
+    $\displaystyle \sum_{n=2}^\infty \frac{1}{n\ln(n)}$
+    \begin{solution}
+        \fbox{Diverges} by integral test, since 
+        $f(x) = \dfrac{1}{x \ln x}$ is a positive, continuous, decreasing function on $(2, \infty)$
+        and 
+        \[
+            \int_2^\infty \frac{1}{x \ln x} \dif x = \eval{\ln\abs{\ln x}}_2^\infty \quad \text{ diverges}
+        \]
+    \end{solution}
+\end{parts}
+
+\newpage
+\question[6]
+Find the minimum $M$ that guarantees that 
+\[
+    \left| \sum_{n=1}^\infty \frac{(-1)^{n+1}}{2n-1} - \sum_{n=1}^M \frac{(-1)^{n+1}}{2n-1} \right| < 0.01.
+\]
+\begin{solution}
+$ \left| \sum_{n=1}^\infty \frac{(-1)^{n+1}}{2n-1} - \sum_{n=1}^M \frac{(-1)^{n+1}}{2n-1} \right| \le \frac{1}{2(M+1)-1}$.
+We want
+% < 0.01 = \frac{1}{100}$ so
+    \begin{align*}
+    \frac{1}{2(M+1)-1} < 0.01 = \frac{1}{100}
+    &\implies 100 < 2(M+1) - 1 \\ 
+    &\implies \frac{101}{2} - 1 < M \\
+    &\implies M > 49.5
+    \end{align*}
+    So $\boxed{M = 50}$ works.
+\end{solution}
+
+\question
+Determine whether the following series converge conditionally, converge absolutely, or diverge. Justify your answer. 
+\begin{parts}
+    \part[7]
+    $\displaystyle \sum_{n=1}^\infty \frac{(-1)^n}{\sqrt n}$
+    \begin{solution}
+        $\displaystyle \sum_{n=1}^\infty \frac{1}{\sqrt{n}}$ diverges by $p$-series test ($p = \frac12 < 1$).
+       
+        $\displaystyle \lim_{n\to\infty} \frac{1}{\sqrt n} = 0$ and $\displaystyle \frac{1}{\sqrt{n+1}} \le \frac{1}{\sqrt{n}}$ for $n \ge 1$, 
+        so by the Alternating Series Test, $\displaystyle \sum_{n=1}^\infty \frac{(-1)^n}{\sqrt n}$ converges.
+
+        Thus
+        $\displaystyle \sum_{n=1}^\infty \frac{(-1)^n}{\sqrt n}$ \fbox{converges conditionally}
+    \end{solution}
+    \part[7]
+    $\displaystyle \sum_{n=1}^\infty \frac{(-1)^{n+1} \sin(n)}{5e^n}$
+    \begin{solution}
+        The series \fbox{converges absolutely} since 
+        \[
+            \sum_{n=1}^\infty \frac{\sin(n)}{5e^n} 
+            \le 
+            \sum_{n=1}^\infty \frac{1}{5e^n} 
+        \]
+        and the right series converges, being a geometric series with $r = \frac1e \approx \frac{1}{2.7} < 1$.
+    \end{solution}
+\end{parts}
+\end{questions}
+\end{document}

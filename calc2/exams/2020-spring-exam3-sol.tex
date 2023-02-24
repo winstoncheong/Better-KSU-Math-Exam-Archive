@@ -1,0 +1,241 @@
+\documentclass[12pt,answers]{exam}
+
+\usepackage{amsmath,amsfonts,amssymb,mathtools,physics,commath}
+\usepackage{todonotes}
+\usepackage{float}
+\usepackage{multicol}
+\usepackage{polynom}
+\usepackage{siunitx}
+\usepackage{cancel}
+
+\newcommand{\inv}{^{-1}}
+
+\pagestyle{headandfoot}
+\firstpageheadrule
+\runningheadrule
+\firstpageheader{Math 221}{Exam 3|Solutions, Page \thepage\ of \numpages}{April 14, 2020}
+\runningheader{Math 221}{Exam 3|Solutions, Page \thepage\ of \numpages}{April 14, 2020}
+\runningfooter{}{}{}
+
+\begin{document}
+% \maketitle
+\begin{questions}
+
+\question
+Evaluate the following.
+\begin{parts}
+    \part[8]
+    $\displaystyle \dod{}{x} x^3 \tanh\inv(e^{2x})$, where $\tanh\inv$ is the inverse tanh function.
+    \begin{solution}
+        \[
+            3x^2 \tanh\inv(e^{2x}) 
+            + x^3 \frac{1}{1-(e^{2x})^2} \cdot e^{2x} \cdot 2
+        \]
+    \end{solution}
+    \part[8]
+    $\displaystyle \int (2+\cosh x)(1+\sinh x) \dif x$
+    \begin{solution}
+        \begin{align*}
+            \MoveEqLeft \int (2+\cosh x)(1+\sinh x) \dif x \\ 
+            &= \int (2 + 2 \sinh x + \cosh x + \sinh x \cosh x) \dif x \\
+            &= 2x + 2 \cosh x + \sinh x + \int \sinh x \cosh x \dif x  
+            & \left( 
+\begin{array}{c}
+    u = \sinh x; \\
+    \dif u = \cosh x \dif x
+\end{array}
+                \right)\\ 
+            &= 2x + 2 \cosh x + \sinh x + \int u \dif u \\
+            &= 2x + 2 \cosh x + \sinh x + \frac{u^2}{2} \\ 
+            &= \boxed{2x + 2 \cosh x + \sinh x + \frac{(\cosh x)^2}{2} +C }
+        \end{align*}
+    \end{solution}
+\end{parts}
+
+\newpage
+\question
+Consider the differential equation
+\[
+    \dod{y}{x} = \frac{xy}{\ln y}
+\]
+\begin{parts}
+	\part[8]
+    Find the general solution. Solve for $y$ explicitly.
+	\begin{solution}
+        \begin{align*}
+            \int \frac{\ln y}{y} \dif y &= \int x \dif x \\ 
+            \frac{(\ln y)^2}{2} &= \frac 12 x^2 + C_1 \\ 
+            (\ln y)^2 &= x^2 + C_2 \\ 
+            \ln y &= \pm \sqrt{x^2 + C_2} \\ 
+            \Aboxed{y(x) &= \exp(\pm \sqrt{x^2+C})}
+        \end{align*}
+	\end{solution}
+	\part[2]
+    Find the solution satisfying the initial condition $y(0) = e$ where $e$ is the natural log base.
+	\begin{solution}
+        \begin{align*}
+            % y(x) &= \exp(\pm \sqrt{x^2+C}) \\
+            y(0) &= \exp(\pm \sqrt{0+C}) = e 
+            \implies \pm \sqrt{C} = 1 
+            \implies C = 1 \\
+            \Aboxed{y(x) &= \exp(\sqrt{x^2+1})}
+        \end{align*}
+	\end{solution}
+\end{parts}
+
+% \newpage
+\question[6]
+Find the limit of the sequence or state that it diverges.
+\begin{parts}
+    \part[6] 
+    $\displaystyle \lim_{n\to\infty} e^{-2n}(n^2+1)$
+    \begin{solution}
+        \begin{align*}
+            \lim_{n\to\infty} \frac{n^2+1}{e^{2n}}
+            \overset{LH}{=} 
+            \lim_{n\to\infty} \frac{2n}{2e^{2n}}
+            \overset{LH}{=}
+            \lim_{n\to\infty} \frac{2}{4e^{2n}}
+            = \boxed{0}
+        \end{align*}
+    \end{solution}
+    \part[6]
+    $\displaystyle \lim_{n\to\infty} \frac{\sin(5/n)}{\sin(3/n)}$
+    \begin{solution}
+        \begin{align*}
+            \lim_{n\to\infty} \frac{\sin(5/n)}{\sin(3/n)}
+            \overset{LH}{=}
+            \lim_{n\to\infty} \frac{\cos(5/n)\cdot -5n^{-2}}{\cos(3/n) \cdot -3n^{-2}}
+            =
+            \lim_{n\to\infty} \frac{5\cos(5/n)}{3\cos(3/n)}
+            = \boxed{\frac{5}{3}}
+        \end{align*}
+    \end{solution}
+\end{parts}
+
+\newpage
+\question
+Evaluate the series.
+\begin{parts}
+    \part[6]
+    $\displaystyle \sum_{n=0}^\infty \frac52 \cdot \left(\frac25\right)^n = \frac52 + 1 + \frac25 + \frac{4}{25} + \frac{8}{125} + \cdots $
+    \begin{solution}
+        Geometric series with first term $a = \frac 52$ and ratio $r = \frac25$.
+        Sum is
+        \[
+            \frac{a}{1-r}
+            = \frac{\frac 52}{1-\frac25}
+            = \frac 52 \cdot \frac 53
+            = \boxed{\frac{25}{6}}
+        \]
+    \end{solution}
+    \part[8]
+    $\displaystyle \sum_{n=2}^\infty \frac{2}{n^2-n}$
+    \begin{solution}
+        \begin{align*}
+            \sum_{n=2}^\infty \frac{2}{n^2-n}
+            &= \sum_{n=2}^\infty \left( \frac{2}{n-1} - \frac 2n \right) \\ 
+            &= \left( \frac21 - \cancel{\frac22} \right) + \left( \cancel{\frac 22} - \cancel{\frac 23} \right) + \left( \cancel{\frac 23} - \frac 24\right) + \cdots \\ 
+            &= \boxed{2}
+        \end{align*}
+    \end{solution}
+\end{parts}
+
+% \newpage
+\question[7]
+Use the limit comparision test to determine whether the following series converges or diverges. Show all work to justify your answer.
+$\displaystyle \sum_{n=1}^{\infty} \frac{n^2-n}{3n^{5/2} + 217}$
+\begin{solution}
+    Compare against $\displaystyle \sum_{n=1}^\infty \frac{1}{n^{1/2}}$
+    \[
+        \lim_{n\to\infty} \frac{\dfrac{n^2-n}{3n^{5/2} + 217}}{\dfrac{1}{n^{1/2}}}
+        = 
+        \lim_{n\to\infty} \frac{n^{5/2}-n^{3/2}}{3n^{5/2} + 217} = \frac 13
+    \]
+    and $\displaystyle \sum_{n=1}^\infty \frac{1}{n^{1/2}}$ diverges by $p$-series test. 
+    So by the Limit Comparison Test, \\
+$\displaystyle \sum_{n=1}^{\infty} \frac{n^2-n}{3n^{5/2} + 217}$ \fbox{diverges}
+\end{solution}
+
+\newpage
+\question
+Determine whether the following series converge or diverge. Show all work to justify your answers.
+\begin{parts}
+    \part[7]
+    $\displaystyle \sum_{n=1}^\infty \frac{1}{\sqrt n}$
+    \begin{solution}
+        \fbox{Diverges} by the $p$-series test ($p = \frac12 < 1$)
+    \end{solution}
+    \part[7]
+    $\displaystyle \sum_{n=2}^\infty \frac{1}{n(\ln(n))^2}$
+    \begin{solution}
+        \fbox{Converges} by the integral test:
+        $f(x) = \dfrac{1}{x(\ln x)^2}$ is positive, continuous, and decreasing for $x \ge 2$, and
+        \[
+            \int_2^\infty \frac{1}{x (\ln x)^2} \dif x 
+            = \int u^{-2} \dif u 
+            = -u^{-1} 
+            = \eval{-\frac{1}{\ln x}}_2^\infty 
+            = - 0 + \frac{1}{\ln 2} \qquad \text{converges}
+        \]
+    \end{solution}
+    \part[7]
+    $\displaystyle \sum_{n=1}^\infty (-1)^{n+1} \cos(n\pi/2)$
+    \begin{solution}
+        \fbox{Diverges} by divergence test, since
+        $\displaystyle \lim_{n\to\infty} (-1)^{n+1} \cos(n\pi/2)$ does not exist (the sequence cycles between the values 0, 1, 0, and $-1$)
+    \end{solution}
+\end{parts}
+
+% \newpage
+\question[6]
+The infinite series $\displaystyle S = \sum_{n=1}^\infty \frac{(-1)^{n+1}}{3n-1}$ is estimated using the $M$-th partial sum $S_M$. Find the minimum $M$ that guarantees that $|S - S_M| < 0.01$.
+\begin{solution}
+    This is an alternating series $\displaystyle \sum_{n=1}^\infty (-1)^{n+1} a_n$, with $a_n = \dfrac{1}{3n-1}$.
+    The estimate for error is 
+    $|S - S_M| < a_{M+1}$. We want
+    \begin{align*}
+        \frac{1}{3(M+1)-1} < 0.01 = \frac{1}{100}
+        &\implies 100 < 3(M+1) - 1 \\  
+        &\implies \frac{101}{3} - 1 < M \\ 
+        &\implies M > \frac{98}{3} \approx 32.66
+    \end{align*}
+    so $\boxed{M = 33}$ works.
+\end{solution}
+
+\question
+Determine whether the following series converge conditionally, converge absolutely, or diverge. Justify your answer.
+\begin{parts}
+    \part[7]
+    $\displaystyle \sum_{n=1}^\infty \frac{(-1)^n}{n}$
+    \begin{solution}
+        $\displaystyle \sum_{n=1}^\infty \frac 1n$ diverges (harmonic series).
+        \\
+        $\displaystyle \lim_{n\to\infty} \frac{1}{n} = 0$ and $\dfrac{1}{n+1} \le \dfrac1n$ for $n \ge 1$, so by the Alternating Series Test,
+        $\displaystyle \sum_{n=1}^\infty \frac{(-1)^n}{n}$ converges.
+        \\
+        Thus
+        $\displaystyle \sum_{n=1}^\infty \frac{(-1)^n}{n}$
+        \fbox{converges conditionally}
+    \end{solution}
+    \part[7]
+    $\displaystyle \sum_{n=1}^\infty \frac{\sin(2n)}{n^2+n}$
+    \begin{solution}
+        \[
+    \sum_{n=1}^\infty \left|\frac{\sin(2n)}{n^2+n} \right|
+    \le 
+    \sum_{n=1}^\infty \frac{1}{n^2+n} 
+    \le 
+    \sum_{n=1}^\infty \frac{1}{n^2} 
+        \]
+        The rightmost series converges by $p$-series test ($p = 2 > 1$). 
+        \\
+        Hence by Direct Comparison test, 
+    $\displaystyle \sum_{n=1}^\infty \left|\frac{\sin(2n)}{n^2+n} \right|$ converges.
+    \\
+    Thus by definition, 
+    $\displaystyle \sum_{n=1}^\infty \frac{\sin(2n)}{n^2+n}$ \fbox{converges absolutely}
+    \end{solution}
+\end{parts}
+\end{questions}
+\end{document}
