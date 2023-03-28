@@ -44,6 +44,8 @@ Evaluate the following.
              & = \frac12 \theta + \frac12 \sinh(\theta) \cosh(\theta)      & (\cosh^2 \theta - \sinh^2 \theta = 1)          \\
              & = \boxed{\frac12 \sinh\inv(x) + \frac12 x \sqrt{1+x^2} + C}
         \end{align*}
+        \textit{Remark:}
+        Since $x = \sinh(\theta)$, we can use the hyperbolic pythagorean identity to get $\cosh \theta = \sqrt{1+\sinh^2 \theta} = \sqrt{1+x^2}$.
     \end{solution}
 \end{parts}
 
@@ -194,9 +196,7 @@ Find the minimum $M$ that guarantees that
     \left| \sum_{n=1}^\infty \frac{(-1)^{n+1}}{2n-1} - \sum_{n=1}^M \frac{(-1)^{n+1}}{2n-1} \right| < 0.01.
 \]
 \begin{solution}
-$ \left| \sum_{n=1}^\infty \frac{(-1)^{n+1}}{2n-1} - \sum_{n=1}^M \frac{(-1)^{n+1}}{2n-1} \right| \le \frac{1}{2(M+1)-1}$.
-We want
-% < 0.01 = \frac{1}{100}$ so
+    The expression in absolute values is bounded above by the $(M+1)$-st~term in the series. Thus we want
     \begin{align*}
     \frac{1}{2(M+1)-1} < 0.01 = \frac{1}{100}
     &\implies 100 < 2(M+1) - 1 \\ 
@@ -206,6 +206,7 @@ We want
     So $\boxed{M = 50}$ works.
 \end{solution}
 
+\newpage
 \question
 Determine whether the following series converge conditionally, converge absolutely, or diverge. Justify your answer. 
 \begin{parts}
@@ -223,13 +224,15 @@ Determine whether the following series converge conditionally, converge absolute
     \part[7]
     $\displaystyle \sum_{n=1}^\infty \frac{(-1)^{n+1} \sin(n)}{5e^n}$
     \begin{solution}
-        The series \fbox{converges absolutely} since 
+        Since
         \[
-            \sum_{n=1}^\infty \frac{\sin(n)}{5e^n} 
+            \sum_{n=1}^\infty \left| \frac{(-1)^{n+1}\sin(n)}{5e^n}\right|
+            = 
+            \sum_{n=1}^\infty \frac{|\sin(n)|}{5e^n} 
             \le 
             \sum_{n=1}^\infty \frac{1}{5e^n} 
         \]
-        and the right series converges, being a geometric series with $r = \frac1e \approx \frac{1}{2.7} < 1$.
+        and the right series converges, being a geometric series with $r = \frac1e \approx \frac{1}{2.7} < 1$, by the Direct Comparison Test, the original series \fbox{converges absolutely}
     \end{solution}
 \end{parts}
 \end{questions}

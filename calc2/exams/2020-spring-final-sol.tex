@@ -177,21 +177,22 @@ Let $\displaystyle S = \sum_{n=1}^\infty \frac{(-1)^{n+1}}{2n+1}$.
 
 \newpage
 \question[12]
-Find the interval of converge of the power series $\displaystyle \sum_{n=1}^\infty \frac{(x-2)^n}{n \cdot 4^n}$.
+Find the interval of convergence of the power series $\displaystyle \sum_{n=1}^\infty \frac{(x-2)^n}{n \cdot 4^n}$.
 (Make clear the status of any end points.)
 \begin{solution}
     \begin{align*}
     \lim_{n\to\infty} \left| \frac{(x-2)^{n+1}}{(n+1) \cdot 4^{n+1}} \cdot \frac{n\cdot 4^n}{(x-2)^n}\right|
     = \lim_{n\to\infty} \left| \frac{x-2}{4} \cdot \frac{n}{n+1} \right|
-    = \frac14 |x-2| \cdot 1 < 1 \\ 
-    \implies |x-2| < 4
+    &= \frac14 |x-2| \cdot 1 < 1 \\ 
+    &\implies |x-2| < 4 \\
+    &\implies -2 < x < 6
     \end{align*}
-    Testing $x = 6$:
+    At $x = 6$:
     \[
         \sum_{n=1}^\infty \frac{4^n}{n \cdot 4^n} 
         = \sum_{n=1}^\infty \frac{1}{n} \text{ diverges (harmonic series)}
     \]
-    Testing $x = -2$:
+    At $x = -2$:
     \[
         \sum_{n=1}^\infty \frac{(-4)^n}{n \cdot 4^n} = \sum_{n=1}^\infty \frac{(-1)^n}{n} \text{ converges (alternating harmonic series)}
     \]
@@ -229,6 +230,8 @@ The answer is worth 2 points and the work you show 4 points.
             = 1
         \]
         Since $\sum \frac{1}{n^{3/2}}$ converges ($p$-series test with $p = 3/2 > 1$), by Limit Comparison Test, the series \fbox{converges}
+        \\
+        \textit{Remark:} Direct Comparison Test can also be used, since $\displaystyle \sum \dfrac{\sqrt{n}}{n^2+1} < \sum \dfrac{\sqrt{n}}{n^2} = \sum \dfrac{1}{n^{3/2}}$
     \end{solution}
     \part[6]
     $\displaystyle \sum_{n=2}^\infty \frac{\cos(1/n)}{2 + \sin(1/n)}$
@@ -253,7 +256,7 @@ $\displaystyle \sum_{n=1}^\infty \left(\frac{2n^2-3}{n^2+7n}\right)^n$
         \lim_{n\to\infty} \sqrt[n]{\left(\frac{2n^2-3}{n^2+7n}\right)^n}
         = \lim_{n\to\infty} \frac{2n^2-3}{n^2+7n} = 2 > 1
     \]
-    By root test, the series \fbox{diverges}.
+    By root test, the series \fbox{diverges}
 \end{solution}
 
 \newpage
@@ -379,74 +382,49 @@ Find the length of the curve $x = t^2 + 1$, $y = 2t^3$, $0 \le t \le 1$.
     \part[6]
     Convert the polar equation $r = 2\sin \theta + 4 \cos \theta$, to a rectangular equation in $x, y$.
 \begin{solution}
-    \[
-    r = \sqrt{x^2+y^2} \qquad x = r \cos \theta \qquad y = r \sin \theta
-    \]
-    \begin{align*}
-        r &= 2 \sin \theta + 4 \cos \theta \\ 
-        r &= 2 \frac yr + 4 \frac xr \\ 
-        r^2 &= 2 y + 4x  \\ 
-        x^2 + y^2 &= 2 y + 4x  \\ 
-        x^2 -4x + 4 + y^2 - 2y + 1 &= 4 + 1 \\ 
-        \Aboxed{(x-2)^2 + (y-1)^2 &= (\sqrt 5)^2}
-    \end{align*}
+    \begin{gather*}
+        r^2 = 2 r\sin \theta + 4 r\cos \theta \\ 
+        x^2 + y^2 = 2 y + 4x  \\ 
+        x^2 -4x + 4 + y^2 - 2y + 1 = 4 + 1 \\ 
+        \boxed{(x-2)^2 + (y-1)^2 = (\sqrt 5)^2}
+    \end{gather*}
+    (Circle centered at $(2, 1)$ with radius $\sqrt 5$)
 \end{solution}
     \part[5]
     Sketch the graph of the polar equation in part (a) with $0 \le \theta \le \frac\pi2$. (Note: $\sqrt 2 \approx 1.4$, $\sqrt 3 \approx 1.7$, $\sqrt 5 \approx 2.2$.)
 \begin{solution}
+    \begin{multicols}{2}
+    \begin{tabular}{c|l}
+        $\theta$ & $r = 2 \sin \theta + 4 \cos \theta$ \\ 
+        \hline
+        0 & 0 + 4 = 4 \\ 
+        $\pi/4$ & $2 \cdot \frac{\sqrt 2}{2} + 4 \cdot \frac{\sqrt 2}{2} = 3 \sqrt 2 \approx 4.2$ \\ 
+        $\pi/2$ & 2 + 0 = 2 
+    \end{tabular}    
     \begin{figure}[H]
         \centering
-        \includegraphics[width=.5\textwidth]{graphics/2020-spring-final-18b.pdf}
+        \includegraphics[width=.8\linewidth]{graphics/2020-spring-final-18b.pdf}
     \end{figure}
+    \end{multicols}
 \end{solution}
 \end{parts}
 
-\newpage
+% \newpage
 \question[6]
 Find the slope of the polar curve $r = 2\sin\theta + 4\cos\theta$ at $\theta = \pi/2$.
 \begin{solution}
-    Using
-    \[
+    \begin{align*}
+        x &= r \cos \theta = (2\sin \theta \cos \theta + 4\cos^2 \theta) \\ 
+        y &= r \sin \theta = (2\sin^2 \theta + 4\sin\theta \cos \theta)
+    \end{align*}
+    \begin{align*}
         \dod{y}{x} 
-        = \frac{\dod{r}{\theta} \sin \theta + r \cos \theta}{\dod{r}{\theta} \cos \theta - r\sin \theta}
-    \]
-    \begin{align*}
-        \eval{\dod{r}{\theta}}_{\theta=\pi/2} &= 2\cos \frac\pi2 - 4 \sin \frac\pi2 = 0 - 4 = -4 \\ 
-        \eval{r}_{\theta=\pi/2} &= 2 \sin \frac\pi2 + 4 \cos \frac\pi2 = 2 + 0 = 2 \\ 
-        \eval{\dod{y}{x}}_{\theta = \pi/2} &= 
-        \frac{-4 \sin \frac\pi2 + 2 \cos \frac\pi2}{-4 \cos \frac\pi2 - 2 \sin\frac\pi2} = \frac{-4+0}{0-2} = \boxed{2}
-    \end{align*}
-    Alternatively, the Calc 1 technique of implicit differentiation can be used.
-    Starting with the equation obtained in 18(a):
-    \begin{align*}
-        (x-2)^2 + (y-1)^2 = 5 \\ 
-        2(x-2) + 2(y-1) \dod{y}{x} = 0 \\
-        \implies \dod{y}{x} = \frac{-2(x-2)}{2(y-1)} = \frac{-(x-2)}{y-1}
-    \end{align*}
-    At $\theta = \pi/2$, $r = 2$, which gives the coordinate $(x,y) = (0,2)$.
-    Hence 
-    \[
-      m = \eval{\dod{y}{x}}_{(x,y) = (0,2)} = \frac{2}{1} = \boxed{2}
-    \]
-
-    Another alternative, using
-    \[
-        \dod{y}{x} = \frac{\dod{y}{\theta}}{\dod{x}{\theta}}
-    \]
-    requires constructing parametric equations from the polar:
-    \begin{align*}
-        x = r \cos \theta = (2\sin \theta + 4\cos \theta) \cos\theta \\ 
-        y = r \sin \theta = (2\sin \theta + 4\cos \theta) \sin\theta
-    \end{align*}
-    Thus
-    \begin{align*}
-        \dod{y}{x} = \frac{\dod{y}{\theta}}{\dod{x}{\theta}}
-        &= \frac{(2\cos\theta-4\sin\theta)\sin\theta + (2\sin\theta+4\cos\theta)\cos\theta}{(2\cos\theta - 4\sin\theta) \cos\theta + (2\sin\theta+4\cos\theta)(-\sin\theta)} \\ 
+        = \frac{\dod{y}{\theta}}{\dod{x}{\theta}}
+        &= \frac{2 \cdot 2 \sin\theta \cos \theta + 4 \sin\theta (-\sin \theta) + 4 \cos \theta \cos \theta }{2 \sin\theta(-\sin \theta) + 2 \cos^2\theta + 8 \cos \theta (-\sin\theta)} \\ 
         m = \eval{\dod{y}{x}}_{\theta=\pi/2} 
-        &= \frac{(0-4)1+(2+4\cdot0)0}{(0-4)0+(2+4\cdot0)(-1)} 
+        &= \frac{4 \cdot 0 - 4 + 0}{-2 + 0 + 0} 
         = \frac{-4}{-2} = \boxed{2}
     \end{align*}
-
 \end{solution}
 
 \end{questions}

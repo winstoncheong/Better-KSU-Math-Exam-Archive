@@ -47,8 +47,12 @@ Evaluate the following.
                 \right)\\ 
             &= 2x + 2 \cosh x + \sinh x + \int u \dif u \\
             &= 2x + 2 \cosh x + \sinh x + \frac{u^2}{2} \\ 
-            &= \boxed{2x + 2 \cosh x + \sinh x + \frac{(\cosh x)^2}{2} +C }
+            &= \boxed{2x + 2 \cosh x + \sinh x + \frac{(\sinh x)^2}{2} +C }
         \end{align*}
+        \textit{Remark:}
+           Alternatively, the $u$-sub can be performed with $u = \cosh x$, $\dif u = \sinh x \dif x$. 
+           The final result will have the term $\frac{(\cosh x)^2}{2}$ instead of $\frac{(\sinh x)^2}{2}$. 
+           These are off by a constant since $\cosh^2 x - \sinh^2 x = 1$.
     \end{solution}
 \end{parts}
 
@@ -230,7 +234,7 @@ Determine whether the following series converge conditionally, converge absolute
         \]
         The rightmost series converges by $p$-series test ($p = 2 > 1$). 
         \\
-        Hence by Direct Comparison test, 
+        Hence by Direct Comparison Test, 
     $\displaystyle \sum_{n=1}^\infty \left|\frac{\sin(2n)}{n^2+n} \right|$ converges.
     \\
     Thus by definition, 

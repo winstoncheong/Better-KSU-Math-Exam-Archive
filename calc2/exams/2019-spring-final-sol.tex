@@ -7,6 +7,7 @@
 \usepackage{polynom}
 \usepackage{siunitx}
 
+
 \newcommand{\inv}{^{-1}}
 
 \pagestyle{headandfoot}
@@ -122,66 +123,71 @@ Let $R$ be the region trapped between $y = 1$ and $y = \cos x$ with $0 \le x \le
     \end{solution}
     \part[10] Find $\overline x$, the $x$ coordinate of the centroid of $R$. (Do not calculate $\overline y$.)
     \begin{solution}
-        \begin{multicols}{2}
+        % \begin{multicols}{2}
         \begin{align*}
-            M_y &= \int_0^{\pi/2} x (1 - \cos x) \dif x \\
-            &= \eval{\frac{x^2}{2} - (x \sin x + \cos x) }_0^{\pi/2} \\ 
-            &= \left(\frac{\pi^2}{8} - \frac\pi2 \right) -(-1) \\
-            &= \boxed{\frac{\pi^2}{8} - \frac\pi2 + 1}
-        \end{align*}
-        \[
+            M_y &= \int_0^{\pi/2} x (1 - \cos x) \dif x  \qquad \qquad 
+            \left[
             \begin{array}{ccc}
                 & D & I \\ 
                 + & x & \cos x \\ 
                 - & 1 & \sin x \\ 
                 + & 0 & -\cos x
             \end{array}
-        \]
-        \end{multicols}
+            \right]
+            \\
+            &= \eval{\frac{x^2}{2} - (x \sin x + \cos x) }_0^{\pi/2} 
+            = \left(\frac{\pi^2}{8} - \frac\pi2 \right) -(-1) 
+            = \frac{\pi^2}{8} - \frac\pi2 + 1
+        \end{align*}
+        % \[
+        %     \begin{array}{ccc}
+        %         & D & I \\ 
+        %         + & x & \cos x \\ 
+        %         - & 1 & \sin x \\ 
+        %         + & 0 & -\cos x
+        %     \end{array}
+        % \]
+        % \end{multicols}
+        Thus $\overline x = \dfrac{M_y}{A} = \boxed{\frac{\pi^2/8-\pi/2 + 1}{\pi/2-1}}$
     \end{solution}
 \end{parts}
 
+% \newpage
 \question[8] Evaluate the series $\displaystyle \sum_{n=1}^\infty \sin(\frac\pi2 n) 2^{-n}$
 \begin{solution}
     Notice that $\sin(\frac\pi2 n)$ cycles between the values $1, 0, -1, 0$. Expanding out the series:
     \begin{align*}
 \sum_{n=1}^\infty \sin(\frac\pi2 n) 2^{-n}
-        &= 1 \cdot 2^{-1} + 0 \cdot 2^{-2} + (-1) \cdot 2^{-3} + 0 \cdot 2^{-4} \\ 
-        &\quad + 1 \cdot 2^{-5} + 0 \cdot 2^{-6} + (-1) \cdot 2^{-7} + 0 \cdot 2^{-8} + \cdots \\
+        &= 
+        \begin{multlined}[t]
+        1 \cdot 2^{-1} + 0 \cdot 2^{-2} + (-1) \cdot 2^{-3} + 0 \cdot 2^{-4} \\ 
+        \quad + 1 \cdot 2^{-5} + 0 \cdot 2^{-6} + (-1) \cdot 2^{-7} + 0 \cdot 2^{-8} + \cdots
+        \end{multlined}
+        \\
         &= 2^{-1} - 2^{-3} + 2^{-5} - 2^{-7} + \cdots \\
-        \intertext{which is a geometric series with $a = 2^{-1}$ and $r = -2^{-2}$, converging to}
+        \intertext{This is a geometric series with $a = 2^{-1}$ and $r = -2^{-2}$. Thus it converges to the value}
         &= \frac{\frac12}{1 - (-\frac14)}
         = \frac 12 \cdot \frac 45 
         = \boxed{\frac 25}
     \end{align*}
 \end{solution}
 
+\newpage
 \question Let $\displaystyle S = \sum_{n=1}^\infty \frac{(-1)^n}{n!}$.
 \begin{parts}
     \part[4] Explain why the series converges.
     \begin{solution}
-        \todo[inline]{write better?}
-        Can use Direct Comparison Test to argue, since
-        \[
-            \frac{1}{n!} \le \frac{1}{n^2} \text{ for } n \ge 4
-            \quad \text{ and } \quad
-            \sum \frac{1}{n^2} \text{ converges}
-        \]
-        or can use Ratio Test, since
-        \[
-            \lim_{n\to\infty} \frac{\frac{1}{(n+1)!}}{\frac{1}{n!}}
-            = \lim_{n\to\infty} \frac{n!}{(n+1)!}
-            = \lim_{n\to\infty} \frac{1}{n+1} = 0
-        \]
+        Since $\displaystyle \lim_{n\to\infty} \frac{1}{n!} = 0$ and $\displaystyle \frac{1}{(n+1)!} < \frac{1}{n!}$, by the Alternating Series Test, the series converges.
     \end{solution}
     \part[4] How many terms are required to approximate $S$ with an error less than 0.01?
     \begin{solution}
-        Error for alternating series:
+        The error for an alternating series $|S - S_N|$ is bounded above by the next term in the series. 
+        Thus we want
         \[
-            |S - S_N| = \frac{1}{(N+1)!} < 0.01
+            \frac{1}{(N+1)!} < 0.01
             \implies 100 < (N+1)! 
         \]
-        This holds once $\boxed{N \ge 5}$
+        Since $4! = 24$ and $5! = 120$, this first holds when $\boxed{N = 4}$
     \end{solution}
     \part[2] Evaluate $S$ by using an appropriate series on the cover page.
     \begin{solution}
@@ -201,7 +207,8 @@ Solve the initial value problem, $\displaystyle \dod{y}{t} = \frac{\cos^2(y)}{e^
     \begin{align*}
         \int \sec^2(y) \dif y &= \int e^{-2t} \dif t \\ 
         \tan(y) &= -\frac12 e^{-2t} + C \\ 
-        y(t) &= \boxed{\tan[-1](-\frac12 e^{-2t} + C)}
+        0 &= -\frac12 e^0 + C \implies C = \frac12 \\
+        y(t) &= \boxed{\tan[-1](-\frac12 e^{-2t} + \frac12)}
     \end{align*}
 \end{solution}
 
@@ -209,27 +216,30 @@ Solve the initial value problem, $\displaystyle \dod{y}{t} = \frac{\cos^2(y)}{e^
 Find the interval of converge of the power series $\displaystyle \sum_{n=1}^\infty \frac{(x+2)^n}{\sqrt n \cdot 3^n}$.
 (Make clear the status of any end points.)
 \begin{solution}
-    \todo[inline]{check over this later}
     \begin{align*}
-        \rho &= \lim_{n\to\infty} \left| \frac{(x+2)^{n+1}}{\sqrt{n+1} \cdot 3^{n+1}} \cdot \frac{\sqrt n \cdot 3^n}{(x+2)^n} \right| \\ 
+        \rho 
+        = \lim_{n\to\infty} \left| \frac{(x+2)^{n+1}}{\sqrt{n+1} \cdot 3^{n+1}} \cdot \frac{\sqrt n \cdot 3^n}{(x+2)^n} \right| 
         &= \lim_{n\to\infty} \left| \frac{x+2}{3} \frac{\sqrt{n}}{\sqrt{n+1}} \right| \\
-        &= \frac13 |x+2| < 1
+        &= \frac13 |x+2| < 1 \\
+        &\implies |x+2| < 3 \\ 
+        &\implies -5 < x < 1
     \end{align*}
-    Radius of convergence : 3, centered at $x = -2$. 
-    \\
-    For $x = 1$: 
-    \[
-        \sum_{n=1}^\infty \frac{3^n}{\sqrt n \cdot 3^n}
+    At $x = 1$: 
+        $\displaystyle \sum_{n=1}^\infty \frac{3^n}{\sqrt n \cdot 3^n}
         = 
-        \sum_{n=1}^\infty \frac{1}{\sqrt n } \text{ diverges by $p$-series test}
-    \]
-    For $x = -5$:
-    \[
+        \sum_{n=1}^\infty \frac{1}{\sqrt n } 
+        $
+        diverges by $p$-series test ($p=\frac12 < 1$).
+    \\
+    At $x = -5$:
+    $\displaystyle
         \sum_{n=1}^\infty \frac{(-3)^n}{\sqrt n \cdot 3^n}
         = 
-        \sum_{n=1}^\infty \frac{(-1)^n}{\sqrt n} \text{ converges by AST}
-    \]
-    Thus the interval of convergence is $\boxed{\intco{-5, 1}}$.
+        \sum_{n=1}^\infty \frac{(-1)^n}{\sqrt n} 
+    $
+       converges by AST, since $\dfrac{1}{\sqrt{n}}$ decreases to 0 as $n\to\infty$.
+    \\
+    Thus the interval of convergence is $\boxed{\intco{-5, 1}}$
 \end{solution}
 
 \newpage
@@ -246,17 +256,16 @@ The answer for each problem is worth 2 points and the work you show 4 points.
     \part[6]
     $\displaystyle \sum_{n=2}^\infty \frac{n^2 + 5}{n^{5/2} + n}$
     \begin{solution}
-        Limit comparison test with $\displaystyle \sum \frac{1}{n^{1/2}}$. Then 
+        Limit comparison test with $\displaystyle \sum \frac{1}{n^{1/2}}$, which diverges ($p$-series with $p = \frac12 < 1$).
+        Since
         \[
             \lim_{n\to\infty} 
             \frac{\dfrac{n^2 + 5}{n^{5/2} + n}}{\dfrac{1}{n^{1/2}}}
             = 
             \lim_{n\to\infty} 
-            \frac{n^{5/2} + 5n^{1/2}}{n^{5/2} + n} = 1 
-            \quad \text{and} \quad \sum \frac{1}{n^{1/2}} \text{ diverges by $p$-series test}
+            \frac{n^{5/2} + 5n^{1/2}}{n^{5/2} + n} = 1 \ne 0
         \]
-        So by Limit Comparison Test, 
-$\displaystyle \sum_{n=2}^\infty \frac{n^2 + 5}{n^{5/2} + n}$ \fbox{diverges}
+        by Limit Comparison Test, both series \fbox{diverge.}
     \end{solution}
     \part[6]
     $\displaystyle \sum_{n=1}^\infty \frac{(n!)^2}{(2n)!}$
@@ -266,7 +275,7 @@ $\displaystyle \sum_{n=2}^\infty \frac{n^2 + 5}{n^{5/2} + n}$ \fbox{diverges}
             \lim_{n\to\infty} \left| \frac{((n+1)!)^2}{(2(n+1))!} \cdot \frac{(2n)!}{(n!)^2} \right|
         = 
             \lim_{n\to\infty} \left| \frac{(n+1)^2}{(2n+2)(2n+1)} \right|
-            = \frac 14
+            = \frac 14 < 1
         \]
         Thus by the Ratio Test, the series \fbox{converges}
     \end{solution}
@@ -318,12 +327,14 @@ Find the second degree Taylor polynomial $T_2(x)$ for the function $f(x) = \sqrt
             &= \int \sum_{n=0}^\infty (-1)^n x^{2n} \dif x \\
             \implies \tan\inv x 
             &= \sum_{n=0}^\infty \int (-1)^n x^{2n} \dif x
-            = \boxed{\sum_{n=0}^\infty \frac{(-1)^n}{2n+1} x^{2n+1} }
+            = \sum_{n=0}^\infty \frac{(-1)^n}{2n+1} x^{2n+1} + C
+            \intertext{Setting $x=0$ gives $0 = \tan\inv0=0+C \implies C = 0$. Thus}
+            \tan\inv x &= \boxed{\sum_{n=0}^\infty \frac{(-1)^n}{2n+1} x^{2n+1}}
         \end{align*}
     \end{solution}
     \part[2] Use part (b) to evaluate the sum $1 - \frac 13 + \frac 15 - \frac 17 + \frac 19 - \cdots = $
     \begin{solution}
-        Evaluating the Maclaurin series in (b) at $x=1$ gives the sum specified. Thus
+        Evaluating the Maclaurin series in (b) at $x=1$ gives the series specified. Thus
         \[
             1 - \frac 13 + \frac 15 - \frac 17 + \frac 19 - \cdots = \tan\inv(1) = \boxed{\frac\pi4}
         \]
@@ -346,9 +357,11 @@ to find the terms up to $x^4$ for the Maclaurin series of $e^{2x} \ln(1+x^2)$.
     e^{2x} \ln(1+x^2) 
     &= \left( \sum_{n=0}^\infty \frac{(2x)^n}{n!} \right) \left( \sum_{n=1}^\infty (-1)^{n+1} \frac{x^{2n}}{n}\right) \\ 
     &= \left(1 + 2x + \frac{(2x)^2}{2} + \frac{(2x)^3}{6} + \cdots \right) \left( x^2 - \frac12 x^{4} + \frac13 x^6 + \cdots \right) \\ 
-    &= \left(x^2 - \frac12 x^4 + \cdots \right) + \left(2x^3 + \cdots \right) + \left( 2x^4 + \cdots \right) + \cdots \\ 
+    &= x^2 \left(1 + 2x + \frac{4x^2}{2} + \cdots \right) - \frac12 x^4 \left(1 + \cdots \right) + \cdots \\
+    &= x^2 + 2x^3 + 2x^4 - \frac12 x^4 + \cdots \\
     &= \boxed{x^2 + 2x^3 + \frac 32 x^4} + \text{h.o.t.}
 \end{align*}
+\textit{Remark:} ``h.o.t.'' stands for ``higher order terms''
 \end{solution}
 
 \newpage
@@ -357,10 +370,22 @@ to find the terms up to $x^4$ for the Maclaurin series of $e^{2x} \ln(1+x^2)$.
     \part[6]
     Sketch the graph of the polar equation $r = 6 \cos(\theta)$, $0 \le \theta \le \pi$.
     \begin{solution}
+        \begin{multicols}{2}
+               \begin{tabular}{c|c}
+                $\theta$ & $r=6 \cos \theta$ \\
+                \hline
+                0 & 6 \\ 
+                $\pi/4$ & $3\sqrt 2$ \\ 
+                $\pi/2$ & 0 \\ 
+                $3\pi/4$ & $-3\sqrt 2$ \\ 
+                $\pi$ & $-6$
+               \end{tabular} 
+            \columnbreak
         \begin{figure}[H]
             \centering
-            \includegraphics[width=.3\textwidth]{graphics/2019-spring-final-13a.pdf}
+            \includegraphics[width=.8\linewidth]{graphics/2019-spring-final-13a.pdf}
         \end{figure}
+    \end{multicols}
     \end{solution}
     \part[6]
     Convert the polar equation in part (a) to a rectangular equation in $x$ and $y$, and state what familiar shape it is?
