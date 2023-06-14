@@ -1,0 +1,243 @@
+\documentclass[12pt,answers]{exam}
+
+\usepackage{amsmath,amsfonts,amssymb,mathtools,physics,commath}
+\usepackage{todonotes}
+\usepackage{float}
+\usepackage{multicol}
+\usepackage{fancybox}
+\usepackage{siunitx}
+\usepackage{cancel}
+
+\newcommand{\inv}{^{-1}}
+
+\pagestyle{headandfoot}
+\firstpageheadrule
+\runningheadrule
+\firstpageheader{Math 221}{Exam 2|Solutions, Page \thepage\ of \numpages}{October 22, 2019}
+\runningheader{Math 221}{Exam 2|Solutions, Page \thepage\ of \numpages}{October 22, 2019}
+\runningfooter{}{}{}
+
+\begin{document}
+% \maketitle
+\begin{questions}
+    \question
+    \begin{parts}
+        \part[6] Write an integral that calculates the length of the curve $y= x + \sin x$, $0 \le x \le \pi$. 
+        \textbf{Do not evaluate the integral.}
+        \begin{solution}
+            \[\int_0^\pi \sqrt{1+(1+\cos x)^2} \dif x\]
+        \end{solution}
+        \part[8] Find the surface area of the surface obtained by rotating the curve $y=\sqrt{x}$, $1 \le x \le 4$ around the $x$-axis. 
+        \textbf{Evaluate the integral.}
+        \begin{solution}
+            \begin{align*}
+                y' &= \frac{1}{2\sqrt x} \\ 
+                (y')^2 &= \frac{1}{4 x}
+            \end{align*}
+            Then
+            \begin{align*}
+                SA 
+                &= \int_a^b 2\pi f(x) \sqrt{1 + [f'(x)]^2} \dif x \\
+                &= \int_1^4 2\pi \sqrt{x} \sqrt{1+\frac{1}{4x}} \dif x \\ 
+                &= 2\pi \int_1^4 \sqrt{x + \frac 14} \dif x \\ 
+                &= 2\pi \frac 23 \cdot \eval{\left(x + \frac14\right)^{3/2}}_1^4 \\ 
+                &= \boxed{\frac{4\pi}{3} \left[ \left(\frac{17}{4}\right)^{3/2} - \left(\frac 54\right)^{3/2} \right]}
+            \end{align*}
+        \end{solution}
+    \end{parts}
+
+\newpage
+\question[14] 
+Find the center of mass (centroid) $(\bar x, \bar y)$ of the region bounded by $y=e^{-x}$, $x=0$, $x=1$ and the $x$-axis.
+\begin{solution}
+    \begin{align*}
+    M &= \int_0^1 e^{-x} \dif x 
+    = \eval{-e^{-x}}_0^1 
+    = \ovalbox{$-e^{-1} + 1$} \\ 
+    M_x &= \frac12 \int_0^1 (e^{-x})^2 \dif x
+    = \frac 12 \int_0^1 e^{-2x} \dif x 
+    = -\frac14 \left[e^{-2x}\right]_0^1
+    = \ovalbox{$-\frac14 (e^{-2}-1)$} \\ 
+    M_y &= \int_0^1 x e^{-x} \dif x \qquad 
+    \left[
+    \begin{array}{ccc}
+        & D & I  \\ 
+        + & x & e^{-x} \\ 
+        - & 1 & -e^{-x} \\ 
+        + & 0 & e^{-x}
+    \end{array} 
+    \right]
+    \\
+    &= -xe^{-x} - e^{-x}  \\
+    &= \eval{(-x-1)^{e^{-x}}}_0^1 
+    = \ovalbox{$-2e^{-1} + 1$}
+    \end{align*}
+    Thus
+    \begin{align*}
+        \bar x = \frac{M_y}{M} 
+        &= \frac{-2e^{-1} + 1}{-e^{-1}+1} 
+        = \boxed{\frac{-2+e}{-1+e}} \\ 
+        \bar y = \frac{M_x}{M} 
+        &= \frac{-\frac14 (e^{-2}-1)}{-e^{-1}+1} \\
+        &= -\frac14 \frac{1-e^2}{-e+e^2}
+        = \frac{1}{4e} \frac{1-e^2}{1-e}
+        = \boxed{\frac{1+e}{4e}}
+    \end{align*}
+\end{solution}
+
+\newpage
+\question
+\begin{parts}
+    \part[7]
+    A spring requires 10J to stretch it 2m from its rest length. How much work is required to stretch the spring from 2m to 4m from its rest length.
+    \begin{solution}
+        \begin{align*}
+            10 = \int_0^2 kx \dif x 
+            = \eval{k\frac{x^2}{2}}_0^2 = 2k
+            \implies k=5 \\ 
+            W = \int_2^4 5x \dif x = 5 \left[\frac{x^2}{2}\right]_2^4
+            = 5(8-2) = \boxed{30 \unit{J}}
+        \end{align*}
+    \end{solution}
+    \part[8]
+    Find the work required to pump all the liquid out of a cylindrical tank that has a base of radius 10ft and height 50ft. 
+    Use the fact that the density of the liquid is $\rho \ \unit{lb/ft^3}$.
+    \begin{solution}
+        \begin{align*}
+            W &= F d \\ 
+            &= V \rho d \\ 
+            &= \rho \pi r^2 \dif y (50-y) \\ 
+            &= \int_0^{50} \rho \pi 100 (50-y) \dif y \\ 
+            &= 100 \pi \rho \left[50y - \frac{y^2}{2}\right]_0^{50} \\ 
+            &= 100 \pi \rho \frac{50^2}{2} 
+            = 50^3 \pi \rho
+            = \boxed{125000 \pi \rho \ \unit{lb.ft}}
+        \end{align*}
+    \end{solution}
+\end{parts}
+
+\newpage
+\question Evaluate the following
+\begin{parts}
+    \part[7] $\dod{}{x} \tanh\inv(\sin(x^2))$, where $\tanh\inv$ is the inverse function of tanh.
+    \begin{solution}
+        \[
+            \frac{1}{1-(\sin x^2)^2} \cdot \cos(x^2) \cdot 2x
+        \]
+    \end{solution}
+    \part[7] $\displaystyle \int \frac{1}{\sqrt{9+x^2}} \dif x$, using the substitution $x=3\sinh \theta$.
+    \begin{solution}
+        \begin{align*}
+             & = \int \frac{1}{\sqrt{9(1+\sinh^2 \theta)}} \cdot 3 \cosh \theta \dif \theta \\
+             & = \int \frac{\cosh\theta \dif \theta}{\sqrt{\cosh^2\theta}}
+            = \int 1 \dif \theta = \theta
+            = \boxed{\sinh[-1](\frac x3) + C}
+        \end{align*}
+    \end{solution}
+\end{parts}
+
+\newpage
+\question Consider the differential equation
+\[
+    \dod{y}{x} = x^3 y^2.
+\]
+\begin{parts}
+    \part[3] Find the constant solutions.
+    \begin{solution}
+    \[
+        0 = x^3 y^2 \implies \boxed{y=0}
+    \]
+    \end{solution}
+    \part[8] Find the general solution to the differential equation
+    \begin{solution}
+    \begin{align*}
+        \int y^{-2} \dif y &= \int x^3 \dif x \\ 
+        -y^{-1} &= \frac{x^4}{4} + C_1 = \frac{x^4+4C_1}{4} = \frac{x^4+C_2}{4} \\ 
+        \Aboxed{y(x) &= -\frac{4}{x^4+C}}
+    \end{align*}
+    \end{solution}
+    \part[3] Find the particular solution satisfying $y(0) = 2$.
+    \begin{solution}
+    \begin{align*}
+        y(0) &= -\frac{4}{0+C} = 2 \implies -4 = 2C \implies C = -2 \\ 
+        \Aboxed{y(x) &= -\frac{4}{x^4-2}}
+    \end{align*}
+    \end{solution}
+\end{parts}
+
+\newpage
+\question
+\begin{parts}
+    \part[7] Evaluate the limit of the sequence $\displaystyle \lim_n \frac{\ln(n)}{n^2}$.
+    \begin{solution}
+        \[
+            \lim_{n\to\infty} \frac{\ln(n)}{n^2} 
+            \overset{LH}{=}
+            \lim_{n\to\infty} \frac{\frac 1n}{2n} 
+            = \lim_{n\to\infty} \frac{1}{2n^2} 
+            = \boxed{0}
+        \]
+    \end{solution}
+    \part[8] Use the squeeze theorem to calculate $\displaystyle \lim_n \frac{2n-\cos(n)}{n}$.
+    \begin{solution}
+        \[
+    \begin{array}{ccccc}
+       -1 &\le& \cos(n) &\le& 1 \\ 
+       -\dfrac{1}{n} &\le& -\dfrac{\cos(n)}{n} &\le& \dfrac1n \\ 
+       2 -\dfrac{1}{n} &\le & 2 -\dfrac{\cos(n)}{n} &\le & 2 + \dfrac1n
+    \end{array}
+        \]
+   and 
+   \begin{align*}
+    \lim_{n\to\infty} \left(2-\frac1n\right) = 2 \\ 
+    \lim_{n\to\infty} \left(2+\frac1n\right) = 2
+   \end{align*}
+   Thus by squeeze theorem,
+   \[
+    \lim_{n\to\infty} \frac{2n-\cos(n)}{n} 
+    = \lim_{n\to\infty} \left(2-\frac{\cos(n)}{n}\right) = \boxed{2}
+   \]
+    \end{solution}
+\end{parts}
+
+\newpage
+\question Evaluate the series:
+\begin{parts}
+    \part[7] $\displaystyle \sum_{n=0}^\infty \frac{(-1)^n 5 + 2^n}{3^n}$
+    \begin{solution}
+    \begin{align*}
+        \sum_{n=0}^\infty \frac{(-1)^n 5 + 2^n}{3^n}
+        &= 5 \sum_{n=0}^\infty \left(-\frac13\right)^n + \sum_{n=0}^\infty \left(\frac23\right)^n \\ 
+        &= 5 \cdot \frac{1}{1-(-\frac 13)} + \frac{1}{1-\frac 23} \\ 
+        &= 5 \cdot \frac{1}{\frac43} + \frac{1}{\frac 13} \\ 
+        &= \frac{15}{4} + 3 = \boxed{\frac{27}{4}}
+    \end{align*}
+    \end{solution}
+    \part[7] $\displaystyle \sum_{n=3}^\infty \frac{1}{n(n-1)}$
+    \begin{solution}
+    \[
+        \frac{1}{n(n-1)} = \frac{-1}{n} + \frac{1}{n-1}
+    \]
+    so we consider
+    \[
+        \sum_{n=3}^\infty \left(\frac{1}{n-1} - \frac{1}{n}\right)
+    \]
+    The $k$-th partial sum is
+    \begin{align*}
+        S_k &= 
+        \left(\frac12 - \cancel{\frac 13}\right) 
+        + \left(\cancel{\frac13} - \cancel{\frac 14}\right)
+        + \cdots
+        + \left(\cancel{\frac{1}{k-2}} - \cancel{\frac{1}{k-1}}\right)
+        + \left(\cancel{\frac{1}{k-1}} - \frac{1}{k}\right) \\
+        &= \frac12 - \frac 1k
+    \end{align*}
+    and the series sums to
+    \[
+        S = \lim_{k\to\infty} S_k = \lim_{k\to\infty} \left(\frac12 - \frac 1k\right) = \boxed{\frac 12}
+    \]
+\end{solution}
+\end{parts}
+
+\end{questions}
+\end{document}
