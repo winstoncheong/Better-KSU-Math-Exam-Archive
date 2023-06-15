@@ -1,0 +1,147 @@
+\documentclass[12pt,answers]{exam}
+
+\usepackage{amsmath,amsfonts,amssymb,mathtools,physics,commath}
+\usepackage{todonotes}
+\usepackage{float}
+\usepackage{multicol}
+\usepackage{fancybox}
+\usepackage{siunitx}
+\usepackage{cancel}
+
+\newcommand{\inv}{^{-1}}
+\newcommand{\RR}{\mathbb{R}}
+
+\pagestyle{headandfoot}
+\firstpageheadrule
+\runningheadrule
+\firstpageheader{Math 221}{Exam 2|Solutions, Page \thepage\ of \numpages}{2018 Fall}
+\runningheader{Math 221}{Exam 2|Solutions, Page \thepage\ of \numpages}{2018 Fall}
+\runningfooter{}{}{}
+
+\begin{document}
+% \maketitle
+\begin{questions}
+
+\question[8]
+Find the arc length of the curve $\displaystyle y = \frac13 \left(2x-\frac13\right)^{\frac32}$ for $\displaystyle \frac16 \le x \le \frac23$.
+\begin{solution}
+    \begin{align*}
+        y' &= \frac12 \left(2x-\frac13\right)^{\frac12} \cdot 2 \\ 
+        \sqrt{1+(y')^2} &= \sqrt{1+\left(2x-\frac13\right)} = \sqrt{2x+\frac23} \\
+        L = \int_{\frac16}^{\frac23} \sqrt{1+(y')^2} \dif x 
+        &= \int_{\frac16}^{\frac23} \sqrt{2x+\frac23} \dif x \\ 
+        &= \eval{\frac12 \frac23 \left(2x+\frac23\right)^{\frac32}}_{1/6}^{2/3} \\ 
+        &= \frac13 \left[ 2^{3/2} - 1^{3/2}\right] 
+        = \boxed{\frac13 (2\sqrt 2 - 1)}
+    \end{align*}
+
+\end{solution}
+
+\question[6]
+A force of 20 Newtons will stretch a spring 0.1 meters from its natural length.
+Find the work (in Newton-meter) required to compress the spring 0.2 meters from its natural length.
+\begin{solution}
+    $F = k x \implies 20 = k(0.1) \implies k = 200$. 
+    \[
+        W = \int_{0}^{0.2} 200 x \dif x = \eval{100x^2}_0^{2/10} = \boxed{4 \, \text{N}\cdot \text{m}}
+    \]
+\end{solution}
+
+\newpage
+\question[10]
+Find the centroid of the region under the curve $y=\cos(x)$, for $\displaystyle -\frac{\pi}{2} \le x \le \frac\pi2$.
+\begin{solution}
+    \begin{align*}
+        M &= \int_{-\pi/2}^{\pi/2} \cos x\dif x
+        = \eval{\sin x}_{-\pi/2}^{\pi/2} = 2
+        \\
+        M_x &= \int_{-\pi/2}^{\pi/2} \frac12 \cos^2 x\dif x 
+        \qquad (\cos2x = 2\cos^2 x - 1)
+        \\ 
+        &= \frac14 \int (1 + \cos 2x) \dif x \\ 
+        &= \frac14 \eval{(x + \frac12 \sin 2x)}_{-\pi/2}^{\pi/2}
+        = \frac\pi4
+        \\
+        \overline y = \frac{M_x}{M} &= \frac\pi8
+    \end{align*}
+    Symmetry of the region allows us to conclude that $\overline x = 0$.
+    The centroid is \fbox{$(0, \frac\pi8)$}
+\end{solution}
+
+\newpage
+\question[12]
+Determine whether the sequence converges.
+If the sequence converges, calculate its limit.
+\begin{parts}
+\part
+$\{a_n\}_{n=1}^\infty$, where
+$ \displaystyle a_n = \left( 1 + \frac2n\right)^{\frac n3} $
+\begin{solution}
+    Let $L = \lim_{n\to\infty} a_n$. 
+    Then
+    \begin{align*}
+        \ln L &= \lim_{n\to\infty} \frac n3 \ln(1 + \frac2n) \\
+        &= \frac13 \lim_{n\to\infty} \frac{\ln(1+2/n)}{n^{-1}} \\
+        &\overset{L'H}{=} \frac13 \lim_{n\to\infty} \frac{\frac{1}{1+2/n} \cdot -2n^{-2}}{-n^{-2}} \\
+        &= \frac23 \lim_{n\to\infty} \frac{1}{1+2/n} 
+        = \frac23
+    \end{align*}
+    Therefore $L = \boxed{e^{2/3}}$
+\end{solution}
+
+\part
+$\{c_n\}_{n=1}^\infty$, where
+$ \displaystyle c_n = \frac{1}{n^2} + \sin(n) $
+\begin{solution}
+    The sequence \fbox{does not converge} since $\lim_{n\to\infty} \sin(n)$ does not exist.
+\end{solution}
+
+\end{parts}
+
+\question[6]
+Compute the sum of the series
+$ \displaystyle \sum_{n=2}^\infty \frac{3^{n-1}}{4^{n-1}} $
+\begin{solution}
+    \begin{align*}
+        = \sum_{n=2}^\infty \left(\frac34\right)^{n-1}
+        = \frac{\frac34}{1-\frac34} 
+        = \frac34 \cdot 4 
+        = \boxed{3}
+    \end{align*}
+\end{solution}
+
+\newpage
+\question[18]
+Determine whether the series converges; list each test of convergence.
+\begin{parts}
+\part $\displaystyle \sum_{n=0}^\infty \frac{n^3+2n+1}{2n^4-n^2+3}$
+\begin{solution}
+    Limit Comparison Test with $\sum \frac 1n$:
+    \[
+        \lim_{n\to\infty} \frac{n^3+2n+1}{2n^4-n^2+3} \cdot \frac n 1 
+        = \lim_{n\to\infty}\frac{n^4+2n^2+n}{2n^4-n^2+3} = \frac12 
+    \]
+    Thus by Limit Comparison Test, the given series also \fbox{diverges}
+\end{solution}
+
+\part $\displaystyle \sum_{n=2}^\infty \abs{\cos(\frac1n)}$
+\begin{solution}
+    $\lim\limits_{n\to\infty} \abs{\cos(\frac 1n)} = 1 \ne 0$, so by divergence test, the series \fbox{diverges}
+\end{solution}
+
+\part $\displaystyle \sum_{n=1}^\infty \frac{n}{e^{n^2}}$
+\begin{solution}
+    Using ratio test:
+    \begin{align*}
+        \lim_{n\to\infty} \frac{n+1}{e^{(n+1)^2}} \cdot \frac{e^{n^2}}{n}
+        &= \lim_{n\to\infty} \frac{n+1}{n} \cdot \frac{1}{e^{(n+1)^2-n^2}} \\
+        &= \lim_{n\to\infty} \frac{n+1}{n} \cdot \lim_{n\to\infty} \frac{1}{e^{2n+1}} \\
+        &= 1 \cdot 0 = 0 < 1
+    \end{align*}
+    By ratio test, the series is \fbox{absolutely convergent}
+\end{solution}
+
+\end{parts}
+
+\end{questions}
+\end{document}
