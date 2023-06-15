@@ -1,0 +1,206 @@
+\documentclass[12pt,answers]{exam}
+
+\usepackage{amsmath,amsfonts,amssymb,mathtools,physics,commath}
+\usepackage{todonotes}
+\usepackage{float}
+\usepackage{multicol}
+\usepackage{fancybox}
+\usepackage{siunitx}
+\usepackage{cancel}
+
+\newcommand{\inv}{^{-1}}
+\newcommand{\RR}{\mathbb{R}}
+
+\pagestyle{headandfoot}
+\firstpageheadrule
+\runningheadrule
+\firstpageheader{Math 221}{Exam 2|Solutions, Page \thepage\ of \numpages}{2019 Summer}
+\runningheader{Math 221}{Exam 2|Solutions, Page \thepage\ of \numpages}{2019 Summer}
+\runningfooter{}{}{}
+
+\begin{document}
+% \maketitle
+\begin{questions}
+
+\question[10]
+Evaluate the series $\displaystyle \sum_{n=2}^\infty \left(\frac45\right)^n$
+\begin{solution}
+  This is a geometric series. It converges to the value
+  \[
+    \frac{(\frac45)^2}{1-\frac45} = \frac{16}{25} \cdot 5 = \boxed{\frac{16}{5}}
+  \]
+\end{solution}
+
+\question[10]
+Find the minimum $M$ that guarantees that
+\[
+  \left|
+  \sum_{n=1}^\infty \frac{(-1)^{n+1}}{10n+2} -
+  \sum_{n=1}^M \frac{(-1)^{n+1}}{10n+2} -
+  \right| < .001.
+\]
+\begin{solution}
+  \begin{align*}
+    \abs{\frac{(-1)^{M+2}}{10(M+1) + 2}} & < \frac{1}{1000}        \\
+    \implies 10(M+1)+2                   & > 1000                  \\
+    \implies M+1                         & > \frac{998}{10} = 99.8 \\
+    \implies M                           & > 98.8
+  \end{align*}
+  Therefore \fbox{$M = 99$} suffices.
+\end{solution}
+
+\newpage
+\question[10]
+Determine the radius of convergence and interval of convergence, but don't check the endpoints
+\\
+$\sum_{n=1}^\infty \frac{2^n}{n} (4x-8)^n$.
+\begin{solution}
+  \begin{align*}
+    \lim_{n\to\infty} \abs{\frac{a_{n+1}}{a_n}}
+     & = \lim_{n\to\infty} \abs{\frac{\frac{2^{n+1}}{n+1}(4x-8)^{n+1}}{\frac{2^n}{n}(4x-8)^n}} \\
+     & = \lim_{n\to\infty} \abs{2(4x-8) \frac{n}{n+1}}                                         \\
+     & = 2\abs{4x-8} < 1                                                                       \\
+     & \implies  8 \abs{x-2} < 1
+    \implies \abs{x-2} < \frac18
+  \end{align*}
+  The radius of convergence is \fbox{$R = \frac18$} \\
+  The interval of convergence is \fbox{$\left(\frac{15}{8}, \frac{17}{8}\right)$}
+\end{solution}
+
+\question[10]
+Show whether the series converges absolutely or conditionally or diverges.
+Name all tests used.
+\\
+$\displaystyle \sum_{n=6}^\infty (-1)^n \frac{4+\sqrt n}{n^3-5n^2}$
+\begin{solution}
+  Using Limit Comparison Test with $\sum \frac{1}{n^{5/2}}$ (which converges by $p$-series test with $p = \frac52 > 1$):
+  \[
+    \lim_{n\to\infty} \abs{\frac{4+\sqrt{n}}{n^3-5n} \cdot n^{5/2}}
+    = \lim_{n\to\infty} \abs{\frac{n^3+4n^{5/2}}{n^3-5n}} = 1
+  \]
+  By Limit Comparison Test, the given series \fbox{converges absolutely}
+\end{solution}
+
+\newpage
+\question[10]
+Find the Taylor Series for $f(x) = e^{-x}$ about $x = -4$.
+\begin{solution}
+  \begin{alignat*}{2}
+    f(x)   & = e^{-x}  & f(-4)   & = e^4    \\
+    f'(x)  & = -e^{-x} & f'(-4)  & = -e^{4} \\
+    f''(x) & = e^{-x}  & f''(-4) & = e^{4}
+  \end{alignat*}
+  The Taylor series is thus
+  \[
+    e^4 -e^4(x+4) + \frac{e^4}{2!} (x+4)^2 - \frac{e^4}{3!} (x+4)^3 \cdots
+    = \boxed{\sum_{n=0}^\infty \frac{(-1)^n e^4}{n!} (x+4)^n}
+  \]
+\end{solution}
+
+\question[10]
+Find the limit of the sequence or state that it diverges.
+$\lim\limits_{n\to\infty} n^2e^{-n}$
+\begin{solution}
+  \begin{align*}
+    \lim\limits_{n\to\infty} n^2e^{-n}
+    = \lim_{n\to\infty} \frac{n^2}{e^n}
+    \overset{L'H}{=}
+    \lim_{n\to\infty} \frac{2n}{e^n}
+    \overset{L'H}{=}
+    \lim_{n\to\infty} \frac{2}{e^n}
+    = \boxed{0}
+  \end{align*}
+\end{solution}
+
+\newpage
+Determine whether the following series converge conditionally, converge absolutely, or diverge. Name all tests used.
+\question[10]
+$\displaystyle \sum_{n=1}^\infty \frac{(-1)^n}{n^{5/3}}$
+\begin{solution}
+  $\displaystyle \sum \frac{1}{n^{5/3}}$ converges by $p$-series test ($p = \frac53 > 1$), so the given series \fbox{converges absolutely}
+\end{solution}
+
+\question[10]
+$\displaystyle\sum_{n=1}^\infty \frac{(-1)^n}{\sqrt{n}}$.
+\begin{solution}
+  The absolute value version of the series
+  $\displaystyle \sum \frac{1}{\sqrt n}$ diverges by $p$-series test ($p = \frac12 < 1$).
+
+  Trying the Alternating Series Test:
+  \[
+    \lim_{n\to\infty} \frac{1}{\sqrt n} = 0
+    \qand \frac{1}{\sqrt{n+1}} < \frac{1}{\sqrt n}
+  \]
+  so $\displaystyle \sum \frac{(-1)^n}{\sqrt n}$ converges by the Alternating Series Test.
+
+  Thus the given series \fbox{converges conditionally}
+\end{solution}
+
+\newpage
+\question[10]
+Find a power series representation for the following function and determine its interval of convergence. \\
+$f(x) = \frac{x}{5-x}$
+\begin{solution}
+One answer is:
+\begin{align*}
+  \frac{x}{5-x}
+  = \frac{x -5 + 5}{5-x}
+  = -1 + \frac{5}{5-x}
+   & = -1 + \frac{5}{1-(x-4)}                            \\
+   & = \boxed{-1 + 5 \sum_{n=0}^\infty (x-4)^n} \qquad (|x-4|<1)
+\end{align*}
+which has interval of convergence \fbox{$(3,5)$}
+
+Another answer is:
+\begin{align*}
+  \frac{x}{5-x}
+  = x \cdot \frac{1}{5- x}
+  = \frac x5 \cdot \frac{1}{1- \frac x5}
+   & = \frac x5 \sum_{n=0}^\infty \left(\frac x5\right)^n \qquad \Bigl(\Bigl|\frac x5\Bigr| < 1 \implies \abs{x} < 5 \Bigr) \\
+   & = \boxed{\sum_{n=0}^\infty \left(\frac x5\right)^{n+1}} \qquad (\abs{x}<5)
+\end{align*}
+which has interval of convergence \fbox{$(-5,5)$}
+\end{solution}
+
+\question[10]
+Determine whether the following series converge conditionally, converge absolutely, or diverge. Name all tests used. \\
+$\sum_{n=1}^\infty \left(\frac{3n+1}{4-2n}\right)^n$
+\begin{solution}
+  Using root test:
+  \[
+    \lim_{n\to\infty} \sqrt[n]{\abs{\left(\frac{3n+1}{4-2n}\right)^n}}
+    = \lim_{n\to\infty} \abs{\frac{3n+1}{4-2n}} = \frac32 > 1
+  \]
+  Thus by root test, the series \fbox{diverges}
+\end{solution}
+
+\newpage
+\question[10]
+Solve the differential equation for initial conditions $y(1) = 4$ 
+\\
+(Not required to solve for $y$).
+\\
+$\dod{y}{x} = x^2 y - 3x^2$
+\begin{solution}
+  \begin{align*}
+    = x^2(y-3) \\ 
+    \int \frac{1}{y-3} \dif y &= \int x^2 \dif x \\ 
+    \ln|y-3| &= \frac{x^3}{3} + C_1 \\ 
+    |y-3| &= e^{\frac{x^3}{3} + C_1} 
+    = e^{\frac{x^3}{3}} e^{C_1}
+    = C_2 e^{\frac{x^3}{3}} \\
+    y-3 &= C_3 e^{\frac{x^3}{3}} \\ 
+    y(x) &= C e^{\frac{x^3}{3}} + 3
+  \end{align*}
+  Plugging in the initial condition:
+  \[
+    4 = C e^{\frac13} + 3 \implies 1 = C e^{\frac13} \implies C = e^{-\frac13}
+  \]
+  The solution is thus
+  \[
+    \boxed{y(x) = e^{-\frac13} e^{\frac{x^3}{3}} + 3}
+  \]
+\end{solution}
+
+\end{questions}
+\end{document}
