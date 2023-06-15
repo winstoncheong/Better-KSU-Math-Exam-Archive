@@ -1,0 +1,242 @@
+\documentclass[12pt,answers]{exam}
+
+\usepackage{amsmath,amsfonts,amssymb,mathtools,physics,commath}
+\usepackage{todonotes}
+\newcommand{\vect}[1]{\left\langle #1\right\rangle}
+
+\newcommand{\vbd}{\vb{d}}
+\newcommand{\vbi}{\vb{i}}
+\newcommand{\vbj}{\vb{j}}
+\newcommand{\vbk}{\vb{k}}
+\newcommand{\vbn}{\vb{n}}
+\newcommand{\vbr}{\vb{r}}
+\newcommand{\vbu}{\vb{u}}
+\newcommand{\vbv}{\vb{v}}
+\newcommand{\vbw}{\vb{w}}
+
+\DeclareMathOperator{\proj}{proj}
+
+\pagestyle{headandfoot}
+\firstpageheadrule
+\runningheadrule
+\firstpageheader{Math 222}{Exam 1|Solutions, Page \thepage\ of \numpages}{2019 Fall}
+\runningheader{Math 222}{Exam 1|Solutions, Page \thepage\ of \numpages}{2019 Fall}
+\runningfooter{}{}{}
+
+% \title{2021 Fall Calc 3 Final Exam|Solutions}
+% \author{Winston Cheong}
+% \date{}
+
+\begin{document}
+% \maketitle
+\begin{questions}
+
+\question
+For the following questions, suppose $\vbu = \vect{1,1,1}$ and $\vbv = \vect{0,-1,0}$.
+\begin{parts}
+\part[5]
+Evaluate $2\vbu + \vbv$.
+\begin{solution}
+  $=\vect{2,2,2} + \vect{0,-1,0} = \boxed{\vect{2,1,2}}$
+\end{solution}
+
+\part[5]
+Evaluate $\vbu \vdot \vbv$.
+\begin{solution}
+  $= 1(0) + 1(-1)+1(0) = \boxed{-1}$
+\end{solution}
+
+\part[5]
+Find $\cos(\theta)$ where $\theta$ is the angle between $\vbu$ and $\vbv$.
+\begin{solution}
+  $\cos\theta = \dfrac{\vbu\vdot\vbv}{\norm{\vbu}\,\norm{\vbv}} = \dfrac{-1}{\sqrt 3 \cdot 1} = \boxed{-\frac{1}{\sqrt 3}}$
+\end{solution}
+
+\part[5]
+Evaluate $\vbu \cross \vbv$.
+\begin{solution}
+  $\vbu\cross\vbv = \mqty| \vbi & \vbj & \vbk \\ 1 & 1 & 1 \\ 0 & -1 & 0| = \boxed{\vect{1,0,-1}}$
+\end{solution}
+
+\part[5]
+Find the area of the parallelogram spanned by $\vbu$ and $\vbv$.
+\begin{solution}
+  $=\norm{\vbu\cross\vbv} = \norm{\vect{1,0,-1}} = \boxed{\sqrt{2}}$
+\end{solution}
+
+\part[5]
+Find the distance between the point $(1,0,0)$ and the plane parallel to $\vbu$ and $\vbv$ which passes through the origin.
+\begin{solution}
+  Let $O=(0,0,0)$ and $S = (1,0,0)$.
+
+  Using as a normal vector for this plane $\vbn = \vbu\cross\vbv = \vect{1,0,-1}$, 
+  the distance can be computed as
+  \[
+    \norm{\proj_{\vbn} \overrightarrow{OS}} 
+    = \frac{|\overrightarrow{OS} \vdot \vbn|}{\norm{\vbn}}
+    = \frac{|\vect{1,0,0}\vdot\vect{1,0,-1}|}{\sqrt 2} 
+    = \boxed{\frac{1}{\sqrt 2}}
+  \]
+\end{solution}
+\end{parts}
+
+\newpage
+\question
+Solve the Problems regarding the point $P = (1,1,-1)$, $Q = (1,1,1)$ and the vector $\vbv = \vect{2,1,1}$.
+\begin{parts}
+\part[5]
+Find a parametric equation for the line $\ell$ passing through $P$ with direction vector $\vbv$.
+\begin{solution}
+  $\vbr(t) = \vect{1,1,1} + t\vect{2,1,1}$
+\end{solution}
+
+\part[5]
+Is $Q$ on the line found in part (a)? Explain your response.
+\begin{solution}
+  No. There is no $t$ for which $\vbr(t) = \vect{1,1,1}$. 
+  \\
+  Alternatively, one can note that two points uniquely determine a line between them. A line passing through both $P$ and $Q$ must have direction vector that is a scalar multiple of $\vect{0,0,1}$.
+\end{solution}
+
+\part[5]
+Find the equation for the plane passing through $Q$ and with normal vector $\vbv$.
+\begin{solution}
+  Any of  the following:
+  \begin{gather*}
+    \vect{2,1,1} \vdot \vect{x-1,y-1,z-1} = 0 \\ 
+    2(x-1) + y-1 + z-1 = 0 \\ 
+    2x+y+z-4=0 
+  \end{gather*}
+\end{solution}
+
+\part[5]
+Give an equation for a line that passes through $P$ and is parallel to the plane found in part (c).
+\begin{solution}
+  There are many possible lines satisfying this property. 
+  Since such a line is parallel to the plane, it must be orthogonal to the normal vector of the plane, $\vbn = \vect{2,1,1}$.
+  Hence the direction vector $\vbd$ of the line must have the property that $\vbd \vdot \vbn = 0$.
+
+  One possible answer: Choosing $\vbd = \vect{1,-1,-1}$ gives the line
+  \[
+    \vbr(t) = \vect{1,1,-1} + t \vect{1,-1,-1}.
+  \]
+\end{solution}
+\end{parts}
+
+\newpage
+\question
+\begin{parts}
+\part[5]
+Sketch and describe the trace of the intersection of the plane $z = -3$ with the surface $x^2+y^2-z^2=16$.
+\begin{solution}
+  The trace is given by $x^2+y^2=7$.
+  This is a circle of radius $\sqrt7$, centered at the origin.
+\end{solution}
+
+\part[5]
+Give the inequalities in spherical coordinates that describe the upper unit half ball, which in Cartesian coordinates is described by:
+\[
+  z \ge 0, \qquad x^2 + y^2+z^2 \le 1
+\]
+\begin{solution}
+  \[
+    0 \le \rho \le 1 
+    \qquad 
+    0 \le \varphi \le \frac\pi2 
+    \qquad 
+    0 \le \theta \le 2\pi
+  \]
+\end{solution}
+\end{parts}
+
+% \newpage
+\question[10]
+Given the vectors $\vbu = \vect{2,1,0}$, $\vbv = \vect{0,-1,1}$ and the parameterized line $\vbr(t) = \vect{t,1-t,2t}$, find all values of $t$ for which the area of the parallelogram spanned by $\vbu$ and $\vbv$ is equal to the volume of the paraallelopiped spanned by $\vbu$, $\vbv$ and $\vbr(t)$ (ignoring units).
+\begin{solution}
+  This can be rewritten as: 
+  Find all values of $t$ such that  
+  \[
+    \norm{\vbu\cross\vbv} = \abs{(\vbu\cross\vbv)\vdot\vbr(t)}
+  \]
+Computing gives
+\begin{align*}
+  \vbu\cross\vbv &= \mqty| \vbi & \vbj & \vbk \\ 2 & 1 & 0 \\ 0 & -1 & 1 | = \vect{1,-2,-2} \\ 
+  \norm{\vbu\cross\vbv} &= \sqrt{1+4+4} = 3 \\
+  (\vbu\cross\vbv)\vdot\vbr(t) &= t - 2(1-t)-4t = -t-2
+\end{align*}
+So the equation to solve is
+\[
+  3 = \abs{-t-2}
+\]
+which has solutions \fbox{$t=-5, 1$}
+\end{solution}
+
+\newpage
+\question
+Answer the following questions concerning the vector valued function
+\[
+  \vbr(t) = \vect{\ln(t), t^2, e^{t-1}}
+\]
+for $t > 0$.
+\begin{parts}
+  \part[5]
+  Evaluate
+  \[\lim_{t\to1}\vbr(t).\]
+  \begin{solution}
+    $\boxed{\vect{0,1,1}}$
+  \end{solution}
+
+  \part[5]
+  Evaluate $\vbr'(t)$.
+  \begin{solution}
+    $\boxed{\vect{\frac1t, 2t, e^{t-1}}}$
+  \end{solution}
+
+  \part[5]
+  Evaluate
+  \[\int_1^2 \vbr(t)\dif t.\]
+  \begin{solution}
+    Integrating the first component function requires integration by parts:
+    \[
+      \int_1^2 \ln(t) \dif t = \eval{t \ln t - t}_1^2 = 2\ln 2 - 1
+    \]
+    Integrating the other two component functions is straightforward, giving the answer:
+    $$\boxed{\vect{2\ln2-1, \frac73, e-1}}$$
+  \end{solution}
+\end{parts}
+
+\newpage
+\question
+Consider the vector valued function
+\[\vbr(t) = \vect{\sin(4t), \cos(4t), 3t}\]
+for $0\le t\le 4$.
+\begin{parts}
+  \part[5]
+  Find the arc-length function $s(t)$ of $\vbr(t)$.
+  \begin{solution}
+    \begin{align*}
+      \vbr' &= \vect{4\cos(4t), -4\sin(4t), 3} \\ 
+      \norm{\vbr'} &= \sqrt{16\cos^2(4t)+16\sin^2(4t)+9} = \sqrt{16+9} = 5
+    \end{align*}
+    so
+    \begin{align*}
+      s(t) &= \int_0^t \norm{\vbr'(u)} \dif u 
+      = \int_0^t 5 \dif u \\
+      \implies \Aboxed{s(t) &= 5t}
+    \end{align*}
+  \end{solution}
+  \part[5]
+  What is the length of the curve parametrized by $\vbr(t)$?
+  \begin{solution}
+    $s(4) = \boxed{20}$
+  \end{solution}
+  \part[5]
+  Find the arc-length parametrization $\vbr(s)$.
+  \begin{solution}
+    Since $s = 5t \implies t = \dfrac{s}{5}$,
+    $\boxed{\vbr(s) = \vect{\sin(\frac45 s), \cos(\frac45 s), \frac35 s}}$
+  \end{solution}
+\end{parts}
+
+\end{questions}
+\end{document}
