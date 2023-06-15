@@ -6,8 +6,8 @@
 \pagestyle{headandfoot}
 \firstpageheadrule
 \runningheadrule
-\firstpageheader{Math 222}{Exam 2|Solutions, Page \thepage\ of \numpages}{October 14, 2021}
-\runningheader{Math 222}{Exam 2|Solutions, Page \thepage\ of \numpages}{October 14, 2021}
+\firstpageheader{Math 222}{Exam 2|Solutions, Page \thepage\ of \numpages}{2021 Fall}
+\runningheader{Math 222}{Exam 2|Solutions, Page \thepage\ of \numpages}{2021 Fall}
 \runningfooter{}{}{}
 
 \title{2021 Fall Calc 3 Exam 2|Solutions}
@@ -26,7 +26,7 @@ Answer the following questions concerning the vector valued function
 \part[5] Evaluate $\vb{r}'(t)$.
 \begin{solution}
     \[
-    \vb{r} = \vect{12t^2, -\pi^2 \sin(\pi t), -\frac{1}{(t+1)^2}}
+    \vb{r}' = \vect{12t^2, -\pi^2 \sin(\pi t), -\frac{1}{(t+1)^2}}
     \]
 \end{solution}
 
@@ -96,7 +96,7 @@ for $0 \le t \le \ln(2)$.
 &= \lim_{r\to0} \frac{r^2 \cos \theta \sin \theta (r\cos \theta - 1)}{r^4 \cos^2 \theta} \\ 
 &= \lim_{r\to0} \frac{\sin \theta (r\cos \theta - 1)}{r^2 \cos \theta} \\ 
     \end{align*}
-    This funciton still depends on $\theta$, so the limit \fbox{does not exist}
+    This function still depends on $\theta$, so the limit \fbox{does not exist}
 \end{solution}
 \part[5]
 \[
@@ -127,11 +127,11 @@ Evaluate the partial derivatives, if they exist. If they do not exist, explain w
 \begin{parts}
 \part[5] $f_y(3, 6)$ for $f(x, y) = xe^{y-6} + \ln(xy)$.
 \begin{solution}
-    \begin{align*}
-        f_y &= xe^{y-6} + \frac{1}{xy} x \\ 
-            &= xe^{y-6} + \frac{1}{y} \\ 
-        f_y(3,6) &= \boxed{3e^3 + \frac 16}
-    \end{align*}
+\begin{align*}
+    f_y(x,y) & = xe^{y-6} + \frac{1}{xy} x \\
+             & = xe^{y-6} + \frac{1}{y}    \\
+    f_y(3,6) & = \boxed{3e^3 + \frac 16}
+\end{align*}
 \end{solution}
 \part[5]
 $\frac{\partial^3 f}{\partial x\partial y\partial z}(1,2,3)$ for $f(x,y,z) = xy+yz+xz+xyz$.
@@ -166,13 +166,11 @@ Consider the function $f(x, y) = xy - 2x + y^2$.
         L(x, y) = f(-1, 1) + f_x(-1, 1)(x+1) + f_y(-1, 1)(y-1)
     \]
     Some side calculation gives
-    \begin{align*}
-        f(-1, 1) &= 2 \\ 
-        f_x(x, y) &= y -2 \\ 
-        f_x(-1, 1) &= -1 \\ 
-        f_y(x, y) &= x + 2y \\ 
-        f_y(-1, 1) &= 1
-    \end{align*}
+\begin{alignat*}{2}
+              &                 & f(-1, 1)   & = 2  \\
+    f_x(x, y) & = y -2          & f_x(-1, 1) & = -1 \\
+    f_y(x, y) & = x + 2y \qquad & f_y(-1, 1) & = 1
+\end{alignat*}
     so the linearization is 
     \begin{align*}
         L(x, y) &= f(-1, 1) + f_x(-1, 1)(x+1) + f_y(-1, 1)(y-1) \\ 
@@ -207,7 +205,7 @@ f(x, y, z) = xy + yz + xz + 1
     D_{\vb{u}} f(\sqrt 3, \sqrt 3, \sqrt 3) 
     &= \nabla f(\sqrt 3, \sqrt 3, \sqrt 3) \vdot \vb u \\ 
     &= \vect{2\sqrt 3, 2 \sqrt 3, 2\sqrt 3} \vdot \vect{\frac{\sqrt 3}{3}, \frac{\sqrt 3}{3},\frac{\sqrt 3}{3}} \\ 
-    &= 2 \sqrt 3 \frac{\sqrt 3}{3} \cdot 3 = \boxed{6}
+    &= 2 \sqrt 3 \cdot \frac{\sqrt 3}{3} \cdot 3 = \boxed{6}
 \end{align*}
 \end{solution}
 \part[5] Give an example of a vector $\vb{v}$ for which $f$ is increasing in the direction of $\vb{v}$ starting at $(-1, 1, 1)$.
