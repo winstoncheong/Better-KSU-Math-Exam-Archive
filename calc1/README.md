@@ -10,7 +10,7 @@ Copied all exams from 2019 Summer back to 2011 Fall.
 
 |Semester|Exam 1|Exam 2|Exam 3|Final|
 |:---:|:---:|:---:|:---:|:---:|
-| 2023 Fall | [Exam](./exams/2023-fall-exam1.pdf), [Solutions](./exams/2023-fall-exam1-sol.pdf) | [Exam](./exams/2023-fall-exam2.pdf), [Solutions](./exams/2023-fall-exam2-sol.pdf) |  |  | 
+| 2023 Fall | [Exam](./exams/2023-fall-exam1.pdf), [Solutions](./exams/2023-fall-exam1-sol.pdf) | [Exam](./exams/2023-fall-exam2.pdf), [Solutions](./exams/2023-fall-exam2-sol.pdf) | [Exam](./exams/2023-fall-exam3.pdf), [Solutions](./exams/2023-fall-exam3-sol.pdf) |  | 
 | 2023 Spring | [Exam](./exams/2023-spring-exam1.pdf), [Solutions](./exams/2023-spring-exam1-sol.pdf) | [Exam](./exams/2023-spring-exam2.pdf), [Solutions](./exams/2023-spring-exam2-sol.pdf) | [Exam](./exams/2023-spring-exam3.pdf), [Solutions](./exams/2023-spring-exam3-sol.pdf) | [Exam](./exams/2023-spring-final.pdf), [Solutions](./exams/2023-spring-final-sol.pdf) | 
 | 2022 Fall | [Exam](./exams/2022-fall-exam1.pdf) | [Exam](./exams/2022-fall-exam2.pdf) | [Exam](./exams/2022-fall-exam3.pdf) |  | 
 | 2022 Spring | [Exam](./exams/2022-spring-exam1.pdf), [Solutions](./exams/2022-spring-exam1-sol.pdf) | [Exam](./exams/2022-spring-exam2.pdf), [Solutions](./exams/2022-spring-exam2-sol.pdf) | [Exam](./exams/2022-spring-exam3.pdf), [Solutions](./exams/2022-spring-exam3-sol.pdf) | [Exam](./exams/2022-spring-final.pdf), [Solutions](./exams/2022-spring-final-sol.pdf) | 
