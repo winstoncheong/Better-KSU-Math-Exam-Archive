@@ -5,22 +5,22 @@ import pprint
 
 # data design:
 # {
-#  "year" : 
+#  "year" :
 #  {
-#    "season" : 
+#    "season" :
 #    {
 #      "exam#" :
 #      {
 #        "version_name":        ## can be "exam" by default, or "version_a" or "practice"
 #        {
-#           "exam_file": "filename" or None        
+#           "exam_file": "filename" or None
 #           "solution_file" : "filename" or None
 #        }
 #      }
 #    }
 #  }
-# } 
-data = {} 
+# }
+data = {}
 
 seasons = ["fall", "summer", "spring"] # uses this order
 exams = ["exam1", "exam2", "exam3", "final"] # uses this order
@@ -31,13 +31,13 @@ output = table_head # build it up
 
 def store(year, season, exam, version_name, soln, filename):
 	"""store data into datastructure"""
-	
+
 	if year not in data :
 		data[year] = {}
-	
+
 	if season not in data[year]:
 		data[year][season] = {}
-		
+
 	if exam not in data[year][season]:
 		data[year][season][exam] = {}
 
@@ -48,9 +48,9 @@ def store(year, season, exam, version_name, soln, filename):
 		data[year][season][exam][version_name]["solution_file"] = filename
 	else:
 		data[year][season][exam][version_name]["exam_file"] = filename
-	
-	
-	
+
+
+
 
 
 files = sorted(os.listdir("./exams/")) # for when in the actual directory
@@ -68,13 +68,13 @@ filtered = list(filter(lambda x : ".pdf" in x, files))
 for filename in filtered:
 	filename = filename.strip() # needed for testing
 	filename = filename.replace('.pdf','')
-	
+
 	parts = filename.split('-')
 	year = parts[0]
 	season = parts[1]
 	exam = parts[2]
 
-	
+
 	soln = True if parts[-1]=="sol" else False
 
 	# check for exam version_name
@@ -94,18 +94,18 @@ for filename in filtered:
 for year in sorted(data.keys(), reverse=True):
 	for season in seasons:
 		if season in data[year]:
-			row = "| {} {} | ".format(year, season.capitalize()) 
-			
-			
+			row = "| {} {} | ".format(year, season.capitalize())
+
+
 			#print(year,season)
 			#for exam in sorted(data[year][season].keys()):
 				#print(year, season, exam)
-			
+
 			# construct the row for the season
-			for exam in exams: 
+			for exam in exams:
 				if exam in data[year][season]:
 					addcomma = False # comma to separate the blank from the solutions when printing table
-						
+
 					# handle version_names
 					for version_name in sorted(data[year][season][exam]):
 
@@ -117,23 +117,23 @@ for year in sorted(data.keys(), reverse=True):
 							row += "[{}](./exams/{}.pdf)".format(version_name.capitalize(), filename)
 							addcomma = True
 
-							
+
 						if "solution_file" in data[year][season][exam][version_name]:
 							if addcomma:
 								row += ", "
-								
+
 							filename = data[year][season][exam][version_name]["solution_file"]
 							row += "[{}](./exams/{}.pdf)".format(version_name.capitalize() + " solutions", filename)
-						
+
 							addcomma = True
-					
+
 					# done this exam
 					row += " | "
-				
+
 				else: # if don't have this exam, still need to separate column
 					row += " | "
 			row += "\n"
 			#print(row)
-			output += row			
-		
+			output += row
+
 print(output)
