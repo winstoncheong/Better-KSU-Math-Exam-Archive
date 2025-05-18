@@ -66,4 +66,7 @@ Note:
 
 The current QE I system (at the 700 level) was enacted Fall 2015.
 Prior to that, the QE system appears to have been at the 800 level. 
-These exams are stored under [older-system](./older-system).
+
+I don't feel like making tables for these. Just go to
+
+https://github.com/winstoncheong/Better-KSU-Math-Exam-Archive/tree/main/quals/older-system
