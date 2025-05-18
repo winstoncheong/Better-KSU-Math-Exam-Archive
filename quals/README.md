@@ -11,6 +11,18 @@ Note:
 * Spring corresponds to January
 * Summer corresponds to June
 
+## Table of contents
+- [KSU Quals](#ksu-quals)
+  - [Table of contents](#table-of-contents)
+  - [Exams](#exams)
+    - [Algebra](#algebra)
+    - [Analysis](#analysis)
+    - [Topology](#topology)
+    - [Applied](#applied)
+  - [Older exams](#older-exams)
+
+
+
 ## Exams
 
 ### Algebra
