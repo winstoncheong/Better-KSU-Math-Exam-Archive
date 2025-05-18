@@ -1,0 +1,152 @@
+%From levkapit@math.ksu.edu Wed Sep  9 10:23:54 1998
+%Date: Wed, 9 Sep 1998 10:09:15 -0500 (CDT)
+%From: Lev Kapitanski <levkapit@math.ksu.edu>
+%To: math@math.ksu.edu
+%Cc: levkapit@math.ksu.edu
+%Subject: qual
+
+%Sheree,
+ 
+%Here it is.
+
+%Lev
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\pageno=1
+\magnification \magstep1
+\input amstex
+\documentstyle{amsppt}
+%\documentclass{amsppt}
+\NoRunningHeads
+%\NoPageNumbers
+%\TagsOnRight
+\baselineskip 15pt
+%\hfuzz=10pt
+
+\pagewidth{6.4 truein}
+\pageheight{8.6 truein}
+%\hcorrection{}
+%\vcorrection{}
+
+
+\topmatter
+\title Differential Equations Qualifying Exam, Fall 1998
+\endtitle
+\author Department of Mathematics, Kansas State University 
+\endauthor
+\endtopmatter
+%\document
+
+{\bf 1)\/}\  Solve the Cauchy problem
+$$
+\cos(y) {\partial u\over \partial x} + {\partial u\over \partial y} 
++2 \tan (y) u -2 \tan (y)=0,
+u(x,0)=h(x) 
+$$
+\bigskip
+
+{\bf 2)\/} \ {\bf a)\/}\ Find a $\,2\pi$-periodic in $x$ solution of the 
+equation
+$$
+u_t-u_{xx}=0
+$$
+that satisfies the initial condition 
+$$
+u(0,x)=\phi_N(x),
+$$
+where $\,N\ge 1\,$ is an integer and 
+the function $\,\phi_N\,$ is defined on
+$\,[-\pi,\,\pi]\,$  as follows
+$$
+\phi_N(x)= \cases N,\; \text{if}\; -1/2N<x<1/2N \\  
+0,\qquad\text{otherwise},
+\endcases  
+$$
+and extended periodically to the whole line. 
+How many solutions are there? In what sense?
+\medskip
+
+{\bf b)\/}\ Let $\,u_N(t,x)\,$ denote the solution of the above problem such that   
+$\,u_N(t,\cdot)\,$ is a strongly continuous function 
+of $\,t\in [0,T]\,$ with values in $\, L^2([-\pi,\,\pi])$. 
+Prove that such solution does
+exist and is unique.  Is $\,u_N(t,x)\,$ is a bounded function of $\,x\,$ 
+for every $\,t\ge 0$?
+\medskip
+
+{\bf c)\/}\ In what sense does there exist the limit $\,u_\infty=\lim_{N\to\infty} u_N\,$? 
+Find $\,u_\infty$.
+\vfill
+\pagebreak
+
+{\bf 3)\/}\ State and prove the maximum principle for the equation
+$$
+u_t-\Delta u + e^u = 0
+$$
+in $\,\Bbb R^n$. 
+
+Use the maximum principle to state and prove a uniqueness theorem. 
+\bigskip
+
+{\bf 4)\/}\ Determine the type of the equation
+$$
+\sum_{i,j=1}^4 A_{ij}{\partial^2 u\over\partial x_i\partial x_j} 
++ \sum_{i=1}^4{\partial u\over\partial x_i} - u = 0,
+$$
+where $\,A_{ij}\,$ is the following matrix:
+$$
+\pmatrix 1 & 0 & 0 & 0 \\
+         0 & 1 & 1 & 0 \\
+         0 & 1 & 2 & 0 \\
+         0 & 0 & 0 & -1 
+\endpmatrix
+$$
+
+State and prove the finite domain of dependence
+property  for this equation.
+\bigskip
+
+{\bf 5)\/}\ For the equation
+$\,-\Delta u + u = f\,$ on the torus $\,\Bbb T^n$,  
+prove the  estimate
+$$
+\sum_{j,k=1}^n\|u_{x_j x_k}\|_{L^2(\Bbb T^n)}\le 
+C (\|f\|_{L^2(\Bbb T^n)}+\|u\|_{L^2(\Bbb T^n)})
+$$
+with a constant $\,C\,$ independent of $\,f$.
+\bigskip
+
+{\bf 6)\/}\ Find all distributional solutions of the equation 
+$$
+x y^\prime(x)=1.
+$$
+\bigskip
+
+{\bf 7)\/} State and prove a finite dimensional version of 
+Fredholm's Alternative.
+\bigskip
+
+{\bf 8)\/} Consider the Cauchy problem for the wave equation on $\,\Bbb R^n$:
+$$
+u_{tt}-\Delta u = 0, \quad u(0,x)=f(x),\;u_t(0,x)=0.
+$$
+In the 1-dimensional case ($n=1$) show that there exists a constant 
+$\,C>0\,$ such that 
+$$
+\sup_t \|u(t,\cdot)\|_{L^1(\Bbb R^1)}\le C\,\|f\|_{L^1(\Bbb R^1)},
+$$
+for all $\,f\in L^1(\Bbb R^1)$.  
+
+In the 3-dimensional case ($n=3$) prove that there is no constant such
+that the above inequality holds. (Hint: consider spherically-symmetric 
+solutions, use the change of variables $\,u(t,r)=r^\alpha v(t,r)\,$ 
+with an appropriate $\,\alpha$ to obtain the 1-D wave equation for $v$, 
+and choose $v(0,r)$ to have a support in an annulus.)
+
+
+
+\end
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

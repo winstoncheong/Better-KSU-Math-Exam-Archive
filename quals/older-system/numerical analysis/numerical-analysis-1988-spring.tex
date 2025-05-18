@@ -1,0 +1,150 @@
+% latex file
+\def\hcorrection#1{\advance\hoffset by #1 }
+\def\vcorrection#1{\advance\voffset by #1 }
+
+\documentclass{article}
+\usepackage{my,amsxtra,amssymb,amsthm}
+
+\vcorrection{-1.0in}
+\hcorrection{-0.8in}
+\textwidth 6.0in
+\textheight 9.0in
+
+\def\R{\mathbb R}
+\def\C{\mathbb C}
+\def\N{\mathbb N}
+\def\Z{\mathbb Z}
+\def\Q{\mathbb Q}
+
+\begin{document}
+%\begin{Large}
+
+
+
+
+
+
+\begin{center}\begin{LARGE}
+{\bf Numerical Analysis Qualifying Exam}\\ 
+{\bf Spring 1988}\\ \end{LARGE}
+\end{center}
+\vspace{0.1in}
+\noindent\hrulefill\\
+
+\begin{description}
+\item[1.]
+Let $A$ be an $n \times n$ matrix, and let $A^\circ$ be the conjugate
+transpose of $A$, and $\rho(A)$ be the spectral radius of $A$. Recall that
+$$\parallel A \parallel_n = \sup_{\parallel x \parallel_n = 1}
+  \parallel Ax \parallel_n \hbox{\ and\ } \parallel x \parallel_n =
+  \left\{\sum^n_{i=1} |x_i|^n \right\}^{\frac{1}{n}}$$
+
+Prove:
+
+\item[\quad] (a)
+$$\parallel A \parallel_1 = \max_j \sum^n_{i=1} |a_{ij}|.$$
+
+\item[\quad] (b)
+$$\parallel A \parallel_2^\circ = \sqrt{\rho(A^\circ A)}.$$
+
+\item[2.]
+Let $A$ be a strictly diagonally dominant matrix. Prove the Jacobi iteration
+method converges for $A$ independently of the choice of initial vector.
+
+\item[3.]
+Consider the application of the iteration
+$$z_{k+1}= \frac{z^2_k + 2}{3}$$
+to the equation $x^2 - 3x + 2 = 0$.
+
+\item[\quad] (a)
+Does the method converge? Why?
+
+\item[\quad] (b)
+Show that $x_k \to 1$ as $k \to \infty$ if $-2 < z_0 < 2$.
+(First prove that $z_{k+1}$ is between $z_k$ and 1 when $k \geq 1$.)
+
+\item[\quad] (c)
+Show that $z_{k+1} = 2$ if $z_0 = \pm2$, $k=0,1, \dots$, but that the
+convergence to the root $\alpha = 2$ for any other value of $z_0$ is
+impossible.
+
+\item[4.] (a)
+Define a Householder transformatin.
+
+\item[\quad] (b)
+Show that for any square matrix $A$, there is a unitary matrix $U$ such
+that $U^0 AU$ is upper triangular. ($U^0$ is the conjugate transpose
+of $U$).
+
+\item[5.]
+Suppose $A=(A_{ij})$ is an $n \times n$ matirx and that
+$$|a_{ij}| \geq C \sum_{j \neq i} |a_{ij}|$$
+for $i = 1, \dots, n$ where $C>1$. Let
+$K(A) = \rho (A) \rho(A^{-1})$ where $\rho(A)$ is the spectral radius of
+$A$. Find a bound for $K(A)$ in terms of $C$ and the $a_{ij}$'s.
+
+\item[6.]
+State the Weierstrase approximation theorem, define Bernstein polynomials, and
+explain how the latter are used in the proof of the former.
+
+\item[7.]
+Assume
+$$f(0) = 1, f(1) = 3, f(2), \hbox{\ and\ } f(3) = 1.$$
+
+\item[\quad] (a)
+Write a formula for the polynomial, $P(x)$ of degree at most 3 that
+interpolates $f$ at these points.
+
+\item[\quad] (b)
+Derive an expression for the error $f(x) - P(x)$ at an arbitrary point $x$.
+Be sure to indicate the conditions assumed on $f$.
+
+\item[8.]
+Prove: Of all nth degree monic polynomials $P_n(x)$, The Chebyshev
+polynomial
+$$T_n (x) = \frac{1}{2^n} \cos (n \cos^{-1} x)$$
+has the smallest maximum norm on the interval $[-1,1]$, that is,
+$$\max_{-1 \leq x \leq 1} |T_n(x) | \leq \max_{-1 \leq x \leq 1}
+ |P_n(x)|.$$
+
+\item[9.]
+Assume that $f(x)$ has a contiuous fourth derivative on an open interval
+containing the interval $[c-h, c+h]$. Derive an expression for the error
+in approximating $f^{\prime \prime} (c)$ by
+$$\frac{f(c+h) + f(c-h) - 2f (c)}{h^2}.$$
+
+\item[10.]
+Use undetermined coefficients to find coefficients $H_1, H_2$, and $H_3$
+so that the approximation
+$$\int^b_c f(x) dx \approx H_1 f \left(\frac{2a + b}{3} \right) + H_2f
+  \left(\frac{a+b}{2} \right) + H_3f \left( \frac{a+3b}{4} \right)$$
+is exact for polynomials of degree less than or equal to 2.
+
+\item[11.]
+Show that the numberical integration method
+$$y_{n+1} = y_{n-3} + \frac{4h}{3} \left(2y^\prime_n - y^\prime_{n-1} +
+  2y^\prime_{n-2} \right)$$
+to approximating the solution to the ordinary differential equation
+$y^\prime = f(x,y), y_o = y(x_0)$ is exact for polynomials of degree 0 or 1.
+Is the method stable? Explain.
+
+
+
+
+\end{description}    
+%\end{Large}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

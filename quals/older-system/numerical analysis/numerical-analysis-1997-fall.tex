@@ -1,0 +1,130 @@
+% latex file
+\def\hcorrection#1{\advance\hoffset by #1 }
+\def\vcorrection#1{\advance\voffset by #1 }
+
+\documentclass{article}
+\usepackage{my,amsxtra,amssymb,amsthm}
+
+\vcorrection{-1.0in}
+\hcorrection{-0.8in}
+\textwidth 6.0in
+\textheight 9.0in
+\begin{document}
+%\begin{Large}
+
+
+
+
+
+
+\begin{center}\begin{LARGE}
+{\bf Numerical Analysis Qualifying Exam}\\ 
+{\bf Fall 1997}\\ \end{LARGE}
+\end{center}
+\vspace{0.1in}
+\noindent\hrulefill\\
+\begin{description}
+
+\item[1.]
+Explain the difficulty in evaluating $f(x) = x^{-1}$ $(1-\cos x)$
+when the absolute value of $x$ is small and find a method without using
+the Taylor series to overcome the difficulty.
+
+\item[2.]
+Prove the following theorem: If $f \in C^2(a,b)$, $f^\prime (x)$
+$f^{\prime \prime} (x) \neq 0$, and $f(x)$ has a zero in $(a,b)$, then the
+zero is unique in $(a,b)$, and the Newton iteration will converge to it if
+the starting value $x_0$ and the first approximation $x_1$ are both
+in $(a,b)$. (You may just do a special case where
+$f^\prime (x) < 0$, $f^{\prime \prime} (x) <0$ in $(a,b)$)
+
+\item[3.]
+Prove the following theorem for Gaussian quadrature:
+
+Let $I(f) = \int^b_a f(x) w(x) dx$, where $w(x)$ is a positive weight
+function, be approximated by a quadrature formula
+$I_n(f) = \sum^n_{i=1} A_i f(x_i)$, where $x_i \in [a,b]$, $i=1:n$
+are distinct. Then the quadrature formula $I_n(f)$ has a maximum degree
+of precision of $2n-1$. This is attained if and only if
+$x_i, x_2, \dots, x_n$ are the zeros of $p_n(x)$, the $n\hbox{th}$ orthogonal
+polynomial, with the inner product
+$$ (f,g) = \int^b_a f(x) g(x) w(x) dx.$$
+(Hint: if $f(x)$ is a polynomial of degree $m$ with $m \geq n$, then
+$f[x_1, x_2, \dots, x_n, x]$ is a polynomial of degree $m-n$)
+
+\item[4.]
+Let $f(x)$ be a piecewise constant function on $[a,b]$:
+$$f(x) = \begin{cases}
+          \alpha &a \leq x \leq c \\
+          \beta  &c < x \leq b
+          \end{cases}$$
+where $a<c<b$ and $\alpha \neq \beta$. Let $x_0 < x_1 < \dots < x_n$ be
+$n+1$ points and $j$ be an integer with $0 \leq j \leq n-1$ such that
+$a < x_0 < \dots < x_j < c < x_{j+1} < \dots < x_n < b$
+and that $P_n(x)$ is the polynomial of degree less than or equal to $n$
+interpolating $f$ at the $n+1$ points $x_i$, $i=0, \dots , n$.
+Show that $P_n(x)$ is monotone in the interval $[x_j, x_{j+1}]$.
+(Hint: Count the number of zeros of $\frac{dP_n(x)}{dx}$.)
+
+\item[5.]
+Suppose $A \in R^{n \times n}, b \in R^n$, and $P A = LU$, where $P$ is a
+permutation matrix, $L$ is lower triangular, and $U$ is upper triangular.
+$A,b,P,L,U$ are known. Determine the purpose of the following algorithm:
+
+For $j=1:k$
+
+\quad solve for $y$ in $Ly = Pb$ \quad overwrite $b$ with $y$
+
+\quad solve for $x$ in $Ux = b$ \quad overwrite $b$ with $x$
+
+end
+
+(Hint: consider $k=1$ first)
+
+\item[6.]
+Let $A$ be an invertible $n \times n$ matrix, and let $u$ and $v$ be two
+vectors in $R^n$. Find the necessary and sufficient conditions on $u$
+and $v$ in order that the matrix
+$$B= \left[ \begin{array}{cc} A&u \\ v^t&0 \end{array} \right]_.$$
+be invertible, and give the inverse in terms of $A, u,v$ when it exists.
+(Hint: multiply $B$ by a suitable matrix to have a simpler matrix to handle)
+
+\item[7.]
+Suppose that an $n$ by $n$ nonsingular matrix $A$ has distinct eigenvalues
+$\lambda_1, \dots, \lambda_n$ with corresponding right eigenvectors
+$u_1, \dots, u_n$ and left eigenvectors $v_1, \dots, v_n$. Suppose
+$$c_i = \parallel u_i \parallel_2 \parallel v_i \parallel _2 / |v_i^T u_i|,
+  i=1, \dots, n.$$
+Show that the solution of $Ax=b$ satisfies
+$$\parallel x \parallel_2 \leq \parallel b \parallel_2 \sum^n_{i=1}
+  \frac{c_i}{|\lambda_i|}.$$
+(Hint: write $x$ in terms of $u_i$)
+
+\item[8.]State Schur's theorem and use it to show: Let $A$ be an $n \times n$
+complex matrix, it can be similar to a upper triangular matrix with $|$off-diag.
+entries$|$ $\leq \varepsilon$, (Hint: on the result of Schur's, construct
+suitable diagonal matrices)
+
+
+
+
+
+
+
+\end{description}    
+%\end{Large}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

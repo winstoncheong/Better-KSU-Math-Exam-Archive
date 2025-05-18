@@ -1,0 +1,166 @@
+% latex file
+\def\hcorrection#1{\advance\hoffset by #1 }
+\def\vcorrection#1{\advance\voffset by #1 }
+
+\documentclass{article}
+\usepackage{my,amsxtra,amssymb,amsthm}
+
+\pagestyle{empty}
+\vcorrection{-1.0in}
+\hcorrection{-0.8in}
+\textwidth 6.0in
+\textheight 9.0in
+\begin{document}
+\begin{Large}
+
+\begin{center}\begin{LARGE}
+{\bf  Algebra Qualifying Exam}\\ 
+{\bf August 23, 2001}\\ \end{LARGE}
+\end{center}
+\vspace{0.1in}
+\noindent\hrulefill\\
+{\bf Instructions:} You are given 10 problems from which you are to do 8.
+ Please indicate those  8 problems which you would like  to be graded 
+by circling the problem numbers on the  problem sheet. 
+
+\noindent{\bf Note:} All rings on this exam are associative and
+have multiplicative identity 1. All  integral domains are 
+assumed to be commutative.
+\vspace{0.2in}
+
+\vs
+
+
+
+\def\bC{\mathbb C}
+\def\Q{\mathbb Q}
+\def\Z{\mathbb Z}
+\def\F{\mathbb F}
+\def\Gal{\operatorname{Gal}}
+\def\Aut{\operatorname{Aut}}
+\def\<{\langle}
+\def\>{\rangle}
+%\newcommand{\C}{{\Bbb C}}
+%\newcommand{\Q}{{\Bbb Q}}
+%\newcommand{\Z}{{\Bbb Z}}
+%\newcommand{\F}{{\Bbb F}}
+%\newcommand{\Gal}{\operatorname{Gal}}
+%\newcommand{\Aut}{\operatorname{Aut}}
+%\newcommand{\bC}{{\Bbb C}}
+
+
+\vspace{0.2in}
+
+\begin{itemize}
+ \item[1.] Show that for any group  $ G $, the quotient group 
+$G/Z(G) $ is never a nontrivial cyclic group. Here, $ Z(G) $ is the center of the group $ G $.
+
+\item[2.] Let $F$ be a field, and show that the matrix group
+
+$$G\ =\ \left\lbrace\left[\begin{array}{cc}a & b\\0 & c\end{array}\right]\,|\ a,b,c\in F, \ 
+ac\not=0\right\rbrace$$
+is a solvable group.
+
+\item[3.] Let $F$ be any field and $ G$ be a finite  multiplicative subgroup 
+of $ F^{\times}$. Prove that if $  |G|>1 $, then 
+$ \sum_{g \in G} g = 0 $ in $F$.
+
+
+\item[4.]  Let $ A$ be a commutative ring. Assume that every
+element $a$ of $A$ is either invertible or nilpotent (i.e., $a^n=0$ for some $n$
+depending on $a$). Show that $ A$ has a unique maximal ideal.
+
+\item[5.] Let $ R$ be a ring with 1 and $M$ an $R$-module. An element 
+$x \in M $ is called {\em torsion} if there exists $ r \in R $ and $ r \neq 0 $ such that $ r x = 0 $. Let $ M_{t}$ be the set of all torsion elements in $M$. 
+Show that if $ R $ is an integral domain then $ M_{t}$ is a submodule 
+of $ M$ and $ M/M_{t}$ is a torsion-free $ R$-module for any $ R$-module $ M$.
+Give an example of a commutative ring $R$ and an $R$-module $ M$ such that $ M_{t}$ is not a 
+submodule.
+
+\clearpage
+
+\item[6.] Let $A$ be a commutative ring and $M$ be a finitely generated
+$A$-module. One form of Nakayama Lemma says that 
+
+{\sl if $M=N+IM$,
+where $N\subseteq M$ is an $A$-submodule of $M$, and where $I$ is an
+ideal of $A$ contained in every maximal ideal of $A$, then $M=N$}.
+
+Now assume that $A$ is a
+commutative local ring (i.e., $A$ has a unique maximal ideal $m$), 
+and assume that $f: E\rightarrow F$ is a homomorphism of $A$-modules. 
+Therefore, 
+$f(mE)\subseteq mF$ and so $f$ induces a homomorphism 
+$\bar{f}: E/mE\rightarrow F/mF$. 
+Use Nakayama's Lemma to show that if $F$ is finitely generated 
+as an $A$-module, then 
+$f$ is surjective if and only if $ \bar{f}$ is surjective. 
+
+\item[7.]   Let $ k$ be a field  and let $A$ be an $k$-algebra.
+A $k$-linear transformation $D: A\rightarrow A$ is a called a
+$k$-{\em derivation} if
+\[ D(xy)=D(x)y+xD(y),\  \text{ for all } x , y \in A.\]
+%Let $ \operatorname{Der}_k(A) $ be the set of all $ k$-derivations of $A$. 
+Show that if $D_1$ and $D_2$ are $k$-derivations on $A$,  then the
+composition $D_1\circ D_2 $ need not be a $k$-derivation, but that 
+$ D_1\circ
+D_2-D_2\circ D_1$ is always a $k$-derivation on $A$.
+
+\item[8.] Let $ F\supseteq k$ be a finite extension of degree $n$ and $f(x)\in
+k[x]$ be an irreducible polynomial of degree $m$. If $m$ and $n$ are relatively prime,
+then $ f(x) $, as a polynomial over $F$,  is still irreducible.
+
+\item[9.] Let $k$ be a finite field of $p^r$ elements.  If $ f(x)$ is an
+irreducible polynomial in $k[x]$, show that the field $F=k[x]/k[x]f(x)$ 
+contains all roots of $f(x)$ and that the Galois group $\Gal(F/k)$ permutes
+the set of roots of $f(x)$ transitively.
+
+\clearpage
+
+\item[10.] Let $T:V\to V$ be a linear transformation on the $n$-dimensional
+complex vector space $V$. Give $V$ the usual $\bC[x]$-module structure.
+%Let $A$ be an $ n\times n$-matrix with entries in $\bC$.
+%Then ${\bC}^n $ becomes a $\bC[x]$-module with $ x$ acting as the same as
+%$A$. 
+Suppose that $V$ is isomorphic as a $\bC[x]$-module to 
+$$ \bC [x] \slash \bC [x]f_{1}(x) \oplus \bC[x] / \bC [x]f_2(x)
+\oplus \bC[x] / \bC [x]f_3(x) \oplus \bC [x] / \bC [x]f_4(x),$$
+where
+\begin{eqnarray*} f_1(x)&=&(x-2)^6(x-3)^7(x-4)^3, \\ 
+f_2(x)&=&(x-2)^7(x-3)^9(x-4)^3,\\
+f_3(x)&=&(x-2)^6(x-3)^7(x-4)^3, \\
+f_4(x)&=&(x-2)^5(x-3)^5(x-4)^2.
+\end{eqnarray*}
+Now do the following:
+
+\begin{description}
+\item{(a)} Compute $n$.
+ 
+\item{(b)}  List the characteristic polynomial and the 
+minimal polynomial of $T$.
+
+\item{(c)}  List the invariant factors of $T$.
+
+\item{(d)} List the elementary divisors of $T$.
+
+\item{(e)}  
+Write done the Jordan canonical matrix of $T$.
+\end{description}
+\end{itemize}
+%\end{large}
+
+    
+\end{Large} \end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+

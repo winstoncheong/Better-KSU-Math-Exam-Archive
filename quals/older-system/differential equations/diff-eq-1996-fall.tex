@@ -1,0 +1,168 @@
+%Date: Mon, 30 Sep 96 13:35:33 CDT
+%From: Lev Kapitanski <levkapit@math.ksu.edu>
+%Subject: PDE qual F96
+
+%\pageno=1
+%\magnification \magstep1
+\input amstex
+%\documentstyle{amsppt}
+\documentstyle{amsppt}
+\NoRunningHeads
+%\NoPageNumbers
+%\TagsOnRight
+\baselineskip 15pt
+%\hfuzz=10pt
+
+\pagewidth{6.4 truein}
+\pageheight{8.6 truein}
+%\hcorrection{}
+%\vcorrection{}
+
+%\hskip 200bp {\bf Name:\/}%
+\topmatter
+\author Qualifying Examination in Differential Equations, Fall '96
+\endauthor
+\affil  Department of Mathematics,   
+Kansas State University 
+\endaffil
+\endtopmatter
+%\document
+\centerline{(Try to get as many points as you can.)}
+\vglue 0.5pc
+
+{\bf \# 1.\/} \ 1) Find all the solutions of the equations:
+
+(a)\ ({\it 1 point\/})\ \ $\,x\,{\partial u\over\partial y}\,+
+\,y\,{\partial u\over\partial x}\,=\,0\,$;
+
+(b)\ ({\it 2 points\/})\ \ $\,x\,{\partial u\over\partial y}\,+
+\,y\,{\partial u\over\partial x}\,=\,1\,$;
+
+(c)\ ({\it 2 points\/})\ \ $\,x\,{\partial u\over\partial y}\,+
+\,y\,{\partial u\over\partial x}\,=\,u\,$;
+
+
+2)\ ({\it 2 points\/})\ \  Solve the Cauchy problem:
+$$
+ x\,{\partial u\over\partial y}\,+
+\,y\,{\partial u\over\partial x}\,=\,u\,, \qquad 
+ u(x,y)\,=\,\sin(x-y)\qquad\text{on the line}\quad y=1-x\,.
+$$
+\vglue 1pc 
+{\bf \# 2.\/} \ ({\it 4 points\/})\ What is a {\it well-posed\/} problem? 
+Give an example.
+
+\vglue 1pc 
+{\bf \# 3.\/} \ ({\it 4 points\/})\ State a maximum principle for the 
+solutions of the heat equation.
+\vglue 1pc
+{\bf \# 4.\/}\ (a)\ ({\it 2 points\/})\ Give an example of a function 
+which is not differentialble in the classical sense but has a 
+distributional (generalized) derivative in $\,L^2_{loc}$.
+
+(b)\ ({\it 3 points\/})\ \ Give a definition of the Sobolev space $W^{m,p}(\Omega)$ (the same as $\,W^m_p(\Omega)$), where 
+$\,1\le p\le +\infty$, $\,m\,$ is a positive integer, 
+$\,\Omega\,$ is a bounded domain in $\,\Bbb R^n\,$ with smooth
+boundary.
+\vglue 1pc  
+{\bf \# 5.\/}\  ({\it 5 points\/})\ \   Find  the solution of 
+the initial boundary value problem:
+$$\multline
+\hfill {\partial u\over\partial t} - {\partial^2 u\over\partial x^2} - 
+2\,{\partial u\over\partial x}\,=\,0\,,\qquad t>0,\quad 0<x<1\,,\qquad\hfill\\
+\hfill u(t,0) = u(t,1) = 0,\qquad
+\phantom{\qquad t>0,\quad 0<x<1\,,}\hfill\\
+\hfill u(0,x) = e^{-x}\,\sin (11\pi x)\,.
+\phantom{\qquad t>0,\quad 0<x<1\,,}\hfill
+\endmultline
+$$
+\vglue 1pc
+
+{\bf \# 6.\/}\ ({\it 5 points\/})\ \ Solve the following boundary 
+value problem in the 
+square $\,\Omega = \{ (x,y):\; 0<x,\,y<1\}$:
+$$
+- {\partial^2 u\over\partial x^2}- {\partial^2 u\over\partial y^2} 
+- 2\,\pi^2\,u\,=\,\sin (\pi x)\,\sin (\pi y)\,,\;(x,y)\in\Omega ,\qquad
+u\big |_{{}_{(x,y)\in\partial\Omega}}\,=\,0\,.
+$$
+\vglue 1pc
+{\bf \# 7.\/}\ ({\it 5 points\/})\ \ Let $\,u(x)\,$ be the solution of 
+the following boundary value problem in the disk 
+$\,\Omega= \{ (x,y)\in\Bbb R^2: |x|^2+|y|^2 < 1\}$:
+$$
+- {\partial^2 u\over\partial x^2}- {\partial^2 u\over\partial y^2} 
++ u\,=\,0\,,\quad (x,y)\in\Omega ;\qquad 
+u(x,y) \big |_{{}_{(x,y)\in\partial\Omega}}\,=\,{y\over\sqrt{|x|^2+|y|^2}}\,.
+$$
+Without solving the problem, show that $\,-1\le u(x,y)\le 1$\ \  for all 
+$\,(x,y)\in\Omega$.
+\vglue 1pc
+{\bf \# 8.\/}\ ({\it 5 points\/})\ \ For a solution $\,\phi(t,x)\,$ of 
+the Cauchy problem 
+$$
+{\partial^2 \phi\over\partial t^2} - 
+{\partial^2 \phi\over\partial x^2}\,=\,0,\quad 
+\phi(0,x)=f(x),\quad {\partial\phi\over\partial t} (0,x)= 0,
+$$
+show that if $\,f\in L^p(\Bbb R^1)$, for some $\,p$, $1\le p\le +\infty$, 
+then,  $\,\phi(t,\cdot)\in L^p(\Bbb R^1)$, as well, 
+and estimate $\,\sup_t \|\phi(t,\cdot)\|_{L^p}\,$ in terms of 
+the $\,L^p$-norm of $\,f$.
+\vglue 1pc 
+{\bf \# 9.\/}\  ({\it 10 points\/})\ \  Consider the following hyperbolic
+equation on $\,\Bbb R^1$:
+$$
+{\partial^2 \phi\over\partial t^2} - 
+(1-\frac 12\cos^2 x){\partial^2 \phi\over\partial x^2}\,=\,0\,.
+$$
+Let $\,u\,$ and $\,v\,$ be the solutions of this equation corresponding 
+to the initial conditions 
+$$
+u(0,x)=u_0(x),\quad {\partial u\over\partial t}(0,x)=u_1(x)\,,
+$$
+and
+$$
+v(0,x)=v_0(x),\quad {\partial v\over\partial t}(0,x)=v_1(x)\,.
+$$
+Show that if 
+$$
+u_0(x)=v_0(x),\qquad u_1(x)=v_1(x)\,,\qquad 
+\text{for all $\,x\,$ in the interval}\;[-1,1]\,,
+$$
+then $\,u(t,x)=v(t,x)\,$ for all $\,(t,x)\,$ in the triangle 
+$\,\{ 0\le t\le 1,\;|x|\le 1-t \}$. (You may assume that 
+the solutions $\,u\,$ and $\,v$, and all the initial data, are as smooth 
+as you wish.)
+\vglue 1pc
+%\pagebreak
+ 
+{\bf \# 10.\/}\ ({\it 10 points\/})\ \  Let $\,\Omega\,$ be a bounded 
+domain in 
+$\,\Bbb R^n\,$ with smooth boundary. Consider the following 
+initial boundary value problem:
+$$
+\align 
+ u_t\,&=\,a^2\,\Delta\,u\quad t>0,\;x\in\Omega \\
+ u(0,x)\,&=\,f(x),\quad x\in\Omega \\
+ \tau\,{\partial u\over\partial \nu}\,+\,\sigma\,u \,&=\,0,\quad 
+(t,x)\in [0,T]\times\partial\Omega\,,
+\endalign
+$$
+where $\,a$, $\,\tau\,$ and $\,\sigma\,$ are positive constants. 
+Show that 
+$$
+\int_\Omega |u(t,x)|^2\,dx 
+$$
+does not increase with $\,t$. Use this fact to prove the uniqueness 
+of the (appropriately smooth) solutions. 
+
+
+Show that the energy,
+$$
+E(t)\,=\,\int_\Omega \,|\nabla u|^2\,dx\,+\,
+\int_{\partial\Omega} {\sigma\over \tau}\,|u|^2\,ds\,,
+$$
+does not increase with $\,t$.
+ 
+ \end

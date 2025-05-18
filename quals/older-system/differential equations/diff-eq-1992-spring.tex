@@ -1,0 +1,160 @@
+% latex file
+\def\hcorrection#1{\advance\hoffset by #1 }
+\def\vcorrection#1{\advance\voffset by #1 }
+
+\documentclass{article}
+\usepackage{my,amsxtra,amssymb,amsthm}
+
+\vcorrection{-1.0in}
+\hcorrection{-0.8in}
+\textwidth 6.0in
+\textheight 9.0in
+\begin{document}
+%\begin{Large}
+
+
+
+
+
+
+\begin{center}\begin{LARGE}
+{\bf Partial Differential Equations Qualifying Exam}\\ 
+{\bf Spring 1992}\\ \end{LARGE}
+\end{center}
+\vspace{0.1in}
+\noindent\hrulefill\\
+
+\begin{description}
+\item[1.]
+Let $\Omega$ be a bounded smooth domain in $\Bbb R^2$ and
+$f \in C^1(\partial \Omega)$.
+
+\item[\quad] (i)
+Is the following Neumann problem well posed? Why?
+$$\begin{cases}
+        \Delta u = 0 \\
+        \frac{\partial u }{\partial n} |\partial \Omega = f
+        \end{cases}$$
+
+\item[\quad] (ii)
+Find a necessary condition for this problem to have a solution and prove
+your result.
+
+\item[2.]
+Suppose $u(x,t), x \in \Bbb R^1, t>0$ is a solution of
+$\frac{\partial^2 u}{\partial x^2} - \frac{\partial^2 u}{\partial t^2} =0$.
+Suppose that on
+$I=[a,b] \subseteq \Bbb R, u(x,0) = \frac{\partial u}{\partial t} (x,0)=0$.
+Show that $u \equiv 0$ in
+$\Omega = \left\{(x,t)= 0 \leq t \leq \frac{a+b}{2}, \left|x- \frac{a+b}{2}
+  \right| \leq \frac{a+b}{2} - t \right\}.$
+HINT: Consider the energy integral
+$E(t) = \frac{1}{2} \int_{B_t} (u_t)^2 + |\nabla u|^2 dx$, where
+$$B_t = \left\{x : \left| x- \frac{a+b}{2} \right|
+  \leq \frac{a+b}{2} - t \right\}.$$
+
+\item[3.]
+Consider the half disc $\Omega$ in $\Bbb R^2$ as in Fig. 1 below. Find a
+solution $u(x,y)$ of the Dirichlet problem
+
+\begin{tabular}{ll}
+\rule{4in}{0in} & \\
+$\begin{cases}
+        \Delta u &= 0 \hbox{\ in\ } \Omega \\
+        u(x,0) &= 0, -1 \leq x \leq 1 \\
+        u|_{\partial \Omega - [-1,1]} &= 1.
+        \end{cases}.$
+&
+\begin{small}
+\setlength{\unitlength}{.0125in}
+\begin{picture}(-100,0)%(-250,0)
+\put(-50,0){\line(1,0){100}}
+%\put(-50,0){\oval(50,100)[t]}
+\qbezier[500](-50,0)(0,75)(50,0)
+\put(-50,-10){$-1$}
+\put(45,-10){$1$}
+\put(-15,-15){\begin{normalsize}Fig.1\end{normalsize}}
+\put(-5,23){$\Omega$}
+\put(38,20){$\sigma,\Omega$}
+\end{picture}
+\end{small}
+\end{tabular}
+
+
+\item[4.]
+Suppose $u$ is a continuous function on a domain $\Omega \subset \Bbb R^n$
+which satisfies the mean value property, that is, whenever $B \subset \Omega$
+is a ball centered at $x$ then
+$u(x) = \frac{1}{|\partial B|} \int_{\partial B} u(y) dy$. Show that $u(x)$
+is a harmonic function and is also $C^\infty$ on $\Omega$.
+
+\item[5.]
+Let $f$ be a $C^2$ function and $\phi$ be a $C^1$ function on $R^1$. Consider
+the conservation law of nonlinear flow
+
+$\begin{cases}
+        u_t + (f(u))_x &=0 \\
+        u(0,x) &= \phi (x),
+        \end{cases}$
+
+where $u=u(t,x)$ is the density of this flow. Show that if $f$ is convex and
+$\phi$ is decreasing then this flow must undergo a blow-up at some time
+$t_0 >0$.
+
+\item[6.]
+Let $\Omega$ be a smooth bounded domain in $\Bbb R^n$. Let
+$f \in C(\partial \Omega)$ be fixed. Consider the functional
+$Du = \int_\Omega |\nabla u|^2 dx$ where $u|_{\partial \Omega} = f$.
+Show that $Du$ achieves a minimum when $u$ is harmonic.
+
+\item[7.]
+Suppose $\Delta u + u=0$ in $\Bbb R^3$ and
+$|u(x)_{|\partial B_R}| \leq \frac{C}{1+R^2}$ for some constant $c>0$,
+where $B_R = \{x \in \Bbb R^3 : \parallel x \parallel = R\}$. Does
+$u \equiv 0$? Give your argument.
+
+\item[8.] (i)
+Give an example that a function is weakly differentiable but not
+differentiable Give also the weak derivatives for your example.
+
+\item[\quad] (ii)
+Let $\Omega$ be an open bounded set with smooth boundary in $\Bbb R^3$. If
+a function $u \in W^{2,2}_0 (\Omega)$, is $u(x)$ classically differentiable?
+Why?
+
+\item[9.]
+Let $H$ be a real Hilbert space and $A$ a densely defined linear selfadjoint
+operator on $H$. Assume
+$\langle Au, u \rangle \geq c \parallel u \parallel^2, \forall u \in H$,
+where $c>0$ is a constant. Let $f \in H$ be given.
+
+\item[\quad] (i)
+Show that if $u_0 \in H$ minimizes the functional
+$F(u) = \langle Au, u \rangle - 2\langle f,u \rangle$, then
+$Au_0 = f$.
+
+\item[\quad] (ii)
+In the case that $H = L^2(\Omega), A= -\Delta$ under the homogeneous
+Dirichlet boundary condition. Specify the constant $c$ above.
+
+
+
+
+
+\end{description}    
+%\end{Large}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,97 @@
+% latex file
+\def\hcorrection#1{\advance\hoffset by #1 }
+\def\vcorrection#1{\advance\voffset by #1 }
+
+\documentclass{article}
+\usepackage{my,amsxtra,amssymb,amsthm}
+
+\vcorrection{-1.0in}
+\hcorrection{-0.8in}
+\textwidth 6.0in
+\textheight 9.0in
+\begin{document}
+%\begin{Large}
+
+
+
+
+
+
+\begin{center}\begin{LARGE}
+{\bf Differential Equations Qualifying Exam}\\ 
+{\bf Fall 1995}\\ \end{LARGE}
+\end{center}
+\vspace{0.1in}
+\noindent\hrulefill\\
+\begin{description}
+
+\item[1.] (i)
+State a definition of fundamental solution of wave equations
+$$u_{tt} (t,x) = a^2 \Delta u(t,x), \quad t > 0, x \in R^n.$$
+
+\item[\quad] (ii)
+Give the definitions of the Sobolev spaces
+$W^{m,p} (\Omega), W_0^{m,p} (\Omega)$ where $p \geq 1$, and $\Omega$ is a
+bounded domain with smooth boundary.
+
+\item[2.]
+Solve the initial value problem
+$$\begin{cases}
+        u_{tt} - u_{xx} = 1 \qquad \qquad t >0 , x \in R^1 \\
+        u(0,x) = \begin{cases} 1, -1 \leq x \leq 1 \\ 0, |x|>1 \end{cases}\\
+        u_t(0,x) = 0.
+        \end{cases}$$
+
+\item[3.] (i)
+Formulate the Dirichlet principle.
+
+\item[\quad] (ii)
+Give a proof of the Dirichlet principle.
+
+\item[4.]
+A function is said to be a homogeneous function of degree $m\geq 0$, where
+$m$ is an integer, if
+$$f(\alpha x_1, \alpha x_2, \dots, \alpha x_n) = \alpha^m f(x_1, x_2, \dots,
+   x_n)$$
+holds true for any scalar $\alpha$. Show that $f(x_1, \dots, x_n)$ is
+such a function if and only if
+$$x_1 \frac{\partial f}{\partial x_1} + \dots + x_n
+  \frac{\partial f}{\partial x_n} = m \cdot f.$$
+
+\item[5.]
+Prove that the only bounded harmonic functions in $R^n$ are constant functions.
+
+\item[6.]
+Solve the exterior Dirichlet problem in $R^3$:
+$$\Delta u(x) = 0, \hbox{for\ } |x| > 1; \quad u(x) = c \hbox{\ for\ }
+  |x| = 1.$$
+
+\item[7.]
+Find a solution to the heat equation
+$$\begin{cases}
+        u_t(t,x) = \Delta u(t,x) ; \quad &x = (x_1, x_2), 0\leq x^2_1 + x^2_2 <1 \\
+        u(0,x) = 1 - r^2; \quad &r = \sqrt{x^2_1 + x^2_2} \\
+        u(t,x)|_{r=1} = 0.
+        \end{cases}$$
+
+
+
+
+
+\end{description}    
+%\end{Large}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

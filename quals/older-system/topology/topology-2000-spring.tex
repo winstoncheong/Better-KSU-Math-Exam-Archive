@@ -1,0 +1,265 @@
+% latex file
+%Topology QE S00 - Lee & Strecker
+
+\def\hcorrection#1{\advance\hoffset by #1 }
+\def\vcorrection#1{\advance\voffset by #1 }
+\def\subplus{
+{\hspace{-.25in}} \hbox{\ }_{~\over{+}}\ } %puts a plus symbol below the line
+
+\input amssym.def   %defines Bbb and gothic (frak)
+\input amssym       %defines Bbb and gothic (frak)
+
+\input prepictex.tex
+\input pictex.tex
+\input postpictex.tex
+
+%\documentstyle[bbb]{report}
+\documentclass[bbb]{report}
+
+\vcorrection{-.7in}
+\hcorrection{-1in}
+
+\topmargin  0in
+\textwidth 6.4in
+\textheight 9.5in
+
+\mathsurround=2pt
+
+\def\ds{\displaystyle}
+\def\R{{\Bbb R}}
+\def\N{{\Bbb N}}
+
+\begin{document}
+
+%\pagestyle{empty}
+
+\begin{Large}
+
+\hfill Name \rule{2.5in}{.01in}
+\par
+\vspace{.1in}
+
+\begin{center}
+   TOPOLOGY QUALIFYING EXAM \\
+  Spring 2000 \\
+   (Lee and Strecker) \\
+\end{center}
+
+
+\vspace{.1in}
+
+\noindent {\bf Choose and work any 6 of the following problems.
+Start each problem on a new sheet of paper.
+{\bf Do not turn in more than six problems}.
+In the problems below, a ``space" always means a ``topological space".}
+
+\vspace{.2in}
+
+\begin{description}
+
+\item[1.]
+Prove or disprove each of the following:
+
+\item[\quad] a)
+If $A$ is a connected subset of space $X$ and $Q\subseteq X$
+such that $A\subseteq Q\subseteq \overline{A}$.
+then $Q$ must be connected.
+
+\item[\quad] b)
+Each component of a space must be closed.
+
+\item[\quad] c)
+Each component of a space must be open.
+
+
+%\vspace{.15in}
+
+\item[2.]
+Prove or disprove each of the following:
+
+\item[\quad] a)
+Every subspace of a compact Hausdorff space is locally compact.
+
+\item[\quad] b)
+Every subspace of a connected Hausdorff space is locally connected.
+
+%\vspace{.15in}
+
+
+\item[3.]
+Prove that each compact subset of a Hausdorff space must be closed but a
+compact subset of a $T_1\hbox{-space}$ need not be closed.
+
+%\vspace{.15in}
+
+\item[4. a)]
+Complete the following sentence so that it is a true statement:
+
+\item[\qquad] Given a set $X$, a family ${\cal B}$ of subsets of $X$
+is a base for a topology
+on $X$ if, and only if \hrulefill.
+
+\item[\quad] b)
+Construct another true sentence that describes a subbase for a topology
+on $X$.
+
+%\vspace{.15in}
+\item[5.]
+Let $(X_1,\tau_1)$ and $(X_2,\tau_2)$ be topological spaces and let
+$\tau$ be the product topology on $X_1\times X_2$.
+Let $Y_1\subseteq X_1$ and $Y_2\subseteq X_2$.
+There is a ``natural" subspace topology $\sigma$ on $Y_1\times Y_2$
+that is induced from $\tau$ and the fact that $Y_1\times Y_2$
+is a subset of $X_1\times X_2$.
+There is also a ``natural" product topology $\rho$ on $Y_1\times Y_2$
+that comes from the subspace topologies $(Y_1,\rho_1)$ and $(Y_2,\rho_2)$
+induced by $\tau_1$ and $\tau_2$ respectively.
+Prove or disprove that $\sigma=\rho$.
+
+
+%\vspace{.15in}
+\item[6.]
+Let
+$A=\{x|x\hbox{\ is an ordinal number that is less than or equal to }\omega_1\}$,
+where $\omega_1$ is the first uncountable ordinal number
+and let $\tau$ be the order-topology on $A$ induced by the usual order.
+Prove one of the following:
+
+
+\item[\quad] a)
+The space $(A,\tau)$ is a compact Hausdorff space.
+
+\item[\quad] b)
+If $f:(A,\tau)\to \R$ is a real-valued continuous function
+(where $\R$ is assumed to have its usual topology)
+then there exists some
+$x_0<\omega_1$ such that $f(x)=f(x_0)$ for all $x\geq x_0$ in $A$.
+
+\item[\quad] c)
+The Stone-\v Cech compactification of $A\backslash \{\omega_1\}$
+(with its usual subspace topology) is
+equivalent to $(A,\tau)$.
+
+
+%\vspace{.15in}
+\item[7.]
+Prove that for any set $X$ the cardinality of $X$ is strictly smaller
+than the cardinality of ${\cal P}(X)$, the set of all subsets of $X$.
+
+%\vspace{.15in}
+
+%\hfill\eject
+
+\item[8.]
+A continuous map $f:(X,\tau)\to (Y,\sigma)$ is said to be {\bf final}
+provided that for each topological space $(Z,\mu)$ each set-function
+$g:Y\to Z$ is continuous whenever $g\circ f:(X,\tau)\to (Z,\mu)$
+is continuous. Prove any two of the following statements:
+
+\item[\quad] a)
+The composition of final (continuous) maps is final.
+
+\item[\quad] b)
+The ``second factor" of a final map is final: i.e., if
+$$(X,\tau)\buildrel{f}\over{\to} (Y,\sigma)\buildrel{h}\over{\to}(W,s)$$
+are continuous maps and $h\circ f$ is final, then $h$ is final.
+
+\item[\quad] c)
+Each quotient map is final.
+
+
+%\vspace{.15in}
+\item[9.]
+Work one of the following:
+
+\item[\quad] a)
+Give an example of two topologies $\sigma$ and $\tau$ on the
+set of integers $\Bbb Z$ for which $\sigma
+\subset_\subplus\tau$ and
+$({\Bbb Z},\sigma)$ is homeomorphic to $({\Bbb Z},\tau)$.
+
+\item[\quad] b)
+Give an example of a point-finite open covering of the real line
+with the usual topology that is not locally finite.
+
+
+\item[10.]
+Prove one of the following statements:
+
+\item[\quad] a)
+Each compact Hausdorff space is a Baire space.
+
+\item[\quad] b)
+The set of rational numbers is not a $G_\delta\hbox{-set}$ in $\R$
+(where $\R$ has its usual topology).
+
+\vfill\eject
+
+\item[11.]
+Prove or disprove one of the following:
+
+\item[\quad] a)
+For each open covering $\{U_\alpha|\alpha\in A\}$ of a paracompact space $X$,
+there is a partition of unity subordinated to $\{U_\alpha\}_{\alpha\in A}$.
+
+\item[\quad] b)
+Each locally compact Hausdorff space is paracompact.
+
+%\vspace{.15in}
+\item[12.]
+Prove one of the following theorems:
+
+\item[\quad] a)
+Urysohn Lemma.
+
+\item[\quad] b)
+Tychonoff Theorem on Product of Compact Spaces.
+
+\item[\quad] c)
+Urysohn Metrization Theorem.
+
+%\vspace{.15in}
+\item[13.]
+Let $X$, $Y$ and $Z$ be topological spaces and $X$ be locally compact
+Hausdorff. Let $C(X,Y)$ be the space of continuous functions from
+$X$ into $Y$ with compact-open topology. For a function
+$$ F:X\times Z\to Y$$
+let $\hat F$ be the function from $Z$ into the set of all functions
+from $X$ to $Y$ defined by
+$$ \hat F (z)(x) = F(x,z). $$
+Prove one of the following:
+
+
+\item[\quad] a)
+If $F$ is continuous, then  $\hat F$ is continuous from $Z$ into
+$C(X,Y)$.
+
+\item[\quad] b)
+If $\hat F$ is continuous from $Z$ into $C(X,Y)$ then $F$ is continuous.
+
+
+\vspace{.15in}
+\item[14.]
+For any $\varepsilon>0$ and any
+$(a,b)\in {\Bbb R}^2$ let an
+\underbar{$\varepsilon \hbox{-plus centered at\ } (a,b)$}
+be the set
+  $+_\varepsilon(a,b)=\{(x,b)\in\R^2\bigg| |x-a| <\varepsilon\}
+   \cup \{(a,y)\in{\Bbb R}^2\bigg| |y-b|<\varepsilon\}$.
+Then call a set $U\subseteq{\Bbb R}^2$ \underbar{plus-open}
+if for each $(a,b)\in U$ there is some $\varepsilon>0$ such that
+$+_\varepsilon(a,b)\subseteq U$.
+
+\item[\quad] a)
+Prove that the plus-open subsets of ${\Bbb R}^2$ form a topology for
+${\Bbb R}^2$, (called the plus-topology for ${\Bbb R}^2$).
+
+\item[\quad] b)
+Prove that the plus-topology for ${\Bbb R}^2$ is \underbar{strictly}
+finer than the usual topology for ${\Bbb R}^2$.
+
+
+
+\end{description}
+\end{Large}
+\end{document}

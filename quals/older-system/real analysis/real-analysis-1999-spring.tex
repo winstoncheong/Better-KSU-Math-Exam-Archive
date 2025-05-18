@@ -1,0 +1,154 @@
+% latex file
+%Real Analysis - Saeki & Vaninsky
+
+\def\hcorrection#1{\advance\hoffset by #1 }
+\def\vcorrection#1{\advance\voffset by #1 }
+
+\input amssym.def   %defines Bbb and gothic (frak)
+\input amssym       %defines Bbb and gothic (frak)
+
+\input prepictex.tex
+\input pictex.tex
+\input postpictex.tex
+
+%\documentstyle[bbb]{report}
+\documentclass[bbb]{report}
+
+\vcorrection{-1in}
+\hcorrection{-1.25in}
+
+\topmargin  0in
+\textwidth 7in
+\textheight 9.5truein
+
+\mathsurround=2pt
+
+\pagestyle{empty}
+
+\def\ds{\displaystyle}
+
+\def\R{{\Bbb R}}
+\def\Z{{\Bbb Z}}
+\def\C{{\Bbb C}}
+\def\D{{\Bbb D}}
+
+
+\begin{document}
+
+\begin{Large}
+
+\hfill Name \rule{2.5in}{.01in}
+\par
+\vspace{.25in}
+
+\begin{center}
+   REAL ANALYSIS QUALIFYING EXAM \\
+   Spring 1999 \\
+   (Saeki \& Vaninsky) \\
+\end{center}
+
+
+\vspace{.1in}
+
+\end{Large}
+
+\begin{large}
+
+
+\begin{center} {\bf
+Do all eight. Throughout, $(X,{\cal A},\mu)$
+is a measure space.
+} \end{center}
+
+
+\vspace{.25in}
+
+
+\begin{description}
+
+\item[1.]
+Let $1\leq p\leq \infty$ and define $L^1+L^P:=\{g+h:g\in L^1,h\in L^P\}$.
+Prove $L^r\subset L^1+L^P$ for $r\in[1,p]$.
+
+
+
+\vspace{.15in}
+
+\item[2.]
+Let $w:X\to[0,\infty]$ be measurable, and let $\nu(E):=\int_Ew\,d\mu$ for
+$E\in {\cal A}$. Prove: (a) $\nu$ is a measure on ${\cal A}$,
+and (b) $\int\,f\,d\nu=\int\, fw\, d\mu$ for each nonnegative
+measurable function $f$ on $X$.
+
+\vspace{.15in}
+
+\item[3.]
+Let $I$ be an open interval in $\R$, and let $f$ be a function on
+$X\times I$ such that
+
+\item[\quad] (i)
+$\forall t\in I,f(\cdot,t)\in L^1(\mu)$,
+
+\item[\quad] (ii)
+$\forall x\in X,f(x,\cdot)$ is differentiable,
+
+\item[\quad] (iii)
+$\exists g\in L^1(\mu)$ such that $\left| \ds\frac{\partial t}{\partial t}
+(x,t)\right| \leq g(x)$ everywhere.
+
+\item[\quad] Prove that
+$$ \frac{d}{dt}\int \,f(x,t)d\mu(x)=\int\frac{\partial f}{\partial t}
+   (x,t)d\mu(x). $$
+
+
+
+\vspace{.15in}
+
+\item[4.] (a)
+Fix $0<\varepsilon< 1$. Construct a closed set $K\subset[0,1]$
+such that $K$ contains no rationals and $|K|>1-\varepsilon$.
+
+\item[\quad] (b)
+Construct a Borel set $E\subset[0,1]$ such that $0< |E\cap I|<|I|$
+for each nonempty open interval $I\subset[0,1]$.
+
+
+\vspace{.15in}
+
+\item[5.]
+Suppose $f\in L^1(\R), g\in L^P(\R), 1\leq p\leq\infty$.
+Prove $\|f\ast g\|_p\leq\|f\|_1\|g\|_p$.
+
+\vspace{.15in}
+
+\item[6.]
+Let $(a_n)\in\ell^2$. Prove that
+$$ \exp \left( \frac{1}{2\pi} \int^{2\pi}_0
+   \log \left|\sum^\infty_{n=0} a_ne^{int}\right| dt \right)
+   \leq \left( \sum^\infty_{n=0}|a_n|^2\right)^{\frac{1}{2}}.
+   $$
+
+
+\vspace{.15in}
+
+\item[7.]
+Prove the completeness of  $L^P(\mu)$ for $1\leq p\leq\infty$.
+
+
+\vspace{.15in}
+
+\item[8.]
+Let $\varphi \in L^2(\R)$ and let $V$ be the closed linear span
+(in $L^2$) of the $\varphi(x-n)$ with $n\in\Z$.
+Also let $w$ be a $2\pi$-periodic bounded measurable function
+on $\R$. Prove that $\widehat\varphi w =\widehat f$ for some $f\in V$.
+
+\vfill
+
+
+
+\end{description}
+
+\end{large}
+
+\end{document}

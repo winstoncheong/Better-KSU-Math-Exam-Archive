@@ -1,0 +1,199 @@
+% latex file
+\def\hcorrection#1{\advance\hoffset by #1 }
+\def\vcorrection#1{\advance\voffset by #1 }
+
+\documentclass{article}
+\usepackage{my,amsxtra,amssymb,amsthm}
+
+\vcorrection{-1.0in}
+\hcorrection{-0.8in}
+\textwidth 6.0in
+\textheight 9.0in
+
+\def\R{\mathbb R}
+\def\C{\mathbb C}
+\def\N{\mathbb N}
+\def\Z{\mathbb Z}
+\def\Q{\mathbb Q}
+
+\begin{document}
+%\begin{Large}
+
+
+
+
+
+
+\begin{center}\begin{LARGE}
+{\bf Real Analysis Qualifying Exam}\\ 
+{\bf Fall 1987}\\ \end{LARGE}
+\end{center}
+\vspace{0.1in}
+\noindent\hrulefill\\
+
+Do as many of the following ten problems as time permits. If the problem
+is phrased as an assertion, then you are to prove that assertion.
+
+\begin{description}
+\item[1.]
+If $f$ and $g$ are complex-valued Lebesgue measurable function on $\R$ with
+$f$ integrable and $g$ bounded, then the formula
+$$f \ast g(x) := \int_\R f(x-y) g(y) dy$$
+defines a function $f \ast g$ that is uniformly continuous on $\R$. [HINT:
+Approximate $f$ by a function $h$ that is continuous with compact support.]
+
+\item[2.]
+Let $\lambda$ denote Lebesgue measure on $\R$. If $A$ and $B$ are
+$\lambda$-measurable subsets of $\R$ with $0 < \lambda (A) < \infty$ and
+$\lambda(B) > 0$, then the function $x\to \lambda (A\cup (B+x))$ from
+$\R$ into $\R$ in continuous and not identically 0, so the set
+$A-B := \{a-b: a \in A, b \in B\}$ has nonvoid interior. [HINT: Apply
+problem 1 to the characteristic functions of $A$ and $-B$. Also,
+$\int h \neq 0$ implies $h \neq 0$.]
+
+\item[3.]
+Let $\lambda$ denote Lebesgue measure on $\R$.
+
+\item[\quad] (a)
+If $B \subset \R$ is $\lambda$-measurable with $\lambda (B) >0$ and if $D$ is
+a countable dense subset of $\R$, then the set
+$D+B := \{d +b: d \in D, b \in B\}$ is almost all of $\R$, that is,
+$\lambda (\R \backslash (D+B)) = 0$. [Hint: Use problem 2.]
+
+\item[\quad] (b)
+The set $D+B$ in (a) might not equal $\R$. Give an example.
+
+\item[4.]
+Let $I$ be a nonvoid open interval of $\R$ and let $\phi : I\to \R$ be
+convex, that is,
+$$\phi ((1-\alpha) s + \alpha t) \leqq (1-\alpha) \phi (s) + \alpha \phi (t)$$
+whenever $s,t \in I$ and $0 \leq \alpha \leq 1$. Show that:
+
+\item[\quad] (a)
+$s < c < t$ in $I$ implies
+$$\frac{\phi (c) - \phi (s)}{c-s} \leqq \frac{\phi (t) - \phi (s)}{t-s}
+  \leqq \frac{\phi (t) - \phi (c)}{t-c}.$$
+[HINT: $c=(1-\alpha)s + \alpha t$ where $\alpha = \frac{c-s}{t-s}$.]
+
+\item[\quad] (b)
+If $c \in I$ and
+$$m= \inf \left\{\frac{\phi (t) - \phi (c)}{t-c} :t \in I, c < t \right\},$$
+then $m \in \R$ and $m(u-c) + \phi (c) \leqq \phi (u)$ for every $u \in I$.
+
+\item[\quad] (c)
+[Jensen's Inequality]. If $(x, {\cal M}, \mu)$ is a measure space with
+$\mu (X) =1$ and if $f:X \to I$ is $\mu$-integrable, then
+$\int \phi \circ f d \mu$ is meaningful and
+$\phi(\int fd\mu) \leq \int \phi \circ fd\mu$. You may use the fact that
+$\phi$ is continuous on $I$, but prove it if time permits.
+
+[HINT: In (b), take $c=\int fd \mu$, $u = f(x)$, and integrate.]
+
+\item[5.]
+Consider the function $f(x) := x$ on $[0, 2\pi[$. Write down its Fourier
+series with respect to the orthonormal basis
+$\left\{\frac{1}{\sqrt{2\pi}} e^{inx} \right\}^\infty_{n=-\infty}$ in
+$L^2 ([0, 2\pi[$, Legesgue measure). Use this to calculate the value of
+$\sum^\infty_{n=1} n^{-2}$.
+
+\item[6.]
+Let $(X, {\cal M}, \mu)$ be a finite (positive) measure space,
+$M(X, {\cal M}, \mu)$ the $C$-valued, ${\cal M}$-measurable functions on $X$.
+Say that, for $f_n, f \in M, f_n$ converges to $f$ in $\mu$-measure if
+$\lim_{n \to \infty} \mu(\{x \in X: |f_n (x) - f(x)| \geq \varepsilon\})=0$
+for every $\varepsilon > 0$. For $f, g \in M$ define
+$$d(f,g) :=\inf \{\varepsilon > 0 : \mu (\{|f-g| \geq \varepsilon \}) \leq
+  \varepsilon \}.$$
+
+\item[\quad] (a)
+Show that $d$ is a pseudo-metric.
+
+\item[\quad] (b)
+Show that $f_n \to f$ in $\mu$-measure iff $d(f_n, f) \to 0$.
+
+\item[\quad] (c)
+Show that $d$ is complete.
+
+\item[\quad] (d)
+Show that $\rho (f,g) := \int_X \frac{|f-g|}{1+|f-g|} d\mu$ defines a
+pseudo-metric in $M$ that is equivalent to $d$.
+
+\item[7.]
+Let $(X, {\cal M}, \mu)$ be a (positive) measure space. Call $A \in {\cal M}$
+an atom if there is no measurable $B \subset A$ with $0 < \mu(B) < \mu (A)$.
+Suppose that there are no atoms.
+
+\item[\quad] (a)
+Show that if $A\in {\cal M}$, $0 < \mu (A) < \infty$ and $\varepsilon >0$,
+then $\exists$ measurable $B \subset A$ with $0 < \mu (B) < \varepsilon$.
+
+\item[\quad] (b)
+Show that if $A \in {\cal M}, 0 < \beta < \mu (A) < \infty$, then $A$
+contains a measurable subset of measure $\beta$.
+
+HINTS: Inductively define classes ${\cal H}_n \subset {\cal M}$, sets
+$H_n \in {\cal H}_n$ and numbers $h_n$ by
+$$\begin{aligned}
+        H_0 &:= \phi, {\cal H}_0 := \{H_0\}, h_0 := 0; \\
+        {\cal H}_n &:= \{H \in {\cal M}: H \subset A \backslash
+        \bigcup_{k< n} H_k \, \& \quad \mu (H) + \mu \left(\bigcup_{k<n} H_k
+        \right) \leq \beta\},\\
+        h_n &:= \sup \{\mu(H) :H \in {\cal H}_n\}, \quad \mu (H_n) > h_n -
+        \frac{1}{n}.
+        \end{aligned}$$
+Then consider $\cup_k H_k$.
+
+\item[\quad] (c)
+Show that if $\alpha_j \in \R^+$, $A \in {\cal M}$ and
+$\sum^\infty_{j=1} a_j = \mu (A) < \infty$, then $A$ can be written as a
+disjoint union of $A_j \in {\cal M}$ with $\mu(A_j) = \alpha_j$ for each
+$j$.
+
+\item[8.]
+Let $X$ be a locally compact Hausdorff space, ${\cal M}$ the class of its
+Borel sets and $\mu$ a regular Borel measure on ${\cal M}$. Suppose that
+$\mu$ is continuous in the sense that $\mu(\{x\}) =0$ for each $x \in X$.
+Show that then there are no atoms (See problem 7 for the definition of
+this term.)
+
+HINT: The concept of the support of $\mu$ is useful.
+
+\item[9.]
+Let $X$ be a normed linear space, $X^\ast$ its dual space, and $M$ a closed
+linear subspace of $X$. Define $M^\perp := \{f \in X^\ast : f(x) = 0$ for all
+$x \in M\}$. Show that $M=\{x \in X :f(x) =0$ for all $f \in M^\perp\}$.
+
+\item[10.]
+Let $a <b$ in $\R$, let $\phi :[a,b] \to \R$ be continuous, let
+$[\alpha, \beta] = \phi ([a,b])$ and let $\lambda$ denote Lebesgue measure.
+Suppose that $\lambda (\phi(E))=0$ whenever $E \subset[a,b]$ and
+$\lambda (E) =0$. Then there exists a Borel measurable
+$w:[a,b] \to [0, \infty[$ such that $f \in L_1 ([\alpha, \beta])$ implies
+$(f \circ \phi) w \in L_1 ([a,b])$ and
+$$\int^\beta_\alpha fd\lambda = \int^b_a (f \circ \phi) wd\lambda.$$
+[HINT: Let $\mu (B) := \lambda (\phi^{-1} (B))$ for Borel sets
+$B\subset [\alpha, \beta]$. Consider $f$ equal to the characteristic function
+of $B$. Maybe $w= g \circ \phi$.]
+
+
+
+
+
+
+\end{description}    
+%\end{Large}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

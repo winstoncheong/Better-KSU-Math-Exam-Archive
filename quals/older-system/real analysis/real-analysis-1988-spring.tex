@@ -1,0 +1,154 @@
+% latex file
+\def\hcorrection#1{\advance\hoffset by #1 }
+\def\vcorrection#1{\advance\voffset by #1 }
+
+\documentclass{article}
+\usepackage{my,amsxtra,amssymb,amsthm}
+
+\vcorrection{-1.0in}
+\hcorrection{-0.8in}
+\textwidth 6.0in
+\textheight 9.0in
+
+\def\R{\mathbb R}
+\def\C{\mathbb C}
+\def\N{\mathbb N}
+\def\Z{\mathbb Z}
+\def\Q{\mathbb Q}
+\def\T{\mathbb T}
+\def\Z{\mathbb Z}
+
+\begin{document}
+%\begin{Large}
+
+
+
+
+
+
+\begin{center}\begin{LARGE}
+{\bf Real Analysis Qualifying Exam}\\ 
+{\bf Spring 1989}\\ \end{LARGE}
+\end{center}
+\vspace{0.1in}
+\noindent\hrulefill\\
+
+In the following, $(X, {\cal A}, \mu)$ is a measure space and if $X$ is
+a topological space, then ${\cal B}(X)$ is the $\sigma$-algebra of all
+Borel subsets of $X$.
+
+\begin{description}
+\item[1.] (a)
+What does it mean to say that $f:X \to \C$ is ${\cal A}$-measurable?
+
+\item[\quad] (b)
+Prove that if $f:g : X \to \C$ are both ${\cal A}$-measurable, then so is
+$f+g$.
+
+\item[2.]
+Suppose $\{A_n\}^\infty_{n=1} \subset {\cal A}$ and
+$\sum^\infty_{n=1} \mu(A_n) < \infty$. Define
+$$B=\{x \in X: \{n \in N : x \in A_n\} \hbox{\ is\ } \hbox{infinite}\}.$$
+Prove that $B\in {\cal A}$ and $\mu(B) = 0$.
+
+\item[3.]
+Suppose $\mu(X) < \infty$ and $\phi : X \to \R$ is ${\cal A}$-measurable.
+Define $\nu$ on ${\cal B}(\R)$ by $\nu
+(B) = \mu(\phi^{-1} (B))$. Prove that
+$\nu$ is a finite measure and that if $f:\R \to \C$ is a bounded
+Borel measurable function, then $f \circ \phi$ is ${\cal A}$-measurable and
+$$\int_X f \circ \phi d\mu = \int_\R fd\nu.$$
+
+\item[4.] (a)
+Let ${\cal S}$ be the smallest $\sigma$-algebra of subsets of $\R^2$ that
+contains the family ${\cal F} = \{ A \times B : A$ and $B$ are bounded open
+intervals of $\R$\}. Prove that ${\cal S} = {\cal B} (\R^2)$.
+
+\item[\quad] (b)
+For $E \subset \R^2$ and $y \in \R$ put
+$$E^y = \{x \in \R: (x,y) \in E\}.$$
+Prove that if $E \in {\cal B} (\R^2)$, then $E^y \in {\cal B} (\R)$ for all
+$y \in \R$.
+
+\item[5.]
+Show that if $B$ is a Borel subset of $\R^2$ and almost every vertical
+cross-section of $B$ has (one-dimensional) Lebesgue measure 0, then almost
+every horizontal cross-section of $B$ has Lebesgue measure 0.
+
+\item[6.]
+Prove that if $p \in \N$ and $\mu : {\cal B}(\R^p) \to [0,\infty]$ is a
+measure such that $\mu (K) < \infty$ for every compact $K \subset \R^p$, then
+$\mu$ is regular. [HINT: Use a Riesz Representation Theorem to find a
+``regular relative" of $\mu$.]
+
+\item[7.]
+Let $p \in \N$ and let $(\mu_n)^\infty_{n=0}$ be a sequence Borel probability
+measures on $\R^p$. Suppose that
+$$\lim_{n\to \infty} \int gd\mu_n = \int g d \mu_0$$
+whenever $g: \R^p \to \C$ is continuous with compact support. Prove the
+following:
+
+\item[\quad] (a)
+If $\varepsilon > 0$, then there exists a compact $K \subset \R^p$ such that
+$\mu_n(K^\prime) < \varepsilon$ for all $n \geqq 0$. Here
+$K^\prime = \R^p \ K$.
+
+\item[\quad] (b)
+If $f: \R^p \to \C$ is bounded and continuous, then
+$$\lim_{n \to \infty} \int fd\mu_n = \int f d\mu_0.$$
+
+\item[\quad] (c)
+If $B \subset \R^p$ is a Borel set whose closure $B^-$ and interior $B^0$
+satisfy $\mu_0(B^-)=\mu_0 (B^0)$, then
+$$\lim_{n\to \infty} \mu_n (B) = \mu_0 (B).$$
+
+\item[8.]
+For $\mu \in M(\R)$, define $\widehat \mu$ on $\R$ by
+$$\widehat \mu (t) = \int e^{-itx} d\mu (x).$$
+Prove that if $\int |x| d |\mu| (x) < \infty$, then $\widehat \mu$ is
+differentiable on $\R$.
+
+\item[9.]
+For $\mu \in M(\T)$, define $\widehat \mu$ on $\Z$ by
+$$\widehat \mu (n) = \int e^{-inx} d\mu (x).$$
+Prove that if $\lim_{n \to +\infty} \widehat \mu (n) = 0$, then
+$\lim_{n \to -\infty} \widehat \mu (n) = 0$. [HINT: Don't forget
+that $\mu$ is a {\it complex} measure. Remember complex conjugation.
+Approximate a Radon-Nikodym derivative by trigonometric polynomials.]
+
+\item[10.]
+Let ${\cal A}_0$ be an {\it algebra} of subsets of $X$ (i.e.,
+${\cal A}_0$ is closed under finite unions, relative complements and contains
+$\emptyset$ and $X$), ${\cal A}$ the smallest $\sigma$-algebra which contains
+${\cal A}_0$, and $\mu$ a finite positive measure on ${\cal A}$. Show that
+${\cal A}_0$ is $\mu$-dense in ${\cal A}$ in this sense: for $A \in {\cal A}$
+and $\varepsilon > 0$ $\exists A_0 \in {\cal A}_0$ such that
+$\mu(A \Delta A_0) < \varepsilon$. Here $A \Delta A_0$ means
+$(A \backslash A_0) \cup (A_0 \backslash A)$. [HINTS: Look at the class of
+all $A$ in ${\cal A}$ which are so approximable. Matters may be facilitated
+by translating everything into statements about characteristic functions and
+the $L_1$-metric.]
+
+
+
+
+
+
+
+\end{description}    
+%\end{Large}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

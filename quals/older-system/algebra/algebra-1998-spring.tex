@@ -1,0 +1,147 @@
+%From dbski@math.ksu.edu Wed Jan 28 09:02:18 1998
+%Subject: algebra qualifying exam (S98)
+
+
+
+
+% latex file
+\def\hcorrection#1{\advance\hoffset by #1 }
+\def\vcorrection#1{\advance\voffset by #1 }
+\input amssym.def
+\input amssym
+%\documentstyle{article}
+\documentclass{article}
+\pagestyle{plain}
+
+
+\vcorrection{-1.0in}
+\hcorrection{-0.8in}
+\textwidth 6.0in
+\textheight 9.0in
+\begin{document}
+\begin{Large}
+\newcommand{\C}{{\Bbb C}}
+\newcommand{\Q}{{\Bbb Q}}
+\newcommand{\Gal}{\mbox{\rm Gal}}
+\newcommand{\Aut}{\mbox{\rm Aut}}
+
+
+\begin{center}\begin{LARGE}
+{\bf  Algebra Qualifying Exam}\\ 
+{\bf January 27, 1998}\\ \end{LARGE}
+\end{center}
+\vspace{0.1in}
+\noindent\hrulefill\\
+{\bf Instructions:} You are given 10 problems from which you are to do 8.
+ Please indicate those  8 problems which you would like  to be graded 
+by circling the problem numbers on the  problem sheet. 
+{\bf Note:} All rings in this exam are associative and with 1 and 
+all integral domains are commutative.
+% $\Bbb Q $ and $ \Bbb C $ are
+%the fields of  rational and complex  numbers respectively.
+
+%$\Bbb Z $ and $ \Bbb Q $ are
+%the sets of the integers and rational numbers respectively.
+
+\vspace{0.2in}
+
+\begin{enumerate}
+
+%\item Let $G$ be a finite group of order 120. Show that either
+%\begin{enumerate}
+%\item There exists a nonidentity element normalizing every 5-Sylow
+%subgroup of $G$, or
+%\item $G\cong S_5$, the symmetric group on 5 letters.
+%\end{enumerate}
+
+\item Let $G$ be a finite group of even order. Prove $G$ contains
+an odd number of involutions. (An {\em involution} is an element
+of order 2.)
+
+\item Let $G$ be a group and assume that for all $1\not= x\in G$,
+$C_G(x)$ is abelian. Define a relation $\sim $ on $G$ by $x\sim y$
+if and only if $xy=yx$. 
+\begin{enumerate}
+\item Prove that $\sim$ is an equivalence relation on the nonidentity
+elements $G^\sharp $ of $G$.
+\item If $\cal C$ is an equivalence class in $G^\sharp $, prove that
+$\{1\}\cup \cal C $ is a subgroup of $G$.
+\end{enumerate}
+
+\item Let $G$ be a finite group acting transitively on the set $X$. Fix
+$x\in X$, set $G_x=\mbox{Stab}_G(x)$ and let $P\in\mbox{Syl}_p(G_x)$,
+where $p$ is prime. Prove that $N_G(P)$ acts transitively on $\mbox{Fix}(P)$.
+
+\item Let ${\Bbb F}$ be a field and form the quotient ring
+$$R\ =\ {\Bbb F}[x,y]/(x^2+y^2){\Bbb F}[x,y]$$
+where $x$ and $y$ are indeterminate over ${\Bbb F}$. Prove that
+$R$ is an integral domain if and only if $-1$ is not a square in 
+${\Bbb F}$.
+
+\item Let $R$ be a ring and let $M$ be an irreducible $R$-module. Prove
+that if $0\not= m\in M$, then the set
+$$ \mbox{Ann}_R(m)\ =\ \{r\in R|\ rm=0\}$$
+is a maximal left ideal in $R$.
+
+\item Suppose that $V$ is a vector space over the field ${\Bbb F}$ and
+that $T:V\to V$ is a linear transformation having invariant factors
+$$x-2,x(x-2),x^2(x-2)^2,x^2(x-2)^2(x^3-1).$$
+\begin{enumerate}
+\item What is the nullity of $T$ if $\mbox{char }{\Bbb F}\not= 2$?
+\item What is the nullity of $T$ if $\mbox{char }{\Bbb F}= 2$?
+\item What is the dimension of the set of vectors fixed by $T$ if
+$\mbox{char }{\Bbb F}\not= 3$?
+\item What is the dimension of the set of vectors fixed by $T$ if
+$\mbox{char }{\Bbb F}= 3$?
+\end{enumerate}
+
+\item Let $M$ be a Noetherian $R$-module and let $\phi :M\to M$ be a
+surjective $R$-module homomorphism. Prove that $\phi $ is injective.
+(Hint: consider the increasing sequence of submodules $0\subseteq
+\mbox{ker }\phi\subseteq \mbox{ker }\phi^2\subseteq\cdots $.)
+
+\item Let $R$ be a unique factorization domain in which every prime
+ideal is maximal. Prove that every prime ideal is a principal ideal.
+(In fact, it turns out that {\em every} ideal is principal, but you
+don't need to show this.)
+
+\item Let ${\Bbb F}$ be a field and let $f(x), g(x)\in {\Bbb F}[x]$. 
+Suppose that $f(x)$ and $g(x)$ share a common root in some extension
+field  ${\Bbb K}\supseteq {\Bbb F}$. Show that the greatest common divisor
+of $f(x)$ and $g(x)$  in ${\Bbb F}[x]$ cannot be a unit. 
+
+%\item Let $p$ be a prime and let ${\Bbb F}$ be a field of characteristic
+%$p$. Define the {\em Frobenius map} $\sigma :{\Bbb F}\to {\Bbb F}$
+%by setting $\sigma (\alpha )=\alpha ^p$. 
+%\begin{enumerate}
+%\item Show that $\sigma :{\Bbb F}\to {\Bbb F}$ is an injective field
+%endomorphism.
+%\item Show by example that $\sigma $ need not be surjective.
+%\item Compute the structure of $\mbox{inv}_{\Bbb F}(\sigma )$.
+%\end{enumerate}
+
+\item Let $p$ be prime and let $\zeta = e^{2\pi i/p}$. Compute the
+degree of $m_{\zeta +\zeta^{-1}}(x)$. 
+      
+
+
+    
+\end{enumerate}
+\end{Large}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

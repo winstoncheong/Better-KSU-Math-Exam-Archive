@@ -1,0 +1,125 @@
+% latex file
+\def\hcorrection#1{\advance\hoffset by #1 }
+\def\vcorrection#1{\advance\voffset by #1 }
+
+\documentclass{article}
+\usepackage{my,amsxtra,amssymb,amsthm}
+
+\vcorrection{-1.0in}
+\hcorrection{-0.8in}
+\textwidth 6.0in
+\textheight 9.0in
+
+\def\R{\mathbb R}
+\def\C{\mathbb C}
+\def\N{\mathbb N}
+\def\Z{\mathbb Z}
+\def\Q{\mathbb Q}
+
+\begin{document}
+%\begin{Large}
+
+
+
+
+
+
+\begin{center}\begin{LARGE}
+{\bf Complex Analysis Qualifying Exam}\\ 
+{\bf Spring 1985}\\ \end{LARGE}
+\end{center}
+\vspace{0.1in}
+\noindent\hrulefill\\
+
+\begin{description}
+\item[1.]
+Let $f \varepsilon C(G)$, where $G$ is the open square defined by
+$-1 < \hbox{\ Rez\ } < 1$ and $-1 < Imz < 1$. Suppose that
+$$\int_\gamma fdz = 0$$
+for all rectangular loops $\gamma$ in $G$ with one side contained in the
+real axis. Prove that $f \varepsilon H(G)$.
+
+\item[2.]
+Evaluate
+$$I_n = \int^\infty_0 \frac{dx}{1 = x^n} \hbox{\ for\ } n=2,3, \dots$$
+
+\item[3.]
+Let $G$ be a region in $\C$, and let $(f_n)$ be a uniformly bounded
+sequence in $H(G)$. Suppose that the set
+$$A = \{z \varepsilon G : \lim_n f_n (z) = 0\}$$
+has a limit point in $G$. Prove that the $f_n$ converge to 0 uniformly
+on compact subsets of $G$.
+
+\item[4.]
+Let $G$ be a region in $\C$, $f_n$ a sequence in $H(G)$, and
+$f \varepsilon H(G)$. Suppose that the $f_n$ converge to $f$ uniformly
+on compact subsets of $G$, that
+$\{z \varepsilon \C : |z-a| \leq r\} \subset G$, and that $f$ has no
+zero on the circle $|z-a| = r$. Prove that there exists an integer $N$ such
+that for each $n > N$, $f_n$ and $f$ have the same number of zeros in
+$D(a,r)$.
+
+\item[5.]
+Let $G$ be a region in $\C, f, g \varepsilon H(G)$, and $\varepsilon > 0$.
+Suppose that $|f| \cdot |g|^\varepsilon$ attains a maximum on $G$. Prove
+that $|f| \cdot |g|^\varepsilon$ is a constant on $G$.
+
+\item[6.]
+Let $G = \{z \varepsilon \C : \hbox{\ Rez\ } >0\}$,
+$f \varepsilon C(\overline G)$, and $f \varepsilon H(G)$. Suppose that $f$
+is bounded on the imaginary axis, and that
+$|f(z)| / (1+|z|^t)$ is bounded on $G$ for each $t >0$. Prove that $f$ is
+bounded on $G$.
+
+\item[7.]
+Let $G \subset \C$ be open, and $\alpha \varepsilon \C$. Suppose that there
+exists $g \varepsilon H(G)$ such that $g(z)^2 = z- \alpha$ for all
+$z$ in $G$. Prove that $\alpha$ belongs to an unbounded component of
+$\C \backslash G$.
+
+{\bf HINT:} You may use the fact (without proof) that if $B$ is a bounded
+component of $\C \backslash G$, then there exists a bounded open subset
+$V$ of $G$ such that $B \subset V$ and $\partial V \subset G$.
+
+\item[8.]
+State and prove the Harnack inequality for harmonic functions.
+
+\item[9.]
+Let $G$ be a region in $\C$, and let $u$ be a real-valued continuous
+function on $G$. Suppose that for each $a \varepsilon G$, there exists
+$R>0$ such that $D(a,R) \subset G$ and
+$$2 \pi u (a) \leq \int^\pi_{-\pi} u(a+re^{it})dt \quad \forall r \varepsilon
+  [0,R).$$
+
+Prove:
+
+(a) If $u$ attains a maximum on $G$, then $u$ is a constant on $G$.
+
+(b) $u$ is subharmonic on $G$.
+
+\item[10.]
+Let $G$ be a region in $\C$. State four conditions each of which is equivalent
+to the simple connectivity of $G$. Also prove their equivalence.
+
+
+
+
+
+
+\end{description}    
+%\end{Large}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

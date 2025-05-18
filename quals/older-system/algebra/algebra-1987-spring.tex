@@ -1,0 +1,154 @@
+% latex file
+\def\hcorrection#1{\advance\hoffset by #1 }
+\def\vcorrection#1{\advance\voffset by #1 }
+
+\documentclass{article}
+\usepackage{my,amsxtra,amssymb,amsthm}
+
+\vcorrection{-1.0in}
+\hcorrection{-0.8in}
+\textwidth 6.0in
+\textheight 9.0in
+
+\def\R{\mathbb R}
+\def\C{\mathbb C}
+\def\N{\mathbb N}
+\def\Z{\mathbb Z}
+\def\Q{\mathbb Q}
+
+\begin{document}
+%\begin{Large}
+
+
+
+
+
+
+\begin{center}\begin{LARGE}
+{\bf Algebra Qualifying Exam}\\ 
+{\bf Sping 1987}\\ \end{LARGE}
+\end{center}
+\vspace{0.1in}
+\noindent\hrulefill\\
+
+Do two problems from each section.
+
+\centerline{{\bf Group Theory}}
+
+\begin{description}
+\item[1.]
+Let $G$ be a non-abelian group of order $pq$, where $p$ and $q$ are primes
+and $p < q$. Prove that $p|q-1$.
+
+\item[2.]
+Prove that there does not exist a simple group of order 112.
+
+\item[3.]
+Prove the Frattini lemma: if $G$ is a finite group, $K$ is a normal
+subgroup of $G$, and $P$ is a Sylow $p$-subgroup of $K$, then $G = N_G(P)K$.
+
+\item[4.]
+Prove that any finite nilpotent group $G$ is the (internal) direct product
+of its Sylow subgroups. (One possible approach: use the fact that
+$N_G (H) \neq H$ for any proper subgroup $H$ of $G$.)
+
+\centerline{{\bf Linear Algegra}}
+
+\item[1.]
+Let $V$ be a finite-dimensional ${\bf F}$-vector space and let
+$T \in \hbox{End}_F (V)$. Assume that the minimal polynomial of $T$ is of the
+form $f(x) g(x)$ where $f(x)$ and $g(x)$ are relatively prime polynomials
+in ${\bf F} [x]$. Prove that $V = \ker f(T) \oplus \ker g(T)$
+(internal direct sum).
+
+\item[2.]
+Let $V$ be an ${\bf F}$-vector space and let $W$ be a subspace of $V$. Let
+$\widehat V$ and $\widehat W$ denote the dual spaces of $V$ and $W$,
+respectively. Prove that
+$$\widehat W \cong \widehat V / Ann(W)$$
+where $Ann(W)$ is $\{f \in \widehat V | W \subseteq  \ker f\}$.
+
+\item[3.]
+Let $V$ be a vector space of dimension 7 over the rationals, and let
+$T \in \hbox{End}_Q(V)$. Suppose that the characteristic polynomial of $T$
+is $(x-1)^5(x-2)^2$ and that the minimal polynomial of $T$ is
+$(x-1)^4(x-2)$. List the possibilities for the Jordan canonical form of
+$T$, up to re-ordering of Jordan blocks.
+
+\item[4.]
+Let $V$ be a finite-dimensional vector space over an algebraically closed
+field ${\bf F}$, and let $S$ and $T$ be two {\it commuting} members of
+$\hbox{End}_{\bf F} (V)$. Show that $S$ and $T$ have a common eigenvector
+(not necessarily for the same eigenvalue).
+
+\centerline{{\bf Rings and Modules}}
+(In these problems, rings are assumed to have a multiplicative identity
+element ``1", and modules are assumed to be unital. That is, if $R$ is a ring
+and $M$ is a (left) $R$-module, then $1 \cdot x=x$ for all $x \in M$).
+
+\item[1.]
+By definition, and $R$-module is irreducible if it is non-zero and has
+no proper non-zero submodules. Let $M$ and $N$ be two irreducible $R$-modules.
+Prove that either $Hom_R (M,N)=0$ or $M \cong N$. Show also that
+$Hom_R(M,M)$ is a division ring.
+
+\item[2.]
+Show that if ${\bf F}$ is an infinite field and
+$f \in {\bf F}[x_1, \dots, x_n] \neq 0$.
+
+\item[3.]
+Let $R$ be an integral domain and let $\rho$ be a non-zero prime ideal of $R$.
+Show that $R_\rho$ has a unique maximal ideal (where $R_\rho$ denotes the
+``localization" of $R$ at $\rho$).
+
+\item[4.]
+Show that a module over a ring $R$ is always a homomorphic image of a free
+$R$-module.
+
+\centerline{{\bf Fields and Galois Theory}}
+
+\item[1.]
+Let $E$ be a splitting field for the polynomial $x^3-5$ over ${\bf Q}$. Find
+all of the subfields of $E$.
+
+\item[2.]
+Let $F_0$ be a field of order 4 (i.e., having precisely four elements). Let
+$t$ be transcendenatal over $F_0$, and put $F = F_0 (t)$, the function
+field in one variable over $F_0$. Finally, put $E=F(u)$ where $u^3=t$.
+
+\item[\quad] (a)
+Show that $E/F$ is normal and separable.
+
+\item[\quad] (b)
+Determine the galois group of the extension $E/F$.
+
+\item[3.]
+Let $K$ be an extension field of the rationals, of finite degree. Prove that
+$K$ contains only a finite number of roots of unity.
+
+\item[4.]
+Let $E/F$ be an extension field and let $\alpha \in E$. Show that $\alpha$
+is algebraic over $F$ if and only if $[F(\alpha) : F]$ is finite.
+
+
+
+
+
+
+\end{description}    
+%\end{Large}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

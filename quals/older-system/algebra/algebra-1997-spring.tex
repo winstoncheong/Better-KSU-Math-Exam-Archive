@@ -1,0 +1,128 @@
+% latex file
+\def\hcorrection#1{\advance\hoffset by #1 }
+\def\vcorrection#1{\advance\voffset by #1 }
+
+\documentclass{article}
+\usepackage{my,amsxtra,amssymb,amsthm}
+
+\vcorrection{-1.0in}
+\hcorrection{-0.8in}
+\textwidth 6.0in
+\textheight 9.0in
+
+\def\R{\mathbb R}
+\def\C{\mathbb C}
+\def\N{\mathbb N}
+\def\Z{\mathbb Z}
+\def\Q{\mathbb Q}
+
+\begin{document}
+%\begin{Large}
+
+
+
+\begin{center}\begin{LARGE}
+{\bf Algebra Qualifying Exam}\\ 
+{\bf Spring 1997}\\ \end{LARGE}
+\end{center}
+\vspace{0.1in}
+\noindent\hrulefill\\
+All rings in this exam are associative and with 1 and all integral domains
+are commutative.
+
+\begin{description}
+
+\item[1.]
+Let $G$ be a group and let $H$ be a subgroup of finite index in $G$. Show
+that the subgroup $N = \cap_{g \in G} gHg^{-1}$ has finite index in $G$.
+
+\item[2.]
+Let $G$ be a finite group and $H$ a subgroup of $G$. Show that if
+$H \neq G$, then $G \neq \cup_{g \in G} gHg^{-1}$.
+
+Find a counter-example to this statement of infinite groups by considering
+a matrix group over the field of complex numbers.
+
+\item[3.]
+Let $R$ be a commutative ring and let $I_1, I_2, \dots, I_n$ be ideals of
+$R$. If $P$ is a prime ideal of $R$ and $\cap^n_{i=1} I_i \subseteq P$,
+then there is an $i$ such that $I_i \subseteq P$.
+
+\item[4.]
+Let $R$ be a commutative ring. An ideal $Q \subseteq R$ is said to be a
+{\it primary} ideal if $ab \in Q$ and $a \notin Q$ implies that
+$b^n \in Q$ for some positive integer $n$. Prove that if $Q \subseteq R$
+is a primary ideal, then the set $P =$ \{$r \in R| r^m \in Q$ for some
+positive integer $m$\}, is the smallest prime ideal of $R$ that also
+contains $Q$.
+
+\item[5.]
+Let $R$ be a ring and let $M$ be a left $R$-module. Then $S= Hom_R(M, M)$
+is also an associative ring with 1, relative to pointwise addition and
+composition of homomorphisms. Show that $M$ is indecomposable if and only
+if $S$ has no idempotents except 0 and 1. (An element $e$ in a ring is
+called an idempotent if $e^2 =e$.)
+
+\item[6.]
+Let $R$ be a commutative ring with 1 and $S = M_n(R)$ be the ring of all
+$n \times n$-matrices with entries in $R$ with matrix addition and
+multiplicaton. For any left $R$-module $M$, then
+$M^{\oplus n}= M \oplus M \oplus \dots \oplus M$($n$ terms) is a left
+$S$-module via $A \cdot \sum^n_i m_i= \sum^n_i \sum^n_j a_{ij}m_j
+  \in M^{\oplus n}$,
+where $A = (a_{ij})$. For each pair of indices $i$, $j$ we let
+$e_{ij} \in S$ be the matrix with a 1 in the $(i,j)$-position, and
+zero elsewhere.
+
+\item[\quad] (a)
+Show that for any left $S$-module $N$, then, $M=e_{11}N$ is a left $R$-module.
+
+\item[\quad] (b)
+Show that as $S$-modules, $N \cong M^{\oplus n}$.
+
+\item[7.]
+Let $V$ and $W$ be two vector spaces over a field $k$. A bilinear form
+$f : V \times W \to k$ is called non-degenerate if for any $v \in V$
+and $w \in W$, $f(v,W)=0$ implies that $v=0$ and $f(V,w)=0$ implies that
+$w=0$. Show that if $V$ and $W$ are finite dimensional, then a bilinear
+form $f$ is non-degenerate if and only if $\dim_k V= \dim_k W=n$ and there
+exist bases $\{v_1, \dots, v_n\}$ and $\{w_1, \dots, w_n\}$ of $V$ and
+$W$ respectively, such that $f(v_i, w_j) = \delta_{ij}$
+for all $i, j = 1, \dots, n$.
+
+\item[8.]
+Let $V$ be a vector space over a field $k$ and $T : V \to V$ be a linear
+transformation. Show that $f(AT)A=Af(TA)$ for any polynomial
+$f(x) \in k[x]$ and any linear transformation $A: V \to V$.
+
+\item[9.]
+Let $K$ be a Galois extension of a field $k$ and let $F$ be a subfield of $K$
+containing $k$. Show that the subgroup $H=\{g \in \hbox{Gal\ }(K/k) |g(F)=F\}$
+is the normalizer of Gal$(K/F)$ in Gal$(K/k)$.
+
+\item[10.]
+Let $K$ be the splitting field of the polynomial $x^{p^2} - t \in F[x]$ over
+$F = \Bbb F_p (t)$ for a prime $p$ and an indeterminate $t$. Prove that
+$[K:F] = p^2$.
+
+
+
+
+
+\end{description}    
+%\end{Large}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

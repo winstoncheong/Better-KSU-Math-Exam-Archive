@@ -1,0 +1,123 @@
+% latex file
+\def\hcorrection#1{\advance\hoffset by #1 }
+\def\vcorrection#1{\advance\voffset by #1 }
+
+\documentclass{article}
+\usepackage{my,amsxtra,amssymb,amsthm}
+
+\vcorrection{-1.0in}
+\hcorrection{-0.8in}
+\textwidth 6.0in
+\textheight 9.0in
+
+\def\R{\mathbb R}
+\def\C{\mathbb C}
+\def\N{\mathbb N}
+\def\Z{\mathbb Z}
+\def\Q{\mathbb Q}
+
+\begin{document}
+%\begin{Large}
+
+
+
+
+
+
+\begin{center}\begin{LARGE}
+{\bf Real Analysis Qualifying Exam}\\ 
+{\bf Fall 1992}\\ \end{LARGE}
+\end{center}
+\vspace{0.1in}
+\noindent\hrulefill\\
+
+In what follows $(X, {\cal A}, \mu)$ is an arbitrary measure space and
+$\lambda$ is Lebesgue outer measure on $\R$.
+
+\begin{description}
+\item[1.](a)
+Find a necessary and sufficient condition that $\alpha, \beta \in \C$
+satisfy $|\alpha + \beta| = |\alpha| + |\beta|$.
+
+\item[\quad] (b)
+Find a necessary and sufficient condition that $f, g \in L_1 (\mu)$
+satisfy:
+$$\int |f+g| d \mu = \int |f| d \mu + \int |g| d \mu.$$
+
+\item[2.]
+Suppose
+$$\sum^\infty_{n=1} \mu (A_n) < \infty.$$
+Show that
+$$A=\{x:x \in A_n \hbox{\ for\ } \hbox{infinitely\ } \hbox{many\ } n \}$$
+has $\mu(A) =0$.
+
+\item[3.]
+Let $F$ be a subset of $[0,1]$ that is not Lebesgue measureable.
+
+\item[\quad] (a)
+Is it possible that $\lambda (F) =0$? Why?
+
+\item[\quad] (b)
+It is possible that $\lambda (F) =1$? Why?
+
+\item[4.]
+Suppose $f$ is continuous on [0,1]. Show that
+$$\hbox{Riemann\ } \int^1_0 fdx = \hbox{\ Lebesgue\ } \int^1_0 fdx.$$
+
+\item[5.]
+Let $\nu$ be a finite measure that is absolutely continuous with respect to a
+measure $\mu$ that is regular. Prove that $\nu$ is regular.
+
+\item[6.] (a)
+Fix $\alpha >0$. Show that it is impossible to construct a bounded, Lebesgue
+measureable function $f$ such that
+$$\int^1_0 |f-g| d \lambda > \alpha$$
+for every Riemann integrable function $g$.
+
+\item[\quad] (b)
+Can such a $f$ be found if we take $\alpha =0$? Why?
+
+\item[7.]
+Let $X,Y$ be topological spaces, each having a countable base for its
+topology. Let
+$${\cal B} (X) \times {\cal B}(Y)$$
+be the smallest $\sigma$-algebra of subsets of $X \times Y$ that contains
+every $R \times S$ where $R \in {\cal B} (X)$ and $S \in {\cal B}(Y)$.
+Prove that
+$${\cal B}(X) \times {\cal B}(Y) = {\cal B}(X \times Y).$$
+
+\item[8.]
+State which types of convergence imply which other types of convergence. Prove
+all of your assertions and prove counterexamples.
+
+\item[\quad] (A)
+Pointwise a.e. convergence
+
+\item[\quad] (B)
+Convergence in $L^1$
+
+\item[\quad] (C)
+Convergence in measure
+
+
+
+
+
+
+\end{description}    
+%\end{Large}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

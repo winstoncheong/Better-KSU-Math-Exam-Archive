@@ -1,0 +1,126 @@
+% latex file
+\def\hcorrection#1{\advance\hoffset by #1 }
+\def\vcorrection#1{\advance\voffset by #1 }
+
+\documentclass{article}
+\usepackage{my,amsxtra,amssymb,amsthm}
+
+\vcorrection{-1.0in}
+\hcorrection{-0.8in}
+\textwidth 6.0in
+\textheight 9.0in
+
+\def\R{\mathbb R}
+\def\C{\mathbb C}
+\def\N{\mathbb N}
+\def\Z{\mathbb Z}
+
+
+\begin{document}
+%\begin{Large}
+
+
+
+
+
+
+\begin{center}\begin{LARGE}
+{\bf Topology Qualifying Exam}\\ 
+{\bf Fall 1992}\\ \end{LARGE}
+\end{center}
+\vspace{0.1in}
+\noindent\hrulefill\\
+
+\begin{description}
+\item[1.]
+Prove that the interval [0,1] with the usual topology is connected.
+
+\item[2.]
+Prove or disprove: Every compact Hausdorff space is separable.
+
+\item[3.]
+Let $\pi_1 : X \times Y \to X$ be the projection map, and let $Y$ be
+compact. Prove $\pi_1$ is a closed map (where $X \times Y$ has the product
+topology).
+
+\item[4.]
+Prove that a paracompact Hausdorff space is regular.
+
+\item[5.]
+Use Zorn's lemma to prove that for every set $X$ and relation $R$ there is
+maximal $A \subseteq X$ such that $A \times A \subseteq R$.
+
+\item[6.]
+Prove that the plane $\R^2$ is not a countable union of straight lines.
+
+\item[7.]
+If $\Omega$ is the first uncountable ordinal, prove that $[0, \Omega]$
+with the order topology is compact.
+
+\item[8.]
+Prove that a connected normal Hausdorff space containing more than one point
+is uncountable.
+
+\item[9.]
+Let $A$ be a connected subset of a connected space $X$, and let $C$ be a
+component of $X-A$. Prove that $X-C$ is connected.
+
+\item[10.]
+Let $C(X,Y)$ be the set of continuous functions from $X$ to $Y$, given the
+compact-open topology. Let $e : C(X,Y) \times X \to Y$ be the evaluation
+map $e(f,x) = f(x)$. Prove that if $X$ is locally compact Hausdorff, then
+$e$ is continuous.
+
+\item[11.]
+Let $f : X \to Y$ be a continuous surjective map from a compact space $X$ to
+a Hausdorff space $Y$. Prove that $f$ is a quotient map.
+
+\item[12.]
+Find an incorrect statement in the proof of the following theorem and prove
+that it is an incorrect statement.
+
+{\bf Theorem.}
+If $B^2 = \{(x_1, x_2) \in \R^2 |x_1^2 + x^2_2 \leq 1\}$
+has the usual topology, then each continuous function $f : B^2 \to B^2$
+has a fixed point.
+
+{\bf Proof:}
+Suppose that $f : B^2 \to B^2$ is a continuous function with no fixed points.
+Let $\pi_1: B^2 \times B^2 \to B^2$ be first projection, let
+$$\Delta = \{(z,z) |z \in B^2\}$$
+be the diagonal in $B^2 \times B^2$, and let
+$$F = \{(z, f(z)|z \in B^2\}$$
+be the graph of $f$. Since $f$ is continuous, $\pi_1|_F : F \to B^2$ is a
+homeomorphism. Since $B^2$ is connected, $F$ is therefore connected. However,
+$$F \subseteq B^2 \times B^2 - \Delta$$
+which is a contradiction since $B^2 \times B^2 - \Delta$ is disconnected.
+
+\item[13.]
+Prove that the topologist's comb
+$$C= \left( \bigcup^\infty_{n=1} \left\{\frac{1}{n} \right\} \times
+  [0,1] \right) \cup \left( [0,1] \times \{0\} \right) \cup
+  \left( \{0\} \times [0,1] \right)$$
+is {\bf not} a retract of the square $S=[0,1] \times [0,1]$
+(with both $C$ and $S$ having the usual Euclidean subspace topologies).
+
+
+
+
+
+\end{description}    
+%\end{Large}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

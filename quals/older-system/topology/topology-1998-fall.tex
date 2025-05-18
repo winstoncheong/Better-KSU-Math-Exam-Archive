@@ -1,0 +1,170 @@
+% latex file
+%Topology QE F98 - Maginnis & Strecker
+
+\def\hcorrection#1{\advance\hoffset by #1 }
+\def\vcorrection#1{\advance\voffset by #1 }
+
+\input amssym.def   %defines Bbb and gothic (frak)
+\input amssym       %defines Bbb and gothic (frak)
+
+\input prepictex.tex
+\input pictex.tex
+\input postpictex.tex
+
+%\documentstyle[bbb]{report}
+\documentclass[bbb]{report}
+
+\vcorrection{-.7in}
+\hcorrection{-1in}
+
+\topmargin  0in
+\textwidth 6.4in
+\textheight 9.5in
+
+\mathsurround=2pt
+
+\def\ds{\displaystyle}
+\def\R{{\Bbb R}}
+
+\begin{document}
+
+%\pagestyle{empty}
+
+\begin{Large}
+
+\hfill Name \rule{2.5in}{.01in}
+\par
+\vspace{.1in}
+
+\begin{center}
+   TOPOLOGY QUALIFYING EXAM \\
+   Fall 1998 \\
+   (Maginnis and Strecker) \\
+\end{center}
+
+\end{Large}
+
+\vspace{.1in}
+
+\begin{large}
+\noindent {\bf Choose and work any 6 of the following 15 problems.
+Start each problem on a new sheet of paper.
+\underbar{Do not turn in more than six problems}.
+In the problems below, a space always means a topological space.}
+
+\vspace{.2in}
+
+\begin{description}
+
+\item[1.]
+Prove or disprove:
+For any space $X$ with topology ${\cal J}$,
+the family 
+${\cal B}=$
+\linebreak $\{ A\subseteq X\,\bigg|\,A$ equals the interior of its
+closure\} forms a base for some topology ${\cal J}'$ on $X$.
+
+\vspace{.5in}
+
+\item[2.]
+Prove that a quotient space of a locally connected space is
+locally connected.
+
+\vspace{.5in}
+
+\item[3.]
+Let $f:X\to Y$ be an open map between the spaces $X$ and $Y$.
+Let $B\subseteq Y$ and $A=f^{-1}[B]$.
+Prove that the restriction $\overline{f}:A\to B$
+(i.e., $\overline{f}(a)=f(a)$) is an open map
+from $A$ to $B$.
+
+\vspace{.5in}
+
+\item[4.]
+(a) State the Axiom of Choice.
+
+\vspace{.1in}
+\item[\quad (b)] State the Well-Ordering Theorem.
+
+\vspace{.1in}
+\item[\quad (c)] Either use the Axiom of Choice to prove the
+Well-Ordering Theorem or use the Well-Ordering Theorem to prove the
+Axiom of Choice.
+
+\vspace{.5in}
+\item[5.] Prove that the plane ${\Bbb R}^2$ with its usual
+topology is not equal to a countable union of straight lines.
+
+\vspace{.5in}
+\item[6.]
+Prove that the Sorgenfrey line $X={\Bbb R}$ with basis
+$\{[a,b)\,\bigg|\,a,b\in{\Bbb R}\}$ is a paracompact space.
+
+\vspace{.5in}
+\item[7.]
+Let $f:[a,b]\to{\Bbb R}$ be a real-valued function on a
+closed interval and let
+$G=\{(x,f(x))\in{\Bbb R}\times\R
+\,\bigg|\, a\leq x\leq b\}$ be its graph.
+Prove or give a counterexample for the following.
+
+\vspace{.1in}
+\item[\quad (a)] If $G$ is connected, then $f$ is continuous.
+
+\vspace{.25in}
+\item[\quad (b)] If $f$ is continuous, then $G$ is connected.
+
+
+\vspace{.5in}
+\item[8.]
+Prove that the net based on an ultrafilter is an ultranet.
+
+\vspace{.5in}
+\item[9.]
+Let $Y$ be a compact space. Prove that the projection map
+$\pi_1:X\times Y\to X$ is a closed map.
+
+\vspace{.5in}
+\item[10.]
+Let $A$ be a subset of a complete metric space $X$.
+Prove that $A$ is totally bounded if and only if the closure
+$\overline{A}$ is compact.
+
+\vspace{.5in}
+\item[11.]
+Let $X$ be a completely regular $T_1$ space
+(i.e., one point sets are closed, and for each closed set $C$
+and point $x\not\in C$, there exists a continuous function
+$f:X\to[0,1]$ with $f(x)=1$ and $f[C]=\{0\}$).
+Prove that the Stone-\v Cech compactification $\beta(X)$ is
+connected if and only if $X$ is connected.
+
+\vspace{.5in}
+\item[12]
+Let $f:X\to Y$ be a continuous surjective map from a compact space
+$X$ to a Hausdorff space $Y$. Prove that $f$ is a quotient map.
+
+\vspace{.5in}
+\item[13.] Let $D$ be a dense subset of a metric space $X$,
+and let $Y$ be a complete metric space.
+Prove that any uniformly continuous function
+$f:D\to Y$ can be extended to a uniformly continuous function
+$F:X\to Y$ (i.e., $F|_D=f$).
+
+\vspace{.5in}
+\item[14.]
+Prove that a metric space is compact if and only if every sequence
+has a convergent subsequence.
+
+\vspace{.5in}
+\item[15.]
+Prove that each metric space is a normal space.
+
+\vfill
+\clearpage
+
+
+\end{description}
+\end{large}
+\end{document}

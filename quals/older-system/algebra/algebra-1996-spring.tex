@@ -1,0 +1,146 @@
+% latex file
+\def\hcorrection#1{\advance\hoffset by #1 }
+\def\vcorrection#1{\advance\voffset by #1 }
+
+\documentclass{article}
+\usepackage{my,amsxtra,amssymb,amsthm}
+
+\vcorrection{-1.0in}
+\hcorrection{-0.8in}
+\textwidth 6.0in
+\textheight 9.0in
+\def\R{\mathbb R}
+\def\C{\mathbb C}
+\def\N{\mathbb N}
+\def\Z{\mathbb Z}
+\def\Q{\mathbb Q}
+
+\begin{document}
+%\begin{Large}
+
+\begin{center}\begin{LARGE}
+{\bf Algebra Qualifying Exam}\\ 
+{\bf Spring 1996}\\ \end{LARGE}
+\end{center}
+\vspace{0.1in}
+\noindent\hrulefill\\
+
+{\bf Note:} All rings in this exam are associative and with 1 and all
+integral domains are commutative. $\Bbb Q$ and $\Bbb C$ are the fields
+of rational and complex numbers respectively.
+
+
+\begin{description}
+
+\item[1.]
+Show that for any group $G$, the quotient group $G/Z(G)$ is never a
+nontrivial cyclic group. Here $Z(G)$ is the center of the group $G$.
+
+\item[2.]
+Let $G$ be a finite group and $p$ a prime number dividing $|G|$. If $P$
+is a $p$-Sylow subgroup of $G$, show that $N_G (N_G(P)) = N_G(P)$.
+Here $N_G (H)$ is the normalizer of a subgroup $H$ in the group $G$.
+
+\item[3.]
+Let $R$ be a commutative ring with 1 and $x \in R$. Suppose that $x$ lies
+in every maximal ideal of $R$. Show that $1-x$ is a unit of $R$.
+
+\item[4.]
+This problem conisits of two parts:
+
+\item[\quad] (i)
+Give a definition to what a unique factorization domain (UFD) means.
+
+\item[\quad] (ii)
+Give an example of an integral domain that is not a UFD.
+
+\item[5.]
+Let $R$ be a ring with 1. Suppose that an $R$-module $M = M_1 \oplus M_2$
+is a direct sum of two non-isomorphic irreducible submodules $M_1$ and
+$M_2$. Show that $M_1$ and $M_2$ are the only two proper submodules of $M$.
+
+\item[6.]
+This problem consists of two parts:
+
+\item[\quad] (i)
+State the definition of what an indecomposable module over a ring means.
+
+\item[\quad] (ii)
+Give an example of a ring $R$ and an indecomposable module $M$ over $R$.
+
+\item[7.]
+Let $T: V \to V$ be a linear transformation on a finite dimensional vector
+spaces over a field $F$. Suppose $T$ has the following invariant factors:
+$$1+x, \quad x(1+x), \quad x(1+x)^2.$$
+Answer the following questions:
+
+\item[\quad] (i)
+What is $\dim_F V$?
+
+\item[\quad] (ii)
+Is $T$ onto?
+
+\item[\quad] (iii)
+Does $T$ have a Jordan form over the field $F$ with respect to an
+appropriate basis of $V$? If yes, write down such a matrix.
+
+\item[\quad] (iv)
+Is $V$ indecomposable as an $F[T]$- module?
+
+\item[\quad] (v)
+What is the minimal polynomial of $T$?
+
+\item[8.]
+Let $V$ be the 4-dimensional vector space of all $2 \times 2$- matrices
+over a field $F$. We define the function $f(\cdot, \cdot) : V \times V \to F$
+by $f(A,B) =$ trace $(AB)$ for all $A, B \in V$.
+
+\item[\quad] (i)
+Show that $F$ is a symmetric bilinear form;
+
+\item[\quad] (ii)
+Let $\{E_{11}, E_{12}, E_{21}, E_{22} \}$ be the standard basis of $V$.
+Compute the matrix of the bilinear form $f$ with respect to the standard
+basis.
+
+\item[\quad] (iii)
+Describe the radical of the bilinear form $f$. Here the radical of a
+bilinear form $f$ is defined to be the set
+$\{v \in V | f(v,V) = 0\}$.
+
+\item[9.]
+This problem consists of two parts:
+
+\item[\quad] (i)
+Define what it means for a field extension $E$ over $F$ to be separable.
+
+\item[\quad] (ii)
+Is the splitting field of the polynomial $p(x) = x^9 - x^3 + 1$ over
+$\Bbb F_3$ separable?
+
+\item[10.]
+Show that, if $F \lneqq K \leq F(x)$ is tower of fields, where $x$ is an
+indeterminate and $F(x)$ is the field of rational functions (i.e., $x$ is
+transcendental over $F$), then $K$ cannot be an algebraic extension over
+$F$.
+
+
+
+
+\end{description}    
+%\end{Large}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

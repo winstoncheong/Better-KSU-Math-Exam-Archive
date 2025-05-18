@@ -1,0 +1,115 @@
+% latex file
+\def\hcorrection#1{\advance\hoffset by #1 }
+\def\vcorrection#1{\advance\voffset by #1 }
+
+\documentclass{article}
+\usepackage{my,amsxtra,amssymb,amsthm}
+
+\vcorrection{-1.0in}
+\hcorrection{-0.8in}
+\textwidth 6.0in
+\textheight 9.0in
+\begin{document}
+%\begin{Large}
+
+
+
+
+
+
+\begin{center}\begin{LARGE}
+{\bf Real Analysis Qualifying Exam}\\ 
+{\bf Fall 1994}\\ \end{LARGE}
+\end{center}
+\vspace{0.1in}
+\noindent\hrulefill\\
+
+\begin{description}
+\item[1.]
+Define Lebesgue outer measure, $\lambda^\ast$, on [0,1].
+
+\item[2.]
+Let $(X,S, \mu)$ be a finite measure space and suppose that
+$\{f_n\}$ is a sequence of measurable functions which converges to a finite
+function $f$ a.e.. Let $\varepsilon > 0$ and set
+$A_N = \{x : \sup_{n \geq N} |f_n(x) - f(x) | > \varepsilon \}$.
+Prove that $\mu(A_N) \to 0$ as $N \to \infty$.
+
+\item[3.]
+Suppose $f \in L^p ([0,\infty))$ where $1 \leq p \leq 2$. For $x \geq 0$
+set $g(x) = \int^{x^2}_x f(t) dt$. Show that
+$\lim_{x \to \infty} \frac{g(x)}{x} = 0$.
+
+\item[4.]
+Let $f$ be a $C^\infty$ function (that is, $f$ and all its derivatives
+exist and are continuous) from $\Bbb R$ to $\Bbb R$ with the property that
+for each $x \in \Bbb R$ there exists a $k \in \Bbb N$ (depending on $x$)
+such that $\frac{\partial^k f}{\partial x^k} (x) =0$. Show that there
+exists an interval $I \subseteq \Bbb R$, $I \neq \varnothing$
+such that $f|_I$ is a polynomial.
+
+\item[5.] (a)
+Construct a bounded, Lebesgue integrable function $g(x)$ on [0,1] such that
+$\int^1_0 |f(x) - g(x)| dx > 0$ for every Riemann integrable function
+$f(x)$ on [0,1].
+
+\item[\quad] (b)
+Can you construct such a $g(x)$ so that $\int^1_0 |f(x) - g(x)| dx > 10^{-5}$
+for every Riemann integrable function $f(x)$ on [0,1]?
+
+\item[6.]
+Suppose $f$ is a Lebesgue measurable function on [0,1]. Is it true that if
+$f^\prime = 0$ a.e. then $f$ cannot be strictly increasing?
+
+\item[7.]
+Suppose $\Phi : [0, \infty) \to [0, \infty)$ is strictly increasing
+continuously differentiable function with $\Phi(0) = 0$. Suppose that
+$f \in L^1 (X, {\mathcal M}, \mu)$ and for $\lambda > 0$ set
+$m(\lambda) = \mu(\{x \in X : |f(x)| > \lambda \})$. Prove that
+$\int_X \Phi (f(x)) d \mu (x) = \int^\infty_0 m(\lambda) d \Phi (\lambda)$.
+
+\item[8.]
+Suppose $\mu$ is a complex measure on $\Bbb R^n$ with the property that
+$\int_{\Bbb R^n} f(x) d\mu \geq 0$ whenever $f \geq 0$ is a continuous
+function on $\Bbb R^n$ with compact support. Show that $\mu$ is a positive
+measure.
+
+\item[9.]
+Let $v, \mu$ be complex measures on $(X,{\mathcal M})$. Suppose $v << \mu$. Show that
+for every $\varepsilon >0$ there exists a $\delta > 0$ such that if
+$|\mu|(E) < \delta$ then $|v(E)| < \varepsilon$.
+
+\item[10.]
+Suppose $(X,{\mathcal M}, \mu)$ is a measure space and $\mu$ is positive and
+$\sigma$-finite.
+
+\item[\quad] (a)
+Suppose $f \in L^1(X, {\mathcal M}, \mu)$ and suppose
+${\mathcal A} \subseteq {\mathcal M}$ is also a
+$\sigma$-algebra. Prove that there exists a function
+$g \in L^1(X,{\mathcal A}, \mu)$
+such that $\int_E gd\mu = \int_E fd \mu$ for all $E \in {\mathcal A}$.
+
+\item[\quad] (b)
+If $g$ and $f$ are related as in part (a) we write $g=E(f|{\mathcal A})$.
+Suppose that ${\mathcal B} \subset {\mathcal A}$ is also a $\sigma$-algebra
+on $X$. Show that $E(E(h|{\mathcal A}) |{\mathcal B}) = E(h|{\mathcal B})$
+whenever $h \in L^1(X, {\mathcal M}, \mu)$.
+
+\end{description}    
+%\end{Large}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

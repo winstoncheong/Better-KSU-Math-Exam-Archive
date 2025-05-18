@@ -1,0 +1,169 @@
+% latex file
+%Complex Variables qual S99 - Burckel & Nagy
+
+\def\hcorrection#1{\advance\hoffset by #1 }
+\def\vcorrection#1{\advance\voffset by #1 }
+
+\input amssym.def   %defines Bbb and gothic (frak)
+\input amssym       %defines Bbb and gothic (frak)
+
+\input prepictex.tex
+\input pictex.tex
+\input postpictex.tex
+
+%\documentstyle[bbb]{report}
+\documentclass[bbb]{report}
+
+\vcorrection{-.5in}
+\hcorrection{-1.15in}
+
+\topmargin  0in
+\textwidth 7in
+\textheight 9in
+
+\mathsurround=2pt
+
+\def\ds{\displaystyle}
+\def\R{{\Bbb R}}
+\def\Z{{\Bbb Z}}
+\def\T{{\Bbb T}}
+\def\O{{\Bbb 0}}
+\def\D{{\Bbb D}}
+\def\U{{\Bbb U}}
+\def\C{{\Bbb C}}
+\def\N{{\Bbb N}}
+
+
+\def\nd{\noindent}
+\def\qed{\hfill\ \vbox{\hrule\hbox{\vrule\kern4pt\vbox{\kern4pt{}
+\kern4pt}\kern4pt\vrule}\hrule}}
+
+
+\begin{document}
+
+%\pagestyle{empty}
+
+\begin{Large}
+\hfill Name \rule{2.15in}{.01in}
+\par
+\vspace{.25in}
+
+\begin{center}
+   COMPLEX VARIABLES QUALIFYING EXAM \\
+   Spring 1999 \\
+   (Burckel and Nagy) \\
+\end{center}
+
+%\end{Large}
+
+\vspace{.1in}
+
+%\begin{large}
+
+\begin{center}
+{\bf
+$\N:=$ natural numbers (positive integers),
+$\R:=$ reals,
+$\C:=$ complexes,
+
+$\D:=\{z\in\C:|z|<1\}$,
+$\U:= \{z\in\C: Im\,z>0\}$.
+}
+
+\vspace{.2in}
+{\bf Do any 8 of the 10 problems.}
+
+\end{center}
+
+
+\vspace{.2in}
+
+\begin{description}
+
+\item[1.]
+Compute $\ds\sum^\infty_{n=1}\ds\frac{1}{n^4}$.
+
+\item[\quad] {\it Hint}:
+Integrate $f(z):=\ds\frac{\pi\cot\pi z}{z^4}$ over bigger and bigger
+circles.
+
+
+\vspace{.2in}
+\item[2.]
+Suppose $f:\D\to\C$ is analytic, $f(0)=1$, and
+$|f(z)|<\ds\frac{1}{|z|}$ for all $z\in\D$, $z\not= 0$.
+Prove that $f$ is identically equal to $1$.
+
+\item[\quad]  {\it Hint}: Schwarz.
+
+
+\vspace{.2in}
+\item[3.]
+Show that the function $u:\R^2\setminus\{(0,0\}\to\R$,
+defined as $u(x,y):=\ln\left(\ds\sqrt{x^2+y^2}\right)$
+is harmonic, but has no harmonic conjugate.
+
+\vspace{.2in}
+\item[4.]
+Let $f$ be an entire function. Define $u:\R^2\to\R$ by
+$u(x,y)= Re\,f(x+iy)$.
+Prove that if $u$ is a polynomial function (in two variables),
+then $f$ is a polynomial.
+
+
+\vspace{.2in}
+\item[5.]
+Compute: \quad $\ds\int^{2\pi}_0 e^{-i\theta} e^{e^{i\theta}} d\theta$.
+
+\vfill
+\pagebreak
+
+\vspace{.2in}
+\item[6.]
+Prove the following strong form of Morera's theorem:
+If $f$ is continuous in $\D$ and $\int_{\partial R}f=0$ for every
+rectangle $R$ lying in $\D$ and having sides parallel to the
+coordinate axes, then $f$ is holomorphic.
+
+\item[\quad]  {\it Hint}: Via an integral, construct an $F$ satisfying
+$D_1F=-iD_2F=f$.
+
+
+\vspace{.2in}
+\item[7.]
+$f$ is continuous on $\overline{\D}$, holomorphic in $\D\setminus\R$.
+Show that $f$ is holomorphic in $\D$.
+
+\item[\quad]  {\it Hint}: Use preceding exercise
+(whether or not you did it).
+
+
+\vspace{.2in}
+\item[8.]
+$f$ is holomorphic in $\D\setminus\{0\}$ with a pole at $0$.
+Show that the range of $f$ contains the complement of a compact disk.
+
+\item[\quad] {\it Hint}: Show that $1/f$ is
+holomorphic near $0$ and apply the Open Mapping Theorem.
+
+\vspace{.2in}
+\item[9.]
+Show that if $f$ is holomorphic in a deleted neighborhood of $a$,
+then $f'$ cannot have a {\it simple} pole at $a$.
+
+
+\vspace{.2in}
+\item[10.]
+Use Liouville's Theorem to show that the range of every
+non-constant entire function is dense in $\C$. What is the
+strongest conclusion about the size of the image set that is valid?
+
+
+
+\vfill
+\clearpage
+
+
+\end{description}
+\end{Large}
+\end{document}

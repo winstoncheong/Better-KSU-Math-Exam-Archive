@@ -1,0 +1,181 @@
+%From strecker%math.ksu.edu@KSUVM.KSU.EDU Wed Feb 22 08:31:00 1995
+%Date: Tue, 21 Feb 95 15:25:29 CST
+%From: George Strecker <strecker%math.ksu.edu@KSUVM.KSU.EDU>
+%To: math@ksuvm
+
+% Here is an edited version of what you sent me.  Please
+%look it over.  The only other change that I think I might
+%make would be to put more of the easy problems earlier in the exam.  Geo.
+% LaTeX file
+
+
+%\documentstyle[12pt]{article}
+\documentclass[12pt]{article}
+\input amssym.def   %defines Bbb and gothic (frak)
+\input amssym       %defines Bbb and gothic (frak)
+
+
+\renewcommand{\labelenumi}
+{\mbox{ \mbox{{\rm {\roman{enumi}}}})}}
+\renewcommand{\theenumi}{\roman{enumi}}
+%This changes the numbering in itemizing to roman.
+
+
+\begin{document}
+
+ \begin{center}
+
+ {\bf TOPOLOGY QUALIFYING EXAM \ \ Fall 1994}
+
+(Wu and Strecker)
+
+ \end{center}
+
+
+        Choose and work any 6 of the following 15 problems. Start each
+ problem on a new sheet of paper. {\bf Do not turn in more than six
+ problems.}
+A space always mean a topological space below.
+
+\vspace{10pt}
+\noindent {\bf 1.}
+State the axiom of choice and give another statement which is equivalent to
+the axiom of choice. Then prove one of the implications for the equivalence.
+
+\vspace{10pt}
+\noindent {\bf 2.}  Prove that the following statements are equivalent
+for any space $X$:
+\begin{enumerate}
+  \item $X$ is Hausdorff;
+  \item for any space $Y$ and any pair of continuous maps
+        $f, g : Y\rightarrow X$ that agree on a dense subset of $Y$,
+        then $f=g$.
+  \item the diagonal $\Delta\subseteq X \times X$ defined by
+        $\Delta := \left\{ (x_1, x_2) \in X\times X \ |\  x_1=x_2 \right\} $
+        is a closed subset of $X\times X$;
+\end{enumerate}
+
+\vspace{10pt}
+\noindent {\bf 3.}
+Prove or give a counterexample for each of the following implications: \\
+separable $\stackrel{(a)}{\Rightarrow}$ second countable
+ $\stackrel{(b)}{\Rightarrow}$ first countable  $\stackrel{(c)}{\Rightarrow}$
+separable  $\stackrel{(d)}{\Rightarrow}$ first countable
+ $\stackrel{(e)}{\Rightarrow}$ second countable  $\stackrel{(f)}{\Rightarrow}$
+separable
+
+\vspace{10pt}
+\noindent {\bf 4.}
+Prove that every quotient of a locally connected space is locally connected.
+
+\vspace{10pt}
+\noindent {\bf 5.}
+Give a proof or counterexample for each of the following implications:
+\begin{enumerate}
+  \item $X$ is locally connected $\Rightarrow$ the connected components of $X$
+      are open;
+  \item  the connected components of $X$ are open
+         $\Rightarrow$ $X$ is locally connected.
+\end{enumerate}
+
+\vspace{10pt}
+\noindent {\bf 6.}
+Let $\{ X_{\alpha}\}_{\alpha\in A}$ be a collection of spaces and let
+$x$ be a fixed point in $\prod_{\alpha\in A} X_{\alpha}$. Show that
+$$ D =\left\{ y\in \prod_{\alpha\in A} X_{\alpha} \mid
+             y\ {\rm and}\ x\ {\rm differ\ in\ at\ most\ finitely\
+             many\ coordinates} \right\} $$
+is dense in $\prod_{\alpha\in A} X_{\alpha}$.
+
+\vspace{10pt}
+\noindent {\bf 7.} Prove or disprove that any two spaces that are
+simultaneously discrete and indiscrete must be homeomorphic.
+
+\vspace{10pt}
+\noindent {\bf 8.}
+Let $X$ be a $T_1$ regular space with a countable basis and
+let $U$ be open in $X$. Show that
+\begin{enumerate}
+  \item $U$ is a countable union of closed sets of $X$;
+  \item There is a continuous function $f: X\rightarrow [0, 1]$ such that
+        $f(x)>0$ for $x\in U$ and $f(x)=0$ for $x\not\in U$.
+\end{enumerate}
+
+\vspace{10pt}
+\noindent {\bf 9.}
+Let $X$ be a $T_1$ completely regular space and $Y$ a
+compactification of $X$; let $\beta(X)$ be the Stone-\v{C}ech
+compactification of $X$. Show that there exists a continuous surjective closed
+map $g: \beta(X)\rightarrow Y$ that equals the identity on $X$.
+
+\vspace{10pt}
+\noindent {\bf 10.}
+Prove that the following statements are equivalent for any space $X$:
+\begin{enumerate}
+  \item $X$ is Tychonoff (i.e., $T_1$ and completely regular);
+  \item $X$ can be embedded in a compact Hausdorff space.
+\end{enumerate}
+
+\vspace{10pt}
+\noindent {\bf 11.}
+Find an error in the following purported ``proof''
+of the jactitation that $2^{\Bbb R}$
+is metrizable, where $2=\{0, 1\}$ is a two point discrete space and
+${\Bbb R}$ is the set of real numbers.
+
+\noindent
+``\underline{\sc Proof}'':
+Consider the inclusion ${\Bbb N}\subseteq {\Bbb R}$, where
+${\Bbb N}$ is the set of natural numbers. This induces a ``natural''
+embedding $2^{\Bbb N}\hookrightarrow 2^{\Bbb R}$ by the map
+$f\mapsto \hat{f}$ where
+$$ \hat{f}(r)=\left\{ \begin{array}{ll}
+    f(r),     & {\rm if}\ r\in {\Bbb N} \\
+    0,        & {\rm if}\ r\in {\Bbb R}\setminus {\Bbb N}.
+   \end{array} \right.  %}
+$$
+% But $2^{\Bbb N}$ is the Cantor space $C$. Thus $C$ is embedded in
+% $2^{\Bbb R}$.
+Let $U$ be an open subset of $2^{\Bbb R}$.
+By the definition of the product topology, the projection of $U$
+is $\{ 0, 1\}=2$ in all but finitely many coordinates.
+Thus $U\cap 2^{\Bbb N}\not =\emptyset $. So $2^{\Bbb N}$ is dense in
+$2^{\Bbb R}$. But $2^{\Bbb N}$ is compact and $2^{\Bbb R}$ is Hausdorff,
+so $2^{\Bbb N}$ is closed in $2^{\Bbb R}$.
+Thus $2^{\Bbb N}=2^{\Bbb R}$. But $2^{\Bbb N}$ is metrizable
+since it is a countable product of metrizable spaces.
+Hence $2^{\Bbb R}$ is metrizable.
+
+\vspace{12pt}
+\noindent {\bf 12.}
+Let ${\frak A}$ be a locally finite collection of
+subsets in the space $X$. Show that
+$$ \overline{\bigcup_{A\in {\frak A}} A}
+        = {\bigcup_{A\in {\frak A}} \overline{A}} . $$
+
+\vspace{12pt}
+\noindent {\bf 13.}
+Prove or disprove each of the following:
+\begin{enumerate}
+  \item Every compact subset of a Hausdorff space is closed;
+  \item every closed subset of a Hausdorff space is compact.
+\end{enumerate}
+
+
+\vspace{12pt}
+\noindent {\bf 14.}
+Let $E^n$ denote the Euclidean $n$-dimensional space. For what value
+of $n$ is it true that $E^n\setminus \{p\}$ is connected and simply
+connected? Prove your answer.
+
+\vspace{12pt}
+\noindent {\bf 15.}
+Show that in a locally compact Hausdorff space, countable intersections of
+dense open sets are dense.
+
+\end{document}
+
+
+
+
+

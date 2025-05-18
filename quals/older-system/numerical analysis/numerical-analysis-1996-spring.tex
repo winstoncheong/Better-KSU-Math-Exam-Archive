@@ -1,0 +1,161 @@
+% latex file
+\def\hcorrection#1{\advance\hoffset by #1 }
+\def\vcorrection#1{\advance\voffset by #1 }
+
+\documentclass{article}
+\usepackage{my,amsxtra,amssymb,amsthm}
+
+\vcorrection{-1.0in}
+\hcorrection{-0.8in}
+\textwidth 6.0in
+\textheight 9.0in
+\begin{document}
+%\begin{Large}
+
+
+
+
+
+
+\begin{center}\begin{LARGE}
+{\bf Numerical Analysis Qualifying Exam}\\ 
+{\bf Spring 1996}\\ \end{LARGE}
+\end{center}
+\vspace{0.1in}
+\noindent\hrulefill\\
+\begin{description}
+
+\item[1.]
+The Bessel function has the following recursion formula:
+$$J_{m+1} (x) = 2mJ_m(x) - J_{m-1}(x).$$
+
+Suppose we want to calculate the value $J_n(x)$ for a large value of $n$ by
+using the values $J_0(x)$ and $J_1(x)$ (which are assumed known) and the
+previous recursion formula, is the calculation numerically stable? Explain
+in detail. (Hint: Assume that there is an error in either $J_1(x)$ or
+$J_0(x)$. Give an estimate of the resulted error in $J_m(x)$ that is enought
+to determine the stability or instability of the formula.)
+
+\item[2.]
+The Bessel function of order 0 can be defined by the power series
+$$J_0(x) = \sum^\infty_{n=0} (-1)^n \frac{1}{(n!)^2}
+  \left( \frac{x}{2} \right)^{2n}.$$
+
+It is known that it has the following asymptotic property that
+$$J_0(x) = \sqrt{\frac{2}{\pi x}} \cos \left(x-\frac{x}{4} \right) +
+  O(x^{-3 \backslash 2}).$$
+as $x \to \infty$. Explain why the power series is not a good tool to
+evaulate $J_0(x)$ for large values of $x$. Can you suggest a method to
+evaulate $J_0(x)$ for very large values of $x$?
+
+\item[3.] (a)
+Write down the formula of Newton's method for solving $f(x)=0$ (write
+$x_{n+1}$ in terms of $x_n$)
+
+\item[\quad] (b)
+In Newton's method, an approximation of the error in $x_n$ is give as:
+$$\alpha - x_n \approx x_{n+1} - x_n, \quad \hbox{for} \hbox{\ large\ } n,$$
+where $\alpha$ is a root, and $x_n \to \alpha$, $n \to \infty$. Give
+a derivation to justify it (hint: state with
+$f(x_n)=f(x_n) - f(\alpha) = f^\prime(\xi_n) (x_n- \alpha)$)
+
+\item[4.] (a)
+Write down the error formula for the interpolation polynomial $p_n(x)$ of
+a known smooth function $f(x)$ with nodes $x_0, x_1, \dots, x_n$.
+
+\item[\quad] (b)
+Suppose we study the approximation of $f(x)$ in interval $[a,b]$. Starting
+from the error formula in (a), if one tries to reduce the maximum error by
+choosing suitable $x_i, i=0,1, \dots, n$, one is getting a near-minimax
+polynomial. From this direction, derive the error bound
+for the (true) minimax polynomial $M_n(x)$:
+$$\max_{a \leq x \leq b} |f(x) - M_n(x)| \leq
+  \frac{[(b-a) / 2]^{n+1}}{(n+1)!2^n} \max_{a \leq x \leq b}
+  |f^{(n+1)} (x)|.$$
+
+(Hint: first consider $[a,b]=[-1,1]$, The Chebyshev polynomials defined as
+$$T_n(x) = \cos(n \cos^{-1} x), \quad -1 \leq x \leq 1$$
+have the form of $T_n(x) = 2^{n-1} x^n +$ lower degree terms)
+
+\item[5.]
+Approximate $I(f) = \int^{2h}_0 f(x) dx$ by approximating $f(x)$ by
+$P_1(x)$, the linear interpolant to $f(x)$ at $x=0$ and $x= 4h / 3$. Give
+the resulting numerical integration formula. What is its degree of precision?
+
+\item[6.] (a)
+Given the following $n$ by $n$ lower triangular matrix:
+$$L= \left[ \begin{array}{cccc}
+                1&0&\dots&0 \\
+                l_{21}&1&\dots&0 \\
+                \dots \\
+                l_{n1}&l_{n2}&\dots&1
+                \end{array}
+                \right]_.$$
+
+Write its inverse $L^{-1}$ as the product of $n-1$ matrices. What special
+features does $L^{-1}$ have?
+
+\item[\quad] (b)
+Using the result in the previous item, show that the inverse of a non-singular
+upper triangular matrix $U$ with diagonal elements $u_{ii}$, $i=1,\dots, n$,
+is also upper triangular.
+
+\item[\quad] (c)
+Suppose an invertible matrix $A$ is factored as $A=L_1U_1$ and as
+$A=L_2U_2$ where $L_1,L_2$ are lower triangular with 1's on the diagonal
+and $U_1,U_2$ are upper triangular. Prove that $L_1=L_2$ and $U_1=U_2$ by
+using the results in the previous items.
+
+\item[7.]
+Use the Gerschgorin Circle Theorem to show that for a linear system $Ax=b$
+with $A$ being diagonally dominant, i.e.
+$$|a_{ii}| > \sum^N_{\substack{ j=1 \\j \neq i}} |a_{ij}|,$$
+
+the Jacobi Iterative Method converges for any initial choice. (Warning: You
+must use the Gerschgorin Circle Theorem in an essential way to get credit
+for the problem)
+
+\item[8.]
+Let $A$ be an $n$ by $n$ {\bf symmetric} real matrix whose eigenvalues are
+$\lambda_i$ with corresponding eigenvectors $v_i$, $i=1, \dots, n$. Assume
+that the inequality
+$|\lambda_1| \leq |\lambda_2| \leq \dots \leq |\lambda_{n-1}| < |\lambda_n|$
+holds. A power method that computes the largest eigenvalue $\lambda_n$
+can be described as follows,
+$$\hbox{choose\ } \hbox{an\ } \hbox{initial\ } \hbox{vector\ }
+  x^{(0)}$$
+For $k=1,2,\dots$
+$$ \begin{aligned}
+        \tilde x^{(k)} &= Ax^{(k-1)} \\
+        \lambda^{(k)} &= (\tilde x^{(k)})^t x^{(k-1)} (x^t \hbox{\ is\ }
+          \hbox{the\ } \hbox{transpose}) \\
+        x^{(k)} &= \tilde x^{(k)} / \parallel \tilde x^{(k)} \parallel_2
+        \end{aligned}.$$
+Show that if the initial vector $x^{(0)}$ satisfies $(x^{(0)})^t v_n \neq 0$,
+then
+$$\lambda^{(k)} = \lambda_n + O \left( \left(
+   \frac{\lambda_{n-1}}{\lambda_n} \right)^{2k} \right)$$
+as $k \to \infty$.
+
+
+
+
+
+
+\end{description}    
+%\end{Large}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

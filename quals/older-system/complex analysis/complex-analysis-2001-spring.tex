@@ -1,0 +1,149 @@
+\documentclass[12pt]{amsart}
+
+\setlength{\oddsidemargin}{0in}
+\setlength{\evensidemargin}{0in}
+\setlength{\textwidth}{6.5in}
+\setlength{\textheight}{9in}
+\setlength{\topmargin}{-0.5in}
+
+
+\newcommand{\Hh}{\mathbb{H} }
+\newcommand{\D}{\mathbb{D} }
+\newcommand{\T}{\mathbb{T} }
+\newcommand{\C}{\mathbb{C} }
+\newcommand{\N}{\mathbb{N} }
+\newcommand{\Z}{\mathbb{Z} }
+\newcommand{\St}{\mathbb{S} }
+\newcommand{\R}{\mathbb{R} }
+
+
+
+\newcommand{\rea}{\operatorname{Re}}
+\newcommand{\ima}{\operatorname{Im}}
+\newcommand{\Arg}{\operatorname{Arg}}
+\newcommand{\area}{\operatorname{Area}}
+\newcommand{\spec}{\operatorname{Spectrum}}
+\newcommand{\inte}{\operatorname{int}}
+\newcommand{\dist}{\operatorname{dist}}
+\newcommand{\Span}{\operatorname{Span}}
+\newcommand{\Cap}{\operatorname{Cap}}
+\newcommand{\bd}{\partial }
+
+\pagestyle{myheadings}%defines pagestyle
+\pagestyle{empty} %kills page 2-\infty
+\thispagestyle{empty}%kills page 1
+
+
+\begin{document}
+
+\baselineskip=16pt
+%\vspace*{-1in}
+%\hfill\hbox to 3in{Name\hrulefill}
+%\vspace{.5in}
+
+
+\begin{center}{\large Complex Analysis Qualifying Exam, January, 2001\\
+Burckel \& Poggi-Corradini}
+\end{center}
+
+\vfill 
+
+
+\noindent{\bf  Instructions:}  Below you will find 8 problems.
+Do as many as you can.\\
+\noindent{\bf Notations:} $\R =$ set of all real numbers;
+$\C =$ set of all complex numbers; $\D=\{z\in\C\,:\,|z|<1\}$ (the unit
+disk); $\T=\{z\in\C\,:\,|z|=1\}$ (the unit circle); for $U$ open in
+$\C$, $H (U)$ is the set of holomorphic functions in $U$.
+
+\noindent {\bf 1.} Let $f$ be a holomorphic function on the open unit
+disk $\D$, and  suppose that $|f (z)|\leq M$ for all $z\in\D $. Prove
+that the number of zeros of $f$ in $\{|z|\leq  1/4 \}$ does not exceed
+\[
+\frac{\log \left|\frac{M}{f (0)}\right|}{\log 4}.
+\]
+Hint: Consider the Blaschke factors $\frac{z-z_{j}}{1-\overline
+{z_{j}}z}$, where $z_{j}$ are the zeros of $f$.
+
+\vfill 
+
+
+\noindent {\bf 2.} Let $f$ be entire, $r>0$, and $f (0)=1$. Show that
+there is $z$ with $|z|=r$ such that 
+\[
+e^{-z}f (z)\in [1,\infty ).
+\]
+Hint: Use the Argument Principle.
+
+\vfill 
+
+
+\noindent {\bf 3.} Recall that a normal family on $\D $ is a set
+$\mathcal{F}$ of 
+functions $f: \D \rightarrow \C$ such that any sequence in
+$\mathcal{F}$ has a subsequence that converges uniformly on compact
+subsets (here we take the usual metric on $\C$). Let $\mathcal{F}$ be
+the family of all the analytic functions on $\D $ with the property
+that $f (0)=1$ and $f (z)\not\in (-\infty,0]$ for all $z\in\D $. Show that
+$\mathcal{F}$ is a normal family. Give a counter-example if the
+condition $f (0)=1$ is omitted.
+
+\vfill 
+
+
+\noindent {\bf 4.} Find an explicit formula for a function $u$ harmonic in the
+half-disk $D=\D \cap \{\rea z>0 \}$ such that 
+$\lim _{z\rightarrow \zeta }u (z)=0\mbox { when }\zeta =it, -1<t<1$
+and 
+$\lim _{z\rightarrow \zeta}u (z)=1 \mbox { when }\zeta\in \T \cap
+\{\rea z>0 \}. $
+Hint: Use the fact that the angle subtended by the diameter from a point
+on the half-circle is always equal to $\pi/2$ and the fact that
+$\Arg=\ima\log$ is harmonic whenever it is well-defined.
+
+\vfill 
+
+
+\noindent {\bf 5.} Let $f\in H (U)$ for some open set $U$. Suppose
+$f=e^{g}$ for some continuous function $g$. Prove that $g$ is
+holomorphic in $U$.
+
+\vfill 
+
+
+\noindent {\bf 6.} Let $f$ be holomorphic in $\{z\in\C : 0<r<|z|<R \}$,
+and suppose $\rea f$ is constant on each circle $\{z\in\C :|z|=\rho
+\}$ with $r<\rho <R$. Show that $f$ is constant. Hint: Consider $F
+(z)=f (e^{z})$.
+
+\vfill 
+
+
+\noindent {\bf 7.} Suppose $f$ is meromorphic in $\C$ and vanishes at
+infinity. Show that if $r>0$ is large enough
+\[
+\int _{0}^{2\pi}\frac{f (re^{it})}{1- (z/r)e^{-it}}\frac{dt}{2\pi }
+\]
+equals $0$ for $|z|<r$ and equals $-f (z)$ for $|z|>r$. Hint: Consider
+$f (1/z)$.
+
+\vfill 
+
+
+\noindent {\bf 8.} Recall that $\sin \theta = (e^{i\theta
+}-e^{-i\theta })/ (2i)$ and compute
+\[
+\int _{0}^{2\pi }\frac{d\theta }{2-\sin \theta }.
+\]
+
+
+
+
+
+
+
+\end{document}
+
+
+
+

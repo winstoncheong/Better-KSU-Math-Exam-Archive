@@ -1,0 +1,162 @@
+% latex file
+\def\hcorrection#1{\advance\hoffset by #1 }
+\def\vcorrection#1{\advance\voffset by #1 }
+
+\documentclass{article}
+\usepackage{my,amsxtra,amssymb,amsthm}
+
+\vcorrection{-1.0in}
+\hcorrection{-0.8in}
+\textwidth 6.0in
+\textheight 9.0in
+\begin{document}
+%\begin{Large}
+
+
+
+
+
+
+\begin{center}\begin{LARGE}
+{\bf Numerical Analysis Qualifying Exam}\\ 
+{\bf Spring 1993}\\ \end{LARGE}
+\end{center}
+\vspace{0.1in}
+\noindent\hrulefill\\
+
+\begin{description}
+\item[1.] (a)
+Assume that $a \neq 0$ and $b^2 - 4ac > 0$ and consider the equation
+$ax^2 + bx + c = 0$. The roots can be computed with the quadratic formulas
+$$x_1 = \frac{-b + \sqrt{b^2 - 4ac}}{2a}, \quad
+  x_2 = \frac{-b - \sqrt{b^2 - 4ac}}{2a},$$
+
+Improve these formulas so that it is good even in the case
+$|b| \approx \sqrt{b^2 - 4ac}$.
+
+\item[\quad] (b)
+Improve the following formula for numberical computation:
+$$\ln (1+x) - \ln x, \quad \hbox{\ where\ } x \hbox{\ is\ } \hbox{large\ }$$
+
+\item[2.]
+Suppose $f \in C^2(R)$, and $f(p) = 0$ implies $f^\prime (p) \neq 0$.
+
+\item[\quad] (a)
+Show if $f(p) = 0$, then there is a $\delta$ such that if $|x_0 -p| < \delta$,
+then Newton's method starting at $x_0$ converges to $p$.
+
+\item[\quad] (b)
+Show that if $p_1, p_2$ are successive zeros of $f$ (i.e. $f(x) \neq 0$
+for $x \in (p_1, p_2)$) and $p_3$ is another zero of $f$, then there is an
+$x_0 \in (p_1, p_2)$ such that Newton's method starting from $x_0$
+converges to $p_3$. (You may just use a geometrical way to show it)
+
+\item[3.]
+Suppose that the Lagrange interpolation formula for the function $f$ at
+the $n+1$ distinct nodes $x_0, x_1, \dots, x_n$ is given by
+$$P_n(x) = \sum^n_{j=0} l_{j,n} (x) f(x_j),$$
+where the Lagrange polynomial coefficients are given by
+$$l_{j,n} (x) = \prod^n_{\substack{ i=0 \\ i \neq j}}
+  \frac{(x-x_i)}{(x_j - x_i)}.$$
+
+Show that for any $n \geq 1$,
+$$\sum^n_{j=0} x_j l_{j,n} (x) = x.$$
+
+\item[4.]
+Suppose a numerical formula $I_h$ (like a numerical integration
+formula) using step size
+$h$ is used to approximate a mathematical expression $I$ (like a
+definite integral). If the error of the formula is given by
+$$I_h - I = kh^p + O(h^{p+2}), \quad \hbox{where\ } k,p
+  \hbox{\ are\ } \hbox{constants}$$
+
+\item[\quad] (a)
+describe Richarson extrapolation which uses $I_h, I_{h/2}$ to generate a
+more accurate numerical formula $\widetilde I_{h/2}$.
+
+\item[\quad] (b)
+Apply Richarson extrapolation to the trapezoidal rule
+$$I(f) =\int^b_a f(x) dx \approx I_h (f) = \frac{h}{2} (f(a) + f(b)), \quad
+  h=b-a$$
+to derive a more accurate integration formula. Identify this more accurate
+integration formula by giving its familar name.
+(Hint: $I_{h/2}$ would use two subintervals)
+
+\item[5.]
+Establish a finite difference formula to approximate
+$\frac{\partial f(x,y)}{\partial x}$ using $f(x,y), f(x-h,y), f(x-2h, y)$.
+Be as accurate as possible and derive an expression of the truncation error.
+Assume $f(x,y)$ is smooth enough.
+
+\item[6.]
+Give an {\bf upper bound} for the relative error in the solution of the
+system of linear equations
+$$Ax=b$$
+with symmetric matrix $A$ given by
+$$A= \begin{bmatrix}
+        6&1&2 \\
+        1&6&2 \\
+        2&2&8
+        \end{bmatrix}$$
+when the relative error in {\bf b} is less that $4 \cdot 10^{-4}$, i.e.
+$$\frac{\parallel \delta b \parallel}{\parallel b \parallel}
+  < 4 \cdot 10^{-4}.$$
+Use spectral norms, i.e., use
+$$\parallel b \parallel = \left( \sum_j |b_j^2| \right)^{1/2}.$$
+
+\item[7.]
+Let $A = (a_{ij})$ be an $n \times n$ matrix. An iterative scheme for the
+solution of the linear system $Ax = b$ is described by
+$$\hbox{given\ } x_i^{(0)}, \quad i = 1, \dots, n;$$
+$$a_{ii} y_i^{(k+1)} = b_i - \sum^{i-1}_{j=1} a_{ij}y_j^{(k+1)} -
+  \sum^n_{j=i+1} a_{ij}x_j^{(k)}$$
+$$x_i^{(k+1)} = \omega y_i^{(k+1)} + (1-\omega) x_i^{(k)}, \quad
+  i=1, \dots, n; \quad k = 0,1, \dots $$
+
+\item[\quad] (a)
+Write the iterative scheme in the form
+$$x^{(k+1)} = Tx^{(k)} + c$$
+(Hint: consider the splitting $A=D-L-U$).
+
+\item[\quad] (b)
+For the particular case
+$$A= \begin{bmatrix} 2&1 \\ 1&2 \end{bmatrix}$$
+varify that the choice $\omega = 8/7$ gives the best rate of convergence.
+
+\item[8.]
+Given $x= (x_1, x_2, \dots, x_n)^T \in R^n$ ($T$ means transpose), define
+$v = x + \hbox{sign} (x_1) \parallel x \parallel _2 e_1$, where
+$e_1 = (1,0, \dots, 0)^T$. The Householder matrix (Householder
+transformation) with $v$ (Householder vector) is given by
+$$P=I - 2 \frac{vv^T}{v^Tv},$$
+which is orthogonal and symmetric.
+
+\item[\quad] (a)
+Verify that $Px = -\hbox{sign} (x_1) \parallel x \parallel_2 e_1$.
+
+\item[\quad] (b)
+Describe how the Householder matrices can be used to construct an orthogonal
+matrix $Q$ for a given matrix $A \in R^{n \times n}$ such that
+$$A=QR,$$
+where $R$ is upper tirangular.
+
+
+
+
+\end{description}    
+%\end{Large}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

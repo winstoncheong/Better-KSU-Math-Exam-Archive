@@ -1,0 +1,183 @@
+% latex file
+\def\hcorrection#1{\advance\hoffset by #1 }
+\def\vcorrection#1{\advance\voffset by #1 }
+
+\documentclass{article}
+\usepackage{my,amsxtra,amssymb,amsthm}
+
+\vcorrection{-1.0in}
+\hcorrection{-0.8in}
+\textwidth 6.0in
+\textheight 9.0in
+
+\def\R{\mathbb R}
+\def\C{\mathbb C}
+\def\N{\mathbb N}
+\def\Z{\mathbb Z}
+\def\Q{\mathbb Q}
+
+\begin{document}
+%\begin{Large}
+
+
+
+
+
+
+\begin{center}\begin{LARGE}
+{\bf Topology Qualifying Exam}\\ 
+{\bf Spring 1988}\\ \end{LARGE}
+\end{center}
+\vspace{0.1in}
+\noindent\hrulefill\\
+
+Do 9 of the following 17 problems.
+
+\begin{description}
+\item[1.]
+Prove that the following statements are equivalent for any topological space
+$X$:
+
+\item[\quad] a)
+$X$ is Hausdorff
+
+\item[\quad] b)
+for any space $Y$ and for each pair of continuous functions
+$f, g: Y \to X$ that agree on a dense subset of $Y, f=g$.
+
+\item[2.]
+Prove that the product of normal $T_1$ spaces must be $T_1$ and completely
+regular, but need not be normal.
+
+\item[3.]
+Prove or give a counterexample for each of the following  implications:
+
+separable $\stackrel{(a)}{\Longrightarrow}$ second countable
+$\stackrel{(b)}{\Longrightarrow}$ first countable $\stackrel{(c)}{\Longrightarrow}$
+separable $\stackrel{(d)}{\Longrightarrow}$ first countable
+$\stackrel{(e)}{\Longrightarrow}$ second countable $\stackrel{(f)}{\Longrightarrow}$
+separable.
+
+\item[4.]
+Let $A$ be a subset of a topological space $X$. Show that the following
+statements are equivalent:
+
+\item[\quad] a)
+$x \in \overline A$
+
+\item[\quad] b)
+there is a filter $\mathcal F$ on $X$ such that $A \in \mathcal F$ and
+$\mathcal F$ converges to $x$.
+
+\item[\quad] c)
+There is a net $\alpha : \Lambda \to A$ that converges to $x$.
+
+\item[5.]
+Let $(X_\alpha) _{\alpha \in A}$ be a collection of topological spaces and
+let $x$ be fixed point in $\prod_{\alpha \in A} X_\alpha$. Show that
+$$D= \left\{ y \in \prod_{\alpha \in A} X) \alpha |\  y \hbox{\ and\ } x
+\hbox{\ differ\ } \hbox{in\ } \hbox{at\ } \hbox{most\ } \hbox{finitely\ }
+\hbox{many\ } \hbox{coordinates\ } \right\}$$
+is dense in $\prod_{\alpha \in A} X_\alpha$.
+
+\item[6.]
+Let $\{A_\alpha\}$ be a point-finite covering of a Hausdorff space $X$. Show
+that $\{A_\alpha\}$ has a subcovering $\{B_\gamma\}$ so that no subset of
+$\{B_\gamma\}$ covers $X$.
+
+\item[7.]
+Prove that the following statements are equivalent for any topological space
+$X$:
+
+\item[\quad] a)
+$X$ is Tychonoff (i.e., $T_1$ and completely regular)
+
+\item[\quad] b)
+$X$ can be embedded in a compact Hausdorff space.
+
+\item[8.]
+Show that for $n \geq 1$ the $n$-sphere, $S^n$, is homeomorphic to the
+one-point compactification of Euclidean $n$-space, $E^n$.
+
+\item[9.]
+Find an error in the following purported ``proof" that $2^R$ is metrizable,
+where $2=\{0,1\}$ is a two point discrete space, and $R$ is the set of
+real numbers.
+
+{\bf Proof}. Consider the inclusion $N \subseteq R$, where $N$ is the natural
+numbers. This induces a ``natural" embedding $2^N \hookrightarrow 2^R$
+where $f \mapsto \hat f$ and
+$$\hat f (r) = \begin{cases}
+                f(r) &\hbox{\ if\ } r \in N \\
+                0 &\hbox{\ if\ } r \in R-N.
+                \end{cases}.$$
+But $2^N$ is the Cantor space $C$. Thus $C$ is embedded in $2^R$. Let $U$ be
+an open subset of $2^R$. By the definition of product topology, the projection
+of $U$ is $\{0,1\} = 2$ in all but finitely many coordinates. Thus
+$U \cap 2^N \neq \emptyset$. So $2^N$ is dense in $2^R$. But $2^N$ is compact
+and $2^R$ is Hausdorff, so $2^N$ is closed in $2^R$. Thus $2^N = 2^R$. But
+$C$ is metrizable, and so $2^R$ is metrizable.
+
+\item[10.]
+Prove that every quotient of a locally connected space is locally connected.
+
+\item[11.]
+Let $E^n$ denote Euclidean $n$-dimensional space. For what values of $n$ is
+it true that $E^n - \{p\}$ is simply connected for any point $p \in E^n$.
+Prove your answer.
+
+\item[12.]
+Let $E^n$ denote Euclidean $n$-dimensional space. For what values of $n$ is
+it true that $E^n-C$ is connected for any countable subset $C$. Prove your
+answer.
+
+\item[13.]
+Show that in a locally compact Hausdorff space, countable intersections of
+dense open sets are dense and open.
+
+\item[14.]
+A covering $\{U_\alpha\}_{\alpha \in A}$ of a topological space $X$ is called
+shrinkable if there is a covering $\{V_\alpha\}_{\alpha \in A}$ of $X$
+such that $\overline{V_\alpha} \subseteq U_\alpha$ for each
+$\alpha \in A$ and $V_\alpha \neq \emptyset$ whenever
+$U_\alpha \neq \emptyset$. Show that a Hausdorff space is normal if and only
+if each point-finite covering is shrinkable.
+
+\item[15.]
+Prove that every separable metrizable space can be embedded in a countable
+product of closed unit intervals.
+
+\item[16.]
+
+\item[\quad] a)
+Give an example of an ultrafilter on the set $\R$ of real numbers.
+
+\item[\quad] b)
+Give an example of a filter on $\R$ that is not an ultrafilter.
+
+\item[\quad] c)
+Prove that every filter on $\R$ is contained in an ultrafilter on $\R$.
+
+\item[17.]
+Show that every compact connected Hausdorff space is the continuous image of
+$[0,1]$.
+
+
+
+\end{description}    
+%\end{Large}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

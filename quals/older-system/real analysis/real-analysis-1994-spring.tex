@@ -1,0 +1,145 @@
+% latex file
+\def\hcorrection#1{\advance\hoffset by #1 }
+\def\vcorrection#1{\advance\voffset by #1 }
+
+\documentclass{article}
+\usepackage{my,amsxtra,amssymb,amsthm}
+
+\vcorrection{-1.0in}
+\hcorrection{-0.8in}
+\textwidth 6.0in
+\textheight 9.0in
+
+\def\R{\mathbb R}
+\def\C{\mathbb C}
+\def\N{\mathbb N}
+\def\Z{\mathbb Z}
+\def\Q{\mathbb Q}
+
+\begin{document}
+%\begin{Large}
+
+
+
+
+
+
+\begin{center}\begin{LARGE}
+{\bf Real Analysis Qualifying Exam}\\ 
+{\bf Spring 1994}\\ \end{LARGE}
+\end{center}
+\vspace{0.1in}
+\noindent\hrulefill\\
+
+Throughout $(X, {\cal M}, \mu_)$ denotes a measure space, $\mu$ denotes a
+positive measure unless otherwise specified, and all functions are
+assumed to be measurable.
+
+\begin{description}
+\item[1.]
+Suppose $\mu(X) < \infty$ and that $f_n \to f$ in measure. Prove that there
+exists a subsequence $\{ f_{n_k} \}$ of $\{f_n\}$ such that $f_{n_k} \to f$
+a.e.
+
+\item[2.]
+Let $g$ be a bounded function which has the property that for every measurable
+set $E$, $\lim_{n\to \infty} \int_E g(nx) dx =0$. Show that for every
+$f \in L^1 (X, {\cal M}, \mu), \lim_{n \to \infty} \int_X f(x) g(nx) dx =0$.
+
+\item[3.]
+Suppose $f \in L^1 (\mu)$, $g \in L^p (\mu)$, $1 \leq p \leq \infty$. Prove
+that
+$\parallel f \ast g \parallel_p \leq \parallel f \parallel_1 \parallel g
+  \parallel_p$.
+
+\item[4.]
+Show that any orthonormal set in a separable Hilbert space is at most
+countable.
+
+\item[5.] (a)
+Construct a closed set $K \subseteq [0,1]$ such that $|K| > \frac{1}{2}$ and
+$K$ contains no rational.
+
+\item[\quad] (b)
+Can you construct such a $K$ so that $|K \cap I| \leq \frac{9}{10} |I|$
+for every interval $I \subseteq [0,1]$?
+
+\item[6.]
+Suppose $T:B \to C$ is a bounded linear tranformation between the Banach
+spaces $B$ and $C$. Note that $T$ induces a map $T^\ast : C^\ast \to B^\ast$
+given by $T^\ast (f) = f \circ T$. Hence, this induces a map
+$T^{\ast \ast} : B^{\ast \ast} \to C^{\ast \ast}$. Consider also the natural
+embedding $i_B : B \hookrightarrow B^{\ast \ast}$ given by $b \to \widehat b$
+where $\widehat b (S) = S(b)$ for $S \in B^\ast$. Prove that
+``$T^{\ast \ast} |_B = T$", that is, show that
+$T^{\ast \ast} \circ i_B = i_c \circ T$ where $i_c$ is the natural embedding
+$i_c :C \hookrightarrow C^{\ast \ast}$.
+
+\item[7.]
+Suppose $\{f_n\}$ is a sequence of functions which has $f_n \to f$ a.e. and
+$\parallel f_n \parallel_1 \to \parallel f \parallel_1 < \infty$. Prove
+that $f_n \to f$ in $L^1$.
+
+\item[8.]
+Let $D$ be the unit disk in the complex plane. Assume the following facts
+from complex analysis:
+
+\item[\quad] 1.
+Given any continuous function $f$ on $\partial D$, there exists a unique
+harmonic function $u$ on $D$, continuous on $\overline D$, such that
+$u|_{\partial D} = f$.
+
+\item[\quad] 2.
+The sum of any two harmonic functions is harmonic, as is the multiplication
+of harmonic function by a constant.
+
+\item[\quad] 3.
+If $u$ is assoiciated to $f$ as in 1, then
+$$\sup_{z \in D} |u(z)| \leq \sup_{z \in \partial D} |f(z)|.$$
+
+\item[\quad] 4.
+If $f$ is real valued, so is $u$. If $f \equiv 1$ then $u \equiv 1$.
+
+Fix $z_0 \in D$. Prove that there exists a positive measure $w_{z_0}$ on
+$\partial D$ such that
+$$u(z_0) = \int_{\partial D} f(z) dw_{z_0} (z)$$
+if $f$ and $u$ are related as in 1.
+
+Remark: $w_{z_0}$ is called harmonic measure. You don't even have to know the
+defintion of harmonic function to solve this problem.
+
+\item[9.]
+Let $\{a_n\} \in \ell^2$. Prove that
+$$\exp \left(\frac{1}{2 \pi} \int^\pi_{-\pi} \log \left| \sum^\infty_{n=1}
+  a_n e^{in\theta} \right| d \theta \right) \leq
+  \left(\sum^\infty_{n=1} |a_n|^2 \right)^{\frac{1}{2}}$$
+
+\item[10.]
+Suppose $f_n(x)$ is a sequence of functions on the interval [0,1] which
+satisfy the distrubution estimate:
+$$|\{x \in [0,1] \parallel f_n (x) | > \lambda \} | \leq e^{-\lambda / n}.$$
+Prove that $\lim_{n \to \infty} \sup \frac{|f_n (x)|}{n \log n} \leq 1$
+a.e.
+
+
+
+
+
+
+\end{description}    
+%\end{Large}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

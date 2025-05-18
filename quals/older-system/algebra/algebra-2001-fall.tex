@@ -1,0 +1,133 @@
+% latex file
+\def\hcorrection#1{\advance\hoffset by #1 }
+\def\vcorrection#1{\advance\voffset by #1 }
+
+\documentclass[12pt]{article}
+\usepackage{my,amsxtra,amssymb,amsthm}
+
+\pagestyle{empty}
+\vcorrection{-1.0in}
+\hcorrection{-0.8in}
+%\textwidth 6.0in
+%\textheight 9.0in
+\textwidth 6.5in
+\textheight 9.25in
+
+\begin{document}
+%\begin{Large}
+
+\begin{center}
+%\begin{LARGE}
+{\bf  Algebra Qualifying Exam}\\ 
+{\bf August 23, 2001}\\
+%\end{LARGE}
+\end{center}
+
+\vspace{0.1in}
+\noindent\hrulefill\\
+{\bf Instructions:} You are given 10 problems from which you are to do 8.
+ Please indicate those  8 problems which you would like  to be graded 
+by circling the problem numbers on the  problem sheet. 
+
+\noindent{\bf Note:} All rings on this exam are associative and
+have multiplicative identity 1. All  integral domains are 
+assumed to be commutative.
+\vspace{0.2in}
+
+%\vs
+
+
+\begin{enumerate}
+
+\item Suppose that $G$ is a group and that $N_1,\, N_2\trianglelefteq G$ are
+two normal subgroups with $G/N_1\cong G/N_2$. Must it follow that 
+$N_1\cong N_2$? Prove or supply a counterexample.
+
+\item Let $G$ be a group, and let $H$ be a cyclic normal subgroup of $G$. Prove
+that the commutator subgroup $G'$ is a subgroup of the centralizer
+$C_G(H)=\{g\in G\,|\, gh=hg, \mbox{ for all }h\in H\}.$
+
+
+\item Let $G$ be a finite group and let $P$ be a $p$-Sylow subgroup
+of $G$. If for all $x\in G$ we have $P\cap P^x=1$ or $P$, show that
+$|\mbox{Syl}_p(G)|\equiv 1\, (\mbox{mod }|P|)$.
+
+%\item Let $P$ be a prime ideal of the commutative ring $R$. Show that
+%$P[x]$ is a prime ideal of the commutative ring $R[x]$.
+
+\item $\K$ be a field and let ${\cal O}\subseteq\K$ be
+a subring. Assume
+that for all $0\not=\alpha\in\K$, we have either $\alpha\in {\cal O}$ or
+$\alpha^{-1}\in{\cal O}$. Prove that the set of nonunits of ${\cal O}$
+forms an ideal of ${\cal O}$.
+
+\item Let $\F$ be a field and let $R$ be the ring of all $2\, \times\, 2$
+matrices over $\F$. Prove that, up to isomorphism, $R$ has only one
+irreducible left $R$-module $M$, viz., 
+$$M\ =\ \left\lbrace\left[ \begin{array}{c}
+                 a \\
+                 b
+                 \end{array}\right]\vert\ a,b\in {\F}\right\rbrace,$$
+acted on by ordinary matrix multiplication.
+
+\item Let $\F$ be a field, let $V$ be a finite-dimensional $\F$-vector space,
+and let $T:V\to V$ be a linear transformation. If the minimal polynomial
+$m_T(x)$ splits into {\em linear} factors, prove that there exists an
+ordered basis of $V$ relative to which $T$ is represented by an upper
+triangular matrix.
+
+%\item Let $\F=\F_2$ be the finite field of two elements,  and let $k$ be
+%a positive integer. Let $W$ be a $k$-dimensional $\F$-vector space, and
+%let $\{w_1,w_2,\ldots, w_n\}$ be the set of nonzero vectors of $W$.
+%If $V$ is the $\F$-vector space  
+%$$V=\{(a_1,a_2,\ldots, a_n)\,|\ a_1,a_2,\ldots ,a_n\in \F\},$$ 
+%and if $T:V\to W$ is the linear transformation defined by
+%$$T(a_1,a_2,\ldots ,a_n)=\sum\limits_{i=1}^na_iw_i\in W,$$
+%compute the dimension of $\ker T$ in wholly terms of the parameter $k$.
+
+\item Let $V$ be an $n$-dimensional vector space and let $V^*$ be the
+dual space.  Let $\{f_1,f_2,\ldots f_r\}$ be linearly independent
+functionals
+in $V^*$, and let $W:=\cap  _{i=1}^r\mbox{ann}({f_i})$, where
+$\mbox{ann}({f_i})$
+is the subspace of $V$ annihilated by $f_i$.  Prove that $\mbox{dim
+}W=n-r.$
+
+\item Let ${\F}\subseteq {\E}\subseteq {\K}$ be fields,
+let $\alpha\in {\K}$, and let $f(x)$ be the minimal polynomial of
+$\alpha $ over ${\F}$.  Assume that $[{\E}:{\F}]$ and
+$\mbox{deg }f(x)$ are relatively prime. Prove that $f(x)$ is also the
+minimal polynomial of $\alpha $ over ${\E}$.
+
+\item Let $f(x)\in\Q[x]$ be an irreducible polynomial 
+of degree at least 2, and let 
+$\alpha\in\C$ be a root of $f(x)$. Give an example to show that
+the Galois group of $\Q(\alpha)$ over $\Q$ can be trivial.
+
+\item Let $f(x)\in\Q[x]$ be an irreducible polynomial and let
+$\K\subseteq \C$ be the splitting field of $f(x)$. Show that
+${\rm Gal}(\K/\Q)$ must act transitively on the roots of $f(x)$.
+
+
+
+
+
+
+    
+\end{enumerate}
+%\end{Large}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

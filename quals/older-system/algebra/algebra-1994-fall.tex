@@ -1,0 +1,134 @@
+% latex file
+\def\hcorrection#1{\advance\hoffset by #1 }
+\def\vcorrection#1{\advance\voffset by #1 }
+
+\documentclass{article}
+\usepackage{my,amsxtra,amssymb,amsthm}
+
+\vcorrection{-1.0in}
+\hcorrection{-0.8in}
+\textwidth 6.0in
+\textheight 9.0in
+
+\def\R{\mathbb R}
+\def\C{\mathbb C}
+\def\N{\mathbb N}
+\def\Z{\mathbb Z}
+\def\Q{\mathbb Q}
+
+\begin{document}
+%\begin{Large}
+
+
+
+
+
+
+\begin{center}\begin{LARGE}
+{\bf Algebra Qualifying Exam}\\ 
+{\bf Fall 1994}\\ \end{LARGE}
+\end{center}
+\vspace{0.1in}
+\noindent\hrulefill\\
+All rings are assumed to have a multiplicative identity, denoted 1. The
+fields $\Q$, $\R$ and $\C$ are the fields of {\it rational, real} and
+{\it complex} numbers, respectively.
+
+\begin{description}
+
+\item[1.]
+Let $P$ be a finite $p$-group for a given prime number $p$. For any
+$x \in P$ show that either $\langle x \rangle$ is a normal subgroup of
+$P$, or there
+exists $g \in P$ such that $[x, gxg^{-1}] = 1$ and
+$x \neq gxg^{-1}$.
+
+\item[2.]
+Let $G$ be a finite groups and $p$ a prime number dividing the order of $G$.
+$Syl_p (G)$ is the set of all Sylow $p$-subgroups of $G$.
+
+\item[\quad] (a)
+Show that $N_P (Q) = P \cap Q$ for $P,Q \in Syl_p (G)$. Here
+$N_P(Q) = \{x \in P |xQx^{-1} = Q\}$
+is the normalizer of $Q$ in $P$.
+
+\item[\quad] (b)
+Show that is there is $P \in Syl_p (G)$ such that $P \cap xPx^{-1} = P$
+or $\{1\}$ for any $x \in G$, then $|Syl_p (G) | \equiv 1$
+(mod $|P|$).
+
+
+\item[3.]
+Prove that every prime ideal in a PID is maximal. Then give an example of an
+integral domain, in which there is a prime ideal which is not maximal.
+
+\item[4.]
+Recall that a ring is called Noetherian if every ascending chain of ideals
+terminates. Show that any PID is Noetherian. Give an example of a
+Noetherian integral domain which is not a PID.
+
+\item[5.]
+Let $F$ by any field and $f(x) \in F[x]$. If $E$ is the splitting field of
+$f(x)$ over $F$, show that $[E:F] \leq (\deg(f(x))!$. Give an example
+for which the equality holds.
+
+\item[6.]
+Let $\alpha = \sqrt{3} + \sqrt[3]{2}$.
+It is known that
+$[\Bbb Q (\alpha) : \Bbb Q] = 6$.
+
+\item[\quad] (a)
+Calculate the minimal polynomial of $\alpha$ over the field $\Bbb Q$ of
+rational numbers.
+
+\item[\quad] (b)
+Is the field $\Bbb Q(\alpha)$ Galois over $\Bbb Q$? If yes, determine the
+Galois group. If not, justify your answer.
+
+\item[7.]
+Let $R$ be a ring. If $M$ is a left $R$-module, show that for any
+$R$-submodule $N$ of $M$, the set $\{x \in R |x M \subseteq N \}$ is a
+two-sided ideal of $R$.
+
+\item[8.]
+Let $R$ be a ring. Prove Schur's Lemma: For any two simple left
+$R$-modules $M$ and $N$, any $R$-module homomorphism $\phi: M \to N$
+is either identically zero or an isomorphism.
+
+\item[9.]
+Let $F$ by any fixed field and $V$ a vector space over $F$ (of any dimension).
+Suppose that $A:V \to V$ is a nilpotent linear transformation
+(i.e., $A^n = 0$, for some $n$). Show that $A$ has at least
+one eigenvector with eigenvalue in $F$.
+
+\item[10.]
+Let
+$A= \begin{bmatrix}
+        5&1&2 \\
+        0&4&-1 \\
+        0&0&4
+        \end{bmatrix}$
+be a $3 \times 3$ matrix. Show that there exist complex matrices $D$ and $N$
+such that $D$ is diagonalizable, $N$ is nilpotenet, $DN=ND$, and $A=D+N$.
+
+
+
+
+
+\end{description}    
+%\end{Large}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,163 @@
+% latex file
+\def\hcorrection#1{\advance\hoffset by #1 }
+\def\vcorrection#1{\advance\voffset by #1 }
+
+\documentclass{article}
+\usepackage{my,amsxtra,amssymb,amsthm}
+
+\vcorrection{-1.0in}
+\hcorrection{-0.8in}
+\textwidth 6.0in
+\textheight 9.0in
+\begin{document}
+%\begin{Large}
+
+
+
+
+
+
+\begin{center}\begin{LARGE}
+{\bf Numerical Analysis Qualifying Exam}\\ 
+{\bf Spring 1997}\\ \end{LARGE}
+\end{center}
+\vspace{0.1in}
+\noindent\hrulefill\\
+
+\begin{description}
+
+\item[1.]
+In some computers, division $1/a$ is done by using Newton's method. The
+operation becomes finding the root of the function $f(x) = a - 1/x$.
+Consider Newton's method for this function, write down the Newton's
+iteration for it (the operation only involves addition, subtraction and
+multiplication).
+
+\item[\quad] (a)
+Introducing the scaled residual $r_n = 1 - ax_n$, find the relation of
+$r_{n+1}$ and $r_n$.
+
+\item[\quad] (b)
+Find the condition that guarantees the convergence.
+
+\item[\quad] (c)
+Using the results, find
+$$\prod^\infty_{n=0} (1+ r^{2^n}), \hbox{\ where\ } |r| <1$$
+(Hint: Let $r = r_0$, write $x_n$ in terms of $x_0$ and $r_0$)
+
+\item[2.]
+Suppose $S_{na} (x), S_{cl} (x)$ are the natural cubic spline interpolant and
+clamped cubic spline interpolant respectively for a function $f(x)$
+with knots $t_0, t_1, \dots, t_n$. That is, they both are cubic spline
+interpolating $f(x)$ at $a = t_0 < t_1 < \dots <t_n = b$, besides
+$S_{na}^{\prime \prime} (t_0) = 0$, 
+$S_{na}^{\prime \prime} (t_n) = 0$; $S_{cl}^\prime (t_0) = f^\prime (t_0)$,
+$S_{cl}^\prime (t_n) = f^\prime (t_n)$.Which of the two splines has a smaller
+$\int^b_a [S^{\prime \prime} (t)]^2 dt$? Justify your answer.
+
+\item[3.]
+Construct a polynomial $f(x)$ with suitable degree such that
+$f[x_0, x_1, \dots, x_n, x]= x^r$, where $r$ is a natural number,
+$x_0< x_1< \dots < x_n$ are real numbers, and $f[x_0, x_1, \dots, x_n, x]$
+is the Newton divided difference. (Hint: consider the error formula of an
+interpolation polynomial in terms of the divided difference)
+
+\item[4.]
+Prove the following theorem for Gaussian quadrature:
+
+Let $I(f) = \int^b_a f(x) w (x) dx$, where $w(x)$ is a positive weight
+function, be approximated by a quadrature formula
+$I_n(f) = \sum^n_{i=1} A_i f(x_i)$. Then the quadrature formula
+$I_n(f)$ has a maximum degree of precision of $2n-1$. This is attained if
+and only if $x_1, x_2, \dots, x_n$ are the zeros of $p_n(x)$, the nth
+orthogonal polynomial, with the inner product
+$$(f,g) = \int^b_a f(x) g(x) w(x) dx.$$
+(Hint: consider the form of $f[x_1, x_2, \dots, x_n, x])$
+
+\item[5.]
+Can a matrix of $m \times n$ has a right inverse and a left inverse that are
+not equal? Justify your answer.
+
+\item[6.]
+Given a linear system $Ax = b$ where
+$A \in C^{m \times n}, x \in C^{n \times 1}$, and $b \in C^{m \times 1}$.
+The system may have no solution (inconsistent) or have a unique solution,
+or have non-unique solutions. The {\bf minimal solution} of the
+system is defined as follows:
+
+let
+$$ \rho = inf \{\parallel Ax - b \parallel_2 : x \in C^n\}$$
+Then the {\it minimal solution} is the element of least norm in the set
+$K= \{x : \parallel Ax - b \parallel_2 = \rho\}$.
+
+Prove the theorem: The minimal solution of the equation $Ax=b$ is given by
+$$x = A^+b$$
+where $A^+$ is the pseudoinverse of $A$, defined as $A^+ = Q^\ast D^+ P^\ast$,
+if the singular-value decomposition of $A$ is $A = PDQ$, where $P$ is an
+$m \times m$ unitary matrix, $D$ is an $m \times n$ diagonal matrix, $Q$
+is an $n \times n$ unitary matrix, $D^+$ is an $n \times m$ diagonal
+matrix, $P^\ast$ is the Hermitian transpose of $P$ and
+
+$$D= \begin{bmatrix}
+        \sigma_1 &&&&&& \\
+        & \sigma_2 &&&&& \\
+        && \dots &&&& \\
+        &&& \sigma_r &&& \\
+        &&&& 0 && \\
+        &&&&& \dots & \\
+        &&&&&& 0 \\
+        \end{bmatrix},
+  \sigma_1 \geq \sigma_2 \geq \dots \geq \sigma_r > 0, r \leq \min(m,n),$$
+
+$$D^+ = \begin{bmatrix}
+        \sigma_1^{-1} &&&&&& \\
+        & \sigma_2^{-1} &&&&& \\
+        && \dots &&&& \\
+        &&& \sigma_r^{-1} &&& \\
+        &&&& 0 && \\
+        &&&&& \dots & \\
+        &&&&&& 0 \\
+        \end{bmatrix}.$$
+(Hint: start from the expression of $\rho$)
+
+\item[7.]
+Find explicitly (i.e., find the numerical value of every entry of) the
+iterative matrix in the Gauss-Seidel iterative method for solving a linear
+system $Ax=b$ when
+$$A= \begin{bmatrix}
+        2&-1&&&&&& \\
+        -1 & 2 & -1 &&&&& \\
+        & -1 & 2 & -1 &&&& \\
+        && -1 & \cdot & \cdot &&& \\
+        &&& \cdot & \cdot & \cdot &&\\
+        &&&& \cdot & \cdot & -1 & \\
+        &&&&& -1 & 2 & -1 \\
+        &&&&&& -1 & 2 \\
+        \end{bmatrix}.$$
+
+\item[8.]
+Consider a matrix $A$ that does not have any zero off-diagonal entry. Prove
+that if an eigenvalue $\lambda$ of $A$ lies on the boundary of the union of
+the Gershgorin Circles of the matrix $A$, then the circumference of every
+Gershgorin Circle passes through $\lambda$. (Hint: consider the proof of the
+Gershgorin theorem: consider the eigenvector corresponding to $\lambda$, and
+the component $x_k$ of the eigenvector which has the maximum magnitude, then
+consider other components)
+
+\end{description}    
+%\end{Large}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

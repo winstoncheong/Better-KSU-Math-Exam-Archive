@@ -1,0 +1,127 @@
+% latex file
+\def\hcorrection#1{\advance\hoffset by #1 }
+\def\vcorrection#1{\advance\voffset by #1 }
+
+\documentclass{article}
+\usepackage{my,amsxtra,amssymb,amsthm}
+
+\vcorrection{-1.0in}
+\hcorrection{-0.8in}
+\textwidth 6.0in
+\textheight 9.0in
+\def\R{\mathbb R}
+\def\C{\mathbb C}
+\def\N{\mathbb N}
+\def\Z{\mathbb Z}
+\def\Q{\mathbb Q}
+
+
+\begin{document}
+%\begin{Large}
+
+
+\begin{center}\begin{LARGE}
+{\bf Algebra Qualifying Exam}\\ 
+{\bf Spring 1992}\\ \end{LARGE}
+\end{center}
+\vspace{0.1in}
+\noindent\hrulefill\\
+All rings are assumed to have a multiplicative identity, denoted 1. The
+fields $\Q$, $\R$ and $\C$ are the fields of {\it rational, real} and
+{\it complex} numbers, respectively.
+
+\begin{description}
+
+\item[1.]
+Prove that no group of order 120 can be a simple group.
+
+\item[2.]
+Let $G$ be a group, and let $H$, $K$ be {\it solvable}- subgroups of $G$
+with $K$ normal. Prove that $HK$ is a solvable subgroup of $G$.
+
+\item[3.]
+Let $G$ be a finite group of order greater than 3, and let $\cal C$ be a
+conjugacy class of elements in $G$. If $|{\cal C}| = \frac{1}{3} |G|$, show
+that every element of $\cal C$ is an element of order 3.
+
+\item[4.]
+Let $R$ be a unique factorization domain in which every prime ideal is
+maximal. Prove that every prime ideal is principal. (In fact, it turns out
+that {\it every} ideal is principal, but you are not asked to prove this.)
+
+\item[5.]
+Let $R$ be a ring. Prove that the following three conditions are equivalent
+for the left $R$-module $M$.
+
+\item[\quad] (i)
+Any increasing chain of submodules
+$$M_1 \subseteq M_2 \subseteq \dots,$$
+
+\item[\quad] (ii)
+Any submodule of $M$ is finitely generated.
+
+\item[\quad] (iii)
+Any family of submodules of $M$ has a maximal member with respect to inclusion.
+
+\item[6.]
+Let $F$ be a field and let $R$ be the ring
+$$R= \left\{ \begin{bmatrix} a&0 \\ 0&b \end{bmatrix} | a,b \in F \right\}.$$
+
+Define the left $R$-modules
+$$M_1 = \left\{\begin{bmatrix} a \\ 0 \end{bmatrix} | a \in F \right\},
+  M_2 = \left\{\begin{bmatrix} 0 \\ b \end{bmatrix} | b \in F \right\}.$$
+
+(The module action is matrix multiplication.) Prove that $M_1$ and
+$M_2$ are {\bf not} isomorphic as left $R$-modules.
+
+\item[7.]
+Let $V$ be a vector space of dimension $n$, and let
+$1_V \neq T:V \to V$ be a linear transformation of $V$.
+If im$(T-1_V) \subseteq \ker (T-1_V)$, compute the minimal and characteristic
+polynomials of $T$ on $V$.
+
+\item[8.]
+Let $F_q$ be the finite field of $q$ elements, and let $K$ be an extension
+of $F_q$, of degree $n$.
+
+\item[\quad] (a)
+Prove that the map $\tau_q : K \to K$, $\tau_q(x) = x^q$
+is an automorphism of $K$, and that $F_q$ is precisely the subfield of fixed
+elements of $\tau_q$.
+
+\item[\quad] (b)
+Compute $Gal(K/F_q)$.
+
+\item[9.]
+Let $f(x) = x^5 - 2 \in \Q[x]$.
+
+\item[\quad] (a)
+Construct a splitting field $K \supseteq \Q$ for $f(x)$ over $\Q$.
+
+\item[\quad] (b)
+If $G=Gal(K/\Q)$, prove that no noidentity element of $G$ can fix
+two roots of $f(x)$.
+
+
+
+
+
+
+
+\end{description}    
+%\end{Large}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

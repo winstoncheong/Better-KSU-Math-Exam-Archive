@@ -1,0 +1,189 @@
+% latex file
+\def\hcorrection#1{\advance\hoffset by #1 }
+\def\vcorrection#1{\advance\voffset by #1 }
+
+\documentclass{article}
+\usepackage{my,amsxtra,amssymb,amsthm}
+
+\pagestyle{empty}
+
+\vcorrection{-1.25in}
+\hcorrection{-0.8in}
+\textwidth 6.0in
+\textheight 9.5in
+\begin{document}
+
+
+%\begin{Large}
+
+\begin{center}\begin{LARGE}
+{\bf Complex Variables Qualifying Exam}\\ 
+{\bf Fall 1995}\\ \end{LARGE}
+\end{center}
+\vspace{0.1in}
+\noindent\hrulefill\\
+\begin{description}
+
+\item[1.]
+Find a function $f: \Bbb C \to \Bbb C$ such that $f$ is complex
+differentiable exactly on the real axis.
+
+Hint: Set $\frac{\partial f}{\partial \overline z} = z - \overline z$).
+
+\item[2.]
+Compute $\int^\infty_0 \frac{dx}{1+x^n}$ for all $n \geq 2$.
+
+Hint: Use the contour below
+
+\vspace{.25in}
+\begin{center}
+\setlength{\unitlength}{0.015in}
+\begin{picture}(0,0)
+\put(-10,0){\line(1,0){60}}\put(0,0){\vector(1,0){45}} %+x
+\put(0,-10){\line(0,1){50}} %+y
+
+\put(25,25){\line(-1,-1){25}}\put(25,25){\vector(-1,-1){15}}%-y-x
+\put(3.75,0){\oval(7,7)[tr]}
+\put(15,5){$\frac{2\pi}{n}$}
+
+\put(42,15){\vector(-1,1){2}}
+\qbezier[100](50,0)(40,25)(25,25)
+
+\end{picture}
+\end{center}
+
+%\vspace{.1in}
+\item[3.]
+Suppose $f$ is entire and $|f(z)| \leq A + B|z|^k$ for some constants
+$A,B, k > 0$. Show that $f$ is a polynomial.
+
+\item[4.]
+Suppose $f$ is an entire function and Range
+$(f) \subset \{-1 < \hbox{Re}(z) < 1\}$.
+Show $f$ is constant.
+
+\item[5.]
+Construct an entire function having simple zeros at the points
+$\{a+ bi: a, b \in \Bbb Z\}$.
+
+\item[6.]
+Let $D = \{z : |z| < 1\}$ and let $f : D \to D$ be an analytic univalent
+(one-to-one) function. Let $\Omega = f(D)$. If
+$f(z) = \sum^\infty_{n=0} a_nz^n$ show that the area of $\Omega$ is equal
+to $\pi \sum^\infty_{n=1} n|a_n|^2$. (Hint: Consider the Jacobian of
+the mapping.)
+
+\item[7.] (a)
+Let $f(z) = \frac{P(z)}{Q(z)}$ where $P, Q$ are polynomials with
+$\deg (Q) \geq 2 + \deg (P)$. Let $M = \{u_1, \dots, u_k\}$ be the poles
+of $f$ and assume $M \cap \Bbb Z = \oslash$. Show that
+$$\sum^\infty_{n=-\infty} f(n) = -\sum^k_{\ell = 1} \hbox{Res} (g; u_\ell)
+  \quad \hbox{where\ } g(z) = \pi f(z) \cot(\pi z)$$
+
+Hint: Consider the contour
+
+
+\vspace{.25in}
+\begin{center}
+\setlength{\unitlength}{0.005in}
+\begin{picture}(0,0)
+\put(0,0){\line(1,0){125}} %+x
+  \multiput(10,5)(10,0){2}{\line(0,-1){10}}
+  \multiput(70,5)(10,0){2}{\line(0,-1){10}}
+  \put(30,-15){\begin{tiny}$\dots n\quad n+1$\end{tiny}}
+
+\put(0,0){\line(-1,0){125}}%-x
+  \multiput(-10,5)(-10,0){2}{\line(0,-1){10}}
+  \multiput(-70,5)(-10,0){2}{\line(0,-1){10}}
+  \put(-65,-15){\begin{tiny}$\dots$\end{tiny}}
+
+\put(0,0){\line(0,-1){125}}%-y
+  \multiput(5,-10)(0,-10){2}{\line(-1,0){10}}
+  \multiput(5,-70)(0,-10){2}{\line(-1,0){10}}
+
+\put(0,0){\line(0,1){125}} %+y
+  \multiput(5,10)(0,10){2}{\line(-1,0){10}}
+  \multiput(5,70)(0,10){2}{\line(-1,0){10}}
+
+\put(75,75){\line(-1,0){150}}
+\put(85,85)
+{\begin{tiny}$(n+\frac{1}{2})+(n+\frac{1}{2})i$\end{tiny}}
+\put(75,75){\vector(-1,0){35}}
+
+\put(-75,75){\line(0,-1){150}}
+\put(-250,85)
+{\begin{tiny}$-(n+\frac{1}{2})+(n+\frac{1}{2})i$\end{tiny}}
+\put(-75,75){\vector(0,-1){35}}
+
+\put(-75,-75){\line(1,0){150}}
+\put(-250,-85)
+{\begin{tiny}$-(n+\frac{1}{2})-(n+\frac{1}{2})i$\end{tiny}}
+\put(-75,-75){\vector(1,0){35}}
+
+\put(75,-75){\line(0,1){150}}
+\put(85,-85)
+{\begin{tiny}$(n+\frac{1}{2})-(n+\frac{1}{2})i$\end{tiny}}
+\put(75,-75){\vector(0,1){105}}
+
+
+\end{picture}
+\end{center}
+
+\vspace{.5in}
+
+\item[\quad] (b)
+Use a variation on (a) to compute $\sum^\infty_{n=1} \frac{1}{n^2}$.
+
+\item[8.]
+Let $u$ be a harmonic function in the first quadrant satisfying the
+illustrated boundary conditions
+$u(x,0) = \begin{cases} 1\ x< 1 \\ 0\ x \geq 1 \end{cases}
+  u(0,y) =
+  \begin{cases} 1\ y < 1 \\ 0\ y \geq 1 \end{cases}$
+
+
+\vspace{1in}
+\begin{center}
+\setlength{\unitlength}{0.015in}
+\begin{picture}(0,0)
+
+\put(45,0){\line(1,0){30}} %+x
+\multiput(0,0)(7,0){7}{\line(1,0){5}}
+\put(-5,45){\line(1,0){10}}
+\put(20,-10){$1$}
+\put(60,-10){$0$}
+
+\put(0,45){\line(0,1){30}} %+y
+\multiput(0,0)(0,7){7}{\line(0,1){5}}
+\put(45,5){\line(0,-1){10}}
+\put(-10,20){$1$}
+\put(-10,60){$0$}
+
+\put(30,30){$\hbox{\begin{tiny}$\circ$\end{tiny}}\ u(1,1)+?$}
+\end{picture}
+\end{center}
+
+
+Compute $u(1,1)$.
+
+
+
+
+
+\end{description}    
+%\end{Large}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

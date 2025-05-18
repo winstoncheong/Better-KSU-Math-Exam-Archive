@@ -1,0 +1,116 @@
+% latex file
+\def\hcorrection#1{\advance\hoffset by #1 }
+\def\vcorrection#1{\advance\voffset by #1 }
+
+\documentclass{article}
+\usepackage{my,amsxtra,amssymb,amsthm}
+
+\vcorrection{-1.0in}
+\hcorrection{-0.8in}
+\textwidth 6.0in
+\textheight 9.0in
+
+\def\R{\mathbb R}
+\def\C{\mathbb C}
+\def\N{\mathbb N}
+\def\Z{\mathbb Z}
+\def\Q{\mathbb Q}
+
+\begin{document}
+%\begin{Large}
+
+
+\begin{center}\begin{LARGE}
+{\bf Algebra Qualifying Exam}\\ 
+{\bf Fall 1991}\\ \end{LARGE}
+\end{center}
+\vspace{0.1in}
+\noindent\hrulefill\\
+
+All rings are assumed to have a multiplicative identity, denoted 1. The
+fields $\Q$, $\R$ and $\C$ are the fields of {\it rational, real} and
+{\it complex} numbers, respectively.
+
+
+\begin{description}
+
+\item[1.]
+Let $G$ be a group and let $N_1, N_2$ be normal subgroups of $G$ with
+$N_1 \cong N_2$. Prove, or give a counterexample to the assertion
+$$G/N_1 \cong G/N_2.$$
+
+\item[2.]
+Let $G$ be a finite group and let $\cal C$ be a conjugacy class of elements
+in $G$. If $|{\cal C}| = \frac{1}{2} |G|$, show that every element of
+$\cal C$ is an involution (i.e., an element of order 2).
+
+\item[3.]
+Let $R$ be a commutative ring, and let $x \in R$. Define what it means
+for $x$ to be an {\it irreducible} element, and define what it means for
+$x$ to be {\it prime}. If $R$ is a {\it unique factorization domain},
+show that $x$ is irreducible if and only if $x$ is prime.
+
+\item[4.]
+Let $R$ be a principal ideal domain, and let $0 \neq I \subset R$ be a prime
+ideal. Prove that $I$ is a maximal ideal.
+
+\item[5.]
+Let $R$ be a ring and let $M$ be an irreducible left $R$-module. Prove
+that there exists a maximal left ideal $I$ such that $R/I \cong M$
+as left $R$-modules.
+
+\item[6.]
+Consider the map $T: \C \to \C$ defined by setting $T(\alpha) = (2+i) \alpha$.
+If we regard $T$ as an $\R$-linear transformation of the 2-dimensional
+$\R$-vector space $\C$, compute $\det(T)$.
+
+\item[7.]
+Let $V$ be an $n$-dimensional vector space over a field $F$, and let
+${\cal B} = \{x_1, x_2, \dots, x_n\}$ be a basis for $V$. Let $V^\ast$
+denote the dual space of $V$, that is, $V^\ast$ is the vector space
+$Hom_F(V,F)$ of all linear transformations $\lambda : V \to F$.
+Define elements $\lambda_1, \dots, \lambda_n$ of $V^\ast$ by setting
+$$\lambda_i \left( \sum^n_{j=1} a_jx_j \right) = a_i,$$
+$1 \leq i \leq n, a_j \in F$, and put
+${\cal B}^\ast = \{\lambda_1, \dots, \lambda_n\}$. Show that ${\cal B}^\ast$
+is a basis of $V^\ast$.
+
+\item[8.]
+Consider the matrix of rational entries
+$$A= \begin{bmatrix} 0&-1 \\ 1&-1 \end{bmatrix}.$$
+
+If $R=\Q[A]$ is the ring of polynomials in $A$ with rational coefficients,
+prove that $R$ is a field. (Hint: Consider the homomorphism $\Q[x] \to \Q[A]$,
+where $x \mapsto A$.)
+
+\item[9.]
+Let $f(x) = x^5 - 2 \in \Q[x]$.
+
+\item[\quad] (a)
+Construct a splitting field $K \supseteq \Q$ for $f(x)$ over $\Q$.
+
+\item[\quad] (b)
+Find an element $\alpha \in K, \alpha \notin \Q$, such that
+$\Q[\alpha]$ is a normal extension of $\Q$.
+
+
+
+
+
+\end{description}    
+%\end{Large}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

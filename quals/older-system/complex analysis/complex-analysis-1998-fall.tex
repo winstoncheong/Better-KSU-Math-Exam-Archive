@@ -1,0 +1,185 @@
+% latex file
+%Complex Analysis - Nagy & Burckel
+
+\def\hcorrection#1{\advance\hoffset by #1 }
+\def\vcorrection#1{\advance\voffset by #1 }
+
+\input amssym.def   %defines Bbb and gothic (frak)
+\input amssym       %defines Bbb and gothic (frak)
+
+\input prepictex.tex
+\input pictex.tex
+\input postpictex.tex
+
+%\documentstyle[bbb]{report}
+\documentclass[bbb]{report}
+
+\vcorrection{-.5in}
+\hcorrection{-1in}
+
+\topmargin  0in
+\textwidth 6.4in
+\textheight 9truein
+
+\mathsurround=2pt
+
+\def\ds{\displaystyle}
+
+\def\R{{\Bbb R}}
+\def\Z{{\Bbb Z}}
+\def\C{{\Bbb C}}
+\def\D{{\Bbb D}}
+
+
+\begin{document}
+
+\begin{Large}
+
+\hfill Name \rule{2.5in}{.01in}
+\par
+\vspace{.25in}
+
+\begin{center}
+   COMPLEX VARIABLES QUALIFYING EXAM \\
+   Fall 1998 \\
+   (Burckel \& Nagy) \\
+\end{center}
+
+
+\vspace{.1in}
+
+\begin{large}
+{\bf
+\noindent Do any 6 of the 8 problems. Standard notation throughout is:
+$\Z$ is the set of integers; $\C$ is the set of complex numbers;
+$\D=\{z\in\C:|z|<1\}$; $\Omega$ is a non-void open, connected
+subset of $\C$.
+$H(\Omega)$ is the set of all holomorphic functions in $\Omega$.
+}
+\end{large}
+
+\vspace{.2in}
+
+
+\begin{description}
+
+
+\item[1.]
+$f\in H(\Omega)$ is zero-free.
+
+\vspace{.1in}
+
+\item[\quad] (a)
+Show that if $\Omega$ is convex, then $\exists g\in H(\Omega)$
+such that $f=e^g$.
+
+\vspace{.25in}
+
+\item[\quad] (b)
+Give an example of an $\Omega$ and an $f$ for which no such $g$ exists.
+
+\vspace{.5in}
+
+\item[2.]
+Compute $\ds\int^\infty_0\ \ds\frac{dx}{1+x^n}$ for each integer $n\geq 2$.
+
+\vspace{.5in}
+
+\setlength{\unitlength}{.05in}
+\begin{picture}(-20,0)(-80,0)
+\put(-10,0){\line(1,0){30}}
+\put(0,-10){\line(0,1){20}}
+\put(0,0){\line(2,1){15}}
+
+\begin{small}
+\put(10,2){$\frac{2\pi}{n}$}
+\end{small}
+
+\put(-60,0){\underbar{Hint}: Use the contour}
+\end{picture}
+
+\vspace{.5in}
+
+\item[3.]
+$f:\D\times\D\to\C$ is bounded and has the property that
+for each fixed $w\in\D$, $f(w,z)$ is a holomorphic function of
+$z$, and for each $z\in\D$, $f(w,z)$ a holomorphic function of $w$.
+Show that $f$ is (jointly) continuous on $\D\times\D$.
+
+\item[\quad] \underbar{Hint}: Use Cauchy's integral representation in
+both variables simultaneously.
+
+\vspace{.5in}
+
+\item[4.]
+$f\in H(\C)$ and  $f(\C)\subset\{z\in\C:-1<Rez<1\}$.
+Show that $f$ is constant.
+
+\vfill
+\pagebreak
+
+\item[5.]
+The usual topology on $H(\Omega)$ is the c.c. topology:
+the topology of uniform convergence on compact subsets of $\Omega$.
+
+\vspace{.1in}
+\item[\quad] (a)
+Show that $f\mapsto f'$ is a continuous mapping of $H(\Omega)$
+into itself.
+
+\vspace{.25in}
+\item[\quad] (b)
+Give an example of an $\Omega$ for which the mapping
+$f\mapsto f'$ is not surjective.
+
+\vspace{.5in}
+\item[6.]
+$f\in H(\Omega)$, $A$, $B$, $k$ are positive real constants and
+$|f(z)|\leq A+B|z|^k$ for all $z$. Show that $f$ is a polynomial.
+
+\vspace{.25in}
+
+\item[7.] (a)
+$P$, $Q$ are polynomials, $\deg(Q\geq 2+\deg(P)$,
+$f=\frac{P}{Q}$, $S=\{p_1,\dots,p_k\}$ are the poles of $f$ and
+they satisfy $S\cap \Z=\omega$. Show that
+$$ \sum_{n\in\Z} f(n)=-\sum^k_{j=1} Res(g;p_j) $$
+where $g(z)=\pi f(z)\cot(\pi z)$ for all $z\in\C\backslash\Z$.
+
+\item{\quad} \underbar{Hint}: Consider integrating over the
+contour which is a square having vertices
+$\pm(n+\frac12)\pm(n+\frac12)i$, $n\in\Z$.
+
+\vspace{.25in}
+\item[\quad] (b)
+Use a variation on the idea in (a) to compute $\ds\sum^\infty_{n=1}
+\ \ds\frac{1}{n^2}$.
+
+\vspace{.25in}
+\item[8.]
+For $f:\Omega\to\C$ three fundamental properties are equivalent:
+
+\vspace{.1in}
+\item[\quad] (a)
+$f$ is locally of power-series type.
+
+\vspace{.1in}
+\item[\quad] (b)
+$f$ satisfies Cauchy's integral formula for circles.
+
+\vspace{.1in}
+\item[\quad] (c)
+$f$ satisfies the Cauchy-Riemann equation(s).
+
+\item{\quad} State these properties precisely and prove one of the
+six implications.
+
+\vfill
+
+
+
+\end{description}
+
+\end{Large}
+
+\end{document}

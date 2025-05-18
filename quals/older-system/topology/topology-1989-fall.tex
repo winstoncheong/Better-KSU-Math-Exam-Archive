@@ -1,0 +1,198 @@
+% latex file
+\def\hcorrection#1{\advance\hoffset by #1 }
+\def\vcorrection#1{\advance\voffset by #1 }
+
+\documentclass{article}
+\usepackage{my,amsxtra,amssymb,amsthm}
+
+\vcorrection{-1.0in}
+\hcorrection{-0.8in}
+\textwidth 6.0in
+\textheight 9.0in
+
+\def\R{\mathbb R}
+\def\C{\mathbb C}
+\def\N{\mathbb N}
+\def\Z{\mathbb Z}
+\def\Q{\mathbb Q}
+
+\begin{document}
+%\begin{Large}
+
+
+
+
+
+
+\begin{center}\begin{LARGE}
+{\bf Topology Qualifying Exam}\\ 
+{\bf Fall 1989}\\ \end{LARGE}
+\end{center}
+\vspace{0.1in}
+\noindent\hrulefill\\
+
+Work 9 of the following problems. Do not turn in more than 9.
+
+For a subset $A$ contained in a topological space $X$, let $A^-$ denote
+the closure of $A$ in $X$, let $A^\circ$ denote the interior of $A$ in $X$,
+and let $Fr(A)$ denote the frontier of $A$ in $X$. All Euclidean spaces will
+have the usual topology, and all product spaces will have the product
+topology.
+
+\begin{description}
+\item[1.]
+For a topological space $X$, prove that ``o--" and ``--o" are both idempotent
+operations on the subsets of $X$; that is, $A^{o-o-} = A^{o-}$ and
+$A^{-o-o} = A^{-o}$ for all $A \subseteq X$.
+
+\item[2.]
+Let $X$ and $Y$ be topological spaces. Prove that a bijection $f: X \to Y$
+is a homeomorphism if and only if $f[A^-] = f[A]^-$ for all $A \subseteq X$.
+
+\item[3.]
+Prove that the line $L$ defined by the equation $x=0$ separates the plane
+$\R^2$ into exactly two components and is the frontier of each of them.
+
+\item[4.]
+Prove that $[0,1]$ (with its usual topology) is compact.
+
+\item[5.]
+Let $X$ be the unit square in the plane. Give precise descriptions of four
+quotient maps with domain $X$ whose images are:
+
+\item[\quad] a)
+the sphere $S^2$;
+
+\item[\quad] b)
+the torus, $S^1 \times S^1$;
+
+\item[\quad] c)
+the cylinder, $S^1 \times I$;
+
+\item[\quad] d)
+a M\"obius band $M$ in $\R^3$.
+
+\item[6.]
+A continuous map $f: (X, \tau) \to (Y, \sigma)$ is said to be initial
+provided that for each topological space $(Z, \mu)$, each set-function
+$g:Z \to X$ is continuous whenever $f \circ g : (Z, \mu) \to (Y, \sigma)$
+is continuous. Prove that:
+
+\item[\quad] a)
+The composition of initial maps is initial.
+
+\item[\quad] b)
+The ``first factor" of an initial map is initial; i.e., if
+$(X, \tau) \stackrel{f}{\to} (Y, \sigma) \stackrel{h}{\to} (W, \nu)$
+are continuous maps and $h \circ f$ is initial, then $f$ is initial.
+
+\item[7.] (a)
+True-False.
+
+\item[\qquad] (i)
+Every compact Hausdorff space is metrizable.
+
+\item[\qquad] (ii)
+If $f,g : X \to Y$ are homotopically equivalent and $h,k: Z \to W$ are
+homotopically equivalent, then $f \times h$ and $g \times k$ are
+homotopically equivalent.
+
+\item[\qquad] (iii)
+The product of connected spaces is connected.
+
+\item[\qquad] (iv)
+Every retract of a locally connected space is locally connected.
+
+\item[\qquad] (v)
+A space is $T_2$ if and only if it is locally $T_2$; i.e., each pt has a
+base of $T_2$ neighborhoods.
+
+\item[\qquad] (vi)
+Every metrizable space is normal.
+
+\item[\qquad] (vii)
+Every locally compact Hausdorff space is completely reuglar.
+
+\item[\qquad] (viii)
+Every subspace of a separable Hausdorff space is separable and Hausdorff.
+
+\item[\quad] (b)
+For each false entry, give a counter example (no proofs).
+
+\item[8.]
+Does there exist a subset $C$ of the unit circle
+$S^1 = \{(x,y) : x^2 + y^2 = 1\}$ such that
+
+\item[\quad] a)
+$C$ is closed in $S^1$
+
+\item[\quad] b)
+$C$ contains exactly one point from each pair of diametrically opposite
+points on $S^1$.
+
+\item[9.]
+Compute the fundamental group of the compact surface $\hat T$ obtained by
+removing an open disc from a torus $T$.
+
+\item[10.]
+Prove that every contractible space is pathwise connected.
+
+\item[11.]
+Prove that if $X$ is Lindel\"of and $Y$ is compact, then $X \times Y$ is
+Lindel\"of.
+
+\item[12.]
+Suppose that $X$ and $Y$ are spaces for which the second projection
+$\pi_2 : X \times Y \to Y$ is closed. Suppose also that $q: Y \to Y^\prime$.
+is a quotient map. Prove or disprove that the second projection
+$\pi^\prime_2 : X \times Y^\prime \to Y^\prime$ is closed.
+
+\item[13.] a)
+Give an example of an ultrafilter on the set $\R$ of real numbers.
+
+\item[\quad] b)
+Give an example of a filter on $\R$ that is not an ultrafilter.
+
+\item[\quad] c)
+Prove that every filter on $\R$ is contained in an ultrafilter
+on $\R$.
+
+\item[14.]
+Prove that if a normal space $X$ contians a closed copy of $[0, \infty)$,
+then $X$ does not have the fixed point properly.
+
+\item[15.]
+Suppose that there is an continuous open surjection $f: [0,1] \to X$
+where $X$ is a nondegenerate IIausdorff space.
+
+\item[\quad] a)
+Show that $f$ need not be injective.
+
+\item[\quad] b)
+Show that $X$ is homeomorphic to $[0,1]$.
+
+\item[16.]
+Let $A$ be a nonempty proper subset of a continuum $X$. If $C$ is
+component of $A$, show that $C \cap Fr(A) \neq 0$.
+
+
+
+
+
+\end{description}    
+%\end{Large}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,137 @@
+% latex file
+\def\hcorrection#1{\advance\hoffset by #1 }
+\def\vcorrection#1{\advance\voffset by #1 }
+
+\documentclass{article}
+\usepackage{my,amsxtra,amssymb,amsthm}
+
+\vcorrection{-1.0in}
+\hcorrection{-0.8in}
+\textwidth 6.0in
+\textheight 9.0in
+
+\def\R{\mathbb R}
+\def\C{\mathbb C}
+\def\N{\mathbb N}
+\def\Z{\mathbb Z}
+\def\Q{\mathbb Q}
+
+\begin{document}
+%\begin{Large}
+
+
+
+
+
+
+\begin{center}\begin{LARGE}
+{\bf Complex Analysis Qualifying Exam}\\ 
+{\bf Fall 1984}\\ \end{LARGE}
+\end{center}
+\vspace{0.1in}
+\noindent\hrulefill\\
+
+\begin{description}
+\item[1.]
+Let $f$ be analytic on the open unit disc $D=D(0,1)$ in the sense that
+$f^\prime$ exists and is continuous on $D$. Give an {\it ab inito}
+proof that
+$$\int_\gamma f(z) dz = 0$$
+for every closed smooth curve $\gamma$ in $D$.
+
+{\bf HINT:} Consider the derivative of
+$$I(r) = \int_{r \gamma} f(z) dz,$$
+where $(r\gamma) (t) = r \cdot \gamma (t)$.
+
+\item[2.]
+Evaluate
+$$\phi_{|z| = 1} \frac{dz}{z^2 \sin z}$$
+by means of the Cauchy Redidue Theorem.
+
+\item[3.]
+Let $f$ be analytic and bounded on the punctured disc
+$$D_0 = \{z \varepsilon \C :0 < |z-z_0| < R\}.$$
+Prove that $f$ has a removable singularity at $z_0$.
+
+\item[4.]
+Prove that each polynomial $P$ of the form
+$$P(z) = z^n + a_{n-1} z^{n-1} + \dots + a_0$$
+satisfies
+$$\sup \{|P(z)| : |z| \leq 1\} \geq 1.$$
+
+\item[5.]
+Suppose that $f$ is an entire function such that
+$$Re f(z) \leq |z|^n$$
+for some natural number $n$ and all $z$ with sufficiently large $|z|$.
+Prove that $f$ is a polynomial.
+
+\item[6.]
+Let $f$ be an entire function of finite order. Suppose $f$ has only
+finitely many zeros. Prove that $f = Qe^P$ for some polynomials $P$ and $Q$.
+
+{\bf HINT:} Use problem 5.
+
+\item[7.]
+Let $f$ be a continuous function on $(0,1] \times D$, where $D = D(0,1)$.
+Suppose:
+
+\item[\quad] (i)
+For each $t$ in $[0,1], f(t,z) = 0$ has a unique soultion $z$ in $D$, and
+
+\item[\quad] (ii)
+For each {\it rational} number $t$ in $[0,1], f(t, \cdot)$ is
+analytic on $D$.
+
+Prove that there exists a continuous function $t \to z(t) : [0,1] \to D$
+such that $f(t, z(t)) = 0$ for all $t$ in $[0,1]$.
+
+{\bf HINT:} First show that for {\it every} $t$ in $[0,1], f(t, \cdot)$ is
+analytic on $D$.
+
+\item[8.]
+The Riemann zeta function is defined by
+$$\zeta (z) = \sum^\infty_{n=1} n^{-z} \quad (\hbox{Re\ } z > 1),$$
+where $n^{-z} = \exp (-z \log n)$ for all $n$. Prove that $\zeta$ is
+well-defined and analytic for $\hbox{Re\ } z >1$.
+
+\item[9.]
+Prove or disprove the existence of a double sequence $(a_{k,n})$ of complex
+numbers such that
+
+\item[\quad] (a)
+$\sum^\infty_{k=1} |a_{k,n} |\leq C$ for all $n = 1,2, \dots$; and
+
+\item[\quad] (b)
+$\lim_n \sin \left(\sum^\infty_{k=1} a_{k,n} z^k \right) = 1$
+for all $z$ in $K$,
+
+where $C$ is a finite constant and $K = \{ 1/2 + l/m : m = 3,4, \dots\}.$
+
+{\bf HINT:} Montel's theorem.
+
+\item[10.]
+Let $G$ be a nonempty open connected subset of $\C$. State at least three
+conditions each of which is equivalent to the simple connectedness
+of $G$, and prove their equivalence.
+
+
+
+
+
+\end{description}    
+%\end{Large}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

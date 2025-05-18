@@ -1,0 +1,105 @@
+ \documentclass[12pt]{article}
+\pagestyle{plain}
+
+\usepackage{array, amssymb}
+\usepackage{amsfonts, geometry}
+
+\extrarowheight=5pt
+\voffset=-20pt
+\textheight=9.5in
+%\topmargin=2in
+\usepackage{mathtools}
+%\usepackage{amsthm}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{stackengine}
+\stackMath
+\newcommand{\erf}{\operatorname{erf}}
+
+\newcommand{\kk}{{\mathbf k}}
+\newcommand{\CC}{{\mathbb C}}
+\newcommand{\II}{{\mathbb I}}
+\newcommand{\RR}{{\mathbb R}}
+\newcommand{\QQ}{{\mathbb Q}}
+\newcommand{\ZZ}{{\mathbb Z}}
+
+\newcommand{\homm}{{\mathrm{Hom}}}
+
+
+\DeclareMathOperator{\Hol}{Hol}
+\DeclareMathOperator{\res}{Res}
+
+\def\diam{\qopname\relax o{diam}}
+\def\spt{\qopname\relax o{spt}}
+\def\dist{\qopname\relax o{dist}}
+\def\interior{\qopname\relax o{int}}
+\def\supp{\qopname\relax o{supp}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Res}[1]{\stackunder{\res}{\scriptstyle #1}}
+ \newcommand{\DD}{\mathbb{D}}
+\newcommand{\re}{\mathfrak{Re}}
+\newcommand{\im}{\mathfrak{Im}}
+\parindent=0pt
+\begin{document}
+
+\begin{center} {\textbf{Analysis QE I Exam \,  June 2020}} \end{center}
+{\bf Instructions:}  Do not write your name on any of the pages.  This is a closed book exam: no books, no notes, no calculators etc. Only plain papers and pens should be on your table.
+
+\pagestyle{empty}
+
+    \vspace{.2cm}
+ 
+ 
+
+
+
+
+
+
+
+
+\begin{enumerate}[itemsep=0pt, leftmargin=.5cm, labelindent=.5in]
+    
+    \item 
+Let $f:\R^2\to\R$ be defined by
+\[
+f(x,y)=\begin{cases}
+(x^2+y^2)\sin\frac{1}{\sqrt{x^2+y^2}},\,\, (x,y)\neq (0,0), \\
+0,\quad \quad (x,y)= (0,0).
+\end{cases}\]
+\begin{itemize}
+\item[(a)] Is $f$ differentiable at $(0,0)$?
+
+\item[(b)] Are the partial derivatives $D_i f$, $i=1,2$  continuous at $(0,0)$?
+\end{itemize}
+
+
+\bigskip
+\item  Let the sequence of functions be defined by $f_n(x)=nxe^{-nx}$ on $[0,+\infty)$. Determine the pointwise limit on the given interval (if it exists) and an interval on which the convergence is uniform (if any).
+
+Does the sequence of derivatives $(f_n')$ converge uniformly on 
+ $[0,+\infty)$?
+
+\item  Let  $f:D\to\mathbb{R}$, where  $D\subset \mathbb{R}$ is measurable. Show that $f$ is measurable if and only if the function  $g:\mathbb{R}\to \mathbb{R}$ is measurable, where $g(x)=f(x)$ for $x\in D$ and $g(x)=0$ otherwise.
+
+\item  Let $f:\CC\longrightarrow\CC$ be given by
+$$f(z)=z|z|.$$
+Where is $f^\prime(z)$ defined? Where is $f(z)$ analytic?
+
+\item Construct a map that maps the half-strip
+$$S=\{z: |\re(z)|<1,\im(z)>0\}$$
+conformally onto the open unit disk
+$$\DD=\{z:|z|<1\}.$$
+
+\item Let $f(z)$  be analytic in the punctured disk
+$$D=\{z:|z|<1,z\not=1/2\}.$$
+Suppose that $f(z)$ has a simple pole at $z=1/2$ and that 
+$$\Res{z=1/2}f(z)=1.$$
+Determine the coefficient $a_{-2}$ in the Laurent expansion
+$$f(z)=\sum_{n=-\infty}^\infty a_n z^n,\quad 1/2<|z|<1.$$
+
+
+    
+    \end{enumerate}
+  \end{document}

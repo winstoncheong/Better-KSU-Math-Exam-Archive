@@ -1,0 +1,184 @@
+% latex file
+\def\hcorrection#1{\advance\hoffset by #1 }
+\def\vcorrection#1{\advance\voffset by #1 }
+
+\documentclass{article}
+\usepackage{my,amsxtra,amssymb,amsthm}
+
+\vcorrection{-1.0in}
+\hcorrection{-0.8in}
+\textwidth 6.0in
+\textheight 9.0in
+
+\def\R{\mathbb R}
+\def\C{\mathbb C}
+\def\N{\mathbb N}
+\def\Z{\mathbb Z}
+\def\Q{\mathbb Q}
+
+\begin{document}
+%\begin{Large}
+
+
+
+
+
+
+\begin{center}\begin{LARGE}
+{\bf Numerical Analysis Qualifying Exam}\\ 
+{\bf Spring 1989}\\ \end{LARGE}
+\end{center}
+\vspace{0.1in}
+\noindent\hrulefill\\
+
+\begin{description}
+\item[1.]
+Establish a finite difference formula to approximate
+$\frac{\partial f(x,y)}{\partial x}$ using $f(x,y), f(x-h,y), f(x-2h,y)$.
+Be as accurate as possible and derive an expression of the truncation
+error. Assume $f(x,y)$ is smooth enough. Then explain how one might
+improve the accuracy using Richardson's extrapolation.
+
+\item[2.]
+A quadrature formula for $I(f) = \int^b_a f(x) dx$ is given by
+$$ I_n(f) = h \sum^n_{j=1} f(a+ jh), \quad h = \frac{b-a}{n}.$$
+
+\item[\quad] (a)
+Derive an error estimate for the formula (stating the condition on $f (x)$).
+
+\item[\quad] (b)
+Apply the integral formula to $\int^1_0 \ln xdx$ and derive the error by
+direct calculation of $I(f)$ and $I_n(f)$ for large $n$. Compare the
+error in this case with the error in (a).
+(Hint: $n! \approx (n/e)^n \sqrt{2\pi n}$).
+
+\item[3.]
+Consider the integral
+$$E_n = \int^1_0 x^ne^{x-1} dx, \quad n = 1,2,3, \dots $$
+
+Show
+
+\item[\quad] (a)
+$E_n = 1-nE_{n-1}.$
+
+\item[\quad] (b)
+$E_1 = 1/e$.
+
+\item[\quad] (c)
+$E_n > 0$.
+
+\item[\quad] (d)
+$E_n < E_{n-1}$.
+
+\item[\quad] (e)
+$E_n \to 0 \hbox{\ as\ } n \to \infty$.
+
+Explain why the iterative scheme (a) is unstable to round-off error. Can you
+suggest an improvement of the numerical method to compute $E_{10}$?
+
+\item[4.] (a)
+Write the Newton's divided difference interpolation formula for
+$$f(x) = \frac{1}{x}, \quad \hbox{with\ } n=2, x_0 = 2, x_1 = 3, x_2 = 4.$$
+
+\item[\quad] (b)
+Derive an error formula for the interpolation polynomial $P_n(x)$, which
+interpolates $f(x)$ at $n+1$ distinct points $x_0, x_1, \dots, x_n$.
+
+\item[\quad] (c)
+For $f(x) = 1/x, x_0 = 2, x_j = x_0 + jh, j = 1,2, \dots, n,h = 2/n, x_n = 4$,
+show
+$$\max_{a \leq x \leq 4} |f(x) - P_n (x)| \to 0, \hbox{\ as\ } n \to \infty.$$
+
+\item[\quad] (d)
+Is it always true that
+$$\max_{a \leq x \leq b} |f(x) - P_n(x)| \to 0, \hbox{\ as\ } n \to \infty,$$
+for any $f(x) \in C^\infty [a,b], x_0 = a, x_j = a + jh, j = 1,2, \dots, n, h
+= (b-a)/n, x_n = b$?
+
+\item[5.]
+Prove that the Jacobi iterative method applied to $Ax = b$ converges for any
+starting vector $x^{(0)}$ if $A$ is strictly column diagonally dominant. i.e.
+$$|a_{jj}| > \sum^n_{\substack{ i =1 \\ i \neq j}}
+  |a_{jj}|, \hbox{\ for\ } j = 1,2, \dots, n.$$
+
+\item[6.]
+A complex matrix $A$ is called normal if $AA^\ast = A^\ast A$($A^\ast$ denotes
+the conjugate transpose of $A$). Show
+
+\item[\quad] (a)
+$A_{n \times n}$ is normal if and only if there is a unitary matrix $U$,
+such that
+$$U^\ast AU = \hbox{\ diag\ } (\lambda_1, \lambda_2, \dots, \lambda_n).$$
+
+(Hint: use an appropriate theorem and show a normal upper triangle matrix
+is diagonal).
+
+\item[\quad] (b)
+If $A$ is normal, then $\parallel A \parallel_2 =\rho (A)$, where
+$\rho (A)$ is the spectral radius of $A$.
+
+\item[7.]
+Consider the Initial Value Problem
+$$\dot y = f(y, t), \quad y(t_0) = g_0 \hbox{\ given\ }, \quad
+  t_0 \leq t \leq b, \quad b \hbox{\ fixed}. \eqno{(1)}$$
+$f$ is assumed to be Lipschitz in $y$ and continuous in $t$. We seek to solve
+the IVP by means of the explicit one-step method
+$$y_{n+1} = y_n + h \phi (y_n, t_n, h), \quad t_n = t_0 + n \Delta t \leq b,
+ \quad \Delta t = \frac{b-t_0}{N}, \eqno{(2)}$$
+with starting value $y_0$ not necessarily equal to $g_0$. Do the following:
+
+\item[\quad] (a)
+Define what is meant by {\bf stability} of the method.
+
+\item[\quad] (b)
+State and justify conditions on $\phi(y, t, h)$ which make the scheme stable.
+
+\item[\quad] (c)
+Define {\bf convergence} of the above one-step method.
+
+\item[\quad] (d)
+State conditions which quarantee convergence.
+
+Local truncation error $d_n$ and global truncation error $e_n$ are defined by
+$$d_n \equiv y(t_n) + h \phi (y(t_n), t_n, h) - y(t_{n+1}), \hbox{\ and}$$
+$$e_n \equiv y_n - y(t_n), \hbox{\ respectively},$$
+where $y(t)$ is the exact solution of the IVP (1).
+
+\item[\quad] (e)
+For the explicit Euler scheme (i.e. $\phi (y, t, h) = f(y,t)$) show that
+$$|d_n| \leq Dh^2, \hbox{\ where\ } D = \max |\ddot y (t) / 2|,$$
+and that
+$$|e_n| \leq (1 + hL)^n |e_0| + Dh^2 \frac{[(1+hL)^n-1]}{hL}.$$
+Conclude that the explicity Euler scheme is convergent.
+
+\item[8.]
+Consider the discrete analog of the eigenvalue problem
+$$y^{\prime \prime} + \lambda y = 0, 0 < x < \pi,$$
+$$y(0) = y(\pi) = 0,$$
+given by
+$$\frac{y_{i+1} + y_{i-1} - 2y_i}{(\Delta x)^2} + \lambda y_i = 0,$$
+$$y_0 = y_N = 0,$$
+defined on the uniform mesh $0 = x_0 < x_1 < \dots < x_N = \pi$. Compute
+the eigenvalues of the discrete problem by solving the finite difference
+equation. How do these eigenvalues compare with those of the continuous
+problems?
+
+
+
+\end{description}    
+%\end{Large}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

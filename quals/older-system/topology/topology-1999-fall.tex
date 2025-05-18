@@ -1,0 +1,193 @@
+% latex file
+%Topology QE F99 - Maginnis & Strecker
+
+\def\hcorrection#1{\advance\hoffset by #1 }
+\def\vcorrection#1{\advance\voffset by #1 }
+
+\input amssym.def   %defines Bbb and gothic (frak)
+\input amssym       %defines Bbb and gothic (frak)
+
+\input prepictex.tex
+\input pictex.tex
+\input postpictex.tex
+
+%\documentstyle[bbb]{report}
+\documentclass[bbb]{report}
+
+\vcorrection{-.7in}
+\hcorrection{-1in}
+
+\topmargin  0in
+\textwidth 6.4in
+\textheight 9.5in
+
+\mathsurround=2pt
+
+\def\ds{\displaystyle}
+\def\R{{\Bbb R}}
+\def\N{{\Bbb N}}
+
+\begin{document}
+
+%\pagestyle{empty}
+
+\begin{Large}
+
+\hfill Name \rule{2.5in}{.01in}
+\par
+\vspace{.1in}
+
+\begin{center}
+   TOPOLOGY QUALIFYING EXAM \\
+   Fall 1999 \\
+   (Maginnis and Strecker) \\
+\end{center}
+
+\end{Large}
+
+\vspace{.1in}
+
+\begin{large}
+\noindent {\bf Choose and work any 6 of the following 14 problems.
+Start each problem on a new sheet of paper.
+\underbar{Do not turn in more than six problems}.
+In the problems below, a space always means a topological space.}
+
+\vspace{.2in}
+
+\begin{description}
+
+\item[1.]
+Prove or give a counterexample:
+ If  $f:X\to Y$ is an injective continuous function and $Y$
+ is a Hausdorff space, then $X$ is a Hausdorff space.
+
+%\vspace{.15in}
+
+\item[2.]
+Let $f:X\to Y$ be a quotient map such that for all $y\in Y$,
+$f^{-1}[\{y\}]$ is connected. Let $W\subseteq Y$ be an
+open connected subset. Prove $f^{-1}[W]$ is connected.
+%\vspace{.15in}
+
+
+\item[3.]
+A space $X$ is called an $R_0$-space if for every pair of points
+$\{x,y\}\subseteq X$, $x$ is in the closure $\overline{ \{y\} }$
+if and only if $y$ is in the closure $\overline{\{ x\} }$.
+Prove or give a counterexample for each of the following statements.
+\item[\quad] a) Every $T_0$-space is $R_0$.
+\item[\quad] b) Every $R_0$-space is $T_0$.
+\item[\quad] c) A space is $T_1$ iff it is both $T_0$ and $R_0$.
+
+%\vspace{.15in}
+
+\item[4.]
+Let $\R$ be the real numbers with the usual topology.
+Prove that any open set in $\R$ is a countable union of pairwise disjoint
+intervals.
+
+%\vspace{.15in}
+\item[5.]
+Let $\omega_1$ be the first uncountable ordinal number, let $X$ be the
+set of all ordinals less than or equal to $\omega_1$,
+and let $Y=X-\{\omega_1\}$. ($Y$ is often called the minimal uncountable
+well-ordered set).
+\item[\quad] a) Prove that \underbar{no} sequence in $Y$ converges
+to $\omega_1$.
+\item[\quad] b) Give \underbar{either} a net in $Y$ \underbar{or}
+a filter in $Y$ that converges to $\omega_1$.
+
+%\vspace{.15in}
+\item[6.]
+Let $X$ be a compact Hausdorff space, and let $f:X\to X$ be a
+continuous function. Prove that there exists a nonempty subset
+$A\subseteq X$ such that $f[A]=A$.
+
+
+%\vspace{.15in}
+\item[7.]
+Let $X$ be a normal (and Hausdorff) space with a countable basis.
+Prove that every subspace of $X$ is normal.
+
+%\vspace{.15in}
+\item[8.]
+Prove or give a counterexample for each of the following statements.
+\item[\quad] a) A compact subset of a $T_1\hbox{-space}$ is closed.
+\item[\quad] b) A closed subset of a paracompact space is paracompact.
+
+%\vspace{.15in}
+\item[9.]
+Let $\R$ be the real numbers with the usual topology.
+Prove there does \underbar{not} exist a function $f:\R\to\R$ which
+is continuous precisely at the rational numbers.
+(i.e., continuous at the rationals and discontinuous at the irrationals.)
+
+%\vspace{.15in}
+\vfill\pagebreak
+
+\item[10.]
+Let $f:X\to Y$ be a continuous function.
+\item[\quad] a)
+Prove that there exists a  space $Z$, a continuous surjection
+$s:X\to Z$, and an embedding $e:Z\to Y$ such that $f$ is the
+composite $F=e\circ s$.
+\item[\quad] b)
+Prove that if $f=e\circ s$ and $f=\hat e\circ\hat s$, where
+$X\buildrel s\over\to Z\buildrel e\over\to Y$
+and
+$X\buildrel{\hat s}\over \to \hat Z \buildrel{\hat e}\over \to Y$,\
+are two factorizations of $f$ as a composite of a continuous
+surjection and an embedding, then there exists a unique
+homeomorphism $h:Z\to\hat Z$ with $h\circ s=\hat s$ and
+$\hat e\circ h=e$.
+
+%\vspace{.15in}
+\item[11.]
+Let $X$ be a Hausdorff space such that every infinite subset
+has a limit point. Prove that every countable open cover of $X$ has
+a finite subcover.
+
+%\vspace{.15in}
+\item[12]
+Let $X$ be the countable product $X=\R^\N=\ds\prod^\infty_{n=1}\R$,
+where $\R$ is the real numbers with the usual topology.
+Prove that $X$, with the product topology, is locally connected but
+is not locally compact.
+
+%\vspace{.15in}
+\item[13.]
+Let $X$ and $Y$ be spaces which are homotopy equivalent, and assume
+$X$ is connected. Prove $Y$ is connected.
+(Recall that $X$ and $Y$ are \underbar{homotopy equivalent} if there
+exist four continuous functions
+$f:X\to Y$, $g:Y\to X$, $H_1:X\times I\to X$, and $H_2:Y\times I\to Y$\,
+where $I$ is the interval $[0,1]$, satisfying
+$H_1(x,0)=g(f(x))$, $H_1(x,1)=x$, $H_2(y,0)=f(g(y))$,
+and $H_2(y,1)=y$, for all $x\in X$ and all $y\in Y$.)
+
+\vspace{.15in}
+\item[14.]
+Prove or give a counterexample for each of the following:
+
+\item[\quad] a)
+Every bounded subset of a well ordered set has both a greatest
+lower bound and a least upper bound.
+
+\item[\quad] b)
+Every linearly ordered set (also called totally ordered) in which
+every bounded subset has both a greatest lower bound and a least upper
+bounded is well ordered.
+
+\item[\quad] c)
+Every linearly ordered subset of a partially ordered set has
+an upper bound.
+
+\item[\quad] d)
+In any well ordered set, the minimal element is the only element
+not having an immediate predecessor.
+
+
+\end{description}
+\end{large}
+\end{document}

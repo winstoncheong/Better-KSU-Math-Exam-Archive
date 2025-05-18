@@ -1,0 +1,107 @@
+% latex file
+\def\hcorrection#1{\advance\hoffset by #1 }
+\def\vcorrection#1{\advance\voffset by #1 }
+
+\documentclass{article}
+\usepackage{my,amsxtra,amssymb,amsthm}
+
+\vcorrection{-1.0in}
+\hcorrection{-0.8in}
+\textwidth 6.0in
+\textheight 9.0in
+
+\def\R{\mathbb R}
+\def\C{\mathbb C}
+\def\N{\mathbb N}
+\def\Z{\mathbb Z}
+\def\Q{\mathbb Q}
+
+\begin{document}
+%\begin{Large}
+
+
+
+\begin{center}\begin{LARGE}
+{\bf Algebra Qualifying Exam}\\ 
+{\bf Fall 1992}\\ \end{LARGE}
+\end{center}
+\vspace{0.1in}
+\noindent\hrulefill\\
+
+All rings are assumed to have a multiplicative identity, denoted 1. The
+fields $\Q$, $\R$ and $\C$ are the fields of {\it rational, real} and
+{\it complex} numbers, respectively.
+
+\begin{description}
+
+\item[1.]
+Let $G$ be a group of order $2n$, where $n$ is odd. Prove that $G$ has
+a normal subgroup of index 2.
+
+\item[2.]
+Let $G$ be a group of order $5 \cdot 7 \cdot 11$. Prove that
+$7 \parallel Z(G)|$, where $Z(G)$ denotes the {\it center} of $G$.
+
+\item[3.]
+Let $F$ be a field and let $R$ be the ring
+$$R= \left\{ \begin{bmatrix} a&0 \\ 0&b \end{bmatrix} | a \in F \right\}.$$
+
+Define the $R$-modules
+$$M_1 = \left\{\begin{bmatrix} a \\ 0 \end{bmatrix} | a \in F \right\},
+  M_2 = \left\{\begin{bmatrix} 0 \\ b \end{bmatrix} | b \in F \right\}.$$
+Prove that $M_1 \ncong M_2$.
+
+\item[4.]
+Let $R$ be a ring and let $M$ be an irreducible left $R$-module. Prove
+that there exists a maximal left ideal $I$ such that
+$R/I \cong M$ as left $R$-modules.
+
+\item[5.]
+Let $R$ be a ring. An ideal $P \subseteq R$ is called {\it primary} if for
+any $a,b \in R$ with $ab \in P$, $a \notin P$, then $b^n \in P$ for some
+positive integer $n$. Show that $P$ is primary if and only if every
+zero-divisor of $R/P$ is nilpotent.
+
+\item[6.]
+Let $V$ be an $n$-dimensional vector space over a field $F$, and let
+$$V= V_0 \supseteq V_1 \supseteq \dots \supseteq V_n = 0$$
+be a chain of subspaces of $V$, with $\dim(V_i/ V_{i+1}) = 1$ for
+$i=0,1, \dots, n-1$. Suppose that $T:V \to V$ is linear transformation
+satisfying $T(V_i) \subseteq V_{i+1}$ for all $i = 0,1, \dots, n-1$.
+Compute the characteristic polynomial of $T$.
+
+\item[7.]
+Let $V$ be a complex vector space and let $T \in End_C$.
+If $T^{1992} = 1_V$, prove that $T$ is diagonalizable.
+
+\item[8.]
+Let $f(x), g(x) \in F[x]$, and assume that $F \subseteq K$ is an extension of
+fields. If $f(x)$ divides $g(x)$ in $K[x]$, prove that $f(x)$ divides
+$g(x)$ in $F[x]$.
+
+\item[9.]
+Let $K \subseteq C$ be the splitting field over $Q$ for the polynomial
+$x^6-1 \in Q[x]$. Compute the Galois group of $K$ over $Q$ and show
+exactly how it operates on $K$.
+
+
+
+
+
+\end{description}    
+%\end{Large}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

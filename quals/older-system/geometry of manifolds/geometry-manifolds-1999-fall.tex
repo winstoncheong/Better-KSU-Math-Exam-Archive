@@ -1,0 +1,201 @@
+% latex file
+% Geometry of Manifolds - Auckly & Miller
+
+\def\hcorrection#1{\advance\hoffset by #1 }
+\def\vcorrection#1{\advance\voffset by #1 }
+
+\input amssym.def   %defines Bbb and gothic (frak)
+\input amssym       %defines Bbb and gothic (frak)
+
+\input prepictex.tex
+\input pictex.tex
+\input postpictex.tex
+
+%\documentstyle[bbb]{report}
+\documentclass[bbb]{report}
+
+\vcorrection{-.7in}
+\hcorrection{-1in}
+
+\topmargin  0in
+\textwidth 6.4in
+\textheight 9in
+
+\mathsurround=2pt
+
+\def\ds{\displaystyle}
+
+\def\R{{\Bbb R}}
+\def\Z{{\Bbb Z}}
+\def\C{{\Bbb C}}
+\def\D{{\Bbb D}}
+\def\nd{\noindent}
+
+\begin{document}
+
+%\pagestyle{empty}
+
+\begin{large}
+
+\hfill Name \rule{2.5in}{.01in}
+\par
+\vspace{.1in}
+
+\begin{center}
+   GEOMETRY OF MANIFOLDS QUALIFYING EXAM \\
+   Fall 1999 \\
+   (Auckly \& Miller ) \\
+\end{center}
+
+
+\vspace{.1in}
+
+\begin{large}\begin{center}
+\noindent {\bf Work as many as you can in the 2 hours.\\    %instructions
+Best of luck.}
+\end{center}\end{large}
+
+\vspace{.05in}
+
+\begin{description}
+
+\item[1.] (A)
+On $\R^2$ let
+$$\begin{array}{rlll}
+  X &=x^2y\frac{\partial}{\partial x}+(x+y)\frac{\partial}{\partial y}&
+  \qquad\qquad\qquad\qquad\qquad&\\
+  Y &=y\frac{\partial}{\partial x}+x\frac{\partial}{\partial y}&&\\
+  \alpha &=-y\,dx+x\,dy&&
+  \end{array} $$
+\item[] Calculate:
+$$\begin{array}{lll}
+\hbox{ a)  $[X,Y]$ \qquad\qquad\qquad\qquad   }
+& \hbox{b) $L_Y \alpha$\qquad\qquad\qquad\qquad}
+& \hbox{c) $L_Y d\alpha$\qquad\qquad\qquad\qquad}
+ \end{array}$$
+
+\vspace{.25in}
+
+\item[2.]
+On $\R^2$ consider the metric
+$g=(1+x^2)dx^2+\frac{1}{2} (dx\otimes dy+dy\otimes dx)+dy^2$.
+
+\item[\quad] a) Compute $\nabla_{\frac{\partial}{\partial x}}(y\,dx)$.
+\item[\quad] b) Calculate the sectional curvature.
+
+\vspace{.25in}
+
+\item[3.]
+On $\{(x,y)\}\bigg|x^2+y^2<1\}$, let
+$g=\ds\frac{dx^2+dy^2}{(1-x^2-y^2)^2}$  be a metric.
+
+\item[\quad] a) Show that
+  $\phi(z)=\ds\frac{az+b}{\overline{b}z+\overline{a}}$
+  is an isometry if $|a|^2-|b|^2=1$ and $z=x+iy$.
+
+  Hint: Show that if $ w =\phi(z)$ is analytic then
+  $d w \otimes d\overline{ w }
+    =|\phi'(z)|^2dz\otimes d\overline{z}$.
+
+\item[\quad] b) Using this metric, compute the radius and area
+of a circle with Euclidean radius $R<1$ centered at the origin.
+
+\vspace{.25in}
+
+\item[4.]
+Let $\alpha$ be a differential 2-form on the 2-sphere $S^2$ with
+$\int_{S^2}\alpha=1$. Suppose $f:S^3\to S^2$ is smooth, $S^3$ the 3-sphere.
+
+\item[\quad] a) Show that there exists a 1-form $\theta$ on $S^3$ such that
+$f^\ast\alpha=d\theta$.
+
+\item[\quad] b) Define $Q(f)=\int_{S^3}\theta\wedge d\theta$.
+Show that this is independent of the choice of $\alpha$ and $\theta$.
+
+Hint: First show that for $\alpha$ fixed it is independent of choice
+of $\theta$.
+
+
+\vspace{.25in}
+\item[5.]
+Suppose that $F:N\to M$ is a smooth covering mapping and that $M$
+is a Riemannian manifold with metric $g$.
+
+\item[\quad] a) Show that there exists a unique metric on $N$ so that
+$F$ is a local isometry.
+
+\item[\quad] b) Suppose that $N$ is connected and compact. Determine
+the relation between volume $(M)$ and volume $(N)$ in terms of the
+fundamental groups of $M$ and $N$.
+
+\vspace{.25in}
+\item[6.]
+Suppose $M$ is a smooth oriented $n\hbox{-dimensional}$ manifold and
+$X$ is a complete vector field which generates the 1-parameter
+group of diffeomorphisms $(F_t)_t$.
+Suppose that $\mu$ is a differential $n\hbox{-form}$ on $M$
+and that $U$ is a relatively compact ($\overline{U}$ is compact) open
+subset of $M$.
+
+\item[\quad] a) Show that
+$\ds\frac{d}{dt}\bigg|_{t=0}\ds\int_{F_t(U)} \mu=\ds\int_UL_X\mu$.
+
+\item[\quad] b) For $M=R^3$ and $\mu=dx\wedge dy\wedge dz$,
+the usual volume element, calculate an expression for $L_X\mu$ for
+any vector field
+$X=f\frac{\partial}{\partial x}
+  +g\frac{\partial}{\partial y}
+  +h\frac{\partial}{\partial z}$.
+Thus obtain a formula for
+$\frac{d}{dt}\bigg|_{t=0}\ \hbox{volume}\,(F_t(U))$.
+
+\vspace{.25in}
+\item[7.]
+Prove that smooth connected manifolds are topologically homogeneous.
+That is, given $p, q\in M$ there is a diffeomorphism
+$f:M\to M$ so that $f(p)=q$.
+
+\vspace{.25in}
+\item[8.]
+On $\R^2$ with coordinates $(x^1,x^2)$ let a connection
+$(\Gamma^i_{jk})$ be given by $\Gamma^1_{11}=\frac{\partial f}{\partial x^1}$
+and $\Gamma^2_{22}=\frac{\partial f}{\partial x^2}$ and all other
+$\Gamma^i_{j k}=0$
+Here $f:\R^2\to R$ is some given function.
+
+Let $P_0(x^1_0, x^2_0)$ be a given point. If
+$v:[a,b]\to \R^2$ is a smooth curve such that
+$v(a)=v(b)=P_0$, let $T_v$ be the $2\times 2$ matrix
+which represents (with respect to
+$\left(\frac{\partial}{\partial x^1},\frac{\partial}{\partial x^2}\right)$ )
+the holonomy transformation $T_{p_0}\R^2\to T_{p_0}\R^2$
+of parallel transport around $v$.
+
+\item[\quad] a) Show that $T_v$ is a diagonal matrix
+  with determinant equal to 1.
+
+\item[\quad] b) For $f(x^1,x^2)=x^1x^2$
+let
+
+$v_c:[0,4]\to \R^2$ by
+
+$v_c(t)=((\ln c)t,0)$ if $0\leq t<1$,
+
+$v_c(t)=(\ln c, t-1)$ if $1\leq t<2$,
+
+$v_c(t)=((\ln c)(3-t),1)$ if $2<t<3$.
+
+$v_c(t)=(0,4-t)$ if $3\leq t\leq 4$.
+
+Find $T_{v_c}$.
+
+
+\vfill
+\clearpage
+
+
+\end{description}
+\end{large}
+\end{document}
+
+

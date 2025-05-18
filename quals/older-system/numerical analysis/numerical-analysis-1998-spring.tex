@@ -1,0 +1,145 @@
+%From hyang@math.ksu.edu Mon Feb 23 16:27:50 1998
+
+% the new version
+
+% na98s.tex
+\def\hcorrection#1{\advance\hoffset by #1 }
+\def\vcorrection#1{\advance\voffset by #1 }
+ 
+\documentstyle{article}
+ 
+\vcorrection{-1.0in}
+\hcorrection{-.9in}
+\textwidth 7.0in
+\textheight 9.0in
+ 
+\begin{document}
+ 
+\begin{large}
+ 
+\begin{center}
+    \begin{Large}
+        {\bf NUMERICAL ANALYSIS QUALIFYING EXAM \\
+            Spring, 1998}\\
+            Yang \& Zou \\
+    \end{Large}
+\end{center}
+ 
+\vspace{.1in}
+ 
+%Test questions in description mode
+ 
+
+(do at lest 3 problems from problems 1-4, and do at least
+3 problems from problems 5-8, you may do as many as you can)  \\
+
+
+ \begin{enumerate}
+
+\item  
+   Show that
+\begin{enumerate}
+     \item $1 + x \leq e^x, \ \forall \ {\mbox real } \  x .  $
+     \item $ e^x \leq 1 + 1.01 x, \ \  \forall \  0 \leq x \leq 0.01. $
+\end{enumerate}
+   And use the results to show
+\[ (1+u)^n \leq 1 + 1.01 nu     \;\;\;\;\; \mbox{if}\;\; 0 \leq nu \leq 0.01 .
+\;\;\;\;\;\;      \]
+
+
+ \item By constructing a fixed-point iteration,
+find the value of  $x$ given by
+\[   x = \sqrt{p+\sqrt{p+\sqrt{p + \cdots }}}   \]
+where $p$ is a positive number. Prove the convergence of the
+fixed-point iteration. 
+
+  \item
+ Construct a near-minimax polynomial of degree $\leq$ 2 for the
+function $g(t) = e^t$ on the interval $t \in [0,1]$ and estimate its maximum
+error. You can express the result in terms of the expenential function. 
+(hint: $\cos (n+1)\theta = \cos \theta \cos n\theta  -\cos (n-1)\theta $)
+
+
+
+
+ \item
+Given the trapezoidal rule and Simpson's rule as:
+\[
+\int_{x_0}^{x_0+h} f(x) dx = \frac{h}{2} [f(x_0) + f(x_0+h)] - \frac{h^3}{12
+}
+f^{(2)}(\xi) ,
+\]
+\[
+\int_{x_0}^{x_0+2h} f(x) dx = \frac{h}{3} [f(x_0) + 4f(x_0+h)+f(x_0+2h)] -
+\frac{h^5}{90} f^{(4)}(\xi) ,
+\]
+\begin{description}
+\item[(1)]
+Describe the composite trapezoidal rule and composite Simpson's rule for
+evaluating integrals $\int_a^b f(x) dx$ using $n$ subintervals.
+\item[(2)]
+ Derive an estimate for the error in the composite trapezoidal rule in terms
+of the length of the subintervals into which $[a,b]$ is divided.
+\par
+\item[(3)] Derive the asymptotic error formula for the composite
+Simpson's rule
+\[  E_n(f) \doteq -\frac{h^4}{180} [f^{(3)}(b)-f^{(3)}(a)], \] 
+where $h = (b-a)/n$.
+\par
+\end{description}
+
+
+ \item  Let $U$ and  $V$ be two $3 \times 3$ matrices such that
+\[ UV  = [w_{ij}] =  \left[ \begin{array}{rrr}
+            w_{11}    &w_{12}  &0     \\
+            w_{21}    &w_{22}  &0     \\
+            0         &0       &0     \\
+         \end{array}    \right] ,  \ \ \mbox{where} \ \
+ w_{11} w_{22} \neq  w_{12} w_{21} .            \]
+Show that either the last row of $U$ is the zero row vector
+or the last column of $V$ is the zero column vector.
+(Hint: If $U$ is singular then there exists a nonzero 3-tuple vector
+$p$ such that $p^T U = 0$)
+
+
+\item  Let $A$ be an $n \times n$ symmetric real positive definite
+matrix. Show that there exist $2^n$ real lower-triangular matrices $L$
+such that $A = LL^T$?
+
+  \item
+Assume that ${\bf w} \in {\bf R}^n$, and that $ \| {\bf w} \|_2=1$.
+What are the eigenvalues, eigenvectors, and determinant of a Householder
+matrix \\ $I - 2{\bf ww}^T$? 
+
+
+
+ \item
+By using the singular value decomposition, show that any square real
+matrix $A$ can be 
+written as
+$A=QS$ where $Q$ is an orthogonal matrix and $S$ is a semipositive
+definite matrix.
+
+
+ \end{enumerate}
+
+
+
+
+\end{large}
+
+\end{document}
+
+%
+% \item
+%Suppose $ \lambda_1 > \lambda_2 > \cdots > \lambda_n$, and ${\bf v} \in
+%\Re^n$ such that its components $v_i$ are nonzero for all $i$.
+%Let $k$ be an integer with $ 1 \leq k \leq n$. Fix $v_i$ for $i \neq k$
+%and allow $v_k$ to varry. Show that the matrix $A({\bf v}) = 
+%\mbox{diag}(\lambda_1, \lambda_2, \ldots, \lambda^n) + {\bf v}{\bf v}^T$ has 
+%an eigenvalue $\lambda({\bf v})$ that satisfies
+%$$\lambda({\bf v}) = \lambda_k + C({\bf v}) v_k^2$$
+%where 
+%$$\lim_{v_k \rightarrow 0} C({\bf v}) = \frac{1}{1-\sum_{i=1, i \neq k}
+%\frac{v_i^2}{\lambda_k - \lambda_i}}.$$
+%

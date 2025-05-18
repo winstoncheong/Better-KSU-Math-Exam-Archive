@@ -1,0 +1,89 @@
+% latex file
+\def\hcorrection#1{\advance\hoffset by #1 }
+\def\vcorrection#1{\advance\voffset by #1 }
+
+\documentclass{article}
+\usepackage{my,amsxtra,amssymb,amsthm}
+
+\vcorrection{-1.0in}
+\hcorrection{-0.8in}
+\textwidth 6.0in
+\textheight 9.0in
+\begin{document}
+%\begin{Large}
+
+
+
+
+
+
+\begin{center}\begin{LARGE}
+{\bf Real Analysis Qualifying Exam}\\ 
+{\bf Fall 1995}\\ \end{LARGE}
+\end{center}
+\vspace{0.1in}
+\noindent\hrulefill\\
+
+\begin{description}
+
+\item[1.]
+Suppose $f \in L^2 (\mu)$. Prove that
+$$\sum^\infty_{n=1} n \mu (\{x \in X : |f(x)| > n\}) < \infty$$
+
+\item[2.]
+Suppose $f$ is a $C^\infty$ function on $\Bbb R$ with the property that
+for every $x \in \Bbb R$ there exists an $n$ (which many depend on $x$)
+so that $\frac{\partial^n f}{\partial x^n} (x) = 0$. Prove that there exists
+a nonempty open interval $I$ such that $f|_I$ is a polynomial.
+
+
+\item[3.]
+Suppose  $\psi \in L^1 ([0, \infty))$ is decreasing function on
+$[0, \infty)$. For each $n=1,2,3, \dots$ set $f_n(x) = n \psi(nx)$.
+Show that $f_n(x) \to 0$ uniformly on the set $[1, \infty)$.
+
+\item[4.]
+Suppose $\{f_n\}$ is a sequence of measurable functions on $X$ and $f$ is
+measurable on $X$. Discuss the relationship between the conditions $f_n \to f$
+a.e. and $f_n \to f$ in measure. You may want to consider the cases
+$\mu (X) = \infty$ and $\mu(X) < \infty$ separately.
+
+\item[5.]
+Suppose $\mu(X) < \infty$, $f_n \in L^1$, $f_n \to f$ in measure and there
+exists $g \in L^1(\mu)$ such that $|f_n| \leq |g|$ a.e. Show that
+$f_n \to f$ in $L^1(\mu)$.
+
+\item[6.]
+Let $T(x) = \sum^N_{k= -N} a_k e^{ikx}, x \in [-\pi, \pi]$. Prove that
+$|a_0| \leq \log \frac{1}{2\pi} \int^\pi_{-\pi} \exp |T(x)|dx$.
+
+\item[7.]
+On $(X,M, \mu)$ define $L^\infty(\mu) + L^1(\mu) = \{h + g| h \in L^\infty
+   (\mu), g \in L^1(\mu)\}$. Prove that
+$L^p(\mu) \subseteq L^\infty (\mu) + L^1(\mu), 1 \leq p \leq \infty$.
+
+\item[8.]
+Let $S$ be a linear subspace of $C[0,1]$ which is closed as a subspace of
+$L^2[0,1]$. Show that $S$ is a closed subspace of $L^2([0,1])$.
+
+
+
+
+
+\end{description}    
+%\end{Large}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

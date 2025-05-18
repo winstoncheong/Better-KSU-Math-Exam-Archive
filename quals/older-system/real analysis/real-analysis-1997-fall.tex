@@ -1,0 +1,102 @@
+% latex file
+\def\hcorrection#1{\advance\hoffset by #1 }
+\def\vcorrection#1{\advance\voffset by #1 }
+
+\documentclass{article}
+\usepackage{my,amsxtra,amssymb,amsthm}
+
+\vcorrection{-1.0in}
+\hcorrection{-0.8in}
+\textwidth 6.0in
+\textheight 9.0in
+\begin{document}
+%\begin{Large}
+
+
+
+
+
+
+\begin{center}\begin{LARGE}
+{\bf Real Analysis  Qualifying Exam}\\ 
+{\bf Fall 1997}\\ \end{LARGE}
+\end{center}
+\vspace{0.1in}
+\noindent\hrulefill\\
+Unless otherwise stated, $(X, {\cal A}, \mu)$ is an arbitrary measure
+space.
+
+\begin{description}
+\item[1.]
+Let $E \subset \Bbb R$ be a Borel set. Prove that
+$$E^\prime = \{(x,y) \in \Bbb R^2 : x + y \in E\}$$
+is a Borel set.
+
+\item[2.]
+Let $f$ be a measurable function on $X$ and $p>0$. Prove
+$$\int |f|^p d\mu = p \int^\infty_0 t^{p-1} \mu (\{ |f| > t \})dt.$$
+
+\item[3.]
+Suppose that $f_n$, $f \in L^1(\mu)$ and
+$\parallel f - f_n \parallel_1 \to 0$. Prove
+$$\lim \sup \int \log |f_n| d \mu \leq \int \lim \sup \log |f_n| d \mu,$$
+where $\log x = -\infty$ for $x=0$.
+
+\item[4.]
+Suppose that $\mu$ is a positive finite Borel measure on a Hausdorff space
+$X$, and for each open set $V \subset X$,
+$$\mu (V) = \sup \{\mu (K) : K \hbox{\ is\ } \hbox{\ compact\ },
+K \subset V \}.$$
+
+Prove: Given a Borel set $E \subset X$ and $\varepsilon >0$, there exist a
+compact set $K$ and an open set $V$ such that
+$$K \subset E \subset V \hbox{\ and\ } \mu(V \backslash K) < \varepsilon.$$
+
+\item[5.]
+If $f$ is complex function on $[a,b]$, its total variation
+$F : [a,b] \to [0, \infty]$ is defined by
+$$F(x) = \sup \left\{ \sum^N_{j=1} \left| f(t_j) - f(t_{j-1}) \right|:
+a = t_0 < t_1 < \dots < t_N= x \right\}.$$
+
+Given an example of a continuous function $f$ on $[a,b]$ for which
+$F(x)= \infty$ for any $x \in (a,b]$.
+
+\item[6.]
+Let $f_n(t) = e^{i(n+ \frac{1}{2})t}, t \in [0,2\pi]$. Is it true that
+$\{f_n\}_{n \in \Bbb Z}$ is a complete orthonormal system in
+$L^2[0,2\pi]$?
+
+(You may use the fact that the functions $e_n$, $e_n(t) = e^{int}$,
+$n \in \Bbb Z$, form a complete orthonormal system in $L^2[0,2\pi]$.)
+
+\item[7.]
+Construct a nonzero positive Borel measure $\mu$ on $[0,1]$ which is singular
+with respect to Lebesgue measure and such that $\mu (\{t\}) = 0$
+for any $t \in [0,1]$.
+
+\item[8.]
+Let $\{f_n\}$ be a sequence of functions in $L^1[0,1]$ such that
+$f_n(t) \to 0$ for any $t \in [0,1]$. Is it true that
+$\int_0^1 f_n(t) dt \to 0$?
+
+
+
+
+
+\end{description}    
+%\end{Large}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

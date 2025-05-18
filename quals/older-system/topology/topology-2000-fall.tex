@@ -1,0 +1,211 @@
+% latex file
+%Muenzenberger & Strecker
+
+\def\hcorrection#1{\advance\hoffset by #1 }
+\def\vcorrection#1{\advance\voffset by #1 }
+
+\documentclass{article}
+\usepackage{amsxtra,amssymb,amsthm}
+
+\vcorrection{-1.0in}
+\hcorrection{-0.8in}
+\textwidth 6.0in
+\textheight 9.0in
+
+\def\R{{\mathbb R}}
+\def\Q{{\mathbb Q}}
+\def\F{{\mathbb F}}
+\def\K{{\mathbb K}}
+\def\C{{\mathbb C}}
+\def\Z{{\mathbb Z}}
+\def\E{{\mathbb E}}
+\def\N{{\mathbb N}}
+\def\divs{\vert}
+\def\notdivs{\not\vert}
+\def\rt{\,\root\of}
+\def\inv{^{-1}}
+%out of date:
+%\def\K{{\Bbb K}}
+%\def\C{{\Bbb C}}
+\def\vs{\vspace{0.2in}}
+\def\vvs{\vspace{0.5in}}
+
+\begin{document}
+\begin{large}
+
+
+\begin{center}\begin{LARGE}
+  {\bf  Topology Qualifying Exam}\\ 
+  {\bf August 2000}\\ \end{LARGE}
+  {\bf (Muenzenberger and Strecker)}
+\end{center}
+
+\vspace{0.1in}
+\noindent\hrulefill\\
+{\bf Instructions:
+Choose and work any 6 of the following 14 problems. Start each problem on
+a new sheet of paper. \underline {Do not turn in more
+that six problems.}
+In the problems below, a space means a topological space.
+}
+
+\vspace{0.2in}
+
+
+
+\begin{description}
+
+\item[1.]
+Prove or disprove that  the continuous image of a compact space is compact.
+
+\item[2.(a)]
+True - False.
+
+\item[\quad \quad (i)]
+An open and closed one-to-one function between topological spaces must be
+an embedding.
+
+\item[\quad \quad (ii)]
+Each space that is locally-Hausdorff (in the sense that each point has
+a neighborhood base of Hausdorff subspaces) must be Hausdorff.
+
+\item[\quad \quad (iii)]
+Each quotient of a locally connected space must be locally connected.
+
+\item[\quad \quad (iv)]
+Each locally compact Hausdorff space is completely regular.
+
+\item[\quad \quad (v)]
+The product of metrizable spaces is metrizable.
+
+\item[\quad \quad (vi)]
+The product of continua is a continuum. (A continuum is a compact, connected,
+Hausdorff space.)
+
+\item[\quad \quad (vii)]
+Every metrizable space is normal.
+
+\item[\quad \quad (viii)]
+Every subspace of a separable space is separable.
+
+\item[\quad (b)]
+For each false entry, give a counterexample or other explanation (no proofs).
+
+\item[3.]
+Let $(X_i, \tau_i)_{i \in I}$ be a family of 
+topological spaces and let $\tau$ be the
+product topology on $\Pi X_i$. Let $Y_i \subseteq X_i$ for each $i \in I$.
+There is a ``natural" subspace topology $\sigma$ on $\Pi Y_i$ that is
+induced from $\tau$ and the fact that $\Pi Y_i$ is a subset of
+$\Pi X_i$. There is also a ``natural" product topology $\rho$ on
+$\Pi Y_i$ that comes from the subspace topologies $(Y_i, \rho_i), i \in I$
+induced by the topologies $(\tau_i, i \in I)$. Prove or disprove that
+$\sigma = \rho$.
+
+\item[4.]
+Let $f : X \to Y$ be a continuous surjective map from a compact space $X$
+to a Hausdorff space $Y$. Prove that $f$ is a quotient map.
+
+\item[5.]
+Use Zorn's lemma to prove that for every set $X$ and relation $R$ on $X$
+there is a maximal $A \subseteq X$ such that $A \times A \subseteq R$.
+
+\item[6.]
+Prove that the interval $[0,1]$ with the usual topology is connected.
+
+\vfill\pagebreak
+
+\item[7.]
+A continuous map $f:(X, \tau) \to (Y, \sigma)$ is said to be final provided that
+for each topological space $(Z, \mu)$ each set-function $g:Y \to Z$ is
+continuous whenever $g \circ f:(X,\tau) \to (Z, \mu)$ is continuous.
+Prove any two of the following:
+
+\item[\quad (a)]
+The composition of final (continuous) maps is final.
+
+\item[\quad (b)]
+The ``second factor" of a final map is final; i.e., if
+$(X, \tau) \stackrel{f}{\longrightarrow} (Y, \sigma)
+\stackrel{h}{\longrightarrow}
+(W,\rho)$
+are continuous maps and $h \circ f$ is final, then $h$ is final.
+
+\item[\quad (c)]
+Every quotient map is final.
+
+\item[8.]
+Prove or disprove each of the following:
+
+\item[\quad a)]
+Every subspace of a compact Hausdorff space is locally compact.
+
+\item[\quad b)]
+Every subspace of a connected Hausdorff space is locally connected.
+
+\item[9.]
+Describe the fundamental groups of the following spaces, where each has the
+usual topology.
+
+\item[\quad (a)]
+The circle, $S^1$;
+
+\item[\quad (b)]
+The Mobius Strip, $M$;
+
+\item[\quad (c)]
+The figure eight, $\infty$;
+
+\item[\quad (d)]
+The torus, $S^1 \times S^1$;
+
+\item[\quad (e)]
+The projective plane, ${\mathbb P}$.
+
+\item[10.]
+Prove that if a filter $F$ is contained in a unique ultrafilter $G$, then
+$F=G$.
+
+\item[11.]
+Prove that every continuous bijection $f: {\R} \to {\R}$ is a
+homeomorphism, where $\R$ has the usual topology.
+
+\item[12.]
+Prove that if $A$ and $B$ are compact subsets of a Hausdorff space $X$, then
+there are open disjoint sets $U$ and $V$ such that $A \subseteq U$ and
+$B \subseteq V$.
+
+\item[13.]
+Prove that if $X$ and $Y$ are spaces where $Y$ is compact and
+$\{x\} \times Y \subseteq W$, an open set in $X \times Y$, then there is
+$U$ open in $X$ and $V$ open in $Y$ such that
+$\{x\} \times Y \subseteq U \times V \subseteq W$.
+
+\item[14.]
+Prove that if a normal space $X$ contains a closed homemorphic image of
+$\R$ (with the usual topology), then there is a continuous function
+$f :X \to X$ such that $f(x) \neq x$ for all $x \in X$.
+
+
+
+
+
+    
+\end{description}
+\end{large} \end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

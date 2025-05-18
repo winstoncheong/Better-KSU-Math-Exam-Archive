@@ -1,0 +1,170 @@
+
+
+
+% latex file
+%\def\hcorrection#1{\advance\hoffset by #1 }
+%\def\vcorrection#1{\advance\voffset by #1 }
+
+\documentstyle[12pt,amscd,amssymb] {amsart}
+\pagestyle{empty}
+%\input amssym.def
+%\input amssym
+
+\oddsidemargin -.5in
+\evensidemargin -.5in
+\topmargin -0.5in 
+\textwidth 7.0in
+\textheight 9.0in
+\begin{document}
+%\begin{large}
+\newcommand{\C}{{\Bbb C}}
+\newcommand{\Q}{{\Bbb Q}}
+\newcommand{\Z}{{\Bbb Z}}
+\newcommand{\F}{{\Bbb F}}
+\newcommand{\Gal}{\mbox{\rm Gal}}
+\newcommand{\Aut}{\mbox{\rm Aut}}
+
+
+\begin{center}\begin{LARGE}
+{\bf  Algebra Qualifying Exam}\\ 
+{\bf January  29, 2002}\\
+\end{LARGE}
+\end{center}
+\vspace{0.1in}
+\noindent\hrulefill\\
+{\bf Instructions:} You are given 10 problems from which you are to do 8.
+ Please indicate those  8 problems which you would like  to be graded 
+by circling the problem numbers on the  problem sheet.  
+
+\vspace{0.2in}
+
+{\bf Note:} All rings in this exam are associative and with 1 and 
+all integral domains are commutative.
+
+
+% $\Bbb Q $ and $ \Bbb C $ are
+%the fields of  rational and complex  numbers respectively.
+
+%$\Bbb Z $ and $ \Bbb Q $ are
+%the sets of the integers and rational numbers respectively.
+
+\vspace{0.2in}
+
+\begin{enumerate}
+ \item Let $G$ be an arbitary group and $H_1, H_2, \dots, H_n$ be subgroups
+ of $G$ of with finite index in $G$. Show that there is a normal subgroup
+ $K$ of finite index such that $ K \subseteq H_i $ for all $ i=1, 2, \dots, n$.
+
+\vspace{0.2in}
+
+%\item Let $r\geq 3$ be a positive integer and  $ \hat{W}$ be the subgroup of all  
+%permutations $w$ of the set of
+% integers $\Z $ such that 
+%\[w(i+r)=w(i)+r \text{ and } w(i)\equiv i \pmod{i} \text{ for all }  \in \Z. \]
+%Show that $\hat{W} $ is a free abelian group of rank $r$ with basis $ \{w_1,
+%\dots, w_r\} $ defined by 
+%\[ w_i(j)=\left \{ \begin{array}{lcl}
+%j+r & \text{ if } & j\equiv i \pmod{r}\\
+%j+r & \text{ if } & \text{otherwise.} \end{array} \right . \]
+
+\item  Let $\F$ be a field and $G$ be the group 
+\[ G=\left\lbrace \begin{pmatrix} 1&a&b&c\\0&1&d&e\\0&0&1&f\\0&0&0&1\end{pmatrix}\,|\  a,
+ b, c, d, e, f \in \F \right\rbrace \]
+with usual matrix multiplication. Prove that the group $G$ is nilpotent.
+% by computing the lower contral series.
+
+\vspace{0.2in}
+ 
+
+\item Let $ R$ be a commutative ring. Show that if $I_1, \cdots, I_n $ are
+ideals with $ \cap _{i=1}^n I_i \subseteq P$ for some prime ideal $P$, then
+there is an $i $ such that $ I_i \subseteq P$.
+
+\vspace{0.2in}
+ 
+\item Let $p$ be a fixed prime number. Define 
+$\Z(p)=\{ ap^{-n} \in \Q\, |\ a \in \Z, n \in \Z\}$. 
+
+\vspace{0.2in}
+
+\begin{enumerate}
+\item Show that $ \Z(p) $ is a
+subgring of $ \Q $ the field of rational numbers $\Q$ containing $\Z$ as
+a subring.\\
+\item Assume that $A$ is a ring and that $ \phi: \Z \rightarrow A $
+is a ring homomorphism such that $\phi(p) $ has an muliplicative inverse in $A$. 
+Show that there
+exists a unique ring homomorphism $ \psi: \Z(p)\rightarrow A$ such that 
+$\psi(x)=\phi(x) $ for all $ x \in \Z$.
+\end{enumerate}
+
+\vspace{0.2in}
+
+\item Let $A$ be a commutative ring, and let $ A[x]$ be the ring of all
+polynomials $f(x)=\sum_{i=0}^na_i x^n$ in the indeterminate $x$ with 
+coefficients $a_i \in A$.
+Show that for any two polynomials $f(x) $ and $ g(x)$
+such that the leading coefficient of $g(x)$ is invertible in $A$, then
+there is a unique pair of polynomials in $q(x)$ and $ r(x) $ such that 
+\[f(x)\ =\ g(x)q(x)\ +\ r(x),\]
+where $\deg(r(x))<\deg(g(x))$. Can you conclude that the ring $A[x]$ is an
+Euclidean domain? Justify your conclusion.
+
+\vspace{0.2in}
+
+\item Let $D$ be a unique factorization domain and $ Q(D) $ be the field of
+factions (quotient field of $D$). Suppose  $ a, b, f, g $ are in $ D$ 
+with $ b\neq 0 $ and $ g\neq 0 $ such that $ \frac{a}{b}=\frac{f}{g}\in Q(D)$. If $
+a $ and $ b$ are relatively prime, show that $ a|f$ and $b|g$. 
+
+\vspace{0.2in}
+
+%\item Let $F$ be a field and $F[x]$ be the ring of polynomials with
+%coefficients in $F$. Let $ F(x)$ be the field of fractions of $ F[x]$. If $
+%p(x), q(x), f(x), g(x) $ are in $F[x]$ such that $
+%\frac{a(x)}{b(x)}=\frac{f(x)}{g(x)}$ in $F(x)$, show that $ \deg(a(x))\leq
+%\deg(f(x))$ and  $\deg(b(x))\leq
+%\deg(g(x))$.
+ 
+\item Let $\F$ be field and $R=M_n(\F) $ be the ring of all $n\times
+n$ matrices with entries in $\F$. Show that the vector space $ \F^n $ of
+$n\times 1$ column vectors with coefficients in $\F$
+is an irreducible module of $R$ (relative to ordinary matrix multiplication). 
+Then show that any
+finite-dimensional $R$-module  is a finite-dimensional vector space of
+dimension divisible by $n$. 
+
+\vspace{0.2in}
+
+\item Let $\F_q$ be a finite field with $q$ elements. Compute the order of
+the group ${\rm GL}_n(q)$ of all invertible linear transformations of the vector space 
+$\F_q^n$. 
+%(Hint, If $\{v_1,\dots, v_r\} $ a linearly independent set of
+%vectors, then for any vector $v$, $\{v_1,\dots, v_r, v\}$ is linearly
+%dependent if and only if $ v \in \text{Span}(v_1, \dots, v_r)$.
+    
+\vspace{0.2in}
+%\item Let $ \F_q$ be a finite field with $q$ elements. Compute the number of
+%$k$-dimensional subspaces of $\F_q^n$ in terms of $q$.
+
+\item Let $ \F $ be a field, let $x$ be an indeterminate over $\F$,
+and set $ R=\F[x]/(x^5(x-2)^6) $. Describe all
+ $ R $-modules of $\F$-dimension 25 up to $ R $-module
+isomorphism.  
+%(Any $R$-module can be regarded as a $\F[T]$-module, what are
+%the possible matrices of $T$ on $\F^{25}$.)
+
+\vspace{0.2in}
+
+\item Let $q$ be a prime power. Show that the finite field $ \F_{q^r}$
+is isomorphic to a subfield of $ \F_{q^n}$ if and only if $ r$ divides $n$.
+If $ r $ divides $n$, then show that $ \F_{q^n}$ is a Galois extension of
+$\F_{q^r}$ and compute the Galois group of $\F_{q^n} $ over $\F_{q^r}$.
+  \end{enumerate}
+%\end{large}
+\end{document}
+
+
+
+
+

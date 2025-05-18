@@ -1,0 +1,112 @@
+% latex file
+\def\hcorrection#1{\advance\hoffset by #1 }
+\def\vcorrection#1{\advance\voffset by #1 }
+
+\documentclass{article}
+\usepackage{my,amsxtra,amssymb,amsthm}
+
+\vcorrection{-1.0in}
+\hcorrection{-0.8in}
+\textwidth 6.0in
+\textheight 9.0in
+
+\def\R{\mathbb R}
+\def\C{\mathbb C}
+\def\N{\mathbb N}
+\def\Z{\mathbb Z}
+\def\Q{\mathbb Q}
+
+\begin{document}
+%\begin{Large}
+
+
+
+
+
+
+\begin{center}\begin{LARGE}
+{\bf Real Analysis Qualifying Exam}\\ 
+{\bf Spring 1990}\\ \end{LARGE}
+\end{center}
+\vspace{0.1in}
+\noindent\hrulefill\\
+
+In what follows, $(X, {\cal A}, \mu)$ is a measure space and $\lambda$ is
+Lebesgue measure on $\R$.
+
+\begin{description}
+\item[1.]
+Suppose $f,g: X \to \R$ are ${\cal A}$-measurable.
+
+\item[\quad] (a)
+What does it mean to say that $f$ is ${\cal A}$-measurable?
+
+\item[\quad] (b)
+Use your definition to prove that $f+g$ is also ${\cal A}$-measurable.
+
+\item[2.]
+Suppose that $f:X \to \C$ is ${\cal A}$-measurable,
+$\mu(X) < \infty, |f(x)| \leq 1 \forall x \in X$, and
+$\int fd\mu = \mu (X)$. Prove that $f(x)=1 \mu$-a.e.
+
+\item[3.]
+Let $f \in L_1(\mu)$ and $\varepsilon >0$. Prove that there exists
+$\delta >0$ such that
+$$A \in {\cal A} \hbox{\ and\ } \mu(A) < \delta \Rightarrow
+  \int_A |f| d\mu < \varepsilon.$$
+
+\item[4.]
+Apply the Monotone Convergence Theorem to prove Fatou's Lemma.
+
+\item[5.]
+Suppose $(X, {\cal A}, \mu)$ is $\sigma$-finite and $f:X \to [0, \infty]$
+is ${\cal A}$-measurable. Let
+$$E=\{(x,t) \in X \times \R : 0 < t< f(x)\}.$$
+Prove that $E \in {\cal A} \times {\cal B} (\R)$ and
+$\mu \times \lambda (E) = \int fd\mu$.
+
+\item[6.]
+Give examples of each of the following:
+
+\item[\quad] (a)
+A closed subset $F$ of $[0,1]$ that contains no rational number and had
+$\lambda (F) >0$.
+
+\item[\quad] (b)
+A Borel measurable $f:[0,1] \to [0,1]$ such that if $g:[0,1] \to \R$
+is Riemann integrable, then
+$$\int^{-1}_0 |f(x) - g(x)| dx >0.$$    
+
+\item[7.]
+Suppose $f:[a,b] \to \R$ is Lebesgue integrable and
+$\int^x_a f(t) dt = 0$ for all $x \in [a,b]$. Prove that $f=0$ a.e.
+on $[a,b].$
+
+\item[8.]
+Let $a<b$ in $\R$ and let $f:[a,b] \to \R$ be increasing on $[a,b]$. Presuming
+it is known that $f$ is differentiable a.e., prove that $f^\prime$ is
+Borel measurable and
+$$\int^b_a f^\prime (x) dx \leq f(b) - f(a).$$
+[Hint: Extend $f$ and use Fatou's Lemma.]
+
+
+
+
+
+\end{description}    
+%\end{Large}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

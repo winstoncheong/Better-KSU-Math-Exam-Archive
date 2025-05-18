@@ -1,0 +1,164 @@
+% latex file
+\def\hcorrection#1{\advance\hoffset by #1 }
+\def\vcorrection#1{\advance\voffset by #1 }
+
+\documentclass{article}
+\usepackage{my,amsxtra,amssymb,amsthm}
+
+\vcorrection{-1.0in}
+\hcorrection{-0.8in}
+\textwidth 6.0in
+\textheight 9.0in
+
+\def\R{\mathbb R}
+\def\C{\mathbb C}
+\def\N{\mathbb N}
+\def\Z{\mathbb Z}
+\def\Q{\mathbb Q}
+
+\begin{document}
+%\begin{Large}
+
+
+
+
+
+
+\begin{center}\begin{LARGE}
+{\bf Complex Analysis Qualifying Exam}\\ 
+{\bf Fall 1985}\\ \end{LARGE}
+\end{center}
+\vspace{0.1in}
+\noindent\hrulefill\\
+
+\begin{description}
+\item[1.]
+Let $U$ be open $\subset \C, f : U \times [0,1] \to \C$ a continuous
+function such that $z \mapsto f(z,t)$ is holomorphic in $U$ for each
+$t \  \varepsilon \ [0,1]$.
+
+\item[\quad] (a)
+Show that then $D_1 f(z,t)$ is a continuous function on $U \times [0,1]$.
+
+\item[\quad] (b)
+Show that the function
+$$F(z) = \int^1_0 f (z,t) dt, \quad z \ \varepsilon \  U$$
+is holomorphic in $U$ and that
+$$F^\prime (z) = \int^1_0 D_1 f(z,t) dt, \quad z \ \varepsilon \ U.$$
+
+\item[2.]
+Suppose that $f$ is holomorphic in $V \backslash \{a\}$ for some neighborhood
+$V$ of $a \ \varepsilon \ \C$.
+
+\item[\quad] (a)
+Define: $f$ has a pole of order $k >0$ at $a$.
+
+\item[\quad] (b)
+Show that if $f$ has a pole of order $k$ at $a$, then Residue of
+$f$ at
+$a =\frac{1}{(k-1)!} \lim_{z \to a} \frac{d^k}{dz^k} \left[(z-a)^k f(z)
+\right]$.
+
+\item[3.]
+If $f$ is entire and periodic, then $f$ has a fixed pint.
+
+{\bf HINT:} Consider the range of the entire function $f(z) - z$.
+
+\item[4.]
+Say that the continuous function $f : U$ open $\subset \C \to IR$ has the
+{\it restricted (circumferential) mean value} property if for each
+$z \ \varepsilon \ U$ there is at least one $r=r(z) >0$ such that
+$\{w \ \varepsilon \ \C : |w-z| \leq r\} \subset U$ and
+$$f(z) = \frac{1}{2 \pi} \int^{2\pi}_0 f(z+ re^{i \theta}) d \theta.$$
+
+\item[\quad] (i)
+Show that if $U$ is bounded and connected and $f$ has this property, then
+$f$ has no maximum in $U$ unless it is constant.
+
+{\bf HINT:} Suppose that the subset $M$ of $U$ where the maximum is realized
+is not empty. It is relatively closed in $U$ and if
+$M \neq U$, there will be a point $z \ \varepsilon \ M$ closest to
+$\C \backslash U$.
+
+\item[\quad] (ii)
+Suppose that $U$ is bounded region for which the Dirichlet problem is
+solvable and that $g : \overline U  \to IR$ is a continuous function which
+enjoys the restricted mean value property in $U$. Show that $g$ is harmonic
+in $U$.
+
+{\bf HINT:} If $h$ is the solution of the Dirichlet problem with boundary
+data $g|_{\partial U}$, consider $f = h-g$ and $f= g-h$.
+
+\item[5.]
+Write an essay on ``simple connectivity for planar regions". Cover the
+following aspects: topological characterizations involving both internal and
+external properties; homotopy; analytic characterizations. Define the index
+of a closed curve and explain its relation to simple connectivity. What
+special role do Jordan curves play? Elucidate the relation to Cauchy's
+integral theorem and the contributions of Bernhard Riemann and Carl Runge.
+Sketch the proofs of 4 of the equivalent definitions of simple connectivity.
+
+\item[6.]
+Let $D_0 = \{0 < |z| < 1\}$ and $f,g \ \varepsilon \ H (D_0)$. Suppose that
+both $fg$ and $f+g$ have poles at $z=0$. Prove that at least one on $f$
+and $g$ has a pole at $z=0$.
+
+\item[7.]
+Let $f$ be holomorphic on $\{0 < |z| < 1\}$ and have an essential
+singularity at $z=0$. Prove that if $g$ is an entire function such that
+$g \circ f$ has a removable singularity at $z=0$, then $g$ is a constant.
+
+\item[8.]
+Prove the following form of the maximum modulus principle:
+
+\item[\quad] (a)
+If $\Omega$ is a bounded region in $\C, M \ \varepsilon \ IR$, $f$ is holomorphic
+in $\Omega$ and $\overline{\lim}_{z \to w} |f(z)| \leq M$ for every
+$w \ \varepsilon \ \partial \Omega$, then $|f(z)| \leq M$ for
+every $z \ \varepsilon \ \Omega$.
+
+\item[\quad] (b)
+Give an example to show that the conclusion fails if the boundedness of
+$\Omega$ is not hypothesized.
+
+\item[\quad] (c)
+Suppose the hypothese in (a) hold for all but one point
+$w_0 \ \varepsilon \ \partial \Omega$ but there we at least have
+$\overline{\lim}_{z \to w_0} |f(z)| < \infty$. Show that the conclusion
+still follows.
+
+{\bf HINT:} For $d :=$ diameter of $\Omega$ and for positive integers $n$,
+apply (a), with appropriate new constants $M$, to the functions
+$F_n (z) := [f(z)]^n \left(\frac{z-w_0}{d}\right)$.
+
+\item[9.]
+Calculate $\int^\infty_0 \frac{\cos bx}{(x^2 + a^2)^2} dx$,
+where $a \neq 0$ and $b$ are real numbers. (Hint: WLOG: $a>0, b \geq 0$.)
+
+\item[10.]
+Consider a finite (Blaschke) product
+$B(z) = \prod^n_{k=1} \frac{z-a_k}{1-\overline a_{k^z}}$,
+$a_k, z \ \varepsilon \ ID := \{z \ \varepsilon \ \C : |z| < 1\}$. Show
+that every point of $ID$ is taken as a value $n$ times (counted according to
+multiplicity) by the function $B$.
+
+
+
+
+\end{description}    
+%\end{Large}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

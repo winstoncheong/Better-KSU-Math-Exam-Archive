@@ -1,0 +1,130 @@
+% latex file
+\def\hcorrection#1{\advance\hoffset by #1 }
+\def\vcorrection#1{\advance\voffset by #1 }
+
+\documentclass{article}
+\usepackage{my,amsxtra,amssymb,amsthm}
+
+\vcorrection{-1.0in}
+\hcorrection{-0.8in}
+\textwidth 6.0in
+\textheight 9.0in
+
+\def\R{\mathbb R}
+\def\C{\mathbb C}
+\def\N{\mathbb N}
+\def\Z{\mathbb Z}
+\def\P{\mathbb P}
+
+\begin{document}
+%\begin{Large}
+
+
+
+
+
+
+\begin{center}\begin{LARGE}
+{\bf Topology Qualifying Exam}\\ 
+{\bf Spring 1992}\\ \end{LARGE}
+\end{center}
+\vspace{0.1in}
+\noindent\hrulefill\\
+Work 6 of the following problems. Start each problem on a new sheet of
+paper. Do not turn in more than six problems.
+
+\begin{description}
+\item[1.]
+For a topological space $(X, \tau)$ define
+$I: {\mathcal P} (X) \to {\mathcal P} (X)$ by $I(A) = A^\circ$ and
+$C: {\mathcal P} (X) \to {\mathcal P} (X)$ by
+$C(A) = \overline A$. For a set $A$ of $X$, consider the sequence $A$,
+$I(A), CI(A), ICI(A), CICI(A), \dots$
+
+\item[\quad] a)
+For any space what is the largest number of distinct sets that this sequence
+can contain?
+
+\item[\quad] b)
+Find $A \subseteq \R$ for which this largest number is obtained (where $\R$
+has the usual topology).
+
+\item[2.]
+Prove that the projection of  $[0,1] \times \R$ onto $\R$ is a closed map,
+where both have their usual topologies.
+
+\item[3.]
+Prove that if $A \subseteq X \times X$, then there is a maximal subset $Y$
+of $X$ with $Y \times Y \subseteq A$.
+
+\item[4.]
+For any topological space $X$, define an equivalence relation $\sim$ on
+$X$ by $x \sim y$ iff $\overline{\{x\}} = \overline{\{y\}}$. Prove that
+the resulting quotient space $X/ \sim$ is $T_0$.
+
+\item[5.]
+Let $\Bbb E$ denote the set of real numbers with the Sorgenfrey topology,
+which has basis consisting of all half-open intervals of the form
+$[x,y)$. Prove that $\Bbb E \times \Bbb E$ is not normal.
+
+\item[6.]
+Let $f_i : [-1,1] \to \R$ be the function defined by
+$f_i(x) = (i + x)^2, i = -1, 0, 1$. Prove or disprove that the (unique)
+evaluation map $f: [-1,1] \to R^3$ with the property that
+$\pi_i \circ f = f_i$ is an embedding.
+
+\item[7.]
+Prove that if $\rho$ is a metric on $M$, then $\rho_1 : M \times M \to R$
+defined by $\rho_1(x,y) = \frac{\rho(x,y)}{1+ \rho(x,y)}$
+is a metric on $M$ which is equivalent to $\rho$.
+
+\item[8.]
+Prove that if $\{A_\lambda | \lambda \in \Lambda\}$ is locally finite
+system of sets, then
+$\overline{\cup_{\lambda \in \Lambda} A_\lambda} = \cup_{\lambda \in \Lambda}
+  \overline{A_\lambda}$.
+
+\item[9.]
+Let $f$ be a one-to-one onto function from the real line with the usual
+topology itself. If $f$ and $f^{-1}$ map connected subsets onto connected
+subsets, prove that $f$ is a homeomorphism.
+
+\item[10.]
+Let $\Omega_0$ be the set of all ordinals less than the first uncountable
+ordinal with the order topology. We know that $\Omega_0$ is $T_4$ and every
+continuous real-valued function on $\Omega_0$ is constant on some tail.
+Find the Stone- \u Cech compactification of $\Omega_0$. (Justify your
+answer!)
+
+\item[11.]
+Let $\P$ be the irrational numbers with the usual (subspace) topology. Show
+that the intersection of any countable family of dense open subsets of
+$\P$ is dense in $\P$.
+
+\item[12.]
+Let $X$ be a locally compact Hausdorff space and let $C(X,Y)$ be the space
+of all continuous functions from $X$ into $Y$ with the compact-open
+topology. Prove that the map $P:C(X,Y) \times X \to Y$ defined by
+$P(f,x) = f(x)$ is continuous.
+
+
+
+
+
+\end{description}    
+%\end{Large}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,146 @@
+
+% latex file
+\def\hcorrection#1{\advance\hoffset by #1 }
+\def\vcorrection#1{\advance\voffset by #1 }
+\input amssym.def
+\input amssym
+\documentclass
+{article}
+\pagestyle{plain}
+
+\def\nodivide{\not\kern -0.13em\vert \ }
+
+
+\vcorrection{-1.25in}
+\hcorrection{-1in}
+\textwidth 6.5in
+\textheight 9.5in
+\begin{document}
+%\begin{Large}
+\newcommand{\C}{{\Bbb C}}
+\newcommand{\Q}{{\Bbb Q}}
+\newcommand{\Z}{{\Bbb Z}}
+\newcommand{\N}{{\Bbb N}}
+\newcommand{\F}{{\Bbb F}}
+\newcommand{\K}{{\Bbb K}}
+\newcommand{\E}{{\Bbb E}}
+
+\newcommand{\Gal}{{\rm Gal}}
+\newcommand{\Aut}{{\rm Aut}}
+
+
+
+\begin{center}\begin{LARGE}
+{\bf  Algebra Qualifying Exam}\\ 
+{\bf January 23, 2001}\\ \end{LARGE}
+\end{center}
+\vspace{0.1in}
+\noindent\hrulefill\\
+{\bf Instructions:} You are given 10 problems from which you are to do 8.
+ Please indicate those  8 problems that you would like  to be graded 
+by circling the problem numbers on the  problem sheet. Please understand
+that one problem done completely correctly is worth quite a bit more
+than two problems each half completed.
+{\bf Note:} All rings in this exam are associative and with 1 and 
+all integral domains are commutative.
+%$\Bbb Q $ and $ \Bbb C $ are
+%the fields of  rational and complex  numbers respectively.
+
+%$\Bbb Z $ and $ \Bbb Q $ are
+%the sets of the integers and rational numbers respectively.
+
+\vspace{0.2in}
+
+\begin{enumerate}
+
+\item The group $G$ is called a $CA$-group if for every $e\not=x\in G,\
+\mbox{C}_G(x)$ is abelian. Prove that if $G$ is a $CA$-group, then
+\begin{enumerate}
+\item the relation $x\sim y$ if and only if
+$xy=yx$ is an equivalence relation on $G^\#$;
+\item If $\cal C$ is an equivalence class in $G^\#$, then $H=
+\{e\}\cup\cal C$ is a subgroup of $G$.
+\end{enumerate}
+
+\item Let $G$ be a group and let $M,N\triangleleft G$. If $G=MN$, prove
+that $G/(M\cap N)\cong G/M\times G/N$.
+
+\item Let $G=GL_2(p)$, $p$ prime, be the group of invertible $2\times
+2$
+matrices over the field $\F_p$.  Using the fact that $|G|=p(p-1)(p^2-1)$,
+compute the number of Sylow $p$-subgroups of $G$.
+
+
+\item Let ${\Z}[i]$ be the ring of Gaussian integers and let
+$I\subseteq {\Z}[i]$ be an ideal. Assume that $I$ is invariant
+under complex conjugation, i.e., $x\in I$ implies that
+$\overline{x}\in I$. Prove that $I$ must be one of the types:
+\begin{description}
+\item{(i)} $I=a{\Z}[i]$, 
+\item{(ii)} $I=ai{\Z}[i]$,  or
+\item{(iii)} $I=a(1+i){\Z}[i]$,
+\end{description}
+where $a\in {\Z}$
+
+\item Prove that no principal ideal in the polynomial ring ${\Z}[x]$
+can be maximal.
+
+\item Let $f:R\to R$ be a surjective homomorphism of the
+noetherian domain $R$. Prove that $f$ is injective.
+
+\item Let $V$ be an $n$-dimensional vector space over a field $\F$,
+and let
+$$V\ =\ V_0\supseteq V_1\supseteq\cdots\supseteq V_n\ =\ 0$$
+be a chain of subspaces of $V$, with $\mbox{dim}(V_i/V_{i+1})=1$
+for $i=0,1,\ldots ,n-1$.  Suppose that $T:V\to V$ is a linear transformation
+satisfying $T(V_i)\subseteq V_{i+1}$ for all $i=0,1,\ldots ,n-1$.
+Compute the characteristic polynomial of $T$.
+
+\item Let $\C$ be the field of complex numbers, and let
+$A\in\mbox{M}_3(\C)$ be the matrix
+$$A\ =\ \left[\begin{array}{rrr}
+              -1  &    1   &  1  \\
+               2  &    0   & -1   \\
+              -3  &   -3   & -2  \end{array}\right].$$
+\begin{description}
+\item{(a)} Compute the invariant factors of $A$.
+\item{(b)} Compute the  Jordan cononical form of $A$.
+\end{description}
+
+\item Let $V$ be an $\F$-vector space and let $T:V\to V$
+be a linear transformation. Assume that $T$ is {\em irreducible} in
+that $V$ has no $T$-invariant subspaces. If we set
+$$C_V(T)=\{\mbox{linear transformations }S:V\to V|\ ST=TS\},$$
+prove that $C_V(T)=\F[T]$, {\em i.e.}, any linear transformation
+on $V$ that commutes with $T$ is a polynomial in $T$. [Hint: Show that
+$V$ is a $1$-dimensional vector space over the {\em field} $\F[T]$. How
+does this help?]
+
+\item Let $f(x)\in {\Q}[x]$ be an irreducible polynomial with
+Galois group $G$ over the rational field ${\ Q}$. Assume that
+every subgroup of $G$ is normal. Prove that ${\rm deg}\,f(x)=|G|.$
+
+%\item Let ${\F}$ be a field. Prove that the groups
+%$({\F},+)$ and $({\F}^\times,\times)$ cannot be
+%isomorphic, where ${\F}^\times = {\F}-\{0\}$.
+
+
+
+\end{enumerate}
+%\end{Large}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

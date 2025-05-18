@@ -1,0 +1,157 @@
+% latex file
+\def\hcorrection#1{\advance\hoffset by #1 }
+\def\vcorrection#1{\advance\voffset by #1 }
+
+\documentclass{article}
+\usepackage{my,amsxtra,amssymb,amsthm}
+
+\vcorrection{-1.0in}
+\hcorrection{-0.8in}
+\textwidth 6.0in
+\textheight 9.0in
+
+\def\R{\mathbb R}
+\def\C{\mathbb C}
+\def\N{\mathbb N}
+\def\Z{\mathbb Z}
+\def\Q{\mathbb Q}
+
+\begin{document}
+%\begin{Large}
+
+
+\begin{center}\begin{LARGE}
+{\bf Numerical Analysis Qualifying Exam}\\ 
+{\bf Fall 1984}\\ \end{LARGE}
+\end{center}
+\vspace{0.1in}
+\noindent\hrulefill\\
+
+\begin{description}
+\item[1.]
+You are responsible for writing an algorithm which will take, as input, any
+number $x \varepsilon [-20, 20]$ and return an accurately computed value of
+$$f(x) = \frac{1+x-e^x}{x^2}.$$
+Explain, in detail, how you would do this.
+
+\item[2.]
+We want to solve the matrix equation
+$$Ax=b \eqno{(*)}$$
+by the Jacobi iteration scheme. Recall that the equation is first written
+in the form
+$$x=Bx+c.$$
+
+\item[\quad] (a)
+Define the matrix $B$ and the vector $c$ for the Jacobi iteration.
+
+\item[\quad] (b)
+Let $x^{(0)}$ be an initial guess. The Jacobi iteration is given by
+$$x^{(k+1)} = Bx^{(k)} + c.$$
+
+If $x$ is the exact solution of the equation $(*)$ show that
+$x^{(k)} - x = B^k \left(x^{(0)} - x \right)$. Then state condition(s) on
+$B$ which imply that $x^{(k)} \to x$ for every choice of
+$x^{(0)}$.
+
+\item[\quad] (c)
+State condition(s) on $A$ which imply that $B$ satisfies the condition(s)
+you gave in $(b)$.
+
+\item[3.]
+Suppose the only rule we have for evaluating integrals is the composite
+Simpson's Rule. Tell how to treat each of the following integrals so that it
+can be evaluated by Simpson's Rule without the risk of introducing
+large errors.
+
+\item[\quad] (a)
+$\int^2_{-2} \frac{e^{x^2}}{\sqrt{4-x^2}} dx$
+
+\item[\quad] (b)
+$\int^\infty_0 e^{-x^2} \frac{dx}{1+x^2}$
+
+\item[\quad] (c)
+$\int^4_0 \frac{e^{-x}}{\sqrt{x}} dx$
+
+\item[4.]
+Use Householder's method to reduce the matrix
+$$\left[\begin{array}{ccc}
+        2&3&4 \\
+        3&1&-1 \\
+        4&-1&1
+        \end{array}
+        \right]$$
+to tridiagonal form.
+
+\item[5.]
+Fit a cubic spline through the three points (1,0), (2,1) and (3,0), using
+the natural boundary conditions
+$$S^{\prime \prime} = 0 = S^{\prime \prime} (3).$$
+
+\item[6.]
+Let $I_n (f) = \sum^n_{i=1} A_i f(x_i)$ be the $n$-point Gaussian quadrature
+formula for approximating
+$$\int^1_{-1} f(x) dx.$$
+
+\item[\quad] (a)
+How are the nodes $x_1, \dots, x_n$ chosen?
+
+\item[\quad] (b)
+Show that the interpolatory quadrature formula with the nodes
+$x_1, \dots, x_n$ given in (a) has degree of precision $2n-1$. (Hint: Use
+the formula
+$$f(x) = p_{n-1} (x) + f[x_1, \dots, x_n, x] (x-x_1) \dots (x-x_n).)$$
+
+\item[\quad] (c)
+Of course, the interpolatory quadrature  with nodes $x_1, \dots, x_n$ is
+the $n$-point Gaussian formula. Use this fact to give the explicit formula
+for the 2-point Gaussian formula.
+
+\item[7.]
+Find the polynomial of degree $\leq 1$ which gives the best uniform
+approximation to $f(x) = x^2$ on the interval $[0,1]$. Be sure to
+{\it justify} your answer.
+
+\vspace{.5in}
+
+Some possibly useful information:
+
+Householder: $x \neq 0$, $n$ dimensional vector
+$$S= \left(x^2_1 + \dots + x^2_n \right)^{\frac{1}{2}}$$
+$$k= \pm S$$
+$$K^2 = \frac{1}{2} (k^2 - kx_1)$$
+$$u=x-ke_1$$
+$$P=I - \frac{uu^*}{2K^2}$$
+
+Recursions for orthogonal polynomials
+
+(Legendre)
+$$P_{r+1} (x) = \frac{2r+1}{r+1} xP_r(x) - \frac{r}{r+1} P_{r-1} (x)$$
+$$P_0 (x) = 1, P_1 (x) = x$$
+
+(Chebychev)
+$$T_{r+1} (x) = 2x T_r (x) - T_{r-1} (x)$$
+$$T_0 (x) = 1, T_1 (x) = x$$
+
+
+
+
+
+
+
+\end{description}    
+%\end{Large}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

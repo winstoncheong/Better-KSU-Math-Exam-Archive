@@ -1,0 +1,181 @@
+%Burckel & Bennett, Spring 2002, QE-CA
+\documentclass[12pt]{article}
+\usepackage{amsxtra,latexsym,amssymb,amsthm}
+
+
+\setlength{\parindent}{0cm}
+
+\def\ds{\displaystyle}
+\def\U{{\mathbb U} }
+\def\H{{\mathbb H} }
+\def\D{{\mathbb D} }
+\def\T{{\mathbb T} }
+\def\C{{\mathbb C} }
+\def\N{{\mathbb N} }
+\def\Z{{\mathbb Z} }
+\def\S{{\mathbb S} }
+\def\R{{\mathbb R} }
+
+\def\Im{{\hbox{\,Im\,}}}
+\def\Re{{\hbox{\,Re\,}}}
+\def\csc{{\hbox{\,csc\,}}}
+\def\open{{\hbox{\,open\,}}}
+\def\grad{{\hbox{\,grad\,}}}
+\def\span{{\hbox{\,span\,}}}
+\def\id{{\hbox{\,id\,}}}
+
+%\pagestyle{empty}
+
+\textwidth=6.5truein
+\textheight=9.5truein
+\hoffset=-1truein
+\voffset=-1truein
+
+\begin{document}
+
+\def\R{{\mathbb R}}
+
+\begin{large}
+\begin{center}
+{\bf
+  COMPLEX ANALYSIS QUALIFYING EXAM}\\
+  January 2002\\
+  (Burckel \& Bennett)
+\end{center}
+\end{large}
+
+\vspace{-.5in}
+
+
+{
+\begin{list}{}
+{\itemsep=0em \parsep=0em }\item[]
+\end{list}
+}
+
+\begin{description}
+%\setlength{\itemsep}{0em}\newlength{\parsep}{20em}
+
+\item Do any 7 of the 9 problems. The notation is:
+$\N$ for the natural numbers $(1,2,3,\dots)$,
+$\R$ the reals,
+$\C$ the complex \underbar{plane},
+$\D:=\{ z\in\C:|z|<1\}$,
+$\overline{\D}:=\{z\in\C:|z|\leq 1\}$.
+For open $U\subset\C$, $H(U)$ is the set of all holomorphic
+  functions on $U$,
+$C(\overline{\D})$ the set of all continuous complex-valued functions on
+$\overline\D$.
+
+\item 1.
+Let $S$ denote the open sector in the upper half-plane
+having bounding rays $\{t\in\R:t\geq 0\}$
+and $\{(-\frac{1}{2}+\frac{\sqrt{3}}{2}i)t:t\geq 0\}$
+and let $L$ denote the lens-shaped region
+$\{z\in\D:|z-1|<2\,\&\, |z+1|<2\}$.
+Exhibit a Moebius (=fractional-linear) transformation of $S$ onto $L$
+or prove that none exists.
+
+\item 2.
+The function $f\in H(\D)$ is defined by $f(z):=\ds\sum^\infty_{n=1} z^n$,
+$z\in\D$.
+Find the Laurent series for its analytic continuation into the
+annulus $\C\backslash\overline{\D}$.
+
+\item 3.
+\vspace{.2in}
+\begin{tabular}{ll}
+\begin{minipage}[c]{1.65in}
+The piecewise-smooth closed curve $\Gamma$ is\\
+ defined on $[0,4]$ by
+\end{minipage}
+&
+\begin{minipage}[t]{3in}
+$\qquad
+\Gamma(t):=
+\begin{cases} -ie^{2\pi it}   & 0\leq t\leq 1\\
+             -i+4(t-1)       & 1\leq t\leq 2\\
+             -i+4e^{\pi i(t-2)}& 2\leq t\leq 3\\
+             -i+4(t-4)       & 3\leq t\leq 4.
+\end{cases}$
+\end{minipage}
+\end{tabular}
+\\~\\
+Sketch this curve and compute $\int_\Gamma \csc(z)dz$.
+
+\item 4. (i)
+Formulate a Morera theorem in $\D$ that involves only rectangles parallel to
+the axes. (A proof is not required.)
+
+\item\quad (ii)
+Using (i), outline a proof that ``straight lines are removable for
+holomorphic functions", meaning that
+$C(\overline{\D})\cap H(\D\backslash \R)\subset H(\D)$.
+
+
+\item 5.
+$U \open\subset \C$, $g:U\to\C$ is continuous and $g^n$ is
+holomorphic (for some $n\in\N$). Show that $g$ itself is holomorphic in $U$.
+\\
+\underbar{Hint}: First consider the case that $g$ is zero-free; work locally.
+
+
+%\vfill\eject
+
+\item 6.
+$f$ is holomorphic and non-constant in the bounded region $\Omega$ and
+$\lim_{z\to b}|f(z)|=1$ for each $b$ in the boundary of $\Omega$.
+
+\item\quad (i)
+Show that $f(\Omega)\subset \D$.
+
+\item\quad (ii)
+Show that $f$ has a zero in $\Omega$.
+
+\item\quad (iii)
+Use (ii) to show that $\D\subset f(\Omega)$.
+[In summary, $f(\Omega)=\D$.]
+\\
+\underbar{Hint}: Apply (ii) to $\varphi\circ f$ for various
+conformal automorphisms $\varphi$ of $\D$.
+
+\item 7.
+Say that $f_n$ \underbar{converges} \underbar{continuously}
+to $f$ if $f_n(z_n)\to f(z)$ whenever $z_n\to z$.
+
+\item\quad (i)
+Show that for $f_n$, $f\in H(\Omega)$ this concept is equivalent to local
+uniform convergence of $f_n$ to $f$.
+
+\item\quad (ii)
+Use (i) to show that if $f_n$, $g_n$, $f,g$ are all holomorphic self-maps
+of $\Omega$ and $f_n\to f$, $g_n\to g$ (locally uniformly),
+then $f_n\circ g_n\to f\circ g$.
+
+
+\item 8.
+$h:\D\to\R$ is harmonic and
+$f:=\ds\frac{\partial h}{\partial x}-i\frac{\partial h}{\partial y}$.
+
+\item\quad (i)
+Show that $f$ is holomorphic in $\D$.
+(You may wish to use the definition ``harmonic $\Leftrightarrow$
+Laplacian identically $0$".)
+
+\item\quad (ii)
+Show that if $F$ is an antiderivative of $f$,
+then $h$ and $\Re F$ differ only by a constant.
+
+\item\quad (iii)
+$h:\overline{\D}\to\R$ is continuous and $h$ is harmonic in $\D$.
+How would you find a harmonic conjugate $k$ for $h$ in $\D$?
+
+\item 9.
+Suppose $f:\C\to\C$ is holomorphic and
+$ \Im f(z)>0 \quad \forall z\in\C$. Prove that $f$ is constant.
+
+
+
+
+\end{description}
+\end{document}

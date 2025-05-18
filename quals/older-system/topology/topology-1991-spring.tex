@@ -1,0 +1,164 @@
+% latex file
+\def\hcorrection#1{\advance\hoffset by #1 }
+\def\vcorrection#1{\advance\voffset by #1 }
+
+\documentclass{article}
+\usepackage{my,amsxtra,amssymb,amsthm}
+
+\vcorrection{-1.0in}
+\hcorrection{-0.8in}
+\textwidth 6.0in
+\textheight 9.0in
+
+\def\R{\mathbb R}
+\def\C{\mathbb C}
+\def\N{\mathbb N}
+\def\Z{\mathbb Z}
+\def\Q{\mathbb Q}
+\def\P{\mathbb P}
+\begin{document}
+%\begin{Large}
+
+
+
+
+
+
+\begin{center}\begin{LARGE}
+{\bf Topology Qualifying Exam}\\ 
+{\bf Spring 1991}\\ \end{LARGE}
+\end{center}
+\vspace{0.1in}
+\noindent\hrulefill\\
+
+Work 6 of the following problems. Start each problem on a new sheet of
+paper. Do not turn in more than 6 problems.
+
+\begin{description}
+\item[1.]
+Prove that a continuous map from a compact space to a Hausdorff space
+is closed.
+
+\item[2.] (a)
+True - False
+
+\item[\qquad] 1.
+Every connected space is locally connected.
+
+\item[\qquad] 2.
+For $i \in \{ 0,1,2,3,4\}$ every product of $T_i$-spaces is $T_i$.
+
+\item[\qquad] 3.
+For $i \in \{0,1,2,3,4\}$ every closed subspace of a $T_i$-space
+is $T_i$.
+
+\item[\qquad] 4.
+If $(X_i \stackrel{f_i}{\longrightarrow} Y_i)_{i \in I}$
+is a set of topological
+embeddings, then $\Pi_I X_i \stackrel{\Pi f_i}{\longrightarrow} \Pi_IY_i$
+is an embedding.
+
+\item[\qquad] 5.
+The statement ``The product of any family of nonempty sets is nonempty"
+is equivalent to the Axiom of Choice.
+
+\item[\quad] (b)
+For each false entry give a counterexample (no proofs).
+
+\item[3.]
+Show that no two of the intervals of $\R [0,1], (0,1)$, and $[0,1)$
+(with their usual subspace topologies) are homeomorphic.
+
+\item[4.]
+Prove that if $x$ is any point of a compact Hausdorff space, then $x$
+has a neighborhood base consisting of closed sets.
+
+\item[5.]
+Let $f : X\to Y$ be a quotient map, and assume that $X$ is locally pathwise
+connected (i.e., each point has a neighborhood base consisting of pathwise
+connected sets). Prove that $Y$ is locally pathwise connected.
+
+\item[6.] (a)
+Consider a function $f: X \to \Pi_{\alpha \in A} Y_\alpha$ and the family
+of associated coordinate functions $f_\alpha : X \to Y_\alpha$.
+Prove that $f$ is continuous if and only if every $f_\alpha$ is continuous,
+assuming we give the product set the product topology.
+
+\item[\quad] (b)
+Give a counterexample to the above statement if we give the product set the
+``box" topology (where all products of open sets are open).
+
+\item[7.]
+Prove or disprove: If $f : X\to Y$ is one-to-one and continuous and
+$A \subseteq X$, then
+$f[Fr (A)] \subseteq Fr (f[A])$, where
+$Fr(A) = \overline A \cap \overline{X-A}$.
+
+\item[8.]
+Let $X$ be the subspace of the plane $(\R \times \R)$ that consists of all
+lines parallel to the $x$-axis that cross the $y$-axis at positive integral
+heights, i.e.,
+$$X=\{a,b) | a \in \R, b \in \Z, \hbox{\ and\ } b \geq 1\},$$
+and let $Y$ be the subspace of the plane that consists of all lines
+through the origin that have positive integral slopes, i.e.,
+$$Y = \{(0,0)\} \cup \{(a,b) \in \R \times \R | \frac{b}{a} \in \Z
+  \hbox{\ and\ } \frac{b}{a} \geq 1\}.$$
+Find an error in the following ``proof" that $Y$ is a quotient space of $X$:
+
+Define $f:X \to Y$ by $f(a,b) = (a, ab)$. [Note that the restriction of $f$
+to the horizontal line at height $n$ maps this line homeomorphically onto
+the line contained in $Y$ of slope $n$]. $f$ is clearly continuous on each
+of the lines that make up $X$, so that since $X$ is the disjoint union of
+these lines, $f$ is continuous on $X$. Also, since the restriction of $f$ to
+each of the lines that make up $X$ is a homeomorphism (and so is open) $f$
+is open. Since every open continuous surjection is a quotient map, $f$ must
+be a quotient map.
+
+\item[9.]
+Prove that a paracompact Hausdorff space is normal.
+
+\item[10.]
+Let $\P$ be the irrational numbers with the usual (subspace) topology.
+Show that the intersection of any countable family of dense open subsets
+of $\P$ is dense in $\P$.
+
+\item[11.]
+Prove that the product of connected spaces is connected.
+
+\item[12.]
+Let $S$ be a well-ordered uncountable set that has the property that for
+every $x \in S$ the subset
+$S_x = \{y \in S | y< x\}$ is countable. Give $S$ the order topology. Prove
+two of the following:
+
+\item[\quad] (a)
+$S$ is first countable.
+
+\item[\quad] (b)
+$S$ is {\bf not} second countable.
+
+\item[\quad] (c)
+$S$ has the property that each of its infinite subsets has a limit point.
+
+\item[\quad] (d)
+$S$ is normal.
+
+
+
+\end{description}    
+%\end{Large}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

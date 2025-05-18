@@ -1,0 +1,194 @@
+% latex file
+%Geometry of Manifolds S99 - Auckly & Miller
+
+\def\hcorrection#1{\advance\hoffset by #1 }
+\def\vcorrection#1{\advance\voffset by #1 }
+
+\input amssym.def   %defines Bbb and gothic (frak)
+\input amssym       %defines Bbb and gothic (frak)
+
+\input prepictex.tex
+\input pictex.tex
+\input postpictex.tex
+
+%\documentstyle[bbb]{report}
+\documentclass[bbb]{report}
+
+\vcorrection{-.5in}
+\hcorrection{-1.15in}
+
+\topmargin  0in
+\textwidth 7in
+\textheight 9in
+
+\mathsurround=2pt
+
+\def\ds{\displaystyle}
+\def\R{{\Bbb R}}
+\def\Z{{\Bbb Z}}
+
+\def\nd{\noindent}
+\def\qed{\hfill\ \vbox{\hrule\hbox{\vrule\kern4pt\vbox{\kern4pt{}
+\kern4pt}\kern4pt\vrule}\hrule}}
+
+
+\begin{document}
+
+%\pagestyle{empty}
+
+\begin{Large}
+\hfill Name \rule{2.15in}{.01in}
+\par
+\vspace{.25in}
+
+\begin{center}
+   GEOMETRY OF MANIFOLDS QUALIFYING EXAM \\
+   Spring 1999 \\
+   (Miller and Auckly) \\
+\end{center}
+
+\end{Large}
+
+\vspace{.1in}
+
+\begin{large}
+\noindent {\bf
+WORK THE FIRST FOUR AND AS MANY OF THE OTHERS AS YOU CAN.}
+
+\vspace{.2in}
+
+\begin{description}
+
+\item[1.]
+On $\R^3$ with coordinates $(x,y,z)$,  let
+
+\item[\quad]  $X=y\ds\frac{\partial}{\partial x}
+             -x\ds\frac{\partial}{\partial y}$
+\item[\quad] $Y=x^2y\ds\frac{\partial}{\partial x}
+             +z\ds\frac{\partial}{\partial y}
+             + y\ds\frac{\partial}{\partial z}$
+\item[\quad] $\alpha = (x^3+y^3+z^3)(dx\land dy+dz\land dx+dy\land dz)$
+
+\vspace{.1in}
+\item[\quad] a) calculate the Lie bracket $[X,Y]$.
+
+\item[\quad] b) describe the flow of the vector field $Y$ through
+the point $(x_0, y_0,z_0)$.
+
+\item[\quad] c) calculate $d\alpha$ as a function times the usual
+volume element.
+
+\item[\quad] d) if $f:\R^2\to\R^3$ by $f(s,t)=(s,t,s^2+t^2)$,
+compute $f^\ast\alpha$.
+
+\vspace{.2in}
+\item[2.]
+On $\{(x,y)|x,y\in\R,y>0\}$ let $g$ be the metric
+$g=y\,dx^2+dy^2$.
+Determine the differential equations for parallel transport of a vector
+field
+$\xi=\xi^1\ds\frac{\partial}{\partial x}
++\xi^2\ds\frac{\partial}{\partial y}$ along a curve $x=x(t)$, $y=y(t)$.
+
+
+\vspace{.2in}
+\item[3.]
+Let $C=\{(x,y,z)|x^2+y^2=1\}$ with the orientation
+$\Omega_C=x\,dy\land dz-y\,dx\land dz$.
+Compute
+$$ \int_C\frac{(x+1)}{(1+z^2)(x^2+y^2)}
+   (x\,dy\land dz-y\,dx\land dz) $$
+
+
+\vspace{.2in}
+\item[4.]
+Construct a cell complex $X$, with
+
+\item[\quad] $\pi_1(X)=\langle a,b|a^2=b^3\rangle $
+\item[\quad] $H_0(X)=Z$ and $H_2(X) =Z\oplus Z_2$.
+
+
+\vfill
+\pagebreak
+
+
+\vspace{.75in}
+\item[5.]
+On a Riemannian manifold define the scalar curvature to be
+\ $ S=-\ds\sum_{n,k}g(R(e_n,e_k)e_n,e_k) $ \ where $(e_n)$ is
+an orthonormal basis.
+
+\item[\quad] a)
+Prove that $S$ is independent of the choice of basis.
+
+\item[\quad] b)
+Let $S^n_r=\{ x\in\R^{n+1}\mid \| x\|=r\}$,
+with the induced metric. Compute the scalar curvature of
+$S^2_a\times S^3_b$.
+
+
+
+\vspace{.2in}
+\item[6.]
+Let $M$ be a simply connected manifold, $\omega$ a closed differential
+2-form, $X$ a vector field and $H$ a smooth real valued function on
+$M$. Suppose they are related by $dH=i_X\omega=\omega(X,\quad )$.
+Further suppose that $Y$ is a second vector field such that $L_Y\omega=0$
+and $Y(H)=0$.
+
+\item[\quad] a)
+Show that there is a smooth function $f$ on $M$ such that $i_Y\omega=df$.
+
+\item[\quad] b) Show that the function $f$ of part a) is
+constant along the flows of $X$.
+
+\item[\quad] Note: If you do not remember the formula giving the Lie
+derivative $L_Y$ acting on differential forms in terms of $i_Y$ and $d$,
+you may ask at the cost of a penalty.
+
+
+
+\vspace{.2in}
+\item[7.]
+Let $G$ be a Lie group and $\pi_G:P\to M$ be a principal $G$-bundle,
+and $H$ be a closed subgroup of $G$. We say that the structural
+group of $P$ may be reduced to $H$ if and only if there is a principal
+$H$-bundle $\pi_H:Q\to M$ and a bundle map $i:Q\to P$ so that
+\ $i(q\cdot h)=i(q)\cdot h$.
+Let $E=P\times_G(G/H)=P\times(G/H)/\sim$
+ where\ $(p,[g])\sim (pk,[k^{-1}g])$, $p\in P,g,k\in G$.
+Prove that $E\to M$ admits a global section if and only if the
+structural group of $P$ may be reduced to $H$.
+
+\vspace{.2in}
+\item[8.]
+On $\R^3$ with coordinates $(x,y,z)$ let
+$\alpha=x\,dy+dz$ and $E=\{v\in T\R^3|\alpha(v)=0\}$.
+
+\item[\quad] Prove or disprove:
+
+\item[\quad] a) There is a codimension 2 foiliation $\cal F$
+of $\R^3$ so that any leaf $N$ of $\cal F$
+satisfies $TN\subseteq E\mid N$.
+
+\item[\quad] b)
+There is a codimension $1$ foiliation $\cal F$ of $\R^3$
+so that any leaf of $\cal F$ satisfies $TN\subseteq E\mid N$.
+
+
+\vspace{.2in}
+\item[9.]
+Let $S0_3=\{A:\R^3\to\R^3|A\ \hbox{is linear,}
+\ A^\ast A=I\ \hbox{and}\ \det A=1\}$.
+Prove that
+$$\{A\in S0_3\mid A^\ast=A, A\not= I\}$$
+ is a compact manifold.
+What is its dimension?
+
+\vfill
+\clearpage
+
+
+\end{description}
+\end{large}
+\end{document}

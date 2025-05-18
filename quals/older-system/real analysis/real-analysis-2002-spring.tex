@@ -1,0 +1,117 @@
+%From nagy@math.ksu.edu Thu Feb 07 13:07:57 2002
+
+%REAL ANALYSIS QUAL SPRING 2002
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\newcommand{\Hh}{\mathbb{H} }
+\newcommand{\D}{\mathbb{D} }
+\newcommand{\T}{\mathbb{T} }
+\newcommand{\C}{\mathbb{C} }
+\newcommand{\N}{\mathbb{N} }
+\newcommand{\Z}{\mathbb{Z} }
+\newcommand{\St}{\mathbb{S} }
+\newcommand{\R}{\mathbb{R} }
+
+
+
+
+
+
+\begin{document}
+\vspace*{-1in}
+\hfill\hbox to 3in{Name\hrulefill}
+\vspace{1in}
+\begin{center}{\large Real Analysis Qualifying Exam}
+\\\bigskip
+{\large January, 2002}
+\end{center}
+
+\
+
+\noindent{\bf  Instructions:}  Below you will find 8 problems.
+Each problem is worth 10 points. Only the
+best 6 scores will be added.
+
+\noindent{\bf Time:} 2 hours.
+
+\
+
+\noindent{\sc Notations:} $\R =$ set of all real numbers;
+%$\C =$ set of all complex numbers;
+$\lambda =$ Lebesgue measure on $\R$;
+$L^p(I,d\lambda)=$ the space of real-valued Lebesgue
+measurable functions on $I$ with $\int_I|f|^p\,d\lambda<\infty$ ($I=$ any interval,
+$p>0$).
+%\D=\{z\in\C\,:\,|z|<1\}$ (the unit disk); $\
+%T=\{z\in\C\,:\,|z|=1\}$ (the unit circle).
+
+\
+
+\begin{itemize}
+\item[{\bf 1.}] Give an example of a set $A\subset\R$, which is not Lebesgue measurable.
+
+\item[{\bf 2.}] Let $K$ be a compact Hausdorff space, and let
+$(f_n)_{n=1}^\infty$ be a sequence of continuous real-valued functions
+on $K$, such that for every $x\in K$ one has:
+\begin{itemize}
+\item[(i)] $f_1(x)\geq f_2(x)\geq f_3(x)\geq\dots$
+\item[(ii)] $\lim_{n\to\infty}f_n(x)=0$.
+\end{itemize}
+Prove that $\lim_{n\to\infty }f_n=0$ uniformly.
+
+\item[{\bf 3.}] Suppose $(f_n)_{n=1}^\infty$ is a sequence in
+$L^1(\mathbb{R},d\lambda)$, such that
+\begin{equation}
+\lim_{n\to\infty}\int_\R |f_n|\,d\lambda=0.
+\tag{$*$}
+\label{f}
+\end{equation}
+\begin{itemize}
+\item[(a)]
+Prove that there exists a subsequence $(f_{n_k})_{k=1}^\infty$ of
+$(f_n)_{n=1}^\infty$, with $\lim_{k\to\infty}f_{n_k}=0$, a.e.
+\item[(b)] Given an example of a sequence $(f_n)_{n=1}^\infty$, satisfying
+\eqref{f}, but which is not convergent a.e. to $0$.
+\end{itemize}
+\newpage
+
+\item[{\bf 4.}] Let $C[0,1]$ denote the Banach space of all
+real-valued continuous functions on $[0,1]$. (The norm on $C[0,1]$ is
+defined by
+$\displaystyle{\|f\|=\max_{t\in[0,1]}|f(t)|}$.)
+\begin{itemize}
+\item[(a)] Prove that any finite dimensional linear subspace $V$ of
+$C[0,1]$ is closed in the norm topology.
+\item[(b)] Prove that if $V$ is a linear subspace of $C[0,1]$, which
+has a countable infinite linear basis, then $V$ is not closed in the
+norm topology. ({\sc Hint}: Use Baire's Theorem.)
+\end{itemize}
+
+\item[{\bf 5.}]
+Let $f\in L^2([-\pi,\pi],d\lambda)$ be a function with the property:
+$$\int_{-\pi}^\pi f(x)\sin nx\,dx=0,\,\,\,\forall\,n\in\mathbb{N}.$$
+Prove that $f(-x)=f(x)$, a.e.
+
+\item[{\bf 6.}] Let $f\in L^1(\R,d\lambda)$, and
+let $(f_n)_{n=1}^\infty$ be a sequence in $L^1(\R,d\lambda)$, with
+\begin{itemize}
+\item[(i)] $\lim_{n\to\infty}f_n=f$, a.e.
+\item[(ii)] $\lim_{n\to\infty}\|f_n\|_1=\|f\|_1$.
+\end{itemize}
+Prove that $\lim_{n\to\infty}\|f_n-f\|_1=0$.
+
+\item[{\bf 7.}] Let $f\in L^1(\R,d\lambda)$. Prove that
+$$
+\lim_{n\to\infty}\int_\R f(x)\sin nx\,dx=0.$$
+
+\item[{\bf 8.}] Let $(X,\mathcal{M},\mu)$ be a $\sigma$-finite
+measure space, and let $\{E_\lambda\}_{\lambda\in\Lambda}\subset
+\mathcal{M}$ be a disjoint collection.
+Prove that the set
+$$
+S=\{\lambda\in\Lambda\,:\,\mu(E_\lambda)>0\}$$
+is at most countable.
+\end{itemize}
+\end{document}
+

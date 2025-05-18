@@ -1,0 +1,146 @@
+% latex file
+\def\hcorrection#1{\advance\hoffset by #1 }
+\def\vcorrection#1{\advance\voffset by #1 }
+
+\documentclass{article}
+\usepackage{my,amsxtra,amssymb,amsthm}
+
+\vcorrection{-1.0in}
+\hcorrection{-0.8in}
+\textwidth 6.0in
+\textheight 9.0in
+
+\def\R{\mathbb R}
+\def\C{\mathbb C}
+\def\N{\mathbb N}
+\def\Z{\mathbb Z}
+\def\Q{\mathbb Q}
+
+\begin{document}
+%\begin{Large}
+
+
+
+
+
+
+\begin{center}\begin{LARGE}
+{\bf Algebra Qualifying Exam}\\ 
+{\bf Fall 1997}\\ \end{LARGE}
+\end{center}
+\vspace{0.1in}
+\noindent\hrulefill\\
+All rings in this exam are associative with 1 and all integral domains
+are commutative.
+
+\begin{description}
+
+\item[1.]
+Let $\Bbb Q$ be the field of rational numbers. Show that the additive group
+$A=(\Bbb Q, +)$ does not have any proper characteristic subgroups. Can you
+generalize the above result when $\Bbb Q$ is any division ring? If yes, please
+give a proof. If not, please give a counter example.
+
+\item[2.]
+Let $G$ a finite group. If, for any prime $p$ and any $p$-subgroup
+$H$ of $G$, $N_G(H)$ has index at most 2 in $G$, show that $G$ has to be
+a nilpotent group.
+
+\item[3.]
+Let $S$ be an integral domain. We say that an integral domain $R$ is
+an {\it integral extension} of $S$ if $R \supseteq S$ and for each
+$r \in R$ there exists a monic polynomial
+$f(x) = x^n +s_1x^{n-1} + \dots + s_n \in S[x]$
+with coefficients $s_i \in S$ and $n \geq 1$ such that $f(r) = 0$.
+
+\item[\quad] (a)
+Show that if $R$ is an integral extension of a field $S$, then
+$R$ is also a field.
+
+\item[\quad] (b)
+If an integral extension $R$ of the integral domain $S$ is a field, is $S$
+necessarily a field? Justify your answer.
+
+\item[4.]
+Let $S$ be the set of all nonzero integers which are sums of two squares of
+integers.
+
+\item[\quad] (a)
+Show that $S$ is closed under multiplication.
+
+\item[\quad] (b)
+Show that the subring
+$\Bbb Z_S = \left\{\frac{n}{s} |n \in \Bbb Z, s \in S \right\}$
+of the set of rational numbers is the entire field $\Bbb Q$ of rational
+numbers.
+
+\item[5.]
+Let $R$ be a ring and $M$ be a left $R$-module.
+
+\item[\quad] (a)
+Define what it means for $M$ to be {\it irreducible}.
+
+\item[\quad] (b)
+Define what it means for $M$ to be {\it indecomposable}.
+
+\item[\quad] (c)
+Describe, as complete as you can, the relations between the irreducibility
+and indecomposability of an $R$-module $M$ by proving or giving
+examples to your conclusions.
+
+\item[6.]
+Let $F$ be a field and $R=F[t] / <T^5>$. Describe all finitely generated
+indecomposable $R$-modules up to $R$-module isomorphisms. (Hint:
+$R$-modules are $F[T]$-modules. But what kind of $F[T]$-modules
+are $R$-modules?)
+
+\item[7.]
+Suppose that $K$ is a splitting field of the polynomial $x^4-x^5$ over the
+field $\Bbb Q$ of rational numbers. Compute $[K:\Bbb Q]$ and correctly
+justify your answer.
+
+\item[8.]
+Let $E \supseteq F$ be a finite Galois extension of fields. Suppose that the
+Galois group Gal$(E/F)$ is Abelian; show that for any $\alpha \in E$,
+$F(\alpha)$ is splitting field of a polynomial in $F[x]$.
+
+\item[9.]
+Let $V$ be a vector space over the field $\Bbb Q$ of rational numbers and
+$T:V \to V$ a linear transformation with the following invariant factors:
+$$x +1, \quad x^2-1, \quad x^4 -1.$$
+
+\item[\quad] (a)
+Find $\dim V$.
+
+\item[\quad] (b)
+Find the nullity of $T$.
+
+\item[\quad] (c)
+Find the dimension of the subspace of all vectors fixed by $T$.
+
+\item[10.]
+Let $G$ be a solvable group and $K \neq \{1\}$ be a minimal finite normal
+subgroup of $G$. Show that there exists a prime number $p$ and a positive
+integer $r$ such that $K$ is isomorphic to the additive group of the vector
+space $\Bbb F^r_p$ over the finite field $\Bbb F_p$ of $p$ elements.
+
+
+
+
+\end{description}    
+%\end{Large}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

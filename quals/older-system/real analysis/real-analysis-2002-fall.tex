@@ -1,0 +1,110 @@
+\documentclass[11pt]{article}
+\usepackage{amsxtra,amssymb,amsthm,amsmath,latexsym}
+
+\setlength{\parindent}{0cm}
+\def\ds{\displaystyle}
+
+\def\R{{\mathbb R}}
+\def\N{{\mathbb N}}
+\def\Z{{\mathbb Z}}
+\def\C{{\mathbb C}}
+\def\ds{\displaystyle}
+\def\nd{\noindent}
+
+\def\ra{\rightarrow}
+\def\lra{\longrightarrow}
+
+%\pagestyle{empty}
+
+\textwidth=7.1truein\hoffset=-1truein
+\textheight=9.3truein\voffset=-.5truein
+
+\begin{document}
+
+\begin{large}
+
+\begin{center}
+{\bf
+Real Analysis Qualifying Exam\\
+September 3, 2002
+}\end{center}
+
+\vspace{.15in}
+
+Instructions: Do all 8 problems.
+
+\begin{description}
+
+\item[1.] Suppose $(X, \cal{M}, \mu)$ is a measure space. 
+
+(a) State the definition of ``$f:X\to\C$ is measurable''.
+
+\vspace{.1in} (b) Prove that if $f,g:X\to\C$ are both measurable, then so 
+is $fg$.
+
+\vspace{.15in}
+\item[2.] Suppose $(X, \cal{M}, \mu)$ is a measure 
+space, $\mu$ a $\sigma\hbox{-finite}$ measure, and $f:X\to[0,\infty]$ is 
+measurable.
+Suppose that $\ds\int_A f\,d\mu=\mu(A)$ for each measurable set $A$ with
+$\mu(A)<\infty$.
+Prove that $f=1$ a.e.
+
+
+\vspace{.15in}
+\item[3.]
+Let $f,g\in L^1(\R)$. Prove that $f\ast g$ is defined a.e. and
+$f\ast g\in L^1(\R)$.
+
+\vspace{.15in}
+\item[4.]
+Use the Monotone Convergence Theorem to prove Fatou's Lemma.
+
+
+\vspace{.15in}
+\item[5.]
+Suppose $f\in L^p(\R)$, $1\leq p < \infty$ and for
+$h\in\R$ define a function $f_h$ by $f_h(x)=f(x+h)$.
+
+\item[\quad]
+Prove that $\ds\lim_{h\to 0} \|f_h-f\|_p=0$.
+
+\vspace{.15in}
+\item[6.]
+Let $\lambda$ be  Lebesgue measure on $\R$.
+Is it true that $\lambda(F\backslash \hbox{int} F)=0$
+for every closed set $F\subseteq \R$?
+
+\vspace{.15in}
+\item[7.]
+Let $f\in L^1([0,1])$.
+Consider the following two statements:
+
+\item[\quad] (a)
+For a.e. $x\in[0,1]$, $f$ is continuous at $x$.
+
+\item[\quad] (b)
+There exists a continuous function $g$ such that $f=g$ a.e.
+
+\item[]
+For each of the possible implications
+$(a)\Rightarrow(b)$ or $(b)\Rightarrow(a)$
+either prove that the implication is true or
+give a counterexample.
+
+
+\vspace{.15in}
+\item[8.]
+Let $(X,\cal{M},\mu)$ be a measure space and ${\cal{M}}_{0}\subseteq 
+\cal{M}$
+a sub $\sigma$- algebra of $\cal{M}$.
+Prove that given $f\in L^1(X, \cal{M},\mu)$, there exists an
+$f_0\in L^1(X,{\cal{M}}_{0},\mu)$ such that $\ds\int_X fg\,d\mu=\ds\int_X 
+f_0 g\,d\mu$
+for all simple ${\cal{M}}_{0}$ measurable functions $g$.
+
+
+
+\end{description}
+\end{large}
+\end{document}

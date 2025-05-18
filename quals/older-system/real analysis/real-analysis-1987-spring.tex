@@ -1,0 +1,131 @@
+% latex file
+\def\hcorrection#1{\advance\hoffset by #1 }
+\def\vcorrection#1{\advance\voffset by #1 }
+
+\documentclass{article}
+\usepackage{my,amsxtra,amssymb,amsthm}
+
+\vcorrection{-1.0in}
+\hcorrection{-0.8in}
+\textwidth 6.0in
+\textheight 9.0in
+
+\def\R{\mathbb R}
+\def\C{\mathbb C}
+\def\N{\mathbb N}
+\def\Z{\mathbb Z}
+\def\Q{\mathbb Q}
+\def\A{\mathbb A}
+
+\begin{document}
+%\begin{Large}
+
+
+
+
+
+
+\begin{center}\begin{LARGE}
+{\bf  Real Analysis Qualifying Exam}\\ 
+{\bf Spring 1987}\\ \end{LARGE}
+\end{center}
+\vspace{0.1in}
+\noindent\hrulefill\\
+
+The following numbered items form a list of logically related theorems,
+most depending on earlier ones. You are asked to {\it prove} as many of
+them as you can. In each case, you may use earlier ones in your proof, even
+if you did not suceed in proving the ones you cite.
+
+For $f \in L_1(\R)$ and $\mu \in M(\R)$, define $\widehat f$ and
+$\widehat \mu$ on $\R$ by the rules
+$$\widehat f(t) = \int^\infty_{-\infty} f(x) e^{-itx} dx$$
+and
+$$\widehat \mu(x) = \int^\infty_{-\infty} e^{-itx} d \mu (t).$$
+
+\begin{description}
+\item[1.]
+For such $f$ and $\mu$, we have $\widehat f \in C_0(\R)$ and
+$\widehat \mu \in C(\R)$ with
+$\parallel \widehat f \parallel_u \leqq \parallel f \parallel_1$
+and $\parallel \widehat \mu \parallel_u \leqq \parallel \mu \parallel$.
+
+[HINT: First consider the case that $f$ is the characteristic function of
+a bounded interval.]
+
+\item[2.]
+If $a \in \R$ and $f(x) = e^{-|x|iax}$ for all $x \in \R$, then
+$f \in L_1 (\R)$ and
+$$\widehat f (t) = \frac{2}{1+(t-a)^2} \hbox{\ for\ } \hbox{all\ }
+  t \in \R.$$
+
+\item[3.]
+For $f,g \in L_2 (\R)$, the formula
+$$f \ast g(x) = \int^\infty_{-\infty} f(x-u) g(u) du$$
+defines a function $f \ast g$ at almost every $x \in \R$,
+$f \ast g \in L_1 (\R)$, and
+$\parallel f \ast g \parallel_1 \leq \parallel f \parallel_1
+ \parallel g \parallel_1$.
+[You may use without proof the measurability of the map
+$(x,u) \to f(x-u)g(u)$.]
+
+\item[4.]
+If $f,g \in L_1 (\R)$, then
+$\widehat{f \ast g} (t) = \widehat f(t) \widehat g(t)$ for all
+$t \in \R$.
+
+\item[5.]
+With pointwise operations, the set $\A(\R) = \{\widehat f:f \in L_1(\R)\}$
+is a dense subalgebra of $C_0(\R)$ where $C_0(\R)$ has the uniform norm.
+
+\item[6.]
+If $f \in L_1(\R)$, $\mu \in M(\R)$, and $u \in \R$, then
+$$\int^\infty_{-\infty} f(x) \widehat \mu (x-u)dx = \int^\infty_{-\infty}
+  \widehat f(t) e^{iut} d\mu (t).$$
+
+\item[7.]
+If $\mu, \nu \in M(\R)$ and $\widehat \mu (x)= \widehat \nu (x)$ for all
+$x \in \R$, then $\mu = \nu$.
+
+For use in the next two problems, define
+$M_0(\R) = \{\mu \in M(\R): \widehat \mu \in C_0(\R)\}$.
+
+\item[8.]
+If $\nu \in M(\R)$, $\mu \in M_0(\R)$, and $\nu << |\mu|$ ($\nu$ is
+absolutely continuous with respect to $\mu$), then $\nu \in M_0(\R)$.
+
+[HINT: Approximate a Radon-Nikodyn derivative in
+$L_1(|\mu|)$ by an $\widehat f \in \A (\R)$ and use 6.]
+
+\item[9.]
+If $\mu \in M_0 (\R)$, then $\mu(\{a\})=0$ for all $a \in \R$.
+[HINT: Otherwise $\delta_a << \mu$.]
+
+\item[10.]
+Suppose that $f: \R \to \C$ is bounded and differentiable on $\R$ with
+$f^\prime$ also bounded on $\R$. Then for all $g \in L_1(\R)$ the formula
+in 3 defines a function $f \ast g$ at each $x \in \R$, $f \ast g$ is
+differentiable at every point of $\R$, and
+$(f \ast g)^\prime = f^\prime \ast g$.
+
+
+
+
+
+\end{description}    
+%\end{Large}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

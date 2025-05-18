@@ -1,0 +1,131 @@
+% latex file
+\def\hcorrection#1{\advance\hoffset by #1 }
+\def\vcorrection#1{\advance\voffset by #1 }
+
+\documentclass{article}
+\usepackage{my,amsxtra,amssymb,amsthm}
+
+\vcorrection{-1.0in}
+\hcorrection{-0.8in}
+\textwidth 6.0in
+\textheight 9.0in
+
+\def\R{\mathbb R}
+\def\C{\mathbb C}
+\def\N{\mathbb N}
+\def\Z{\mathbb Z}
+\def\Q{\mathbb Q}
+
+\begin{document}
+%\begin{Large}
+
+
+
+
+
+
+\begin{center}\begin{LARGE}
+{\bf Complex Analysis Qualifying Exam}\\ 
+{\bf Fall 1983}\\ \end{LARGE}
+\end{center}
+\vspace{0.1in}
+\noindent\hrulefill\\
+
+\begin{description}
+\item[1.]
+Prove that if $f : \C \to \C$ is a continuous function such that $f$ is
+analytic on $\C \backslash [-1,1]$, then $f$ is an entire function.
+
+\item[2.]
+Let $f(z) \equiv \sum^\infty_{n=1} \frac{1}{n} z^n, z \varepsilon \C$.
+
+\item[\quad] a)
+For which values of $z$ does $\sum^\infty_{n=1} \frac{1}{n} z^n$ converge?
+
+\item[\quad] b)
+Find the largest region on which $f$ is analytic.
+
+\item[\quad] c)
+Can $f$ be analytically continued to domain including $z=1$? {\it You must
+prove all your answers}.
+
+\item[3.]
+Let $f$ be analytic on $D_2 = \{z \varepsilon \C : |z| < 2\}$. Suppose
+$|f(z)| < 1$ if $|z| = 1$. Show that $f$ has exactly one fixed point
+inside the unit circle.
+
+\item[4.]
+Use Cauchy's Residue Theorem to evaluate
+$\sum^\infty_{n=0} \frac{1}{(2n + 1)^2}$.
+
+\item[5.] (a)
+Prove that for $n = 1,2, \dots$
+$$\frac{1}{\sqrt{n}} = \frac{2}{\sqrt{\pi}} \int^\infty_0 e^{-nt^2} dt$$
+by using the identity $\Gamma (z) \Gamma (1-z) = \frac{\pi}{\sin \pi z}$,
+$z$ not an integer.
+
+\item[\quad] (b)
+Find an analytic extension of
+$f(z) = \sum^\infty_{n=1} \frac{z^n}{\sqrt{n}}$,
+$|z| < 1$  to $\C \backslash [1, \infty)$. {\it Justify all steps.}
+
+\item[6.]
+Let $P$ and $Q$ be polynomials with (degree $Q$) $\geq$ (degree $P$) $=2$.
+Calculate the sum of the residues of $P/Q$.
+
+\item[7.]
+Consider the class of all entire functions $F$ such that if $f \varepsilon F$
+then for all $z \varepsilon \C$.
+$$f(z) = f(z+1)$$
+and
+$$f(z) = f(z+i).$$
+
+Characterize $F$.
+
+\item[8.]
+Find a harmonic function $u(x,y)$ in $D = \{z \varepsilon \C : |z| < 1\}$
+with boundary values $u(x,y) = x^2$.
+
+\item[9.] (i)
+Give an example (as simple as possible) of an entire function with zeros
+precisely at:
+
+\item[\qquad] (a)
+$n!, n = 1,2, \dots$
+
+\item[\qquad] (b)
+$\sqrt{n} \log n, n = 2,3, \dots$
+
+\item[\qquad] (c)
+$\log n, n = 2,3, \dots$
+
+\item[\quad] (ii)
+Give an example of an entire function of order one with zeros precisely
+at the positive even integers.
+
+{\bf Justify all answers!}
+
+\item[10.]
+Prove that an entire function of order $3/2$ must have infinitely many zeros.
+
+
+
+
+
+\end{description}    
+%\end{Large}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

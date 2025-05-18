@@ -1,0 +1,165 @@
+% latex209 file
+%Real Analysis - Saeki & Moore
+
+\def\hcorrection#1{\advance\hoffset by #1 }
+\def\vcorrection#1{\advance\voffset by #1 }
+
+\input amssym.def   %defines Bbb and gothic (frak)
+\input amssym       %defines Bbb and gothic (frak)
+
+\input prepictex.tex
+\input pictex.tex
+\input postpictex.tex
+
+%\documentstyle[bbb]{report}
+\documentclass[bbb]{report}
+
+\vcorrection{-.5in}
+\hcorrection{-1.25in}
+
+\topmargin  0in
+%\textwidth 7in
+%\textheight 10truein
+\textheight 9truein
+\textwidth 6in
+\mathsurround=2pt
+
+\pagestyle{empty}
+
+\def\ds{\displaystyle}
+
+\def\R{{\Bbb R}}
+\def\Z{{\Bbb Z}}
+\def\C{{\Bbb C}}
+\def\D{{\Bbb D}}
+\def\N{{\Bbb N}}
+\def\F{{\cal F}}
+\def\M{{\cal M}}
+
+\begin{document}
+
+
+%\begin{Large}
+\begin{large}
+
+\hfill Name \rule{2.5in}{.01in}
+\par
+\vspace{.15in}
+
+\begin{center}
+   REAL ANALYSIS QUALIFYING EXAM \\
+  Fall 2000\\
+   (Saeki \& Moore) \\
+\end{center}
+
+
+\vspace{.1in}
+
+
+\begin{large}
+{\bf Answer all eight questions.
+Throughout, $(X, {\cal M} ,\mu)$ denotes a measure space,
+$\mu$ denotes a positive measure unless otherwise specified, and all
+functions are assumed to be measurable.}
+\end{large}
+
+\vspace{.1in}
+
+\renewcommand\baselinestretch{1.25}
+
+\begin{description}
+
+\item[1.]
+Let $\F$ be a collection of subsets of a set $\Omega$ with the following
+properties:
+
+\item[\quad (i)]
+$\Omega\in \F$
+
+\item[\quad (ii)]
+$A,B\in\F$ implies $A-B\in\F$
+
+\item[\quad (iii)]
+$A_1,A_2,\dots\in\F$ and $A_1\subseteq A_2\subseteq A_3\dots$
+implies $\ds\bigcup^\infty_{i=1}\ Ai\in\F$.
+
+Prove that $\F$ is a $\sigma\hbox{-algebra}$.
+
+\vspace{.05in}
+
+\item[2.]
+If $f\in L^1(\mu)$, prove that $\{x: f(x)\not= 0$\}
+has $\sigma\hbox{-finite}$ measure.
+
+
+\vspace{.05in}
+
+\item[3.]
+Suppose $f$ is a complex measurable function on $x$,
+
+and set $\varphi(p) = \|f\|^P_p$ for $p>0.$
+
+Set $E=\{ p>0: \varphi(p) < \infty \}$. Assume $\|f\|_\infty > 0$.
+
+\item[\quad] (a)
+If $r<p<s$, $r\in E$, $s+E$, prove that $p\in E$.
+
+\item[\quad] (b)
+By (a) $e$ is connected, hence an interval. Is $E$ open?
+
+
+\vspace{.05in}
+
+\item[4.]
+Prove that if $f\in L^1([-\pi,\pi])$
+then $\ds\lim_{n\to\infty} \ds\int^\pi_{-\pi} f(t) \cos\,nt\,dt =0$.
+
+
+\vspace{.05in}
+
+%\vfill\pagebreak
+
+\item[5.]
+Let $f_n(x)=e^{inx}$. Prove
+
+\item[\quad] (a)
+$\{f_n\}_{n\in\Z}$ is orthonormal in $L^2[-\pi,\pi]$ with
+respect to the measure $\ds\frac{dx}{2\pi}$.
+
+\item[\quad] (b)
+no subsequence of $\{f_n\}^\infty_{n=1} $
+converges pointwise a.e. on $[-\pi,\pi]$.
+
+
+\vspace{.05in}
+
+\item[6.]
+Suppose $f\in L^1(\mu)$.
+Prove $|\ds\int f\,d\mu| \leq \ds\int |f|\,d\mu$.
+[You may use the linearity of integration on the complex space
+$L^1(\mu)$.]
+
+\vspace{.05in}
+
+\item[7.]
+Suppose $\mu(x)=1$ and $f:x\to\C$ is measurable. Prove that
+$\|f\|_p \leq \|g\|_q$ whenever $0 < p < q \leq \infty$
+
+\vspace{.05in}
+
+\item[8.]
+Let $f:x\to [0,\infty]$ be a measurable function such that
+$\ds\int_E f\,d\mu < \infty$ for each measurable set $E$ with
+$\mu(E) < \infty$.
+Prove that $\forall \varepsilon > 0$, $\exists \delta > 0$
+such that $\ds\int_E f\,d\mu < \varepsilon$
+for every measurable set $E$ with $\mu(E) < \delta$.
+
+\vfill
+
+\end{description}
+
+%\end{Large}
+\end{large}
+
+\end{document}

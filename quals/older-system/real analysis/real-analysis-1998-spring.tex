@@ -1,0 +1,111 @@
+%S98 Real Analysis - Saeki
+
+\def\hcorrection#1{\advance\hoffset by #1 }
+\def\vcorrection#1{\advance\voffset by #1 }
+
+\input amssym.def   %defines Bbb and gothic (frak)
+\input amssym       %defines Bbb and gothic (frak)
+
+\input prepictex.tex
+\input pictex.tex
+\input postpictex.tex
+
+%\documentstyle[bbb]{report}
+\documentclass[bbb]{report}
+
+\vcorrection{-.7in}
+\hcorrection{-.9in}
+
+\topmargin  0in
+\textwidth 6.4in
+\textheight 10.0in
+
+\mathsurround=2pt
+
+\def\ds{\displaystyle}
+
+\begin{document}
+
+\pagestyle{empty}
+
+\begin{Large}
+
+\begin{center}
+REAL ANALYSIS QUALIFYING EXAMINATION
+
+Spring 1998  (Saeki and Peller)
+\end{center}
+
+\vspace{.2in}
+
+\begin{description}
+
+\item[] Unless otherwise stated, let $(X, {\cal A}, \mu)$
+ be a measure space.
+
+\vskip.2in
+
+\item[1.] (a) What does it mean that $f:X\to{\Bbb C}$
+is ${\cal A}$-measurable?
+
+\item[\ \ ] (b) Prove that if $f,g:X\to{\Bbb C}$ are both
+${\cal A}$-measurable, then so is $f+g$.
+
+\vspace{.2in}
+
+\item[2.] Let $S$ be the smallest $\sigma$-algebra of subsets of
+${\Bbb R}^2$ that contains
+$${\cal F}:=\{I\times J:I\ \hbox{and}\ J
+\ \hbox{are bounded open intervals of}\ {\Bbb R}\}.$$
+Prove that $S={\cal B}({\Bbb R}^2$), the Borel subsets of
+${\Bbb R}^2$.
+
+\vspace{.2in}
+
+\item[3.] Let $(f_n)$ be a sequence of real-valued measurable
+functions on $X$ that converges to some function $f$ at each point of
+$X$. Prove that $f$ is measurable and that for each $\alpha\in{\Bbb R}$,
+we have
+$$ \mu(\{f>\alpha\})\leq\liminf_{n\to\infty}\mu(\{f_n>\alpha\}).$$
+
+\vspace{.2in}
+
+\item[4.] Let $f\in L^1(\mu)$ and $\varepsilon>0$.
+Prove that there exists $\delta>0$ such that
+$$E\in{\cal A}\ \hbox{and}
+\ \mu(E)<\delta\Rightarrow\ds\int_E|f|d\mu<\varepsilon. $$
+
+\vspace{.2in}
+
+\item[5.] Let $E_n\in{\cal A}$ for each $n\in{\Bbb N}$.
+Prove that
+$$ \mu\left(\bigcup^\infty_1 E_n \right)\leq
+\ds\sum^\infty_1\mu(E_n).$$
+
+\vspace{.2in}
+
+\item[6.] Let $f:X\to[0,\infty]$ be measurable and
+$0<p<\infty$. Prove
+$$ \int_Xf^pd\mu=p\int^\infty_0t^{p-1}\mu(\{f>t\})dt.$$
+
+\vspace{.2in}
+
+\item[7.] Prove the completeness of $L^p(\mu)$ for $1\leq p<\infty$.
+
+\vspace{.2in}
+
+\item[8.] Suppose $f_n$, $f\in L^1(\mu)$ and $||f_n-f||_1\to 0$. Prove
+that
+$$ \limsup_{n\to\infty}\int \log|f_n|d\mu\leq\int\log|f|d\mu.$$
+
+\item[] [Consider an appropriate subsequence of
+$(|f_n|-\log|f_n|)^\infty_1$.]
+
+
+
+
+\end{description}
+
+\end{Large}
+
+\end{document}

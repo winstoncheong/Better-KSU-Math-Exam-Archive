@@ -1,0 +1,106 @@
+%From nagy@math.ksu.edu Fri Sep 14 15:07:45 2001
+
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+%\pagestyle{empty}
+%\textwidth=7truein\hoffset=-1in
+%\textheight=10truein\voffset=-1in
+
+\begin{document}
+\vspace*{-1in}
+\hfill\hbox to 3in{Name \hrulefill}
+\vspace{1in}
+\begin{center}{\large Complex Analysis Qualifying Exam}
+\\\bigskip
+{\large August, 2001}
+\end{center}
+
+\
+
+\noindent{\bf  Instructions:}  Below you will find 8 problems.
+Each problem is worth 10 points. Only the
+best 6 scores will be added.
+
+\noindent{\bf Time:} 2 hours.
+
+\
+
+\noindent{\sc Notations:} $\mathbb{R}=$ set of all real numbers;
+$\mathbb{C}=$ set of all complex numbers; $\mathbb{D}=\{z\in\mathbb{C}\,:\,|z|<1\}$ (the unit disk); $\mathbb{T}=\{z\in\mathbb{C}\,:\,|z|=1\}$ (the unit circle).
+
+\
+
+\begin{itemize}
+\item[{\bf 1.}] Let $f:\overline{\mathbb{D}}\to\mathbb{C}$ be a continuous
+function, which is holomorphic on the open unit disk $\mathbb{D}$.
+Prove that there exists a sequence $(P_n)_{n\geq 1}$ of polynomials, such that
+$$P_n\xrightarrow[\,\,n\to\infty\,\,]{}f\text{, uniformly on the {\em whole\/}
+closed unit disk }\overline{\mathbb{D}}.$$
+{\footnotesize
+{\sc Hint:} For every $r<1$ define the function $f_r(z)=f(rz)$. Prove first
+that
+$$f_r\xrightarrow[\,\,r\to 1\,\,]{}f\text{, uniformly on }\overline{\mathbb{D}}.$$
+Then use the fact that each $f_r$ is holomorphic on an open disk $D_r$ that
+contains $\overline{\mathbb{D}}$.}
+
+\item[{\bf 2.}]
+Let $\Omega\subset\mathbb{C}$ be an open set,
+which contains the closed unit disk $\overline{\mathbb{D}}$, and
+let $f:\Omega\to\mathbb{C}$ be a holomorphic function which satisfies
+$$
+|f(z)|>|f(0)|\text{, for all }z\in\mathbb{T}.$$
+Prove that $f$ has at least one zero in $\mathbb{D}$.
+
+\item[{\bf 3.}]
+Suppose $f,g:\mathbb{D}\to\mathbb{C}$ are holomorphic and
+$$|f(z)|=|g(z)|\text{, for all }z\in\mathbb{D}$$
+Prove that every zero of $g$ is also a zero of $f$, having the {\em same\/}
+multiplicity. Infer that there exists some $\lambda\in\mathbb{T}$, such that
+$$f(z)=\lambda g(z)\text{, for all }z\in\mathbb{D}.$$
+
+\item[{\bf 4.}]
+Compute
+$$
+\int_0^\infty \frac{dx}{1+x^7}.$$
+{\footnotesize
+{\sc Hint:} For (large) $R>1$, use the boundary of the circular sector
+$$C_R=\{re^{i\theta}\,:\,0<r<R,\,\,0<\theta<2\pi/7\}$$
+as contour.}
+
+\item[{\bf 5.}] Let $\Omega\subset\mathbb{C}$ be an open set,
+which contains the closed unit disk $\overline{\mathbb{D}}$, and
+let $f:\Omega\to\mathbb{C}$ be a holomorphic function which satisfies
+$$f(z)\neq 0\text{, for all }z\in\mathbb{T}.$$
+Prove that the number
+$$
+Z_f:=\frac 1{2\pi i}\oint_{\mathbb{T}}\frac{f'(z)}{f(z)}\,dz$$
+is equal to the number of zeros (counted with multiplicities)
+of $f$ in $\mathbb{D}$. (In the above line
+integral, the unit circle $\mathbb{T}$ is
+oriented counterclockwise and traversed.)
+
+
+\item[{\bf 6.}] Give an example of a harmonic function $h:\mathbb{C}\smallsetminus\{0\}
+\to\mathbb{R}$, which is not the real part of any holomorphic function
+$f:\mathbb{C}\smallsetminus\{0\}\to\mathbb{C}$.
+
+\item[{\bf 7.}] How many zeros (counted with multiplicities) does
+$$f(z):=z^4+3z-1$$
+have in the annulus
+$\Omega=\{z\in\mathbb{C}\,:\,1<|z|<2\}$?
+
+
+\item[{\bf 8.}]
+Let $\Omega\subset\mathbb{C}$ be an open set, let $a\in\Omega$, and let
+$f:\Omega\smallsetminus\{a\}\to\mathbb{C}$ be a holomorphic  function. Prove
+that the following are equivalent:
+\begin{itemize}
+\item[(i)] $a$ is an essential singularity of $f$.
+\item[(ii)] There is no integer $n\geq 1$ such that
+$$\lim_{z\to a}(z-a)^nf(z)$$
+exists in $\mathbb{C}$.
+\end{itemize}
+
+\end{itemize}
+\end{document}

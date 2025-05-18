@@ -1,0 +1,145 @@
+
+%-*-latex-*-            This is using LaTeX mode for emacs%
+
+%\documentstyle[12pt]{article}
+\documentclass[12pt]{article}
+\topmargin -.5in
+\textwidth 6.1in
+\textheight 9.0 in
+\input amssym.def   %defines Bbb and gothic (frak)
+\input amssym       %defines Bbb and gothic (frak)
+
+
+\renewcommand{\labelenumi}
+ {\mbox{ \mbox{{\bf {\roman{enumi}}}})}}
+ \renewcommand{\theenumi}{\roman{enumi}} 
+% This changes the numbering in itermizing to roman.
+\newcounter{problem}\setcounter{problem}{0}
+\renewcommand{\theproblem}{\arabic{problem}}
+\newcommand{\problem}{%\setcounter{subsubsection}{0}
+ 	\par \vspace{1em} 
+ 	 \stepcounter{problem} 
+ 		\noindent {\bf {\theproblem}. }
+ 	}
+
+
+\begin{document}
+
+ \begin{center}
+
+ {\bf Geometry/Manifolds QUALIFYING EXAM \ \ Spring 1997}
+
+	(Yetter and Wu)
+ \end{center}
+
+% Answer {\it all} questions in {\bf Part A} and choose {\bf 3} problems in
+% {\bf Part B}.
+
+Work out problem {\bf 1} and then choose {\bf 5} (and only 5) 
+additional problems among the remaining ones. Start each 
+problem on a new sheet of paper. 
+{\bf Do not turn in more than 6 problems including the required number 1.}
+A space always means a topological space below.
+
+\vspace{20pt}
+\bigskip \problem {\bf This one is required!}
+
+Answer the following questions and give a brief explanation or
+counterexample:
+\begin{enumerate}
+\item 	\begin{enumerate}
+	\item Give an examples of orientable, connected, simply-connected
+		smooth 2-manifold with trivial tangent bundle.
+	\item Give an examples of orientable, connected, simply-connected
+		smooth 2-manifold with non-trivial tangent bundle.
+	\end{enumerate}
+\item What is the dimension of the total space of the exterior bundle
+	$\Lambda^3(M)$ if $M$ is a smooth $6$-manifold?
+\item Give an example of a compact non-orientable manifold.
+\item Consider the vectorfield on ${\Bbb R}^2\setminus \{ (0,0) \}$ given
+	in polar coordinates by $(r-1)d\theta$.  Describe in detail its flows.
+	Is this vectorfield complete?
+\item \begin{enumerate}
+	\item What is the fundamental group of $S^1 \times S^1$?
+	\item What is the fundamental group of 
+	$S^1 \times S^2$?
+	\item What is the fundamental group of 
+	${\Bbb R}^2 \setminus \{ (0, 1), (0, -1)\} $?
+       \end{enumerate}
+\item Define a connection on the tangent bundle of a manifold.  Define the
+Levi-Civita connection.
+\item Give an example of a space which is locally euclidean, but is not
+a manifold.
+
+\end{enumerate}
+
+
+\vfill {\hfill (continued on next page)}
+\eject
+
+{\bf Choose 5 problems from below:}
+\bigskip
+
+\bigskip \problem Let $\Gamma$ be the ellipsoid $x^2 + \frac{y^2}{4} + \frac{z^2}{9} = 1$
+in ${\Bbb R}^3$ calculate
+
+\[ \int_\Gamma z dx\wedge dy - y dz\wedge dx \]
+
+\bigskip \problem \begin{enumerate}
+	\item Describe the natural Lie algebra structure on the set of
+vectorfields on a smooth manifold $M$.
+	\item In the case where $M$ is a Lie group, use the group law
+and the Lie algebra structure in {\bf i)} to construct a Lie algebra structure
+on the tangent fibre at
+the identity $T_e(M)$.
+\end{enumerate} 
+
+\bigskip \problem
+Suppose G is a connected compact Lie group.  Show that the fundamental
+group of G, $\pi_1(G)$ is abelian.
+
+\bigskip \problem
+Find the scalar curvature of the surface $z = x^2 + y^2$ at $(0,0,0)$.
+
+\bigskip \problem
+Show that every  $1$-form on ${\Bbb R}^1$ is {\it exact}. 
+	Show that every  {\it closed} $1$-form on ${\Bbb R}^3$ is {\it
+	exact}.
+
+\bigskip \problem
+Let $\varphi: M\rightarrow N$ be a (smooth) map. Then the vector
+field $X$ on $M$ and $Y$ on $N$ are said to be $\varphi$-related if
+$ d\varphi_m(X_m) = Y_{\varphi(m)}$ for all $m\in M$.
+
+Let $X_1, X_2$ be vector fields on $M$ and $Y_1, Y_2$ vector fields on $N$.
+Assume that $X_1$ is $\varphi$-related to $Y_1$ 
+and $X_2$ is $\varphi$-related to $Y_2$. Show that
+$[X_1, X_2]$ is $\varphi$-related to $[Y_1, Y_2]$.
+
+\bigskip \problem
+Suppose $f: X^d\rightarrow {\Bbb R}^{d+1}$ is a (smooth) embedding of the
+$d$-dimensional manifold $X$ into ${\Bbb R}^{d+1}$. A normal vector field
+along $(X, f)$ is a smooth map $N: X\rightarrow T({\Bbb R}^{d+1})$ such that
+for each $p\in X$, $N(p)\in T_{f(p)}{\Bbb R}^{d+1}$ and it ($N(p)$) is
+orthogonal to the subspace $df(T_pX)\subset T_{f(p)}{\Bbb R}^{d+1}$.
+Prove that the manifold $X$ is orientable if and only if there is a smooth
+{\it nowhere-vanishing} normal vector field along $(X, f)$.
+
+\bigskip \problem
+Prove that $S^n$ ($n\geq 1$) is orientable.
+
+\bigskip \problem
+Let $f: M\rightarrow N$ be a smooth map such that for all $m\in M$,
+$df_m: T_mM\rightarrow T_{f(m)}N$ is {\it surjective}. Show that for any 
+$n\in N$, $f^{-1}(n)\subset M$ is a smooth submanifold of $M$. What is the
+dimension of $f^{-1}(n)$?
+
+\end{document}
+
+  
+
+
+
+
+
+

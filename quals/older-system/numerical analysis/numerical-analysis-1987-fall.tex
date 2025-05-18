@@ -1,0 +1,240 @@
+% latex file
+\def\hcorrection#1{\advance\hoffset by #1 }
+\def\vcorrection#1{\advance\voffset by #1 }
+
+\documentclass{article}
+\usepackage{my,amsxtra,amssymb,amsthm}
+
+\vcorrection{-1.0in}
+\hcorrection{-0.8in}
+\textwidth 6.0in
+\textheight 9.0in
+
+\def\R{\mathbb R}
+\def\C{\mathbb C}
+\def\N{\mathbb N}
+\def\Z{\mathbb Z}
+\def\Q{\mathbb Q}
+
+\begin{document}
+%\begin{Large}
+
+
+
+
+
+
+\begin{center}\begin{LARGE}
+{\bf Numerical Analysis Qualifying Exam}\\ 
+{\bf Fall 1987}\\ \end{LARGE}
+\end{center}
+\vspace{0.1in}
+\noindent\hrulefill\\
+
+Hand in at most ten problems. You must work at least one from each
+of the five sections.
+
+\begin{description}
+\item[I.]
+Differentiation, Integration, and General Topics.
+
+\item[\quad] 1.
+Write the formula for approximating the derivative of a function $f$ at $x_0$
+using the points $x_0, x_0 + h$, and $x_0 + 2h$, $h >0$, and determine a
+bound for the error of this approximation assuming that $f^{(4)}$ exists and
+is continuous on an interval $[a,b]$ containing the three points.
+
+\item[\quad] 2.
+Show that the simple quadrature defined by interpolation using polynomials
+of degree $\leq n$ has degree of precision at least $n$. Give an example of
+a simple interpolating quadrature involving polynomials of degree $\leq n$
+that has degree of precision $n+1$.
+
+\item[II.]
+Root Finding.
+
+\item[\quad] 3.
+The equation $x+ \ln x = 0$ has a root $\hat x$ near 0.5. Which of the
+following iteration schemes will produce iterates that converge to the root?
+Which scheme converges the fastest?
+
+\item[\qquad] (a)
+$x_n = -\ln (x_{n-1}).$
+
+\item[\qquad] (b)
+$x_n = e^{-x_{n-1}}$.
+
+\item[\qquad] (c)
+$x_n = \frac{x_{n-1} + e^{-x_{n-1}}}{2}$.
+
+\item[\quad] 4. (a)
+Define Aitken's $\delta^2$-method of accelerating the convergence of a
+sequence.
+
+\item[\qquad] (b)
+State sufficient conditions for a linearly convergent sequence
+$\{x_n\}$ to satisy
+$$\lim_{n \to +\infty} \frac{x^\prime_n - x}{x_n - x} = 0,$$
+where $\{x^\prime_n\}$ is the associated accelerated sequence, and prove this
+result.
+
+\item[\quad] 5.
+Outline the method of steepest descent for determining an approximation to
+the location of a minimum for a real valued function $f$ of several variables.
+Describe conditions under which this method might converge very slowly.
+
+\item[III.]
+Approximation Theory.
+
+\item[\quad] 6.
+Find the interpolating polynomial determined by the five points
+$(0,1), (1,3), (2,1), (3,3)$, and $(4,1)$.
+
+\item[\quad] 7.
+Define the continuous least squares approximating polynomial of degree at
+most $n$ for a function $f$ and state and prove the uniqueness theorem for
+this approximation.
+
+\item[\quad] 8.
+Let $f$ be a function defined on $[-1,1]$ and consider the following two
+sets of points:
+$$\{-0.9510565, -0.5877853, 0.0000000, 0.5877853, 0.9510565\}$$
+and
+$$\{-1.0000000, -0.5000000, 0.0000000, 0.5000000, 1.0000000\}$$
+Consider the interpolating polynomials defined by each of these sets with
+respect to $f$. Which would you expect to be more accurate on $[-1,1]$.
+Explain your answer.
+
+\item[IV.]
+Linear Algebra.
+
+\item[\quad] 9.
+Let $A$ be the $n$ by $n$ matrix
+$$\left[\begin{array}{ccccc}
+        -2 & 1 &&& 0 \\
+        1 & -2 & 1 & \\
+        & 1& -2& \vdots & \\
+        && \vdots & \vdots &-1 \\
+        0 &&& -1& -2
+        \end{array}
+        \right].$$
+Show that the Jacobi iteration procedure converges to a solution of
+$Ax=b$ for any vector $b$ and any starting vector $x_0$. (Hint: You may
+assume that the matrix
+$$\left[\begin{array}{ccccc}
+        0&-1&&&0 \\
+        -1&0&-1&&\\
+        &-1&0&\vdots & \\
+        && \vdots & \vdots & -1 \\
+        0 &&& -1& 0
+        \end{array}
+        \right].$$
+has eigenvectors
+$$v_k = \left(\sin \frac{k \pi}{n+1}, \sin \frac{2k\pi}{n+1}, dots,
+  \sin \frac{nk\pi}{n+1} \right)^T.$$
+
+\item[\quad] 10.
+State as much information as you can about the location and type of the
+eigenvalues of the matrix
+$$\left[\begin{array}{ccccc}
+        1 & \frac{1}{16} & \frac{1}{16} &\frac{1}{16} &\frac{1}{16} \\
+        \frac{1}{16} & 2 & \frac{1}{16} &\frac{1}{16} &\frac{1}{16} \\
+        \frac{1}{16} &\frac{1}{16} & 3 & \frac{1}{16} &\frac{1}{16} \\
+        \frac{1}{16} &\frac{1}{16} &\frac{1}{16} &4& \frac{1}{16}  \\
+        \frac{1}{16} &\frac{1}{16} &\frac{1}{16} &\frac{1}{16} & 5 
+        \end{array}
+        \right].$$
+
+\item[\quad] 11.
+Perform a basic QR step (do not use any kind of shifting) on the upper
+Hessenberg matrix
+$$\left[\begin{array}{ccc}
+        3&1&2 \\
+        4&2&3 \\
+        0&1&1 
+        \end{array}
+        \right].$$
+
+\item[V.]
+Differential Equations.
+
+\item[\quad] 12.
+Define the concepts of stability and consistency for a finite difference
+scheme associated with a differential equation.
+$$y^\prime = f(x,y)$$
+on an interval $[a,b]$ and give an example of an unstable and consistant
+scheme. Clearly state any relavant theorems you use for the example.
+
+\item[\quad] 13.
+Consider the BVP
+$$\begin{array}{ccc}
+        y^{\prime \prime} &=& xy + y^\prime \\
+        y(0) &=& \alpha \\
+        y(1) &=& \beta \\
+        x &\varepsilon& [0,1]
+        \end{array}$$
+Show that the solution to the discrete equation
+$$\frac{y_{i+1} - 2y_i + y_{i-1}}{h^2} = x_iy_i +
+  \frac{y_{i+1} - y_{i-1}}{2h}$$
+for $1 \leq i \leq N-1$, $h= \frac{\beta - \alpha}{N}$, $y_0 = \alpha$,
+and $y_N = \beta$ attains its maximum at $y_0$ or $y_N$. That is,
+$$|y_k| \leq \max\{|y_0|, |y_N|\}.$$
+
+\item[\quad] 14.
+Show that any solution of the system $y^\prime = Ay$ where
+$$\left[\begin{array}{cc}
+        0&1 \\
+        -1& 0
+        \end{array}
+        \right]$$
+is stable, but that no solution of the corresponding explicit difference
+equation
+$$y_{k+1} = y_k + hAy_k$$
+is stable for any $h$. Can the same be said of the solution of the
+corresponding implicity difference equation
+$$y_{k+1} = y_k + hAy_{k+1}?$$
+Explain your answers!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{description}    
+%\end{Large}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

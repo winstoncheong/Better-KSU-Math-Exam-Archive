@@ -1,0 +1,201 @@
+% latex file
+\def\hcorrection#1{\advance\hoffset by #1 }
+\def\vcorrection#1{\advance\voffset by #1 }
+
+\documentclass{article}
+\usepackage{my,amsxtra,amssymb,amsthm}
+
+\vcorrection{-1.0in}
+\hcorrection{-0.8in}
+\textwidth 6.0in
+\textheight 9.0in
+
+\def\R{\mathbb R}
+\def\C{\mathbb C}
+\def\N{\mathbb N}
+\def\Z{\mathbb Z}
+\def\Q{\mathbb Q}
+
+\begin{document}
+%\begin{Large}
+
+
+
+
+
+
+\begin{center}\begin{LARGE}
+{\bf Topology Qualifying Exam}\\ 
+{\bf Fall 1987}\\ \end{LARGE}
+\end{center}
+\vspace{0.1in}
+\noindent\hrulefill\\
+
+Do 9 of the following 15 problems.
+
+In the following problems, let $\R$ denote the real line with the usual
+topology, and let $\N$ denote the natural numbers.
+
+\begin{description}
+\item[1.]
+Prove that any continuous bijection $f : \R \to \R$ is a homeomorphism.
+
+\item[2.]
+Prove that in a metrizable space $X$ without isolated points, the closure of
+a discrete set in $X$ must be nowhere dense in $X$.
+
+\item[3.] (a)
+Prove that every closed subset of a metrizable space $X$ is a $G_\delta$ in
+$X$.
+
+\item[\quad] (b)
+Give an example to show that a closed subset of a Hausdorff space $X$ is not
+necessarily a $G_\delta$ in $X$.
+
+\item[4.] (a)
+Characterize the compact subsets of $\R$ and prove that your characterization
+is correct.
+
+\item[\quad] (b)
+State and prove a maximum value theorem from calculus.
+
+\item[\quad] (c)
+Using maximum, minimum, and intermediate value theorems from calculus, prove
+that every continuous open function $f : [0,1] \to [0,1]$ is surjective.
+
+\item[5.]
+Let $X$ be the topological space whose underlying set is the set of real
+numbers and whose topology has as a basis the set of half open intervals
+of the form $[a,b)$ where $a < b$. Show that $X$ is
+
+\item[\quad] (a)
+first countable.
+
+\item[\quad] (b)
+separable.
+
+\item[\quad] (c)
+not second countable.
+
+\item[\quad] (d)
+not metrizable.
+
+\item[6.] (a)
+True-False
+
+\item[\qquad] (i)
+The composition of quotient maps is a quotient map.
+
+\item[\qquad] (ii)
+The product of metrizable spaces is metrizable.
+
+\item[\qquad] (iii)
+$f: X \to Y$ is a topological embedding iff $f$ is one-to-one and $X$ has
+the coarsest (=weakest) topology making $f$ continuous.
+
+\item[\qquad] (iv)
+A space is $T_1$ iff it is locally $T_1$; i.e., each point has a base of
+$T_1$ neighborhoods.
+
+\item[\qquad] (v)
+A space is $T_2$ iff it is locally $T_2$; i.e., each point has a base of
+$T_2$ neighborhoods.
+
+\item[\qquad] (vi)
+Every metrizable space is normal.
+
+\item[\qquad] (vii)
+Every locally compact Hausdorff space is completely regular.
+
+\item[\qquad] (viii)
+Every subspace of a separable Hausdorff space is separable and Hausdorff.
+
+\item[\quad] (b)
+For each false entry, give a counter example (no proofs).
+
+\item[7.]
+Let $S^1$ denote the unit circle in the plane (with the usual topology). Give
+4 examples, 1 compact, 1 non-compact, 1 non-locally connected, 1 non-locally
+compact, of spaces homotopically equivalent to $S^1$, but not homeomorphic
+to $S^1$.
+
+\item[8.]
+Let $f: A \to B$ where $A, B \subseteq \R$. For $x \in \R$, define
+$$\hbox{osc} (f, x) = \inf \{\hbox{diam\ } f (A \cap U) | \ x \in U \quad
+  \hbox{open\ } \hbox{in\ } \R\}$$
+and
+$$A^\ast = \{x \in  \overline A | \hbox{osc} (f,x) = 0\}.$$
+Prove that if $f: A \to B$ is an order preserving homeomorphism and
+$A, B$ are dense in $\R$, then $A^\ast = \R$.
+
+\item[9.]
+Prove that if $f : [0,1] \to X$ is a continuous open surjection onto a
+nondegenerate Hausdorff space $X$, then $X$ is homeomorphic to $[0,1]$.
+
+\item[10.]
+Prove that if a filter $\mathcal F$ is contained in a unique ultrafilter
+$\mathcal G$, then $\mathcal F = \mathcal G$.
+
+\item[11.]
+Prove that the following two statements about a $T_1$-space $X$ are
+equivalent.
+
+\item[\quad] (a)
+Every infinite subset of $X$ has an accumulation point in $X$.
+
+\item[\quad] (b)
+At least one member of every infinite open cover of $X$ can be discarded with
+the remaining sets still covering $X$.
+
+\item[12.]
+Find the specific error in the following: ``Proof" that  the uncountably
+infinite power of a two point discrete space is metrizable. Let $D=\{0,1\}$
+have the discrete topology. For each $r \in \R$ define
+$$f_r: D^N \to D \hbox{\ by\ } f_r(g) =
+        \begin{cases}
+          g(r) \quad &\hbox{if\ } r\in \N \\
+          0 \quad &\hbox{if\ } r \in \R - \N.
+          \end{cases}$$
+Then these functions are continuous and thus induce a continuous embedding
+$F: D^N \to D^R$. Let $U$ be open in $D^R$. Then $U$ restricts only finitely
+may coordinates. Thus $U \cap F[D^N] \neq \emptyset$, so $F[D^N]$ is
+dense in $D^R$. But $D^N$ is homeomorphic with the Cantor space, so
+$F[D^N]$ is compact. Since $D^R$ is Hausdorff, $F[D^N]$ must be closed in
+$D^R$. Hence $F[D^N] = D^R$, and since $D^N$ is metrizalbe, $D^R$ must
+be metrizable.
+
+\item[13.]
+Prove that if $X$ is compact Hausdorff, then each quasicomponent of $X$
+is connected.
+
+\item[14.]
+Prove that if ${\mathcal C} = \{C_\alpha | \ \alpha \in \Lambda\}$ is a
+family of compact subsets of a Hausdorff space such that the finite intersections
+of members of $\mathcal C$ are connected, then $\bigcap {\mathcal C}$ is
+connected.
+
+\item[15.]
+Show that every connected, locally compact, paracompact Hausdorff space is
+Lindel\"of.
+
+
+
+
+
+\end{description}    
+%\end{Large}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

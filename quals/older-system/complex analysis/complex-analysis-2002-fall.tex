@@ -1,0 +1,137 @@
+%From nagy@math.ksu.edu Wed Oct 16 11:22:55 2002
+%Subject: Complex Analysis QE Fall 2002
+
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+%\pagestyle{empty}
+\newcommand{\Hh}{\mathbb{H} }
+\newcommand{\D}{\mathbb{D} }
+\newcommand{\T}{\mathbb{T} }
+\newcommand{\C}{\mathbb{C} }
+\newcommand{\N}{\mathbb{N} }
+\newcommand{\Z}{\mathbb{Z} }
+\newcommand{\St}{\mathbb{S} }
+\newcommand{\R}{\mathbb{R} }
+
+
+
+\newcommand{\rea}{\operatorname{Re}}
+\newcommand{\ima}{\operatorname{Im}}
+\newcommand{\Arg}{\operatorname{Arg}}
+\newcommand{\area}{\operatorname{Area}}
+\newcommand{\spec}{\operatorname{Spectrum}}
+\newcommand{\inte}{\operatorname{int}}
+\newcommand{\dist}{\operatorname{dist}}
+\newcommand{\Span}{\operatorname{Span}}
+%\newcommand{\Cap}{\operatorname{Cap}}
+\newcommand{\bd}{\partial }
+
+
+
+\begin{document}
+\vspace*{-1in}
+\hfill\hbox to 3in{{Name: }\hrulefill}
+\vspace{1in}
+\begin{center}{\large Complex Analysis Qualifying Exam}
+\\\bigskip
+{\large August, 2002}
+\end{center}
+
+\
+
+\noindent{\bf  Instructions:}  Below you will find 8 problems.
+Each problem is worth 10 points. Only the
+best 6 scores will be added.
+
+\noindent{\bf Time:} 2 hours.
+
+\
+
+\noindent{\sc Notations:} $\mathbb{R}=$ set of all real numbers;
+$\mathbb{C}=$ set of all complex numbers; $\mathbb{D}=\{z\in\mathbb{C}\,:\,|z|<1\}$ (the unit disk); $\mathbb{T}=\{z\in\mathbb{C}\,:\,|z|=1\}$ (the unit circle).
+
+\
+
+\begin{itemize}
+\item[{\bf 1.}] Let $f$ be a holomorphic function on the open unit
+disk $\mathbb{D} $ with $|f (z)|<1$ for all $z\in\mathbb{D}$. Assume there exist
+$z_1,z_2\in\mathbb{D}$ with $z_{1}\neq z_{2}$, and such that
+$f (z_{1})=z_{1}$ and
+$f (z_{2})=z_{2}$. Show that $f (z)=z$ for all $z\in\mathbb{D}$.
+
+\item[{\bf 2.}]
+Prove that if $F (z)$ and $G (z)$ are entire functions
+with the same zeros and with the same multiplicities at each zero, then
+there is an entire function $\varphi (z)$ such that
+\[
+F (z)=e^{\varphi (z)}G (z),\,\,\,\forall\,z\in\mathbb{C}.
+\]
+
+\item[{\bf 3.}]
+\begin{itemize}
+\item[(i)] Suppose $h:\mathbb{D}\to\mathbb{R}$ is {\em harmonic}, that is,
+$$\frac{\partial^2h}{\partial x^2}+\frac{\partial^2h}{\partial y^2}=0.$$
+Prove there exists an analytic function $f:\mathbb{D}\to\mathbb{C}$, such that
+$h=\text{Re}\,f.$
+\item[(ii)] Is this true if $h$ (and $f$) is only defined on $\mathbb{D}\smallsetminus\{0\}$?
+\end{itemize}
+\newpage
+
+
+\item[{\bf 4.}]
+Let $\Omega\subset\C$ be an open set which contains the closed
+unit disk $\D \cup\T$, and let $f:\Omega\to\C$ be a holomorphic function such that
+$f(0)=1$ and
+$$
+|f(z)|>1,\,\,\,\forall\,z\in\T.$$
+Prove that $f$ has at least one zero in $\D$.
+
+\item[{\bf 5.}] Compute
+$$
+\int_0^\infty \frac{dx}{1+x^5}.$$
+{\footnotesize
+{\sc Hint:} For every $R>0$, use the boundary of the circular sector
+$$C_R=\{re^{i\theta}\,:\,0<r<R,\,\,0<\theta<2\pi/5\}$$
+as contour.}
+
+
+\item[{\bf 6.}] Let $P$ and $Q$ be polynomials, with
+$\text{deg}\,Q\geq 2+\text{deg}\,P$.
+Define the functions
+$f(z)=\dfrac{P(z)}{Q(z)}$ and $g(z)=\pi f(z)\cot (\pi z)$.
+Let $M=\{w_1,\dots,w_p\}$ be the set of poles of $f$.
+Prove that, if $M\cap\mathbb{Z}=\varnothing$, then
+$$
+\sum_{n=-\infty}^\infty f(n)=-\sum_{k=1}^p\text{Res}(g;w_j).$$
+{\footnotesize
+{\sc Hint:} For every integer $m\geq 1$,
+integrate over the boundary of the square
+$$S_m=\big\{x+yi\,:\,x,y\in\mathbb{R},\,\,\max(|x|,|y|)
+\leq m+\frac 12\big\}.$$
+}
+
+
+\item[{\bf 7.}] Define the
+strip
+$\Sigma=\{z\in\C\,:\,-1<\text{Im}\,z<1\}$, and
+let $f:\Sigma\to\C$ be a holomorphic function. Consider the set
+$$
+S=\{z\in\mathbb{R}\,:\,f(z)\in\mathbb{R}\}.$$
+Prove that, either $S$ is {\em discrete\/} (i.e. it has no accumulation points),
+or $S=\mathbb{R}$.
+
+{\footnotesize
+{\sc Hint:} Consider the function $g(z)=\overline{f(\bar{z})}$.
+}
+
+\item[{\bf 8.}]
+Map the region
+$$
+\Omega=\{z\in\mathbb{C}\,:\,|z|<2,\,\,|z-1|>1\}$$
+conformally onto the upper half-plane
+$$
+U=\{z\in\mathbb{C}\,:\,\text{Im}\,z>0\}.$$
+
+\end{itemize}
+\end{document}

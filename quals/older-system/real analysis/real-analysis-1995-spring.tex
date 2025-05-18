@@ -1,0 +1,146 @@
+% latex file
+\def\hcorrection#1{\advance\hoffset by #1 }
+\def\vcorrection#1{\advance\voffset by #1 }
+
+\documentclass{article}
+\usepackage{my,amsxtra,amssymb,amsthm}
+
+\vcorrection{-1.0in}
+\hcorrection{-0.8in}
+\textwidth 6.0in
+\textheight 9.0in
+\begin{document}
+%\begin{Large}
+
+
+
+
+
+
+\begin{center}\begin{LARGE}
+{\bf Real Analysis Qualifying Exam}\\ 
+{\bf Spring 1995}\\ \end{LARGE}
+\end{center}
+\vspace{0.1in}
+\noindent\hrulefill\\
+
+In problems 1 through 4, $(X, M, \mu)$ is a measure space. In problems 9
+and 10, $|E|$ denotes the Lebesgue measure of the measurable set $E$.
+
+\begin{description}
+
+\item[1.]
+Let $w: X \to [0,\infty)$ be measurable, and let $v(E) = \int_E wd \mu$
+for $E \in M$.
+
+Prove: (a) $v$ is a measure on $M$ and (b) $\int fdv = \int fwd \mu$ for
+each nonnegative measurable function $f$ on $X$.
+
+\item[2.]
+Suppose $0<p< \infty$, $(f_n)$ is a sequence of measurable functions on $X$,
+$f_n \to f$ a.e. and
+$\parallel f_n \parallel_p \to \parallel f \parallel_p < \infty$. Prove
+$\parallel f_n - f \parallel_p \to 0.$
+
+Hint: Find $\alpha >0$ s.t. $|f_n - f|^p \leq \alpha (|f_n|^p + |f|^p)$
+and apply Fatou's lemma.
+
+\item[3.]
+Let $I \subseteq \Bbb R$ be an open interval, and let $f$ be a function on
+$X \times I$ such that
+
+\item[\quad] (i)
+$\forall t \in I, f (\cdot, t) \in L_1 (\mu)$, and
+
+\item[\quad] (ii)
+$\exists g \in L_1 (\mu)$ such that
+$\left|\frac{\partial f}{\partial t} (x,t) \right| \leq g(x) \quad \forall
+ (x,t) \in X \times I$.
+
+Prove:
+$$\frac{d}{dt} \int f(x,t) d \mu (x) = \int \frac{\partial f}{\partial t}
+   (x,t) d \mu (x).$$
+
+\item[4.]
+Suppose $\mu (X) < \infty$. A family ${\cal F}$ of measurable functions on $X$
+is said to be uniformly integrable if given $\varepsilon >0$,
+$\exists \delta >0$ such that
+$$E \in M, \quad \mu (E) < \delta \hbox{\ and\ }
+  f \in {\cal F} \Rightarrow \int_E |f| d \mu < \varepsilon.$$
+
+Prove Vitali's theorem: Suppose
+\item[\quad] (i)
+$\{f_n\} \subset L_1 (\mu)$ is uniformly integrable,
+
+\item[\quad] (ii)
+$f_n \to f$ a.e. for some function $f$, and
+
+\item[\quad] (iii)
+$|f| < \infty$ a.e.
+
+Thus $f \in L_1 (\mu)$ and $\parallel f_n - f \parallel_1 \to 0$.
+
+\item[5.]
+Show that for $1 \leq p \leq \infty$, the closed unit ball of $\ell_p (\Bbb N)$
+is not compact.
+
+\item[6.]
+Let $1 \leq p \leq \infty$, $f \in (\Bbb R)$ and $g \in L_p (\Bbb R)$. Prove
+$\parallel f \ast g \parallel_p \leq \parallel f \parallel_1 \cdot
+ \parallel g \parallel_p$.
+
+\item[7.]
+Suppose $f \in L_2(\Bbb R^+)$. Prove that
+$$x^{-\frac{1}{2}} \int^x_0 fdt \to 0 \hbox{\ as\ } x \to 0^+.$$
+
+\item[8.]
+Fix a Lebesgue measurable function $f$ on $\Bbb R^+$ and define
+$$\phi (p) = \left\{ \int^\infty_0 |f(x)|^p e^{-x} dx \right\}^{\frac{1}{p}}
+\quad (0 < p< \infty).$$
+
+Prove: (a) $p < q \Rightarrow \phi (p) \leq (q)$.
+
+\item[\quad] (b)
+If $\phi(p) = \phi(q) < \infty$ for some $0 < p< q< \infty$, then
+$|f|= const$ a.e.
+
+\item[9.] (a)
+Fix $0 < \varepsilon < 1$. Construct a closed set $K \subset [0,1]$ such
+that $|K| > 1 - \varepsilon$ and $K$ contains no rationals.
+
+\item[\quad] (b)
+Does there exist a Borel set $E \subset [0,1]$ such that
+$0 < |E \cap I| < |I|$ for each nonempty open interval $I \subset [0,1]$?
+
+\item[10.]
+Let $E \subset \Bbb R$ be a Lebesgue measurable set such that
+
+\item[\quad] (i)
+$(E + k) \cap E = \emptyset \quad \forall k \in \Bbb Z \backslash \{0\}$
+and (ii) $E + \Bbb Z = \Bbb R$.
+
+Prove that $|E| = 1$. Hint: Let $I = (0,1]$. Then
+$I = \bigcup_k I \cup (E + k)$ and $E = \bigcup_k (I + k) \cup E$.
+
+
+
+
+
+
+\end{description}    
+%\end{Large}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

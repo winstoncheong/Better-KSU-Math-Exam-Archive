@@ -1,0 +1,250 @@
+% latex file
+\def\hcorrection#1{\advance\hoffset by #1 }
+\def\vcorrection#1{\advance\voffset by #1 }
+
+\documentclass{article}
+\usepackage{my,amsxtra,amssymb,amsthm}
+
+\vcorrection{-1.0in}
+\hcorrection{-0.8in}
+\textwidth 6.0in
+\textheight 9.0in
+
+\def\R{\mathbb R}
+\def\C{\mathbb C}
+\def\N{\mathbb N}
+\def\Z{\mathbb Z}
+\def\Q{\mathbb Q}
+
+\begin{document}
+%\begin{Large}
+
+
+
+
+
+
+\begin{center}\begin{LARGE}
+{\bf Numerical Analysis Qualifying Exam}\\ 
+{\bf Spring 1987}\\ \end{LARGE}
+\end{center}
+\vspace{0.1in}
+\noindent\hrulefill\\
+
+Hand in at most ten problems. You must work at least one from each of the
+five sections.
+
+\begin{description}
+\item[I.]
+Differentialtion, Integration, and General Topics.
+
+\item[\quad] 1.
+A centered difference method for approximating a second derivative uses
+$$\frac{f(x+h) - 2f(x) + f(x-h)}{h^2},$$
+$h>0$, for the approximation. If $f^{(4)}$ is defined and continuous on an
+interval $[a,b]$ containing $x-h$ and $x+h$, show that the error in the
+approximation is given by
+$$-\frac{h^2}{12} f^{(4)} (c)$$
+for some $c\varepsilon (x-h, x+h)$.
+
+\item[\quad] 2.
+Let $E(f) = \sum^n_{k=0} \alpha_k f(x_k)$ be a simple quadrature formula
+which uses $n+1$ distinct nodes. If $E$ has degree of procision at least $n$,
+show that $E$ is an interpolatory quadrature.
+
+\item[\quad] 3.
+Suppose we are given a program which approximates $\int^a_b f(x) dx$ using
+composite Simpson's rule. The user supplies the integrand $f(x)$, the
+limits $a$, $b$, and the number of panels $N$. The program runs on a computer
+which uses nine decimal digit floating point calculations. If we seek the
+value of $\int^1_0 \sqrt {x} \exp xdx$ we get the following results:
+$$\begin{array}{cc}
+        N \hbox{\ (Panels)} & \hbox{Approximate\ } \hbox{\ Integral} \\
+        5 & 1.253107 \\
+        10 & 1.254730 \\
+        20 & 1.255311 \\
+        40 & 1.255517 \\
+        100 & 1.255601 \\
+        400 & 1.255627 \\
+        800 & 1.255629
+        \end{array} $$
+The actual value of the integral, correct to 7 figures is 1.255630.
+
+\item[\qquad] (a)
+Why should we have expected possible trouble in directly using Simpson's
+rule on this integral?
+
+\item[\qquad] (b)
+What should be done to use the program more efficiently to calculate
+the value of this integral?
+
+\item[\quad] 4.
+Explain how to calculate accurately the value of
+$$f(x) = \frac{6 \sin x-6x+x^3}{x^5} $$
+for very small positive $x$. Why is there any difficulty at all?
+
+\item[II.]
+Root Finding.
+
+\item[\quad] 5. (a)
+Describe Newton's method for functions of several variables. State without
+proof the quadratic convergence theorem for this method. (Use the
+asymptotic convergence rate difinition).
+
+\item[\qquad] (b)
+Let
+$$f(x) = \begin{cases}
+                \sqrt{x} & \hbox{if\ }  x\geq 0 \\
+                -\sqrt{x} & \hbox{if\ }  x < 0
+                \end{cases}$$
+
+Apply Newton's method for any starting value and explain the results in
+light of the convergence theorem you stated (a).
+
+\item[\quad] 6. (a)
+Describe Aitken's $\delta^2$-method of accelerating the convergence of a
+sequence.
+
+\item[\qquad] (b)
+Let $\{x_n\}$ converge to $x$ with $x_n \neq x$ for all $n= 1,2, \dots$.
+Show that  if the convergence is linear, then
+$$\lim_{n \to +\infty} \frac{x^\prime_n - x}{x_n - x} = 0$$
+where $\{x^\prime_n\}$ is the associated accelerated sequence.
+
+\item[\quad] 7.
+Give an example to show that the process of determining a root of a polynomial
+is, in general, ill-conditioned.
+
+\item[III.]
+Approximation Theory.
+
+\item[\quad] 8. (a)
+Describe the interpolating polynomial $P_n$ for a real valued function $f$
+and distinct points $\{x_0, \dots, x_n\}$ in the domain of $f$.
+
+\item[\qquad] (b)
+Let $f$ be infinitely differentiable on $[a,b]$ and suppose there exists a
+real number $M$ such that $|f^{(n)} (x) \leq M$ for all
+$x\varepsilon [a,b]$ and all $n \geq 0$. For $n \geq 0$, let $P_n$
+interpolate $f$ at some set of $n+1$ distinct points in
+$[a,b]$. Show that $P_n \to f$ uniformly on $[a,b]$.
+
+\item[\qquad] (c)
+For an arbitray function $f$ defined on $[a,b]$ and for evenly spaced nodes
+$x_k = a + \frac{k}{n} (b-a)$, $0 \leq k \leq n$ in $[a,b]$, let $P_n$
+interpolate $f$. Does $p_n \to f$ uniformly on $[a,b]$? State the
+appropriate theorem or give a counterexample.
+You need not give a proof for this part.
+
+\item[\quad] 9.
+Of all polynomials of degree $\leq 3$, find the one which best approximates
+$p(x) = 2x^4 - 3x^2 + x+ 1$ on the interval $[-1, 1]$ with respect to the
+uniform norm $\parallel \quad \parallel_\infty$. Use the fact that if
+$q_n(x)$ is the polynomial in $P_n$ which best approximates
+$x^{n+1}$ on $[-1,1]$, then $x^{n+1} - q_n (x) = 2^nT_{n+1} (x)$
+where $T_{n+1} (x)$ is the Chebyshev polynomial.
+
+\item[\quad] 10.
+Let $V$ be a real vector space, $W$ a finite dimensional subspace of $V$
+having dimension $n$, and let $<,>$ be a symmetric, positive semidefinite,
+bilinear form on $V$ such that $<,>$ is positive definite on $W$.
+Let $p_1, \dots, p_n$ be an orthonormal basis for $W$ and let
+$\parallel v \parallel = \sqrt{<v,v>}$ for $v \varepsilon V$.
+
+\item[\quad] (a)
+Let $v \varepsilon V$ and let $w = \sum^n_{i=1} \beta_i p_i \varepsilon W$.
+Show that
+$$\parallel v-w^2 \parallel^2 = \parallel v \parallel^2 + \sum^n_{j=0}
+  \left( \beta_j -<v,p_j> \right)^2 - \sum^n_{j=0}
+  <v, p_j>^2.$$
+
+\item[\quad] (b)
+Given $v\varepsilon V$, show that there is a unique $w \varepsilon W$ that
+minimizes $\parallel v-w \parallel$ and that it is given by
+$$w = \sum^n_{j=1} <v, p_j>p_j.$$
+
+\item[IV.]
+Linear Algebra.
+
+\item[\quad] 11.
+Assume that the equation $x=Ax_b$ has a unique solution and consider the
+iterative scheme
+$$x_{i+1} = Ax_i + b$$
+where $A$ is an $n$ by $n$ complex matrix and $x$ and $b$ are complex
+$n$-vectors.
+
+\item[\qquad] (a)
+Prove that if the sequence $\{x_i\}$ converges for an arbitrary starting
+vector $x_0$, then $\tau_\sigma (A) < 1$, where $\tau_\sigma (A)$ is
+the spectral radius of $A$.
+
+\item[\qquad] (b)
+Prove that if $\tau_\sigma (A) < 1$, then $\{x_i\}$ converges for all starting
+values $x_0$. (Hint: Use the spectral radius formula.)
+
+\item[\quad] 12.
+Outline in detail the Q-R method with Francis Q-R step. State, without
+proof, any relevant theorems associated with this method.
+
+\item[\quad] 13.
+Does the Gauss-Seidel method converget for the linear equation
+$$\left[\begin{array}{cccc}
+        4&2&1&1 \\
+        1&2&1&0 \\
+        0&2&3&1 \\
+        1&1&1&4
+        \end{array}
+        \right]
+  \left[\begin{array} {c}
+        x_1 \\
+        x_2 \\
+        x_3 \\
+        x_4
+        \end{array}
+        \right]
+   = \left[\begin{array}{c}
+        2 \\
+        1 \\
+        3 \\
+        5
+        \end{array}
+        \right]
+         ?$$
+
+\item[V.]
+Differential Equations.
+
+\item[\quad] 14.
+Let $f: [a,b] \to R$ satisfy a Lipschitz condition,
+$$|f(x,y) - f(x,y^\prime)| \leq L|y-y^\prime|$$
+for all $x\varepsilon [a,b]$ and $y \varepsilon R$. Show that Euler's
+method for the numerical solution of the initial value problem
+$$y^\prime = f(x,y)$$
+$$y(0) = y_0$$
+is stable. Begin by stating the meaning of ``stable" in this context.
+
+\item[\quad] 15.
+Explain the meaning of the term ``parasitic solution" asd it relates to the
+numerical solution of ordinary differential equations. Relate it to the
+concept of stability and to the root condition.
+
+
+
+
+\end{description}    
+%\end{Large}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

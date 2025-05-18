@@ -1,0 +1,144 @@
+% latex file
+\def\hcorrection#1{\advance\hoffset by #1 }
+\def\vcorrection#1{\advance\voffset by #1 }
+
+\documentclass{article}
+\usepackage{my,amsxtra,amssymb,amsthm}
+
+\vcorrection{-1.0in}
+\hcorrection{-0.8in}
+\textwidth 6.0in
+\textheight 9.0in
+
+\def\R{\mathbb R}
+\def\C{\mathbb C}
+\def\N{\mathbb N}
+\def\Z{\mathbb Z}
+\def\Q{\mathbb Q}
+
+\begin{document}
+%\begin{Large}
+
+
+
+
+
+
+\begin{center}\begin{LARGE}
+{\bf Real Analysis Qualifying Exam}\\ 
+{\bf Spring 1989}\\ \end{LARGE}
+\end{center}
+\vspace{0.1in}
+\noindent\hrulefill\\
+
+In this exam $\lambda$ denotes Lebesgue outer measure on $\R$ and
+$(X, {\cal A}, \mu)$ denotes a measure space.
+
+\begin{description}
+\item[1.] (a)
+Define Lebesgue outer measure $\lambda$ on $\R$.
+
+\item[\quad] (b)
+What does it mean to say that a subset $E$ of $\R$ is $\lambda$-measurable?
+
+\item[\quad] (c)
+Use the fact that the family ${\cal M}_\lambda$ of all $\lambda$-measurable
+subsets of $\R$ is a $\sigma$-algebra to prove that every Borel subset of
+$\R$ is $\lambda$-measureable.
+
+\item[2.]
+Prove the following assertions. You may use the fact that the restriction of
+$\lambda$ to ${\cal M}_\lambda$ is countably additive if you wish.
+
+\item[\quad] (a)
+If $a<b$ in $\R$, then $\lambda([a,b]) = b-a$.
+
+\item[\quad] (b)
+There exists a compact set $K \subset [0,1]$ such that
+$\lambda (K) > \frac{3}{4}$ and $K$ contains no rational number.
+
+\item[4.] (a)
+What does it mean to say that a function $f:X \to [-\infty, \infty]$ is
+${\cal A}$-measurable?
+
+\item[\quad] (b)
+Suppose that $f_n :X \to [-\infty, \infty]$ is ${\cal A}$-measurable for
+$n=1,2, \dots$ and define $f$ on $X$ by
+$$f(x) = \lim_{\overline{n \to \infty}} f_n (x)$$
+for $x \in X$. Use your definiton in (a) to prove that $f$ is
+${\cal A}$-measurable.
+
+\item[5.]
+Let $f:X \to [0,\infty[$ be ${\cal A}$-measurable. Define
+$$A=\{(x,y) \in X \times \R: 0 \leq y < f(x)\}$$
+Prove that $A\in {\cal A} \times {\cal M}_\lambda$ and that if $\mu$
+is $\sigma$-finite, then
+$$\mu \times \lambda (A) = \int_X fd\mu.$$
+
+\item[6.]
+Let $(f_n)^\infty_{n=1}$ be a sequence of real-valued ${\cal A}$-measurable
+functions on $X$ that converges to some function $f$ at each point of $X$.
+Prove that for each $a\in \R$ we have
+$$\mu (\{f > a\}) \leq \lim_{\overline{n \to \infty}}
+  \mu (\{f_n > a\}).$$
+
+\item[7.]
+Let $f: X \to [0,\infty [$ be ${\cal A}$-measurable and suppose that $\mu$
+is $\sigma$-finite. Define $m(t)=\mu (\{f >t\})$ for each $t\geq 0$. Prove
+that if $0<p< \infty$, then
+$$\int_X f^p d\mu = p \int^\infty_0 t^{p-1} m(t) dt.$$
+[Hint: $f^p(x) = \int^{f(x)}_0 pt^{p-1} dt$.]
+
+\item[8.]
+Prove the completeness of $L^p(\mu)$ for $1\leq p < \infty$.
+
+\item[9.]
+Let $2 \leq p < \infty$ and let $f,g \in L^p (\mu)$. Prove that
+$$\parallel \frac{f+g}{2} \parallel^p_p +
+  \parallel \frac{f-g}{2} \parallel^p_p \leq \frac{1}{2}
+  (\parallel f \parallel^p_p + \parallel g \parallel^p_p).$$
+[Hints: First show that if $a,b \geq 0$, then
+$a^p+b^p \leq (a^2 + b^2)^{p/2}$ and
+$\left(\frac{a^2 +b^2}{2} \right)^{1/2} \leq \left(\frac{a^p+b^p}{2}
+ \right)^{1/p}$.]
+
+\item[10.]
+Suppose $\mu(X) < \infty$ and let $\nu$ be another (positive) measure on
+$(X, {\cal A})$ with $\nu(X) < \infty$. Let $\nu = \nu_a + \nu_s$ be the
+Lebesgue decomposition of $\nu$ with respect to $\mu$ and let
+$w:X \to [0,\infty[$ be a Radon-Nikodym derivative of $\nu_a$ with respect to
+$\mu$. Define $w_0$ on $X$ by $w_0(x) = \min\{w(x),1\}$. Prove the following:
+
+\item[\quad] (a)
+For each ${\cal A}$-measurable $f:X \to [0, \infty]$ we have
+$$\int fw_0 d\mu \leq \min \left\{\int fd\nu, \int fd\mu \right\}.$$
+
+\item[\quad] (b)
+Suppose that to each $\varepsilon >0$ corresponds some ${\cal A}$-measurable
+$f:X \to ]0,\infty[$ such that
+$$\left(\int fd\nu \right) \left(\int f^{-1} d\mu \right) < \varepsilon$$
+where $f^{-1} = 1/f$. Then $\nu$ and $\mu$ are mutually singular. [Hint for
+(b): Apply the Schwarz Inequality to $f^{1/2} \cdot f^{-1/2} =1$ for the
+measure $w_0d\mu$.]
+
+
+
+
+
+\end{description}    
+%\end{Large}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

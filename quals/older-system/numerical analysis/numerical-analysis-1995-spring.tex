@@ -1,0 +1,174 @@
+% latex file
+\def\hcorrection#1{\advance\hoffset by #1 }
+\def\vcorrection#1{\advance\voffset by #1 }
+
+\documentclass{article}
+\usepackage{my,amsxtra,amssymb,amsthm}
+
+\vcorrection{-1.0in}
+\hcorrection{-0.8in}
+\textwidth 6.0in
+\textheight 9.0in
+\begin{document}
+%\begin{Large}
+
+
+
+
+
+
+\begin{center}\begin{LARGE}
+{\bf Numerical Analysis Qualifying Exam}\\ 
+{\bf Spring 1995}\\ \end{LARGE}
+\end{center}
+\vspace{0.1in}
+\noindent\hrulefill\\
+\begin{description}
+
+\item[1.]
+Consider the following code on a machine using binary number representations:
+
+$X = 0.0$
+
+$10  \quad X=X+0.1$
+
+PRINT $\ast$, X, SQRT(X) \quad (SQRT (X) is the square root of X)
+
+IF (X .NE. 1.0) GO TO 10
+
+The code is trying to print out $\sqrt{x}$ for $x=0.1, 0.2, \dots, 1.0$.
+What problem do you expect to happen in running the code and why? Suggest
+a change in the code to avoid the problem.
+
+\item[2.]
+Determine the linear least square approximation $y(x)=a+bx$ to an arbitrary
+continuous function $f(x)$ on $(-1,1)$ when the inner product is defined as
+$$(f,g) = \int^1_{-1} f(x)g(x) dx$$
+
+What trouble may happen if we want to find $a_n, a_{n-1}, \dots, a_0$
+of $y(x) = a_n x^n + a_{n-1} x^{n-1} + \dots + a_1 x+a_0$ for large $n$ as
+the lease square approximation? and what is a better way to construct
+the least square approximation of polynomial of degree less than or equal to
+$n$?
+
+\item[3.]
+Suppose we want to find solutions of the equation
+$$f(x) = x - \tan x=0,$$
+
+\item[\quad] (a)
+Show by using a graph that there are infinite many positive solutions to
+the equation.
+
+\item[\quad] (b)
+There is a root near $3\pi /2 \approx 4.71238898$, if we take initial guess
+as $x_0 = 4.7124$, and use Newton's method, what problem do you expect to
+happen and why?
+
+\item[\quad] (c)
+Rearrange terms in the equation so that it is much more easier to find the
+solutions by Newton's method.
+
+\item[4.]
+Suppose a numerical formula $I_h$ (like a numerical integration formula)
+with step size $h$ is used to approximate a mathematical expression $I$
+(like a definite integral). If the error of the formula is given by
+$$I_h - I= kh^p + O(h^{p+2}), \quad \hbox{where\ } k,p \hbox{\ are\ }
+  \hbox{constants}$$
+
+\item[\quad] (a)
+describe Richarson extrapolation which uses $I_h$, $I_{h/2}$ to generate
+a more accurate numerical formula $\tilde I_{h/2}$.
+
+\item[\quad] (b)
+Apply Richarson extrapolation to the trapezoidal rule
+$$I(f) = \int^b_a f(x) dx \approx I_h(f) = \frac{h}{2} (f(a) + f(b)), \quad
+  h = b-a$$
+to derive a more accurate integration formula. Identify this more accurate
+integration formula (find the familiar name of the formula).
+(Hint: $I_{h/2}$ would use two subintervals)
+
+\item[5.]
+Let $A$ be a real $n \times n$ matrix whose eigenvalues satisfy
+$0 < \lambda_n < \lambda_{n-1} < \dots < \lambda_1$. State and prove
+convergence of a numerical method for finding $\lambda_1$ and $\lambda_n$.
+
+\item[6.]
+Show that if $A \in R^{m \times n}$ has rank $n$, the
+$\parallel A(A^TA)^{-1} A^T \parallel_2 = 1$, where $A^T$ is the transpose
+of $A$.
+
+\item[7.]
+Suppose $A \in R^{n \times n}$, $A^T$ (the transpose of $A$) is diagonally
+dominant, i.e,
+$$|a_{ii}| \geq \sum^n_{\substack{ i =1 \\i \neq j}} |a_{ij}|,$$
+and $A$ is nonsingular, show that $A=LU$ with $L$ being a unit lower
+triangular matrix, i.e., Gauss elimination can be performed without pivoting,
+and $|l_{ij}| \leq 1$, where $l_{ij}$ are entries in $L$. (Hint: consider
+a partition of $A$ of the form:
+$$A = \left[\begin{array}{cc}
+        \alpha &w^t \\
+        v &B
+        \end{array} \right],
+        \hbox{where\ } B \in R^{(n-1) \times (n-1)}, v,w \in R^{n-1}.$$
+and consider one step of Gauss elimination)
+
+\item[8.]
+Given $A \in R^{n \times n}$, a symmetric positive matrix, solving the linear
+system $Ax = b$ for $x \in R^n$ is equivalent to minimizing the functional
+$$\phi (x) = \frac{1}{2} x^t Ax - x^t b, \quad
+  \hbox{\ where\ } x^t \hbox{\ is\ } \hbox{the\ } \hbox{transpose\ }
+  \hbox{of\ } x$$
+Suppose
+$$P_k = [p_1, p_2, \dots, p_k] \in R^{n \times k}, p_i \in R^n,
+  i = 1,2, \dots, k$$
+if $x \in$ span $\{p_1, p_2, \dots, p_k\}$, then
+$$x=P_{k-1} y + \alpha p_k, \quad P_{k-1} = [p_1, \dots, p_{k-1}], \
+  y \in R^{k-1}, \alpha \in R.$$
+It can be derived that
+$$\phi (x) = \frac{1}{2} \phi (P_{k-1} y) + \alpha y^t P^T_{k-1} Ap_k +
+  \frac{\alpha^2}{2} p^t_k Ap_k - \alpha p^t_k b$$
+
+The Conjugate Gradient method can be constructed as follows:
+$$k=0; x_0 = 0; r_0 = b, (r=b-Ax \hbox{\ is\ } \hbox{the\ }
+\hbox{residual},$$
+while
+$$\begin{aligned}
+        r_k &\neq 0 \\
+        k &= k+1 \\
+        \hbox{if\ } k &=1, p_1 = r_0
+        \end{aligned} $$
+otherwise choose
+$p_k \in \hbox{span} \{Ap_1, Ap_2, \dots, Ap_{k-1} \}^\perp, \hbox{such}
+  \hbox{\ that\ }  p^t_k r_{k-1} \neq 0$
+$$\begin{aligned}
+        \alpha_k &= p^t_k r_{k-1} / p^t_k Ap_k \\
+        x_k &= x_{k-1} + \alpha_k p_k \\
+        r_k &= b- Ax_k
+        \end{aligned}$$
+end
+
+Show that in the algorithm, $x_k$ minimizes the functional $\phi (x)$ over
+span $\{p_1, p_2, \dots, p_k\}$. Furthermore $p^t_ir_k = 0, i=1,2, \dots, k$.
+
+
+
+
+
+
+\end{description}    
+%\end{Large}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

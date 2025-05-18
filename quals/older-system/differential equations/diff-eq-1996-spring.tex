@@ -1,0 +1,217 @@
+% latex file
+\def\hcorrection#1{\advance\hoffset by #1 }
+\def\vcorrection#1{\advance\voffset by #1 }
+
+\documentclass{article}
+\usepackage{my,amsxtra,amssymb,amsthm}
+
+\vcorrection{-1.0in}
+\hcorrection{-0.8in}
+\textwidth 6.0in
+\textheight 9.0in
+\begin{document}
+%\begin{Large}
+
+
+
+
+
+
+\begin{center}\begin{LARGE}
+{\bf Partial Differential Equations Qualifying Exam}\\ 
+{\bf Spring 1996}\\ \end{LARGE}
+\end{center}
+\vspace{0.1in}
+\noindent\hrulefill\\
+
+The bundle \#1: The Laplace Equation
+
+\begin{description}
+
+\item[1.1]
+Consider the following problem:
+$$-\Delta u(x) = f(x), \quad x \in B_R(0) = \{|x| < R\}, \eqno{(1a)}$$
+$$u(x) = 0, \quad |x| = R, \eqno{(1b)}$$
+where
+$x=(x_1, \dots, x_n), n \geq 1, |x| = \sqrt{x^2_1 + \dots + x^2_n}, R>0$.
+
+How would you define the solution of problem (1) for $f \in L^2(B_R(0))$?
+State a theorem on the existence and uniqueness of solution to (1) with
+$f \in L^2(B_R (0))$.
+
+Choose the appropriate function space for the solutions of (1) with $f$'s
+in $L^2(B_R(0))$, and show that the solution depends continuously on $f$.
+
+\item[1.2]
+The Poisson formula,
+$$u(x) = \frac{1}{|\Bbb S^{n-1}|} \cdot \frac{R^2 -|x|^2}{R} \cdot
+  \int_{|y| = R} \frac{\varphi (y)}{|x-y|^n} dS_y, \eqno{(2)}$$
+where $|\Bbb S^{n-1}|$ is the area of the unit sphere $S^{n-1}$ in
+$\Bbb R^n$, gives the solution of the following Dirichlet problem
+in the ball $B_R(0)$,
+$$-\Delta u(x) = 0, \quad x \in B_R (0) = \{|x| < R\}, \eqno{(3a)}$$
+$$u(y) = \varphi (y), \quad |y| = R. \eqno{(3b)}$$
+Use (2) to prove the following result ({\it Harnack's inequality}):
+  
+{\it If $u$ is a nonnegative harmonic function in the ball
+$B_R(0)$, and $u \in C \overline{(B_R(0))} \cap C^2(B_R(0))$, then}
+$$R^{n-2} \cdot \frac{R-|x|}{(R+|x|)^{n-1}} \cdot u(0) \leq u(x) \leq
+  R^{n-2} \cdot \frac{R+|x|}{(R-|x|)^{n-1}} \cdot u(0),
+  \eqno{(4)}$$
+{\it for any $x \in B_R(0)$.}
+
+Use (4) to prove the Liouville theorem:
+
+{\it If the function $u$ is harmonic in $\Bbb R^n$ and bounded from below,
+then $u \equiv const$.}
+
+\item[1.3]
+Let $\Gamma_\alpha$, $0 < \alpha < 2\pi$, be the sector on the plane defined
+in the polar coordinates $(r, \theta)$ by the equation
+$$\Gamma_\alpha = \{(r, \theta) : r > 0, 0 < \theta < \alpha\}.$$
+Denote by $\partial \Gamma_\alpha$ the boundary of $\Gamma_\alpha$ (formed
+by the two rays, $\{r \geq 0, \theta = 0 \}$ and
+$\{r \geq 0, \theta = \alpha\}$).
+
+Use the separation of variables method to find nontrivial solutions $u$ of the
+Dirichlet problem
+$$-\Delta u(x) = 0, \quad x \in \Gamma_\alpha, \eqno{(5a)}$$
+$$u(x) = 0, \quad x \in \partial \Gamma_\alpha. \eqno{(5b)}$$
+
+In the case $\pi < \alpha < 2 \pi$, choose the solution $u$ with the
+properties:
+$$u \in W^1_2 (\Gamma_{\alpha, R}), \hbox{\ but\ } u \notin W^2_2
+  (\Gamma_{\alpha, R}). \eqno{(6)}$$
+for any $R>0$, where $\Gamma_{\alpha, R}$ is the intersection of
+$\Gamma_\alpha$ with the disc $\{0 \leq r < R\}$, and $W^1_2$, $W^2_2$
+are the standard Sobolev spaces (sometimes the notation $W^{1,2}$,
+$W^{2,2}$ is used for these spaces).
+
+\end{description}
+
+The bundle \#2: The Heat Equation
+
+\begin{description}
+
+\item[2.1]
+Consider the Cauchy problem:
+$$\frac{\partial}{\partial t} u(t,x) - \Delta u(t,x) = 0, \quad t>0,
+  x \in \Bbb R^n, \eqno{(7a)}$$
+$$u(0,x) = f(x). \eqno{(7b)}$$
+
+Assuming that $f(\cdot)$ is smooth, rapidly decreasing function, use the
+Fourier transform in $x$ to find the solution $u$ of (7).
+
+(You may need the equality $\int^{+\infty}_{-\infty} e^{-s^2} ds =\sqrt{\pi}$.)
+
+Show that if $f \in L^2 (\Bbb R^n)$, then the formula you obtained for
+$u(t,x)$ defines a function with the following properties:
+
+\item[\quad] a)
+$u(t, \cdot) \in L^2 (\Bbb R^n)$ for all $t>0$;
+
+\item[\quad] b)
+the mapping $t \mapsto u(t, \cdot) \in L^2(\Bbb R^n)$ from $[0, +\infty)$
+into $L^2(\Bbb R^n)$ is continuous, and $u(t, \cdot) \to f(\cdot)$ in
+$L^2(\Bbb R^n)$ as $t \searrow 0$;
+
+\item[\quad] c)
+$u(t,x)$ satifies (7a) in the distributional sense.
+
+\item[2.2]
+In the case $n=1$, find the solution of (7) corresponding to the initial
+condition
+$$f(x) = e^{ax^2}, $$
+where $a = const >0$. Find the life span of this solution (the life span
+is the largest time interval where the solution is finite).
+
+\item[2.3]
+Show that if $u(0,x) = f(x)$ is an even (odd) function of $x$, then, for
+every $t>0$, the solution $u(t,x)$ of (7) is an even(odd) function of $x$
+as well.
+
+Use this to solve the following initial boundary-value problem on the half-
+line:
+$$\frac{\partial}{\partial t} u(t,x) - \frac{\partial^2}{\partial x^2}
+  u(t,x) = 0, \quad t>0, 0<x< +\infty, \eqno{(8a)}$$
+$$u(0,x) = f(x) \equiv 1, 0<x< +\infty, \eqno{(8b)}$$
+$$u(t,0) = 0, t>0. \eqno{(8c)}$$
+
+\end{description}
+
+The bundle \#3: The Wave Equation
+
+\begin{description}
+\item[3.1]
+Consider the Cauchy problem
+$$\frac{\partial^2}{\partial t^2} u(t,x) - \Delta u(t,x) = 0, \quad
+  -\infty < t < +\infty, \quad x \in \Bbb R^n, \eqno{(9a)}$$
+$$u(0,x) = 0, \quad x \in \Bbb R^n, \eqno{(9b)}$$
+$$\frac{\partial}{\partial t} u(t,x) |_{t=0} = f(x), \quad x \in \Bbb R^n.
+  \eqno{(9c)}$$
+Assume that you know the operator $U(t)$ that solves this problem, i.e.,
+$$U(t) : f(\cdot) \mapsto (U(t) f)(\cdot) = u(t, \cdot), \eqno{(10)}$$
+where $u(t,)$ is the solution of (9).
+
+Use this operator to express the solution of the more general problem,
+$$\frac{\partial^2}{\partial t^2} u(t,x) - \Delta u(t,x) = h(t,x), \quad
+  -\infty < t < +\infty, \quad x \in \Bbb R^n, \eqno{(11a)}$$
+$$u(0,x) = g(x), \quad x \in \Bbb R^n, \eqno{(11b)}$$
+$$\frac{\partial}{\partial t} u(t,x) |_{t=0} = f(x), \quad
+  x \in \Bbb R^n, \eqno{(11c)}$$
+in terms of the data: $f, g$, and $h$.
+
+Hint: Looking at the Fourier transformation of the solution of (11) may
+help you.
+
+\item[3.2]
+Consider the problem (11). If the initial data $f$ and $g$ are chosen from
+the function spaces $H^1(\Bbb R^n) = W^1_2 (\Bbb R^n)$ and $L^2(\Bbb R^n)$,
+respectively, then what is the ``right" function space for $h$ in order
+that problem (11) be well-posed?
+
+Write down the appropriate energy estimate that allows to prove the
+uniqueness of the solution for (11). Derive this estimate for the solution
+of (11) under the assumptions that the initial data $f$ and $g$, the
+external force $h$, and the solution $u$ are all sufficiently smooth and
+decrease fast at the spatial infinity.
+
+\item[3.3]
+What is the Huygens principle for the wave equation?
+
+Solve problem (9) explicitly in the case $n=1$ and
+$$f(x) = \begin{cases}
+                1, \hbox{if\ } |x| \leq 1, \\
+                0, \hbox{if\ } |x| > 1.
+                \end{cases}$$
+Explain how your solution illustrates the Huygens principle.
+
+\item[3.4]
+Use the method of separation of variables to solve the following initial
+boundary-value problem:
+$$\frac{\partial^2}{\partial t^2} u(t,x) - \frac{\partial^2}{\partial x^2}
+  u(t,x) = 0, \quad t>0, \quad 0 < x< 1, \eqno{(12a)}$$
+$$u(0,x) = \sin(\pi x), \quad 0 \leq x \leq 1, \eqno{(12b)}$$
+$$\frac{\partial}{\partial t} u(t,x) |_{t=0} \equiv 1, \quad
+  0 \leq x \leq 1, \eqno{(12c)}$$
+$$u(t,0) = u(t,1) = 0, \quad t \geq 0. \eqno{(12d)}$$
+
+
+
+\end{description}    
+%\end{Large}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

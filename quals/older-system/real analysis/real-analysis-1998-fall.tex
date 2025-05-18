@@ -1,0 +1,153 @@
+% latex file
+%Real Analysis - Saeki & Vaninsky
+
+\def\hcorrection#1{\advance\hoffset by #1 }
+\def\vcorrection#1{\advance\voffset by #1 }
+
+\input amssym.def   %defines Bbb and gothic (frak)
+\input amssym       %defines Bbb and gothic (frak)
+
+\input prepictex.tex
+\input pictex.tex
+\input postpictex.tex
+
+%\documentstyle[bbb]{report}
+\documentclass[bbb]{report}
+
+\vcorrection{-.5in}
+\hcorrection{-1in}
+
+\topmargin  0in
+\textwidth 6.4in
+\textheight 8.5truein
+
+\mathsurround=2pt
+
+\def\ds{\displaystyle}
+
+\def\R{{\Bbb R}}
+\def\Z{{\Bbb Z}}
+\def\C{{\Bbb C}}
+\def\D{{\Bbb D}}
+
+
+\begin{document}
+
+\begin{Large}
+
+\hfill Name \rule{2.5in}{.01in}
+\par
+\vspace{.25in}
+
+\begin{center}
+   REAL ANALYSIS QUALIFYING EXAM \\
+   Fall 1998 \\
+   (Saeki \& Vaninsky) \\
+\end{center}
+
+
+\vspace{.1in}
+
+
+\begin{center} {\bf
+Do all of the problems below.} \end{center}
+
+
+\vspace{.2in}
+
+
+Let $(X,{\cal A}, \mu)$ be a measure space.
+\vspace{.15in}
+
+\begin{description}
+
+
+\item[1.]
+Let $\varphi:X\to\Omega$, where $\Omega$ is a topological space.
+
+\vspace{.1in}
+
+\item[\quad] (a)
+What does it meant that $\varphi$ is measurable?
+\vspace{.25in}
+
+\item[\quad] (b)
+Suppose $\varphi$ is measurable and $E$ is a Borel subset of $\Omega$.
+Prove that $\varphi^{-1}(E)$ is measurable.
+
+\vspace{.5in}
+
+\item[2.]
+Let $f\in L^1(\mu)$. Prove that
+$\bigg|\ds\int f\,d\mu\bigg| \leq \ds\int|f|d\mu$.
+
+\vspace{.5in}
+
+\item[3.]
+Let $1\leq p<\infty$. Prove the completeness of $L^P(\mu)$.
+
+\vspace{.5in}
+
+\item[4.]
+Prove the Dominated Convergence Theorem by applying
+Fatou's Lemma.
+
+\vfill
+\pagebreak
+
+\item[5.]
+Let $\varphi:X\to \Omega$ be measurable, where $\Omega$
+is a topological space. Define $\nu(E):=\mu(\varphi^{-1}(E))$ for
+each $E\in {\cal B}_{\Omega}$ (the Borel subsets of $\Omega$).
+Prove:
+
+\vspace{.1in}
+\item[\quad] (a)
+$\nu$ is a Borel measure.
+
+\vspace{.25in}
+\item[\quad] (b)
+Let $f:\Omega\to[0,\infty]$ be Borel measurable. 
+Then
+$$ \int_\Omega f\,d\nu=\int_X f\circ \varphi\,d\mu. $$
+
+\vspace{.5in}
+\item[6.]
+Let $f:X\times [0,1]\to\C$.
+State (nontrivial) conditions on $f$ that \newline guarantee
+
+$$
+(\ast)\qquad\qquad \frac{d}{dt} \int f(x,t)\,d\mu(x)=\int
+\frac{\partial f}{\partial t}(x,t)\,d\mu(x)
+\quad \forall\ t\in(0,1)  \qquad\qquad{}
+$$
+and then prove ($\ast$).
+
+\vspace{.25in}
+
+\item[7.]
+Let $L^\infty(\mu)+L^1(\mu)=\{g+h:g\in L^\infty(\mu)$,
+$h\in L^1(\mu)\}$.
+Prove that
+$$
+L^P(\mu)\subset L^\infty(\mu)+L^1(\mu)
+\quad \forall p\in[1,\infty].
+$$
+
+\vspace{.25in}
+\item[8.]
+Let $\varepsilon>0$. Construct a compact set
+$K\subset[0,1]{\bf Q}$
+such that $|K|>1-\varepsilon$, where $|K|$ is
+the Lebesgue measure of $\kappa$.
+
+
+\vfill
+
+
+
+\end{description}
+
+\end{Large}
+
+\end{document}

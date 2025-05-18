@@ -1,0 +1,147 @@
+% latex209 file
+%Real Analysis - Saeki & Moore
+
+\def\hcorrection#1{\advance\hoffset by #1 }
+\def\vcorrection#1{\advance\voffset by #1 }
+
+\input amssym.def   %defines Bbb and gothic (frak)
+\input amssym       %defines Bbb and gothic (frak)
+
+\input prepictex.tex
+\input pictex.tex
+\input postpictex.tex
+
+%\documentstyle[bbb]{report}
+\documentclass[bbb]{report}
+
+\vcorrection{-1in}
+\hcorrection{-1.25in}
+
+\topmargin  0in
+\textwidth 7in
+\textheight 9.5truein
+
+\mathsurround=2pt
+
+\pagestyle{empty}
+
+\def\ds{\displaystyle}
+
+\def\R{{\Bbb R}}
+\def\Z{{\Bbb Z}}
+\def\C{{\Bbb C}}
+\def\D{{\Bbb D}}
+\def\N{{\Bbb N}}
+\def\M{{\cal M}}
+
+\begin{document}
+
+\begin{Large}
+
+\hfill Name \rule{2.5in}{.01in}
+\par
+\vspace{.25in}
+
+\begin{center}
+   REAL ANALYSIS QUALIFYING EXAM \\
+  Spring 2000\\
+   (Saeki \& Moore) \\
+\end{center}
+
+
+\vspace{.1in}
+
+\end{Large}
+
+\begin{large}
+
+
+{\bf Answer all eight questions.
+Throughout, $(X, {\cal M} ,\mu)$ denotes a measure space,
+$\mu$ denotes a positive measure unless otherwise specified, and all
+functions are assumed to be measurable.}
+
+\vspace{.25in}
+
+
+\begin{description}
+
+\item[1.]
+Suppose $f\in L^1(\mu)$. Prove that given $\varepsilon>0$,
+there exists a $\delta>0$ such that $|\ds\int_E f\,d\mu|<\varepsilon$
+whenever $\mu(E)<\delta$.
+
+\vspace{.15in}
+
+\item[2.]
+Let $f$ be a measurable function on $X$ and $p>0$. Prove
+$$ \int_x|f|^Pd\mu=p\int^\infty_0 t^{p-1} \mu(\{|f|>t\})dt.$$
+
+\vspace{.15in}
+
+\item[3.]
+Let $g$ be a bounded measurable functon on $\R$ which has the
+property that for every measurable set $E$,
+$\ds\lim_{n\to\infty}\ds\int_Eg(nx)dx=0$.
+Show that for every $f\in L^1(\R)$
+$$ \lim_{n\to\infty} \int^\infty_{-\infty} f(x) g(nx)d\mu=0.$$
+
+\vspace{.15in}
+
+\item[4.]
+Suppose $\{f_n\}$ is a sequence of measurable functions which has
+$f_n\to f$ a.e. and
+$ \|f_n\|_1\to \|f\|_1<\infty$.
+Prove that $f_n\to f$ in $L^1$.
+
+\vspace{.15in}
+
+\item[5.]
+Let $v$ be another measure on $(x,\M)$ with $v(x)<\infty$.
+Prove that the following two statements are equivalent.
+\item[\quad] (a)
+$A\in $, $\mu(A)=0\Rightarrow v(A)=0$.
+
+\item[\quad] (b)
+$\forall \varepsilon >0$ there exists $\delta>0$ such that
+$v(b)<\varepsilon$ whenever $b\in \M$ and $\mu(b)<\delta$.
+
+\vspace{.15in}
+
+\item[6.]
+Supose $a\subseteq \M$ is also a $\sigma\hbox{-algebra}$ on $x$.
+Suppose $f\in L^1(x,\M,\mu)$.
+
+\item[\quad] (a)
+Prove that there exists a function $g\in L^1(x,a,\mu)$ such that
+$\ds\int_Eg\, d\mu=\ds\int_Ef\,du$ for all $E\in a$.
+
+\item[\quad] (b)
+Give an example to show that in (a) we may not necessarily have $g=f$.
+
+\vspace{.15in}
+
+\item[7.]
+Prove that an orthnormal set in a separable Hilbert space is at most
+countable.
+
+\vspace{.15in}
+
+\item[8.]
+Let $T(x)$ be a trigonometric polynomial on $[-\pi,\pi]$.
+(Recall that this means $T(x)$ is a finite linear combination of
+elements of the set $\{e^{inx}\}_{n\in \mu}$).
+Prove that
+$$ |T(0)|\leq \log \frac{1}{2\pi}\int^\pi_{-\pi} \exp|T(x)|dx.$$
+
+
+
+\vfill
+
+
+
+\end{description}
+
+\end{large}
+
+\end{document}

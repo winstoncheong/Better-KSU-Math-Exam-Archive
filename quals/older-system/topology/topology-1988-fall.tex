@@ -1,0 +1,216 @@
+% latex file
+\def\hcorrection#1{\advance\hoffset by #1 }
+\def\vcorrection#1{\advance\voffset by #1 }
+
+\documentclass{article}
+\usepackage{my,amsxtra,amssymb,amsthm}
+
+\vcorrection{-1.0in}
+\hcorrection{-0.8in}
+\textwidth 6.0in
+\textheight 9.0in
+
+\def\R{\mathbb R}
+\def\C{\mathbb C}
+\def\N{\mathbb N}
+\def\Z{\mathbb Z}
+\def\Q{\mathbb Q}
+
+\begin{document}
+%\begin{Large}
+
+
+
+
+
+
+\begin{center}\begin{LARGE}
+{\bf Topology Qualifying Exam}\\ 
+{\bf Fall 1988}\\ \end{LARGE}
+\end{center}
+\vspace{0.1in}
+\noindent\hrulefill\\
+
+Work 9 of the following problems. Do not turn in more than 9.
+
+\begin{description}
+\item[1.]
+Let $A$ be a subset of space $X$ and let $\overline A$, $Fr(A)$, and
+$A^\circ$ denote the closure, frontier, and interior of $A$ in $X$,
+respectively. The set $A$ is called poor if and only if $Fr(A) = A$, and
+the set $A$ is called thin if and only if $\overline A^\circ = \emptyset$.
+Prove the following
+
+\item[\quad] (i)
+If $A$ is poor, then $A$ is thin.
+
+\item[\quad] (ii)
+If $A$ is closed, then $A$ is poor if and only if $A$ is thin.
+
+Give an example of space $X$ in which some subset $A$ is thin but not poor.
+
+\item[2.] (a)
+True-False
+
+\item[\qquad] (i)
+The composition of quotient maps is a quotient map.
+
+\item[\qquad] (ii)
+The product of metrizable spaces is metrizable.
+
+\item[\qquad] (iii)
+$f: X\to Y$ is a topological embedding if and only if $f$ is one-to-one and
+$X$ has the coarset (=weakest) topology making $f$ continuous.
+
+\item[\qquad] (iv)
+A space is $T_1$ if and only if it is locally $T_1$; i.e., each pt has a base
+of $T_1$ neighborhoods.
+
+\item[\qquad] (v)
+A space is $T_2$ if and only if it is locally $T_2$; i.e., each pt has a base
+of $T_2$ neighborhoods.
+
+\item[\qquad] (vi)
+Every metrizable space is normal.
+
+\item[\qquad] (vii)
+Every locally compact Hausdorff space is completely regular.
+
+\item[\qquad] (viii)
+Every subspace of a separable Hausdorff space is separable and Hausdorff.
+
+\item[\quad] (b)
+For each false entry, give a counter example (no proofs).
+
+\item[3.]
+A family of functions $(f_i : A \to B_i)_{i \in I}$ with a common domian
+is called a mono-source provided that for each set $C$ and each pair of
+functions $h,k: C \to A$, $f_i \circ h = f_i \circ k$
+for each $i \in I$ implies that $h=k$.
+
+Prove that $(f_i: A \to B)_{i \in I}$ is a mono-source if and only if
+it separates points; i.e., for each $a, a^\prime \in A$ with
+$a \neq a^\prime$ there is some $j \in I$ such that
+$f_j(a) \neq f_j(a^\prime)$.
+
+\item[4.]
+A continuous map $f: (X, \tau) \to (Y, \sigma)$ is said to be initial
+provided that for each topological space $(Z, \mu)$, each set-function
+$g: Z \to X$ is continuous whenever $f \circ g : (Z, \mu) \to (Y, \sigma)$
+is continuous.
+
+Prove that:
+
+\item[\quad] (a)
+The composition of initial maps is initial.
+
+\item[\quad] (b)
+the product of initial maps is initial; i.e., each of
+$(X_i, \tau_i) \stackrel{f_i}{\to} (Y_i, \sigma_i)$
+is initial, then so is the unique induced map
+$$(\Pi X_i, \tau) \stackrel{f= \langle f_i \rangle}{\longrightarrow}
+  (\Pi Y_i, \sigma)$$
+where $\tau$ and $\sigma$ are the product topologies.
+
+\item[5.]
+Prove that each non-degenerate completely regular $T_1$ connected space is
+uncountable.
+
+\item[6.]
+Prove that any open subset of a locally connected, second countable space
+$X$ can be written as the union of a finite or infinite sequence of
+disjoint open, connected subsets of $X$.
+
+\item[7.]
+Consider the ordinal spaces $[1, \omega]$ and $[1, \omega_1]$ where $\omega$
+is the first inifinite ordinal and $\omega_1$ is the first uncountable
+ordinal. Recall that every continuous real-valued function on
+$[1, \omega_1)$ (or on $[1, \omega_1]$) is constant on some tail. Prove that
+the Stone-\u Cech compactification of the deleted Tychonoff plank
+$[1, \omega_1] \times [1, \omega] - \{(\omega_1, \omega)\}$ is the
+Tychonoff plank $[1, \omega_1] \times [1, \omega]$.
+
+\item[8.]
+Give 4 examples, 1 compact, 1 non-compact, 1 non-locally connected, 1
+non-locally compact, of spaces homotopically equivalent to $S^1$, but not
+homeomorphic to $S^1$.
+
+\item[9.]
+Characterize the sequences $(x_n, y_n)$ in the Moore plane $\Gamma$
+(tangent disc space) which converge to $(0,0)$.
+
+\item[10.]
+Show that $\prod_{\alpha \in A} X_\alpha$ is connected if and only if each
+$X_\alpha$ is connected.
+
+\item[11.]
+Let $f: X \to Y$ be perfect. Show that if $Y$ is paracompact, so is $X$.
+
+\item[12.]
+Find a flaw in the ``Proof" of the following:
+
+{\bf Theorem.} All real-valued functions are continuous.
+
+{\bf Lemma.} $f: X \to R$ is continuous if and only if $g_f$ defined by
+$x \mapsto (x, f(x))$ is continuous.
+
+{\bf Proof.}
+If $f$ is continuous, then $g_f$ is determined by continuous functions, $f$
+and identify, so it must be continuous. If $g_f$ is continuous then $f$
+is $g_f$ followed by the second projection, so it must be continuous.
+
+{\bf Proof of Theorem}
+For any $f: X \to R$, $g_f$ is one-to-one. Thus it is continuous if and only
+if its inverse is open. However the inverse of $g_f$ is the first projection.
+But all projection functions are well-known to be open surjections. Hence
+$g^{-1}_f$ is open, so $g_f$ is continuous. Hence, by the lemma, $f$ is
+continuous.
+
+\item[13.]
+Prove that there is no smallest base for the usual topology on $R$.
+
+\item[14.]
+Prove that the following are equivalent for any topological space $Y$:
+
+\item[\quad] (a)
+$Y$ is Hausdorff.
+
+\item[\quad] (b)
+the diagonal $\Delta_Y = \{(y,y) | y \in Y\}$ is a closed subset of
+$Y \times Y$.
+
+\item[\quad] (c)
+for each space $Z$ and each pair of continuous functions $f,g: Z \to Y$ that
+agree on a dense subset of $Z$, it follows that $f=g$.
+
+\item[15.] (a)
+Prove that if $A \times B$ is compact subset of $X \times Y$ contained in an
+open set $W$ in $X \times Y$, then there exist open sets $U \subseteq X$ and
+$V \subseteq Y$ such that
+$$A \times B \subseteq U \times V \subseteq W.$$
+
+\item[\quad] (b)
+Prove that the product of two compact spaces is compact.
+
+
+
+
+
+
+\end{description}    
+%\end{Large}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,158 @@
+% latex file
+\def\hcorrection#1{\advance\hoffset by #1 }
+\def\vcorrection#1{\advance\voffset by #1 }
+
+\documentclass{article}
+\usepackage{my,amsxtra,amssymb,amsthm}
+
+\vcorrection{-1.0in}
+\hcorrection{-0.8in}
+\textwidth 6.0in
+\textheight 9.0in
+
+\def\R{\mathbb R}
+\def\C{\mathbb C}
+\def\N{\mathbb N}
+\def\Z{\mathbb Z}
+\def\Q{\mathbb Q}
+
+\begin{document}
+%\begin{Large}
+
+
+
+
+
+
+\begin{center}\begin{LARGE}
+{\bf Real Analysis Qualifying Exam}\\ 
+{\bf Spring 1991}\\ \end{LARGE}
+\end{center}
+\vspace{0.1in}
+\noindent\hrulefill\\
+
+In what follows, $(X, {\cal A}, \mu)$ is an arbitrary measure space and
+$\lambda$ is Lebesgue measure on $\R$.
+
+\begin{description}
+\item[1.](a)
+What does it mean to say that a function $f:X \to [-\infty, \infty]$ is
+${\cal A}$-measurable?
+
+\item[\quad] (b)
+Prove that if ${\cal F}$ is a countable, nonvoid set of such functions $f$
+and if
+$$g(x) = \sup \{f(x) : f\in {\cal F}\}$$
+for each $x \in X$, then $g$ is ${\cal A}$-measurable.
+
+\item[\quad] (c)
+Give an example of $X, {\cal A}$, and ${\cal F}$ to show that the assertion in
+(b) can fail if ``countable" is omitted.
+
+\item[2.] Let $(E_n)^\infty_{n=1} \subset {\cal A}$ and define
+$$E = \{x \in X :\{n \in \N : x \in E_n\} \hbox{\ is\ }
+  \hbox{infinite\ }.$$
+Prove that $E \in {\cal A}$ and if $\sum^\infty_{n=1} \mu (E_n) < \infty$,
+then $\mu (E) = 0$. [Hint: Consider the sets
+ $A_j = \cup^\infty_{n=j} E_n$.]
+
+\item[3.]
+Let $f \in L_1 (\mu)$ and $\varepsilon >0$. Prove that there is some
+$\delta >0$ such that
+$$A \in {\cal A}, \mu (A) < \delta \Rightarrow |\int_A fd\mu| <
+ \varepsilon.$$
+
+\item[4.]
+Suppose $f \in L_p (\R)$ and $p>0$. Prove that
+$$\lim_{t \to 0} \int_\R |f(x+t) - f(x) |^p dx =0.$$
+[Hint: Fist approximate $f$ with a continuous function having compact
+support.]
+
+\item[5.]
+Suppose $\mu(X) < \infty, f: X \to [0, \infty]$ is ${\cal A}$-measurable,
+$\int_X fd\mu < \infty$, and ${\cal B}$ is a sub-$\sigma$-algebra of
+${\cal A}$. Prove that there exists a ${\cal B}$-measurable
+$g:X \to [0,\infty]$ such that
+$$\int_B gd\mu = \int_B fd\mu \quad \forall B \in {\cal B}.$$
+Prove also that
+$$\int_X hgd\mu = \int_X hfd\mu$$
+whenever $h:X \to [0,\infty]$ is ${\cal B}$-measurable.
+
+\item[6.]
+Suppose $(g_n)^\infty_{n=1} \subset L_1 ([0,1])$, $g_n \geq 0$ a.e.
+$\forall n$, and the sequence $(\int^1_0 fg_nd \lambda)^\infty_{n=1}$
+converges $\forall f \in C([0,1])$. Prove that there is a Borel measure
+$\nu$ on [0,1] such that
+$$\lim_{n \to \infty} \int^1_0 fg_n d\lambda = \int_{[0,1]} fd\nu
+  \quad \forall f \in C ([0,1]).$$
+
+\item[7.]
+For $f \in L_1 (\R)$, define its Fourier transform $\widehat f$ on $\R$ by
+$\widehat f (t)= \int_\R f(x)e^{-itx} dx$. Prove that if $f,g \in L_1 (\R)$,
+then
+
+\item[\quad] (a)
+$\widehat f$ is continuous on $\R$,
+
+\item[\quad] (b)
+$\widehat f$ is bounded,
+
+\item[\quad] (c)
+$\lim_{|t| \to \infty} \widehat f (t) = 0$
+[Hint: First suppose $f$ is a step function.],
+
+\item[\quad] (d)
+$\int_\R f(x) \widehat g (x) dx = \int_\R \widehat f (t) g(t) dt.$
+
+\item[8.]
+Suppose that $g: \R \to \C$ is measurable and
+$$\int_\R (1+|y|) |g(y)| dy < \infty.$$
+
+Define $f$ on $\R$ by
+$$f(x) = \int_\R g(y) \cos (xy) dy.$$
+
+Prove that $f$ is differentiable on $\R$ and
+$$f^\prime (x) = -\int_\R yg(y) \sin (xy) dy$$
+for every $x \in \R$.
+
+\item[9.]
+Give an explicit example of a Borel measure $\sigma$ on $\R$ for which
+
+\item[\quad] (a)
+$\sigma (\R) =1$,
+
+\item[\quad] (b)
+$\sigma (\{x\}) = 0 \forall x \in \R$, and
+
+\item[\quad] (c)
+for some compact set $P \subset \R$ we have $\lambda (P) = 0$ and
+$\sigma (P) =1$ where $\lambda$ is Lebesgue measure on $\R$.
+
+\item[10.]
+Suppose that $f:[a,b] \to \C$ is absolutely continuous. Prove that the total
+variation $V^b_a f$ over $[a,b]$ of $f$ is given by
+$$V^b_a f= \int^b_a |f^\prime (x)| dx.$$
+[Hint: Approximate with appropriate step functions.]
+
+
+
+
+
+
+\end{description}    
+%\end{Large}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

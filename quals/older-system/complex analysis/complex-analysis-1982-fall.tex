@@ -1,0 +1,127 @@
+% latex file
+\def\hcorrection#1{\advance\hoffset by #1 }
+\def\vcorrection#1{\advance\voffset by #1 }
+
+\documentclass{article}
+\usepackage{my,amsxtra,amssymb,amsthm}
+
+\vcorrection{-1.0in}
+\hcorrection{-0.8in}
+\textwidth 6.0in
+\textheight 9.0in
+
+\def\R{\mathbb R}
+\def\C{\mathbb C}
+\def\N{\mathbb N}
+\def\Z{\mathbb Z}
+\def\Q{\mathbb Q}
+
+\begin{document}
+%\begin{Large}
+
+
+
+
+
+
+\begin{center}\begin{LARGE}
+{\bf Complex Variables Qualifying Exam}\\ 
+{\bf Fall 1982}\\ \end{LARGE}
+\end{center}
+\vspace{0.1in}
+\noindent\hrulefill\\
+
+\begin{description}
+\item[1.]
+Show that the series $\sum^\infty_{n=1} \frac{1}{n^2 + z^2}$
+converges uniformly on compact subsets of $1 < |z| < 2$.
+
+\item[2.]
+(Strong Form of Morera) $f$ is continuous in $D=D(0,1)$
+and $\int_{[0, x, x+ iy, iy, 0]} f=0$ whenever $x + iy \varepsilon D$.
+
+\item[\quad] (i)
+Show that the function $F$ defined in $D$ by
+$$F(z) = \int_{[0, Rez, z]} f$$
+satisfies the Cauchy-Riemann Equation.
+
+\item[\quad] (ii)
+Conclude that $f$ is holomorphic in $D$.
+
+\item[3.]
+Calculate $\int^\infty_0 \frac{\cos (mx)}{x^2 + 1} dx$ by the method of
+residues.
+
+\item[4.]
+(Abstract Derivation) Let $U$ be an open subset of $\C$, $H(U)$ the set of
+all holomorphic function on $U$. Suppose that
+$\Delta : H(U) \to H(U)$ is a {\it linear} map which satisfies
+$$\Delta (fg) = \Delta (f) \cdot g + f \cdot \Delta (g) \quad
+  \forall f, g \varepsilon H(u).$$
+
+\item[\quad] (i)
+Show that $\Delta (c) = 0$ for all constant functions $c$.
+
+\item[\quad] (ii)
+Let $I$ denote the identity function on $U : I(z) = z$ for all
+$z \varepsilon U$. Show that
+$$\Delta (f) = \Delta (I) \cdot f^\prime \quad \forall f \varepsilon H(U).$$
+
+{\bf HINT:} Given $\lambda \varepsilon U$, $f \varepsilon H(U)$
+write $f(z) = f(\lambda) + (z-\lambda) f^\prime (\lambda) +
+(z-\lambda)^2 g(z)$ for some $g \varepsilon H(U)$, apply $\Delta$ and use
+(i).
+
+\item[5.]
+Show that all the roots of $z^7 - 5z^3 + 12 = 0$, lie between the circles
+$|z| = 1$ and $|z| = 2$ by using Rouche's Theorem.
+
+\item[6.]
+(Removable Sets) Let $f$ be continuous in $D= D(0,1)$ and holomorphic in
+$D \backslash \R$. Show that actually $f$ is holomorphic in $D$.
+
+{\bf HINT:} The strong form of Morera's Theorem (earlier problem) is
+applicable.
+
+\item[7.] (i)
+State Schwarz' Lemma.
+
+\item[\quad] (ii)
+Use (i) to find all the conformal maps of $D(0,1)$ onto $D(0,1)$.
+
+\item[8.]
+(Holomorphic Logarithms) $f$ is a zero-free entire function. Show how to
+find an entire function $g$ such that $f = e^g$.
+
+\item[9.]
+$f$ and $g$ are entire funcitons which satisfy
+$$|f(z)| \leq |g(z)| \forall z \varepsilon \C.$$
+Show that $f$ is a constant multiple of $g$. (Exercise appropriate caution
+at the zeros of $g$.)
+
+\item[10.]
+Evaluate
+$$\phi_C \frac{\sin \pi z^2 + \cos \pi z^2}{(z-1)(z-2)} dz,$$
+where $C$ is $|z| = 3$.
+
+
+
+
+
+\end{description}    
+%\end{Large}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,184 @@
+%ÿWPCX
+%ûÿ2BVPZ¦Courier 10cpiðÿÿ‰?xxx,Ûwôxþ6X@É“8Ç;X@þþþþþþþÿþÿÿÿþÿÿþÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿHP LaserJet IIIDHPLASII0.PRSÛxŒ
+%@É‡Ï,\,ð°6mX@ÐÐÓÓûÿ2FV#|x%QX©F95
+%Crane & Wu
+% LaTeX file 
+
+
+%\documentstyle[12pt]{article}
+\documentclass[12pt]{article}
+\topmargin -.5in
+\textwidth 6.1in
+\textheight 9.0 in
+\input amssym.def   %defines Bbb and gothic (frak)
+\input amssym       %defines Bbb and gothic (frak)
+
+
+\renewcommand{\labelenumi}
+{\mbox{ \mbox{{\rm {\roman{enumi}}}})}}
+\renewcommand{\theenumi}{\roman{enumi}} 
+%This changes the numbering in itermizing to roman.
+\newcounter{problem}\setcounter{problem}{0}
+\renewcommand{\theproblem}{\arabic{problem}}
+\newcommand{\problem}{%\setcounter{subsubsection}{0}
+     \par \vspace{1em} 
+      \stepcounter{problem} 
+          \noindent {\bf {\theproblem}. }
+     }
+
+
+\begin{document}
+
+ \begin{center}
+
+ {\bf TOPOLOGY QUALIFYING EXAM \ \ Fall 1995}
+
+     (Crane and Wu)
+
+ \end{center}
+
+Work out problem {\bf 1} and then choose {\bf 4} (and only 4) 
+additional problems among the remaining ones. Start each 
+problem on a new sheet of paper. 
+{\bf Do not turn in more than 4 additional problems.}
+A space always means a topological space below.
+
+\vspace{20pt}
+{\bf This one is required!}
+\problem 
+Answer the following questions and give a brief explanation or
+counterexample:
+\begin{enumerate}
+\item What is the smallest possible cardinality of a noncompact
+Hausdorff
+     space?
+\item \begin{enumerate}
+     \item Is the disjoint union of finitely many compact spaces
+compact?
+     \item Is the Cartesian product of finitely many compact
+spaces
+          compact? 
+     \item Is the Cartesian product of any family of compact
+spaces
+          compact?
+     \item Is the intersection of any family of compact subsets
+of a
+          Hausdorff space compact?
+     \end{enumerate}
+\item Is the intesection of two connected spaces connected?
+\item Is the Cartesian product of finitely many connected spaces
+connected?
+\item Is the Cartesian product of uncountably many connected
+spaces connected?
+\item Is every space metrizable?
+\item Is the inverse of any continuous bijective function
+continuous?
+\item Is the composite of two continuous functions continuous?
+\item What is a quotient map?
+\item Is a quotient map always an open map?
+\end{enumerate}
+
+\vspace{12pt} {\bf Choose 4 problems from below:}
+
+\problem
+Let 
+$S:=\left\{ (x, y)\in {\Bbb R}^2 \ | 
+    \ y=\sin{\frac{1}{x}}, x > 0 \right\}\subset {\Bbb R}^2 $. 
+   The closure $\overline{S}$ of $S$ (in ${\Bbb R}^2$) 
+   is called the {\bf topologist's sine curve}. 
+It is endowed with the subspace topology. Show that the
+topologist's sine
+   curve is connected, but not path connected. 
+   Is $\overline{S}$ locally connected?
+
+\problem
+Let $f, g:X\rightarrow Y$ be continuous. Assume that $Y$ is
+Hausdorff.
+Show that the set $\{ x\in X\ | \ f(x)=g(x) \}$ is closed in $X$.
+
+\problem
+Let $(X, d)$ be a metric space. Show that the following are
+equivalent:
+\begin{enumerate}
+ \item $X$ has a countable basis;
+ \item $X$ is Lindel\"{o}f;
+ \item $X$ has a countable dense subset.
+\end{enumerate}
+
+\problem
+Prove or disprove the following statements:
+\begin{enumerate}
+\item The continuous image of a locally connected space is
+locally connected;
+\item The quotient of a locally connected space is locally
+connected.
+\end{enumerate}
+
+\problem
+Let $f: X\rightarrow Y$ be a map, where $Y$ is a compact
+Hausdorff
+   space and $X$ any topological space. Show that $f$ is
+continuous
+   iff the graph of $f$,
+   $$ G_f :=\{ (x, f(x))\ |\ x\in X\}\subset X\times Y$$
+   is closed in $X\times Y$. 
+
+\problem
+Show that if $Y$ is compact,then the projection map
+$$ \pi_1: X\times Y\longrightarrow X $$
+is a closed map. Is the compactness of $Y$ necessary?
+
+\problem
+Let $X$ be a regular space with a countable basis and $U$ a
+   non-empty open subset. Show that
+\begin{enumerate}
+  \item $U$ is a countable union of closed subsets of $X$;
+  \item There is a continuous function $f: X\rightarrow [0, 1]$
+        such that $f(x)>0$ for $x\in U$ and $f(x)=0$ for
+$x\not\in U$.
+\end{enumerate}
+
+\problem
+A space $X$ is called {\it locally metrizable} if each point $x$
+of $X$
+has a neighborhood that is metrizable in the subspace topology.
+Show that a regular Lindel\"{o}f space is metrizable if it is
+locally
+metrizable.
+
+\problem
+Let $f:X\rightarrow {\Bbb R}$ be a continuous real-valued
+function on
+the compact Hausdorff space $X$. Show that every nonempty open
+subset of $X$ contains a nonempty open set on which $f$ is
+bounded.
+
+\problem
+Prove or disprove the following statements:
+
+(a) ${\Bbb R}^2$ (with the standard topology) is a countable
+union
+     of closed subsets each having empty interior.
+
+(b)  ${\Bbb R}^2$ (with the standard topology) is a countable
+union
+     of subsets each having empty interior.
+
+\problem
+Let $Y$ be a metric space and $f_n:X\rightarrow Y$ a sequence of
+continuous 
+functions and $f: X\rightarrow Y$ a function (not necessariy
+continuous).
+Suppose $\{ f_n\}$ is equicontinuous and $f_n(x)\rightarrow f(x)$
+for each
+$x\in X$. Show that $f$ is continuous.
+
+
+\end{document}
+
+  
+
+
+
+
+

@@ -1,0 +1,108 @@
+% latex file
+\def\hcorrection#1{\advance\hoffset by #1 }
+\def\vcorrection#1{\advance\voffset by #1 }
+
+\documentclass{article}
+\usepackage{my,amsxtra,amssymb,amsthm}
+
+\vcorrection{-1.0in}
+\hcorrection{-0.8in}
+\textwidth 6.0in
+\textheight 9.0in
+\begin{document}
+%\begin{Large}
+
+
+
+
+
+
+\begin{center}\begin{LARGE}
+{\bf Complex Analysis Qualifying Exam}\\ 
+{\bf Fall 1991}\\ \end{LARGE}
+\end{center}
+\vspace{0.1in}
+\noindent\hrulefill\\
+$\Bbb R$ is the set of real numbers, $\Bbb C$, the set of complex numbers
+$D(a, \rho) := \{ z \in \Bbb C : |z-a| < \rho\}$ for any
+$a \in \Bbb C, 0 < \rho \in \Bbb R, \Bbb D := D(0,1)$.
+
+\begin{description}
+\item[1.]
+$f$ is non-constant and holomorphic in the region $\Omega$ and $|f|$
+assumes a minimum over $\Omega$ at $z_0$. Show that $f(z_0) = 0$.
+
+\item[2.]
+$f$ is holomorphic in $D(0,R)$ and bounded by $M < \infty$. Let
+$\sum^\infty_{n=0} c_nz^n$ be its Taylor series at 0. In terms of $N, M$ and
+$r$ estimate
+$$\left| f(z) - \sum^N_{n=0} c_n z^n \right|$$
+in $D(0,r)$, where $r < R$.
+
+{\bf HINT:} ``Cauchy estimates" on the coefficients.
+
+\item[3.]
+Let $C$ be the unit circle $\partial \Bbb D$ parameterized in the
+customary way. Show that
+$$\int_C \frac{e^{\pi z}}{4z^2 + 1} dz = \pi i.$$
+
+\item[4.]
+Name four important 19th-century analysts and give a complete statement of
+one theorem due to each.
+
+\item[5.]
+$S := \Bbb R \times ] - 1, 1$ [and $f$ is holomorphic and bounded in $S$.
+Suppose $\lim_{x \to +\infty} f(x) =0$. Show that then
+$\lim_{x\ \to +\infty} f(x + iy) = 0$ for every $y \in$\ ] $-1, 1$\ [.
+
+{\bf HINT:} For any sequence of real numbers $x_n \to + \infty$, the
+functions $f_n (z) := f(x_n + z)$ constitute a bounded sequence on $S$
+which converges to 0 pointwise on $\Bbb R$.
+
+\item[6.]
+$f$ is holomorphic and zero-free in the region $\Omega$. Show how to construct
+a holomorphic logarithm for $f$, that is, a holomorphic function $g$ in
+$\Omega$ such that $f = e^g$. Are any further hypotheses needed on
+$\Omega$ to accomplish this?
+
+\item[7.]
+$f$ is holomorphic in the annulus $A := \Bbb D \backslash \{0\}$ and
+satisfies $|f(z)| < |z|^{\pi /2}$ for all $z \in A$. Show that
+$|f(1/2) | \leq 1/4$.
+
+{\bf HINT:} First see if the function $g(z) := f(z)/z$ can be
+holomorphically extended into $\Bbb D$. What will its value at 0 have to be?
+
+\item[8.]
+$f$ is continuous on $\overline{\Bbb D}$ holomorphic in $\Bbb D$ and vanishes
+on some arc of positive length on $\partial \Bbb D$. Show that
+$f=0$ throughout $\Bbb D$.
+
+\item[9.]
+$f_n$ are holomorphic in the open subset $U$ of $\Bbb C$ and $f_n \to f$
+uniformly on each compact subset of $U$. Must $f$ be holomorphic in $U$?
+If $U$ is an open subset of $\Bbb R$ and the $f_n$ are differentiable in $U$,
+must $f$ be differentiable in $U$?
+
+
+
+
+
+
+\end{description}    
+%\end{Large}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

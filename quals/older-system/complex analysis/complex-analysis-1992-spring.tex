@@ -1,0 +1,114 @@
+% latex file
+\def\hcorrection#1{\advance\hoffset by #1 }
+\def\vcorrection#1{\advance\voffset by #1 }
+
+\documentclass{article}
+\usepackage{my,amsxtra,amssymb,amsthm}
+
+\vcorrection{-1.0in}
+\hcorrection{-0.8in}
+\textwidth 6.0in
+\textheight 9.0in
+\begin{document}
+%\begin{Large}
+
+
+
+
+
+
+\begin{center}\begin{LARGE}
+{\bf Complex Analysis Qualifying Exam}\\ 
+{\bf Spring 1992}\\ \end{LARGE}
+\end{center}
+\vspace{0.1in}
+\noindent\hrulefill\\
+$\Bbb R$ is the set of all real numbers, $\Bbb C$ the set of all complex
+numbers, $D(a,r) := \{z \in \Bbb C : |z-a| < r\}$ for any
+$a \in \Bbb C$, $0 < r \in \Bbb R$, $\Bbb D := D(0,1)$.
+
+\begin{description}
+\item[1.]
+$f:\Bbb D \to \Bbb D$ is holomorphic. Show that
+$$\left| \frac{f(x) - f(w)}{1- \overline{f(z)} f(w)} \right| \leq
+  \left| \frac{z-w}{1-\overline z w} \right| \quad
+  \forall z, w \in \Bbb D.$$
+
+What can you say about $f$ if there exists a pair $(z,w)$ for which
+$z \neq w$ and equality holds above?
+
+\item[2.]
+Let $f$ be a one-to-one holomorphic function on a region $\Omega$. Show
+that $f^\prime$ is zero-free.
+
+\item[3.] (a)
+$f$ is continuous on $\overline{\Bbb D}$, holomorphic in
+$\overline{\overline{\Bbb D}}$.
+Show that $f$ is uniformly approximable on $\overline{\Bbb D}$ by
+polynomials.
+
+\item[\quad] (b)
+State and prove the converse of (a).
+
+\item[4.]
+Let $A$ denote the algebra of continuous functions on $\overline{\Bbb D}$
+which are holomorphic in $\Bbb D$. Find all $\Bbb C$-algebra homomorphisms
+$\Phi : A \to \Bbb C$ which are not identically 0. {\bf HINT:} Show first
+that $\Phi (f) \in f(\overline{\Bbb D})$ for every $f$, then see what
+$\Phi$ does to polynomials. Is $\Phi$ continuous?
+
+\item[5.] (a)
+State the Maximum Modulus Principle for holomorphic functions, and
+
+\item[\quad] (b)
+Give two different proofs of this principle.
+
+\item[6.]
+Suppose that $f$ is holomorphic on $\overline{\Bbb D}$, $|f(z)| < 1$
+whenever $|z| = 1$, and that $\alpha \in \Bbb D$. Find the number of
+solutions in $\overline{\Bbb D}$ of the equation
+$$f(z) = \left( \frac{z-\overline \alpha}{\alpha z -1} \right)^2.$$
+
+\item[7.]
+Suppose $f$ is holomorphic in the disc $D (a, R)$. Prove that
+$$|f(a)| \leq \frac{1}{\pi R^2} \int \int_{D(a,R)} |f(x + iy) | dxdy.$$
+Is this inequality valid for harmonic functions? {\bf HINT:} Polar
+coordinates.
+
+\item[8.](a)
+State and prove Harnack's Inequalities.
+
+\item[\quad] (b)
+Using (a) [whether or not you proved it] demonstrate the following: If
+$h : \Bbb C \to \Bbb R$ is harmonic but {\bf not} constant, and
+$$m(r) := \min_{\theta} h(re^{i \theta}), \quad
+  M(r) := \max_\theta h (re^{i \theta}),$$
+then
+$$\overline{\lim_{r \to \infty}} \frac{m(r)}{r} < 0 < \lim_{r \to \infty}
+  \frac{M(r)}{r}.$$
+
+\item[\quad] (c)
+For the $h$ in (b), infer from (b) [whether you proved (b) or not] that
+$h$ must have at least one zero, then go on to prove that $h(\Bbb C) = \Bbb R$.
+
+
+
+
+
+\end{description}    
+%\end{Large}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

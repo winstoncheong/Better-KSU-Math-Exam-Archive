@@ -1,0 +1,115 @@
+% latex file
+\def\hcorrection#1{\advance\hoffset by #1 }
+\def\vcorrection#1{\advance\voffset by #1 }
+
+\documentclass{article}
+\usepackage{my,amsxtra,amssymb,amsthm}
+
+\vcorrection{-1.0in}
+\hcorrection{-0.8in}
+\textwidth 6.0in
+\textheight 9.0in
+
+\def\R{\mathbb R}
+\def\C{\mathbb C}
+\def\N{\mathbb N}
+\def\Z{\mathbb Z}
+\def\Q{\mathbb Q}
+
+\begin{document}
+%\begin{Large}
+
+
+
+
+
+
+\begin{center}\begin{LARGE}
+{\bf Real Analysis Qualifying Exam}\\ 
+{\bf Spring 1993}\\ \end{LARGE}
+\end{center}
+\vspace{0.1in}
+\noindent\hrulefill\\
+
+\begin{description}
+\item[1.]
+State and prove the monotone convergence theorem for non-negative functions.
+Is it true if monotone increasing is replaced by monotone decreasing?
+Prove or give a counter-example.
+
+\item[2.]
+Discuss the relationship between convergence in measure and convergence
+almost everywhere. Prove or give counter-examples for all assertions.
+
+\item[3.]
+Suppose $T$ is a linear functional on ${\cal C}(X)$ where $X$ is a compact
+Hausdorf space. Show that $T1 = \parallel T \parallel_{op}$ if and only if
+$T$ is a positive operator.
+
+\item[4.]
+Prove that
+$|\int_\Omega fgh d \mu| \leq \left(\int_\Omega |f|^p d\mu \right)^{\frac{1}{p}}
+ \left(\int_\Omega |g|^q d \mu \right)^{\frac{1}{q}}
+ \left( \int_\Omega |h|^r d\mu \right)^{\frac{1}{r}} \hbox{\ if\ }
+ 1/p + 1/r + 1/q =1$.
+
+\item[5.]
+Suppose $f$ is a real valued nondecreasing function on $[a,b]$ which is
+differentiable almost everywhere. Show that $f^\prime$ is Legesgue
+measurable. Is it true that $\int^b_a f^\prime(x) dx=f(b) - f(a)$? Prove
+or give a counter-example.
+
+\item[6.]
+Show that a Banach space where the norm satisfies the parallelogram law,
+$\parallel x+y \parallel^2 + \parallel x-y \parallel^2 =
+ 2\parallel x \parallel^2 + 2\parallel y \parallel^2$, is a Hilbert space.
+
+\item[7.]
+Define $f \ast g(x) = \int^\infty_{-\infty} f(x-y) g(y) dy$. Show that
+$\parallel f \ast g \parallel_1 \leq \parallel f \parallel_1
+ \parallel g \parallel_1$.
+
+\item[8.]
+Suppose $(\Omega, {\cal M}, \mu)$ is a measure space and that $\Omega$ is
+countable and ${\cal M}$ is the power set of $\Omega$, (i.e. ${\cal M}$ is
+the set of all subsets of $\Omega$). Must $L^p \subset L^q$ if
+$p \leq q$? Prove or give a counter-example.
+
+\item[9.]
+Let ${\cal M}$ be a collection of subsets of a set $\Omega$ with the
+following properties:
+
+\item[\quad] i.
+$\Omega \in {\cal M}$
+
+\item[\quad] ii.
+$A, B \in {\cal M}$ implies that $A-B \in {\cal M}$
+
+\item[\quad] iii.
+$A_1, A_2, \dots, A_n, \dots \in {\cal M}$ and
+$A_1 \subset A_2 \subset \dots \subset A_n \subset \dots$
+implies $\bigcup^\infty_{i=1} A_i \in {\cal M}$.
+
+Show that ${\cal M}$ is a $\sigma$-field (also called a $\sigma$-algebra).
+
+
+
+
+
+\end{description}    
+%\end{Large}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

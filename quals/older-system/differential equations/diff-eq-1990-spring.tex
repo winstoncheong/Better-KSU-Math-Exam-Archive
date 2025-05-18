@@ -1,0 +1,119 @@
+% latex file
+\def\hcorrection#1{\advance\hoffset by #1 }
+\def\vcorrection#1{\advance\voffset by #1 }
+
+\documentclass{article}
+\usepackage{my,amsxtra,amssymb,amsthm}
+
+\vcorrection{-1.0in}
+\hcorrection{-0.8in}
+\textwidth 6.0in
+\textheight 9.0in
+\begin{document}
+%\begin{Large}
+
+
+
+
+
+
+\begin{center}\begin{LARGE}
+{\bf Differential Equations Qualifying Exam}\\ 
+{\bf Spring 1990}\\ \end{LARGE}
+\end{center}
+\vspace{0.1in}
+\noindent\hrulefill\\
+
+\begin{description}
+\item[1.] (i)
+Formulate maximum principle for Cauchy's problem for parabolic equations.
+
+\item[\quad] (ii)
+Give an example of its applications without proof.
+
+\item[2.]
+Solve the exterior Dirichlet problem
+$$\begin{cases}
+        \Delta u = 0 &\hbox{\ for\ } |x| > 1 \\
+        u(x) = c &\hbox{\ for\ } |x| = 1
+        \end{cases}
+        x \in \Bbb R^3.$$
+
+\item[3.] (i)
+State the Huygens Principle. How does it depend on the space dimension?
+
+\item[\quad] (ii)
+Define the energy integral $E(t)$ for the wave equation
+$$\begin{cases}
+        u_{tt} &= c^2 \Delta u \\
+        u(0,x) &=\phi(x), \quad u_t (0,x) = \psi (x) \\
+        u(t,x)|_{x \in \partial \Omega} &= 0
+        \end{cases}$$
+Show that the $E^\prime (t) =0$.
+
+\item[4.] (i)
+For $u \in L^1 (\Omega)$ define the weak derivative $D_iu$.
+$(1 \leq i \leq n)$ where $\Omega \subset \Bbb R^n$ is a bounded domain.
+
+\item[\quad] (ii)
+Define the Sobolev space $W^{2,p} (\Omega)$ where $p \geq 1$ and give the
+definition of the norm $\parallel u \parallel_{W^{2,p}}$.
+
+\item[5.]
+A semidisc of radius $a$ is well isolated from the surrounding medium. The
+temperature at $ADB$ and segment $\overline{AB}$ are kept at
+$u = c_2$ and $u=c_1$ respectively. Find the stationary temperature
+distribution $u$ in the semidisc. (See Fig. 1.)
+
+\item[6.]
+Solve the following equation in the upper half-plane
+$$\begin{cases}
+        \Delta u (x,y) &=0, \quad -\infty < x < \infty, \quad 0< y< \infty \\
+        u(x,0) &=f(x)
+        \end{cases}$$
+
+\item[7.] (i)
+Give the definition of the well posed problem in the sense of Hadamard.
+
+\item[\quad] (ii)
+Prove that the solution of the Dirichlet problem
+$$\begin{cases}
+        \Delta u &= 0 \\
+        u|_{\partial \Omega} &= f(x)
+        \end{cases}$$
+depends on $f$ continuously.
+
+\item[8.]
+Solve the following equation
+$$\begin{cases}
+        xu_y - yu_x &= u \\
+        u(x,0) &=h(x)
+        \end{cases}
+        \quad (x,y) \in \Bbb R^2$$
+where $u = u(x,y), h$ is a given function.        
+
+
+
+
+
+
+
+
+
+\end{description}    
+%\end{Large}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

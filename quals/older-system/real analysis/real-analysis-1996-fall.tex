@@ -1,0 +1,121 @@
+% S.Saeki
+% latex file
+\def\hcorrection#1{\advance\hoffset by #1 }
+\def\vcorrection#1{\advance\voffset by #1 }
+
+\input amssym.def   %defines Bbb and gothic (frak)
+\input amssym       %defines Bbb and gothic (frak)
+
+\input prepictex.tex
+\input pictex.tex
+\input postpictex.tex
+
+%\documentstyle[bbb]{report}
+\documentclass[bbb]{report}
+
+\vcorrection{-.5truein}
+\hcorrection{-1.25truein}
+
+\topmargin  0truein
+\textwidth 7.0truein
+%\textheight 9.5truein
+%\textwidth 6.5truein
+\textheight 8.5truein
+
+\mathsurround=2pt
+
+\def\ds{\displaystyle}
+
+\begin{document}
+
+%\pagestyle{empty}
+
+\begin{Large}
+
+\begin{center}
+   Real Analysis Qualifying Exam \\
+   September 19, 1996 \\
+\end{center}
+
+\vspace{.1in}
+
+\begin{description}
+
+\item[] Let $(X,M,\mu)$ be a measure space.
+
+\vspace{.1in}
+
+\item[1.] Let $0<a<1$. Prove that there exists a compact set
+$K\subset[0,1]\backslash {\Bbb Q}$ such that $\lambda(K)=a$, 
+where $\lambda$ is
+Lebesgue measure on ${\Bbb R}$.
+
+\vspace{.35in}
+
+\item[2.] Let $f$ be a real-valued function on $X$ such that
+$\{x:f(x)>a\}$ is measurable for each $a\in{\Bbb R}$. Prove that 
+$f^{-1}(E)$ is measurable for each Borel set $E\subset{\Bbb R}$.
+
+\vspace{.35in}
+
+\item[3.] Let $Y$ be a topological space and let 
+$\varphi:X\to Y$ be measurable. Define 
+$\nu(E):=\mu(\varphi^{-1}(E))$ for each $E\in{\cal B}_Y$ 
+(the Borel subsets of $Y$). Prove:
+
+\vspace{-.35in}
+
+\item\item[\quad] a) $\nu$ is a Borel measure on $Y$.
+\item\item[\quad] b) Let $f:Y\to {\Bbb C}$ be Borel measurable. Then
+$f\in L^1(\nu)$ if and only if $f\circ\varphi\in L^1(\mu)$, in which
+case
+$$ \int_{Y}fd\nu=\int_Xf\circ\varphi d\mu. $$
+
+\vspace{.35in}
+
+\item[4.]  Prove the completeness of 
+$L^P(\mu)$ for $1\leq p<\infty$.
+
+\vspace{.35in}
+
+\item[5.] Let $0<p<\infty$ and $f_n,f\in L^P(\mu)$. Suppose
+$||f_n||_P\to||f||_P$ and $f_n\to f a.e.$ Prove that $||f_n-f||_P\to
+0$.
+\item\item[\quad] Hint: $|f_n-f|^P\leq 2^{P}(|f_n|^P + |f|^P)$.
+
+\vspace{.35in}
+
+\item[6.] Let $f:X\times [0,1]\to {\Bbb C}$. State (nontrivial) 
+conditions on $f$ that guarantee
+$$ \frac{d}{dt}\int f(x,t)d\mu(x)=\int\frac{\partial f}{\partial
+t}(x,t)d\mu(x) \qquad \forall t\in (0,1) \leqno (\ast) $$
+and then prove $(\ast)$.
+
+
+
+
+\item[7.] Let $f$ and $g$ be Borel functions on ${\Bbb R}^+$ such that
+$$ \int^{\infty}_0 (|f(x)|+|g(x)|) \frac{dx}{x}<\infty. $$
+Define
+$$ (f\ast g)(x)=\int^{\infty}_0 f(y)g(x/y)\frac{dy}{y} $$
+for $x>0$ whenever the integral in the right-hand side exists. 
+
+\vspace{-.4in}
+\item\item[\quad\ ] Prove: (i) $|f\ast g|<\infty$ Lebesgue-almost everywhere, 
+(ii) $f\ast g$ is Borel measurable, and
+$$ \int^{\infty}_0|(f\ast g)(x)|\frac{dx}{x} 
+\leq \int^{\infty}_0 |f(x)|\frac{dx}{x}
+\cdot \int^{\infty}_0 |g(y)|\frac{dy}{y}. \leqno(iii) $$
+
+\vspace{.35in}
+
+\item[8.] Let $f$ be a $2\pi$-periodic differentiable function on 
+${\Bbb R}$ with $\int^{2\pi}_0|f'(t)|^2 dt<\infty$. 
+Prove that 
+$$ \sum^{\infty}_{n=-\infty}n^2|\widehat f(n)|^2<\infty. $$
+
+
+
+\end{description}
+\end{Large}
+\end{document}

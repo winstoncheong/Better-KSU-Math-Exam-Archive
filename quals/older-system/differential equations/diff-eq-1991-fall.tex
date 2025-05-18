@@ -1,0 +1,150 @@
+% latex file
+\def\hcorrection#1{\advance\hoffset by #1 }
+\def\vcorrection#1{\advance\voffset by #1 }
+
+\documentclass{article}
+\usepackage{my,amsxtra,amssymb,amsthm}
+
+\vcorrection{-1.0in}
+\hcorrection{-0.8in}
+\textwidth 6.0in
+\textheight 9.0in
+\begin{document}
+%\begin{Large}
+
+
+
+
+
+
+\begin{center}\begin{LARGE}
+{\bf Differential Equations Qualifying Exam}\\ 
+{\bf Fall 1991}\\ \end{LARGE}
+\end{center}
+\vspace{0.1in}
+\noindent\hrulefill\\
+
+\begin{description}
+\item[1.]
+Solve the following initial-boundary value problem
+$$\begin{cases}
+        u_{tt} = c^2 u_{xx} \quad &0 < x < 1, t>0\\
+        u(x,0) = x(1-x)  \quad &0 \leq x \leq 1 \\
+        u_t(x,0) = 0   \quad &0 \leq x \leq 1 \\
+        u(0,t) = u(1,t) = 0  \quad &t >0
+        \end{cases}$$
+
+\item[2.]
+The motion of an undamped, unforced spring-mass system is governed by
+the equation
+$$m \frac{d^2x}{dt^2} + kx = 0.$$
+The energy of the system is $E(x,v) = \frac{1}{2} mv^2 + \frac{1}{2} kx^2$
+where $v=\frac{dx}{dt}$.
+
+\item[\quad] (a)
+Show $\frac{dE}{dt} = 0$.
+
+\item[\quad] (b)
+Show that if $\Phi (x,v)$ is a $C^1$ function such that $\frac{d \Phi}{dt} =0$
+then $\Phi = f(E(x,v))$ for some function $f$.
+
+\item[3.] (a)
+Formulate the maximum principle for
+
+\item[\qquad] (1)
+Laplace's Equation $\Delta u = 0$.
+
+\item[\qquad] (2)
+Cauchy problems for the heat equation
+$$u_t - \Delta u = 0$$
+$$u(x,0) = f(x) \hbox{\ where\ } x \in \Bbb R^n.$$
+
+\item[\quad] (b)
+Assume that $u$ is a harmonic function in $\Bbb R^n$ and that $u$ attains its
+minimum at some point $x_0 \in \Bbb R^n$. What can you conclude about $u$?
+Give your argument.
+
+\item[4.] (a)
+Show that if $u \in C^1 (\Bbb R^n)$ and $\Delta u = 0$ then $u$ has the mean
+value property.
+
+\item[\quad] (b)
+Show that if $u \in C^1 (\Bbb R^n)$ and d $\Delta u \geq 0$ then
+$u(x) \leq \frac{1}{|S_r|} \int_{S_r} u (x+y) d \sigma (y)$ where
+$S_r$ is the ``sphere" of radius $r$, $|x| = r$, and $|S_r|$ is the ``area"
+of $S_r$.
+
+\item[\quad] (c)
+Formulate a maximum principle for $C^1$ functions that satisfy
+$\Delta u \geq 0$. Give your argument.
+
+\item[5.] (a)
+Show that $\frac{1}{4 \pi r}$ is a weak solution of $\Delta u =\delta$
+on $\Bbb R^3$ where $\delta$ is the Dirac delta function.
+
+\item[\quad] (b)
+Give the definition of the Sobolev space $W^{m,p}_0 (\Omega)$ for a bounded
+open set $\Omega$ in $\Bbb R^n$.
+
+
+\item[6.]
+Let $f \in C^1(\Bbb R^1)$ be such that $f(P_0) = 0, f(P_1) = 0$ and
+$f(x) > 0$ for $P_0 < x < P_1$. Suppose
+$$\frac{dP}{dt} = f(P)$$
+$$P(0) = Q$$
+with $P_0 < Q < P_1$. Show $\lim_{t \to \infty} P(t) = P_1$ and
+$\lim_{t \to -\infty} P(t) = P_0$.
+
+\item[7.]
+Let $\phi_1, \dots, \phi_n, \dots$ be the complete sequence of eigenfunctions
+of
+$\begin{cases} \Delta u = \lambda u \quad \hbox{in\ } \Omega \\
+   u|_{\partial \Omega} =0 \end{cases} $
+where $\Omega$ is a bounded domain with smooth boundary in $\Bbb R^n$. Show
+that
+$$G(x,y) = \sum^\infty_{n=1} \frac{\phi_n (x) \phi_n (y)}{\lambda_n}$$
+is the Green's function of the Laplace equation with homogeneous Dirichlet
+boundary condition.
+
+\item[8.]
+Let $u(x,t)$ be the solution to the Cauchy problem for the wave equation
+$$\begin{cases}
+        u_{tt} = c^2 \Delta u \quad &x \in \Bbb R^n, t >0 \\
+        u(x,0) = f(x) \quad &x \in \Bbb R^n \\
+        u_t(x,0) = g(x) \quad &x \in \Bbb R^n
+        \end{cases}$$
+where $f$ and $g$ are continuous functions satisfying
+$\lim_{\parallel x \parallel \to \infty}$
+$\frac{f(x)}{\parallel x \parallel^\alpha} = A$,
+$\lim_{\parallel x \parallel \to \infty}$
+$\frac{g(x)}{\parallel x \parallel^{\alpha - 1}} = B$
+for some constant $\alpha > 1$. Prove that
+$$\lim_{t \to \infty} \frac{u(x,t)}{t^\alpha} = C_n$$
+exists where $C_n$ is a constant which depends on the dimension $n$ and
+find $C_3$.
+
+\item[9.]
+Let $\Delta u + u = 0$ in $\Bbb R^3$. Can $u(x) \geq C$ for
+$\parallel x \parallel \to \infty$ for some positive constant $C$? Give
+your argument.
+
+
+
+
+\end{description}    
+%\end{Large}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

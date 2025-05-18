@@ -1,0 +1,142 @@
+% latex209 file
+%Real Analysis - Saeki & Moore
+
+\def\hcorrection#1{\advance\hoffset by #1 }
+\def\vcorrection#1{\advance\voffset by #1 }
+
+\input amssym.def   %defines Bbb and gothic (frak)
+\input amssym       %defines Bbb and gothic (frak)
+
+\input prepictex.tex
+\input pictex.tex
+\input postpictex.tex
+
+%\documentstyle[bbb]{report}
+\documentclass[bbb]{report}
+
+\vcorrection{-1in}
+\hcorrection{-1.25in}
+
+\topmargin  0in
+\textwidth 7in
+\textheight 9.5truein
+
+\mathsurround=2pt
+
+\pagestyle{empty}
+
+\def\ds{\displaystyle}
+
+\def\R{{\Bbb R}}
+\def\Z{{\Bbb Z}}
+\def\C{{\Bbb C}}
+\def\D{{\Bbb D}}
+\def\N{{\Bbb N}}
+\def\M{{\cal M}}
+
+\begin{document}
+
+\begin{Large}
+
+\hfill Name \rule{2.5in}{.01in}
+\par
+\vspace{.25in}
+
+\begin{center}
+   REAL ANALYSIS QUALIFYING EXAM \\
+   Fall 1999 \\
+   (Saeki \& Moore) \\
+\end{center}
+
+
+\vspace{.1in}
+
+\end{Large}
+
+\begin{large}
+
+
+{\bf Answer all eight questions.
+Throughout, $(X, {\cal M} ,\mu)$ denotes a measure space,
+$\mu$ denotes a positive measure unless otherwise specified, and all
+functions are assumed to be measurable.}
+
+\vspace{.25in}
+
+
+\begin{description}
+
+\item[1.]
+Suppose $1\leq p\leq \infty$.
+Show that the closed unit ball of $\ell_p(\N)$ is not compact.
+
+
+\vspace{.15in}
+
+\item[2.]
+Let $1\leq p\leq 2$ and $f\in L^p([0,\infty])$.
+For $x\geq 0$ set $g(x)=\ds\int^{x^2}_x f(t)dt$.
+Show that $\ds\lim_{x\to\infty}\,\ds\frac{g(x)}{x}=0$.
+
+\vspace{.15in}
+
+\item[3.]
+Suppose $\{f_n\}$ is a sequence of nonnegative measurable functions
+on $X$ such that $\ds\lim_{n\to\infty} f_n(x)=f(x)$ exists a.e. and
+$$\lim_{n\to\infty} \int_X f_n\, d\mu= \int_Xf\,d\mu<\infty.$$
+Prove that $\ds\lim_{n\to\infty} \ds\int_E f_n\,d\mu=\ds\int_Ef\,d\mu$
+for every measurable set $E\subseteq X$.
+
+
+\vspace{.15in}
+
+\item[4.]
+Prove that if $A$ and $B$ are Borel sets in topological spaces $X$
+and $Y$ respectively, then $A\times B$ is a Borel set in $X\times Y$.
+
+\vspace{.15in}
+
+\item[5.]
+Let $f\in L^1(\mu)$. Prove that given $\varepsilon >0$ there
+exists $\delta>0$ such that $\left|\ds\int_E f\,d\mu\right|<\varepsilon$
+whenever $\mu(E)<\delta$.
+
+\vspace{.15in}
+
+\item[6.]
+Prove that $L^p(\mu)$ is complete for $1\leq p\leq \infty$.
+
+
+\vspace{.15in}
+
+\item[7.]
+Assume now that ($X,\M, \mu)$ is a $\alpha-\hbox{finite}$
+measure space. Let $f:x\to [0,\infty)$, $0<p<\infty$.
+Show
+$\ds\int_X f^p\,d\mu=\ds\int^infty_0 pt^{p-1}\mu(\{x\in X|f(x)>t\})dt$.
+
+
+\vspace{.15in}
+
+\item[8.]
+Suppose $f$ is defined on $X\times (0,1)$ and that for each fixed
+$t\in(0,1)$, $f(0,t)\in L^1(\mu)$.
+Suppose also that $\ds\frac{\partial f}{\partial t}(x,t)$ exists
+for every $(x,t)\in X\times (0,1)$ and $\ds\frac{\partial}{\partial t}$
+is bounded on $X\times(0,1)$. Show that
+$$ \frac{d}{dt}\int_X f(x,t)d\mu(x)
+   =\int_X \frac{\partial f}{\partial t} (x,t) d\mu(x).
+   $$
+
+
+
+
+\vfill
+
+
+
+\end{description}
+
+\end{large}
+
+\end{document}

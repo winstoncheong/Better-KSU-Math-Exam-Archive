@@ -1,0 +1,139 @@
+% latex file
+\def\hcorrection#1{\advance\hoffset by #1 }
+\def\vcorrection#1{\advance\voffset by #1 }
+
+\documentclass{article}
+\usepackage{my,amsxtra,amssymb,amsthm}
+
+\vcorrection{-1.0in}
+\hcorrection{-0.8in}
+\textwidth 6.0in
+\textheight 9.0in
+\begin{document}
+%\begin{Large}
+
+
+
+
+
+
+\begin{center}\begin{LARGE}
+{\bf Numerical Analysis Qualifying Exam}\\ 
+{\bf Spring 1991}\\ \end{LARGE}
+\end{center}
+\vspace{0.1in}
+\noindent\hrulefill\\
+
+\begin{description}
+\item[1.]
+Consider evaluating $\cos x$ for large $x$ by using the Taylor approximation,
+$$\cos x \approx 1 - \frac{x^2}{2!} + \dots + (-1)^n
+  \frac{x^{2n}}{(2n)!}.$$
+If one uses it to evuluate $\cos 2 \pi = 1$, determine $n$ so that the
+Taylor approximation error is less than .0005. Suppose one does the
+computation using 4-digit rounding, what trouble will one encounter? How
+should $\cos x$ be evaluated for large values of $x$?
+
+\item[2.]
+Suppose $f \in C^2(R)$, and $f(p) = 0$ implies $f^\prime (p) \neq 0$.
+
+\item[\quad] (1)
+Show if $f(p)=0$, then there is a $\delta$ such that if $|x_0 - p| < \delta$,
+then Newton's method starting at $x_0$ converges to $p$.
+
+\item[\quad] (2)
+Show that if $p_1, p_2$ are succesive zeros of $f$ (i.e. $f(x) \neq 0$ for
+$x \in (p_1, p_2)$) and $p_3$ is another zero of $f$, then there is an
+$x_0 \in (p_1, p_2)$ such that Newton's method starting from $x_0$ converges
+to $p_3$.
+
+\item[3.]
+Suppose $A \in R^{n \times n}, A^T$ (the transpose of $A$) is diagonally
+dominant, i.e.,
+$$|a_{ii}| \geq \sum^n_{\substack{i =1 \\ i \neq j}} |a_{ij}|,$$
+and $A$ is nonsingular, show that $A = LU$ with $L$ being a unit lower
+triangular matrix, i.e., Gauss elimination can be performed without
+pivoting, and $|l_{ij}|\leq 1$, where $l_{ij}$ are entries in $L$.
+
+\item[4.]
+Suppose $B \in R^{n \times n}$ is symmetric, positive definite.
+
+\item[\quad] (1)
+Define $\parallel x \parallel \equiv \sqrt{x^t Bx}, \forall x \in R^n$
+(where $x^t$ is the transpose of $x$). Show that this defines a norm in $R^n$
+(it is called an elliptical norm).
+
+\item[\quad] (2)
+A norm in $R^n$ is monotonic if
+$$|x_i| \leq |y_i|, i=1,2,\dots, n, \hbox{\ implies\ }
+  \parallel x \parallel \leq \parallel y \parallel.$$
+Construct an example to show that elliptical norms are not monotonic in
+general.
+
+\item[5.]
+Suppose $A \in R^{m \times n}$, with $m < n$, and $w \in R^n$. Define
+$$B= \begin{bmatrix}
+        A \\
+        w^T
+        \end{bmatrix} , $$
+Show $\sigma_1 (B) \geq \sigma_1 (A)$ and $\sigma_{m+1} (B) \leq \sigma_m (A)$.
+Thus, the condition grows if a row is added to $A$. (Recall that the 2-norm
+condition number of $A$ is defined as $\sigma_1 (A)/ \sigma_m (A)$,
+where $\sigma_1 (A)$ and $\sigma_m (A)$ are the largest and smallest
+singular values of $A$ respectively).
+
+\item[6.]
+Suppose $A \in R^{n \times n}$, and all its off-diagonal entries are small
+compared to some diagonal entries. (For example, $A$ may be a matrix obtained
+during the procedure of the Jacobi method) Gerschgorin theorem can be used
+to give a good approximate location of some eigenvalues. The Wilkinson
+Correction Procedure sharpens the approximation with a little more work by
+multiplying the ith row of $A$ by a small number $\alpha$ and multiplying
+the ith column of $A$ by $\alpha^{-1}$. Suppose
+$$R_i = \left\{ z \in C : |z-a_{ii} | \leq \sum^n_{\substack{j=1 \\ j \neq i}}
+  \alpha |a_{ij}| \right\}$$
+is disjoint from  all the disks
+$$\left\{z \in C : |z- a_{kk}| \leq \alpha^{-1} |a_{ki}| +
+  \sum^n_{\substack{j=1 \\ j \neq k,i}} |a_{kj}| \right\}, \quad
+  \forall k \neq i.$$
+Show that $R_i$ contains precisely one eigenvalue of $A$ (notice the
+approximate location of this eigenvalue has been sharpened by the procedure).
+
+\item[7.]
+Find, with proof, the monic polynomial of degree of 4, $P(x)$, such that
+$$\max_{-1 \leq x \leq 1} |P(x)|$$
+is minimized.
+
+\item[8.]
+\item[\quad] (1)
+Find the first three monic orthogonal polynomials on the interval $[0,1]$
+with respect to weight function $\ln (1/x)$.
+
+\item[\quad] (2)
+Suppose the answer to (1) are given by
+$$\psi_0 (x) = 1, \psi_1 (x) = x - \frac{1}{4}, \psi_2 (x) = x^2 -
+  \frac{5}{7} x + \frac{17}{252}.$$
+Derive the two-point Gaussian quadrature formula for
+$$I(f) = \int^1_0 f(x) \ln \left(\frac{1}{x} \right) dx$$
+in which the weight function is $w(x) = \ln (1/x)$. What is the error of the
+quadrature formula (assuming that $f$ is smooth enough)?
+
+
+
+\end{description}    
+%\end{Large}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

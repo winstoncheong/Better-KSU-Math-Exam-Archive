@@ -1,0 +1,131 @@
+\documentclass[10pt]{article}
+\usepackage{amsxtra,latexsym,amssymb,amsthm}
+
+
+\setlength{\parindent}{0cm}
+
+\def\ds{\displaystyle}
+
+
+\pagestyle{empty}
+
+\textwidth=7.2truein
+\textheight=9.5truein
+\hoffset=-1.5truein
+\voffset=-1.25truein
+
+\begin{document}
+
+\def\R{{\mathbb R}}
+
+\begin{large}
+\begin{center}
+{\bf
+  TOPOLOGY QUALIFYING EXAM}\\
+  Fall 2001\\
+  Muenzenberger and Strecker
+\end{center}
+
+
+\vspace{.1in}
+Choose and work any 6 of the following 12 problems. Start each problem on a
+new sheet of paper. \underbar{\bf Do not turn in more than six problems.}
+A ``space" always means a topological space below.
+
+{
+\begin{list}{}
+{\itemsep=0em \parsep=0em }\item[]
+\end{list}
+}
+
+\begin{description}
+%\setlength{\itemsep}{0em}
+%\newlength{\parsep}{20em}
+
+\item 1.
+Assume that every open cover of the space $X$ has a countable subcover.
+Let $A\subseteq X$ be an uncountable subset. Prove $A$ has a limit point.
+
+
+\item 2.
+Prove a space $X$ is compact if and only if every net in $X$ has a cluster
+point.
+
+
+\item 3.
+A continuous map $f:(X,\tau)\to (Y,\sigma)$ is said to be \textbf{final}
+provided that for each topological space $(Z,\mu)$ each set-function
+$g:Y\to Z$ is continuous whenever $g\circ f:(X,\tau)\to(Z,\mu)$ is
+continuous. Prove any two of the following statements:
+
+
+\quad a)
+The composition of final (continuous) maps is final.
+
+
+\quad b)
+The ``second factor" of a final map is final: i.e., if
+$\ds{ (X,\tau) {\buildrel f\over\to} (Y,\sigma) {\buildrel h\over\to}
+(W,s)}$
+are continuous maps and $h\circ f$ is final, then $h$ is final.
+
+\quad c)
+Each quotient map is final.
+
+\item 4.
+Use Zorn's Lemma to prove that for each set $X$ and relation $R$ on $X$,
+there is a maximal $A\subseteq X$ such that $A\times A\subseteq R$.
+
+
+\item 5.
+Prove that if $Y$ is compact, then the projection $\pi_1:X\times Y\to X$
+is closed;
+i.e., for each closed subset $A$ of $X\times Y$, $\pi_1[A]$ is closed in $X$.
+
+
+\item 6.
+Let $(X_1,\tau_1)$ and $(X_2,\tau_2)$ be topological spaces and let $\tau$
+be the product topology on $X_1\times X_2$.
+Let $Y_1\subseteq X_1$ and $Y_2\subseteq X_2$.
+There is a ``natural" subspace topology $\sigma$ on $Y_1\times Y_2$ that
+is induced from $\tau$ and the fact that $Y_1\times Y_2$ is a subset of
+$X_1\times X_2$.
+There is also a ``natural" product topology $\rho$ on $Y_1\times Y_2$
+that comes from the subspace topologies $(Y_1,\rho_1)$
+and $(Y_2,\rho_2)$ induced by $\tau_1$ and $\tau_2$ respectively.
+Prove or disprove that $\sigma=\rho$.
+
+
+\item 7.
+Prove that no continuous function $f:S^1\to\R$ is $1-1$.
+$$[S^1=\{(x,y)\in\R^2:x^2+y^2=1\}]$$
+Note: $S^1$ and $\R$ have the usual topology.
+
+\item 8.
+Prove that a quotient of a locally connected space is locally connected.
+
+\item 9.
+Show that if $X$ is a compact metrizable space, then every metric
+which generates the topology on $X$ is complete.
+
+\item 10.
+Prove that every paracompact Hausdorff space is regular.
+
+\item 11.
+Show that the Moore Plane (tangent disc space) is not normal.
+
+\item 12.(a)
+What is the fundamental group of $B^2=\{(x,y)\in\R^2: x^2+y^2\leq 1\}$?
+
+\item \quad (b)
+What is the fundamental group of $S^1=\{(x,y)\in \R^2:x^2+y^2=1\}$?
+
+\item \quad (c)
+Prove that there is no continuous function $r:B^2\to S^1$ such that
+\newline $r(x,y)=(x,y)$ for all $(x,y)\in S^1$.
+
+Note: $B^2$ and $S^1$ have the usual topology.
+
+\end{description}
+\end{large}
+\end{document}

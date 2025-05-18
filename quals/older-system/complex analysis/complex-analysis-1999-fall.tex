@@ -1,0 +1,97 @@
+%From nagy@math.ksu.edu Mon Aug 23 16:43:53 1999
+
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+%\pagestyle{empty}
+\begin{document}
+\vspace*{-1in}
+\hfill\hbox to 3in{Name\hrulefill}
+\vspace{1in}
+\begin{center}{\large Complex Analysis Qualifying Exam}
+\\\bigskip
+{\large August, 1999}
+\end{center}
+
+\
+
+\noindent{\bf  Instructions:}  Below you will find 8 problems.
+Each problem is worth 10 points. Only the
+best 6 scores will be added.
+
+\noindent{\bf Time:} 2 hours.
+
+\
+
+\noindent{\sc Notations:} $\mathbb{R}=$ set of all real numbers;
+$\mathbb{C}=$ set of all complex numbers; $\mathbb{D}=\{z\in\mathbb{C}\,:\,|z|<1\}$ (the unit disk); $\mathbb{T}=\{z\in\mathbb{C}\,:\,|z|=1\}$ (the unit circle).
+
+\
+
+\begin{itemize}
+\item[{\bf 1.}] Suppose $f:\mathbb{D}\to\mathbb{C}$ is holomorphic and
+$$|f(z)|<1\text{, for all }z\in\mathbb{D}$$
+\begin{itemize}
+\item[(i)] Prove that
+$$\left|\frac{f(z)-f(w)}{1-\overline{f(z)}f(w)}\right|\leq\left|\frac{z-w}{1-\bar{z}w}\right|
+\text{, for all }z,w\in\mathbb{D}.$$
+\item[(ii)] Use (i) to prove that
+$$\left|f'(z)\right|\leq\frac{1-|f(z)|^2}{1-|z|^2}\text{, for all }z\in\mathbb{D}.$$
+\end{itemize}
+{\sc Hint}: Schwarz Lemma.
+
+
+\item[{\bf 2.}] Use the Residue Formula to prove that
+$$
+\int_0^\infty\frac{dx}{x^3+1}=\frac{2\pi}{3\sqrt{3}}.$$
+
+
+\item[{\bf 3.}] Let $\phi:\mathbb{T}\to\mathbb{C}$ be a continuous function.
+Define the function $f:\mathbb{D}\to\mathbb{C}$ by
+$$f(z)=\int_0^{2\pi}\frac{\phi(e^{it})\,dt}{1-ze^{-it}}\text{, for all }
+z\in\mathbb{D}.$$
+Prove that $f$ is analytic.
+
+
+\item[{\bf 4.}] Let $f:\mathbb{D}\to\mathbb{C}$ be an analytic function with the
+property that $\left|f(\frac 1n)\right|\leq e^{-n}$, for any integer $n\geq 1$.
+Prove that $f$ is identically zero.
+
+{\sc Hint:} Expand $f$ in a power series.
+%If $f$ is not identically zero, one can find an integer $k\geq 0$,
+%and a holomorphic function $g:\mathbb{D}\to\mathbb{C}$ with $g(0)\neq 0$, such
+%that $f(z)=z^kg(z)$, for all $z\in\mathbb{D}$.
+
+
+\item[{\bf 5.}] Let $f:\mathbb{D}\smallsetminus\{0\}\to\mathbb{C}$ be a bounded analytic function.
+Prove that $f$ extends analytically to the whole unit disk $\mathbb{D}$.
+
+
+\item[{\bf 6.}] Let $f$ be an entire function, which is bounded in the strip
+$0\leq\text{Re}\,z <1$, and satisfies:
+$$f(z+1)=2f(z)\text{, for all }z\in\mathbb{C}.$$
+Prove there exists a constant $a\in\mathbb{C}$ such that
+$$f(z)=a2^z\text{, for all }z\in\mathbb{C}.$$
+
+
+\item[{\bf 7.}] Let $f$ be an analytic function defined on the strip
+$-1<\text{Im}\,z<1$. Consider the set
+$$
+S=\{x\in\mathbb{R}\,:\,f(x)\in\mathbb{R}\}.$$
+Prove that, either $S$ is {\em discrete\/} (i.e. it has no accumulation points),
+or $S=\mathbb{R}$.
+
+{\sc Hint:} Consider the function $g(z)=\overline{f(\bar{z})}$.
+
+
+\item[{\bf 8.}]\begin{itemize}
+\item[(i)] Suppose $u:\mathbb{D}\to\mathbb{R}$ is continuously
+   twice differentiable and is {\em harmonic}, that is,
+$$\frac{\partial^2u}{\partial x^2}+\frac{\partial^2u}{\partial y^2}=0.$$
+Prove there exists an analytic function $f:\mathbb{D}\to\mathbb{C}$, such that
+$u=\text{Re}\,f.$
+\item[(ii)] Is this true if $u$ (and $f$) is only defined on $\mathbb{D}\smallsetminus\{0\}$?
+\end{itemize}
+
+\end{itemize}
+\end{document}

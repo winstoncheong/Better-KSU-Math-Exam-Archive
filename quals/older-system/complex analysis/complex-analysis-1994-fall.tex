@@ -1,0 +1,120 @@
+% latex file
+\def\hcorrection#1{\advance\hoffset by #1 }
+\def\vcorrection#1{\advance\voffset by #1 }
+
+\documentclass{article}
+\usepackage{my,amsxtra,amssymb,amsthm}
+
+\vcorrection{-1.0in}
+\hcorrection{-0.8in}
+\textwidth 6.0in
+\textheight 9.0in
+\begin{document}
+%\begin{Large}
+
+
+
+
+
+
+\begin{center}\begin{LARGE}
+{\bf Complex Variables Qualifying Exam}\\ 
+{\bf Fall 1994}\\ \end{LARGE}
+\end{center}
+\vspace{0.1in}
+\noindent\hrulefill\\
+
+\begin{description}
+\item[1.]
+Let $U$ be open $\subset \Bbb C$,  $a \in U$, $f$ holomorphic in
+$U \backslash \{a\}$.
+
+\item[\quad] (i)
+What does it mean to say $f$ has a pole at $a$?
+
+\item[\quad] (ii)
+Show that if $a$ is a pole, then $f(U \backslash \{a\})$ is a ``neighborhood
+ of $\infty$", that is, its complement in $\Bbb C$ is compact.
+
+{\bf HINT}: Consider $1/ f(z)$ for $z$ near $a$.
+
+\item[\quad] (iii)
+Suppose $f$ has a simple pole at $a$. Prove that
+$$\lim_{r \to 0} \int_{\gamma_r} f(z) dz = i \pi Res (f,a),$$
+where $\gamma_r (t) := re^{it} + a$ for $r>0$ and $0 \leq t \leq \pi$.
+
+\item[2.]
+The holomorphic function $f$ has an isolated singularity at $z_0$ and for
+some $a$, $M \in \Bbb R$ satisfies
+$$|f(z)| \leq M |z - z_0|^a$$
+near $z_0$. Show that
+
+\item[\quad] (i)
+$z_0$ is a removable singularity if $a> -1$ and
+
+\item[\quad] (ii)
+if $a$ satisfies $-n < a \leq -1$ for some $n \in \Bbb N$, then $z_0$ is a
+pole of order at most $n-1$.
+
+{\bf HINT}: Use the Cauchy estimates.
+
+\item[3.]
+Suppose $\int_\gamma f=0$ for all piecewise smooth loops $\gamma$ in a region
+$\Omega$ and for all holomorphic functions $f$ in $\Omega$. Show how to
+{\bf construct} a holomorphic logarithm for any given zero-free holomorphic
+function in $\Omega$.
+
+\item[4.]
+Explain why the identity function $f(z) := z$ has no holomorphic
+logarithm in $\Omega := \{z \in \Bbb C : 0 < |z| < 1\}$.
+
+\item[5.]
+$\Omega$ is an open subset of $\Bbb C$ and $f : \Omega \to \Bbb C$ satisfies
+$e^{f(z)} = z$ for all $z \in \Omega$ and is continuous on $\Omega$. Show
+that $f$ is in fact holomorphic in $\Omega$.
+
+\item[6.]
+$f$ is holomorphic by not constant in a neighborhood of $a$ and $f(a) = 0$.
+Show that $a$ must be an isolated zero; that is, if $r>0$ is small enough,
+$f$ has no zero in $\{0 < |z-a| < r\}$.
+
+{\bf HINT}: Look at the Taylor series of $f$ at $a$.
+
+\item[7.] (i)
+The entire function $f$ satisfies
+$$z^{-n} f(z) \hbox{\ is\ } \hbox{bounded\ } \hbox{for\ } \hbox{some\ }
+  n \in \Bbb N.$$
+
+Show that $f$ is a polynomial of degree no greater than $n$.
+
+{\bf HINT:} Cauchy estimates.
+
+\item[\quad] (ii)
+The entire function $F$ satisfies
+$$|F(z)| \to \infty \hbox{\ as\ } |z| \to \infty.$$
+Show that $F$ is a polynomial.
+
+{\bf HINT:} $F$ has only finitely many zeros (proof?). So for an appropriate
+polynomial $P, f := P/F$ satisfies the hypothesis of (i) and it has no zeros.
+
+
+
+
+
+\end{description}    
+%\end{Large}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

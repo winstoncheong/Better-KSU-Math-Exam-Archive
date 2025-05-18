@@ -1,0 +1,149 @@
+%From fangbing@math.ksu.edu Mon Feb 23 11:30:22 1998
+%Subject: Top Qual for 98 Spring
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%-*-latex-*-            This is using LaTeX mode for emacs%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\NeedsTeXFormat{LaTeX2e} %LaTeX2.09 can't be used for this document 
+\documentclass[12pt]{article}   %% class {article}
+\usepackage{mathrsfs}                   %% use script fonts
+\usepackage{amsthm,amsfonts             %% AMS fonts etc.
+%%      ,amsmath                        %% use AMS-extra symboles
+%%      ,amscd                          %% use commutative diagrams
+         }
+
+\topmargin -.5in
+\textwidth 6.1in
+\textheight 9.0 in
+
+\renewcommand{\labelenumi}
+{\mbox{ \mbox{{\rm {\roman{enumi}}}})}}
+\renewcommand{\theenumi}{\roman{enumi}} 
+%This changes the numbering in itermizing to roman.
+
+\newcounter{problem}\setcounter{problem}{0}
+\renewcommand{\theproblem}{\arabic{problem}}
+\newcommand{\problem}{%\setcounter{subsubsection}{0}
+        \par \vspace{1.2em} 
+         \stepcounter{problem} 
+                \noindent {\bf {\theproblem}.  \ }
+        }
+
+\begin{document}
+
+ \begin{center}
+
+ {\bf TOPOLOGY QUALIFYING EXAM \ \ Spring 1998}
+
+	(Strecker and Wu)
+
+ \end{center}
+
+
+ Choose and work any {\bf 6} of the following problems. Start each 
+  problem on a new sheet of paper. {\bf Do not turn in more than six
+  problems.}
+Below a ``space'' always means a ``topological space''. 
+
+\problem
+Let $(X, \leq)$ be a linearly ordered set and let $\tau$ be the order
+topology on $X$ determined by $\leq$. Let $Y$ be a subset of $X$. Then there
+is a ``natural'' topology $\sigma$ on $Y$ that is induced by the inherited
+linear ordering on $Y$ and another ``natural'' topology $\rho$ on $Y$ that
+is the subspace topology induced by $\tau$. Then prove or disprove that
+$\sigma = \rho$.
+
+\problem Prove or disprove each of the following:
+\begin{enumerate}
+\item
+The intersection of any family of topologies on a set
+$X$ is a topology on $X$.
+
+\item
+The union of two topologies on a set $X$ is a topology on $X$.
+\end{enumerate}
+
+\problem
+Prove that every second countable space is Lindel\"{o}f. (If you used the
+Axiom of Choice, show precisely where it is used. If you do not use the
+Axiom of Choice, state so.)
+
+
+\problem Prove or disprove each of the following:
+\begin{enumerate}
+\item $\mathbb{R}$ in the standard topology cannot be written as a
+countable union of open sets;
+\item $\mathbb{R}$ in the standard topology cannot be written as a
+countable union of closed sets;
+\item $\mathbb{R}$ in the standard topology cannot be written as a
+countable union of sets with empty interiors;
+\item $\mathbb{R}$ in the standard topology cannot be written as a
+countable union of closed sets with empty interiors.
+\end{enumerate}
+
+\problem
+Prove or disprove each of the following:
+\begin{enumerate}
+\item If $A$ is a connected subset of a space $X$ and $Q\subseteq X$ such
+that $A\subseteq Q\subseteq \overline{A}$, then $Q$ must be connected.
+\item Each component of a space must be closed.
+\item Each component of a space must be open.
+\end{enumerate}
+
+\problem
+Let $\rho_1, \rho_2$ be two metrics on the set $X$ such that both metric
+spaces $(X, \rho_1)$ and $(X, \rho_2)$ are complete. If $X$ is totally
+bounded with respect to the metric $\rho_1$, is it also totally bounded with
+respect to the metric $\rho_2$? Prove you assertion.
+
+\eject
+\problem
+\begin{enumerate}
+\item State the Tychonoff Product Theorem (TPT)
+\item If AXC is the Axiom of Choice, show either 
+	$AXC\Rightarrow TPT$ or $TPT \Rightarrow AXC$.
+\end{enumerate}
+
+\problem
+Prove or disprove that the product of two normal spaces is normal.
+
+\problem
+Let $X$ be a normal $T_1$ space and $W=\cup_{n\in \mathbb{Z} } C_n\subseteq X$,
+where each $C_n$ is closed and $W$ is open in $X$. Show that there is a
+continuous function $f: X \rightarrow [0, 1]$ such that $f(x)> 0$ for all
+$x\in W$ and $f(x)=0$ for all $x\not\in W$.
+
+% \problem
+% Let $\mathbb{R}$ be the set of real numbers with the standard topology.
+% Let $\mathbb{R}^J$ be endowed with the product topology where $J$ is an
+% index set. When is $\mathbb{R}^J$ metrizable and when it is not metrizable?
+% Prove your statement.
+
+\problem 
+Let $(X_1, \tau_1)$ and $(X_2, \tau_2)$ be topological spaces and let $\tau$
+be the product topology on $X_1\times X_2$. Let $Y_1\subseteq X_1$ and
+$Y_2\subseteq X_2$. There is a ``natural'' subspace topology $\sigma$ on
+$Y_1\times Y_2$ that is induced from $\tau$ and the fact that 
+$Y_1\times Y_2$ is a subset of $X_1\times X_2$. There is also a ``natural''
+product topology $\rho$ on $Y_1\times Y_2$ that comes from the subspace
+topologies $(Y_1, \rho_1)$ and $(Y_2, \rho_2)$ induced by $\tau_1$ and
+$\tau_2$ respectively. Then prove or disprove that $\sigma = \rho$.
+
+\problem
+Let $X$ be a Hausdorff space. Suppose there exists a countable open covering
+$\{ U_n\}_{n=1}^{\infty}$ of $X$ such that for each $n$, $\overline{U_n}$ is
+compact and $\overline{U_n}\subseteq U_{n+1}$. Show that $X$ is paracompact.
+
+\problem
+Prove or disprove that the contimuous image of a compact space is compact.
+
+
+\end{document}
+
+  
+
+
+
+
+
+

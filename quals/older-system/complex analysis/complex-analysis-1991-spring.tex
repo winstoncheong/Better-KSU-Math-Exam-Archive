@@ -1,0 +1,135 @@
+% latex file
+\def\hcorrection#1{\advance\hoffset by #1 }
+\def\vcorrection#1{\advance\voffset by #1 }
+
+\documentclass{article}
+\usepackage{my,amsxtra,amssymb,amsthm}
+
+\vcorrection{-1.0in}
+\hcorrection{-0.8in}
+\textwidth 6.0in
+\textheight 9.0in
+\begin{document}
+%\begin{Large}
+
+
+
+
+
+
+\begin{center}\begin{LARGE}
+{\bf Complex Variables Qualifying Exam}\\ 
+{\bf Spring 1991}\\ \end{LARGE}
+\end{center}
+\vspace{0.1in}
+\noindent\hrulefill\\
+In what follows $\Bbb R$ is the real numbers, $\Bbb C$ the complex numbers,
+$\Bbb D$ the open unit disc centered at 0 and $\Bbb T$ the boundary of
+$\Bbb D$. The set of functions holomorphic in $\Omega$ is denoted
+$H (\Omega)$.
+
+\begin{description}
+\item[1.]
+Let $f$ be a continuous function on $\Bbb D$ which satisfies
+$\int_\Delta f=0$ for each triangle $\Delta \subset \Bbb D$ such that one
+side on $\Delta$ lies on $\Bbb R$ and another side of $\Delta$ is parallel
+to $i\Bbb R$. Show that $f$ is holomorphic.
+
+\item[2.]
+Prove that $1 / z$ is not uniformly approximable on $\Bbb T$ by polynomials
+in $z$.
+
+\item[3.]
+Let $\Omega$ be a region in $\Bbb C, f \in H(\Omega) \backslash \{0\}$, $n$
+a positive integer. Suppose that $|z|^n f(z)|$ attains a maximum over
+$\Omega$ at some point of $\Omega$. Show that $0 \notin \Omega$.
+
+\item[4.]
+Prove that for all $z$ in the open right half-plane $\Bbb H$ the integral
+$\int^\infty_1 e^{-t} t^{z-1} dt$ exists and defines a holomorphic
+function of $z \in \Bbb H$.
+
+\item[5.] (i)
+If $f$ is holomorphic in a neighborhood of $\overline{\Bbb D}$, then
+$$|f(z)| \leq \frac{1}{\sqrt{1-|z|^2}} \left[\frac{1}{2\pi}
+  \int^\pi_{-\pi} \left| f(e^{i\theta}) \right|^2 d \theta \right]^{1/2}
+  \quad \forall z \in \Bbb D.$$
+
+\item[\quad] (ii)
+Use (i) to draw the same conclusion in case $f$ is only continuous on
+$\overline{\Bbb D}$, holomorphic in $\Bbb D$.
+
+\item[6.]
+$f$ and $g$ are each holomorphic in a neighborhood of 0, $f(0) =0$ with
+multiplicity $m, g(0) = 0$ with multiplicity $n$. What is the multiplicity of
+0 as a zero of $f \circ g$?
+
+\item[7.] (i)
+Use the function $f(t) := e^{it}, t \in [0, 2\pi]$, to show that the
+Mean-Value Theorem of differential calculus fails (generally) for
+complex-valued functions.
+
+\item[\quad] (ii)
+Prove that, in spite of (i), if $F$ is holomorphic in a convex region
+$\Omega$ and $|F^\prime | \leq M$, then
+$$|F(z_2) - F(z_1)| \leq M |z_2 - z_1| \quad \forall z_1, z_2
+  \in \Omega.$$
+
+\item[8.]
+Let $\Omega$ be a bounded region in $\Bbb C$,
+$f :\overline \Omega \to \Bbb C$ a continuous non-constant function
+which is holomorphic in $\Omega$ and maps $\partial \Omega$ into
+$\Bbb T$.
+
+\item[\quad] (i)
+Show that $0 \in f(\Omega)$.
+
+\item[\quad] (ii)
+Show that $f(\Omega) = \Bbb D$.
+
+{\bf Hint:} To get ``$\supset$", apply (i) to $\phi \circ f$ for certian
+holomorphic maps $\phi$ of $\Bbb D$ into $\Bbb D$.
+
+\item[9.]
+$f$ is continuous on $\overline{\Bbb D}$, holomorphic in $\Bbb D$ and
+diam$f(\Bbb T) \leq 1$. Show that diam$f(r\Bbb T) \leq r$ for each
+$0 \leq r \leq 1$.
+
+{\bf Hint:}
+diam$f(r \Bbb T) := \max \{|f(ru_1) - f(ru_2)| : u_1, u_2 \in \Bbb T\}$.
+If this is achieved at $u_1, u_2$ consider the holomorphic function
+$F(z) := f(zu_1) - f(zu_2)$.
+
+\item[10.]
+$h :\Bbb C \to \Bbb R$ is harmonic and non-constant.
+
+\item[\quad] (i)
+Prove that $h$ is not bounded above.
+
+\item[\quad] (ii)
+Prove that $h$ is not bounded below.
+
+\item[\quad] (iii)
+Prove that $h(\Bbb C) = \Bbb R$.
+
+
+
+
+
+\end{description}    
+%\end{Large}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

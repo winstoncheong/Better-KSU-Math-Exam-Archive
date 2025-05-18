@@ -1,0 +1,161 @@
+% the new version
+
+% na98s.tex
+\def\hcorrection#1{\advance\hoffset by #1 }
+\def\vcorrection#1{\advance\voffset by #1 }
+ 
+\documentstyle{article}
+ 
+\vcorrection{-1.0in}
+\hcorrection{-1.2in}
+\textwidth 7.0in
+\textheight 9.0in
+ 
+\begin{document}
+ 
+\begin{large}
+ 
+\begin{center}
+    \begin{Large}
+        {\bf NUMERICAL ANALYSIS QUALIFYING EXAM \\
+            Fall, 2002}\\
+    \end{Large}
+\end{center}
+ 
+\vspace{.1in}
+ 
+%Test questions in description mode
+ 
+
+(do at least 3 problems from problems 1-4, and do at least
+3 problems from problems 5-8, you may do as many as you can)  \\
+
+
+ \begin{enumerate}
+\item Given $x_1$, ... , $x_n$, $y_1$, ... , $y_n$,  $z_1$, ... , $z_n$
+with $x_1$, ... , $x_n$ distinct, prove there exists a unique polynomial
+$p(x)$ of degree $ \leq  2n-1 $ with \\
+\begin{center} $p(x_i)=y_i$, $p'(x_i)=z_i$. \end{center}
+
+\item 
+   (a). Define $\theta_i=\arctan(2^{-i})$. Show that any angle $0 < \theta
+< \pi/2$ can be represented as $\theta=\widehat{\theta}_m+\epsilon$ where
+$\widehat{\theta}_m = \sum_{i=0}^m \alpha_i \theta_i$, and $\alpha_i=\pm 1$, 
+and $|\epsilon| < \arctan(2^{-m})$. \\
+
+   (b). Show that the recursion
+\begin{eqnarray*}
+X_0 & = & 1 \\
+Y_0 & = & 0 \\
+X_i & = & X_{i-1} - \alpha_{i-1}Y_{i-1}2^{-i+1} \\
+Y_i & = & Y_{i-1} + \alpha_{i-1}X_{i-1}2^{-i+1}
+\end{eqnarray*}
+will produce
+$$ \begin{array}{l} X_m=G_m\cos(\widehat{\theta}_{m-1})\\
+Y_m=G_m\sin(\widehat{\theta}_{m-1}) \end{array}$$
+where $G_m$ is real, positive and does not depend on $\theta$.
+
+\item Prove that Simpson's rule is exact when applied to the integration 
+of cubic polynomials. Justify any error estimates you use,
+
+%\item Let
+%$$ \begin{array}{l}  \frac{dy}{dx}=x^2 + y^2 \\
+%    y(0) = 1 \end{array} $$
+%Approximate $y(1)$ as accurately as possible using no more than 4 evaluations
+%of the function $f(x,y) = x^2 + y^2$. Show your work.
+%
+\item IEEE-754 double precision artismetic represents numbers with a 53 bit
+mantissa and $11$ bit exponent. Arithmetic operations return the exact answer
+rounded to the nearest representable number. If exact answer is precisely
+halfway between two representable numbers, round toward $0$. Arithmetic 
+operations never fail, but can 
+return $ \pm \mbox{\tt Inf} $ or $\mbox{\tt NaN}$.
+      
+      Let {\tt eps} be defined by the condition that $1 + \mbox{\tt eps}$ is the 
+smallest representable number $>$ 1. What value will each of the following
+variable hold.
+
+$$\begin{array}{l}
+ \mbox{\tt forward}=(2+\mbox{\tt eps}-2)/\mbox{\tt eps} \\
+ \mbox{\tt backward}=(2-\mbox{\tt eps}-2)/(-\mbox{\tt eps}) \\
+ \mbox{\tt diff}=\mbox{\tt forward}-\mbox{\tt backward} \\
+ \mbox{\tt finv}=1/\mbox{\tt forward} \\
+ \mbox{\tt binv}=1/\mbox{\tt backward} \\
+ \mbox{\tt invdiff}=\mbox{\tt finv}-\mbox{\tt binv} \\
+ \mbox{\tt small}=\mbox{$2 \wedge 512$ \hspace{.3in} (or 2**512
+in FORTRAN notation)} \\
+ \mbox{\tt medium}=\mbox{$2 \wedge 1024$} \\
+ \mbox{\tt large}=\mbox{$2 \wedge 2048$} \\
+ \mbox{\tt giant}=\mbox{$2 \wedge 4096$} \\
+ \mbox{\tt bigdiff}=\mbox{\tt giant}-\mbox{\tt large}
+\end{array}
+$$
+%\item  Let $q_k$, $k=0, 1, \ldots, n$ be a set of orthogonal polynomials on $(-1,1)$ with weight function $w(x)=|x|$, where $q_k$ has degree
+%$k$ and leading term $x^k$.\\[2pt]
+%   (a). Find $q_0$, $q_1$ and $q_2$.\\[2pt]
+%   (b). Find the Gaussian quadrature formula for 
+%$$\int_{-1}^{1}|x|f(x)dx$$
+%using the roots of $q_2$ and verify its degree of precision.\\[2pt]
+%   (c). Show that the Gaussian quadrature rule
+%$$ \int_{-1}^{1}|x|f(x)dx \approx G_n(f)k= \sum_{k=1}^{n}A_k f(x_k) $$
+%has all positive coefficients $A_k$.
+
+
+\item 
+(a). Define the condition number $\kappa (A)$ of a matrix with respect to
+a matrix norm $\| \cdot \|$ which is induced by a vector norm $\| \cdot \|$.
+Explain with detailed argument the role the condition number plays
+in estimating the error in the solution of $A {\bf x} = {\bf b}$ caused by
+an error in ${\bf b}$. \\
+(b). Let $A \in {\bf R}^{n \times n}$ be a nonsingular matrix. Prove that
+for each singular matrix $B$, 
+$$\kappa (A) \geq \frac{\| A \|}{\| A - B \|}.$$
+
+ \item  For an arbitrary $m \times n$ real matrix $A$, show that
+$$ \lim_{\alpha \rightarrow 0+}(\alpha I + A^TA)^{-1}A^T = A^+$$
+where $A^+$ is the psuedoinverse of $A$. ({\bf Hint: Apply singular 
+value decomposition})
+
+\item  Let $A$ be an $n \times n$ symmetric real positive definite
+matrix, and ${\bf b} \in {\bf R}^n$. Consider the following iteration
+$$ {\bf x}_{k+1} = {\bf x}_k + M^{-1}({\bf b}-A{\bf x}_k)$$
+where $M$ is a real nonsingular matrix and ${\bf x}_0 \in {\bf R}^n$ is a
+given vector. Let ${\bf x} = A^{-1}{\bf b}$. Show that the error 
+${\bf e}_k={\bf x}-{\bf x}_k$ satisfies
+$$\langle A{\bf e}_{k+1},{\bf e}_{k+1} \rangle 
+= \langle A{\bf e}_k,{\bf e}_k \rangle -
+\langle FM^{-1}A{\bf e}_k,M^{-1}A{\bf e}_k \rangle $$ 
+where $F=M + M^T - A$, and 
+$\langle \cdot,\cdot \rangle $ denotes the usual inner 
+product in ${\bf R}^n$. From this show 
+that if $F$ is symmetric positive definite, then the sequence $\{ {\bf x}_k \}$
+converges to ${\bf x}$.
+
+\item 
+Let $U$ be a unitary matrix, $R$ an upper triangular matrix and $UR$ an upper
+Hessenberg matrix. State and prove a condition on $R$ under which $U$ is an
+upper Hessenberg matrix. 
+
+\end{enumerate}
+
+
+
+
+\end{large}
+
+\end{document}
+
+%
+% \item
+%Suppose $ \lambda_1 > \lambda_2 > \cdots > \lambda_n$, and ${\bf v} \in
+%\Re^n$ such that its components $v_i$ are nonzero for all $i$.
+%Let $k$ be an integer with $ 1 \leq k \leq n$. Fix $v_i$ for $i \neq k$
+%and allow $v_k$ to varry. Show that the matrix $A({\bf v}) = 
+%\mbox{diag}(\lambda_1, \lambda_2, \ldots, \lambda^n) + {\bf v}{\bf v}^T$ has 
+%an eigenvalue $\lambda({\bf v})$ that satisfies
+%$$\lambda({\bf v}) = \lambda_k + C({\bf v}) v_k^2$$
+%where 
+%$$\lim_{v_k \rightarrow 0} C({\bf v}) = \frac{1}{1-\sum_{i=1, i \neq k}
+%\frac{v_i^2}{\lambda_k - \lambda_i}}.$$
+%
+

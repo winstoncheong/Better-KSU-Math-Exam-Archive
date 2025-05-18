@@ -1,0 +1,98 @@
+%Burckel/Bennett - S97 topology QE
+% latex file
+\def\hcorrection#1{\advance\hoffset by #1 }
+\def\vcorrection#1{\advance\voffset by #1 }
+
+\input amssym.def   %defines Bbb and gothic (frak)
+\input amssym       %defines Bbb and gothic (frak)
+
+%\documentstyle[bbb]{report}
+\documentclass[bbb]{report}
+\vcorrection{-0.8in}
+\hcorrection{-1.3in}
+
+\topmargin  0in
+\textwidth 7.2in
+\textheight 9.5in
+
+\def\ds{\displaystyle}
+
+\begin{document}
+
+\pagestyle{empty}
+
+\begin{Large}
+\begin{center}
+{\bf   COMPLEX VARIABLES QUALIFYING EXAM \\
+   Spring 1997 \\
+   (Burckel and Bennett)} \\
+\end{center}
+\end{Large}
+
+\begin{large}
+
+\vspace{.2in}
+
+\begin{description}{\bf
+
+\item[1.]  Prove that there is no {\it continuous} logarithm on
+the circle ${\Bbb T}$, that is, no continuous function 
+$f:{\Bbb T}\to{\Bbb C}$ satisfies $e^{f(z)}=z$ for all $z\in{\Bbb T}$.
+
+
+\vspace{.5in}
+
+\item[2.] {\it State} the Open Mapping Theorem (for holomorphic
+functions) and use it to prove the Maximum Modulus Principle.
+
+\vspace{.5in}
+
+\item[3.] $f_n:{\Bbb D}=\{z\in{\Bbb C}:|z|<1\}\to{\Bbb C}$ are
+holomorphic and $\ds\lim_{n\to\infty}f_n=f$ uniformly on each
+compact subset of ${\Bbb D}$. Prove that $f$ is holomorphic on 
+${\Bbb D}$. What important (even pre-eminent)
+result in real analysis demonstrates that no such conclusion
+holds for differentiable functions on $[-1,1]$ which converge
+uniformly there?
+
+\vspace{.5in}
+
+\item[4.] There is a local and a global way to define {\it
+meromorphic} function. Give both definitions and prove the easier
+half of the equivalence.
+
+\vspace{.5in}
+
+\item[5.] What is the image of 
+$D=\{z\in{\Bbb C}:|z|<1,\ \hbox{Re}(z)+\hbox{Im}(z)>1\}$ 
+under the mapping $w=\ds\frac{1-z}{1+z}$?
+
+\vspace{.5in}
+
+\item[6.] For what values of $z$ does 
+$\ds\prod^\infty_{n=1} \ds\root n \of z$ converge?
+
+\vspace{.5in}
+
+\item[7.] Suppose $\lambda$ is a positive real number, 
+$f(z):=\ds\sum^\infty_{n=0} a_n z^n$ 
+is entire and 
+$|f(z)|<\exp(|z|^\lambda)$ for all $z$. 
+Show 
+$|a_n|\leq\left(\ds\frac{e\lambda}{n}\right)^{\frac{n}{\lambda}}$ 
+for all $n\geq 1$. 
+
+\vspace{.5in}
+
+\item[8.] Given a domain $\Omega\subset{\Bbb C}$, show there is a 
+function $f$ which is holomorphic on $\Omega$ but which can't be 
+analytically continued to any domain 
+$\Omega'$ that properly contains $\Omega$.
+
+
+}
+\end{description}
+
+\end{large}
+
+\end{document}

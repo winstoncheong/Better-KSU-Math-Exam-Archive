@@ -1,0 +1,145 @@
+%Burckel/Bennett - F97 topology QE
+% latex file
+\def\hcorrection#1{\advance\hoffset by #1 }
+\def\vcorrection#1{\advance\voffset by #1 }
+
+\input amssym.def   %defines Bbb and gothic (frak)
+\input amssym       %defines Bbb and gothic (frak)
+
+%\documentstyle[bbb]{report}
+\documentclass[bbb]{report}
+\vcorrection{-0.8in}
+\hcorrection{-1.3in}
+
+\topmargin  0in
+\textwidth 7.2in
+\textheight 9.5in
+
+\def\ds{\displaystyle}
+
+\begin{document}
+
+\pagestyle{empty}
+
+\begin{Large}
+\begin{center}
+{\bf   COMPLEX VARIABLES QUALIFYING EXAM \\
+   Fall 1997 \\
+   (Burckel and Bennett)} \\
+\end{center}
+\end{Large}
+
+\begin{large}
+
+\vspace{.2in}
+
+\begin{description}
+{\bf
+
+\item[1.]  
+$f$ is holomorphic in ${\Bbb D}:=\{z\in{\Bbb C}:|z|<1\}$.
+
+\item[\quad (i)] Show that 
+$$F(z):=\overline{f(\overline{z})},\quad z\in{\Bbb D}$$
+is also holomorphic in ${\Bbb D}$.
+
+\item[\quad(ii)] Show that if $f$ is real-valued on 
+${\Bbb D}\cap{\Bbb R}$, then
+$$\overline{f(z)}=f(\overline{z})\qquad \forall z\in{\Bbb D}. $$
+
+\item[\quad (iii)] If $g$ is holomorphic in all of ${\Bbb C}$ 
+and real-valued on $[-1,1]$, does it follow as in (ii) that
+$$ \overline{g(z)}=g(\overline{z})\qquad \forall z\in {\Bbb C}\quad? $$
+
+\vspace{.5in}
+
+\item[2.] $f$ is holomorphic and zero-free in the region $\Omega$, 
+$z_0\in\Omega$, and for each $z\in\Omega$, $\gamma_z$ is a 
+piecewise-smooth curve in $\Omega$ joining $z_0$ to $z$. A function 
+$L_f$ is then well defined by
+$$ L_f(z):=\int_{\gamma_z} f'/f, \qquad z\in\Omega. $$
+
+\item[\quad (i)] Show that in case $\Omega={\Bbb D}$ this function 
+is holomorphic and satisfies
+$$ L'_f=f'/f. $$
+
+\item[\quad (ii)] Infer that $f=f(z_0)e^{L_f}$.
+
+\item[\quad (iii)] For what other $\Omega$ besides ${\Bbb D}$ does 
+every zero-free holomorphic function $f$ on $\Omega$ satisfy (i) and (ii)?
+
+\item[\quad (iv)] Show that in $\Omega:=\{z\in{\Bbb D}:1/2<|z|<2\}$ 
+with $z_0:=1$, say, conclusion (i) may fail. Show in fact that for 
+an appropriate zero-free holomorphic $f$, the function $f'/f$ has no 
+primitive.
+
+\item[\quad\quad] [It is an interesting fact, which you need not prove, 
+that (ii) holds for every $\Omega$.]
+
+\vspace{.5in}
+
+\item[3.] 
+Show that $\zeta(z):=\ds\sum^\infty_{n=1}n^{-z}$ converges and 
+defines a holomorphic function in $\hbox{Re}(z)>1$.
+
+\vspace{.5in}
+
+\item[4.] 
+Let $U$ be a domain in ${\Bbb C}$, ${\cal F}\subset C(U)$ an 
+equicontinuous family, $(f_n)\subset {\cal F}$ a pointwise convergent 
+sequence. Show that this sequence converges uniformly on each
+compact subset of $U$.
+
+\vspace{.5in}
+
+\item[5.] 
+Let ${\Bbb D}:=\{z\in{\Bbb C}:|z|<1\}$, $r$, $R$ positive real numbers.
+
+\item[\quad (i)] State Schwarz' Lemma for holomorphic maps 
+$f:{\Bbb D}\to{\Bbb D}$, and formulate a version for maps from
+$r\cdot {\Bbb D}$ into $R\cdot{\Bbb D}$.
+
+\item[\quad (ii)] Use (i) to prove Liouville's theorem about 
+entire functions.
+
+\vspace{.5in}
+
+\item[6.] 
+Show that $\ds\int^\infty_0\cos(t^2)\,dt=\ds\int^\infty_0\sin(t^2)\,dt
+=\frac{\sqrt{2\pi}}{4}$.
+
+\vspace{.5in}
+
+{\it Hint:} Use the contour 
+
+\vspace{.5in}
+
+
+\item[7.] 
+A {\it M\"obius transformation} is a mapping from the extended complex
+plane into itself of the form 
+$f(z):=\frac{az+b}{cz+d}\quad (a,b,c,d\in{\Bbb C},\ ad-bc\not=0)$.
+
+\item[\quad (i)] Show that the set of all M\"obius transformations 
+forms a group under composition.
+
+\vspace{.25in}
+
+A M\"obius transformation is called {\it hyperbolic} if it is 
+conjugate to a {\it dilation} (i.e., to a $g$ of form 
+$g(z)=rz$, $r>0$).
+
+\item[\quad (ii)] Show that every hyperbolic transformation $f$ has 
+two distinct fixed-points and that $f(C)=C$ for every circle $C$ 
+that passes through both these fixed-points.
+
+
+
+
+
+}
+\end{description}
+
+\end{large}
+
+\end{document}

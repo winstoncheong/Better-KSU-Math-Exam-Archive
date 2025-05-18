@@ -1,0 +1,164 @@
+%Auckly & Miller, Spring 2002, QE-GM
+\documentclass[12pt]{article}
+\usepackage{amsxtra,latexsym,amssymb,amsthm}
+
+
+\setlength{\parindent}{0cm}
+
+\def\ds{\displaystyle}
+\def\R{{\mathbb R}}
+\def\Z{{\mathbb Z}}
+\def\C{{\mathbb C}}
+\def\grad{{\hbox{\,grad\,}}}
+\def\span{{\hbox{\,span\,}}}
+\def\id{{\hbox{\,id\,}}}
+
+%\pagestyle{empty}
+
+\textwidth=6.5truein
+\textheight=9.5truein
+\hoffset=-1truein
+\voffset=-1truein
+
+\begin{document}
+
+\def\R{{\mathbb R}}
+
+\begin{large}
+\begin{center}
+{\bf
+  GEOMETRY OF MANIFOLDS QUALIFYING EXAM}\\
+  Spring 2002\\
+  (Auckly \& Miller)
+\end{center}
+
+\vspace{-.5in}
+
+{
+\begin{list}{}
+{\itemsep=0em \parsep=0em }\item[]
+\end{list}
+}
+
+\begin{description}
+%\setlength{\itemsep}{0em}\newlength{\parsep}{20em}
+
+\item 1.
+Let $\alpha=z^3\,dx\wedge dy- y\,dx\wedge dz\in \Gamma(\wedge^1 \R^3)$.
+Let $X=\partial_x+x\partial_z \in \Gamma(T\R^3)$\\
+Compute:
+
+\vspace{-.2in}
+\begin{tabular}{ll}
+\rule{3in}{0in} & \\
+a) $d\alpha$        & e) $L_X dz$\\
+b) $i_X\alpha$ & f) $L_X\alpha$\\
+c) $L_Xdx$     & g) $\ds\int_{S^2}\alpha$ \\
+d) $L_X dy$    & [Here $S^2$ is oriented with \\
+               &
+                  $i_{(x\partial_x+y\partial_y
+                   +z\partial_z)}(dx\wedge dy\wedge dz)$.]
+\end{tabular}
+
+\item 2.
+Find $\int_\Sigma dy\wedge dx + dz\wedge dy + dx\wedge dz$
+when
+$$\Sigma=\{(x,y,z)\in\R^3 | z=1-(x^2+y^2)^{2002}, \ z\geq 0\}$$
+and $\Omega_\Sigma |_{(0,0,1)} = dx\wedge dy$.
+
+\item 3.
+Let $X=\R P^2 \vee S^1$ \quad ($\vee$ is the 1 point union.)
+
+\item\quad a)
+Compute $\pi_1(X)$.
+
+\item\quad b)
+Construct a $2\hbox{-fold}$ cover of $X$, say $\widehat X$,
+with $H_2(\widehat X;,\Z)\not= 0$.
+
+\item\quad c)
+Compute $H_\ast(X;\Z)$.
+
+\item \quad d)
+Compute $H_\ast(\widehat X;\Z)$.
+
+\item 4.
+Let $f:\R^2\to\R$; $f(x,y)=x^2-y^2$. Let $g=dx^2+dy^2$.
+
+\item\quad a)
+Compute $\grad f$.
+
+\item\quad b)
+Let $\alpha_n, \beta_n, \gamma_n:\R\to\R^2$ be integral curves of $\grad f$
+with $\alpha_n(0)=(\frac{1}{n^2},1)$, $\beta_n(0)=(\frac{1}{n},\frac{1}{n})$,
+$\gamma_n(0)=(1,\frac{1}{n^2})$.
+Find expressions for $\alpha_n$, $\beta_n$ and $\gamma_n$.
+
+\item\quad c)
+Prove that $\alpha_n(\R)=\beta_n(\R)=\gamma_n(\R)$.
+
+\item\quad d)
+Compute $\lim_{n\to\infty} \alpha_n(t)$, $\lim_{n\to\infty}\beta_n(t)$
+and $\lim_{n\to\infty}\gamma_n(t)$.
+
+\item 5.
+Let $0<a<b$. The equations
+$$\begin{aligned}
+x&=(b+a\cos \psi)\cos \theta\\
+y&=(b+a\cos \psi)\sin \theta\\
+z&=a\sin \psi, \quad \theta,\psi\in[0,2\pi]
+\end{aligned}$$
+describe a surface in $\R^3$.
+
+\item\quad a)
+What is this surface?
+
+\item\quad b)
+Calculate the Gaussian curvature.
+
+\item\quad c)
+Write the equations for geodesics on this surface.
+
+\item 6.
+Let $\varphi:M\to N$ be a smooth map between connected, oriented, closed
+$n\hbox{-dimensional}$ manifolds. \underbar{Prove that}:
+$$ \left( \int_M \varphi^\ast\alpha \right) \left( \int_N\beta \right)
+= \left( \int_M\varphi^\ast\beta \right) \left( \int_N\alpha \right)
+$$
+\underbar{for all} $\alpha$, $\beta \in \Gamma(\wedge^n N)$.
+
+\underbar{Hint}: Think about $H^n(M)$ and $H^n(N)$.
+
+\item 7.
+A vector bundle map, $J:TM\to TM$ is called an almost $\C\hbox{-structure}$
+if $J^2=-\id$.
+
+\item\quad a)
+If a manifold, $M$, admits an almost complex structure,
+what can be said about $\dim M$? Why?
+
+\item\quad b)
+Prove that any manifold admitting an almost complex structure is
+orientable.
+
+\underbar{Hint}: Let $g$ be a Riemannian metric on $M$ and define $w(X,Y)=g(X,J(Y))-g(Y,J(X))$. Use $w$ to construct an orientation.
+
+\item\quad 8.
+Let $X=-y\partial_x+x\partial_y+\partial_z$,
+$Y=z\partial_x+\partial_y$.
+Let $B=\span \{X,Y\}$.
+
+\item\quad a)
+Is $B$ integrable? If $B$ is integrable, find the integral manifold through
+$(1,0,1)$.
+
+\item\quad b)
+Find the flow of $X$.
+
+\item\quad c)
+Find the flow of $Y$.
+
+
+\end{description}
+\end{large}
+\end{document}

@@ -1,0 +1,134 @@
+% Bennett
+% latex file
+\def\hcorrection#1{\advance\hoffset by #1 }
+\def\vcorrection#1{\advance\voffset by #1 }
+
+\input amssym.def   %defines Bbb and gothic (frak)
+\input amssym       %defines Bbb and gothic (frak)
+
+\input prepictex.tex
+\input pictex.tex
+\input postpictex.tex
+
+%\documentstyle[bbb]{report}
+\documentclass[bbb]{report}
+
+\vcorrection{-.5truein}
+\hcorrection{-1.25truein}
+
+\topmargin  0truein
+\textwidth 7.0truein
+%\textheight 9.5truein
+%\textwidth 6.5truein
+\textheight 8.5truein
+
+\mathsurround=2pt
+
+\def\ds{\displaystyle}
+
+\begin{document}
+
+%\pagestyle{empty}
+
+\begin{Large}
+
+\begin{center}
+   Complex Variables Qualifying Exam \\
+   Fall 1996 \\
+   Bennett and Burckel
+\end{center}
+
+\vspace{.1in}
+
+\begin{description}
+
+\item[] Let ${\Bbb D}=\{z\in{\Bbb C}: |z|<1\}$ 
+and for open $U\subset {\Bbb C}$, let $H(U)$ 
+denote the set of holomorphic functions on $U$.
+
+\item[] {\bf Do all 8 questions.}
+
+\vspace{.1in}
+
+\item[1.] Let $z_0\in U$ open and $f$ holomorphic on $U$.
+Let $r=\sup\{\rho: |z-z_0|<\rho\Rightarrow z\in U\}$. 
+Show that $f(z)=\ds\sum^{\infty}_{n=0} a_n(z-z_0)^n$ 
+for some choice of coefficients $a_n$, 
+where the series converges in 
+$\{z: |z-z_0|<r\}$.
+
+\vspace{.35in}
+
+\item[2.] Let $f$ be holomorphic in 
+${\Bbb D}\setminus\{0\}$ and 
+$\ds\int_{{\Bbb D}\setminus\{0\}} |f|^2d\lambda_2<\infty$ 
+where $\lambda_2$ denotes Lebesgue measure on 
+${\Bbb R}^2\cong{\Bbb C}$. Show that $f$ extends to be
+holomorphic on ${\Bbb D}$.
+
+\vspace{.35in}
+
+\item[3.] Show that if $U$ is an open subset of ${\Bbb C}$, 
+$g:U\to {\Bbb C}$ is continuous and $e^g$ is holomorphic,
+then $g$ is holomorphic. (\underbar{Hint}: It suffices to
+treat the case $U$ as a disk).
+
+\vspace{.35in}
+
+\item[4.] The function $f$ is entire, $f'$ has no zeros, and
+$\ds\lim_{|z|\to\infty} |f(z)|=\infty$. Show that for some 
+$a,b\in{\Bbb C}$, $f(z)=az+b$ for all $z$.
+
+\vspace{.35in}
+
+\item[5.] Evaluate 
+$\ds\int^{\infty}_{-\infty}
+\ds\frac{\cos(2x)}{x^2+1}\,dx.$
+
+\vspace{.35in}
+
+\item[6.] Construct an entire function $f$ whose only zeros
+are simple zeros at the Gaussian integers 
+$\{a+bi:a,b\in{\Bbb Z}\}$.
+
+\vspace{.35in}
+
+
+\item[7.] The functions 
+$B_n(z)
+=\ds\prod^n_{k=1} 
+\ds\frac{z-\frac{1}{k}}{1-\frac{z}{k}} 
+=\ds\prod^n_{k=1} 
+\ds\frac{1-kz}{z-k}$ 
+are called \underbar{Blaschke products}.
+
+\vspace{.1in}
+\item\item[\quad] a) Show $|B_n(z)|\leq 1$ for 
+$z\in{\Bbb D}$.
+
+\vspace{.5in}
+\item\item[\quad] b) Suppose $1\leq n_1<n_2<\dots$. 
+If $\ds\lim_{j\to\infty} B_{n_j}(z)=f(z)$ exists for each 
+$z\in{\Bbb D}$, what can you say about the limit function 
+$f(z)$?
+
+\vspace{.5in}
+\item\item[\quad] c) Show $\ds\lim_{n\to\infty} B_n(z)$ 
+exists for all $z\in{\Bbb D}$. 
+(\underbar{Hint}: Use (a) and (b).)
+
+
+\vspace{.35in}
+
+\item[8.] Find a conformal mapping from ${\Bbb D}$ onto 
+${\Bbb D}\cap\{Im(z)>0\}$.
+
+\end{description}
+\end{Large}
+\end{document}
+
+
+
+
+
+\vspace{.35in}

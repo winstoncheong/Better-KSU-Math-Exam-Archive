@@ -1,0 +1,200 @@
+% latex file
+\def\hcorrection#1{\advance\hoffset by #1 }
+\def\vcorrection#1{\advance\voffset by #1 }
+
+\documentclass{article}
+\usepackage{my,amsxtra,amssymb,amsthm}
+
+\vcorrection{-1.0in}
+\hcorrection{-0.8in}
+\textwidth 6.0in
+\textheight 9.0in
+\begin{document}
+%\begin{Large}
+
+\begin{center}\begin{LARGE}
+{\bf Numerical Analysis Qualifying Exam}\\ 
+{\bf Spring 1992}\\ \end{LARGE}
+\end{center}
+\vspace{0.1in}
+\noindent\hrulefill\\
+
+\begin{description}
+\item[1.]
+A cannon is located at $A$ on the bank of a river. An enemy position is on
+the other bank of the river at $B$. To estimate the distance from
+$A$ to $B$, a soldier chose a position $C$ on the bank of his side
+such that $AC$ is perpendicular to $AB$. He measured the distance from
+$A$ to $C$, which is $b$ m (meter), with relative error less than or equal
+to 0.001. He also measured the angle $\theta$ between $AC$ and $CB$, with
+relative error $\leq 0.01$. Give an approximation of the distance from
+$A$ to $B$ and give an estimate of the relative error of the approximation
+in terms of the known quantities. (see figure)
+
+\vspace{.1in}
+
+\begin{center}
+\begin{small}
+
+\setlength{\unitlength}{.0075in}
+\begin{picture}(-150,100)(50,50)
+\put(0,0){\line(-1,2){80}}
+\put(0,0){\line(-3,1){120}}
+\put(-120,40) {\line(1,3){40}}
+%\put(0,0){\begin{large}\circle*{5}\end{large}}
+
+\qbezier[50](-8.5,2.5)(-7.75,9)(-2.75,6) %top curve
+\put(2,-10){$C$}
+\put(-20,10){$\theta$}
+\put(-65,0){$b$}
+\put(-155,20){$A$}
+\put(-75,170){$B$}
+
+\qbezier[100](-150,125)(-50,85)(50,140) %top curve right
+\qbezier[100](-150,125)(-200,145)(-250,125) %top curve  left
+\qbezier[100](-150,85)(-50,45)(65,125) %bottom curve right
+\qbezier[100](-150,85)(-200,105)(-260,85) %bottom curve left
+
+%next two lines increase width between top & bottom curves
+%\qbezier[100](-150,65)(-50,25)(65,100) %bottom curve right
+%\qbezier[100](-150,65)(-200,85)(-250,65) %bottom curve left
+
+\end{picture}
+\end{small}
+\end{center}
+
+\vspace{.5in}
+\item[2.]
+Assume $f \in C^3 [a,b], |f(x)| \leq M, |f^{\prime \prime \prime} (x) |
+ \leq N$ for $x \in [a,b]$. Given the numerical difference formula
+$$f^\prime (x_0) = \frac{1}{2h} [f(x_0 + h) - f(x_0 - h)] -
+  \frac{h^2}{6} f^{\prime \prime \prime} (\xi)$$
+where $x_0 \in (a,b), |\xi - x_0| \leq h$, $h$ is sufficiently small, and
+the first term in the previuos formula is used to approximate
+$f^\prime (x_0)$. Assume that the relative error due to round-off error
+in the evaluation of $f$ is bounded by $\varepsilon$ and no round-off
+error in the evaluation of $h$.
+
+\item[\quad] (a)
+Find a bound for the total absolute error of the computed approximation of
+$f^\prime (x_0)$ in terms of $M,N$ and $h$.
+
+\item[\quad] (b)
+Find the value of $h$ which minimized the bound.
+
+\item[\quad] (c)
+Is the difference formular stable with respect to round-off error? (Hint:
+take $h \to 0$)
+
+\item[3.] (a)
+Suppose we want the numerical integration formula
+$$\int^b_a f(x) dx \approx A_0 f(x_0) + \dots + A_n f(x_n)$$
+to be exact for all polynomials of degree $\leq n$, where $x_0, \dots, x_n$
+are given distinct points on $[a,b]$. Give the expressions for
+$A_0, \dots, A_n$ in terms of the Lagrange polynomial coefficients
+$$L_j (x) = \prod^n_{\substack{i=0 \\i \neq j}}
+  \frac{(x-x_i)}{(x_j-x_i)}.$$
+
+\item[\quad] (b)
+Suppose $x_j \in [a,b]$ for $j = 0,1, \dots, n$. Show that the error in the
+above formula is bounded by
+$$\frac{1}{(n+1)!} (b-a)^{n+2} \sup_{x \in [a,b]}
+  |f^{(n+1)} (x) |$$
+for $f \in C^{n+1} [a,b]$.
+
+\item[4.]
+Let $f(x)$ be given on the points $a= x_0 < x_1 < \dots < x_n = b$. State
+the properties which define a cubic spline $S(x)$ for these data with
+$S^{\prime \prime} (a) = S^{\prime \prime} (b) = 0$. Show that
+$$\int^b_a \left[g^{\prime \prime} (x) \right]^2 dx \geq
+  \int^b_a \left[S^{\prime \prime} (x) \right]^2 dx$$
+where $g(x)$ is any twicely-continuously-differentiable function that
+interpolates $f(x)$ at $x_j$, for $j= 0,1, \dots, n$. This indicates that
+the cubic spline is the least oscillatory one among
+twicely-continuously-differentiable interpolate functions. ({\bf Hint:}
+Write $g(x) = S(x) + r(x)$)
+
+\item[5.]
+Describe a modification of the Newton's method, which converges quadratically
+for a double root $p$ of the equation $f(x) = 0$ if $f(x)$ is sufficiently
+smooth in a neighborhood of $p$ and if the initial guess is sufficiently
+close to $p$. Justify your answer (you may quote a theorem on order of
+convergence)
+
+\item[6.] (a)
+Show that the matrix
+$$A= \begin{bmatrix}
+        2&2&1 \\
+        1&1&1 \\
+        3&2&1
+        \end{bmatrix}$$
+is invertible, but cannot be written as
+$$A=LU$$
+with $L$ lower triangular and $U$ upper triangular.
+
+\item[\quad] (b)
+How would you solve a linear system
+$$Ax=b$$
+for $x$, given any matrix $A$ having this property.
+
+\item[7.]
+Given an $n$ by $n$ linear system $Ax=b$, we do a splitting for $A$ as
+$A=M-N$, where $M$ is nonsingular, and construct an iterative method
+for solving the linear system:
+$$x^{(k+1)} = M^{-1} Nx^{(k)} + M^{-1} b$$
+Suppose that the iterative matrix $T=M^{-1}N$ is symmetric, positive definite
+with eigenvalues having the property:
+$$\lambda_1 > \lambda_2 \geq \lambda_3 \geq \dots \geq \lambda_n.$$
+Show that for a general starting value $x^{(0)}$, and for large $k$
+$$\parallel x-x^{(k)} \parallel_2 \approx C \lambda^k_1,$$
+or
+$$\parallel x-x^{(k)} \parallel_2 \approx C \rho (T)^k,$$
+where $\rho (T)$ is the spectral radius of $T,C$ is a non-negative constant
+satisfying $C \leq \parallel x-x^{(0)} \parallel_2$, and $x$ is the exact
+solution of the linear system. When does the iterative method converge for
+any starting value $x^{(0)}$?
+
+\item[8.]
+Given a matrix
+$$A= \begin{bmatrix}
+        a_1 & \varepsilon &&&&&&& \\
+        1 & a_2 & 1 &&&&& \\
+        & \varepsilon & a_3 & \varepsilon &&&& \\
+        && 1 & a_4 & 1 &&& \\
+        &&& \varepsilon & \cdot & \cdot && \\
+        &&&& \cdot & \cdot & \cdot & \\
+        &&&&& \cdot & \cdot & 1 \\
+        &&&&&& \varepsilon & a_{2n+1}
+        \end{bmatrix}$$
+with distinct $a_i, i=1,2, \dots, 2n+1$. Show that for sufficiently small
+$\varepsilon$ the matrix $A$ has $2n+1$ distinct eigenvalues
+$\lambda_i, i =1,2 \dots, 2n+1$ such that
+$|\lambda_i - a_i| \leq K \varepsilon$ with a constant $K$ independent
+of $\varepsilon$.
+
+(Hint: Write $A=B+ \varepsilon E$ with $B,E$ independent
+of $\varepsilon$. You may quote a theorem on perturbation of eignvalues
+and a theorem that the roots of any polynomial are continuous functions of
+its coefficients)
+
+
+
+
+
+\end{description}    
+%\end{Large}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

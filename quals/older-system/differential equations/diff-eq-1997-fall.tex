@@ -1,0 +1,250 @@
+% latex file
+\def\hcorrection#1{\advance\hoffset by #1 }
+\def\vcorrection#1{\advance\voffset by #1 }
+
+\documentclass{article}
+\usepackage{my,amsxtra,amssymb,amsthm}
+
+\vcorrection{-1.0in}
+\hcorrection{-0.8in}
+\textwidth 6.0in
+\textheight 9.0in
+\begin{document}
+%\begin{Large}
+
+
+
+
+
+
+\begin{center}\begin{LARGE}
+{\bf Partial Differential Equations Qualifying Exam}\\ 
+{\bf Fall 1997}\\ \end{LARGE}
+\end{center}
+\vspace{0.1in}
+\noindent\hrulefill\\
+
+{\bf Part 1: The Laplace Equation}
+\begin{description}
+
+\item[1.1)]
+Consider the following problem
+$$-\Delta u (x) - 3u(x) = f(x), \quad x \in Q= \{x \in \Bbb R^3| \ 
+  0 < x_j < 2\pi, j=1,2,3\}, \eqno{(1a)}$$
+$$\frac{\partial u(x)}{\partial \nu} = 0, \quad x \in \partial Q,
+  \eqno{(1b)}$$
+where $\frac{\partial}{\partial \nu}$ is the normal derivative on the
+boundary $\partial Q$ of the cube $Q$.
+
+\item[\quad] a)
+How would you define the solution of problem (1) for an $f \in L^2(Q)$?
+State a theorem on the existence and uniqueness of a solution to (1) with
+$f \in L^2 (Q)$.
+
+\item[\quad] b)
+Choose the function space for the solutions of (1) with $f$'s in an
+appropriate subspace of $L^2(Q)$, and show that the solution depends on
+continuously on $f$.
+
+\item[\quad] c)
+Solve problem (1) with $f(x) = \cos(x_1) \cdot \cos(x_2) \cdot \cos(x_3)$.
+
+\item[\quad] d)
+Explain the main difference between problem (1) and the following problem
+
+$$-\Delta u(x) = f(x), \quad x \in Q= \{x \in \Bbb R^3 | \ 0< x_j< 2\pi,
+  j =1,2,3\}, \eqno{(1'a)}$$
+$$\frac{\partial u (x)}{\partial \nu} = 0, \quad x \in \partial Q.
+  \eqno{(1'b)}$$
+
+\item[1.2)]
+Let $u$ be a $C^2$ function in a domain $\Omega \subset \Bbb R^n$.
+Assume that $u$ is subharmonic in the sense that $\Delta u(x) \geq 0$ for
+$x \in \Omega$.
+Show that, for every $x \in \Omega$, and for every $r>0$ such that the closed
+ball of radius $r$ centered at $x$ lies in $\Omega$, the following
+inequality holds true
+$$u(x) \leq \frac{1}{|\Bbb S^{n-1}|} \int_{|\xi|=1}
+  u(x+r \xi) d_\xi \sum, \eqno{(2)}$$
+where $|\Bbb S^{n-1}|$ is the area of the unit sphere $\Bbb S^{n-1}$ in
+$\Bbb R^n$ and $d_\xi \sum$ is the natural measure on
+$|\Bbb S^{n-1}|$.
+
+\item[1.3)]
+Let $\Omega$ be a bounded domain in $\Bbb R^n$ with smooth boundary
+$\partial \Omega$. Show that if $u \in C^2(\Omega) \cap C(\overline \Omega)$
+and $u$ is a solution of the problem
+$$\Delta u(x) = u(x)^3, \quad x \in \Omega, \eqno{(3a)}$$
+$$u|_{x \in \partial \Omega} = 0 \eqno{(3b)}$$
+then $u(x) \equiv 0$ in $\Omega$.
+
+\item[1.4)]
+Give an example of a function $f$ in the ball
+$B= \{x \in \Bbb R^n|\  |x| < 1\}$ such that
+$f \in W^1_2(B)$, but $f \notin W^2_2(B)$.
+
+\end{description}
+
+{\bf Part 2: The Heat Equation}
+\begin{description}
+
+\item[2.1)]
+Consider the following problem (the Cauchy problem for the heat equation
+on the torus):
+$$\frac{\partial}{\partial t} u(t,x) -\Delta u(t,x) = 0, \quad t>0,
+  x \in \Bbb R^n, \eqno{(4a)}$$
+$$u(0,x) = f(x), x \in \Bbb R^n, \eqno{(4b)}$$
+$$u(t,x_1, \dots, x_j + 2 \pi, \dots, x_n) = u(t,x_1, \dots, x_j, \dots, x_n),
+  \quad j =1, \dots, n, t>0, \eqno{(4c)}$$
+where $f$ is assumed to be $2 \pi$-periodic in each of the variables.
+
+\item[\quad] a)
+Use Fourier series to find the solution $u$ of (4) in terms of the Fourier
+coefficients of $f$.
+
+\item[\quad] b)
+Assume that $f$ belongs to the $2\pi$-periodic Sobolev space
+$\widetilde W^1_2$. The
+space $\widetilde W^1_2$ is defined as the closure of the set of
+$C^\infty$-smooth
+functions $2\pi$-periodic in each of the variables, in the norm
+$$\parallel f \parallel = \left(\int_Q |f(x)|^2 +
+  |\nabla f(x)|^2 dx \right)^{\frac{1}{2}},$$
+where $Q=\{ y \in \Bbb R^n | \ 0 < y_j < 2\pi\}$
+(an elementary cell). Express the fact $f \in \widetilde W^1_2$ in terms of
+the Fourier coefficients of $f$.
+
+\item[\quad] c)
+Show that if $f \in \widetilde W^1_2$, then the formula you obtained for
+$u(t,x)$ defines a function with the following properties:
+
+\item[\quad] \quad 1)
+$u(t, \cdot) \in \widetilde W^1_2$ for all $t>0$;
+
+\item[\quad] \quad 2)
+the mapping $t \mapsto u(t, \cdot) \in \widetilde W^1_2$
+from $[0, +\infty)$ into $\widetilde W^1_2$ is continuous, and
+$u(t, \cdot) \to f(\cdot)$ in $\widetilde W^1_2$ as $t \searrow 0$;
+
+\item[\quad] \quad 3)
+$u(t,x)$ satisfies (7a) in the distributional sense.
+
+\item[2.2] a)
+In the case $n=1$, find the solution $u(t,x)$ of (4) corresponding to the
+initial condition
+$$f(x) = x-\pi, \hbox{for\ } 0 \leq x < 2\pi, \hbox{and\ }
+  \hbox{extended\ } \hbox{periodically\ } \hbox{to\ } \Bbb R^1.$$
+
+You may leave the solution in the form of a Fourier series.
+
+\item[\quad] b)
+Show that $u(t,x)$ has the following properties:
+
+\item[\quad] \quad 1)
+$u(t, \cdot) \in L^2 (0, 2\pi)$ for all $t>0$;
+
+\item[\quad] \quad 2)
+the mapping $t \mapsto u(t, \cdot) \in L^2 (0, 2\pi)$ from $[0, +\infty)$
+into $L^2(0, 2\pi)$ is continuous, and $u(t,\cdot) \to f(\cdot)$ in
+$L^2(0,2\pi)$ as $t \searrow 0$;
+
+\item[2.3] a)
+Find a formula for the solution of the initial value problem:
+$$\frac{\partial}{\partial t} u(t,x) = \Delta u(t,x) - u(t,x), \quad
+  t>0, x \in \Bbb R^n, \eqno{(5a)}$$
+$$u(0,x) = g(x), \eqno{(5b)}$$
+where $g$ is continuous and bounded.
+
+\item[\quad] b)
+Is the solution bounded?
+
+\item[\quad] c)
+Is it the only bounded solution?
+
+\end{description}
+
+{\bf Part 3: The Wave Equation}
+
+\begin{description}
+\item[3.1]
+Consider the Cauchy problem
+$$\frac{\partial^2}{\partial t^2} u(t,x) - \Delta u(t,x) = 0, \quad
+  -\infty < t< +\infty, \quad x \in \Bbb R^n, \eqno{(6a)}$$
+$$u(0,x) = 0, \quad x \in \Bbb R^n, \eqno{(6b)}$$
+$$\frac{\partial}{\partial t} u(t,x) |_{t=0} = f(x),
+  \quad x \in \Bbb R^n. \eqno{(6c)}$$
+
+Let $f$ be a function with the following properties:
+
+$\bullet$ $f \in C^\infty (\Bbb R^n \backslash \{0\})$;
+
+$\bullet$ $|f(x)| \leq C_0 |x|^\alpha$, for some $\alpha > -\frac{n}{2}$,
+   when $x$ is small: $0 < |x| \leq \varepsilon$, some $\varepsilon >0$;
+
+$\bullet$ $|f(x)| \leq C_\infty |x|^{-\beta}$, for some $\beta > \frac{n}{2}$,
+   when $x$ is large: $|x| >R$, some $R>0$.
+
+What can you say about the regularity properties of the solution
+$u(t,x)$ of (6)?
+
+\item[3.2]
+Consider the problem
+$$\frac{\partial^2}{\partial t^2} u(t,x) -\frac{\partial^2}{\partial x^2}
+  u(t,x) = h(t,x), \quad -\infty < t +\infty, \quad -\infty < x < +\infty,
+  \eqno{(7a)}$$
+$$u(0,x) = g(x), \quad x \in \Bbb R^1, \eqno{(7b)}$$
+$$\frac{\partial}{\partial t} u(t,x) |_{t=0} = f(x), \quad x \in \Bbb R^1.
+  \eqno{(7c)}$$
+
+Assuming that $f, g, h$, and $U$ are sufficiently smooth, integrate the
+equation (7a) over the isoceles triangle (``backward light cone")
+$C_{t_0, x_0} = \{(t,x) |0<t< t_0, |x-y| < t_0 -t\}$ with the vertices
+$P=(t = t_0, x = x_0), Q=(t=0, x+x_0 + t_0)$, and $R= (t=0, x=x_0 - t_0)$.
+In order to simplify the left side, use integration by parts to get
+integrals over the sides of $C_{t_0, x_0}$, and then evaluate the
+integrals over the sides $RP$ and $QP$. After this you should be able to
+obtain an expression for $u(t_0, x_0)$ in terms of $f, g$, and $h$.
+
+Use the expression you obtained to explain the Huygens principle.
+
+\item[3.3]
+$$\frac{\partial^2}{\partial t^2} u(t,x) - \Delta u(t,x) + m^2u(t,x) =
+h(t,x), \quad -\infty < t< +\infty, \quad x \in \Bbb R^n, \eqno{(8a)}$$
+$$u(0,x) = g(x), \quad x \in \Bbb R^n, \eqno{(8b)}$$
+$$ \frac{\partial}{\partial t} u(t,x) |_{t=0} = f(x), \quad
+   x \in \Bbb R^n, \eqno{(8c)}$$
+
+where $m$ is a positive constant.
+
+\item[\quad] a)
+If the initial data $f$ and $g$ are chosen from the function spaces
+$H^1(\Bbb R^n) = W^1_2(\Bbb R^n)$ and $L^2(\Bbb R^n)$, respectively,
+then what is the ``right" function space for $h$ in order that problem
+(8) be well-posed?
+
+\item[\quad] b)
+Write down the appropriate energy estimate and show how this estimate allows
+to prove the uniqueness of solution of (8). Derive this estimate for the
+solution of (8) under the assumptions that the initial data $f$ and $g$,
+the external force $h$, and the solution $u$ are all sufficiently smooth
+and decrease fast at the spatial infinity.
+
+
+
+\end{description}    
+%\end{Large}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

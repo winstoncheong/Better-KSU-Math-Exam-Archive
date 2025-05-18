@@ -1,0 +1,137 @@
+% latex file
+\def\hcorrection#1{\advance\hoffset by #1 }
+\def\vcorrection#1{\advance\voffset by #1 }
+
+\documentclass{article}
+\usepackage{my,amsxtra,amssymb,amsthm}
+
+\vcorrection{-1.0in}
+\hcorrection{-0.8in}
+\textwidth 6.0in
+\textheight 9.0in
+
+\def\R{\mathbb R}
+\def\C{\mathbb C}
+\def\N{\mathbb N}
+\def\Z{\mathbb Z}
+\def\Q{\mathbb Q}
+
+\begin{document}
+%\begin{Large}
+
+
+
+
+
+
+\begin{center}\begin{LARGE}
+{\bf Real Analysis Qualifying Exam}\\ 
+{\bf Spring 1992}\\ \end{LARGE}
+\end{center}
+\vspace{0.1in}
+\noindent\hrulefill\\
+
+In what follows $(X, {\cal A}, \mu)$ is an arbitrary measure space and
+$\lambda$ is Lebesgue outer measure on $\R$. Prove all of your assertions.
+
+\begin{description}
+\item[1.] (a)
+Find a necessary and sufficient condition that $\alpha, \beta \in \C$ satisfy
+$|\alpha + \beta| = |\alpha| + |\beta|$.
+
+\item[\quad] (b)
+Find a necessary and sufficient condition that $f, g \in L_1 (\mu)$ satisfy.
+$$\int |f+g| d\mu = \int |f| d\mu + \int |g| d\mu.$$
+
+\item[2.] (a)
+Show why it is impossible to construct a bounded Lebesgue measurable
+$f :[0,1] \to \R$ for which there is some $\alpha >0$ such that
+$$\int^1_0 |f-g| d \lambda > \alpha$$
+for every Riemann integrable $g: [0,1] \to \R$.
+
+\item[\quad] (b)
+Can such an $f$ be found if we take $\alpha =0$? Why?
+
+\item[3.] (a)
+Construt Lebesgue measurable functions $f_n$, $f:[0,1] \to \C (n=1,2, \dots)$
+such that $\lim_{n \to \infty} \int^1_0 |f-f_n| d \lambda = 0$ but we don't
+have $f_n \to f \lambda$ - a.e.
+
+\item[\quad] (b)
+What positive result about pointwise convergence follows from convergence in
+$L_1$-norm?
+
+\item[4.]
+Let $\nu$ be a countably additive measure on a (not necessarily $\sigma$)
+algebra ${\cal E}$ of subsets of $X$. For $T \subset X$, define
+$$\nu^\ast (T) = \inf \left\{\sum^\infty_{n=1} \nu (E_n) : (E_n)^\infty_{n=1}
+  \subset {\cal E} \hbox{\ and\ } T \subset \bigcup^\infty_{n=1} E_n
+  \right\}.$$
+Prove that
+
+\item[\quad] (a)
+$\nu^\ast$ is an outer measure on $X$,
+
+\item[\quad] (b)
+$E \in {\cal E} \Rightarrow E$ is $\nu^\ast$-measurable,
+
+\item[\quad] (c)
+$E \in {\cal E} \Rightarrow \nu^\ast (E) = \nu(E)$.
+
+\item[5.]
+Let $F$ be a subset of $[0,1]$ that is not Lebesgue measurable.
+
+\item[\quad] (a)
+Is it possible that $\lambda ([0,1] \backslash F) = 0$? Why?
+
+\item[\quad] (b)
+Is it possible that $\lambda (F) =1$? Why?
+
+\item[6.]
+Let $F$ be any subset of $[0,1]$ (possible nonmeasurable) and let
+$\{I_1, I_2, \dots, I_n\}$ be a partition of $[0,1]$ into subintervals. Must
+it be true that
+$$\lambda (F) = \sum^n_{k=1} \lambda (F \cap I_k)?$$
+
+Why?
+
+\item[7.]
+Let $f_n, f: X \to \C$ be ${\cal A}$-measurable with $f_n \to f$ $\mu$-a.e.
+as $n \to \infty$. Suppose there exists $g \in L^+_1 (\mu)$ with
+$|f_n| \leq g$ $\mu$-a.e. for every $n\geq 1$. Fix $\varepsilon >0$ and
+define
+$$A_N = \bigcup^\infty_{n=N} \{x \in X: |f(x) - f_n (x)| \geq \varepsilon\}.$$
+Prove that $\mu(A_N) \to 0$ as $N \to \infty$.
+
+\item[8.]
+Let $C$ be Cantor's ternary set and let $\psi$ be Lebesgue's singular function.
+Suppose that $x \in C$ but $x$ is not the left-hand endpoint of an open
+interval disjoint from $C$. Prove that
+$$D^+ \psi (x) = +\infty.$$
+Recall the definiton:
+$$D^+ \psi (x) = \overline{\lim_{t\to x^+}}
+ \, \frac{\psi (t) - \psi (x)}{t-x}.$$
+
+
+
+
+
+
+
+\end{description}    
+%\end{Large}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,142 @@
+
+% latex file
+\def\hcorrection#1{\advance\hoffset by #1 }
+\def\vcorrection#1{\advance\voffset by #1 }
+\input amssym.def
+\input amssym
+\documentclass
+{article}
+\pagestyle{plain}
+
+\def\nodivide{\not\kern -0.13em\vert \ }
+
+
+\vcorrection{-1.0in}
+\hcorrection{-0.8in}
+\textwidth 6.0in
+\textheight 9.0in
+\begin{document}
+\begin{Large}
+\newcommand{\C}{{\Bbb C}}
+\newcommand{\Q}{{\Bbb Q}}
+\newcommand{\Z}{{\Bbb Z}}
+\newcommand{\N}{{\Bbb N}}
+\newcommand{\F}{{\Bbb F}}
+\newcommand{\K}{{\Bbb K}}
+\newcommand{\E}{{\Bbb E}}
+
+\newcommand{\Gal}{{\rm Gal}}
+\newcommand{\Aut}{{\rm Aut}}
+
+
+
+\begin{center}\begin{LARGE}
+{\bf  Algebra Qualifying Exam}\\ 
+{\bf January 20, 2000}\\ \end{LARGE}
+\end{center}
+\vspace{0.1in}
+\noindent\hrulefill\\
+{\bf Instructions:} You are given 10 problems from which you are to do 8.
+ Please indicate those  8 problems that you would like  to be graded 
+by circling the problem numbers on the  problem sheet. 
+{\bf Note:} All rings in this exam are associative and with 1 and 
+all integral domains are commutative.
+%$\Bbb Q $ and $ \Bbb C $ are
+%the fields of  rational and complex  numbers respectively.
+
+%$\Bbb Z $ and $ \Bbb Q $ are
+%the sets of the integers and rational numbers respectively.
+
+\vspace{0.2in}
+
+\begin{enumerate}
+
+
+\item Let $G$ be a finite group, let $p$ be a prime,
+and let $S$ be a Sylow $p$-subgroup
+of $G$. Prove that if $N\triangleleft G$ is a normal subgroup
+of $G$, then $S\cap N$ is a Sylow $p$-subgroup of $N$. 
+
+\item Let $G$ be a finite group of odd order and let $x\in G$ be a
+nonidentity element. Prove that $x$ and $x^{-1}$ are {\em not}
+conjugate in $G$.
+
+\item Let $G$ be a group acting transitively on the finite set $X$. 
+Let $x\in X$ and denote by $G_x=\{g\in G|\ gx=x\}$ the 
+{\em isotropy subgroup} of $x$. Let $H\triangleleft G$ be a normal
+subgroup of $G$; note that $HG_x$ is a subgroup of $G$ and
+that $H$ acts on $X$. Prove that the number of distinct orbits of
+the action of $H$ on $X$ equals the index $[G:HG_x]$.
+
+
+\item Let $I=(2,x)=\{2f(x)+xg(x)|\ f(x),g(x)\in\Z[x]\}$ be the ideal
+in the ring $R=\Z[x]$ of polynomials in 
+the indeterminate $x$ with integer coefficients. Prove that $I$ is {\em not}
+a free $R$-module.
+
+
+\item Let $R$ be a Euclidean domain with respect to the function
+$d:R-\{0\}\to \Z^+\ (=\{1,2,\ldots \})$. Assume that $d$ satisfies
+\begin{enumerate}
+\item $d(ab)=d(a)d(b)$, for all $a,b\in R-\{0\},$
+\item $d(a+b)\leq {\rm max}\{d(a),d(b)\}$, for all $a,b,a+b\in R-\{0\}.$
+\end{enumerate}
+Prove that either $R$ is a field, or that there exists a field
+$\F\subseteq R$ such that $R\cong \F[x]$, the ring of polynomials
+in the indeterminate $x$ with coefficients in $\F$.
+[Hint:
+Let $\F=\{a\in R|\ d(a)=1\}$.]
+
+\item Let $A,B:V\to V$ be linear transformations on the finite dimensional
+vector space $V$ over the complex numbers $\C$. Prove that if $AB=BA$ 
+then 
+there exists a nonzero vector $0\not=v\in V$ that is simultaneously an
+eigenvector for both $A$ and $B$.
+
+
+\item Let $T:V\to V$ be a linear transformation of the finite
+dimensional vector space $V$ over the field $\F$. Define the
+usual $\F[x]$-module structure on $V$ by setting $f(x)\cdot v
+=f(T)(v)$, $f(x)\in\F[x],\ v\in V$. Prove that $V$ is a cyclic
+$\F[x]$-module if and only if the characteristic polynomial of
+$T$ equals the minimal polynomial of $T$.
+
+
+\item Let ${\Bbb F}={\Bbb F}_q$ be the finite field of 
+$q\ (=p^r)$ elements, where
+$p$ is prime, and let ${\Bbb K}={\Bbb F}_{q^4}\supseteq {\Bbb F}$.
+Say that elements $\alpha ,\beta\in {\Bbb K}$ are {\em equivalent} if 
+they have the same minimimal polynomial over ${\Bbb F}$. Clearly
+this is an equivalence relation on ${\Bbb K}$. Compute the number of 
+equivalence classes in ${\Bbb K}$ as a function of $q$. (Hint: 
+consider $\F\subseteq\F_{q^2}\subseteq\F_{q^4}=\K$.)
+         
+\item Let $\F\subseteq \E\subseteq \K$ be fields, where the extension
+degrees are finite, 
+let $\alpha\in \K$, and let $f(x)$ be the minimal polynomial of
+$\alpha $ over $\F$.  Assume that $[\E:\F]$ and
+$\mbox{deg }f(x)$ are relatively prime. Prove that $f(x)$ is also the
+minimal polynomial of $\alpha $ over $\E$.
+
+\item Let $n\geq 3$ be an integer and let $f(x)=x^n-2\in \Q[x]$.
+Prove that the Galois group of $f(x)$ is nonabelian but solvable.
+
+
+\end{enumerate}
+\end{Large}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

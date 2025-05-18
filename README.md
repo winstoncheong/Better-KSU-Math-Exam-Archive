@@ -7,3 +7,4 @@
 * [Calc 2 Exams](./calc2/)
 * [Calc 3 Exams](./calc3/)
 * [DiffEq Exams](./diffeq/)
+* [Quals](./quals/)

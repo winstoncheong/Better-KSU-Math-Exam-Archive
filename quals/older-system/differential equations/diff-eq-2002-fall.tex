@@ -1,0 +1,145 @@
+\documentclass[12pt]{article}
+\usepackage{amsxtra,amssymb,amsthm,amsmath,latexsym}
+
+\pagestyle{empty}
+
+\oddsidemargin -.5in
+\evensidemargin -.5in
+\topmargin -0.75in 
+\textwidth 7.0in
+\textheight 9in
+
+\def\R{{\mathbb R}}
+\def\ds{\displaystyle}
+
+\begin{document}
+
+\begin{large}
+
+\begin{center}
+{\bf  Differential Equations Qualifying Exam}\\
+{\bf Fall, 2002 - Kapitanski \& Korten}\\
+{\bf NAME:}
+\end{center}
+\noindent\hrulefill\\
+
+\vspace{-.2in}
+\begin{description}
+
+\vspace{.1in}\item[1.]
+Find the solution of the equation 
+$$
+y\,{\partial u\over\partial x}\,-\,x\,{\partial u\over\partial y}\,+\,
+{\partial u\over\partial z}\,=\,0
+$$
+such that $\,u(x,y,z)=xy\,$ on the plane $\,\{z=0\}$.
+
+\vspace{.1in}\item[2.] Give an example of a function in some 
+plane domain $\,\Omega\subset \mathbb R^2\,$ which belongs to  
+$\,W^{1,2}(\Omega)$, but does not belong to $\,W^{2,2}(\Omega)$.
+
+
+\vspace{0.2in}
+\vspace{.1in}\item[3.]
+Find all distributional solutions of the equation
+$\ds x^2\frac{d^2y(x)}{dx^2}=0$.
+
+\vspace{.1in}\item[4.]
+Let $\,u(x, t)\,$ be a sufficiently smooth solution 
+of the problem
+$$
+\frac{1}{1+t^2}\,u_t\,-\,\Delta u\,=\,e^u\,
+$$ 
+in some region of space-time $\,\mathbb R^n\times \mathbb R\,$ 
+containing the cylinder 
+$$ 
+Q=\{(x,t)\,|\,|x|\le 1,\;0\le t \le 2\}.
+$$
+Show that the minimum of $\,u(x,t)\,$ in $\,Q\,$ can be attained 
+only on the set
+$$
+\Sigma = \{(x, t)\,|\,|x|\le 1 \;\hbox{and}\;t=0, \;\hbox{or}\;
+|x|=1\,\hbox{and}\,0<t\le 2\}\,.
+$$
+
+\vspace{.1in}\item[5.]
+Let $\,u(x,t)\,$ be a 1-periodic in $x$ finite energy solution 
+of the equation
+$$
+  \frac{\partial^2 u}{\partial t^2} 
++\mu\cdot(1+t^2) \frac{\partial u}{\partial t}
+- \frac{\partial^2 u}{\partial x^2}= 0,
+$$
+where $\,\mu\,$ is a positive constant. 
+[Recall, that "finite energy" implies that 
+$\,u(x,t)\,$ is a continuous function of $t$ with values in 
+$\,W^{1,2}([0,1])\,$ and  
+$\,u_t(x,t)\,$ is a continuous function of $t$ with values in 
+$\,L^{2}([0,1])$.]
+
+Derive an energy estimate and use it to prove that 
+$$
+\int_0^1 |u_t(x,t)|^2 \,dx\,\to\,0
+$$
+as  $\,t\to +\infty$. 
+
+
+\vspace{.1in}\item[6.]
+Consider the problem
+
+$$\left\{ \begin{aligned}
+   ~&u_{tt}-u_{xx}+(1+t^2)u=h(x,t), \quad -\infty<x<+\infty\\
+    &u(0,x)=0,\ u_t(o,x)=0.\\
+    \end{aligned} \right.
+$$
+Show that if  $\,h(x,t)=0\,$  inside the right triangle $Q$,
+
+\vspace{-.25in}
+\begin{small}
+\setlength{\unitlength}{.0125in}
+\begin{picture}(225,125)(-100,0)
+
+\put(-15,0){\line(1,0){215}}  %+x
+\put(47.5,-2.5){$\bullet$}
+\put(95,-2.5){$\bullet$}
+\put(145,-2.5){$\bullet$}
+\put(28.5,-15){$R-T$}
+\put(92.5,-15){$R$}
+\put(128.5,-15){$R+T$}
+\put(200,-10){$x$}
+
+\multiput(0,50)(10,0){10}{\line(1,0){5}}
+\put(97.5,47.5){$\bullet$}
+\put(100,50){\line(-1,-1){50}}
+\put(100,50){\line(1,-1){50}}
+\put(92.5,20){$Q$}
+
+\put(0,-15){\line(0,1){95}}  %+y
+\put(-10,75){$t$}
+\put(-15,50){$T$}
+
+\end{picture}
+\end{small}
+
+\vspace{.25in}
+
+then $u(x,t)=0$ in $Q$.
+
+
+\end{description}
+\end{large}
+\end{document}
+
+
+Let $u(x,t)$ be a  solution of the heat equation, 
+$\,u_t=\Delta u$, in the slab $\,Q=\mathbb R^n\times (0,T]$, 
+and $\,u\in C^2(Q)\cap C(\bar Q)$.
+ 
+Show that 
+$$
+\sup_{Q} u\,\le\,\sup_{\mathbb R^n}u(x,0)\,.
+$$
+{\it Hint:} Consider the function $\,\epsilon\,(2nt+|x|^2)$. 
+
+
+

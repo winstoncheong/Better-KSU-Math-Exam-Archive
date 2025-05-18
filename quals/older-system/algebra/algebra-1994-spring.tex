@@ -1,0 +1,134 @@
+% latex file
+\def\hcorrection#1{\advance\hoffset by #1 }
+\def\vcorrection#1{\advance\voffset by #1 }
+
+\documentclass{article}
+\usepackage{my,amsxtra,amssymb,amsthm}
+
+\vcorrection{-1.0in}
+\hcorrection{-0.8in}
+\textwidth 6.0in
+\textheight 9.0in
+\def\R{\mathbb R}
+\def\C{\mathbb C}
+\def\N{\mathbb N}
+\def\Z{\mathbb Z}
+\def\Q{\mathbb Q}
+
+\begin{document}
+%\begin{Large}
+
+
+\begin{center}\begin{LARGE}
+{\bf Algebra Qualifying Exam}\\ 
+{\bf Spring 1994}\\ \end{LARGE}
+\end{center}
+\vspace{0.1in}
+\noindent\hrulefill\\
+All rings are assumed to have a multiplicative identity, denoted 1.
+The fields $\Q$, $\R$ and $\C$ are the fields of
+{\it rational, real} and {\it complex} numbers, respectively.
+
+\begin{description}
+
+\item[1.]
+Let $G$ be a finite group and $p$ is a prime number. Define
+$G(p) = \{g \in G| o(g) = p^n \hbox{\ for\ } \hbox{\ some\ } n\}$.
+
+\item[\quad] (a)
+Show that $G(p)$ is the union of all Sylow $p$-subgroups of $G$.
+
+\item[\quad] (b)
+Show that $G(p)$ is a subgroup if and only if $G$ has a normal Sylow
+$p$-subgroup.
+
+\item[2.]
+Show that if $G$ is a finite $p$-group, then for any diviser $d$ of $|G|$,
+$G$ has a normal subgroup of order $d$.
+
+\item[3.]
+Prove or disprove the following statements:
+
+\item[\quad] (a)
+An ideal $I$ of a commutative ring $R$ with 1 is maximal if and only if
+$R/I$ is a field.
+
+\item[\quad] (b)
+An ideal $I$ of a ring $R$ with 1 is maximal if and only if $R/I$ is
+a division ring.
+
+\item[4.]
+A commutative ring $R$ with 1 is called {\it local} if $R$ has only one
+maximal ideal $m$. Show that in this case, the maximal ideal $m$ is
+precisely the set of all non-units in $R$. Is it true in general that for
+any commutative ring the set of all non-units is an ideal?
+
+\item[5.]
+Let $R$ be a ring with 1. An element $e \in R$ is called a central idempotent
+if $e^2=e$ and $e$ is in the center of the ring $R$.
+
+\item[\quad] (a)
+Give an example of a ring $R$ having a central idempotent different from
+0 and 1.
+
+\item[\quad] (b)
+Let $e \in R$ be a central idempotent show that for any unitary $R$-module
+$M$, both $eM$ and $(1-e)M$ are $R$-submodules of $M$ and that
+$M = eM \oplus (1-e)M$.
+
+\item[6.]
+Let $V$ be an $n$-dimensional vector space over a field $F$ and $T$:
+$V \to V$ be a linear transformation. Set $P=\{x \in V | Tx = x\}$ to be
+the subspace of $T$-fixed points and assume that $T(V) \subseteq P$.
+Calculate the characteristic polynomial and minimal polynomial of $T$ in
+terms of $n$ and $k = \dim \ker(T)$. Can $T$ be diagonalized?
+
+\item[7.]
+For $V$ a vector space over the field $F$, let $V^\ast$ denote the dual
+space of $V$, that is, $V^\ast$ is the vector space
+$Hom_F (V,F)$ of all linear transformations $\lambda : V \to F$.
+If $V$ is $n$-dimensional with a basis
+${\cal B} = \{x_1, x_2, \dots, x_n\}$, define elements
+$\lambda_1, \dots, \lambda_n$ of $V^\ast$ by setting
+$$\lambda_i \left( \sum^n_{j=1} a_jx_j \right) = a_i,$$
+$1 \leq i \leq n, a_j \in F$, and put
+${\cal B}^\ast = \{\lambda_1, \dots, \lambda_n\}$.
+
+\item[\quad] (a)
+Show that ${\cal B}^\ast$ is a basis of $V^\ast$.
+
+\item[\quad] (b)
+If $V$ is infinite dimensional with a basis $\{e_1, e_2, \dots, e_n, \dots\}$
+and if the $\lambda_i$'s are defined similarly as above for $i= 1,2, \dots,$
+prove or disprove the statement that $\{\lambda_1, \lambda_2, \dots\}$ is a
+basis for $V^\ast$.
+
+\item[8.]
+Give an example of a normal field extension which is not Galois.
+
+\item[9.]
+Prove that any finite extension of degree $n$ over a finite field is
+Galois. What is the Galois group?
+
+
+
+
+
+
+\end{description}    
+%\end{Large}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

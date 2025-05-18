@@ -1,0 +1,91 @@
+% latex file
+\def\hcorrection#1{\advance\hoffset by #1 }
+\def\vcorrection#1{\advance\voffset by #1 }
+
+\documentclass{article}
+\usepackage{my,amsxtra,amssymb,amsthm}
+
+\vcorrection{-1.0in}
+\hcorrection{-0.8in}
+\textwidth 6.0in
+\textheight 9.0in
+\begin{document}
+%\begin{Large}
+
+
+
+
+
+
+\begin{center}\begin{LARGE}
+{\bf Complex Variables Qualifying Exam}\\ 
+{\bf Spring 1996}\\ \end{LARGE}
+\end{center}
+\vspace{0.1in}
+\noindent\hrulefill\\
+\begin{description}
+
+\item[1.]
+Let $G= \{a + bi : a, b \in \Bbb Z\}$. Does
+$\sum_{\substack{z \in G \\ z \neq 0}} \frac{1}{|z|^2}$
+converge or diverge?
+
+\item[2.]
+Suppose $f$ is even and entire. Show $g(z) = f(\sqrt{z})$ is entire.
+
+\item[3.]
+Suppose $f$ is entire and there exist $\eta_1, \eta_2 > 0$ such that
+$|z|> \eta_1$ implies $|f(z)|>\eta_2$. Show $f$ is a polynomial.
+
+\item[4.]
+Evaluate $\int^\infty_0 x(x^2 + 1)^{-2} \sin (x) dx$.
+
+\item[5.]
+Find a conformal mapping from $\{x + iy : |y| < \frac{\pi}{2} \}$ onto
+$\{u + iv : v < u^2\}$.
+(Hint: What is the action of $w = z^2$ on horizontal lines?)
+
+\item[6.]
+Write the function $\frac{1}{1-z} + \frac{3}{3-z}$ as a Laurent series
+centered at $z_0 = 0$ valid in some region which contains the point $z=2$.
+What is the domain of convergence for this series?
+
+\item[7.]
+Prove that the equation $e^z=2z+1$ has exactly one root in $|z|<1$.
+
+\item[8.]
+It is desired to approximate $\frac{1}{z}$ on $|z|=1$ by a function $f(z)$
+which is analytic on $|z| \leq 1$. Show that the maximum error is at least
+one, that is, show $\max_{|z|=1} |\frac{1}{z} - f(z)| \geq 1$.
+
+\item[9.]
+Suppose $f:U \to S$ is conformal, onto, and one-to-one, where $U$ is the unit
+disk and $S$ is a square centered at 0. Suppose also $f(0) = 0$. Prove that
+$f(iz) = if(z)$ and that if $f(z) = \sum^\infty_{n=0} c_nz^n$, then
+$c_n = 0$ unless $n-1$ is a multiple of $4$. (Hint: Consider
+$f^{-1} (if(z))$.)
+
+\item[10.]
+Show that $f(z) = \sum^\infty_{n=1} \frac{1}{n^z}$ defines an analytic
+function in the domian $\hbox{Rez} >1$.
+
+
+
+
+\end{description}    
+%\end{Large}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

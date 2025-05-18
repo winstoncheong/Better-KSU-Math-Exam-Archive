@@ -1,0 +1,129 @@
+% latex file
+\def\hcorrection#1{\advance\hoffset by #1 }
+\def\vcorrection#1{\advance\voffset by #1 }
+
+\documentclass{article}
+\usepackage{my,amsxtra,amssymb,amsthm}
+
+\vcorrection{-1.0in}
+\hcorrection{-0.8in}
+\textwidth 6.0in
+\textheight 9.0in
+
+\def\R{\mathbb R}
+\def\C{\mathbb C}
+\def\N{\mathbb N}
+\def\Z{\mathbb Z}
+\def\Q{\mathbb Q}
+
+\begin{document}
+%\begin{Large}
+
+
+
+
+
+
+\begin{center}\begin{LARGE}
+{\bf Real Analysis Qualifying Exam}\\ 
+{\bf Fall 1991}\\ \end{LARGE}
+\end{center}
+\vspace{0.1in}
+\noindent\hrulefill\\
+
+In what follows $(X, {\cal A}, \mu)$ is an arbitrary measure space and
+$\lambda$ is Lebesgue's outer measure on $\R$.
+
+\begin{description}
+\item[1.] (a)
+What does it mean to say that a function $f:X \to [-\infty, \infty]$
+is ${\cal A}$-measurable?
+
+\item[\quad] (b)
+Use your definition given in (a) to prove that if $f$ and $g$ are two
+such functions, then
+$$\{x \in X : f(x) < g(x) \} \in {\cal A}$$
+and
+$$\{x \in X : f(x) = g(x)\} \in {\cal A}.$$
+
+\item[2.]
+Suppose $f : X \to [0, \infty]$ is ${\cal A}$-measurable. Discuss how
+$\int_X f d\mu$ is defined. You should suppose your reader knows about
+measure spaces and measurable functions, but has never heard of simple
+functions or integrals.
+
+\item[3.]
+What is meant by (a) $\sigma$-algebra, (b) Borel set, (c) Lebesgue measurable
+set? How are these three concepts related?
+
+\item[4.]
+If $\mu (X) = 1$ and $0 < p < q< \infty$, prove that
+$\parallel f\parallel_p \leqq \parallel f \parallel_q$ for every
+${\cal A}$-measurable $f:X \to \C$. [Hint: Apply H\"older's Inequality with
+$r = q/p > 1$.]
+
+\item[5.]
+Prove (a) Fatou's Lemma by applying the Monotone Convergence Theorem, and
+also (b) the Monotone Convergence Theorem by applying Fatou's Lemma. Begin
+by clearly stating both results.
+
+\item[6.]
+Prove the completeness of $Lp(\mu)$ for $1 \leq p < \infty$.
+
+\item[7.]
+Suppose $(f_n)^\infty_1$ is a sequence in $L_1(\mu)$, $f \in L_1(\mu)$,
+and $\parallel f_n - f\parallel_1 \to 0$. Prove that
+$$\lim_{n \to \infty}\sup \int \log |f_n| d \mu \leq \int \log |f| d \mu,$$
+where $\log 0 = -\infty$. [Hints: First show that $(f_n)^\infty_1$ has a
+subsequence with converges pointwise a.e. and then apply Fatou's Lemma
+to an appropriate subsequence of
+$(|f_n| - \log |f_n|)^\infty_1$.]
+
+\item[8.]
+Suppose $\mu$ is a $\sigma$-finite measure, and ${\cal C}$ is a subcollection
+of ${\cal A}$. Prove that there exists $G_0 \in {\cal A}$ such that
+
+\item[\quad] (i)
+If $B \in {\cal C}$, then $B \subset G_0$ a.e., that is,
+$\mu (B \backslash G_0) = 0$;
+
+\item[\quad] (ii)
+If $G \in {\cal A}$ is another set satisfying (i), then $G_0 \subset G$
+a.e.
+
+[Hints: Let ${\cal C}^\sim$ be the collection of all countable unions of sets
+chosen from ${\cal C}$. For each $E \in {\cal A}$ with
+$\mu (E) < \infty$, show that $\sup\{\mu (B \cap E) : B \in {\cal C}^\sim\}$
+is attained at some $G=G_E \in {\cal C}^\sim$. Finally consider an
+appropriate countable union of such $G$'s.]
+
+\item[9.]
+Let $S=\{(x,y) \in \R^2 : 0 < x< 1, 0<y<1\}$ and define $f$ on $S$ by
+$$f(x,y) = \frac{x^2 - y^2}{(x^2 +y^2)^2}.$$
+Use Fubini's Theorem to prove that $f$ is not Lebesgue integrable over
+$S$.
+
+[Hint: $\frac{\partial}{\partial y} \, \frac{y}{x^2+y^2} = f(x,y)$.]
+
+
+
+
+
+
+\end{description}    
+%\end{Large}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

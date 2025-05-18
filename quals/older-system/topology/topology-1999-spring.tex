@@ -1,0 +1,225 @@
+% latex file
+%Topology QE S99 - Maginnis & Strecker
+
+\def\hcorrection#1{\advance\hoffset by #1 }
+\def\vcorrection#1{\advance\voffset by #1 }
+
+\input amssym.def   %defines Bbb and gothic (frak)
+\input amssym       %defines Bbb and gothic (frak)
+
+\input prepictex.tex
+\input pictex.tex
+\input postpictex.tex
+
+%\documentstyle[bbb]{report}
+\documentclass[bbb]{report}
+
+\vcorrection{-1in}
+\hcorrection{-1.15in}
+
+\topmargin  0in
+\textwidth 7in
+\textheight 9.15in
+
+\mathsurround=2pt
+
+\def\ds{\displaystyle}
+\def\R{{\Bbb R}}
+\def\nd{\noindent}
+\def\qed{\hfill\ \vbox{\hrule\hbox{\vrule\kern4pt\vbox{\kern4pt{}
+\kern4pt}\kern4pt\vrule}\hrule}}
+
+
+\begin{document}
+
+%\pagestyle{empty}
+
+\begin{Large}
+
+\hfill Name \rule{2.15in}{.01in}
+\par
+\vspace{.1in}
+
+\begin{center}
+   TOPOLOGY QUALIFYING EXAM \\
+   Spring 1999 \\
+   (Maginnis and Strecker) \\
+\end{center}
+
+\end{Large}
+
+\vspace{.1in}
+
+\begin{large}
+\noindent {\bf Choose and work any 6 of the following 15 problems.
+Start each problem on a new sheet of paper.
+\underbar{Do not turn in more than six problems}.
+In the problems below, a space always means a topological space.}
+
+\vspace{.2in}
+
+\begin{description}
+
+\item[1.]
+Let $f:X\to Y$ be any function, let ${\cal A}\subseteq {\cal P}(X)$
+and ${\cal B}\subseteq{\cal P}(Y)$. Prove or disprove each of the
+following:
+
+\item[\quad (a)]
+$f[\bigcap {\cal A}]=\bigcap\{ f[A]|A\in{\cal A}\}$
+
+\item[\quad (b)]
+$f^{-1}[\bigcap {\cal B}]=\bigcap \{f^{-1}[B]|B\in{\cal B}\}$
+
+
+\vspace{.15in}
+\item[2.\ (a)]
+State the Axiom of Choice.
+
+\item[\quad (b)] State the Well-Ordering Theorem.
+
+\item[\quad (c)] Either use the Axiom of Choice to prove the
+Well-Ordering Theorem or use the Well-Ordering Theorem to prove the
+Axiom of Choice.
+
+
+\vspace{.15in}
+\item[3.]
+Let $X$ be a well-ordered set in the order topology, and assume
+$X$ has a maximal element. Prove $X$ is a compact space.
+
+
+\vspace{.15in}
+\item[4.]
+Prove that every closed subset of a metrizable space is a
+countable intersection of open sets.
+
+
+\vspace{.15in}
+\item[5.]
+Let $X$ be a connected and locally path connected space. Prove
+$X$ is path connected.
+
+
+\vspace{.15in}
+\item[6.]
+Let $I$ denote the closed unit interval $[0,1]$ in $\R$
+(the real numbers with its usual topology). Prove or disprove
+that in $\R^{\R}$ with its usual product topology
+$(I^\circ)^{\R}=(I^{\R})^\circ$, (where $A^\circ$ denotes the
+interior of $A$).
+
+
+
+\vspace{.15in}
+\item[7.]
+Let $X\buildrel{f}\over{\longrightarrow} Y$
+be any continuous function.
+
+\vspace{.1in}
+\item[\quad (a)]
+Prove that there is a factorization of $f$
+$X\buildrel{f}\over{\longrightarrow}Y=
+ X\buildrel{q}\over{\longrightarrow}Z\buildrel{m}\over{\longrightarrow}Y$
+ where $q$ is a quotient map and $m$ is a one-to-one continuous
+ function.
+
+\item[\quad (b)]
+Prove that the factorization $f=m\circ q$ of part (a) is essentially
+unique in the sense that if
+$X\buildrel{f}\over{\longrightarrow}Y=
+ X\buildrel{\widehat q}\over{\longrightarrow}\widehat Z
+  \buildrel{\widehat m}\over{\longrightarrow}Y$
+is also a factorization of $f$ with $\widehat q$ a
+quotient map and $\widehat m$ one-to-one and continuous,
+then there is a unique homeomorphism
+$Z\buildrel{h}\over{\longrightarrow}\widehat Z$
+such that $h\circ q=\widehat q$ and $\widehat m\circ h=m$.
+
+\vspace{.15in}
+\item[8.]
+Prove that a filter $F$ on a space $X$ converges to a point
+$x\in X $ if and only if the net $f$ based on $F$ converges to $x$.
+
+\vspace{.15in}
+\item[9.]
+Let $(X,\leq)$ be a linearly ordered set and let
+$\tau$ be the topology on $X$ inherited from the order.
+If $A$ is a subset of $X$, there are two natural ways to
+topologize $A$. The first, $\tau_1$, is as a subspace of
+$(X,\tau)$.
+The second, $\tau_2$, is as an ordered space with the order on $A$
+inherited from $(X,\leq)$. Prove or disprove that in all cases
+$(A,\tau_1)=(A,\tau_2)$.
+
+\vspace{.15in}
+\item[10.]
+Let $A$ be a connected subset of a connected space $X$, and let
+$C$ be a component of $X-A$. Prove $X-C$ is connected.
+
+
+\vspace{.15in}
+\item[11.]
+Prove that a Hausdorff space with a basis consisting of sets that
+are both open and closed is totally disconnected.
+
+
+\vspace{.15in}
+\item[12.]
+Prove or disprove.
+
+\item[\qquad (a)]
+Every quotient map is an open map.
+
+\item[\qquad (b)]
+Every open map is a quotient map.
+
+
+\vspace{.15in}
+\item[13.]
+Prove that a compact subset of a Hausdorff space is closed.
+
+\vspace{.15in}
+\item[14.]
+Find a flaw in the following purported proof of the statement:
+
+\vspace{.05in}
+{\it Every discrete subspace of a topological space that has no isolated
+points is nowhere dense.}
+
+\vspace{.05in}
+\nd Purported proof:
+
+\vspace{.05in}
+Suppose $X$ is a space with no isolated points and $D$ is a
+discrete subspace of $X$. If $D$ is not nowhere dense, then
+there is a nonempty open set $U$ with $U\subseteq\overline{D}$.
+Thus there is some $d\in D\bigcap U$.
+Since $D$ is discrete, there is some open set $W\subseteq U$
+such that $W\bigcap D=\{d\}$.
+Since $X$ has no isolated points $W\not=\{d\}$.
+Thus $W \setminus \{d\}$ is a nonempty open set contained in
+$\overline{D}$.
+Thus there is some $\widehat{d}\in(W\setminus\{d\})\bigcap D
+\subseteq W\bigcap D=\{d\}$,
+which is a contradiction.
+Thus $D$ must be nowhere dense.\qed
+
+
+
+\vspace{.15in}
+\item[15.]
+Assume $X$ is a normal space. Let $\beta(X)$ be the
+\v Cech-Stone compactification of $X$, and let $y\in\beta(X)-X$.
+Prove that $y$ is not the limit of a sequence of points of $X$.
+
+
+
+
+\vfill
+\clearpage
+
+
+\end{description}
+\end{large}
+\end{document}

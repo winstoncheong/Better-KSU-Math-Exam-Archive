@@ -1,0 +1,163 @@
+% latex file
+\def\hcorrection#1{\advance\hoffset by #1 }
+\def\vcorrection#1{\advance\voffset by #1 }
+
+\documentclass{article}
+\usepackage{my,amsxtra,amssymb,amsthm}
+
+\vcorrection{-1.0in}
+\hcorrection{-0.8in}
+\textwidth 6.0in
+\textheight 9.0in
+
+\def\R{\mathbb R}
+\def\C{\mathbb C}
+\def\N{\mathbb N}
+\def\Z{\mathbb Z}
+\def\Q{\mathbb Q}
+
+\begin{document}
+%\begin{Large}
+
+
+
+
+
+
+\begin{center}\begin{LARGE}
+{\bf Complex Analysis Qualifying Exam}\\ 
+{\bf Spring 1988}\\ \end{LARGE}
+\end{center}
+\vspace{0.1in}
+\noindent\hrulefill\\
+
+Throughout ${\bf C}$ denotes the complex plane and ${\bf D} := \{z \in {\bf C}: |z| < 1\}$
+the open unit disc therein. ${\bf N}$ is the positive integers, ${\bf Z}$ all the
+integers and ${\bf R}$ the real numbers. $I$ denotes the identity function:
+$I(z) = z$ for all $z$.
+
+\begin{description}
+\item[1.]
+$f$ is holomorphic and bounded in ${\bf D}$ and $f(z) \to 0$ as
+$z \to 1$ along the upper arc of the circle $|z - \frac{1}{2}| = \frac{1}{2}$.
+Show that $f(x) \to 0$ as $x \to 1$ along $[0,1[$.
+{\bf Hints:} For each $N \in {\bf N}$ let $f_N (z) := z^N f(z)$,
+$F_N(z) := f_N (z) \overline{f_N (\overline{z})}$. Show that $F_N$
+is holomorphic and for $\varepsilon >0$ there is an $N$ such that
+$|F_N| \leq \varepsilon$ on the whole circle
+$|z - \frac{1}{2}| = \frac{1}{2}$, and infer that
+$|f(x)|^2 \leq \varepsilon x^{-2 N}$ for $x \in ]0,1[$ by the Maximum
+Modulus Principle.
+
+\item[2.]
+$f$ is holomorphic and bounded by $M$ in ${\bf D}$ and has zeros at the distinct
+points $a_1, \dots, a_N \in {\bf D}$. Prove that
+$$|f(z)| \leq M \prod^N_{j=1} \left|\frac{z-a_j}{1- \overline a_j z} \right|
+  \quad \forall z \in {\bf D}.$$
+Is this an improvement over the hypothesized inequality $|f(z)| \leq M$?
+{\bf Hint:} $f(z) \prod^N_{j=1} \frac{1-\overline a_j z}{z-a_j}$, appreance
+to the contrary, is holomorphic in ${\bf D}$ and bounded by $M$. Why?
+
+\item[3.]
+If $f$ is {\it one-to-one} and holomorphic in the open set $U$ except for
+isolated singularities, then $f$ has no essential singularities and at most
+one pole.
+
+\item[4.]
+$f$ is continuous in ${\bf D}$ and holomorphic in ${\bf D} \backslash [-1,1]$. Show
+that $f$ is actually holomorphic in ${\bf D}$.
+
+\item[5.]
+Show that if $c$ is a non-removable isolated singularity of the holomorphic
+function $f$, then $c$ is an essential singularity of the function $e^f$.
+
+\item[6.]
+Let ${\bf A}$ denote the {\it disc algebra}: $C(\overline {\bf D}) \cap H ({\bf D})$.
+Find all the homomorphisms $\phi$ of ${\bf A}$ into ${\bf C}$.
+
+{\bf Hints:} The number $c := \phi (I)$ plays a special role. Show that for
+each $f$ the number $\phi (f)$ lies in $f(\overline {\bf D})$ and determines
+$\phi$ first on the polynomials.
+
+\item[7.]
+State necessary and sufficient conditions on a sequence
+$(b_n)_{n \in N} \subset {\bf D}$ in order that
+
+(i) there exists a non-zero holomorphic function on ${\bf D}$ with zeros at each
+$b_n$;
+
+(ii) there exists a bounded, non-zero holomorphic function on ${\bf D}$ with
+zeros at each $b_n$.
+
+In case (ii) how would you construct such a function (outline only, no proof).
+
+\item[8.]
+Let $\Omega$ be an open connected subset of ${\bf C}$, $f_n$ holomorphic in
+$\Omega$, and suppose that $\{f_n\}$ converges to a non-constant function
+$f$ uniformly on each compact subset of $\Omega$. Show that
+
+\item[\quad] (i)
+$\overline \lim_{n \to \infty} f_n (K) \subset f(K)$ for every compact
+$K \subset \Omega$ and
+
+\item[\quad] (ii)
+$\underline {\lim}_{n \to \infty} f_n (G) \supset f(G)$ for every open
+$G \subset \Omega$.
+
+Suppose in addition that there exists an $M < \infty$ such that every
+$w \in {\bf C}$ and $n \in {\bf N}$
+$$\hbox{card\ } [f^{-1}_n (w) ] \leq M.$$
+
+Show that then
+
+\item[\quad] (iii)
+$\hbox{card\ } [f^{-1} (w)] \leq M$ for all $w  \in {\bf C}$.
+
+\item[9.]
+Let $f$ be holomorphic in a neighborhood of $\overline D$. Suppose
+$z_0 \in \partial {\bf D}$ satisfies $|f(z_0)| = \max |f(\overline D)|$. Show that
+$f^\prime (z_0) \neq 0$, unless $f$ is constant in ${\bf D}$.
+{\bf Hints:} WLOG, $1 = z_0 = |f(z_0)|$. Then $f$ non-constant plus the
+Maximum Modulus Principle gives $f({\bf D}) \subset {\bf D}$. If $f(0) = 0$, then
+use Schwarz to argue
+$\left|\frac{f(1)-f(x)}{1-x} \right| \geq \frac{1-x}{1-x} = 1$
+for $x \in [0,1[$, so $|f^\prime (1)| \geq 1$. In general, let
+$a = f(0) \in {\bf D}$, form $T(w) := \frac{w-a}{1-\overline a w}$,
+$F := T \circ f$ and apply the preceding. Compute $F^\prime (1)$ by the
+chain rule and express $f^\prime (1)$ in terms of it.
+
+\item[10.] (i)
+State the Harnack inequalities for harmonic functions.
+
+\item[\quad] (ii)
+Let $h :{\bf C} \to {\bf R}$ be harmonic and non-constant. Show that $h$ has at least
+one zero. {\bf Hint:} One method is to use (i).
+
+\item[\quad] (iii)
+Let $h : {\bf C} \to {\bf R}$ be harmonic and non-constant. Show that
+$h({\bf C}) = {\bf R}$. {\bf Hint:} Use (ii). Alternatively, since $h({\bf C})$ is
+necessarily an interval in ${\bf R}$, if not all of ${\bf R}$, it is bounded above
+or below and with harmonic conjugate of $h$ we should be
+able to use Liouville.
+
+
+
+
+
+\end{description}    
+%\end{Large}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

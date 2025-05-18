@@ -1,0 +1,161 @@
+% latex file
+\def\hcorrection#1{\advance\hoffset by #1 }
+\def\vcorrection#1{\advance\voffset by #1 }
+
+\documentclass{article}
+\usepackage{my,amsxtra,amssymb,amsthm}
+
+\vcorrection{-1.0in}
+\hcorrection{-0.8in}
+\textwidth 6.0in
+\textheight 9.0in
+
+\def\R{\mathbb R}
+\def\C{\mathbb C}
+\def\N{\mathbb N}
+\def\Z{\mathbb Z}
+\def\Q{\mathbb Q}
+
+\begin{document}
+%\begin{Large}
+
+
+
+\begin{center}\begin{LARGE}
+{\bf Complex Analysis Qualifying Exam}\\ 
+{\bf Fall 1987}\\ \end{LARGE}
+\end{center}
+\vspace{0.1in}
+\noindent\hrulefill\\
+
+{\bf NOTATION:} For $a \in {\bf C}$, $ 0< r< \infty$,
+$D(a,r) := \{z \in {\bf C} : |z-a| < r \}$, $C(a,r) := \partial D(a,r)$ and
+${\bf D} := D(0,1)$. For $G \subset {\bf C}$, $C(G)$ denotes the set of continuous
+${\bf C}$-valued functions on $G$ and if $G$ is open, $H(G)$ denotes the set of
+holomorphic functinos in $G$.
+
+\begin{description}
+\item[1.] (a)
+Show by direct calculation that if $G$ is an open set in ${\bf C}$ star-shaped
+with respect to a point $z_1$ and $f \in C(G)$ satisfies
+$\int_{[z_1, z_2, z_3, z_1]} f=0$ for all points $z_2, z_3$
+such that convex hull $\{z_1, z_2, z_3\} \subset G$, then $f$ has a primitive
+in $G$; that is, there exists a complex-differentiable $F$ in $G$ with
+$F^\prime = f$.
+
+\item[\quad] (b)
+Give an example, with proof, of a non-star shaped region $G$ and an
+$f \in C(G)$ which satisfies the hypothesis in (a) and which is not $F^\prime$
+for any complex-differentiable $F$.
+
+\item[2.]
+Let $f$ be meromoprhic in ${\bf C}$, $R_n \uparrow \infty$. Suppose that
+$\sup |f(C(0, R_n)) | \to 0$ as $n \to \infty$. For each $\zeta \in {\bf C}$ denote
+by $S_n(\zeta)$ the sum of the residues of the function
+$z \mapsto \frac{f(z)}{z-\zeta}$ at the poles of $f$ inside
+$D(0, R_n)$. Prove that $\lim_{n \to \infty} S_n (\zeta) = f(\zeta)$
+uniformly for $\zeta$ in any compact set which is disjoint from the poles of
+$f$.
+
+\item[3.]
+Let $f$ be holomorphic on some neighborhood of ${\bf D}^-$. If $|f(z)| < 1$ for
+all $|z| = 1$, then there exists a unique $z \in {\bf D}$ such that $f(z) = z$.
+
+\item[4.]
+Let $I = [0,1]$ and let $f \in C({\bf D} \times I)$. Suppose that for each
+$t \in I, z \mapsto f(z,t)$ is holomorphic and has a unique zero $z(t)$ in
+${\bf D}$. Prove that $t \mapsto z(t)$ is continuous on $I$.
+
+\item[5.]
+Let $\Gamma_n$ be the rectangular path
+$$\left[ n + \frac{1}{2} + ni, \quad -n - \frac{1}{2} + ni, \quad
+  -n - \frac{1}{2} - ni, \quad n + \frac{1}{2} - ni, \quad n + \frac{1}{2}
+  +  ni \right].$$
+
+\item[\quad] (a)
+Evaluate the integral
+$$\int_{\Gamma_n} \frac{\pi}{(z+a)^2} \cot (\pi z) dz$$
+for $a \in {\bf C} \backslash {\bf Z}$.
+
+\item[\quad] (b)
+Show that for such $a$
+$$\lim_{n \to \infty} \int_{\Gamma_n} \frac{\pi}{(z+a)^2} \cot (\pi z)
+  dz = 0.$$
+
+{\bf HINT:} Use the fact that for $z= x+ iy$,
+$|\cos z|^2 = \cos^2 x + \sin h^2 y$ and $|\sin z|^2 = \sin^2 x + \sin h^2 y$
+to show that $|\cot (\pi z) | \leq 2$ for $z$ on $\Gamma_n$ if $n$ is
+sufficiently large.
+
+\item[\quad] (c)
+Use (a), (b) to deduce that
+$$\frac{\pi^2}{\sin^2 (\pi a)} = \sum^\infty_{n = -\infty}
+  \frac{1}{(a + n)^2} \quad \forall a \in {\bf C} \backslash {\bf Z}.$$
+
+\item[\quad] (d)
+From (c) infer that
+$$\frac{\pi^2}{8} = \sum^\infty_{n=0} \frac{1}{(2n + 1)^2}.$$
+
+\item[6.]
+State and prove the Liouville theorem.
+
+\item[7.]
+Let $S := {\bf R} \times ]a,b[$, with $a,b \in {\bf R}$ and $a<b$. Let
+$h \in C(\overline S)$ be holomorphic in $S$. Suppose that
+$\sup_y \int^\infty_{-\infty} |h(x+ iy)| dx < \infty$. Show that then
+$\int^\infty_{-\infty} h(x+iy) dx$ is independent of $y$.
+
+{\bf Extra Credit:} What is the situation if ``$h$ holomorphic" is weakened
+to ``$h$ harmonic".
+
+{\bf HINTS:} Adroit use of Cauchy's theorem. Alternatively, set
+$H_n(z) := \int^n_{-n} h(z+ x) dx$ and show that the sequence of holomorphic
+functions $\{H_n\}^\infty_{n=1}$ converges locally uniformly in $S$.
+Examine the limit function on various horizontal lines in $S$.
+
+\item[8.]
+Let  $G \subset {\bf C}$ be a bounded region, $f \in H(G)$, and $z_0 \in \partial G$.
+Suppose that $\lim \sup_{z \to w} |f(z)| \leq 1$ for all
+$w \in \partial G \backslash \{z_0\}$ and that
+$\lim_{z \to z_0} |f(z)| \cdot |z - z_0|^\varepsilon = 0$
+for each $\varepsilon > 0$. Prove that $|f(z)| \leq 1$ for all $z \in G$.
+
+\item[9.]
+Show that if $f$ is holomorphic in the open set $U$ and one-to-one in
+$U \backslash A$, where the points of $A$ are isolated in $U$, then
+$f$ is one-to-one in $U$.
+
+{\bf HINT:} This is a result about continuous open maps.
+
+\item[10.]
+Let $f, g \in H({\bf D})$. Prove:
+
+\item[\quad] (a)
+$|f|$ is subharmonic on ${\bf D}$.
+
+\item[\quad] (b)
+If $|f| + |g|$ attains a maximum at some point of ${\bf D}$, then both $f$ and
+$g$ are constants.
+
+
+
+
+
+
+\end{description}    
+%\end{Large}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

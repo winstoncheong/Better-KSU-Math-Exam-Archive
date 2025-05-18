@@ -1,0 +1,124 @@
+% latex file
+\def\hcorrection#1{\advance\hoffset by #1 }
+\def\vcorrection#1{\advance\voffset by #1 }
+
+\documentclass{article}
+\usepackage{my,amsxtra,amssymb,amsthm}
+
+\vcorrection{-1.0in}
+\hcorrection{-0.8in}
+\textwidth 6.0in
+\textheight 9.0in
+
+\def\R{\mathbb R}
+\def\C{\mathbb C}
+\def\N{\mathbb N}
+\def\Z{\mathbb Z}
+\def\Q{\mathbb Q}
+
+\begin{document}
+%\begin{Large}
+
+
+
+
+
+
+\begin{center}\begin{LARGE}
+{\bf Partial Differential Equations Qualifying Exam}\\ 
+{\bf Fall 1989}\\ \end{LARGE}
+\end{center}
+\vspace{0.1in}
+\noindent\hrulefill\\
+
+\begin{description}
+\item[1.]
+Show that the Cauchy problem of Laplace equation
+$$\begin{cases}
+        u_{tt} + u_{xx} &= 0 \\
+        u(0,x) &= \phi(x) \quad t > 0, x \in R^1 \\
+        u_t (o,x) &= \psi (x)
+        \end{cases}$$
+is not well posed.
+
+\item[2.]
+A semidisc of radius $a$ is well isolated from the surrounding. The temperature
+at $ADB$ and segment $\overline{AB}$ are kept at constant $c_2$ and $c_1$
+respectively. Find the stationary temperature distribution $u$ in this
+semidisc. (See Fig. 1.)
+
+\item[3.] (i)
+Under the boundary condition
+$\left(au + b \frac{\partial u}{\partial b}\right)_{|\partial \Omega}=0$
+where $a \neq 0 \neq b$ are constants, show that the Laplacian $\Delta$
+is selfadjoint operator with all eigenvalue being negative and that
+$-\Delta$ is positive definite operator.
+
+\item[\quad] (ii)
+Can you use the result from part (i) to show that the equation
+$$\begin{cases}
+        \Delta u  =f \hbox{\ in\ } \Omega \\
+        \left(au + b\frac{\partial u}{\partial n} \right)_{|\partial \Omega}
+        = 0
+        \end{cases}$$
+exists a unique solution $u$ where $f \in L^2(\Omega)$ and $a \cdot b$
+are nonzero constants.
+
+\item[4.]
+Find the solution $u(x,y,z)$ for the equation $xu_x+yu_y + u_z =u$ with the
+Cauchy data $u(x,y,0) = \phi(x,y)$ where $\phi$ is given $C^1$-function.
+
+\item[5.]
+Let $\phi(x)$ be a bounded function in $\R^n$, define its average over
+$\R^n$ as
+$$\phi_{av} = \lim_{r \to \infty} \frac{1}{|B_r|} \int_{B_r}
+  \phi (x) dx$$
+where $B_r$ is the ball $\parallel x \parallel \leq r$. For heat conduction
+in $\R^n$ without sources, show that the average of temperature remains
+constant in time.
+
+\item[6.] (a)
+Define a weak solution of $\Delta u=0$.
+
+\item[\quad] (b)
+Define a strong solution of $\Delta u=0$.
+
+\item[\quad] (c)
+Show any weak solution is also a strong solution.
+
+\item[7.]
+Let $\frac{\partial^2 u}{\partial t^2} = \frac{\partial^2u}{\partial x^2}$
+and let $B_t = \{x: |x| \leq 1-t\}$ for $0 \leq t \leq 1$ let
+$E(t) = \frac{1}{2} \int_{B_t}
+\left[\left(\frac{\partial u}{\partial t}\right)^2 +
+\left(\frac{\partial u}{\partial x}\right)^2\right] dx$.
+Show $\frac{dE}{dt} \leq 0$.
+
+\item[8.]
+Find the $C^2$ function $u$ on $D=\{x^2+y^2 \leq 1\}$
+satisfying $u(e^{i\theta}) = \theta^2 - \pi^2 (-\pi < \theta \leq \pi)$
+that minimizes
+$$\int_D |\nabla u|^2 dxdy.$$
+
+
+
+
+
+
+\end{description}    
+%\end{Large}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

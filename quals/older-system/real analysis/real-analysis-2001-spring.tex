@@ -1,0 +1,151 @@
+% latex209 file
+%Real Analysis - Bennett & Moore
+
+\def\hcorrection#1{\advance\hoffset by #1 }
+\def\vcorrection#1{\advance\voffset by #1 }
+
+
+%\input prepictex.tex
+%\input pictex.tex
+%\input postpictex.tex
+
+%\documentstyle[bbb]{report}
+\documentclass[bbb]{report}
+\usepackage{amsxtra,amssymb,amsthm,amsmath,latexsym}
+
+\vcorrection{-.5in}
+\hcorrection{-1.25in}
+
+\topmargin  0in
+%\textwidth 7in
+%\textheight 10truein
+\textheight 9truein
+\textwidth 6in
+\mathsurround=2pt
+
+\pagestyle{empty}
+
+\def\ds{\displaystyle}
+\def\nd{\noindent}
+\def\R{{\mathbb R}}
+\def\Z{{\mathbb Z}}
+\def\C{{\mathbb C}}
+\def\D{{\mathbb D}}
+\def\N{{\mathbb N}}
+\def\F{{\mathcal F}}
+\def\M{{\mathcal M}}
+
+\begin{document}
+
+
+%\begin{Large}
+\begin{large}
+
+\par
+\vspace{.15in}
+
+\begin{center}
+  {\bf REAL ANALYSIS QUALIFYING EXAM \\
+  SPRING 2001}\\
+   (Bennett \& Moore) \\
+\end{center}
+
+
+\vspace{.1in}
+
+
+\begin{large}
+\nd {\bf Answer all eight questions.
+Throughout, $(X, {\mathcal M} ,\mu)$ denotes a measure space,
+$\mu$ denotes a positive measure unless otherwise specified, and all
+functions are assumed to be measurable.}
+\end{large}
+
+\vspace{.1in}
+
+\renewcommand\baselinestretch{1.25}
+
+\begin{description}
+
+\item[1.]
+Let $\nu,\mu$ be positive measures on $(X,\mathcal M)$.
+Show that the following are equivalent:
+
+\item[\quad (a)]
+$\nu<<\mu$
+
+\item[\quad (b)]
+For every $\varepsilon >0$ there exists $\delta>0$ such that
+$\nu(B)<\varepsilon$ whenever $B\in \mathcal M$ and
+$\mu(B)<\delta$.
+
+\vspace{.05in}
+
+\item[2.]
+Suppose $f\in L^p(\R), 1\leq p < \infty$.
+Prove that $\ds\lim_{h\to 0}\int_\R |f(x+h)-f(x)|^p\,dx=0$.
+
+\vspace{.05in}
+
+\item[3.]
+A set $\mathcal A \subseteq L^1(\mu)$ is called uniformly integrable if
+for every  $\varepsilon >0$, there exists a $\delta >0$ such that
+$\ds\int_E|f|\,d\mu <\varepsilon$ whenever $\mu(E)<\delta$.
+
+\item[\quad]
+Prove Vitali's theorem:
+
+\item[\quad]
+If (i) $\mu(X)< \infty$, (ii) $\{f_n\}$ is uniformly integrable, and  
+(iii) $f_n\to f$ a.e., where $|f| < \infty$ a.e., then
+ $\|f_n-f\|_1 \to 0$.
+
+\vspace{.05in}
+
+\item[4.]
+Prove or disprove:  { If $U\subseteq \R$ is open,
+then $|\overline U \backslash U|=0$}.
+
+\vspace{.05in}
+
+
+\item[5.]
+Suppose $\{a_n\}$ is a decreasing sequence of positive numbers and
+$\ds\sum^\infty_{n=1} a_n<\infty$.
+\\
+Show that $\ds\lim_{n\to \infty} n a_n=0$.
+
+\vspace{.05in}
+
+\item[6.]
+Evaluate $\ds\lim_{A\to\infty} \,\int^A_0 \frac{\sin(x)}{x}\,dx$.
+(Hint: $\ds\int^\infty_0 e^{-xt} dt=\frac{1}{x}$).
+
+
+\vspace{.05in}
+
+\item[7.]
+Suppose $T$ is a linear operator on $L^2(X,\mathcal M, \mu)$ with
+$\|Tf\|_2=\|f\|_2$.
+\\
+Show $\langle Tf,Tg \rangle = \langle f,g \rangle$
+for all $f,g\in L^2$.
+
+
+\vspace{.05in}
+
+\item[8.]
+Suppose $g_\alpha\in L^2(X, \mathcal M, \mu)$ are such that
+$\ds \left|\int_X f(x) g_\alpha(x)\,d\mu(x) \right| \leq \|f\|^3_2$
+for all $\alpha$ and $f \in L^2(X, \mathcal M, \mu).$
+Show that there exists an $ M>0 $ such that
+$\|g_\alpha\|_2 \leq M<\infty $ for every $ \alpha$.
+
+\vfill
+
+\end{description}
+
+%\end{Large}
+\end{large}
+
+\end{document}

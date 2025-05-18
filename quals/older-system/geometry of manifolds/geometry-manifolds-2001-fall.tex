@@ -1,0 +1,178 @@
+\documentclass[12pt]{article}
+\usepackage{amsxtra,amssymb,amsthm,amsmath,latexsym}
+
+
+\setlength{\parindent}{0cm}
+
+\def\ds{\displaystyle}
+\def\R{\mathbb R}
+\def\Z{\mathbb Z}
+
+
+\pagestyle{empty}
+
+\textwidth=7truein
+\textheight=9.25truein
+\hoffset=-1truein
+\voffset=-.75truein
+
+\begin{document}
+
+\begin{large}
+
+\begin{center}
+ {\bf
+\begin{Large}
+  Geometry of Manifolds\\
+  Fall 2001  Qualifying Exam \end{Large} \\
+  Auckly \& Miller}
+\end{center}
+
+
+\vspace{.2in}
+
+
+
+Notes:
+Work as many of the following problems as you can. Good luck.
+
+%\vspace{.75in}
+
+\begin{description}
+
+\item[1.]
+Define $f:\R^3\to \R^2$ by
+$ f(x,y,z)=(x+z^2, y-z^2)=(u,v) $
+where $(x,y,z)$ are coordinates on $\R^3$ and $(u,v)$ are
+coordinates on $\R^2$. Let $\alpha=du+u\,dv$. Find
+
+\item[\quad] a) $f^\ast(\alpha)$
+\item[\quad] b) $f^\ast(d\alpha)$
+\item[\quad] c) $\int_Sf^\ast(d\alpha)$ where $S$ is the surface
+$x^2+y^2+z^2=1$, $z\geq 0$
+oriented with the upward pointing normal.
+
+\item[2.] a)
+Construct an example of a covering projection, $P:E\to X$
+with $\hbox{Deck}(E)\cong \Z_2\oplus \Z_3$.
+
+\item[\quad] b)
+Compute $H^\infty(X:\R)$ for your example.
+
+
+\item[3.]
+On $\R^3$ let
+$\ds X=xz^2\frac{\partial}{\partial x}+y\frac{\partial}{\partial y}
++z\frac{\partial}{\partial z}.$
+
+\item[\quad] a) Calculate $\ds\int_BL_X(dx \wedge dy \wedge dz)$
+where $B=\{(x,y,z)|x^2+y^2+z^2\leq 1\}$
+with orientation given by $dx \wedge dy \wedge dz$.
+
+\item[\quad] b)
+Compute the flow of $X$, $F:\R\times\R^3\to \R^3$.
+
+
+\item[4.]
+Consider a $2\hbox{-dimensional}$ Riemannian manifold $(M,g)$ where
+$M$ is an open subset of
+$\R^2=\{(x,y)|x\in \R, y\in \R\}$. Suppose $g$ is such that
+$\ds e_1=\frac{\partial}{\partial x}$
+and $\ds e_2=f(x,y)\frac{\partial}{\partial x}+\frac{\partial}{\partial y}$
+is an orthonormal frame.
+
+\item[\quad] a)
+Find the coframe $(\theta^1,\theta^2)$ dual to $(e_1,e_2)$.
+
+\item[\quad] b)
+Find a $1\hbox{-form } w$ so that $d\theta^1=w\wedge\theta^2$ and
+$d\theta^2=-w\wedge\theta^1$.
+
+\item[\quad] c)
+Find a function $K(x,y)$ so that $dw=-K\theta^1\wedge \theta^2$.
+
+\item[\quad] d)
+Show how to choose $f(x,y)$ so that $K(x,y)=-1$ for all $(x,y)$.
+
+
+\vfill\eject
+
+\item[5.]
+Let $K$ be a simplicial complex.
+
+\item[\quad] a)
+Define the Euler characteristic of $K$.
+
+\item[\quad] b)
+Let $p:L\to K$ be an $n\hbox{-fold}$ simplicial cover.
+Show that $\chi(L)=n\chi(K)$.
+
+\item[\quad] c)
+Determine all {\bf closed} $2\hbox{-manifolds}$ that cover $T^2$.
+
+\item[\quad] d)
+Give an example of a non-trivial cover $q:T^2\to T^2$.
+
+\item[\quad] e)
+Compute $\chi(S^n)$ as a function of $n$.
+
+\item[\quad] f)
+Let $G$ be a finite group that acts freely on $S^{2k}$.
+Assume that the map $\pi:S^{2k}\to S^{2k}/G$ is a covering projection.
+Prove that $G\cong \Z_2$ or $G$ is trivial.
+
+
+\item[6.] a)
+Given that $X$ is a non-vanishing vector field on $M$, prove that there
+is a diffeomorphism, $f:M\to M$ without fixed points (i.e., $x$ such that
+$f(x)=x$) that is homotopic to $\hbox{id}:M\to M$.
+
+\item[\quad] b)
+Given that $f:S^n\to S^n$ has no fixed points, show that $f$ is homotopic
+to $p:S^n\to S^n$; $p(x)=-x$.
+
+\item[\quad] c)
+Compute $H^n(p):H^n(S^n,\R)\to H^n(S^n,\R)$.
+
+\item[\quad] d)
+What can be said about the dimension of a sphere that admits
+a non-vanishing vector field.
+
+\item[\quad] e)
+Let $G$ be a Lie group that acts freely (i.e., $x\cdot g=x$ implies $g=1$)
+on $S^{2k}$. Prove that $\dim G=0$.
+
+
+\item[7]
+Let $G$ be a Lie group.
+
+
+
+\item[\quad] a)
+Define the Lie algebra of $G$, say $\mathfrak g$.
+
+\item[\quad] b)
+Let $\mathfrak h$ be a Lie subalgebra of $\mathfrak g$.
+Explain how to construct a distribution on $G$ using $\mathfrak h$ and prove
+that this distribution is integrable.
+
+\item[\quad] c)
+Let $H$ be the maximal connected leaf of the distribution from part b)
+passing through $1$.
+Construct an atlas on $H$.
+
+\item[\quad] d)
+Prove that $H$ is closed under multiplication.
+\newline
+Hint: Consider $L_gH:=\{gh|h\in H\}$.
+
+
+
+
+
+
+\end{description}
+\end{large}
+\end{document}
+
+

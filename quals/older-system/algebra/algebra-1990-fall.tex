@@ -1,0 +1,122 @@
+% latex file
+\def\hcorrection#1{\advance\hoffset by #1 }
+\def\vcorrection#1{\advance\voffset by #1 }
+
+\documentclass{article}
+\usepackage{my,amsxtra,amssymb,amsthm}
+
+\vcorrection{-1.0in}
+\hcorrection{-0.8in}
+\textwidth 6.0in
+\textheight 9.0in
+
+\def\R{\mathbb R}
+\def\C{\mathbb C}
+\def\N{\mathbb N}
+\def\Z{\mathbb Z}
+\def\Q{\mathbb Q}
+
+\begin{document}
+%\begin{Large}
+
+   
+\begin{center}\begin{LARGE}
+{\bf Algebra Qualifying Exam}\\ 
+{\bf Fall 1990}\\ \end{LARGE}
+\end{center}
+\vspace{0.1in}
+\noindent\hrulefill\\
+
+All rings are assumed to have a multiplicative identity, denoted 1. The
+fields $\Q$, $\R$ and $\C$ are the fields of {\it rational, real} and
+{\it complex} numbers, respectively.
+
+\begin{description}
+\item[1.]
+Let $G$ be a group and let $N_1, N_2$ be normal subgroups of $G$ with
+$N_1 \cong N_2$. Prove, or give a counterexample to the assertion
+$$G/N_1 \cong G/N_2.$$
+
+\item[2.]
+Let $G=GL_2(p)$, $p$ prime, be the group of invertible $2 \times 2$
+matrices over the field $F_p$. Using the fact that $|G| = p(p-1)(p^2-1)$,
+compute the number of Sylow $p$-subgroups of $G$.
+
+\item[3.]
+Let $V$ a vector space and let $S \subseteq V$ be a finite subset which
+generates $V$. Prove that $S$ contains a basis of $V$.
+
+\item[4.]
+Let $\C$ be the field of complex numbers, and let $A \in M_3(\C)$ be the matrix
+$$A= \begin{bmatrix} -1&1&1 \\ 2&0&-1 \\ -3&-3&-2 \end{bmatrix}.$$
+
+\item[\quad] (a)
+Compute the invariant factors of $A$.
+
+\item[\quad] (b)
+Compute the Jordan canocical form of $A$.
+
+\item[5.]
+Let $F_q$ be the finite field of $q$ elements, and let $K$ be an extension
+of $F_q$, of degree $n$.
+
+\item[\quad] (a)
+Prove that the map $\tau_q: K \to K, \tau_q (x) = x^q$ is an automorphism of
+$K$, and that $F_q$ is precisely the subfield of fixed elements of $\tau_q$.
+
+\item[\quad] (b)
+Compute $Gal(K/F_q)$.
+
+\item[6.]
+Consider the matrix of rational entries
+$$A= \begin{bmatrix} 0&-1 \\ 1&-1 \end{bmatrix}.$$
+
+If $R=\Q[A]$ is the ring of polynomials in $A$ with rational coefficients,
+prove that $R$ is a field. (Hint: Consider the homomorphism $\Q[x] \to \Q[A]$,
+where $x \mapsto A$.)
+
+\item[7.]
+Let $f(x) = x^5 - 2 \in \Q[x]$.
+
+\item[\quad] (a)
+Construct a splitting field $K \supseteq \Q$ for $f(x)$ over $\Q$.
+
+\item[\quad] (b)
+Find an element $\alpha \in K, \alpha \notin \Q$, such that
+$\Q[\alpha]$ is a normal extension of $\Q$.
+
+\item[8.]
+Let $R$ be a principal ideal domain, and let $0 \neq I \subset R$ be a prime
+ideal. Prove that $I$ is a maximal ideal.
+
+\item[9.]
+Let $D$ be an integral domain.
+
+\item[\quad] (a)
+State what it means for $D$ to be a Euclidean domain.
+
+\item[\quad] (b)
+Prove that a Euclidean domain is a principal ideal domain.
+
+
+
+
+
+
+\end{description}    
+%\end{Large}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

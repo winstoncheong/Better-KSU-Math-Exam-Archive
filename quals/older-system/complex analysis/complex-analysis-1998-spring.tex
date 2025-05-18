@@ -1,0 +1,186 @@
+%S98 Complex Var QE-Bennett/Burckel
+
+\def\hcorrection#1{\advance\hoffset by #1 }
+\def\vcorrection#1{\advance\voffset by #1 }
+
+\input amssym.def   %defines Bbb and gothic (frak)
+\input amssym       %defines Bbb and gothic (frak)
+
+\input prepictex.tex
+\input pictex.tex
+\input postpictex.tex
+
+%\documentstyle[bbb]{report}
+\documentclass[bbb]{report}
+
+\vcorrection{-.7in}
+\hcorrection{-.9in}
+
+\topmargin  0in
+\textwidth 6.4in
+\textheight 10.0in
+
+\mathsurround=2pt
+
+\def\ds{\displaystyle}
+
+\begin{document}
+
+\pagestyle{empty}
+
+\begin{large}
+
+\begin{center}
+COMPLEX VARIABLES QUALIFYING EXAMINATION - Spring 1998
+
+(Bennett and Burckel)
+\end{center}
+
+\vspace{.3in}
+
+\begin{description}
+
+\item[] Let ${\Bbb R}$ denote the real line, ${\Bbb C}$ the complex
+plane, ${\Bbb D}:=\{z\in{\Bbb C}:|z|<1\}$, $\Omega$ a non-void,
+open, connected subset of ${\Bbb C}$, $C(\Omega)$ the continuous
+${\Bbb C}$-valued functions on $\Omega$, $H(\Omega)$ the
+complex-differentiable function on $\Omega$.
+
+\vskip.2in
+
+\item[1.] Let $S$ be the open square 
+$]0,1[\times]0,1[$ and identify $(x,y)\in{\Bbb R}^2$
+with $x+iy\in{\Bbb C}$.
+
+\vspace{.3in}
+
+\item[\qquad (i)] What does it mean for a function $f:S\to{\Bbb R}^2$
+to be ${\Bbb R}$-differentiable \newline at $(x_0,y_0)\in S$?
+
+\vspace{.3in}
+
+\item[\qquad (ii)] If $f$ is ${\Bbb R}$-differentiable at
+$(x_0,y_0)$, what property of its ${\Bbb R}$-derivative will make
+$f$ also ${\Bbb C}$-differentiable at $x_0+iy_0$?
+
+\vspace{.3in}
+
+\item[2.] Suppose $\Omega$ is starlike with respect to its point $a$.
+Show that for every $f\in H(\Omega)$ the companion function $F$ defined
+by
+$$ F(z):=\int_{[a,z]}f\qquad\forall z\in \Omega$$
+is also holomorphic in $\Omega$ and satisfies $F'=f$.
+
+\vspace{.3in}
+
+\item[3.] What is the {\it topology of local uniform convergence}
+in $C(\Omega)$?
+Is this a metric topology? Show that:
+
+\vspace{.3in}
+\item[\qquad (i)] $C(\Omega)$ is complete in this topology.
+
+\vspace{.3in}
+\item[\qquad (ii)] $H(\Omega)$ is a closed subset of $C(\Omega)$.
+
+\vspace{.3in}
+\item[{\it Hint}:] For (ii) Morera's theorem is useful.
+
+\vspace{.3in}
+
+\item[4.] Prove that $f\mapsto f'$ is a continuous mapping of $H(\Omega)$
+into itself (in the topology of Problem 3). Give an example of an
+$\Omega$ for which this map is not surjective.
+
+\item[{\it Hint}:] For the continuity, exploit Cauchy's integral
+formula.
+
+\vfill
+\clearpage
+
+\hfill page 2\par
+
+\item[5.] Show that if $f\in H(\Omega)$ is one-to-one, then $f'$ is
+zero-free in $\Omega$. Is the converse true?
+
+\vspace{.3in}
+
+
+\item[6.] $h:{\Bbb C}\to{\Bbb R}$ is harmonic and not constant. Prove
+that $h$ has a zero.
+
+\item[{\it Hint}:] If $h>0$ throughout ${\Bbb C}$, employ
+Harnack's inequalities.
+
+\vspace{.75in}
+\item[] \begin{tabular}{lc}
+{\bf 7.} Compute $\ds\int_{\Gamma}\ds\frac{z^2+1}{z^2-1}dz$, \\
+where $\Gamma$ is the indicated path.
+&
+\begin{small}
+\setlength{\unitlength}{0.015in}
+\begin{picture}(100,50)(-150,0)    %(-200,35)
+\put(0,-75){\line(0,1){150}} %y-axis
+\put(-2.5,-50){\line(1,0){5}}
+\put(7.5,-55){$-2i$}
+\put(-2.5,-25){\line(1,0){5}}
+\put(7.5,-30){$-i$}
+\put(-2.5,25){\line(1,0){5}}
+\put(7.5,20){$i$}
+\put(-2.5,50){\line(1,0){5}}
+\put(7.5,45){$2i$}
+
+\put(-100,0){\line(1,0){200}} %x-axis
+\put(-75,2.5){\line(0,-1){5}}
+\put(-85,-15){$-3$}
+\put(-50,2.5){\line(0,-1){5}}
+\put(-60,-15){$-2$}
+\put(-25,2.5){\line(0,-1){5}}
+\put(-35,-15){$-1$}
+\put(25,2.5){\line(0,-1){5}}
+\put(22,-15){$1$}
+\put(50,2.5){\line(0,-1){5}}
+\put(46,-15){$2$}
+\put(75,2.5){\line(0,-1){5}}
+\put(71,-15){$3$}
+\end{picture}
+\end{small}
+\end{tabular}
+
+\vspace{2in}
+
+\item[8.] The {\it cross-ratio} of an ordered quadruple of
+distinct complex numbers is $[z_1,z_2,z_3,z_4]:
+=\ds\frac{(z_1-z_2)(z_3-z_4)}{z_1-z_4)(z_3-z_2)}$.
+Show that
+$[z_1,z_2,z_3,z_4]=[w_1,w_2,w_3,w_4]$ if and only if there is a
+M\"obius transformation (i.e., a linear fractional transformation)
+that maps each $z_j$ to $w_j$.
+
+\vspace{.3in}
+\item[9.] Suppose $\ds\sum^\infty_{n=0}c_nz^n$ has radius of convergence
+1. Show that the function $f(z):=\ds\sum^\infty_{n=0}c_nz^n$ which it
+defines in ${\Bbb D}$ is holomorphic. Can you find such an
+$f$ which can be continuously extended to $\overline{{\Bbb D}}$?
+Disprove or give an example.
+
+\vspace{.3in}
+\item[10.] Prove that the zeros of a non-constant polynomial
+depend continuously on its coefficients in the following sense: Given
+$P(z)=c_0+c_1z+\dots +c_nz^n$ $(n>0,c_n\not=0)$ whose (distinct)
+zeros are $z_1,\dots,z_r$ and given $\varepsilon>0$, there exists
+$\delta>0$ such that whenever complex numbers satisfy
+$|b_j-c_j|<\delta$ for all $j$, the polynomial
+$Q(z):=b_0+b_1z+\dots+b_nz^n$ will have at least one zero in each of the
+disks
+\newline $D(z_j,\varepsilon):=\{z\in{\Bbb C}:|z-z_j|<\varepsilon\}$ and
+all its zeros in the union
+$\ds{r\atop{\bigcup\atop{j=1}}}D(z_j,\varepsilon)$ of these disks.
+
+
+
+\end{description}
+
+\end{large}
+
+\end{document}

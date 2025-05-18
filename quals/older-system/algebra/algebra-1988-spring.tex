@@ -1,0 +1,217 @@
+% latex file
+\def\hcorrection#1{\advance\hoffset by #1 }
+\def\vcorrection#1{\advance\voffset by #1 }
+
+\documentclass{article}
+\usepackage{my,amsxtra,amssymb,amsthm}
+
+\vcorrection{-1.0in}
+\hcorrection{-0.8in}
+\textwidth 6.0in
+\textheight 9.0in
+
+\def\R{\mathbb R}
+\def\C{\mathbb C}
+\def\N{\mathbb N}
+\def\Z{\mathbb Z}
+\def\Q{\mathbb Q}
+\def\F{\mathbb F}
+
+\begin{document}
+%\begin{Large}
+
+
+
+
+
+
+\begin{center}\begin{LARGE}
+{\bf Algebra Qualifying Exam}\\ 
+{\bf Spring 1988}\\ \end{LARGE}
+\end{center}
+\vspace{0.1in}
+\noindent\hrulefill\\
+
+Instruction: You are to do two problems from each of the four major-areas
+({\bf Group Theory, Linear Algebra, Field and Galois Theory}, and {\bf Rings
+and Modules}). Even if you attempt to do more, you will only be graded on
+two problems from each section. For the graders' convenience, please circle
+the problem numbers of those problems that you do from each of the four
+major areas:
+
+\centerline{{\bf I. Group Theory}}
+
+\begin{description}
+\item[1.]
+Let $P$ be a finite $p$-group, where $p$ is a prime.
+
+\item[\quad] (a)
+Assume that $P$ acts on the finite set $\Omega$, with $p \nmid |\Omega|$.
+Prove that there exists $\omega \in \Omega$ with $g(\omega) = \omega$ for
+all $g \in P$.
+
+\item[\quad] (b)
+Explain how (a) proves that $Z(P) \neq \{1\}$ for any nontrivial finite
+$p$-group $P$.
+
+\item[2.]
+Let $G$ be a finite group of order 120. Prove that $G$ cannot be a simple
+group.
+
+\item[3.]
+Let
+$$G= \left\{ \left[ \begin{matrix} a&b \\ 0&a^{-1} \end{matrix} \right]
+  | a,b \in {\bf F}_q, a \neq 0 \right\}, $$
+where ${\bf F}_q$ is the finite field of order $q$. Prove that $G$ is
+solvable. (Hint: prove that $G$ is an extension of an abelian group by an
+abelian group.)
+
+\item[4.]
+Let $A$ be the abelian group with presentation
+$$A= < a_1, a_2, a_3 | -
+  \begin{matrix}
+        2a_1 & - & a_2 &&& = & 0 & \\
+        a_1 & + & 2a_2 & - & 2a_3 & = & 0 & > \\
+        & - & a_2 & + & 2a_3 & = & 0 &
+        \end{matrix}.$$
+Compute the {\it invariant factors} and, hence, the structure of $A$.
+
+\centerline{{\bf II. Linear Algegra}}
+
+\item[1.]
+Let ${\bf F}$ be a field, let $V$ be an ${\bf F}$-vector space, and let
+$T \in \hbox{End}_{\bf F} (V)$. Assume that $m_T(x) = f(x) g(x)$, where
+$f(x), g(x) \in {\bf F} [x]$, and are {\it relatively prime}, and where
+$m_T(x)$ is the minimal polynomial of $T$. Prove that
+$V = \ker f(T) \oplus \ker g(T)$.
+
+\item[2.]
+Let $V$ be a complex vector space and let $T \in \hbox{End}_C (V)$. If
+$T^k = 1_V$ for some integer $k>0$, prove that $T$ is diagonalizable.
+
+\item[3.]
+Let $A \in M_3({\bf Q})$ be the matrix
+$$A = \left[ \begin{matrix}
+        5&3&-3 \\
+        3&5&-3 \\
+        9&9&-7
+        \end{matrix} \right].$$
+Compute the invariant factors of $A$ and hence the {\it rational canonical
+form} of $A$.
+
+\item[4.]
+Let ${\bf F}$ be a field, let $V$ be a finite-dimensional ${\bf F}$-vector
+space, and let $T \in \hbox{End}_{\bf F} (V)$. Assume that the
+minimal polynomial
+$p(x) = m_T(x)$ of $T$ is prime, and set ${\bf K} = {\bf F}[x] / (p(x))$.
+
+\item[\quad] (i)
+For each $f(x) \in {\bf F}[x]$, denote by $\overline f (x)$ the element
+$f(x) + (p(x)) \in {\bf K}$. Show that the scalar multiplication
+$\overline f (x) \cdot v := f(T) (v), f(x) \in {\bf F}[x], v \in V$, is a well
+{\it well-defined} ${\bf K}$-scalar multiplication on $V$, making $V$ into a
+$K$-vector space.
+
+\item[\quad] (ii)
+Compute $\dim_{\bf K} (V)$ in terms of $n=\dim_{\bf F} (V)$ and
+$d =\deg p(x)$.
+
+\item[\quad] (iii)
+Show that every ${\bf K}$-subspace of $V$ is a $T$-invariant ${\bf F}$-subspace of
+$V$.
+
+\item[\quad] (iv)
+Conclude from the above that $T$ is {\it semisimple} in the sense that
+every $T$-invariant subspace of $V$ has a $T$-invariant complement.
+
+\centerline{{\bf Field and Galois Theory}}
+
+\item[1.]
+Let ${\bf F}$ be a subfield of the real field ${\bf R}$, and assume that
+$\sqrt{\alpha} \in {\bf F}$ for each $0 \leq \alpha \in {\bf F}$. Prove that
+$[{\bf F} : {\bf Q}] = \infty$, where ${\bf Q}$ is the rational field.
+
+\item[2.]
+Let $n \geq 3$ be an integer and let $f(x) = x^n - 2 \in {\bf Q} [x]$. Prove
+that the Galois group of $f(x)$ is nonabelian.
+
+\item[3.]
+Let $p$ be a prime. Prove that for any positive integer $n$ there is an
+irreducible polynomial $f(x) \in {\bf F}_p [x]$ of degree $n$.
+
+\item[4.]
+Let $f(x) = x^3 + x^2 - 2x - 1 \in {\bf Q} [x]$.
+
+\item[\quad] (a)
+Prove that $f(x)$ is irreducible.
+
+\item[\quad] (b)
+Prove that if $\alpha \in {\bf C}$ is a root of $f(x)$, so is $\alpha^2 - 2$.
+
+\item[\quad] (c)
+Using the above, compute the Galois group of $f(x)$.
+
+\centerline{{\bf Rings and Modules}}
+
+\item[1.]
+Let $R$ be a ring and let $M$ be a Noetherian left $R$-module. If
+$f \in \hbox{End}_R (M)$ is surjective, prove that $f$ is also injective.
+
+\item[2.]
+For each part below, give an appropriate example; {\it no proofs are
+required}.
+
+\item[\quad] (a)
+A commutative ring $R$ and prime ideal $P \subseteq R$ such that $P$ is not
+a maximal ideal of $R$.
+
+\item[\quad] (b)
+A commutative ring $R$ such that $R$ isn't a P.I.D. but every prime ideal
+is maximal.
+
+\item[\quad] (c)
+A commutative integral domain $R$ which isn't a U.F.D.
+
+\item[\quad] (d)
+A non-commutative ring $R$ in which every left $R$-module is projective.
+
+\item[\quad] (e)
+A commutative semisimple Artinian ring.
+
+\item[\quad] (f)
+A non-commutative non-semisimple ring.
+
+\item[3.]
+Let $R$ be a ring and let $M$ be a left $R$-module. If $e \in R$ is an
+idempotent (i.e. $e^2 = e$), prove that $M = eM \oplus (1-e)M$.
+
+\item[4.]
+Let ${\bf F}$ be a field and let $R$ be the ring
+$$R = \left\{ \left[ \begin{matrix} a&0 \\ 0&b \end{matrix} \right] |
+  a, b \in {\bf F} \right\}.$$
+
+Define the $R$-modules
+$$M_1 = \left\{ \left[ \begin{matrix} a \\ 0 \end{matrix} \right] |
+  a \in {\bf F} \right\}, \quad M_2 = \left\{ \left[
+  \begin{matrix} 0 \\ b \end{matrix} \right] | b \in {\bf F} \right\}.$$
+
+Prove that $M_1 \ncong_R M_2$.
+
+
+\end{description}    
+%\end{Large}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

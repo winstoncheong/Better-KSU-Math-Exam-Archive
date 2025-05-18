@@ -1,0 +1,160 @@
+% latex file
+\def\hcorrection#1{\advance\hoffset by #1 }
+\def\vcorrection#1{\advance\voffset by #1 }
+
+\documentclass{article}
+\usepackage{my,amsxtra,amssymb,amsthm}
+
+\vcorrection{-1.0in}
+\hcorrection{-0.8in}
+\textwidth 6.0in
+\textheight 9.0in
+
+\def\R{\mathbb R}
+\def\C{\mathbb C}
+\def\N{\mathbb N}
+\def\Z{\mathbb Z}
+\def\Q{\mathbb Q}
+\def\F{\mathbb F}
+\begin{document}
+%\begin{Large}
+
+
+
+
+
+
+\begin{center}\begin{LARGE}
+{\bf Algebra Qualifying Exam}\\ 
+{\bf Fall 1988}\\ \end{LARGE}
+\end{center}
+\vspace{0.1in}
+\noindent\hrulefill\\
+
+Instruction: You are to do two problems from each of the four major-areas
+({\bf Group Theory, Linear Algebra, Field and Galois Theory}, and {\bf Rings
+and Modules}). Even if you attempt to do more, you will only be graded on
+two problems from each section. For the graders' convenience, please circle
+the problem numbers of those problems that you do from each of the four
+major areas:
+
+\centerline{{\bf I. Group Theory}}
+
+\begin{description}
+\item[1.]
+Let $G$ be a finite group of the order $2n$, where $n$ is an odd integer.
+Prove that $G$ has a normal subgroup of order $n$.
+
+\item[2.]
+Let $G$ be a nonabelian group of order $p^2q$, where $p$ and $q$ are primes.
+Prove that either $p|q-1 \hbox{\ or\ } q|p-1$.
+
+\item[3.]
+Let ${\bf F}_q$ denote the finite field of $q$ elements, and let $G$ be the group
+of invertible {\it upper triangular} $n$ by $n$ matrices with elements in
+${\bf F}_q$. Prove that $G$ is solvable.
+
+\item[4.]
+Let $G$ be a {\it finite} subgroup of the multiplicative group
+${\bf C}^\times$ of
+nonzero complex numbers. Prove that $G$ is a cyclic group.
+
+\centerline{{\bf II. Linear Algebra}}
+
+\item[1.]
+Let ${\bf C}$ be the complex field, and let $A$ be an $n \times n$ matrix satisfying
+$A^k = I$ for some positive integer $k$. Prove that $A$ is diagonalizable.
+
+\item[2.]
+Let ${\bf F}$ be a field of characteristic $p$, and let $V$ be a finite dimensional
+vector space over ${\bf F}$. Assume that $T$ is a linear transformation on $V$
+such that $T^p = I$. Prove that there exists $0 \neq v \in V$ such that
+$T(v) = v$.
+
+\item[3.]
+Let $A \in M_3({\bf Q})$ be the matrix
+$$A = \left[ \begin{matrix}
+        0 & 2& -2 \\
+        1 & 1& -1 \\
+        0 & 0& 2 \\
+        \end{matrix} \right].$$
+Compute the invariant factors of $A$ and hence the {\it rational canonical
+form} of $A$.
+
+\item[4.]
+Let $0 = V_0 \to V_1 \to V_2 \to \dots \to V_{r-1} \to V_r = 0$
+be an exact sequence of vector spaces. (Thus ker$(V_i \to V_{i+1})=$ image
+$(V_{i-1} \to V_i), 1 \leq i \leq r$.) Prove that
+$\sum^r_{i=0} (-1)^i dim (V_i) =0$. (Use the {\it Rank-Nullity theorem,
+together with induction}.)
+
+\centerline{{\bf III. Field and Galois Theory}}
+
+\item[1.]
+Let ${\bf F}$ be a subfield of the real field ${\bf R}$, and assume that
+$\sqrt{\alpha} \in {\bf F}$ for each $0 \leq \alpha \in {\bf F}$. Prove that
+$[{\bf F} : {\bf Q}] = \infty$, where ${\bf Q}$ is the rational field.
+
+\item[2.]
+Let $n \geq 3$ be an integer, and let $\omega = \sqrt[n]{2}$, the real
+$n$-th root of 2. Let ${\bf E} = {\bf Q}(\omega)$, where ${\bf Q}$
+is the rational number field.
+Compute the Galois group of ${\bf E}$ over ${\bf Q}$. (Note: Even through
+${\bf E} \supseteq {\bf Q}$ might not be a Galois extension, the question
+still makes sense.)
+
+\item[3.]
+Compute the extension degree $[{\bf Q}(\sqrt{2} + \sqrt{5} ): {\bf Q}]$.
+
+\item[4.]
+Let ${\bf F}$ be a field, and let ${\bf E} = {\bf F}[x]$ where $x$ is
+transcendental over
+${\bf F}$. Assume that ${\bf F}\subseteq {\bf K} \subseteq {\bf E}$,
+where ${\bf K} \neq {\bf F}$ is an
+extension field of ${\bf F}$. Prove that ${\bf E}$ is algebraic over ${\bf K}$.
+
+\centerline{{\bf IV. Rings and Modules}}
+
+\item[1.]
+Let $R$ be a ring, and let $M$ be an irreducible left $R$-module. If
+$0 \neq m \in M$, and if $Ann_R(m) = \{r \in R|rm = 0\}$, prove that
+$Ann_R(m)$ is a maximal left ideal of $R$.
+
+\item[2.]
+Let $R$ be a ring and define the {\it Jacobson radical} of $R$ by setting
+$J(R) = \{r \in R|rM = 0$ for every irreducible left $R$-module $M$\}. Prove
+that $J(R) \subseteq \cap {\mathcal M}$, where the intersection is over the
+set of all maximal left ideals of $R$.
+
+\item[3.]
+Let $R$ be a unique factorization domain, and let $(0) \neq I \subseteq R$
+be an ideal of $R$. Show that there are only finitely many principal ideals
+of $R$ which contain $I$.
+
+\item[4.]
+Let $F$ be a field and let $R$ be the ring
+$$R = \left\{ \left[ \begin{matrix} a&b \\ 0 & c \end{matrix} \right]
+  | a,b,c \in F \right\}.$$
+Prove that $R$ isn't semisimple.
+
+
+
+
+
+\end{description}    
+%\end{Large}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

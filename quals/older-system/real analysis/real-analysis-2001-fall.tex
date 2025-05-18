@@ -1,0 +1,170 @@
+\def\hcorrection#1{\advance\hoffset by #1 }
+\def\vcorrection#1{\advance\voffset by #1 }
+
+
+%\input prepictex.tex
+%\input pictex.tex
+%\input postpictex.tex
+
+%\documentstyle[bbb]{report}
+\documentclass[bbb]{report}
+\usepackage{amsxtra,amssymb,amsthm,amsmath,latexsym}
+
+\vcorrection{-.5in}
+\hcorrection{-1in}
+
+\topmargin  0in
+%\textwidth 7in
+%\textheight 10truein
+\textheight 9truein
+\textheight 9truein
+\textwidth 6.5in
+\mathsurround=2pt
+
+
+
+\pagestyle{empty}
+
+\def\ds{\displaystyle}
+
+\def\R{{\Bbb R}}
+\def\Z{{\Bbb Z}}
+\def\C{{\Bbb C}}
+\def\D{{\Bbb D}}
+\def\N{{\Bbb N}}
+\def\F{{\cal F}}
+\def\M{{\cal M}}
+
+\begin{document}
+
+
+\begin{large}
+
+\vspace{.12in}
+
+\begin{center}
+  REAL ANALYSIS QUALIFYING EXAM \\
+  Fall 2001 \\
+\end{center}
+
+
+\vspace{.1in}
+
+
+\begin{large}
+{\bf Answer as many as possible.
+Throughout, $(X, {\cal M} ,\mu)$ denotes a measure space,
+$\mu$ denotes a positive measure unless otherwise specified, and all
+functions are assumed to be measurable.}
+\end{large}
+
+\vspace{.1in}
+
+\renewcommand\baselinestretch{1.25}
+
+\begin{description}
+
+\item[1.] \, \, (a)
+Does $\int^\infty_0 \frac{\sin x}{x} dx$ exist as an (improper) Riemann
+integral? Prove your answer.
+
+\item[\quad] (b)
+Does $\int^\infty_0 \frac{\sin x}{x} dx$ exist as a Lebesgue integral?
+Prove your answer.
+
+\vspace{.05in}
+
+\item[2.]
+Suppose $\lambda$ denotes Lebesgue measure on $\Bbb R$ and $A$ is a Borel
+set with
+$\lambda (A) > 0$. Show that for every $0<r<1$, there is a bounded open
+interval $I$
+with $\lambda (A\cap I) > r \lambda (I)$.
+
+\vspace{.05in}
+
+\item[3.]
+Let $\mu$ be a complex measure on ${\cal M}$. Show that there exists a set
+$A \subset {\cal M}$ such that
+
+\item[\quad] (i)
+$B \subset A$ implies $\text{Re} (\mu (B)) \geq \text{Im} (\mu (B))$
+
+\item[\quad] (ii)
+$B \subset A^c$ implies $\text{Im} (\mu (B)) \geq \text{Re} (\mu (B))$.
+
+\vspace{.05in}
+
+\item[4.]
+Prove that $(L^\infty([0,1]))^* \neq L^1([0,1]).$
+Hint: One way to prove this is to show there is a bounded linear
+functional $\Lambda\neq 0$
+such that $\Lambda |_{C([0,1])} \equiv 0$. (Here, $C([0,1])$ denotes
+continuous functions on the interval $[0,1].$)  \ Of course, you should
+explain why the existence of this functional proves that
+$(L^\infty([0,1]))^* \neq L^1([0,1])$.
+
+%\item[4.]
+% Prove the Riemann--Lebesgue lemma: If $f \in L^1([-\pi, \pi])$ and if
+% $\hat f(n)=\frac{1}{2\pi}\int_-\pi^\pi f(x) e^{inx}dx$, then
+% $\hat f(n) \to 0$ as $|n| \to \infty$.
+\vspace{.05in}
+
+\item[5.] Suppose 
+$(X,{\cal M}, \mu)$ is a $\sigma$-finite measure space, $\mu$ positive,
+and $f:X \to [0,
+\infty)$
+an ${\cal M}$
+measurable function. Suppose $G: [0, \infty) \to [0, \infty)$ is 
+increasing and  absolutely continuous, $G(0)=0$.
+
+Prove that
+$$\int_X G(f(x)) d \mu = \int^\infty_0 G' (t) \, \mu (\{x : f(x) >
+t\}) dt.$$
+
+\vspace{.05in}
+
+\item[6.]
+Suppose $\nu, \mu$ are positive measures with $\nu$ finite.  Show that the
+following two
+statements are equivalent.
+
+\item[\quad] (a)
+$\nu << \mu$
+
+\item[\quad] (b)
+For every $\varepsilon > 0$, there exists a $\delta>0$ that $\nu(B) <
+\varepsilon$ whenever
+$B \in {\cal M}$ and $\mu (B) < \delta$.
+
+\vspace{.05in}
+
+\item[7.]
+Suppose $\{f_n\}$ is a  sequence of nonnegative measurable functions on
+$X$
+such that \linebreak
+$\lim_{n \to \infty} f_ n(x) = f(x)$ a.e. and
+$\lim_{\substack {n \to \infty}} \int_X f_n d \mu = \int_X fd \mu <
+\infty$.
+
+Prove that $\lim_{\substack {n \to \infty}} \int_E f_n  d \mu = \int_E f d
+\mu$
+for every measurable set $E \subseteq X$.
+
+\vspace{.05in}
+
+\item[8.]
+Suppose $f$ is a complex measurable function on $X$, $\mu$ is a positive
+measure on $X$ and $\varphi (p) = \int_X |f|^p d \mu$,
+$0 < p < \infty$. Let $E = \{p : \varphi (p) < \infty \}$.
+
+Show that if $r < p < s,\,  r \in E, \, s \in E$ then $p \in E.$  Show
+that the function  $\log \varphi$ is convex on the interior of $E$.
+
+\vfill
+
+\end{description}
+
+\end{large}
+
+\end{document}

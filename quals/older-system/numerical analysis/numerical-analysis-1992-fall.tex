@@ -1,0 +1,148 @@
+% latex file
+\def\hcorrection#1{\advance\hoffset by #1 }
+\def\vcorrection#1{\advance\voffset by #1 }
+
+\documentclass{article}
+\usepackage{my,amsxtra,amssymb,amsthm}
+
+\vcorrection{-1.0in}
+\hcorrection{-0.8in}
+\textwidth 6.0in
+\textheight 9.0in
+\begin{document}
+%\begin{Large}
+
+
+
+
+
+
+\begin{center}\begin{LARGE}
+{\bf Numerical Analysis Qualifying Exam}\\ 
+{\bf Fall 1992}\\ \end{LARGE}
+\end{center}
+\vspace{0.1in}
+\noindent\hrulefill\\
+
+\begin{description}
+\item[1.]
+Consider evaluating $\exp(-x)$ for large $x$ by using the Taylor
+approximation,
+$$\exp (-x) \approx 1-x + \frac{x^2}{2!} - \dots + (-1)^n
+  \frac{x^n}{n!}.$$
+If one uses it to evaluate $\exp(-4)$, determine $n$ so that the Taylor
+approximation error is less than .0005. Suppose one does the computation
+using 4-digit rounding, what trouble will one encounter? How should
+$\exp(-x)$ be evaluated for large positive values of $x$?
+
+\item[2.]
+Let $p$ be a root of the equation $f(x) = 0$, and assume that the Newton's
+method for this equation converges to $p$. Assume also that $f(x)$ has
+sufficiently high derivatives.
+
+\item[\quad] (a)
+If $p$ is a single root, show that the Newton's method converges
+quadratically.
+
+\item[\quad] (b)
+If $p$ is a multiple root, show that it converges only lineraly.
+
+\item[3.]
+Suppose that the Lagrange interpolation formula for the function $f$ at
+the $n+1$ distinct nodes $x_0, x_1, \dots x_n$ is given by
+$$P_n(x) = \sum^n_{j=0} l_{j,n} (x) f(x_j),$$
+where the Lagrange polynomial coefficients are given by
+$$l_{j,n} (x) = \prod^n_{\substack {i =0 \\ i \neq j}}
+  \frac{(x-x_i)}{(x_j - x_i)}.$$
+Show that for any $n \geq 1$,
+$$\sum^n_{j=0} l_{j,n} (x) = 1.$$
+
+\item[4.]
+The Trapezoidal Rule for an intergral $\int^b_a f(x)dx$ is based on linear
+interpolation and hence has degree of precision (DOP) at least one. The
+Simpson's Rule is based on quadratic interpolation with nodes $a, (a+b)/2, b$
+and hence has DOP at least two. Based on the defination of DOP, explain,
+without quoting the theorems on the accuracy of the quadrature rules, why
+the Simpson's Rule has DOP three while the Trapezoidal Rule has DOP only one.
+(Hint: first consider special $a,b$)
+
+\item[5.]
+Consider the numerical differentiation formula
+$$f^\prime (a) = \frac{1}{2h} \left[ -3 f(a) + 4f(a+h) - f(a + 2h) \right]
+  + \frac{h^2}{3} f^{\prime \prime \prime} (\xi),$$
+where $a < \xi < a+2h$. If $f^{\prime \prime \prime}$ is bounded by $M$,
+and the absolute error in evaluation of $f$ due to rounding is bounded by
+$\varepsilon$, discuss the effect of the rounding error and find the best
+choice for the value of $h$ (ignoring the rounding error in $h$ and all the
+other rounding errors except the ones appear in the evaluations of $f$).
+
+\item[6.]
+Give an {\bf upper bound} for the relative error in the solution of the
+system of linear equations
+$$Ax=b$$
+with symmetric matrix $A$ given by
+$$A= \begin{bmatrix}
+        6&1&2 \\
+        1&6&2 \\
+        2&2&8
+       \end{bmatrix}$$
+when the relative error in {\bf b} is less that $4 \cdot 10^{-4}$, i.e.
+$$\frac{\parallel \delta b \parallel}{\parallel b \parallel}
+< 4 \cdot 10^{-4}.$$
+Use spectral norms, i.e., use
+$$\parallel b \parallel = \left( \sum_j |b_j^2| \right)^{1/2}.$$
+
+\item[7.]
+Let $A = (a_{ij})$ be an $n \times n$ matrix. An iterative scheme for the
+solution of the linear system $Ax = b$ is described by
+$$\hbox{given\ } x_i^{(0)}, \quad i = 1, \dots, n;$$
+$$a_{ii} y_i^{(k+1)} = b_i - \sum^{i-1}_{j=1} a_{ij}y_j^{(k+1)} -
+  \sum^n_{j=i+1} a_{ij}x_j^{(k)}$$
+$$x_i^{(k+1)} = \omega y_i^{(k+1)} + (1-\omega) x_i^{(k)}, \quad
+    i=1, \dots, n; \quad k = 0,1, \dots $$
+
+\item[\quad] (a)
+    Write the iterative scheme in the form
+    $$x^{(k+1)} = Tx^{(k)} + c$$
+    (Hint: consider the splitting $A=D-L-U$).
+
+\item[\quad] (b)
+    For the particular case
+    $$A= \begin{bmatrix} 2&1 \\ 1&2 \end{bmatrix}$$
+    varify that the choice $\omega = 8/7$ gives the best rate of convergence.
+
+\item[8.]
+Given $x= (x_1, x_2, \dots, x_n)^T \in R^n$ ($T$ means transpose), define
+$v = x + \hbox{sign} (x_1) \parallel x \parallel _2 e_1$, where
+$e_1 = (1,0, \dots, 0)^T$. The Householder matrix (Householder
+transformation) with $v$ (Householder vector) is given by
+$$P=I - 2 \frac{vv^T}{v^Tv},$$
+which is orthogonal and symmetric.
+
+\item[\quad] (a)
+Verify that $Px = -\hbox{sign} (x_1) \parallel x \parallel_2 e_1$.
+
+\item[\quad] (b)
+Describe how the Householder matrices can be used to construct an orthogonal
+matrix $Q$ for a given matrix $A \in R^{n \times n}$ such that
+$$A=QR,$$
+where $R$ is upper tirangular.
+
+
+\end{description}    
+%\end{Large}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

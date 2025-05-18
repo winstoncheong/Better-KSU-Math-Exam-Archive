@@ -1,0 +1,123 @@
+%From dbski@math.ksu.edu Fri Aug 21 10:56:58 1998
+%QE-F98, Algebra
+% latex file
+\def\hcorrection#1{\advance\hoffset by #1 }
+\def\vcorrection#1{\advance\voffset by #1 }
+%use latex209 (older version)
+
+\documentstyle{article}
+\pagestyle{plain}
+
+
+\vcorrection{-1.0in}
+\hcorrection{-0.8in}
+\textwidth 6.0in
+\textheight 9.0in
+\begin{document}
+\begin{Large}
+
+\input amssym.def   %defines Bbb and gothic (frak)
+\input amssym       %defines Bbb and gothic (frak)
+
+\def\Q{{\Bbb Q}}
+\def\F{{\Bbb F}}
+\def\K{{\Bbb K}}
+
+
+
+\begin{center}\begin{LARGE}
+{\bf  Algebra Qualifying Exam}\\ 
+{\bf August {\bf 25}, 1998}\\ \end{LARGE}
+\end{center}
+\vspace{0.1in}
+\noindent\hrulefill\\
+{\bf Instructions:} You are given 10 problems from which you are to do 8.
+ Please indicate those  8 problems which you would like  to be graded 
+by circling the problem numbers on the  problem sheet. 
+{\bf Note:} All rings in this exam are associative and with 1 and 
+all integral domains are commutative.
+% $\bf Q $ and $ \bf C $ are
+%the fields of  rational and complex  numbers respectively.
+
+%$\Bbb Z $ and $ \Bbb Q $ are
+%the sets of the integers and rational numbers respectively.
+
+\vspace{0.2in}
+
+\begin{enumerate}
+
+\item Let $G$ be a group of order greater than 2. Show that $G$ has a
+non-trivial automorphism.
+
+\item Let $G$ be a group acting transitively on a set $\Omega $. Fix
+$\omega\in \Omega$ and let $H=\mbox{Stab}_G(\omega )$. If we let $G$
+act on $\Omega\times\Omega $ by $g\cdot (\omega_1,\omega_2) =(g\cdot\omega_1,
+g\cdot\omega_2),\ g\in G,\ \omega_1,\omega_2\in\Omega $, 
+show that the $G$-orbits on $\Omega\times\Omega $ are in
+bijective correspondence with the $H$-orbits on $\Omega $.
+
+\item The group $G$ is called a $CA$-group if for every $e\not= x\in G,\ 
+\mbox{C}_G(x)$ is abelian. Prove that if $G$ is a $CA$-group, then
+\begin{enumerate}
+\item the relation $x\sim y$ if and only if 
+$xy=yx$ is an equivalence relation on $G^\#$;
+\item If $\cal C$ is an equivalence class in $G^\#$, then $H=
+\{e\}\cup\cal C$ is a subgroup of $G$.
+\end{enumerate}
+
+\item Let $R$ be a {\em u.f.d.} in which every prime ideal is maximal.
+Prove that every prime ideal is principal.
+
+\item Let $p$ be a prime and let $R=\{\frac{a}{b}\in {\Q}|\
+p\not\kern -0.1em\vert\ \  b\}$.  If $M$ is the principal ideal in $R$ generated
+ by $p$,
+prove that $M$ is the {\em unique} maximal ideal in $R$. ({\em Hint:} Show
+that any element not in $M$ is a unit in $R$.)
+
+\item Let $V$ be a vector space over the field ${\F}$ and let 
+$T:V\to V$ be an {\em idempotent} linear transformation: $T^2=T$.
+Prove that if $W\subseteq V$ is a $T$-invariant subspace of $V$, then
+there exists a $T$-invariant subspace $W'\subseteq V$ such that
+$V=W\oplus W'$.
+
+
+\item Let $0\rightarrow M'\buildrel\mu\over\rightarrow 
+M\buildrel\epsilon\over\rightarrow M''\rightarrow 0$ be a short exact 
+sequences of $R$-modules, where $R$ is a ring. If $M''$ is $R$-free,
+show that $M\cong \mu (M')\oplus M_0$, where $M_0\cong_RM''$.
+
+\item Compute the Galois group over the rational field ${\Q}$ of 
+the field ${\Q}(\zeta )$, where $\zeta = e^{2\pi i/12}$.
+
+\item Compute the field extension degree $[{\Q}(\root\of{2}+\root\of{3})
+:{\Q}]$.
+
+\item Let ${\F}=\F_q$ be the finite field of $q$ elements, and let
+$\K=\F_{q^2}\supseteq \F$ be a quadratic extension. Define the
+{\em Frobenius automorphism} $F:\K\to \K$ by setting $F(\alpha )=\alpha^q,
+\ \alpha\in\K$. If we define $N:\K^\times\to\F^\times $ by setting
+$N(\alpha )=\alpha F(\alpha ),\ \alpha\in\K^\times$, show that $N$ is
+a surjective homomorphism of groups whose kernel has order $q+1$. 
+
+
+
+    
+\end{enumerate}
+\end{Large} \end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

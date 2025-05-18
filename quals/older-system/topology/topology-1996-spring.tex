@@ -1,0 +1,167 @@
+% latex file
+\def\hcorrection#1{\advance\hoffset by #1 }
+\def\vcorrection#1{\advance\voffset by #1 }
+
+\documentclass{article}
+\usepackage{my,amsxtra,amssymb,amsthm}
+
+\vcorrection{-1.0in}
+\hcorrection{-0.8in}
+\textwidth 6.0in
+\textheight 9.0in
+\begin{document}
+%\begin{Large}
+
+
+
+
+
+
+\begin{center}\begin{LARGE}
+{\bf Topology Qualifying Exam}\\ 
+{\bf Spring 1996}\\ \end{LARGE}
+\end{center}
+\vspace{0.1in}
+\noindent\hrulefill\\
+Choose and work any 6 of the following 14 problems. Start each problem
+on a new sheet of paper. {\bf Do not turn in more than six problems}. A
+space always means a topological space below.
+
+\begin{description}
+\item[1.] (a)
+Prove or disprove that if $m$ and $n$ are any cardinal numbers then
+$m+n= n+m$.
+
+\item[\quad] (b)
+Prove or disprove that if $m$ and $n$ are any ordinal numbers then
+$m+n = n+m$.
+
+\item[2.]
+Prove or disprove that every filter on a nonempty set is contained in an
+ultra-filter on that set.
+
+\item[3.]
+Prove that $\Bbb R$ and $\Bbb R^2$ with their usual topologies are not homeomorphic.
+
+Use the following definition for problems 4 and 5.
+
+For any topological property $P$ a space is $X$ called {\bf locally} $P$
+if and only if every point $x$ of $X$ has a base of neighborhoods each of
+which has property $P$ (as a subspace).
+
+\item[4.] (a)
+Prove or disprove that locally compact spaces are hereditary [i.e., that
+every subspace of a locally compact space is locally compact].
+
+\item[\quad] (b)
+Prove or disprove that compact spaces are hereditary.
+
+\item[5.]
+Prove that exactly one of the properties locally $T_1$ and locally $T_2$ is
+hereditary; i.e, that one is hereditary and the other is not.
+
+\item[6.]
+Let $X$ be a $T_1$ completely regular space. Prove that $X$ is connected if
+and only if its \v Cech-Stone compactification $\beta(X)$ is connected.
+
+\item[7.]
+List three different bases for the usual topology of the plane (i.e., $\Bbb R^2$).
+
+\item[8.]
+A topological property $P$ is called {\it divisible} iff every topological
+quotient of a space with property $P$ has property $P$.
+
+\item[\quad] (a)
+Which of the following properties are divisible and which are not? Hausdorff,
+connected, locally connected, compact, metrizable, discrete.
+
+\item[\quad] (b)
+Prove one of your assertions from part (a).
+
+\item[9.]
+A topological property $P$ is called productive iff every topological
+product of a family of spaces with property $P$ has propery $P$.
+
+\item[\quad] (a)
+Which of the following properties are productive and which are not? Hausdorff,
+connected, locally connected, compact, metrizable, discrete.
+
+\item[\quad] (b)
+Prove one of your assertions from part (a).
+
+\item[10.]
+Find an incorrect statement in the proof of the following theorem and prove
+that it is an incorrect statement.
+
+{\bf Theorem.} If $B^2 = \{(x_1, x_2) \in \Bbb R^2 |x^2_1 + x^2_2 \leq 1\}$
+has the usual topology, then each continuous function
+$f: B^2 \to B^2$ has a fixed point.
+
+{\bf Proof:}
+Suppose that $f:B^2 \to B^2$ is a continuous function with no fixed points.
+Let $\pi_1 : B^2 \times B^2 \to B^2$ be first projection, let
+$$\Delta = \{(z,z)|z \in B^2\}$$
+be the diagonal in $B^2 \times B^2$, and let
+$$F= \{(z,f(z)|z \in B^2\}$$
+be the graph of $f$. Since $f$ is continuous, $\pi_1 |F:F \to B^2$ is a
+homeomorphism. Since $B^2$ is connected, $F$ is therefore connected. However,
+$$F \subseteq B^2 \times B^2 - \Delta$$
+which is a contradiction since $B^2 \times B^2 - \Delta$ is connected.
+
+\item[11.] (a)
+Prove or disprove that the subspace topology on the set of integers, $\Bbb Z$,
+in $\Bbb R$ (with its usual topology) is the sames as the discrete topology on
+$\Bbb Z$.
+
+\item[\quad] (b)
+Prove or disprove that the subspace topology on the set of rationals, $\Bbb Q$,
+in $\Bbb R$ (with its usual topology) is the same as the discrete topology on
+$\Bbb Q$.
+
+\item[12.]
+Let $(X,d)$ be a metric space. Show that the following are equivalent:
+
+\item[\quad] (i)
+$X$ has a countable basis;
+
+\item[\quad] (ii)
+$X$ is Lindelof;
+
+\item[\quad] (iii)
+$X$ has a countable dense subset.
+
+\item[13.]
+Let $X$ be a regular space and assume that $U$ is a countable open covering
+of $X$ with the property that the closure of each of its members is
+paracompact. Prove that $X$ is paracompact.
+
+\item[14.]
+Prove that the topologist's comb
+$$C=\left( \bigcup^\infty_{n=1} \left\{ \frac{1}{n}\right\}
+  \times [0,1] \right) \cup \left([0,1] \times \{0\} \right) \cup
+  \left(\{0\} \times [0,1] \right)$$
+is not a retract of the square $S = [0,1] \times [0,1]$ (with both $C$ and
+$S$ having the usual Euclidean subspace topologies).
+  
+
+
+
+
+    
+\end{description}
+%\end{Large}
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
