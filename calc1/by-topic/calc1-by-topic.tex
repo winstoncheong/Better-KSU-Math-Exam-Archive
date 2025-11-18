@@ -1,0 +1,854 @@
+\documentclass[10pt]{scrartcl}
+% \usepackage[right]{lineno}
+% \linenumbers
+
+\raggedbottom
+% \usepackage[scale=5]{draftwatermark}
+% \usepackage{fullpage}
+\usepackage[letterpaper,margin=1in]{geometry}
+\geometry{
+  letterpaper, 
+  left=40mm,
+  right=40mm,
+}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+% \rhead{
+% Compiled: \today\ \currenttime
+% }
+% \lhead{\leftmark\rightmark}
+% \rfoot{
+% Compiled: \today\ \currenttime
+% }
+
+\usepackage{tikz-cd}
+
+\usepackage{calc}
+\usepackage[inline]{enumitem}
+% \setlist[enumerate,1]{label=\Alph*.}
+
+% make description label wrap
+% from: https://tex.stackexchange.com/questions/320512/how-can-i-make-the-label-text-in-description-lists-wrap-in-the-label-area-over-m
+% \makeatletter
+% \def\enit@align@parright{%
+%   \def\enit@align##1{%
+%     \nobreak
+%     \strut\smash{\parbox[t]\labelwidth{\raggedleft##1}}}}
+
+% \def\enit@style@multilineright{%
+%   \enit@align@parright
+%   \enit@calcset\labelindent\z@{0pt}%
+%   \enit@calcset\leftmargin\thr@@!}
+% \makeatother
+
+% \setlist[description]{labelwidth=\widthof{\bfseries 2022 Spring Exam 3},
+%   style=multilineright}
+
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{booktabs}
+\usepackage{tcolorbox}
+\usepackage{textcomp}
+\usepackage{commath}
+\usepackage{mathtools}
+\usepackage{physics}
+\usepackage{outlines}
+\usepackage[colorlinks=true]{hyperref}
+
+\usepackage{todonotes}
+
+\usepackage{amsmath,amssymb}
+\usepackage{amsthm}
+\theoremstyle{definition}
+\newtheorem{problem}{Problem}
+
+\usepackage{siunitx}
+\DeclareSIUnit{\feet}{ft}
+
+\newcommand{\ZZ}{\mathbb{Z}}
+\newcommand{\RR}{\mathbb{R}}
+\newcommand{\vavg}{v_{\text{avg}}}
+\newcommand{\inv}{^{-1}}
+
+\everymath{\displaystyle}
+
+\usepackage[yyyymmdd]{datetime}
+
+
+\title{Calc 1 Exam Archive by Topic}
+\date{
+  2023 Oct 12 
+% Last Compiled: \today\ \currenttime
+}
+
+\begin{document}
+\maketitle
+\tableofcontents
+
+\part{Topics by exam (roughly)}
+\begin{outline}
+  \1 Before Calc 1
+  \2 Algebra
+  \2 Trig / Unit circle
+
+  \1 Exam 1 topics
+  \2 Basic derivative rules (product, quotient chain, trig)
+  \2 Evaluating limits
+  \3 Plug in
+  \3 Algebraic manipulation
+  \3 Special Trig limits
+  \3 Squeeze Theorem
+  \2 Limit definition of derivative
+  \2 Continuity?
+  \2 Intermediate
+  Value Theorem (IVT)
+
+  \1 Exam 2 topics
+    \2 More derivative rules (log, exp, inverse trig)
+    \2 Logarithmic differentiation
+    \2 Implicit differentiation
+    \2 Related rates
+    \2 Linearization / Linear Approximation
+    \2 Differentials
+    \2 Mean value theorem?
+    \2 Finding / identifying local and global extrema on a graph
+    \2 The process of finding absolute min/max on a closed domain
+    \2 First and second derivative tests
+    \2 Calculating $\lim_{x\to\infty}$ and $\lim_{x\to-\infty}$
+    \2 Curve sketching
+    \2 Reading data off of a graph
+      \3 Intervals where increasing/decreasing
+      \3 Local mins and maxes
+      \3 Intervals where concave up/down
+
+  \1 Exam 3 topics
+    \2 Applied optimization
+      \3 Closed interval method
+      \3 1st derivative test
+      \3 2nd derivative test
+    \2 L'H\^{o}pital's rule
+    \2 Evaluating Integrals
+      \3 Visually/geometrically (area under a curve)
+      \3 Antiderivatives
+      \3 U-substitution
+      \3 Symmetry? (even/odd)
+      \3 Initial value problem
+    \2 Using integrals
+      \3 ``Net change theorem''
+      \3 Calculating displacement / distance given a velocity function and endpoints in time.
+    \2 Approximating integrals
+      \3 Left-Endpoint / Right-Endpoint / Midpoint
+    \2 Fundamental Theorem of Calculus (FTC)
+
+  \1 Exam Final
+    \2 Area between two curves
+    \2 Volumes of revolution
+      \3 Disk / Washer method
+      \3 Shell method
+\end{outline}
+
+
+\part{Past exam problems}
+
+Within each grouping, problems are listed in reverse order by semester, in order by Exam type (1,2,3,final) and problem number.
+
+\section{Limits}
+I will sort the limit problems based on how they should be solved (just plug in, algebraic, trig limit, l'hopital).
+This is usually not specified for problems. \\
+Students should be able to determine the method to use without being told (or to experiment with different methods until one works) \\
+Beware the indeterminate forms
+\[
+  \frac 00, \frac\infty\infty, \infty-\infty, 0\cdot\infty, 1^\infty, 0^0, \infty^0
+\]
+which are related as follows:
+\begin{displaymath}
+\begin{tikzcd}[column sep=.5in, row sep=.5in]
+	{\dfrac00,\ \dfrac\infty\infty} &&& {\infty-\infty} \\%\arrow{lll}[swap]{\text{combine fractions}} \\
+	0\cdot\infty \\
+	{1^\infty,\ \infty^0,\ 0^0}
+	\arrow["{\text{combine fractions}}"', from=1-4, to=1-1,anchor=center]
+	\arrow["{\text{flip a factor into denominator}}"', from=2-1, to=1-1]
+	\arrow["{\text{take ln()}}"', from=3-1, to=2-1]
+\end{tikzcd}
+\end{displaymath}
+
+\subsection{Just plug in}
+\begin{enumerate}
+\item [2023 Spring Exam 1 \#7A] $\lim_{x\to2} \frac{5-x}{x^2}$
+\item [2023 Spring Exam 1 \#7B] $\lim_{x\to1} (\ln(2-x) + 3x)$
+\item [2022 Fall Exam 1 \#1A] $\lim_{x\to1} (x^6 + 4\sqrt x + 1)$
+\item [2022 Fall Exam 1 \#1B] $\lim_{\theta\to\pi/2} \frac{\sin \theta}{\theta}$
+\item [2022 Spring Exam 1 \#1A] $\lim_{x\to3} (5+x^2)$
+\item [2022 Spring Exam 1 \#1B] $\lim_{\theta\to0}{\cos\theta}{1-\theta}$
+\item [2019 Fall Exam 1 \#1A] $\lim_{\theta\to\pi} \frac{1-\sin\theta}{\theta}$
+\item [2017 Spring Final] $\lim_{x\to0} \frac{e^x}{x+1}$
+\item [2016 Spring Final] $\lim_{x\to\pi} \frac{\cos x}{x}$
+\end{enumerate}
+
+\subsection{Limit Law like (exam 1)}
+These problems give the value of the limit at a point (e.g.~$\lim_{x\to2} f(x) =
+5$) and ask for a limit of a more involved expression which uses the given
+limit (e.g.~$\lim_{x\to2} 5(f(x))^2$).
+Basically, want the student to use limit laws to just plug in the value.
+\\
+Won't copy problem. Just list
+\begin{enumerate}
+  \item [2023 Spring Exam 1 \#9 A,B]
+  \item [2022 Fall Exam 1 \#3]
+  \item [2022 Spring Exam 1 \#5]
+  \item [2019 Fall Exam 1 \#6]
+\end{enumerate}
+
+\subsection{Algebraic technique (exam 1)}
+Such as factoring, multiplying by conjugate, rewrite as a single fraction
+\begin{enumerate}
+\item [2023 Spring Exam 1 \#4A] $\lim_{t\to2}\frac{t^2-5t+6}{t-2}$
+\item [2023 Spring Exam 1 \#4B] $\lim_{x\to0}\left( \frac1x - \frac{1}{x(x+1)} \right)$
+\item [2022 Fall Exam 1 \#1C] $\lim_{t\to-1} \frac{t^2+3t+1}{t+1}$
+\item [2022 Fall Exam 1 \#1D] $\lim_{x\to4} \frac{\sqrt x-2}{x-4}$
+\item [2022 Spring Exam 1 \#7A] $\lim_{w\to3} \frac{w^2-9}{w-3}$
+\item [2022 Spring Exam 1 \#7B] basically the same as 2022 Fall Exam 1 \#1D
+\item[2021 Fall Final \#7A] $\lim_{x\to1} \frac{x^2+2x-3}{x^2+x-2}$
+\item [2019 Fall Exam 1 \#1B] $\lim_{x\to-2} \frac{x^2-4}{x+2}$
+\item [2019 Fall Exam 1 \#1C] $\lim_{x\to1} \frac{\sqrt t-1}{t-1}$
+\item [2017 Fall Final] $\lim_{x\to2} \frac{x^3 - 4x}{2-x}$ \footnote{l'hopital can be used, but not needed}
+\item [2016 Fall Final] $\lim_{x\to 3} \frac{x-3}{9x-x^3}$
+\end{enumerate}
+
+\subsection{Special Trig limits}
+\begin{enumerate}
+\item [2023 Spring Exam 1 \#7C] $\lim_{\theta\to0} \frac{3\sin \theta}{\theta}$
+\item [2022 Spring Exam 1 \#1C] $\lim_{\theta\to0} \frac{7\sin \theta}{3 \theta}$
+\item [2017 Fall Final] $\lim_{h\to 0} \frac{\sin(3h)}{\sin(2h)} + \frac{\cos(3h)}{\cos(2h)}$ \footnote{l'hopital can also be used for one of the terms}
+\item [2017 Spring Final] $\lim_{\theta\to0} \frac{\sin(\theta^2)}{\theta}$ \footnote{l'hopital can also be used for this}
+\end{enumerate}
+
+\subsection{Squeeze Theorem (exam 1)}
+Should be able to identify that these problems require squeeze theorem, without being prompted to use it.
+Usually, problem will say something like ``mention any theorems used''.
+\begin{enumerate}
+\item [2023 Spring Exam 1 \#10] Find $\lim_{x\to0} m(x)$ provided that the function $m(x)$ satisfies $x+1 \le m(x) \le e^x$ for all $x \ne 0$.
+\item [2022 Spring Exam 1 \#6] Find $\lim_{x\to2} m(x)$ provided that the function $m(x)$ satisfies $5x-4 \le m(x) \le x^2+x$ for all $x \ne 2$.
+\item [2019 Fall Exam 1 \#2] Provided that $10x-25 \le h(x) \le x^2$ for all $x \ne 5$, find $\lim_{x\to5} h(x)$
+\end{enumerate}
+
+\subsection{Intermediate Value Theorem (IVT) (exam 1)}
+For these problems, usually need to state that one is using IVT, and that the function is continuous, so that IVT applies.
+\begin{enumerate}
+\item [2023 Spring Exam 1 \#5] Show there is a root of $f(x) = 2\cos x - \sin x$ in the interval $(0, \frac\pi2)$.
+\item [2022 Fall Exam 1 \#2] Show there is a root of $f(x) = x^3+2x-3$ in the interval $(0, 2)$.
+\item [2022 Spring Exam 1 \#2] Show there is a root of $f(x) = e^x+x-2$ in the interval $(0, 2)$.
+\end{enumerate}
+
+\subsection{L'Hopital (exam 3 / final)}
+Should show some work indicating that one has checked the limit is an indeterminate form, therefore allowing the use of l'Hopital
+\begin{enumerate}
+\item[2023 Spring Exam 3 \#5A] $\lim_{x\to\infty} \frac{3+5x}{e^x+7}$
+\item[2023 Spring Exam 3 \#5B] $\lim_{\theta\to\pi} \frac{\sin\theta}{\theta-\pi}$
+\item[2023 Spring Final \#1A] $\lim_{x\to\infty} \frac{-3x-9e^x}{7x+2e^x}$
+\item [2022 Spring Exam 1 \#9A] Let $v(x) = \frac{2}{x}$. Find $v'(1)$
+\item [2022 Fall Exam 3 \#3A] $\lim_{x\to\infty} \frac{x}{e^x}$
+\item [2022 Fall Exam 3 \#3B] $\lim_{x\to-\infty} \frac{1+e^x}{\sqrt{e^x+1}}$
+\item [2022 Fall Exam 3 \#3C] $\lim_{x\to0^{+}} x^x$
+\item[2022 Spring Exam 3 \#7A] $\lim_{x\to\infty} \frac{e^x+2}{x^2+4}$
+\item[2022 Spring Exam 3 \#7B] $\lim_{x\to1} \frac{\ln x}{x-1}$
+\item[2022 Spring Final \#1A] $\lim_{x\to1} \frac{\ln x}{x-1}$
+\item[2021 Fall Final \#7B] $\lim_{x\to0} \frac{\sin x+x^2}{\cos x-1+3x}$
+\item [2019 Fall Exam 3 \#1A] $\lim_{\theta\to0} \frac{\theta^2+\theta^3}{\sin(\theta)}$ \footnote{This can be done using trig limit, but L'Hopital also works}
+\item [2019 Fall Exam 3 \#1B] $\lim_{x\to\infty} \frac{3x+e^x}{5x^2+7}$
+\item [2019 Fall Final \#1A] $\lim_{x\to\infty} \frac{3e^x + x}{7x-5e^x}$
+\item [2018 Fall Exam 3] $\lim_{\theta \to 0} \frac{\sin(\theta^2)}{\theta^2}$
+\item [2018 Fall Exam 3] $\lim_{x\to\infty} \frac{x \ln x}{x^2 + 3x}$
+\item [2018 Fall Final] $\lim_{x\to1} \frac{\ln x}{x-1}$
+\item [2017 Fall Exam 3] $\lim_{t\to0} \frac{1+t-\cos t}{t^2 + \sin(2t)}$
+\item [2017 Fall Exam 3] $\lim_{x\to\infty} x^2 2^{-x}$
+\item [2017 Fall Exam 3] $\lim_{x\to0^+} x^{2x}$
+\item [2017 Fall Final] $\lim_{x\to\infty} (x^2+5)^{1/x}$
+\item [2017 Spring Exam 3] $\lim_{x\to\infty} \frac{e^x + 5x}{x + 3}$
+\item [2017 Spring Exam 3] $\lim_{\theta\to0} \frac{\sin(\theta^2)}{3\theta^2}$
+\item [2016 Fall Exam 3] $\lim_{t\to 0} \frac{4t-\sin(2t)}{5t^2 + 3t}$
+\item [2016 Fall Exam 3] $\lim_{x\to\infty} x \sin(\frac 2x)$
+\item [2016 Fall Exam 3] $\lim_{x\to\infty} (5x)^{1/x}$
+\item [2016 Fall Final] $\lim_{h\to 0}\frac{\tan(2h)}{\sin(5h)}$
+\item [2016 Fall Final] $\lim_{x\to\infty} (5+x)^{1/x}$
+\end{enumerate}
+
+\subsection{End behavior / Horizontal Asymptotes (HA)}
+\begin{enumerate}
+\item[2023 Spring Exam 3 \#5C] $\lim_{x\to\infty} \frac{\sqrt{4x^2+3x}}{6x+7}$
+\item[2022 Spring Exam 3 \#7C] $\lim_{x\to-\infty} \frac{-5x^4+x+2}{7x^4-x^3-2x+1}$
+\item[2022 Spring Exam 3 \#7D] $\lim_{x\to\infty} \frac{\sqrt{x^2+4}}{2x+1}$
+\item[2021 Fall Final \#7C] $\lim_{x\to-\infty} \frac{5x^4-x+1}{x^4-2x^2+3}$
+\item [2019 Fall Exam 2 \#1C] $\lim_{x\to-\infty} \frac{2x^8-x^2+3}{7x^9+14x+6}$
+\item [2018 Fall Exam 2] Find $\lim_{x\to-\infty} \frac{3x^9 - 7x + 3}{2 + 5x + 6x^9}$.
+\item [2017 Fall Exam 2] Evaluate $\lim_{x\to-\infty} \frac{7-3x^5}{2x^5-15x^3}$.
+\item [2016 Fall Exam 2] Evaluate $\lim_{x\to-\infty} \frac{x+3}{\sqrt{x^2-1}}$
+\item [2016 Spring Final] $\lim_{x\to\infty} \frac{23 + x - 5x^5 - 3x^9}{4x^9 - 3x - 2}$
+\item [2015 Spring Exam 1] Find horizontal asymptote(s) for $y = \frac{\sqrt{9x^2+5}}{2x-7}$
+\end{enumerate}
+
+\section{Limit definition of derivative}
+For these problems, the limit definition \textbf{must} be used.
+Both versions. $f'(a)$ or $f'(x)$.
+\begin{enumerate}
+\item [2023 Spring Exam 1 \#11] Let $v(x) = \sqrt{x}$. Using the limit definition of derivative, find $v'(4)$.
+\item [2023 Spring Exam 2 \#3] Let $g(x) = 7x^2 + x$. Using the limit definition of derivative, find $g'(x)$.
+\item [2023 Spring Final \#11] Find $f'(2)$ if $f(x) = x^2+5x$.
+\item [2022 Fall Exam 1 \#5A] Let $v(x) = x^2+2x-1$. Find the slope of the tangent line to $v(x)$ at $x=0$
+\item [2022 Spring Exam 2 \#3] $p(x) = x^2-3x+1$, Find $p'(x)$
+\item [2022 Spring Exam 1 \#9] Let $v(x) = \frac2x$. Find $v'(1)$.
+\item [2022 Spring Exam 2 \#3] $p(x) = x^2-3x+1$. Find $p'(x)$.
+\item [2022 Spring Final \#11] $f'(3)$ if $f(x) = x^2-7$
+\item [2021 Fall Final \#14] $f'(1)$ for $f(x) = x^2+5$
+\item [2019 Fall Exam 1 \#5] $f(x) = \frac1x$. Find $f'(3)$.
+\item [2019 Fall Final \#13] Find $f'(2)$ if $f(x) = x^2+3x$.
+\item [2018 Fall Final] Find $f'(2)$ if $f(x) = x^2$.
+\item [2017 Fall Final] $f'(x)$ for $f(x) = x^2 + x$.
+\item [2017 Spring Final] Find $f'(2)$ if $f(x) = 3x^2$
+\item [2016 Fall Final] Find $f'(x)$ for $f(x) = 3x^2 - x$
+\item [2016 Spring Final] Find $f'(2)$ if $f(x) = x^2 + x$.
+\end{enumerate}
+
+\section{Taking Derivatives}
+
+\subsection{Basic}
+This includes all derivative rules (power, product, quotient, chain, exp, log, trig, inverse trig)
+
+
+\begin{enumerate}
+\item[2023 Spring Exam 2 \#1A] $\dod{}{x}\left( \frac{6}{x^2} + 6^x + e^2 \right)$
+\item[2023 Spring Exam 2 \#1B] $\dod{}{x}\left( x^{5/2} \cdot \ln(x) \right)$
+\item[2023 Spring Exam 2 \#1C] $\dod{}{t} \arctan(t^3-5t)$
+\item[2023 Spring Exam 2 \#1D] $\dod{}{\theta} \sqrt{\cos(5\theta)}$
+\item[2023 Spring Exam 2 \#1E] $\dod{}{x}\left( \frac{\tan(x) - x}{e^x+x} \right)$
+\item[2023 Spring Final \#1D] $\dod{}{x} \left( \frac{\tan(x^2)}{\cos(x)+x^3} \right)$
+\item[2023 Spring Final \#1E] $\dod{}{x}\left( \ln(x) \cdot \arctangent(x^3) \right)$
+\item[2022 Fall Exam 1 \#7A] $\dod{}{x} (x^{10}+\sqrt{x})$
+\item[2022 Fall Exam 1 \#7B] (Use Product Rule) $\dod{}{x} [(x^{1/3}+x^{-3})(x^2-1)]$
+\item[2022 Fall Exam 1 \#7C] (Use Product Rule) $\dod{}{x} [(x^3-2)(x^\pi+x^{1/5})]$
+\item[2022 Fall Exam 1 \#7D] $\dod{}{x} \left( \frac{x^2+6x}{\sqrt{x}} \right)$
+\item[2022 Fall Exam 2 \#1A] $\dod{}{x}\left( 5e^x - \log_5 x + \arctan x \right)$
+\item[2022 Fall Exam 2 \#1B] $\dod{}{x}\left( 20^x \cdot \cosine(x^{20}) \right)$
+\item[2022 Fall Exam 2 \#1C] $\dod{}{x} \arccos(\sqrt{x})$
+\item[2022 Fall Exam 2 \#1D] $\dod{}{\theta} \csc(\sine(\theta^2))$
+\item[2022 Fall Exam 2 \#1E] $\dod{}{x} \left( \frac{e^{2x}+\ln(2x+1)}{x^6-7x} \right)$
+\item[2022 Spring Exam 2 \#1A] $\dod{}{x}\left( \frac 3x + 2^x + \ln(3) \right)$
+\item[2022 Spring Exam 2 \#1B] $\dod{}{x}\left( x^{3/2} \cdot \arctan x\right)$
+\item[2022 Spring Exam 2 \#1C] $\dod{}{t} \tan(t^3-4t)$
+\item[2022 Spring Exam 2 \#1D] $\dod{}{\theta} \ln(\sin(2\theta))$
+\item[2022 Spring Exam 2 \#1E] $\dod{}{x} \left( \frac{\cos x- e^x}{e^x+2} \right)$
+\item[2022 Spring Final \#1D] $\dod{}{x} \left( \frac{\cos(x^2)}{\sin x + e^x} \right)$
+\item[2022 Spring Final \#1E] $\dod{}{x} \left( \sqrt{x^3+1} \cdot \arctan(x^2) \right)$
+\item[2021 Fall Final \#3A] $\dod{}{x} \left( \arctan x + 2^x \ln x + \frac{1}{\sqrt[3]{x}} \right)$
+\item[2021 Fall Final \#3B] $\dod{}{x} \left( \frac{\sin x}{x^4+2} \right)$
+\item[2021 Fall Final \#4A] $\dod{}{x} \tan(x^3+5x+1)$
+\item[2021 Fall Final \#4B] $\dod{}{x} \frac{1}{(x^2+3x+1)^5}$
+\item[2021 Fall Final \#4C] $\dod{}{x} e^{\cos x}$
+\item[2019 Fall Exam 1 \#11A] $\dod{}{x} \left( 5x^2+3x^{1/3}+3\pi \right)$
+\item[2019 Fall Exam 1 \#11B] $\dod{}{x} \left( \frac{7}{\sqrt x}+2\sqrt x \right)$
+\item[2019 Fall Exam 1 \#11C] $\dod{}{x} \left( \theta\cdot\tangent(\theta^3) \right)$
+\item[2019 Fall Exam 1 \#11D] $\dod{}{x} \cos(\sine(\theta^2))$
+\item[2019 Fall Exam 1 \#11E] $\dod{}{x} \left( \frac{x^{3/2}-5}{x^2+1} \right)$
+\item[2019 Fall Exam 2 \#1A] $\dod{}{x} \left( \ln(x^3+7) \cdot \arctan(x^2+5) \right)$
+\item[2019 Fall Exam 2 \#1B] $\dod{}{x} \left( \frac{2^x+5}{e^x+1} \right)$
+\item [2019 Fall Final \#1D] $\dod{}{x} \left(\frac{\cos(x^7)}{\ln x+3}\right)$
+\item [2019 Fall Final \#1E] $\dod{}{x} \left(\tangent(x^2)\cdot\arctan(x)\right)$
+\item[2018 Fall Exam 2] $\dod{}{x}\left(x \cdot \arctangent(3x^2)\right)$
+\item[2018 Fall Exam 2] $\dod{}{x}\left(x \cdot \frac{2^x - \ln x}{e^x + 1} \right)$
+\item[2018 Fall Final] $\dod{}{x}\left( \frac{\tan x}{\ln x + 3} \right)$
+\item[2018 Fall Final] $\dod{}{x} \sine(x^2) \cdot \arctangent(x)$
+\item [2017 Fall Exam 2] $w(x) = \frac{\tan(e^x)}{1+x^3}$
+\item [2017 Fall Exam 2] $h(x) = \sin\inv(\ln(x))$
+\item [2017 Fall Final] $\dod{}{x} e^{3x} \tan\inv(x)$
+\item [2017 Fall Final] $\dod{}{x} \frac{x+\tan x}{1-x^2}$
+\item [2017 Summer Exam 2] $f(x) = \tan(\ln(6x^4+x^2))$
+\item [2017 Summer Exam 2] $y = e^{\sin x}$
+\item [2017 Spring Exam 2] $\dod{}{x}\left( 2^x - \frac{5}{x^2} + \ln(7) \right)$
+\item [2017 Spring Exam 2] $\dod{}{x}\left(\sqrt x \cdot \tan x\right)$
+\item [2017 Spring Exam 2] $\dod{}{x} \arctan(2t^2 - 3)$
+\item [2017 Spring Exam 2] $\dod{}{x} \left( \frac{6\ln x-2x^3}{e^x+3} \right)$
+\item [2017 Spring Final] $\dod{}{x} \frac{\tan x}{e^x + 5}$
+\item [2017 Spring Final] $\dod{}{x} \cosine(x^3) \cdot \arctan(x)$
+\item [2016 Fall Exam 2] $w(x) = x^3 e^{1/x}$
+\item [2016 Fall Exam 2] $h(x) = \tan\inv(x^2)$
+\item [2016 Fall Final] $f'(t)$ where $f(t) = \cos^2(2t+1)$
+\item [2016 Fall Final] $\dod{}{x} x \ln(x^2 + 2)$
+\item [2016 Fall Final] $\dod{}{x} \frac{e^{5x}}{x^2 + 1}$
+\item [2016 Spring Exam 2] $\dod{}{x} \sin x \cdot 2^x$
+\item [2016 Spring Exam 2] $\dod{}{x} \frac{\sqrt{x}}{\cos x}$
+\item [2016 Spring Exam 2] $\dod{}{w} \arctan(5w^2 + 3)$
+\item [2016 Spring Exam 2] $\dod{}{x}(e^{e^x})$
+\item [2016 Spring Exam 2] $\dod{}{\theta} \tan\theta \cdot \ln\theta$
+\item [2016 Spring Final] $\dod{}{x} \frac{e^x}{\sqrt x}$
+\item [2016 Spring Final] $\dod{}{x} \ln(x) \cdot \sine(x^2)$
+\end{enumerate}
+
+\subsection{Implicit Diff}
+Should know these use implicit diff.\ without being told.
+Some of these ask for tangent line to the curve at a given point.
+
+\begin{enumerate}
+\item[2023 Spring Exam 2 \#4] Find $\dod{y}{x}$ if $x^4+xy+2y^3=7$.
+\item[2023 Spring Exam 2 \#5] Find $\dod{y}{x}$ if $\sin(xy)=x^2$.
+\item[2023 Spring Final \#2B] $\dod{y}{x}$ if $x^3+y^3 = 5-xy$
+\item[2022 Fall Exam 2 \#3] Find $\dod{y}{x}$ if $\cosine(x^2y^3) = e^x$
+\item[2022 Spring Exam 2 \#4] Find $\dod{y}{x}$ if $x^2y - x = e^y + 1$.
+\item[2022 Spring Final \#2B] $\dod yx$ if $y^4+xy = x^3-x+2$
+\item[2021 Fall Final \#2] $\dod yx$ if $y^5x^3 = 4x+y+10$.
+\item[2019 Fall Exam 2 \#4] $\sin(xy) = x^2$. Compute $\dod yx$.
+\item[2019 Fall Final \#2B] $\dod yx$ if $y^4 + xy = x^3-x+2$.
+\item[2018 Fall Exam 2] Compute $\dod{y}{x}$ for $x^2y - e^y = x + 1$
+\item[2018 Fall Final] Find $\dod{y}{x}$ for $x^3 + xy + y^4 = 5$
+\item[2017 Fall Exam 2] Find an equation for the tangent line to the curve $x^2 y + y^2 = x^3 - 3$ at the point $(2, 1)$.
+\item[2017 Fall Final] Find the equation of the tangent line to the curve $xy + y^2 = 2x - 1$ at $(2, 1)$.
+\item[2017 Summer Exam 2] Compute $\dod{y}{x}$ for $3xy^2 = y^3 - \cos x$
+\item[2017 Spring Exam 2] Find $\dod{y}{x}$ if $\sin(xy^2) = x^2$.
+\item[2017 Spring Final] Find $\dod yx$ for $x^2 - xy + y^3 = 5$
+\item[2016 Spring Exam 2] Find $\dod yx$ if $x^2y^3 = e^x - y^2$.
+\item[2016 Fall Exam 2] Find an equation for the tangent line to the curve $xy + 7 = x^3 + y^3$ at the point $(2, 1)$.
+\item[??] Find an equation of the tangent line to the curve $x^2 y^3 - x^3 y^2 = 4$ at the point $(1, 2)$.
+\item[2016 Fall Final] Find the equation of the tangent line to the curve $x^3 + y^2 = 5y + 4$ at $(2, 1)$.
+\item[2016 Spring Final] Find $\dod yx$ for $x^3 + y^3 = 5xy$
+\end{enumerate}
+
+\subsection{Logarithmic Diff}
+Should be able to know these use Log.\ Diff.\ without being told.
+
+\begin{enumerate}
+\item[2023 Spring Exam 2 \#8] Find the derivative of $f(x) = x^{\cos(x)}$
+\item[2023 Spring Final \#2C] $k'(x)$ if $k(x) = x^{\sin(x)}$
+\item[2022 Fall Exam 2 \#2] Find the derivative of $h(x) = 7^{x+5} \cdot x^{7\tan x}$
+\item[2022 Spring Exam 2 \#8] Find the derivative of $h(x) = x^{8x}$
+\item[2022 Spring Final \#2C] $k'(x)$ if $k(x) = x^{3x}$
+\item[2021 Fall Final \#13] Find $\dod yx$ for $y=\frac{(x-3)^x}{x^4}$
+\item[2019 Fall Exam 2 \#6] Same as 2023 Spring Exam 2 \#8
+\item[2019 Fall Final \#2C] $k'(x)$ if $k(x) = \frac{x^x}{\sin[7](x)}$
+\item[2018 Fall Exam 2] Find the derivative of $h(x) = x^{5x^2}$
+\item[2018 Fall Final] Find the derivative of $f(x) = x^{3x}$
+\item[2017 Fall Exam 2] $y = x^{5x}(2 + 3x^2)^4$
+\item[2017 Summer Exam 2] Find the derivative of $y = \frac{(x+2)^2}{(x+5)(3x-4)}$. \footnote{can be done without log.\ diff}
+\item[2017 Spring Exam 2] Find the derivative of $h(x) = e^x \cdot x^{5\cos(x)}$
+\item[2017 Spring Final] Find $\dod yx$ for $y = x^{7x}$
+\item[2016 Spring Exam 2] Find the derivative of $h(x) = \frac{x^x}{(3x^2+4)^5}$
+\item[2016 Spring Exam 2] Find $\dod yx$ if $y = x^{2x}(1-x)^7$.
+\item[2016 Spring Final] Find $\dod yx$ for $y=x^{\cos x}$
+\end{enumerate}
+
+\subsection{Computing derivatives without the functions (given graph or table)}
+For these problem, I won't be reproducing the graph/table, so I will just list the location of such exercises.
+\begin{enumerate}
+\item [2023 Spring Exam 2 \#7]
+\item [2022 Spring Exam 2 \#7]
+\end{enumerate}
+
+\section{Equation of tangent line}
+Some of these problems want the derivative to be computed using the limit definition first.
+This will be ignored (maybe incorporated into the limit definition section).
+\begin{enumerate}
+\item [2023 Spring Exam 1 \#11B] Let $v(x) = \sqrt{x}$. Find the equation of the tangent line to $y=v(x)$ at $x=4$.
+\item [2023 Spring Exam 2 \#2] $y=\sin x + 2$ at $x=0$
+\item [2022 Fall Exam 1 \# 5B] Let $v(x) = x^2+2x-1$. Find the equation of the tangent line to $y=v(x)$ at $x=0$.
+\item [2022 Spring Exam 1 \#9A] Find $v'(1)$.
+\item [2022 Spring Exam 2 \#2] $y = \sqrt x$ at $x=4$
+\item [2021 Fall Final \#1] $y=x^5+3x$ at $x=1$
+\item [2019 Fall Exam 1 \#10] Given that $v(5) = 3$ and $v'(5) = -2$, find an equation of the tangent line to the graph of $y = v(x)$ at $x=5$.
+\end{enumerate}
+
+\section{Related rates}
+\textbf{\color{red}{Always include units!}}
+
+\begin{enumerate}
+\item[2023 Spring Exam 3 \#6] A 5 meter ladder is leaning against a wall. If the top of the ladder slides down the wall at a rate of $\frac12$ m/s, how fast will the bottom of the ladder be moving along the ground when the top of the ladder is 4 meters above the ground?
+\item[2023 Spring Final \#14] Boyle's Law states that when a sample of gas is compressed at a constant temperature, the pressure $P$ and the volume $V$ satisfy the equation $PV = C$, where $C$ is a constant. Suppose that at a certain instant, the volume is $\SI{40}{cm^3}$, the pressure is 100 kPa, and the pressure is increasing at a rate of 20 kPa/min. At what rate is the volume changing at this instant?
+\item[2022 Fall Exam 2 \#6] Two airplanes are flying in the air at the same height: airplane A is flying east at 100 mi/h and airplane B is flying north at 200 mi/h. If they are both heading to the same airport, located 30 miles east of airplane A and 40 miles north of airplane B, at what rate is the distance between the airplanes changing?
+\item[2022 Spring Exam 2 \#5] A hot air balloon rising vertically is tracked by an observer located 1 mile from the lift-off point. At a certain moment, the angle between the observer's line of sight and the horizontal is $\tfrac\pi4$, and it is changing at a rate of $\tfrac{1}{8}$ rad/min. How fast is the balloon rising at this moment?
+\item[2022 Spring Exam 2 \#9] The volume of a sphere of radius $r$ is $V = \frac43 \pi r^3$. If the radius of a sphere is 2 cm and increasing at a rate of $\tfrac12$ cm/sec, find the rate at which the volume of the sphere is increasing.
+\item[2022 Spring Final \#14] The base of a triangle is increasing at a rate of 2 ft/s, and the height of the triangle is increasing at a rate of 3 ft/s. Find the rate at which the area of the triangle is changing when the base is 4 ft and the height is 7 ft.
+\item[2021 Fall Final \#8] The radius of a circle increases at a rate of 2 m/sec. Find the rate at which the area of the circle increases when the radius is 5 m.
+\item[2019 Fall Exam 2 \#3] A 5 foot ladder is leaning against a wall. If the top of the ladder slides down the wall at a rate of 2 ft/s, how fast will the bottom of the ladder be moving away from the wall when the top is 3 feet above the ground?
+\item[2019 Fall Final \#10] Boyle's Law states that when a sample of gas is compressed at a constant temperature, the pressure $P$ and the volume $V$ satisfy the equation $PV = C$, where $C$ is a constant. Suppose that at a certain instant, the volume is $\SI{30}{cm^3}$, the pressure is 100 kPa, and the pressure is increasing at a rate of 20 kPa/min. At what rate is the volume changing at this instant?
+\item[2018 Fall Exam 2] A hot air balloon rising vertically is tracked by an observer located 2 miles from the lift-off point. At a certain moment, the angle between the observer's line of sight and the horizontal is $\tfrac\pi4$, and it is changing at a rate of $\tfrac{1}{10}$ radians/minute. How fast is the balloon rising at this moment?
+\item[2018 Fall Final] A 5-foot ladder rests against a wall. The bottom of the ladder slides away from the wall at a rate of \SI{2}{ft/s}. How fast is the top of the ladder sliding down the wall when the bottom of the ladder is \SI{3}{ft} from the wall?
+\item[2017 Fall Exam 2] A rocket is launched vertically upward from a point $P$. At the same time, a car is driving on a straight line away from the point $P$. Use related rates to determine the rate that the distance between the rocket and the car is increasing at the instant when the rocket is 3 miles up and traveling 500 miles per hour, and the car is 4 miles away from $P$ and traveling 30 miles per hour. (Assume the ground is flat.)
+\item[2017 Fall Final] Consider a rectangle with edges of length $x, y$. If $x$ is increasing at a rate of \SI{5}{m/sec} and $y$ is decreasing at a rate of \SI{2}{m/sec}, at what rate is the area $A$ of the rectangle changing when $x = \SI{3}{m}$ and $y = \SI{4}{m}$?
+\item[2017 Summer Exam 2] A plane is flying away from you at 500 mph at a height of 3 miles. How fast is the plane's distance from you increasing at the moment when the plane is flying over a point on the ground 4 miles from you?
+\item[2017 Spring Exam 2] Boyle's Law says that when a sample of gas is compressed at a constant temperature, the pressure $P$ and the volume $V$ satisfy the equation $PV = C$, where $C$ is a constant. Suppose that at a certain instant, the volume is $\SI{300}{cm^3}$, the pressure is 100 kPa, and the pressure is increasing at a rate of 20 kPa/min. At what rate is the volume changing at this instant?
+\item[2017 Spring Exam 2] The length of a rectangle is increasing at a rate of 2 ft/s, and its width is increasing at a rate of 3 ft/s. At what rate is the area of the rectangle increasing when the length is 6 ft and the width is 7 ft?
+\item[2017 Spring Final] Suppose that an oil spill from a ruptured tanker spreads in a circular pattern. If the radius of the oil spill increases at a constant rate of \SI{2}{ft/sec}, how fast is the area of the spill increasing when the radius is \SI{10}{ft}?
+\item[2016 Fall Final] Consider a right triangle with edges of length $x, y, z$, with $z$ the hypotenuse. If $x$ is increasing at a rate of \SI{5}{m/sec} and $z$ is increasing at a rate of \SI{7}{m/sec}, at what rate is $y$ increasing when $x = \SI{3}{m}$ and $z = \SI{5}{m}$?
+\item[2016 Spring Final] A hot air balloon rising vertically is tracked by an observer located 5 miles from the lift-off point. At a certain moment, the angle between the observer's line of sight and the horizontal is $\frac \pi 4$, and it is changing at a rate of $\frac{1}{10}$ radians/minute. How fast is the balloon rising at this moment?
+\end{enumerate}
+
+\section{Linear Approximation/Linearization}
+\begin{enumerate}
+\item [2023 Spring Exam 3 \#7] Find the linearization of $g(x) = \ln x$ at $x=1$. Use this to estimate $\ln(1.07)$.
+\item [2023 Spring Final \#10] Use the linearization of $u(x) = \sqrt x$ at $x=25$ to approximate $\sqrt{24}$.
+\item [2022 Fall Exam 2 \#4] Let $f(x) = \frac{\sin x}{x-\pi+1}$. Find the linearization for $f(x)$ at $x=\pi$. Use the linearization to approximate $f(\pi+0.02)$
+\item [2022 Spring Exam 3 \#6] Find the linearization of $g(x) = \sin x$ at $x=0$. Use it to estimate $\sin(0.01)$.
+\item [2022 Spring Final \#10] Let $p(t)$ denote the position of a particle in cm after $t$ seconds. Suppose that we are unable to write down a nice formula for $p(t)$, but we happen to know that when $t=2$ seconds, the particle has position 7 cm and velocity 30 cm/s. Find the linearization of $p(t)$ at $t=2$ seconds, and use it to approximate the location of the particle when $t=1.9$ seconds.
+\item [2019 Fall Exam 2 \#2] Let $s(t)$ denote the position of a particle in cm after $t$ seconds. Suppose that we are unable to write down a nice formula for $s(t)$, but we happen to know that when $t=1$ second, the particle has position 5 cm and velocity 2 cm/s. Find the linearization of $s(t)$ at $t=1$ seconds, and use it to approximate the location of the particle when $t=0.9$ seconds.
+\item [2019 Fall Final \#6] Use a linearization of $u(x) = \sqrt{x}$ at $x=25$ to approximate $\sqrt{26}$.
+\item [2018 Fall Exam 2] Same as 2019 Fall Final \#6 %Find the linearization of $g(x) = \sqrt{x}$ at $x = 25$. Use this to estimate $\sqrt{26}$.
+\item [2018 Fall Final] Use the linearization of $u(x) = \ln x$ at $x = 1$ to approximate $\ln(0.9)$.
+\item [2017 Fall Exam 2] Find the linear approximation of $f(x) = \cos(x)$ near $x = \frac{\pi}{4}$. Use this to estimate $\cos(\frac\pi4+\frac{1}{10})$.
+\item [2017 Fall Final] Find the linear approximation of $f(x) = \sqrt{x}$ near $x = 9$. Use this to estimate $\sqrt{8.9}$.
+\item [2017 Spring Exam 3] Find linearization for $g(x) = \ln(x)$ at $x = 1$. Use it to approximate $\ln(1.15)$.
+\item [2017 Spring Final] Use a linearization of $u(x) = \sqrt{x}$ at $x = 9$ to approximate $\sqrt{9.6}$.
+\item [2016 Fall Exam 2] Find the linear approximation of $f(x) = \sqrt[3]{x}$ near $x = 8$. Use it to estimate $\sqrt[3]{8.1}$.
+\item [2016 Fall Final] Find the linear approximation of $f(x) = \sqrt{x}$ near $x = 4$. Use this to estimate $\sqrt{4.1}$.
+\item [2016 Spring Exam 3] Same as 2017 Spring Final %Find the linearization of $w(x) = \sqrt{x}$ at $x = 9$. Use it to estimate $\sqrt{9.6}$.
+\item [2016 Spring Final] Use linearization to approximate $\sin(0.01)$.
+\item [2015 Fall Exam 2] Find an equation of the tangent line to the curve $y = \sqrt[5]{x}$ at $x = 32$, and use this to approximate $\sqrt[5]{33}$.
+\end{enumerate}
+
+\newpage
+\section{Differentials}
+\begin{enumerate}
+\item [2023 Spring Exam 3 \#8] The surface area $A$ of a sphere of radius $r$ is given by $A = 4\pi r^2$. Find the differential $\dif A$.
+\item [2022 Spring Exam 3 \#4] Find the differential $dy$ if $y = \cosine(x^2+3)$.
+\item [2019 Fall Exam 2 \#9] The volume of a sphere is $V = \frac43 \pi r^3$, where $r$ denotes the radius. Find the differential $\dif V$ in terms of $r$ and $\dif r$.
+\item [2018 Fall Exam 2] Let $V$ denote the volume of a cube of side length $x$. Find the differential $dV$ in terms of $x$ and $dx$.
+\item [2017 Fall Exam 2] The volume of a cone of height 9 ft is given by $V = 3\pi r^2$. Estimate the change in volume using the differentials $dV$ and $dr$, if $r = 5$ ft and increased by $\frac{1}{10}$ ft.
+\item [2017 Spring Exam 3] The volume of a sphere is given by $V = \frac 43 \pi r^3$. Find the differential $dV$.
+\item [2016 Fall Exam 2] The volume of a sphere is given by $V = \frac 43 \pi r^3$. Estimate the change in volume by calculating $dV$, given that $r = 3$ inches and $dr = \frac{1}{12\pi}$ inches.
+\item [2016 Spring Exam 3] Find $dy$ if $y = \cosine(4x^2)$.
+\end{enumerate}
+
+\newpage
+\section{Abs min/max over closed interval (Closed Interval Method)}
+\begin{enumerate}
+\item [2023 Spring Exam 3 \#2] $w(x) = x^3-3x+2$ on $[0,2]$
+\item [2023 Spring Final \#13] Same as 2023 Spring Exam 3 \#2
+\item [2022 Fall Exam 2 \#7] Let $f(x) = x^4-2x^2$. Find abs min/max of $f(x)$ on $[-2,2]$.
+\item [2022 Spring Exam 3 \#5] $w(x) = x^3-3x^2+1$ on $[-1,1]$
+\item [2022 Spring Final \#13] $w(x) = (x-1)e^x$ on the interval $[-1,1]$.
+\item [2019 Fall Exam 2 \#5] Same as 2023 Spring Exam 3 \#2
+\item [2019 Fall Final \#7] $w(x) = x + \cos(x)$ on $[0,\pi]$.
+\item [2018 Fall Exam 2] $w(x) = x + \sin x$ on $[0, 2\pi]$.
+\item [2018 Fall Final] $w(x) = x - \sqrt{x}$ on $[0, 4]$.
+\item [2017 Fall Exam 2] Determine the absolute minimum and absolute maximum value of the function $f(x) = x^4 - 2x^2$ over the interval $[0, 2]$.
+\item [2017 Spring Exam 3] Find the absolute min and max of $w(x) = 2x^3 - 9x^2 + 3$ on $[-1, 1]$.
+\item [2017 Spring Final] $v(x) = x^3 + 3x^2 + 1$ on $[-1, 1]$
+\item [2016 Spring Exam 3] Find absolute min/max of $g(x) = x^3 - 3x^2 + 4$ on $[-1, 1]$.
+\item [2016 Spring Final] $v(x) = x^3 - 3x + 1$ on $[0, 2]$
+\item [2016 Fall Exam 2] Find absolute min/max value of $f(x) = x^3 - 3x$ over the interval $[0, 2]$.
+\item [2015 Fall Exam 2] Find the $x$ and $y$ coordinates of the absolute maximum of the function $y = x^3 - x^2 - x$ on the closed interval $0 \le x \le 2$
+\end{enumerate}
+
+
+\section{Read off increasing/decreasing, local min/max, CU/CD, inflection pt from graph of derivative}
+Won't duplicate problem. Just list place.
+\begin{enumerate}
+\item [2023 Spring Exam 3 \#3]
+\item [2023 Spring Final \#6]
+\item [2022 Spring Exam 3 \#2]
+\item [2022 Spring Final \#6]
+\item [2019 Fall Final \#9]
+\item [2019 Fall Exam 2 \#7]
+\end{enumerate}
+
+
+\section{Easy interpretation of local min/max (application of 1st derivative test)}
+Won't duplicate problem. Just list place.
+\begin{enumerate}
+\item [2023 Spring Exam 3 \#4]
+\item [2022 Fall Exam 3 \#2] This one looks harder than usual.
+\item [2022 Spring Exam 3 \#3]
+\item [2019 Fall Exam 2 \#8]
+\end{enumerate}
+
+\newpage
+\section{Curve sketch process}
+\begin{tcolorbox}
+  By ``the full process for curve sketching'' I mean:
+  \begin{enumerate}
+  \item Finding intercepts
+  \item Finding asymptotes (HA, VA)
+  \item Finding critical numbers and sign chart for $f'$
+  \item Finding inflection points and sign chart for $f''$
+  \item Sketching the curve using the above data.
+  \end{enumerate}
+\end{tcolorbox}
+Won't fully duplicate problem. Just have functions.
+The problem is a bunch of parts, walking through the curve sketch process (intercepts, HA, VA, increasing, decreasing, local min/max, concave up/down, inflection points) allowing one to then accurately sketch a graph of the function.
+
+\begin{enumerate}
+\item [2023 Spring Exam 3 \#1]
+$\begin{aligned}
+    f(x) = \frac{x^2}{x^2+3}
+    \qquad
+    f'(x) = \frac{6x}{(x^2+3)^2}
+    \qquad
+    f''(x) = \frac{-18(x-1)(x+1)}{(x^2+3)^3}
+  \end{aligned}$
+\item [2022 Fall Exam 3 \#1]
+  $
+    f(x) = \sqrt{x^2+2x}
+    \qquad
+    f'(x) = \frac{x+1}{\sqrt{x^2+2x}}
+    \qquad
+    f''(x) = \frac{-1}{(x^2+2x)^{3/2}}
+  $
+\item [2022 Spring Exam 3 \#1]
+  $
+    f(x) = x^2(x-3)
+    \qquad
+    f'(x) = 3x(x-2)
+    \qquad
+    f''(x) = 6(x-1)
+  $
+\item [2021 Fall Final \#9]
+  $
+    f(x) = \frac{x}{(x^2+9)^2}
+    \qquad
+    f'(x) = \frac{3(3-x^2)}{(x^2+9)^3}
+    \qquad
+    f''(x) = \frac{12x(x^2-9)}{(x^2+9)^4}
+  $
+\item [2019 Fall Exam 2 \#10]
+  $
+    f(x) = \frac{x^2-1}{x^2+3}
+    \qquad
+    f'(x) = \frac{8x}{(x^2+3)^2}
+    \qquad
+    f''(x) = \frac{-24(x^2-1)}{(x^2+3)^3}
+  $
+\item [2018 Fall Exam 2] Sketch $f(x) = x^2(x+3)$, which has derivatives $f'(x) = 3x(x+2)$, $f''(x)=6(x+1)$. Do the entire process.
+\item [2017 Fall Exam 2] For $g(x) = 20x^3 - 3x^5$, draw the number line for $g'(x)$ and $g''(x)$. Classify the critical points.
+\item [2017 Fall Exam 2] Let $f(x) = \frac{2-x}{x^2 - 1}$. Then $f'(x) = \frac{x^2- 4x+1}{(x^2-1)^2}$. Find asymptotes, intercepts, critical points. Classify the critical points.
+\item [2017 Fall Final] Let $f(x)$ be a function with $f'(x) = x^2(x^2-4)(x-7)$. Find the critical points of $f(x)$, and the intervals where $f(x)$ is increasing / decreasing. Classify each critical point as a local min, local max, or neither.
+\item [2017 Fall Final] Let $g(x) = 2x^6 - 5x^4$. Determine the intervals where $g(x)$ is concave up / concave down. Determine all inflection points.
+\item [2017 Summer Exam 2] Let $f(x) = x^3 - 2x^2 + x - 1$. Find when $f$ is concave up/down, increasing/decreasing, the inflection points, the critical points, and the local minima and maxima.
+\item [2017 Spring Exam 3] Sketch $f(x) = \frac{x^2}{x^2 + 3}$. It has $f'(x) = \frac{6x}{(x^2+3)^2}$ and $f''(x) = \frac{-18(x^2-1)}{(x^2+3)^3}$. Do the entire process.
+\item [2017 Spring Final] Given $w''(x) = \frac{3-x}{x^2 + 7}$, find the intervals where $w(x)$ is concave up / concave down. Determine inflection points.
+\item [2016 Fall Exam 2] Let $g(x) = x^5 - \frac{20}{3} x^3$. Draw the number line for $g'$ and $g''$. Classify the critical points. State when $g(x)$ is concave up.
+\item [2016 Fall Exam 2] Let $f(x) = \frac{2x^2-6x}{4-x^2}$. Then $f'(x) = \frac{-2(3x^2-8x+12)}{(4-x^2)^2}$. Sketch $f(x)$ (skip using $f''$ or inflection points).
+\item [2016 Fall Final] Let $g(x) = 3x^5 + 20x^3$. Determine intervals where $g(x)$ is concave up / concave down. Determine all inflection points.
+\item [2016 Fall Final] Let $f(x) = x^2 (x-4)^3$. Given $f'(x) = x(x-4)^2(5x-8)$. Find the critical points of $f(x)$. Find the intervals where $f(x)$ is increasing / decreasing, and classify the critical points (local min / local max / neither).
+\item [2016 Spring Exam 3] Sketch $f(x) = \frac{x^2- 1}{x^2 + 3}$. It has $f'(x) = \frac{8x}{(x^2+3)^2}$ and $f''(x) = \frac{-24(x^2-1)}{(x^2+3)^3}$. Do the entire process.
+\item [2016 Spring Final] Given $w''(x) = \frac{2(x-1)}{x^2 + 3}$, find the intervals where $w(x)$ is concave up / concave down. Determine inflection points.
+\item [2015 Fall Exam 3] Let $f(x) = \left( \frac{x-2}{x} \right)^2$. Then $f'(x) = \frac{4(x-2)}{x^3}$ and $f''(x) = \frac{-8(x-3)}{x^4}$. Do the entire process.
+\end{enumerate}
+
+\newpage
+\section{Applied Optimization}
+In these problems, one must justify why the critical point found is the absolute min/max for the implicit domain of the function being optimized.\\
+Some of these problems come with diagram, which I won't reproduce. \\
+\textcolor{red}{Include units in final answer!}
+
+\begin{enumerate}
+\item [2023 Spring Exam 3 \#9] Suppose that you have 24 meters of fencing to make two adjacent rectangular kennels of length $x$ meters and width $y$ meters. Find the values of $x$ and $y$ that maximize the enclosed area.
+\item [2023 Spring Final \#7] Let $p(x) = 75-x^2$ be the price in dollars per meal that a chef can charge if they sell $x$ meals. Revenue is the total amount of money received from the sale of $x$ meals. Find the meal price that will maximize revenue.
+\item [2022 Fall Exam 3 \#5] A rectangular open-topped aquarium is to have a square base and volume $\SI{9}{m^3}$. The material for the base costs \$2 per $\unit{m^2}$, and the material for the sides costs \$3 per $\unit{m^2}$. What dimensions minimize the cost of the aquarium?
+\item [2022 Spring Exam 3 \#8] Suppose that when your bakery sells cakes for $x$ dollars each, your total profit is $P(x) = -x^2+20x-75$ dollars. In order to maximize total profit, how much should your bakery charge per cake?
+\item [2022 Spring Exam 3 \#9] A homeowner with 20 feet of fencing wants to enclose a rectangular area against the side of her house. What dimensions will maximize the fenced-in area? (Note that three sides of the rectangle will be formed from fencing, and the house will serve as the fourth side of the rectangle.)
+\item [2022 Spring Final \#7] When a company charges $x$ dollars per backpack, it makes a total profit of $P(x) = -2x^2+200x-50$ dollars. If the company wants to maximize total profit, what should it charge per backpack?
+\item [2019 Fall Exam 3 \#8] A rectangular open-topped box is to have volume 18 \unit{m^3}. The length of the base is to be three times its width. What dimensions minimize the amount of material needed to make the box?
+\item [2019 Fall Final \#14] A rectangular open-topped box is to have a square base and volume 8 \unit{ft^3}. If material for the base costs \$2 per \si{ft^2} and the material for the sides costs \$1 per \si{ft^2}, what dimensions minimize the cost of the box?
+\item [2018 Fall Exam 3] A rectangular open-topped aquarium is to have a square base and volume \SI{8}{m^3}. The material for the base costs \$2 per \si{m^2}, and the material for the sides costs \$1 per \si{m^2}. What dimensions minimize the cost of the aquarium?
+\item [2018 Fall Final] When a company charges $x$ dollars per chair, it makes a total profit $P(x) = -2x^2 + 200x - 50$ dollars. If the company wants to maximize total profit, what should it charge per chair?
+\item [2017 Fall Exam 3] A box with square base and open top is formed from two materials. The base costs \$4 per square foot, while the four sides cost \$1 per square foot. If the total cost for the base and four sides is fixed to ber \$120, find the dimensions that maximize the volume of the box.
+\item [2017 Fall Final] A rectangular fence consists of three sides costing \$2 per meter and one side costing \$1 per meter. If the area of the rectangle is 12 square meters, find the dimensions that minimize the cost of the fence.
+\item [2017 Spring Exam 3] Let $p(x) = 100 - 2x$ be the price in dollars per cake a bakery can charge if it sells $x$ cakes. What cake price will maximize revenue?
+\item [2017 Spring Exam 3] A rectangular open-topped aquarium is to have a square base and volume \SI{5}{m^3}. The material for the base costs \$10 per \si{m^2}, and the material for the sides costs \$1 per \si{m^2}. What dimensions minimize the cost of the aquarium?
+\item [2017 Spring Final] A farmer has 20 feet of fencing and wants to fence off a rectangular region that borders a straight river. The farmer needs no fencing along the river. What dimensions will maximize the fenced-in area?
+\item [2016 Fall Exam 3] A rectangular fence consists of three sides costing \$2 per meter and one side costing \$1 per meter. If the area of the rectangle is 12 square meters, find the dimensions that minimize the cost of the fence.
+\item [2016 Fall Final] Find the dimensions of a cylinder with total surface area $6\pi$ square meters, including top and bottom, that maximizes its volume.
+\item [2016 Spring Exam 3] A farmer has 24 feet of fencing and wants to fence off a rectangular area that borders a straight river. The farmer needs no fencing along the river. What dimensions will maximize the fenced-in area?
+\item [2016 Spring Exam 3] A rectangular open-topped aquarium is to have a square base and volume \SI{8}{m^3}. The material for the base costs \$2 per \si{m^2}, and the material for the sides costs \$1 per \si{m^2}. What dimensions minimize the cost of the aquarium?
+\item [2016 Spring Final] Suppose you want to enclose a \SI{25}{ft^2} rectangular area with fencing. What is the minimum length of fencing needed?
+\item [2015 Fall Exam 3] A landscaper is designing a fence along the four sides of a rectangular garden, which is to have an area of 5000 square feet. The fencing for three sides costs \$10 per foot, but the fencing along the front side of the garden will cost \$30 per foot. Find the length and width of the garden in order to minimize the total cost.
+\item [2015 Spring Exam 3] If a bakery charges $x$ dollars per cake, it makes a total profit of $P(x) = -x^2 + 100 x - 30$. If the bakery wants to maximize profit, what should it charge per cake?
+\item [2015 Spring Exam 3] Find the dimensions of the box with square base that has volume 8 and minimal surface area.
+\item [2014 Fall Exam 3] A homeowner with 16 feet of fencing wants to enclose a rectangular area against the side of her house. What dimensions will maximize the fenced-in area? (Note that 3 sides of the rectangle will be formed from fencing, and the house will serve as the fourth side of the rectangle.)
+\item [2014 Fall Exam 3] A rectangular open-topped box is to have a square base and volume \SI{12}{ft^3}. If material for the base costs \$3 per \si{ft^2} and material for the sides costs \$1 per \si{ft^2}, what dimensions minimize the cost of the box?
+\item [2014 Spring Exam 3] What is the smallest perimeter possible for a rectangle of area \SI{4}{ft^2}?
+\end{enumerate}
+
+\newpage
+\section{Integrals}
+I will separate the integral problems based on whether they require u-sub or not.
+This is something one should be able to determine without being told.
+
+\subsection{Basic (no u-sub)}
+These should be doable by inspection. \\
+Some may use ``guess and fudge'', i.e., simple u-sub (where $u = ax + b$ and $\dif u = a \dif x$, for $a,b\in\RR$). \\
+Some use geometry / symmetry property of functions.
+
+\begin{enumerate}
+\item[2023 Spring Final \#1B] $\int\left( \frac{2}{t^3} + 2\sqrt{t} \right) \dif t$
+\item[2022 Fall Exam 3 \#6A] $\int 2x+2x^{-2} + 3x^{2022} \dif x$
+\item[2022 Fall Exam 3 \#6B] $\int \sqrt{x} + \frac{5+x^2}{1+x^2} \dif x$
+\item[2022 Fall Exam 3 \#6C] $\int e^x + \frac1x + \sec x \tan x \dif x$
+\item[2022 Spring Final \#1B] $\int \left( \frac1{t^2} - \sqrt t \right) \dif t$
+\item[2022 Spring Final \#2A] $\int x\sqrt{x-1}\dif x$
+\item[2021 Fall Final \#5A] $\int \frac{1}{x^2+4} + 3\sin x + \frac 1x \dif x$ \footnote{u-sub not actually needed if know general arctan integral formula}
+\item[2021 Fall Final \#5B] $\int \frac{u^2+3}{\sqrt u} \dif u$
+\item[2021 Fall Final \#6A] $\int \frac{(\ln x)^4}{x} \dif x$
+\item [2019 Fall Exam 3 \#1C] $\int \left( \frac{1}{x^2} + 3\cos x \right) \dif x$
+\item [2019 Fall Exam 3 \#1E] $\int_0^\pi (2\sin \theta+1) \dif \theta$
+\item [2019 Fall Final \#1B] $\int \left(2\sqrt x - \frac{1}{x^2}\right) \dif x$
+\item [2018 Fall Exam 3] $\int (\sqrt x + 6\sec^2(x) - 5) \dif x$
+\item [2018 Fall Exam 3] $\int_0^4 (e^x - 3) \dif x$
+\item [2018 Fall Final] $\int \left( \frac 2x - \sqrt{x} \right) \dif x$
+\item [2017 Fall Exam 3] $\int \frac{\sqrt x - \sqrt 2 x^5}{x} \dif x$
+\item [2017 Fall Final] $\int e^{5x} - \frac{1}{\sqrt{4-x^2}} \dif x$ \footnote{easier if you know general arcsine integral formula}
+\item [2017 Spring Final] $\int (\sqrt x + \cos x - 5) \dif x$
+\item [2016 Fall Final] $\int \sin(\pi x/ 2) + 2^x - \frac{1}{\sqrt{1-x^2}} \dif x$
+\item [2017 Fall Exam 3] $\int_{-2}^2 \sin^3(5x) + \sqrt{4-x^2} \dif x$
+\item [2016 Fall Exam 3] $\int \frac{x^2 - 7x}{x^3} \dif x$
+\item [2016 Fall Exam 3] $\int_{-2}^2 \left( \frac{\sin x}{1+x^2} + \cos(\frac{\pi}4 x) \right) \dif x$
+\item [2016 Spring Exam 3] $\int (\sec^2 x + 4) \dif x$
+\item [2016 Spring Exam 3] $\int (\sqrt x + 5e^x) \dif x$
+\item [2015 Fall Exam 3] $\int (x^2 + 4)^2 \dif x$
+\item [2015 Fall Exam 3] $\int_1^2 2^t \dif t$
+\item [2015 Spring Exam 3] Find the most general antiderivative of $\sec^2 x + 3x^4 + 2$.
+\item [2014 Fall Exam 3] $\int \left( \cos x + 4x + \frac{1}{x} \right) \dif x$
+\item [2014 Fall Exam 3] $\int \left( 3e^x + 4\sin x + 7\sec^2 x \right) \dif x$
+\item [2014 Spring Exam 3] $\int (7 + 2x + 3e^x) \dif x$
+\item [2014 Spring Exam 3] $\int (\sec^2 \theta + \cos \theta) \dif \theta$
+\end{enumerate}
+
+\subsection{U-sub}
+\begin{enumerate}
+\item[2023 Spring Final \#2A] $\int_3^4 x\sqrt{x-3} \dif x$
+\item[2021 Fall Final \#5C] $\int \cos x \sin^3 x \dif x$
+\item[2021 Fall Final \#6B] $\int 3t^2 \sqrt{1+t^3} \dif t$.
+\item[2021 Fall Final \#6C] $\int_{-2}^{-1} x\sqrt{x+2} \dif x$
+\item[2019 Fall Exam 3 \#7A] $\int_0^{\pi/2} e^{2\sin \theta} \cos\theta\dif\theta$
+\item[2019 Fall Exam 3 \#7B] $\int x\sqrt{x-2}\dif x$
+\item[2019 Fall Final \#2A] $\int \frac{\sec[2](2\theta)}{\tan[5](2\theta)} \dif \theta$
+\item[2018 Fall Exam 3] $\int_0^{\pi/2} 2\sin^3(\theta) \cos(\theta) \dif \theta$
+\item[2018 Fall Exam 3] $\int x \sqrt{5+x} \dif x$
+\item[2018 Fall Final] $\int \frac{\cos(\ln x)}{x} \dif x$
+\item[2017 Fall Exam 3] $\int 3x \sine(5x^2) \dif x$
+\item[2017 Fall Exam 3] $\int x \sqrt{x+2} \dif x$
+\item[2017 Fall Final] $\int_1^e \frac{(\ln x)^2}{x} \dif x$
+\item[2017 Fall Final] $\int \sin^5(2x) \cos(2x) \dif x$
+\item[2017 Spring Final] $\int \frac{\sqrt{\ln x}}{x} \dif x$
+\item[2017 Spring Final] $\int_0^{\pi/2} \sin^4 \theta \cos \theta \dif \theta$
+\item[2016 Fall Exam 3] $\int \sqrt{\tan x}\sec^2 x \dif x$
+\item[2016 Fall Exam 3] $\int \frac{(\ln x)^3}{x} \dif x$
+\item[2016 Fall Final] $\int \tan^3(2x) \sec^2(2x) \dif x$
+\item[2016 Fall Final] $\int_0^1 \frac{x+2}{x^2+4x+1} \dif x$
+\item[2016 Spring Final] $\int_0^{\pi/2} \sin^3 \theta \cos \theta \dif \theta$
+\item[2016 Spring Final] $\int t \sqrt{t^2 + 3} \dif t$
+\item[2015 Fall Exam 3] $\int \tan^3 x \sec^2 x \dif x$
+\end{enumerate}
+
+\subsection{with initial conditions (Initial Value Problem)}
+\begin{enumerate}
+\item [2023 Spring Final \#4] Find $f(x)$ if $f'(x) = \cos(x) + 2$ and $f(0) = 5$.
+\item [2022 Spring Final \#4] Find $f(x)$ if $f'(x) = e^x+2$ and $f(0) = 7$.
+\item [2019 Fall Exam 3 \#3] Find $f(x)$ if $f''(x) = e^x+2$, $f'(0) = 7$, and $f(0) = -5$.
+\item [2019 Fall Exam 3 \#6] Suppose that a particle has position $s(t)$ feet at time $t$ seconds and a velocity function $s'(t) = 3t^2 - 2t$ ft/s. If $s(0) = 5\ \unit{ft}$, find $s(2)$.
+\item [2018 Fall Exam 3] Find $f(x)$ if $f''(x) = 6x$, $f'(0) = 1$, and $f(0) = 2$.
+\item [2017 Fall Exam 3] Solve the initial value problem for $f(t)$: $f'(t) = 2e^{-2t}$, $f(0) = 1$.
+\item [2017 Fall Final] $f'(t) = 4t^3 - \sin t$, $f(0) = 1$.
+\item [2016 Fall Exam 3] Solve the initial value problem for $f(t)$: $f'(t) = 4e^{3t}$, $f(0) = 5$.
+\item [2016 Fall Final] $f'(t) = \sqrt{t}$, $f(1) = 2$.
+\item [2016 Spring Exam 3] Find the function $v(x)$ satisfying $v''(x) = 2$, $v'(0) = -3$, and $v(0) = 5$.
+\item [2015 Fall Exam 3] A ball thrown vertically from the roof of a building 150 feet tall hits the ground 3 seconds later. Was the ball thrown upward or downward? With what speed was it thrown? (Recall that acceleration due to gravity is $a = -32 \si{ft/sec^2}$.) \footnote{This is a neat problem.}
+\item [2015 Spring Exam 3] Find the function $g(x)$ satisfying $g'(x) = \sin x + 1$ and $g(0) = 3$.
+\item [2014 Fall Exam 3] Find $v(x)$ if $v''(x) = 6x+ 2$, $v'(0) = 1$, and $v(0) = 2$.
+\item [2014 Spring Exam 3] Find the function $k(x)$ provided that $k'(x) = 2x^3 + 3x + 2$ and $k(0) = 2$.
+\end{enumerate}
+
+\subsection{Using linearity property}
+\begin{enumerate}
+\item [2015 Fall Exam 3] Suppose that $\int_0^6 f(x) \dif x = 9$, $\int_4^6 f(x) \dif x = 5$, and $\int_0^4 g(x) \dif x = 8$. Compute $\int_0^4 (5f(x) - 3g(x)) \dif x$.
+\end{enumerate}
+
+\section{FTC part 1}
+\begin{enumerate}
+\item[2023 Spring Final \#1C] $\dod{}{x} \int_x^2 \cos(e^t) \dif t$
+\item[2022 Spring Final \#1C] $\dod{}{x} \int_x^7 \cos(\sin t)\dif t$
+\item[2021 Fall Final \#3C] $\dod{}{x} \left( \int_0^{x^2} \cos(u+3) \dif u \right)$
+\item [2019 Fall Exam 3 \#1D] $\dod{}{x} \int_x^5 3t^7 \cosine(t^9)\dif t$
+\item [2019 Fall Final \#1C] $\dod{}{x} \int_x^7 \sine(t^5) \cosine(t^2+1) \dif t$
+\item [2018 Fall Exam 3] $\dod{}{x} \int_3^x e^{2t} \sine(t^3) \dif t$
+\item [2018 Fall Final] $\dod{}{x}\int_x^5 e^{\sin t} \dif t$
+\item [2017 Fall Exam 3] $\dod{}{x} \int_2^x \frac{\cos(t^2)}{2+t} \dif t$
+\item [2017 Fall Exam 3] $\dod{}{x} \int_{x^3}^5 \frac{\cos(t^2)}{2+t} \dif t$
+\item [2017 Spring Final] $\dod{}{x} \int_3^x t \cdot \sine(t^3) \dif t$
+\item [2016 Fall Exam 3] $\dod{}{x} \int_2^x \frac{\sin t}{1+t} \dif t$
+\item [2016 Fall Exam 3] $\dod{}{x} \int_2^{x^3} \frac{\sin t}{1+t} \dif t$
+\item [2016 Spring Final] $\dod{}{x} \int_0^x e^{\cos t} \dif t$
+\item [2015 Fall Exam 3] Define $F(x) = \int_1^x \frac{\sin(\frac{\pi t}{6})}{t^2} \dif t$. Find an equation of the tangent line to $y = F(x)$ at $x = 1$. \footnote{interesting twist}
+\end{enumerate}
+
+\section{Approximate integral with Riemann sum (reading from graph)}
+For some of these problems, a graph is given. 
+Will not reproduce these.
+\begin{enumerate}
+\item [2023 Spring Final \#3]
+\item [2022 Fall Exam 3 \#7A]
+\item [2022 Spring Final \#3]
+\item [2019 Fall Exam 3 \#4]
+\item [2019 Fall Final \#12]
+\item [2017 Fall Exam 3] Estimate the area below the curve $y = \sqrt x$ over the interval $[1, 4]$ using $L_3$. Sketch a graph of the curve and illustrate the rectangles used on the graph.
+\item [2017 Fall Final] Estimate the area below the curve $y = x^2 + 2$ over the interval $[0, 3]$ using $R_3$. Make a sketch of the curve with the rectangles used.
+\item [2016 Fall Exam 3] Estimate the area below the curve $y = \sqrt x + 1$ over the interval $[0, 6]$ using $R_3$. Sketch a graph of the curve and illustrate the rectangles used on the graph.
+\item [2016 Fall Final] Estimate the area below the curve $y = x^2$ over the interval $[0, 2]$ using $L_4$. Make a sketch of the curve with the rectangles used.
+\item [2015 Fall Exam 3] Approximate the area under the curve $y = 12x - 4x^2$ between $x = 0$ and $x = 2$ using four rectangles and the right endpoint method.
+\item [2015 Spring Exam 3] Estimate the area between $y = x^2$ and the $x$-axis over the interval $[0, 4]$. Use $n = 2$ rectangles, taking the sampling points to be the midpoints (in other words, compute $M_2$). Sketch the rectangles on the graph.
+\item [2014 Fall Exam 3] Estimate $\int_0^6 (x^2 + 1) \dif x$ by using $n = 3$ subintervals, taking the sampling points to be midpoints (in other words, compute $M_3$). Sketch the rectangles on a graph.
+\end{enumerate}
+
+
+\section{Definite integral as geometric area (reading from graph)}
+Wont duplicate problem. Just list location.
+Sometimes has FTC part 1 as part of the problem
+\begin{enumerate}
+\item [2023 Spring Final \#8]
+\item [2022 Fall Exam 3 \#7B]
+\item [2022 Spring Final \#8]
+\item [2021 Fall Final \#11] This doubles as a first derivative interpretation and a net change theorem type of problem
+\item [2019 Fall Exam 3 \#2]
+\item [2019 Fall Final \#11] Part B is a FTC Part 1 problem
+\end{enumerate}
+
+\section{Net Change Theorem}
+Include units.
+
+\begin{enumerate}
+\item [2023 Spring Final \#12] Suppose that a particle has position $s(t)$ feet at time $t$ seconds and a velocity function $s'(t) = t \cdot e^{-t^2}$ ft/sec. Find the displacement from time $t=0$ seconds to time $t=1$ second.
+\item [2022 Spring Final \#12] Suppose that a particle has position $s(t)$ feet at time $t$ seconds and a velocity function $s'(t) = \sin^3(t)\cos(t)$ ft/sec. Find the displacement from time $t=0$ seconds to time $t=\frac\pi2$ seconds.
+\item [2019 Fall Exam 3 \#5]
+\item [2019 Fall Final \#5] Same as 2023 Spring Final \#12
+\item [2018 Fall Exam 3] Suppose a particle has position $s(t)$ feet at time $t$ seconds and a velocity function $s'(t) = 3\cos(t)$ ft/s. Find the displacement from time $t = 0$ seconds to time $t = \pi/2$ seconds.
+\item [2018 Fall Final] Suppose a particle has position $s(t)$ feet at time $t$ seconds and a velocity function $s'(t) = t \cdot \sine(\pi t^2)$ ft/s. Find the displacement from time $t=0$ to time $t = 1$.
+\item [2016 Fall Exam 3] An object moves along a straight line with velocity $v(t) = 4 - t^2$ m/sec. Find the displacement of the object over the time interval $[0, 3]$ seconds. Find the total distance the object travels over the same time interval.
+\item [2015 Fall Exam 3] An object moves along the $x$-axis with velocity $v = 12t^3 - 12t^2 $ \si{cm/sec}. Find the total distance traveled for the interval $-1 \le t \le 2$ seconds.
+\end{enumerate}
+
+\section{Area between curves (final)}
+\begin{enumerate}
+\item[2023 Spring Final \#5] Find the area between the curves $y=4$ and $y=x^2$.
+\item[2022 Spring Final \#5] Find the area between the curves $y=x$ and $y=x^2$.
+\item[2021 Fall Final \#10] Find the area of the region between the $y$-axis, the curve $y=6-x$ and the curve $y=x^2$
+\item[2019 Fall Final \#8] Find the area between the curves $y=2x$ and $y=x^2$.
+\item[2018 Fall Final] Same as 2023 Spring Final \#5 %Find the area between the curves $y = 4$ and $y = x^2$
+\item[2017 Fall Final] Calculate the area of the region with $x\ge 0$ bounded by the $y$-axis, the parabola $y = x^2 - 2x$ and the line $y = 6-x$.
+\item[2017 Spring Final] Same as 2023 Spring Final \#5 %Find the area bounded between $y = 4$ and $y = x^2$.
+\item[2016 Fall Final] Calculate the area between $y = 8-x^2$ and $y = x+2$.
+\item[2016 Spring Final] Find the area bounded between $y = 2x^2$ and $y = 3 - x^2$.
+\end{enumerate}
+
+\section{Volume of Solids of Revolution (final)}
+\begin{enumerate}
+\item[2023 Spring Final \#9] Find the volume of the solid obtained by rotating the region bounded by $y=\sqrt{\sin x}$ and $y=0$ between $x=0$ and $x=\pi$ around the $x$-axis.
+\item[2022 Spring Final \#9] Find the volume of the solid obtained by rotating the region bounded by $y=x^3$, $y=0$, and $x=1$ around the $x$-axis.
+\item[2019 Fall Final \#3] Same as 2023 Spring Final \#9 %Find the volume of the solid obtained by rotating the region bounded by $y=\sqrt{\sin x}$ and $y=0$ between $x=0$ and $x=\pi$ around the $x$-axis.
+\item[2019 Fall Final \#4] Find the volume of the solid obtained by rotating the region bounded by $y=\frac1x$, $y=0$, $x=1$, and $x=2$ around the $y$-axis.
+\item[2018 Fall Final] Rotate the region bounded by $y=x^3$, $x = 0$, and $y = 1$ around the $x$-axis. Find the volume.
+\item[2018 Fall Final] Rotate the region bounded by $y=x^2$ and $y = x$ around the $y$-axis. Find the volume.
+\item[2017 Fall Final] Rotate the region bounded by the $y$-axis, $y=x$, and $y=3 + \frac12 x$ about the $y$-axis. Set up the integral for the volume.
+\item[2017 Fall Final] Rotate the region bounded by the $y$-axis, $y=x$, and $y=3 + \frac12 x$ about the $x$-axis. Set up the integral for the volume.
+\item[2017 Spring Final] Find the volume of the solid obtained by rotating the region bounded by $y = x$ and $y = x^2$ around the $x$-axis.
+\item[2016 Fall Final] Take the region bounded between the curves $y = 4x - x^3$ and $y = x^2$, with $x \ge 0$, and rotate around the $x$-axis. Set up the integral for the volume. (The curves don't intersect at a nice $x$-value.)
+\item[2016 Fall Final] Take the region bounded between the curves $y = 4x - x^3$ and $y = x^2$, with $x \ge 0$, and rotate around the $y$-axis. Set up the integral for the volume. (The curves don't intersect at a nice $x$-value.)
+\item[2016 Spring Final] Find the volume of the solid obtained by rotating the region bounded by $y = 4$ and $y = x^2$ around the $x$-axis.
+\end{enumerate}
+
+\end{document}

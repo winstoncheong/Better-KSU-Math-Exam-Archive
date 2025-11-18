@@ -8,6 +8,8 @@ Copied from <https://archive.math.ksu.edu/course?course=math220>
 
 Copied all exams from 2019 Summer back to 2011 Fall.
 
+[By topic](./by-topic/calc1-by-topic.pdf)
+
 |Semester|Exam 1|Exam 2|Exam 3|Final|
 |:---:|:---:|:---:|:---:|:---:|
 | 2024 Spring | [Exam](./exams/2024-spring-exam1.pdf), [Exam solutions](./exams/2024-spring-exam1-sol.pdf), [Sample](./exams/2024-spring-exam1-sample-sol.pdf), [Sample solutions](./exams/2024-spring-exam1-sample.pdf) | [Exam](./exams/2024-spring-exam2.pdf), [Exam solutions](./exams/2024-spring-exam2-sol.pdf), [Sample](./exams/2024-spring-exam2-sample-sol.pdf), [Sample solutions](./exams/2024-spring-exam2-sample.pdf) | [Exam](./exams/2024-spring-exam3.pdf), [Exam solutions](./exams/2024-spring-exam3-sol.pdf), [Sample](./exams/2024-spring-exam3-sample-sol.pdf), [Sample solutions](./exams/2024-spring-exam3-sample.pdf) | [Exam](./exams/2024-spring-final.pdf), [Exam solutions](./exams/2024-spring-final-sol.pdf), [Sample](./exams/2024-spring-final-sample-sol.pdf), [Sample solutions](./exams/2024-spring-final-sample.pdf) |
